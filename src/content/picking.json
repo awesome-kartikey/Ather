@@ -1,0 +1,392 @@
+{
+  "id": "pick",
+  "icon": "📋",
+  "title": {
+    "en": "Order Picking & Packaging",
+    "hi": "ऑर्डर पिकिंग और पैकेजिंग",
+    "mr": "ऑर्डर पिकिंग आणि पॅकेजिंग"
+  },
+  "description": {
+    "en": "Material picking SOP: pick list reading, bin location verification, FIFO lot rotation, ESD component packing, and handover inspection.",
+    "hi": "सामग्री पिकिंग SOP: पिक लिस्ट पढ़ना, बिन लोकेशन सत्यापन, FIFO लॉट रोटेशन, ESD पैकिंग और हैंडओवर निरीक्षण।",
+    "mr": "साहित्य पिकिंग SOP: पिक लिस्ट वाचणे, बिन लोकेशन पडताळणी, FIFO लॉट पद्धत, ESD पॅकिंग आणि हँडओव्हर तपासणी."
+  },
+  "placeholder": true,
+  "demoScenes": [
+    {
+      "id": "pick-demo-1",
+      "sceneKitId": "pick-list",
+      "caption": {
+        "en": "Read the pick list: bin, part and quantity.",
+        "hi": "पिक लिस्ट पढ़ें: बिन, पार्ट और मात्रा।",
+        "mr": "पिक लिस्ट वाचा: बिन, पार्ट आणि संख्या."
+      },
+      "durationMs": 4000
+    },
+    {
+      "id": "pick-demo-2",
+      "sceneKitId": "pick-bin",
+      "caption": {
+        "en": "Walk to the bin and read its code twice.",
+        "hi": "बिन तक जाएँ और कोड दो बार पढ़ें।",
+        "mr": "बिनपर्यंत जा आणि कोड दोनदा वाचा."
+      },
+      "durationMs": 4000
+    },
+    {
+      "id": "pick-demo-3",
+      "sceneKitId": "pick-fifo",
+      "caption": {
+        "en": "Scan, then take the oldest lot first.",
+        "hi": "स्कैन करें, फिर सबसे पुराना लॉट पहले लें।",
+        "mr": "स्कॅन करा, मग जुना लॉट आधी घ्या."
+      },
+      "durationMs": 4500
+    },
+    {
+      "id": "pick-demo-4",
+      "sceneKitId": "pick-esd",
+      "caption": {
+        "en": "Pack it: ESD bag, foam, then the carton.",
+        "hi": "पैक करें: ESD बैग, फ़ोम, फिर कार्टन।",
+        "mr": "पॅक करा: ESD बॅग, फोम, मग कार्टन."
+      },
+      "durationMs": 4000
+    },
+    {
+      "id": "pick-demo-5",
+      "sceneKitId": "pick-handover",
+      "caption": {
+        "en": "Match list, label and quantity, then hand over.",
+        "hi": "लिस्ट, लेबल और मात्रा मिलाएँ, फिर सौंपें।",
+        "mr": "लिस्ट, लेबल आणि संख्या जुळवा, मग सुपूर्द करा."
+      },
+      "durationMs": 4500
+    }
+  ],
+  "steps": [
+    {
+      "id": "pick-step-1",
+      "type": "sequence",
+      "safety": false,
+      "placeholder": true,
+      "question": {
+        "en": "Arrange the order picking steps in correct sequence.",
+        "hi": "ऑर्डर पिकिंग के चरणों को सही क्रम में लगाएँ।",
+        "mr": "ऑर्डर पिकिंगच्या पायऱ्या योग्य क्रमाने लावा."
+      },
+      "explanation": {
+        "en": "Follow the sequence: Read Pick List -> Verify Bin Code -> Check FIFO Date -> Pack ESD & Foam -> Sign-off Handover.",
+        "hi": "सही क्रम: पिक लिस्ट पढ़ें -> बिन कोड मिलाएँ -> FIFO तारीख देखें -> ESD व फ़ोम पैक करें -> साइन-ऑफ हैंडओवर।",
+        "mr": "योग्य क्रम: पिक लिस्ट वाचा -> बिन कोड तपासा -> FIFO तारीख पहा -> ESD व फोम पॅक करा -> हँडओव्हर सही घ्या."
+      },
+      "items": [
+        {
+          "id": "seq-read-list",
+          "text": {
+            "en": "1. Read pick list (Bin, Part No, Qty)",
+            "hi": "1. पिक लिस्ट पढ़ें (बिन, पार्ट नंबर, मात्रा)",
+            "mr": "1. पिक लिस्ट वाचा (बिन, पार्ट नंबर, संख्या)"
+          }
+        },
+        {
+          "id": "seq-find-bin",
+          "text": {
+            "en": "2. Locate shelf and verify bin barcode",
+            "hi": "2. शेल्फ ढूँढें और बिन बारकोड सत्यापित करें",
+            "mr": "2. शेल्फ शोधा आणि बिन बारकोड तपासा"
+          }
+        },
+        {
+          "id": "seq-check-fifo",
+          "text": {
+            "en": "3. Select oldest manufacturing lot (FIFO)",
+            "hi": "3. सबसे पुराना लॉट चुनें (FIFO)",
+            "mr": "3. सर्वात जुना लॉट निवडा (FIFO)"
+          }
+        },
+        {
+          "id": "seq-pack-esd",
+          "text": {
+            "en": "4. Place board in ESD pouch and foam buffer",
+            "hi": "4. बोर्ड को ESD पाउच और फ़ोम बफर में रखें",
+            "mr": "4. बोर्ड ESD पाउच आणि फोम बफरमध्ये ठेवा"
+          }
+        },
+        {
+          "id": "seq-verify-handover",
+          "text": {
+            "en": "5. Match list, label and count before line handover",
+            "hi": "5. लाइन को सौंपने से पहले लिस्ट, लेबल व गिनती मिलाएँ",
+            "mr": "5. लाईनला देण्यापूर्वी लिस्ट, लेबल आणि मोजणी जुळवा"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pick-step-2",
+      "type": "choice",
+      "safety": false,
+      "placeholder": true,
+      "question": {
+        "en": "Pick list specifies Bin B-14. Which bin do you pick from?",
+        "hi": "पिक लिस्ट में बिन B-14 लिखा है। किस बिन से माल निकालेंगे?",
+        "mr": "पिक लिस्टमध्ये बिन B-14 लिहिले आहे. कोणत्या बिनमधून माल काढाल?"
+      },
+      "explanation": {
+        "en": "Read the bin code twice carefully. B-41, B-14 and A-14 look similar from a distance.",
+        "hi": "बिन कोड दो बार ध्यान से पढ़ें। दूर से B-41, B-14 और A-14 एक जैसे दिखते हैं।",
+        "mr": "बिन कोड दोनदा काळजीपूर्वक वाचा. लांबून B-41, B-14 आणि A-14 सारखेच दिसतात."
+      },
+      "options": [
+        {
+          "id": "opt-bin-b41",
+          "icon": "🗄️",
+          "label": {
+            "en": "Bin B-41",
+            "hi": "बिन B-41",
+            "mr": "बिन B-41"
+          },
+          "correct": false
+        },
+        {
+          "id": "opt-bin-b14",
+          "icon": "🗄️",
+          "label": {
+            "en": "Bin B-14",
+            "hi": "बिन B-14",
+            "mr": "बिन B-14"
+          },
+          "correct": true
+        },
+        {
+          "id": "opt-bin-a14",
+          "icon": "🗄️",
+          "label": {
+            "en": "Bin A-14",
+            "hi": "बिन A-14",
+            "mr": "बिन A-14"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "pick-step-3",
+      "type": "scanSim",
+      "safety": false,
+      "placeholder": true,
+      "expectedCode": "ATH-0417",
+      "question": {
+        "en": "Scan the part barcode that matches pick list item ATH-0417.",
+        "hi": "पिक लिस्ट आइटम ATH-0417 से मिलने वाले पार्ट बारकोड को स्कैन करें।",
+        "mr": "पिक लिस्ट घटक ATH-0417 शी जुळणारा पार्ट बारकोड स्कॅन करा."
+      },
+      "explanation": {
+        "en": "Match all digits precisely. Transposing 0417 to 0471 or 0714 sends the wrong component to assembly.",
+        "hi": "सभी अंक ध्यान से मिलाएँ। 0417 की जगह 0471 या 0714 स्कैन करने पर गलत पार्ट चला जाएगा।",
+        "mr": "सर्व अंक काळजीपूर्वक जुळवा. 0417 ऐवजी 0471 किंवा 0714 स्कॅन केल्यास असेंब्लीला चुकीचा पार्ट जाईल."
+      },
+      "options": [
+        {
+          "id": "bc-471",
+          "code": "ATH-0471",
+          "correct": false
+        },
+        {
+          "id": "bc-417",
+          "code": "ATH-0417",
+          "correct": true
+        },
+        {
+          "id": "bc-714",
+          "code": "ATH-0714",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "pick-step-4",
+      "type": "choice",
+      "safety": false,
+      "placeholder": true,
+      "question": {
+        "en": "Two lots found in the bin. Which one do you pick first?",
+        "hi": "बिन में दो लॉट हैं। पहले कौन सा उठाएँगे?",
+        "mr": "बिनमध्ये दोन लॉट आहेत. आधी कोणता घ्याल?"
+      },
+      "explanation": {
+        "en": "FIFO rule (First In, First Out): Always dispatch the oldest received lot first (03 Sep) to prevent aging.",
+        "hi": "FIFO नियम (पहले आया, पहले गया): उम्र बढ़ने से रोकने के लिए हमेशा पुराना लॉट (03 सित.) पहले भेजें।",
+        "mr": "FIFO नियम (आधी आलेला आधी जाणार): माल जुना होऊ नये म्हणून नेहमी जुना लॉट (03 सप्टें.) आधी पाठवा."
+      },
+      "options": [
+        {
+          "id": "opt-lot-new",
+          "icon": "🆕",
+          "label": {
+            "en": "Newer Lot: 10 Oct",
+            "hi": "नया लॉट: 10 अक्टू.",
+            "mr": "नवीन लॉट: 10 ऑक्टो."
+          },
+          "correct": false
+        },
+        {
+          "id": "opt-lot-old",
+          "icon": "🕰️",
+          "label": {
+            "en": "Older Lot: 03 Sep (FIFO)",
+            "hi": "पुराना लॉट: 03 सित. (FIFO)",
+            "mr": "जुना लॉट: 03 सप्टें. (FIFO)"
+          },
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "pick-step-5",
+      "type": "choice",
+      "safety": true,
+      "placeholder": true,
+      "question": {
+        "en": "How must electronic circuit boards (PCBs) be packaged?",
+        "hi": "इलेक्ट्रॉनिक सर्किट बोर्ड (PCB) को कैसे पैक किया जाना चाहिए?",
+        "mr": "इलेक्ट्रॉनिक सर्किट बोर्ड (PCB) कसे पॅक केले पाहिजे?"
+      },
+      "explanation": {
+        "en": "Static electricity damages semiconductors. Always shield inside an ESD anti-static bag with foam cushion before boxing.",
+        "hi": "स्टैटिक बिजली से चिप्स खराब हो जाती हैं। बॉक्स में रखने से पहले हमेशा ESD एंटी-स्टैटिक बैग व फ़ोम कुशन में रखें।",
+        "mr": "स्टॅटिक विजेमुळे चिप्स खराब होतात. खोक्यात ठेवण्यापूर्वी नेहमी ESD अँटी-स्टॅटिक बॅग आणि फोम कुशन वापरा."
+      },
+      "options": [
+        {
+          "id": "opt-pack-loose",
+          "icon": "📦",
+          "label": {
+            "en": "Loose inside corrugated carton",
+            "hi": "कार्टन में खुला",
+            "mr": "खोक्यात मोकळा"
+          },
+          "correct": false
+        },
+        {
+          "id": "opt-pack-esd",
+          "icon": "🛍️",
+          "label": {
+            "en": "Pink ESD shielding pouch + foam cushion",
+            "hi": "गुलाबी ESD शील्डिंग पाउच + फ़ोम कुशन",
+            "mr": "गुलाबी ESD शील्डिंग पाउच + फोम कुशन"
+          },
+          "correct": true
+        },
+        {
+          "id": "opt-pack-plastic",
+          "icon": "🧻",
+          "label": {
+            "en": "Wrapped in ordinary clear plastic film",
+            "hi": "साधारण प्लास्टिक पन्नी में लपेटा",
+            "mr": "साध्या प्लास्टिक फिल्ममध्ये गुंडाळलेला"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "pick-step-6",
+      "type": "spotError",
+      "safety": false,
+      "placeholder": true,
+      "poBadge": "Pick Qty: 6",
+      "question": {
+        "en": "Pick list calls for 6 × ATH-0417 in ESD bag. Spot the error in the picked tray.",
+        "hi": "पिक लिस्ट: 6 × ATH-0417 और ESD बैग। ट्रे में क्या गलती है?",
+        "mr": "पिक लिस्ट: 6 × ATH-0417 आणि ESD बॅग. ट्रेमध्ये काय चूक आहे?"
+      },
+      "explanation": {
+        "en": "The tray only contains 5 units instead of 6. Pick the remaining unit before sending to the production line.",
+        "hi": "ट्रे में 6 की जगह केवल 5 यूनिट हैं। प्रोडक्शन लाइन को भेजने से पहले 1 छूटा हुआ पार्ट निकालें।",
+        "mr": "ट्रेमध्ये 6 ऐवजी फक्त 5 युनिट्स आहेत. उत्पादन लाईनला पाठवण्यापूर्वी राहिलेला 1 पार्ट काढा."
+      },
+      "options": [
+        {
+          "id": "opt-tray-count",
+          "icon": "📦",
+          "label": {
+            "en": "Only 5 × ATH-0417 in tray",
+            "hi": "ट्रे में सिर्फ़ 5 × ATH-0417",
+            "mr": "ट्रेमध्ये फक्त 5 × ATH-0417"
+          },
+          "isError": true
+        },
+        {
+          "id": "opt-tray-esd",
+          "icon": "🛍️",
+          "label": {
+            "en": "ESD protective bag present",
+            "hi": "ESD बैग मौजूद है",
+            "mr": "ESD बॅग उपस्थित आहे"
+          },
+          "isError": false
+        },
+        {
+          "id": "opt-tray-label",
+          "icon": "🏷️",
+          "label": {
+            "en": "Label matches ATH-0417",
+            "hi": "लेबल ATH-0417 से मिलता है",
+            "mr": "लेबल ATH-0417 शी जुळते"
+          },
+          "isError": false
+        }
+      ]
+    },
+    {
+      "id": "pick-step-7",
+      "type": "choice",
+      "safety": true,
+      "placeholder": true,
+      "question": {
+        "en": "Before final handover to the EV production line, what do you check?",
+        "hi": "EV प्रोडक्शन लाइन को अंतिम हैंडओवर देने से पहले क्या जाँचते हैं?",
+        "mr": "EV उत्पादन लाईनला अंतिम हँडओव्हर देण्यापूर्वी काय तपासता?"
+      },
+      "explanation": {
+        "en": "Verification is your responsibility. Double check pick list, part barcode label, and physical count, then obtain supervisor sign-off.",
+        "hi": "सत्यापन आपकी ज़िम्मेदारी है। पिक लिस्ट, पार्ट बारकोड और भौतिक गिनती मिलाएँ, फिर सुपरवाइज़र के हस्ताक्षर लें।",
+        "mr": "पडताळणी तुमची जबाबदारी आहे. पिक लिस्ट, पार्ट बारकोड आणि प्रत्यक्ष मोजणी जुळवा, मग सुपरवायझरची सही घ्या."
+      },
+      "options": [
+        {
+          "id": "opt-hand-quick",
+          "icon": "🤝",
+          "label": {
+            "en": "Hand it over immediately to save time",
+            "hi": "समय बचाने के लिए तुरंत दे दें",
+            "mr": "वेळ वाचवण्यासाठी लगेच द्या"
+          },
+          "correct": false
+        },
+        {
+          "id": "opt-hand-line",
+          "icon": "🙋",
+          "label": {
+            "en": "Ask the assembly operator to count it",
+            "hi": "असेंबली ऑपरेटर से गिनने को कहें",
+            "mr": "असेंब्ली ऑपरेटरला मोजायला सांगा"
+          },
+          "correct": false
+        },
+        {
+          "id": "opt-hand-triple",
+          "icon": "✅",
+          "label": {
+            "en": "Match Pick List, Barcode Label & Physical Count",
+            "hi": "पिक लिस्ट, बारकोड लेबल और गिनती तीनों मिलाएँ",
+            "mr": "पिक लिस्ट, बारकोड लेबल आणि मोजणी तीनही जुळवा"
+          },
+          "correct": true
+        }
+      ]
+    }
+  ]
+}

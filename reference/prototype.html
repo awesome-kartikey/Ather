@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Floor Trainer – Warehouse prototype</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Noto+Sans:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#dfe5e8;--card:#fff;--ink:#14232b;--ok:#1f8a4c;--no:#d23b30;--act:#ee6a1f;--wood:#b88a55;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10191e;--card:#1a272e;--ink:#eef3f5;--ok:#43c27a;--no:#ff6b5e;--act:#ff8a4a;--wood:#9a7344}}
+:root[data-theme="dark"]{--bg:#10191e;--card:#1a272e;--ink:#eef3f5;--ok:#43c27a;--no:#ff6b5e;--act:#ff8a4a;--wood:#9a7344}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 20px/1.4 'Noto Sans','Noto Sans Devanagari',sans-serif}
+h1,h2{font-family:'Barlow Condensed','Noto Sans Devanagari',sans-serif;font-weight:700;margin:0;line-height:1.15}
+.bar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:12px 20px;border-bottom:3px solid var(--ink)}
+.bar h1{font-size:30px}
+.seg{display:flex;border:2px solid var(--ink);border-radius:10px;overflow:hidden}
+.seg button{all:unset;cursor:pointer;padding:10px 16px;min-width:56px;text-align:center;font-weight:700}
+.seg .on{background:var(--ink);color:var(--bg)}
+.tools{display:flex;gap:12px;flex-wrap:wrap}
+main{max-width:1100px;margin:0 auto;padding:20px}
+.note{margin:0 0 20px;color:var(--ink);opacity:.75}
+.home,.stage{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.pack{all:unset;cursor:pointer;display:block;background:var(--card);border:3px solid var(--ink);border-radius:14px;padding:28px;box-shadow:6px 6px 0 var(--ink)}
+.pack:active{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--ink)}
+.pack .big{font-size:64px}.pack h2{font-size:38px;margin:8px 0}
+.slots{display:flex;gap:6px;margin-bottom:16px}
+.slots i{flex:1;height:18px;border-radius:3px;background:var(--wood);opacity:.35;border:2px solid var(--ink)}
+.slots i.cur{opacity:1}.slots i.ok{background:var(--ok);opacity:1}.slots i.no{background:var(--no);opacity:1}
+.q{background:var(--card);border:3px solid var(--ink);border-radius:14px;padding:22px}
+.q h2{font-size:36px}
+.say{all:unset;cursor:pointer;margin-top:14px;display:inline-block;padding:8px 16px;border:2px solid var(--ink);border-radius:10px;font-weight:700}
+.opts{display:grid;gap:14px}
+.tile{all:unset;cursor:pointer;display:flex;align-items:center;gap:16px;min-height:72px;padding:12px 18px;background:var(--card);border:3px solid var(--ink);border-radius:12px;font-size:22px;font-weight:700}
+.tile .ic{font-size:40px;position:relative}
+.tile .ic b{position:absolute;right:-8px;top:-8px;font-size:20px}
+.tile.hint{outline:4px solid var(--act);outline-offset:3px}
+.tile.ok{background:var(--ok);color:#fff}.tile.no{background:var(--no);color:#fff}
+.fb{margin-top:16px;padding:16px;border-radius:12px;border:3px solid var(--ink);background:var(--card)}
+.fb.ok{border-color:var(--ok)}.fb.no{border-color:var(--no)}
+.fb strong{display:block;font-size:24px;margin-bottom:4px}
+.btn{all:unset;cursor:pointer;display:inline-block;margin-top:14px;background:var(--act);color:#10191e;font-weight:700;font-size:24px;padding:16px 32px;border-radius:12px;border:3px solid var(--ink);text-align:center}
+.pile{display:flex;flex-wrap:wrap;gap:4px;font-size:30px;margin-top:14px}
+.cnt{display:flex;align-items:center;justify-content:center;gap:24px;margin:8px 0}
+.cnt .tile{width:84px;justify-content:center;font-size:44px;padding:0}
+.cnt span{font:700 72px 'Barlow Condensed',sans-serif;min-width:90px;text-align:center}
+.done{text-align:center}.done .st{font-size:72px}
+.hud{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:12px;font-weight:700}
+.hud span{background:var(--card);border:2px solid var(--ink);border-radius:999px;padding:4px 14px}
+.xpb{height:14px;border:2px solid var(--ink);border-radius:8px;overflow:hidden;background:var(--card);margin-bottom:12px}.xpb i{display:block;height:100%;background:var(--act)}
+.opts.g{grid-template-columns:1fr 1fr}.opts.g .tile{flex-direction:column;text-align:center;justify-content:center}.opts.g .ic{font-size:56px}
+.scn{font:700 28px 'Barlow Condensed',sans-serif;background:#10191e;color:#7cffb0;border-radius:8px;padding:8px 14px;margin-top:14px;display:inline-block}
+.bcd{display:block;width:110px;height:44px;background:repeating-linear-gradient(90deg,var(--ink) 0 3px,transparent 3px 6px,var(--ink) 6px 7px,transparent 7px 11px)}
+.tile.ok .bcd,.tile.no .bcd{filter:invert(1)}
+.seq{display:grid;gap:10px;margin-bottom:12px}.seq .tile{min-height:60px;border-style:dashed}
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.zone{min-height:150px;border:3px dashed var(--ink);border-radius:12px;padding:10px;text-align:center;font-weight:700;background:var(--card)}
+.zone .ic{font-size:36px}
+.item{touch-action:none;cursor:grab;user-select:none}.item.sel{outline:4px solid var(--act)}
+.ghost{position:fixed;pointer-events:none;z-index:9;font-size:48px;transform:translate(-50%,-50%)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;font-size:34px;justify-content:center}
+.cert{border:4px double var(--ink);background:var(--card);padding:20px;border-radius:12px;max-width:560px;margin:16px auto}
+input.nm{font:inherit;padding:10px 14px;border:3px solid var(--ink);border-radius:10px;background:var(--card);color:var(--ink);max-width:220px}
+.demo{background:var(--card);border:3px solid var(--ink);border-radius:14px;padding:12px;max-width:900px;margin:0 auto}
+.demo svg{width:100%;height:auto;display:block}
+.cap{font:700 32px/1.2 'Barlow Condensed','Noto Sans Devanagari',sans-serif;margin:10px 4px;min-height:80px}
+.fi{fill:var(--ink)}.fc{fill:var(--card)}.fw{fill:var(--wood)}.fo{fill:var(--ok)}.fn{fill:var(--no)}.fa{fill:var(--act)}.si{stroke:var(--ink);stroke-width:3}
+@keyframes sIn{from{transform:translateX(-420px)}to{transform:none}}
+@keyframes dr{from{transform:translateY(-120px);opacity:0}to{transform:none;opacity:1}}
+@keyframes pp{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:none}}
+@keyframes go{from{transform:none}to{transform:var(--m)}}
+@keyframes fl{0%,100%{opacity:.25}50%{opacity:1}}
+.sIn{animation:sIn 1.6s ease-out both}.dr{animation:dr .8s ease-out both}.pp{animation:pp .5s ease-out both;transform-box:fill-box;transform-origin:center}
+.mv{animation:go 2s ease-in-out both}.fl{animation:fl 1s infinite}
+.d1{animation-delay:.6s}.d2{animation-delay:1.4s}.d3{animation-delay:2.2s}.d4{animation-delay:3s}
+@media(prefers-reduced-motion:reduce){.demo *{animation-duration:.01s!important;animation-delay:0s!important}}
+:focus-visible{outline:4px solid var(--act);outline-offset:3px}
+@media(max-width:760px){.home,.stage{grid-template-columns:1fr}}
+</style></head>
+<body><div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
+<script>
+const {useState,useMemo,useEffect,useRef}=React, html=htm.bind(React.createElement);
+const LN=['EN','हिं','मरा'], VC=['en-IN','hi-IN','mr-IN'];
+const UI={
+ title:["Floor Trainer","फ़्लोर ट्रेनर","फ्लोअर ट्रेनर"],
+ sub:["Pick a training. Steps are samples until the official SOP arrives.","ट्रेनिंग चुनें। आधिकारिक SOP आने तक चरण नमूना हैं।","ट्रेनिंग निवडा. अधिकृत SOP येईपर्यंत पायऱ्या नमुना आहेत."],
+ g:["Guided","गाइडेड","गाइडेड"],p:["Practice","प्रैक्टिस","प्रॅक्टिस"],
+ chk:["Check","जाँचें","तपासा"],nx:["Next","आगे","पुढे"],good:["Correct","सही","बरोबर"],bad:["Not quite","सही नहीं","बरोबर नाही"],
+ re:["Try again","फिर से करें","पुन्हा करा"],home:["Home","होम","होम"],listen:["🔊 Listen","🔊 सुनें","🔊 ऐका"],
+ sOk:["Safety badge earned","सुरक्षा बैज मिला","सुरक्षा बॅज मिळाला"],
+ sNo:["Safety step missed. Repeat to earn the badge.","सुरक्षा चरण चूका। बैज के लिए दोहराएँ।","सुरक्षा पायरी चुकली. बॅजसाठी पुन्हा करा."],
+ best:["Best","सर्वश्रेष्ठ","सर्वोत्तम"],
+ nm:["Your name","आपका नाम","तुमचे नाव"],xp:["XP","XP","XP"],day:["day streak","दिन लगातार","दिवस सलग"],
+ cert:["Certified. Show this to your supervisor for sign-off.","प्रमाणित। साइन-ऑफ के लिए सुपरवाइज़र को दिखाएँ।","प्रमाणित. सही-साठी सुपरवायझरला दाखवा."],
+ over:["Out of lives. Try again.","जीवन खत्म। फिर कोशिश करें।","जीव संपले. पुन्हा प्रयत्न करा."],
+ dh:["Drag each item to its place, or tap the item, then the place.","हर चीज़ को उसकी जगह खींचें, या चीज़ दबाकर जगह दबाएँ।","प्रत्येक वस्तू जागेवर ओढा, किंवा वस्तू दाबून जागा दाबा."],
+ top:["Top runs on this tablet","इस टैबलेट पर शीर्ष रन","या टॅबलेटवरील सर्वोत्तम रन"],
+ watch:["Watch demo","डेमो देखें","डेमो पहा"],replay:["Replay","फिर देखें","पुन्हा पहा"],go:["Start practice","अभ्यास शुरू करें","सराव सुरू करा"]
+};
+const o=(i,l,ok,d)=>({i,l,ok,d});
+const P={
+ rec:{ic:'🚚',n:["Receiving & put-away","रिसीविंग और पुट-अवे","रिसीव्हिंग आणि पुट-अवे"],s:[
+  {s:1,q:["What do you wear before unloading?","उतारने से पहले क्या पहनते हैं?","माल उतरवण्यापूर्वी काय घालता?"],
+   o:[o('🦺',["Shoes, gloves, vest","जूते, दस्ताने, जैकेट","बूट, हातमोजे, जॅकेट"],1),o('🩴',["Normal chappal","साधारण चप्पल","साधी चप्पल"]),o('💨',["Nothing, it is quick","कुछ नहीं, जल्दी है","काही नाही, घाई आहे"])],
+   w:["PPE first, every time. Skipping it is a safety fail.","पहले PPE, हर बार। इसे छोड़ना सुरक्षा में फेल है।","आधी PPE, प्रत्येक वेळी. ते वगळणे सुरक्षा अपयश आहे."]},
+  {q:["Truck is at the dock. What do you check first?","ट्रक डॉक पर है। पहले क्या जाँचते हैं?","ट्रक डॉकवर आहे. आधी काय तपासता?"],
+   o:[o('🗣️',["Driver’s word","ड्राइवर की बात","ड्रायव्हरचे बोलणे"]),o('📄',["Challan matches PO","चालान PO से मिलाएँ","चलन PO शी जुळवा"],1),o('📦',["Nothing, unload","कुछ नहीं, उतारें","काही नाही, उतरवा"])],
+   w:["No matching PO, no unloading. Stop and call your supervisor.","PO न मिले तो न उतारें। सुपरवाइज़र को बुलाएँ।","PO जुळत नसेल तर उतरवू नका. सुपरवायझरला बोलवा."]},
+  {k:'g',q:["Your PO is 7781. Which challan line is wrong?","आपका PO 7781 है। चालान की कौन सी लाइन गलत है?","तुमचा PO 7781 आहे. चलनातील कोणती ओळ चुकीची आहे?"],
+   o:[o('📄',["PO 7718","PO 7718","PO 7718"],1),o('📄',["Part ATH-0417","Part ATH-0417","Part ATH-0417"]),o('📄',["Date 22 Oct","तारीख 22 अक्टू","तारीख 22 ऑक्टो"])],
+   w:["PO numbers must match exactly. 7718 is not 7781. Do not unload; call your supervisor.","PO नंबर बिल्कुल मिलना चाहिए। 7718, 7781 नहीं है। न उतारें; सुपरवाइज़र को बुलाएँ।","PO नंबर तंतोतंत जुळला पाहिजे. 7718 म्हणजे 7781 नाही. उतरवू नका; सुपरवायझरला बोलवा."]},
+  {q:["Which box is damaged?","कौन सा बॉक्स खराब है?","कोणता बॉक्स खराब आहे?"],
+   o:[o('📦',["Box A","बॉक्स A","बॉक्स A"]),o('📦',["Box B","बॉक्स B","बॉक्स B"]),o('📦',["Box C","बॉक्स C","बॉक्स C"],1,1)],
+   w:["Set it aside, take a photo, tell your supervisor.","अलग रखें, फोटो लें, सुपरवाइज़र को बताएँ।","बाजूला ठेवा, फोटो घ्या, सुपरवायझरला सांगा."]},
+  {k:'g',q:["Tap the pallet with a missing label.","बिना लेबल वाला पैलेट दबाएँ।","लेबल नसलेला पॅलेट दाबा."],
+   o:[o('📦🏷️',["P1","P1","P1"]),o('📦',["P2","P2","P2"],1),o('📦🏷️',["P3","P3","P3"])],
+   w:["No label, no receiving. Hold the pallet and ask your supervisor.","लेबल नहीं तो रिसीव नहीं। पैलेट रोकें, सुपरवाइज़र से पूछें।","लेबल नाही तर रिसीव्ह नाही. पॅलेट थांबवा, सुपरवायझरला विचारा."]},
+  {c:22,q:["Challan says 24. Count the boxes.","चालान में 24 हैं। बॉक्स गिनें।","चलनात 24 आहेत. बॉक्स मोजा."],
+   w:["22 boxes: 2 short. Record 22, not 24, and tell your supervisor.","22 बॉक्स: 2 कम। 24 नहीं, 22 लिखें और सुपरवाइज़र को बताएँ।","22 बॉक्स: 2 कमी. 24 नाही, 22 नोंदवा आणि सुपरवायझरला सांगा."]},
+  {q:["Scanner: ATH-0417. PO: ATH-0471. What now?","स्कैनर: ATH-0417। PO: ATH-0471। अब क्या?","स्कॅनर: ATH-0417. PO: ATH-0471. आता काय?"],
+   o:[o('✅',["Receive anyway","फिर भी लें","तरीही घ्या"]),o('✋',["Hold it, call QC","रोकें, QC बुलाएँ","थांबवा, QC ला बोलवा"],1),o('✏️',["Fix the label by hand","लेबल हाथ से बदलें","लेबल हाताने बदला"])],
+   w:["Codes differ, so it is the wrong part. Never edit labels. Hold and call QC.","कोड अलग हैं, गलत पार्ट है। लेबल न बदलें। रोकें, QC बुलाएँ।","कोड वेगळे, चुकीचा पार्ट. लेबल बदलू नका. थांबवा, QC ला बोलवा."]},
+  {q:["Where do battery packs go?","बैटरी पैक कहाँ रखें?","बॅटरी पॅक कुठे ठेवायचे?"],
+   o:[o('🚪',["High shelf by the door","दरवाज़े के पास ऊपर","दाराजवळ वरच्या शेल्फवर"]),o('🚧',["Aisle floor","गलियारे का फ़र्श","पॅसेजमध्ये जमिनीवर"]),o('🔋',["Battery zone, low shelf","बैटरी ज़ोन, नीचे की शेल्फ","बॅटरी झोन, खालचा शेल्फ"],1)],
+   w:["Heavy goes low, batteries stay in their zone away from heat. Scan the bin to confirm. (Placeholder rule until the Ather SOP.)","भारी सामान नीचे, बैटरी अपने ज़ोन में, गर्मी से दूर। बिन स्कैन करें। (Ather SOP तक अस्थायी नियम)","जड माल खाली, बॅटरी स्वतःच्या झोनमध्ये, उष्णतेपासून दूर. बिन स्कॅन करा. (Ather SOP येईपर्यंत तात्पुरता नियम)"]},
+  {d:{it:[{i:'🔋',l:["Battery pack","बैटरी पैक","बॅटरी पॅक"],z:'b'},{i:'🔌',l:["PCB tray","PCB ट्रे","PCB ट्रे"],z:'e'},{i:'🔩',l:["Brackets","ब्रैकेट","ब्रॅकेट"],z:'g'}],
+    z:[{id:'b',i:'🟥',l:["Battery zone","बैटरी ज़ोन","बॅटरी झोन"]},{id:'e',i:'🟦',l:["ESD rack","ESD रैक","ESD रॅक"]},{id:'g',i:'🟩',l:["General rack","जनरल रैक","जनरल रॅक"]}]},
+   q:["Put each item in its zone","हर चीज़ को उसके ज़ोन में रखें","प्रत्येक वस्तू तिच्या झोनमध्ये ठेवा"],
+   w:["Batteries to the battery zone, boards to ESD, plain parts to general. (Placeholder zones until the Ather SOP.)","बैटरी बैटरी ज़ोन में, बोर्ड ESD में, सादे पार्ट जनरल में। (Ather SOP तक अस्थायी ज़ोन)","बॅटरी बॅटरी झोनमध्ये, बोर्ड ESD मध्ये, साधे पार्ट जनरलमध्ये. (Ather SOP येईपर्यंत तात्पुरते झोन)"]},
+  {a:[["Check PPE","PPE जाँचें","PPE तपासा"],["Match challan to PO","चालान को PO से मिलाएँ","चलन PO शी जुळवा"],["Inspect and count","जाँचें और गिनें","तपासा आणि मोजा"],["Scan and receive","स्कैन करें, रिसीव करें","स्कॅन करा, रिसीव्ह करा"],["Put away","पुट-अवे करें","पुट-अवे करा"]],
+   q:["Put the receiving steps in order","रिसीविंग के चरण क्रम में लगाएँ","रिसीव्हिंगच्या पायऱ्या क्रमाने लावा"],
+   w:["PPE, paperwork, check, scan, then put away. Never skip ahead.","PPE, कागज़ात, जाँच, स्कैन, फिर पुट-अवे। कोई चरण न छोड़ें।","PPE, कागदपत्रे, तपासणी, स्कॅन, मग पुट-अवे. पायरी वगळू नका."]}
+ ]},
+ pick:{ic:'🛒',n:["Order picking & packaging","ऑर्डर पिकिंग और पैकेजिंग","ऑर्डर पिकिंग आणि पॅकेजिंग"],s:[
+  {a:[["Read the pick list","पिक लिस्ट पढ़ें","पिक लिस्ट वाचा"],["Go to the bin","बिन पर जाएँ","बिनकडे जा"],["Scan bin and part","बिन और पार्ट स्कैन करें","बिन आणि पार्ट स्कॅन करा"],["Pick the quantity","मात्रा निकालें","संख्या काढा"],["Pack and label","पैक और लेबल करें","पॅक करा, लेबल लावा"]],
+   q:["Put picking in order","पिकिंग के चरण क्रम में लगाएँ","पिकिंगच्या पायऱ्या क्रमाने लावा"],
+   w:["List, bin, scan, pick, pack. Scan before you pick, always.","लिस्ट, बिन, स्कैन, पिक, पैक। हमेशा पिक से पहले स्कैन।","लिस्ट, बिन, स्कॅन, पिक, पॅक. नेहमी पिकपूर्वी स्कॅन."]},
+  {q:["Pick list says bin B-14. Which bin?","पिक लिस्ट: बिन B-14। कौन सा बिन?","पिक लिस्ट: बिन B-14. कोणता बिन?"],
+   o:[o('🗄️',["B-41","B-41","B-41"]),o('🗄️',["B-14","B-14","B-14"],1),o('🗄️',["A-14","A-14","A-14"])],
+   w:["Read the bin code twice. B-41 and A-14 look alike.","बिन कोड दो बार पढ़ें। B-41 और A-14 मिलते-जुलते हैं।","बिन कोड दोनदा वाचा. B-41 आणि A-14 सारखे दिसतात."]},
+  {k:'bc',po:'ATH-0417',q:["Scan the part that matches the pick list","पिक लिस्ट से मिलने वाले पार्ट को स्कैन करें","पिक लिस्टशी जुळणारा पार्ट स्कॅन करा"],
+   o:[o('',["ATH-0471","ATH-0471","ATH-0471"]),o('',["ATH-0417","ATH-0417","ATH-0417"],1),o('',["ATH-0714","ATH-0714","ATH-0714"])],
+   w:["Match every digit, not just the first ones. Scan only on an exact match.","हर अंक मिलाएँ, सिर्फ़ पहले अंक नहीं। सिर्फ़ पूरा मिलने पर स्कैन करें।","प्रत्येक अंक जुळवा, फक्त पहिले नाही. पूर्ण जुळल्यावरच स्कॅन करा."]},
+  {q:["Two lots in the bin. Which first?","बिन में दो लॉट। पहले कौन सा?","बिनमध्ये दोन लॉट. आधी कोणता?"],
+   o:[o('🆕',["Newer: 10 Oct","नया: 10 अक्टू.","नवीन: 10 ऑक्टो."]),o('🕰️',["Older: 03 Sep","पुराना: 03 सित.","जुना: 03 सप्टें."],1)],
+   w:["First in, first out: the oldest lot goes first.","पहले आया, पहले गया: सबसे पुराना लॉट पहले।","आधी आलेला, आधी जाणार: जुना लॉट आधी."]},
+  {q:["How do you pack a circuit board?","सर्किट बोर्ड कैसे पैक करें?","सर्किट बोर्ड कसा पॅक करायचा?"],
+   o:[o('📦',["Loose in carton","कार्टन में खुला","कार्टनमध्ये मोकळा"]),o('🛍️',["ESD bag + foam","ESD बैग + फ़ोम","ESD बॅग + फोम"],1),o('🧻',["Plastic sheet","प्लास्टिक शीट","प्लास्टिक शीट"])],
+   w:["Static can ruin a board. ESD bag, then foam, then carton.","स्टैटिक बोर्ड खराब कर देता है। ESD बैग, फ़ोम, फिर कार्टन।","स्टॅटिकमुळे बोर्ड खराब होतो. ESD बॅग, फोम, मग कार्टन."]},
+  {k:'g',q:["Pick list: 6 × ATH-0417 and an ESD bag. Find the mistake in the tray.","पिक लिस्ट: 6 × ATH-0417 और ESD बैग। ट्रे में गलती खोजें।","पिक लिस्ट: 6 × ATH-0417 आणि ESD बॅग. ट्रेमधील चूक शोधा."],
+   o:[o('📦',["5 × ATH-0417","5 × ATH-0417","5 × ATH-0417"],1),o('🛍️',["ESD bag","ESD बैग","ESD बॅग"]),o('🏷️',["Label ATH-0417","लेबल ATH-0417","लेबल ATH-0417"])],
+   w:["Only 5 in the tray. Pick the missing one before handover.","ट्रे में सिर्फ़ 5 हैं। सौंपने से पहले बाकी एक निकालें।","ट्रेमध्ये फक्त 5 आहेत. सुपूर्द करण्यापूर्वी राहिलेला एक काढा."]},
+  {q:["Before handover, what do you check?","सौंपने से पहले क्या जाँचें?","सुपूर्द करण्यापूर्वी काय तपासता?"],
+   o:[o('🤝',["Just hand it over","बस सौंप दें","फक्त द्या"]),o('🙋',["Ask the line to check","लाइन से जँचवाएँ","लाइनला तपासायला सांगा"]),o('✅',["List, label, quantity match","लिस्ट, लेबल, मात्रा मिलाएँ","लिस्ट, लेबल, संख्या जुळवा"],1)],
+   w:["The check is yours. Match list, label and quantity, then get a sign.","जाँच आपकी ज़िम्मेदारी है। लिस्ट, लेबल, मात्रा मिलाएँ, फिर साइन लें।","तपासणी तुमची जबाबदारी. लिस्ट, लेबल, संख्या जुळवा, मग सही घ्या."]}
+ ]}
+};
+const shuffle=a=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1]);
+const LV=[["Rookie","नया","नवखा"],["Handler","हैंडलर","हँडलर"],["Specialist","स्पेशलिस्ट","स्पेशालिस्ट"],["Floor Pro","फ़्लोर प्रो","फ्लोअर प्रो"]],LX=[0,60,150,300];
+const BG={safe:['🛡️',["Safety Star","सेफ्टी स्टार","सेफ्टी स्टार"]],perf:['🎯',["Perfect Run","परफेक्ट रन","परफेक्ट रन"]],eye:['👁️',["Sharp Eye","तेज़ नज़र","तीक्ष्ण नजर"]],cmb:['🔥',["Combo ×5","कॉम्बो ×5","कॉम्बो ×5"]],cert:['🏅',["Certified","प्रमाणित","प्रमाणित"]]};
+const ld=()=>{try{return JSON.parse(localStorage.getItem('ftp')||'{}')}catch(e){return{}}};
+const beep=ok=>{try{const c=new(window.AudioContext||window.webkitAudioContext)(),a=c.createOscillator(),g=c.createGain();a.frequency.value=ok?880:180;g.gain.value=.08;a.connect(g);g.connect(c.destination);a.start();a.stop(c.currentTime+(ok?.12:.3));if(!ok&&navigator.vibrate)navigator.vibrate(120)}catch(e){}};
+const lvOf=x=>LX.reduce((l,v,k)=>x>=v?k:l,0);
+const G=html`<rect x="0" y="250" width="600" height="20" class="fw" style=${{opacity:.35}}/>`;
+const T=(x,y,v,a,z,c)=>html`<text key=${x+v} x=${x} y=${y} font-size=${z||26} font-weight="700" text-anchor="middle" class=${(c||'fi')+' '+(a||'')}>${v}</text>`;
+const R=(x,y,w,h,c,a,st)=>html`<rect key=${x+'-'+y+c} x=${x} y=${y} width=${w} height=${h} rx="5" class=${c+' '+(a||'')} style=${st}/>`;
+const Wk=(x,m)=>{const a=m===1?' pp ':' ';return html`<g transform=${'translate('+x+',250)'}><rect x="-14" y="-40" width="28" height="40" class="fi"/><rect x="-20" y="-110" width="40" height="76" rx="10" style=${{fill:'#5b7a8a'}}/><circle cx="0" cy="-128" r="18" style=${{fill:'#e2b48c'}}/><rect x="-20" y="-110" width="40" height="76" rx="10" class=${'fa'+(a.trim()?' pp d1':'')}/><path d="M-22 -134a22 20 0 0 1 44 0z" class=${m===1?'dr d2':''} style=${{fill:'#f5c400'}}/><circle cx="-26" cy="-60" r="9" class=${m===1?'pp d3':''} style=${{fill:'#f5c400'}}/><circle cx="26" cy="-60" r="9" class=${m===1?'pp d3':''} style=${{fill:'#f5c400'}}/></g>`};
+const BC=(x,y)=>[0,1,2,3,4,5,6,7,8,9].map(k=>R(x+k*8,y,k%3?4:6,24,'fi'));
+const SC={rec:[
+ [()=>[G,Wk(260,1),T(430,150,'✅','pp d4',64)],["First, wear your safety shoes, gloves and vest.","पहले सेफ्टी जूते, दस्ताने और जैकेट पहनें।","आधी सेफ्टी बूट, हातमोजे आणि जॅकेट घाला."]],
+ [()=>[G,html`<g class="sIn"><rect x="30" y="140" width="190" height="95" rx="6" class="fc si"/><rect x="220" y="170" width="60" height="65" rx="6" class="fa si"/><circle cx="70" cy="240" r="16" class="fi"/><circle cx="240" cy="240" r="16" class="fi"/></g>`,R(330,215,270,35,'fi'),html`<g class="pp d2"><rect x="380" y="30" width="150" height="130" rx="6" class="fc si"/></g>`,T(455,75,'PO 7781','pp d2',24),R(400,95,110,8,'fi','pp d2'),R(400,120,80,8,'fi','pp d2'),T(540,165,'✅','pp d4',56)],["Truck at the dock: match the challan with the PO before unloading.","ट्रक डॉक पर: उतारने से पहले चालान को PO से मिलाएँ।","ट्रक डॉकवर: उतरवण्यापूर्वी चलन PO शी जुळवा."]],
+ [()=>[G,...[0,1,3,4,5].map(k=>R(40+k*90,190,60,60,'fw si','dr',{animationDelay:k*.3+'s'})),html`<g class="dr" style=${{animationDelay:'.6s'}}><rect x="220" y="190" width="60" height="60" rx="5" class="fn si mv" style=${{'--m':'translate(30px,-110px)',animationDelay:'2.4s'}}/></g>`,T(300,100,'24 ≠ 22','pp',44,'fn')],["Check every box, count them, and set the damaged one aside.","हर बॉक्स जाँचें, गिनें और खराब को अलग रखें।","प्रत्येक बॉक्स तपासा, मोजा आणि खराब बाजूला ठेवा."]],
+ [()=>[G,R(300,170,130,80,'fw si'),R(315,185,100,50,'fc'),...BC(325,195),R(150,175,60,40,'fa si'),R(210,193,100,4,'fn','fl'),T(360,130,'ATH-0417 = ATH-0417','pp d3',26),T(520,215,'✅','pp d3',64)],["Scan the label. It must match the PO exactly.","लेबल स्कैन करें। यह PO से बिल्कुल मिलना चाहिए।","लेबल स्कॅन करा. ते PO शी तंतोतंत जुळले पाहिजे."]],
+ [()=>[G,R(380,195,200,55,'fn','',{opacity:.2}),R(380,130,200,8,'fi'),R(380,190,200,8,'fi'),R(380,246,200,8,'fi'),R(380,130,8,120,'fi'),R(572,130,8,120,'fi'),html`<g class="mv" style=${{'--m':'translate(340px,0)'}}><rect x="60" y="190" width="60" height="60" rx="5" class="fw si"/><text x="90" y="232" font-size="30" text-anchor="middle">🔋</text></g>`,T(480,100,'🔋','pp d3',44),T(300,100,'✅','pp d4',56)],["Put it in the right zone: batteries low, in the battery zone.","सही ज़ोन में रखें: बैटरी नीचे, बैटरी ज़ोन में।","योग्य झोनमध्ये ठेवा: बॅटरी खाली, बॅटरी झोनमध्ये."]]
+],pick:[
+ [()=>[G,R(210,20,180,225,'fc si'),R(260,10,80,20,'fa'),T(300,90,'B-14','pp d1',30),T(300,145,'ATH-0417','pp d2',30),T(300,200,'× 6','pp d3',30),T(420,90,'✅','pp d1',34),T(420,145,'✅','pp d2',34),T(420,200,'✅','pp d3',34)],["Read the pick list: bin, part and quantity.","पिक लिस्ट पढ़ें: बिन, पार्ट और मात्रा।","पिक लिस्ट वाचा: बिन, पार्ट आणि संख्या."]],
+ [()=>[G,R(300,160,80,90,'fc si'),R(390,160,80,90,'fc si'),R(480,160,80,90,'fc si'),R(390,160,80,90,'fa','fl'),T(340,215,'B-12','',24),T(430,215,'B-14','',24),T(520,215,'B-16','',24),html`<g class="mv" style=${{'--m':'translate(210px,0)'}}>${Wk(80,2)}</g>`],["Walk to the bin and read its code twice.","बिन तक जाएँ और कोड दो बार पढ़ें।","बिनपर्यंत जा आणि कोड दोनदा वाचा."]],
+ [()=>[G,R(200,110,220,140,'fc si'),R(215,170,80,70,'fw si'),R(315,170,80,70,'fw si'),T(255,212,'03 Sep','',22),T(355,212,'10 Oct','',22),R(215,170,80,70,'fa','fl'),R(470,205,100,45,'fc si'),T(520,238,'6','',24),html`<g class="mv" style=${{'--m':'translate(270px,35px)',animationDelay:'1.6s'}}><rect x="235" y="190" width="40" height="30" rx="4" class="fo"/></g>`,T(310,90,'FIFO','pp d3',40)],["Scan, then take the oldest lot first.","स्कैन करें, फिर सबसे पुराना लॉट पहले लें।","स्कॅन करा, मग जुना लॉट आधी घ्या."]],
+ [()=>[G,R(200,140,200,110,'fw si'),R(212,205,176,34,'',' pp d1',{fill:'#cfd6da'}),R(230,180,140,40,'',' pp d2',{fill:'#9fb4c0'}),R(270,160,60,30,'fo','pp d3'),T(300,115,'ESD + foam','pp d4',32)],["Pack it: ESD bag, foam, then the carton.","पैक करें: ESD बैग, फ़ोम, फिर कार्टन।","पॅक करा: ESD बॅग, फोम, मग कार्टन."]],
+ [()=>[G,R(440,170,120,80,'fa si'),T(500,220,'LINE','',30),html`<g class="mv" style=${{'--m':'translate(300px,0)',animationDelay:'.4s'}}><rect x="60" y="190" width="60" height="60" rx="5" class="fw si"/></g>`,T(150,90,'List ✅','pp d2',28),T(300,90,'Label ✅','pp d3',28),T(450,90,'Qty ✅','pp d4',28)],["Match list, label and quantity, then hand over.","लिस्ट, लेबल और मात्रा मिलाएँ, फिर सौंपें।","लिस्ट, लेबल आणि संख्या जुळवा, मग सुपूर्द करा."]]
+]};
+function Demo({k,lg,run,onDone}){
+ const sc=SC[k],[n,setN]=useState(0),[pl,setPl]=useState(true),[rk,setRk]=useState(0),cap=sc[n][1][lg];
+ useEffect(()=>{if(!pl)return;let d=0,tm;const nx=()=>{if(d)return;d=1;clearTimeout(tm);n+1<sc.length?setN(n+1):setPl(false)};
+  tm=setTimeout(nx,8000);
+  try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(cap);u.lang=VC[lg];u.onend=()=>setTimeout(nx,1500);speechSynthesis.speak(u)}catch(e){}
+  return()=>{d=1;clearTimeout(tm);try{speechSynthesis.cancel()}catch(e){}}},[n,pl,lg,rk]);
+ return html`<div class="demo"><svg viewBox="0 0 600 270" key=${n+'-'+rk} role="img" aria-label=${cap}>${sc[n][0]()}</svg>
+  <div class="cap">${cap}</div><div class="slots">${sc.map((_,j)=>html`<i key=${j} class=${j<n?'ok':j===n?'cur':''}></i>`)}</div>
+  <button class="btn" onClick=${onDone}>${run?UI.go[lg]:UI.home[lg]}</button> <button class="btn" onClick=${()=>{setN(0);setPl(true);setRk(rk+1)}}>↻ ${UI.replay[lg]}</button></div>`}
+function App(){
+ const [lg,setLg]=useState(0),[mode,setMode]=useState(0),[pk,setPk]=useState(null),[i,setI]=useState(0),[res,setRes]=useState([]),[pick,setPick]=useState(null),[n,setN]=useState(0),[done,setDone]=useState(null),[seed,setSeed]=useState(0);
+ const [pf,setPf]=useState(()=>Object.assign({name:'',xp:0,streak:0,last:'',bd:[],best:{},top:{}},ld()));
+ const [lives,setLives]=useState(3),[combo,setCombo]=useState(0),[rx,setRx]=useState(0),[mc,setMc]=useState(0),[eye,setEye]=useState(0),[t0,setT0]=useState(Date.now());
+ const [demo,setDemo]=useState(null),[ord,setOrd]=useState([]),[dd,setDd]=useState({pl:{},miss:0}),[sel,setSel]=useState(null),[dr,setDr]=useState(null),mvr=useRef(false);
+ const t=a=>a[lg], pack=pk&&P[pk], s=pack&&pack.s[i], lvl=lvOf(pf.xp);
+ const opts=useMemo(()=>s&&s.o?shuffle(s.o):[],[pk,i,seed]);
+ const sq=useMemo(()=>s&&s.a?shuffle(s.a.map((_,k)=>k)):[],[pk,i,seed]);
+ const sv=p=>{setPf(p);try{localStorage.setItem('ftp',JSON.stringify(p))}catch(e){}};
+ const say=x=>{try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(x);u.lang=VC[lg];speechSynthesis.speak(u)}catch(e){}};
+ const rst=()=>{setPick(null);setN(0);setOrd([]);setDd({pl:{},miss:0});setSel(null);setT0(Date.now())};
+ const start=k=>{setPk(k);setI(0);setRes([]);setDone(null);setSeed(seed+1);setLives(3);setCombo(0);setRx(0);setMc(0);setEye(0);rst()};
+ const fin=(ok,x)=>{if(pick)return;const sp=ok&&Date.now()-t0<12000?5:0,c=ok?combo+1:0;
+  setCombo(c);setMc(Math.max(mc,c));
+  if(ok){setRx(rx+10+Math.min(c-1,4)*2+sp);if(s.k==='g')setEye(eye+1)}else if(mode)setLives(lives-1);
+  beep(ok);setPick(Object.assign({ok},x));setRes(res.concat({ok,s:s.s}))};
+ const drop=(z,k)=>{if(s.d.it[k].z===z)setDd(p=>p.pl[k]!=null?p:{pl:Object.assign({},p.pl,{[k]:z}),miss:p.miss});else{beep(false);setDd(p=>({pl:p.pl,miss:p.miss+1}))}setSel(null)};
+ useEffect(()=>{if(s&&s.d&&!pick&&Object.keys(dd.pl).length===s.d.it.length)fin(dd.miss===0)},[dd]);
+ useEffect(()=>{if(!dr)return;mvr.current=false;const sx=dr.sx,sy=dr.sy,k=dr.k;
+  const mv=e=>{if(Math.hypot(e.clientX-sx,e.clientY-sy)>8)mvr.current=true;setDr(d=>d&&Object.assign({},d,{x:e.clientX,y:e.clientY}))};
+  const up=e=>{const z=document.elementFromPoint(e.clientX,e.clientY),zz=z&&z.closest('[data-z]');if(zz&&mvr.current)drop(zz.dataset.z,k);setDr(null)};
+  addEventListener('pointermove',mv);addEventListener('pointerup',up);
+  return()=>{removeEventListener('pointermove',mv);removeEventListener('pointerup',up)}},[dr&&dr.k]);
+ const end=lost=>{
+  const pct=res.filter(r=>r.ok).length/res.length,miss=res.some(r=>!r.ok&&r.s),bd=[];
+  const st=lost?0:pct>=.9&&!miss?3:pct>=.7?2:1;
+  if(!lost){if(!miss)bd.push('safe');if(pct===1)bd.push('perf');if(eye>=2)bd.push('eye');if(mc>=5)bd.push('cmb');if(st===3&&mode)bd.push('cert')}
+  const today=new Date().toISOString().slice(0,10),y=new Date(Date.now()-864e5).toISOString().slice(0,10);
+  const stk=pf.last===today?pf.streak:pf.last===y?pf.streak+1:1,gain=rx+st*20;
+  const top=(pf.top[pk]||[]).concat({n:pf.name||'—',x:gain}).sort((a,b)=>b.x-a.x).slice(0,5);
+  sv(Object.assign({},pf,{xp:pf.xp+gain,streak:stk,last:today,bd:[...new Set(pf.bd.concat(bd))],best:Object.assign({},pf.best,{[pk]:Math.max(pf.best[pk]||0,st)}),top:Object.assign({},pf.top,{[pk]:top})}));
+  setDone({st,bd,gain,lost})};
+ const next=()=>{if(mode&&lives<=0)return end(true);if(i+1<pack.s.length){setI(i+1);rst();return}end(false)};
+ const bar=html`<div class="bar"><h1>🏭 ${t(UI.title)}</h1><div class="tools">
+  <div class="seg">${[0,1].map(m=>html`<button key=${m} class=${mode===m?'on':''} onClick=${()=>setMode(m)}>${t(m?UI.p:UI.g)}</button>`)}</div>
+  <div class="seg">${LN.map((x,k)=>html`<button key=${k} class=${lg===k?'on':''} onClick=${()=>setLg(k)}>${x}</button>`)}</div></div></div>`;
+ if(demo)return html`${bar}<main><${Demo} k=${demo.k} lg=${lg} run=${demo.run} onDone=${()=>{const d=demo;setDemo(null);if(d.run)start(d.k)}}/></main>`;
+ if(!pk){const nx=LX[lvl+1],pc=nx?(pf.xp-LX[lvl])/(nx-LX[lvl])*100:100;
+  return html`${bar}<main><p class="note">${t(UI.sub)}</p>
+  <div class="hud"><input class="nm" placeholder=${t(UI.nm)} value=${pf.name} onInput=${e=>sv(Object.assign({},pf,{name:e.target.value}))}/><span>${t(LV[lvl])} · ${pf.xp} ${t(UI.xp)}</span><span>🔥 ${pf.streak||0} ${t(UI.day)}</span></div>
+  <div class="xpb"><i style=${{width:pc+'%'}}></i></div>
+  <div class="chips">${pf.bd.map(b=>html`<span key=${b} title=${t(BG[b][1])}>${BG[b][0]}</span>`)}</div>
+  <div class="home" style=${{marginTop:'16px'}}>${Object.keys(P).map(k=>html`<button key=${k} class="pack" onClick=${()=>mode?start(k):setDemo({k,run:1})}><div class="big">${P[k].ic}</div><h2>${t(P[k].n)}</h2><div>${pf.best[k]?t(UI.best)+': '+'⭐'.repeat(pf.best[k]):' '}</div></button>`)}</div>
+  <div class="chips" style=${{marginTop:'20px'}}>${Object.keys(P).map(k=>html`<button key=${k} class="btn" onClick=${()=>setDemo({k})}>▶ ${t(UI.watch)}: ${t(P[k].n)}</button>`)}</div>
+  <h2 style=${{margin:'24px 0 8px'}}>${t(UI.top)}</h2><div class="home">${Object.keys(P).map(k=>html`<div key=${k}><b>${t(P[k].n)}</b><ol>${(pf.top[k]||[]).map((r,j)=>html`<li key=${j}>${r.n} · ${r.x} ${t(UI.xp)}</li>`)}</ol></div>`)}</div></main>`}
+ if(done)return html`${bar}<main class="done"><div class="st">${done.lost?'💔':'⭐'.repeat(done.st)}</div><h2>${t(pack.n)}</h2>
+  <p>${done.lost?t(UI.over):'+'+done.gain+' '+t(UI.xp)}</p>
+  <div class="chips">${done.bd.map(b=>html`<span key=${b}>${BG[b][0]}</span>`)}</div><p>${done.bd.map(b=>t(BG[b][1])).join(' · ')}</p>
+  ${res.some(r=>!r.ok&&r.s)?html`<p>${t(UI.sNo)}</p>`:''}
+  ${done.bd.includes('cert')?html`<div class="cert"><h2>🏅 ${pf.name||'—'}</h2><div>${t(pack.n)} · ${new Date().toLocaleDateString()}</div><p>${t(UI.cert)}</p><div>Supervisor: ______________</div></div>`:''}
+  <button class="btn" onClick=${()=>start(pk)}>${t(UI.re)}</button> <button class="btn" onClick=${()=>setPk(null)}>${t(UI.home)}</button></main>`;
+ const choice=html`<div class=${'opts'+(s.k==='g'?' g':'')}>${opts.map((x,k)=>html`<button key=${k} class=${'tile'+(pick&&pick.pk===k?(x.ok?' ok':' no'):'')+(pick&&x.ok&&!pick.ok?' ok':'')+(!pick&&mode===0&&x.ok?' hint':'')} onClick=${()=>fin(!!x.ok,{pk:k})}>${s.k==='bc'?html`<span class="bcd"></span>`:html`<span class="ic">${x.i}${x.d?html`<b>💥</b>`:''}</span>`}${t(x.l)}</button>`)}</div>`;
+ const count=html`<div class="cnt"><button class="tile" disabled=${!!pick} onClick=${()=>setN(Math.max(0,n-1))}>−</button><span>${n}</span><button class="tile" disabled=${!!pick} onClick=${()=>setN(n+1)}>+</button></div>${!pick?html`<button class="btn" onClick=${()=>fin(n===s.c)}>${t(UI.chk)}</button>`:''}`;
+ const seq=s.a&&html`<div class="seq">${ord.map((x,k)=>html`<button key=${x} class="tile" disabled=${!!pick} onClick=${()=>setOrd(ord.filter(y=>y!==x))}>${k+1}. ${t(s.a[x])}</button>`)}</div>
+  <div class="opts">${sq.filter(x=>!ord.includes(x)).map(x=>html`<button key=${x} class="tile" disabled=${!!pick} onClick=${()=>setOrd(ord.concat(x))}>${t(s.a[x])}</button>`)}</div>
+  ${!pick&&ord.length===s.a.length?html`<button class="btn" onClick=${()=>fin(ord.every((x,k)=>x===k))}>${t(UI.chk)}</button>`:''}`;
+ const drag=s.d&&html`<p class="note">${t(UI.dh)}</p><div class="opts">${s.d.it.map((x,k)=>dd.pl[k]!=null?'':html`<button key=${k} class=${'tile item'+(sel===k?' sel':'')} onPointerDown=${e=>setDr({k,sx:e.clientX,sy:e.clientY})} onClick=${()=>setSel(k)}><span class="ic">${x.i}</span>${t(x.l)}</button>`)}</div>
+  <div class="zones">${s.d.z.map(z=>html`<div key=${z.id} class="zone" data-z=${z.id} onClick=${()=>sel!=null&&drop(z.id,sel)}><span class="ic">${z.i}</span><div>${t(z.l)}</div><div class="chips">${s.d.it.map((x,k)=>dd.pl[k]===z.id?html`<span key=${k}>${x.i}</span>`:'')}</div></div>`)}</div>`;
+ return html`${bar}<main>
+  <div class="hud"><span>${t(LV[lvl])} · ${pf.xp+rx} ${t(UI.xp)}</span>${mode?html`<span>${'❤️'.repeat(Math.max(lives,0))||'💔'}</span>`:''}${combo>1?html`<span>🔥 ×${combo}</span>`:''}</div>
+  <div class="slots">${pack.s.map((_,k)=>html`<i key=${k} class=${k<res.length?(res[k].ok?'ok':'no'):k===i?'cur':''}></i>`)}</div>
+  <div class="stage"><div class="q"><h2>${t(s.q)}</h2>
+   <button class="say" onClick=${()=>say(t(s.q))}>${t(UI.listen)}</button>
+   ${s.po?html`<div class="scn">PO · ${s.po}</div>`:''}
+   ${s.c?html`<div class="pile">${Array(s.c).fill('📦').map((b,k)=>html`<span key=${k}>${b}</span>`)}</div>`:''}</div>
+  <div>${s.c?count:s.a?seq:s.d?drag:choice}
+   ${pick?html`<div class=${'fb '+(pick.ok?'ok':'no')}><strong>${t(pick.ok?UI.good:UI.bad)}</strong>${t(s.w)}<br/><button class="btn" onClick=${next}>${t(UI.nx)}</button></div>`:''}
+  </div></div>${dr&&dr.x!=null&&s.d?html`<div class="ghost" style=${{left:dr.x,top:dr.y}}>${s.d.it[dr.k].i}</div>`:''}</main>`;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(App));
+</script></body></html>

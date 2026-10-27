@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@import "@fontsource/barlow-condensed/700.css";
+@import "@fontsource/noto-sans/400.css";
+@import "@fontsource/noto-sans/700.css";
+@import "@fontsource/noto-sans-devanagari/400.css";
+@import "@fontsource/noto-sans-devanagari/700.css";
+
+@theme {
+  --color-ink: var(--ink);
+  --color-concrete: var(--bg);
+  --color-card: var(--card);
+  --color-act: var(--act);
+  --color-ok: var(--ok);
+  --color-no: var(--no);
+  --color-wood: var(--wood);
+
+  --font-heading: 'Barlow Condensed', 'Noto Sans Devanagari', sans-serif;
+  --font-body: 'Noto Sans', 'Noto Sans Devanagari', sans-serif;
+}
+
+:root {
+  --bg: #dfe5e8;
+  --card: #ffffff;
+  --ink: #14232b;
+  --ok: #1f8a4c;
+  --no: #d23b30;
+  --act: #ee6a1f;
+  --wood: #b88a55;
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #10191e;
+    --card: #1a272e;
+    --ink: #eef3f5;
+    --ok: #43c27a;
+    --no: #ff6b5e;
+    --act: #ff8a4a;
+    --wood: #9a7344;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #10191e;
+  --card: #1a272e;
+  --ink: #eef3f5;
+  --ok: #43c27a;
+  --no: #ff6b5e;
+  --act: #ff8a4a;
+  --wood: #9a7344;
+}
+
+:root[data-theme="light"] {
+  --bg: #dfe5e8;
+  --card: #ffffff;
+  --ink: #14232b;
+  --ok: #1f8a4c;
+  --no: #d23b30;
+  --act: #ee6a1f;
+  --wood: #b88a55;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  user-select: none;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1, h2, h3, .font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: 0.02em;
+}
+
+/* SVG Demo Scene Colors and Keyframes */
+.fi { fill: var(--ink); }
+.fc { fill: var(--card); }
+.fw { fill: var(--wood); }
+.fo { fill: var(--ok); }
+.fn { fill: var(--no); }
+.fa { fill: var(--act); }
+.si { stroke: var(--ink); stroke-width: 3; }
+
+@keyframes sIn {
+  from { transform: translateX(-420px); }
+  to { transform: none; }
+}
+
+@keyframes dr {
+  from { transform: translateY(-120px); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+
+@keyframes pp {
+  from { opacity: 0; transform: scale(0.4); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes go {
+  from { transform: none; }
+  to { transform: var(--m); }
+}
+
+@keyframes fl {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 1; }
+}
+
+.sIn { animation: sIn 1.6s ease-out both; }
+.dr { animation: dr 0.8s ease-out both; }
+.pp { animation: pp 0.5s ease-out both; transform-box: fill-box; transform-origin: center; }
+.mv { animation: go 2s ease-in-out both; }
+.fl { animation: fl 1s infinite; }
+.d1 { animation-delay: 0.6s; }
+.d2 { animation-delay: 1.4s; }
+.d3 { animation-delay: 2.2s; }
+.d4 { animation-delay: 3.0s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .demo *, .sIn, .dr, .pp, .mv, .fl {
+    animation-duration: 0.01s !important;
+    animation-delay: 0s !important;
+  }
+}
+
+/* Barcode visual generator */
+.barcode-pattern {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--ink) 0 3px,
+    transparent 3px 6px,
+    var(--ink) 6px 7px,
+    transparent 7px 11px
+  );
+}
+
+/* Printable certificate styling */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #certificate-print-area, #certificate-print-area * {
+    visibility: visible;
+  }
+  #certificate-print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: #fff !important;
+    color: #14232b !important;
+  }
+}
