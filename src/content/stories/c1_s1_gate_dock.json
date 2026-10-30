@@ -684,6 +684,96 @@
           "mr": "SOP कलम 4.1.5: अनलोडिंग सुरू होण्यापूर्वी, इंजिन बंद केले पाहिजे आणि मागील चाकांखाली जड व्हील चॉक्स घट्ट बसवले पाहिजेत. चाके मोकळी राहिल्यास ट्रक पुढे सरकून फोर्कलिफ्ट पलटी होण्याचा धोका असतो."
         }
       }
+    },
+    {
+      "id": "c1_s1_sc07_gate_exit",
+      "stepNumber": 7,
+      "title": {
+        "en": "Empty Bins Reloading & Departure Gate Exit",
+        "hi": "खाली डिब्बे रीलोडिंग और प्रस्थान गेट निकास",
+        "mr": "रिकामे डबे रीलोडिंग आणि प्रस्थान गेट एक्झिट"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/scene_07_gate_exit.mp4",
+        "posterSrc": "/images/scenes/scene_07_poster.jpg",
+        "fallbackAnimation": "exit_gatehouse_barrier",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "Unloading is done! The truck has loaded 20 empty blue FLC bins to return to the vendor. At the exit gate, the driver demands: 'Open the boom barrier, these are just Ather's empty bins!' What must you do?",
+            "hi": "अनलोडिंग पूरी हो गई! ट्रक ने वेंडर को वापस करने के लिए 20 खाली नीले FLC डिब्बे लोड किए हैं। एग्जिट गेट पर चालक कहता है: 'बूम बैरियर खोलिए, ये सिर्फ एथर के खाली डिब्बे हैं!' आपको क्या करना चाहिए?",
+            "mr": "अनलोडिंग पूर्ण झाले! ट्रकने व्हेंडरला परत करण्यासाठी 20 रिकामे निळे FLC डबे लोड केले आहेत. एक्झिट गेटवर चालक म्हणतो: 'बूम बॅरियर उघडा, हे फक्त अथरचे रिकामे डबे आहेत!' तुम्ही काय केले पाहिजे?"
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc07_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Brilliant vigilance! SOP Clause 4.1.6.2 & 4.2.4 strictly enforce that returnable bins/FLCs require an authorized manual Delivery Challan (DC) and SAP YMM_GATE_EXIT clearance before the exit gate barrier opens!",
+            "hi": "शानदार सतर्कता! SOP क्लॉज 4.1.6.2 और 4.2.4 का सख्त नियम: एग्जिट गेट बैरियर खोलने से पहले रिटर्नेबल डिब्बे/FLC के लिए अधिकृत मैनुअल डिलीवरी चालान (DC) और SAP YMM_GATE_EXIT क्लीयरेंस अनिवार्य है!",
+            "mr": "उत्कृष्ट सतर्कता! SOP कलम 4.1.6.2 आणि 4.2.4 नुसार एक्झिट गेट बॅरियर उघडण्यापूर्वी रिटर्नेबल डबे/FLC साठी अधिकृत मॅन्युअल डिलिव्हरी चलन (DC) आणि SAP YMM_GATE_EXIT क्लिअरन्स अनिवार्य आहे!"
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc07_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Stop! Never raise the barrier without a manual Delivery Challan (DC). Empty FLC bins are valuable Ather company assets. Without a DC, thousands of rupees of packaging exit untracked!",
+            "hi": "रुकिए! मैनुअल डिलीवरी चालान (DC) के बिना कभी बैरियर न उठाएं। खाली FLC डिब्बे एथर कंपनी की मूल्यवान संपत्ति हैं। बिना DC के, हजारों रुपये की पैकेजिंग बिना रिकॉर्ड के बाहर चली जाएगी!",
+            "mr": "थांबा! मॅन्युअल डिलिव्हरी चलन (DC) शिवाय बॅरियर कधीही उघडू नका. रिकामे FLC डबे ही अथर कंपनीची मौल्यवान मालमत्ता आहे. DC शिवाय हजारो रुपयांचे पॅकेजिंग नोंदीविना बाहेर जाईल!"
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc07_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "stop_go",
+        "questionId": "c1-q07",
+        "safetyCritical": true,
+        "question": {
+          "en": "DECISION GATE: The driver wants to leave with 20 empty FLC bins without a manual Delivery Challan (DC):",
+          "hi": "निर्णय गेट: चालक बिना मैनुअल डिलीवरी चालान (DC) के 20 खाली FLC डिब्बों के साथ निकलना चाहता है:",
+          "mr": "निर्णय गेट: चालक मॅन्युअल डिलिव्हरी चलन (DC) शिवाय 20 रिकाम्या FLC डब्यांसह बाहेर पडू इच्छितो:"
+        },
+        "situation": {
+          "en": "Truck MH-20-DE-4419 has completed mechanical unloading at Dock 04. The driver loaded 20 folded FLC containers and presents only the inward gate slip, claiming: 'No DC is needed for Ather's own empty bins.'",
+          "hi": "ट्रक MH-20-DE-4419 ने डॉक 04 पर मैकेनिकल अनलोडिंग पूरी कर ली है। चालक ने 20 मुड़े हुए FLC कंटेनर लोड किए हैं और केवल आवक गेट पर्ची दिखाते हुए दावा करता है: 'एथर के अपने खाली डिब्बों के लिए किसी DC की आवश्यकता नहीं है।'",
+          "mr": "ट्रक MH-20-DE-4419 ने डॉक 04 वर मेकॅनिकल अनलोडिंग पूर्ण केले आहे. चालकाने 20 दुमडलेले FLC कंटेनर लोड केले आहेत आणि फक्त इनवर्ड गेट स्लिप दाखवून सांगतो: 'अथरच्या स्वतःच्या रिकाम्या डब्यांसाठी DC ची गरज नाही.'"
+        },
+        "correctAction": "stop",
+        "stopLabel": {
+          "en": "STOP & HALT VEHICLE",
+          "hi": "रुकें और वाहन रोकें",
+          "mr": "थांबा आणि वाहन थांबवा"
+        },
+        "goLabel": {
+          "en": "ALLOW EXIT & RAISE BARRIER",
+          "hi": "निकास की अनुमति दें और बैरियर उठाएं",
+          "mr": "बाहेर जाण्यास परवानगी द्या आणि बॅरियर उघडा"
+        },
+        "stopDescription": {
+          "en": "Mandate physical DC creation & SAP YMM_GATE_EXIT sign-off before raising boom barrier.",
+          "hi": "बूम बैरियर उठाने से पहले भौतिक DC निर्माण और SAP YMM_GATE_EXIT हस्ताक्षर अनिवार्य करें।",
+          "mr": "बूम बॅरियर उघडण्यापूर्वी प्रत्यक्ष DC तयार करणे आणि SAP YMM_GATE_EXIT मंजुरी अनिवार्य करा."
+        },
+        "goDescription": {
+          "en": "Raise barrier because parts were unloaded and empty bins belong to the regular return cycle.",
+          "hi": "बैरियर उठाएं क्योंकि पार्ट्स अनलोड हो चुके हैं और खाली डिब्बे नियमित रिटर्न चक्र के हैं।",
+          "mr": "बॅरियर उघडा कारण पार्ट्स अनलोड झाले आहेत आणि रिकामे डबे नियमित रिटर्न सायकलचे आहेत."
+        }
+      },
+      "rules": {
+        "xp": 100,
+        "sopClause": "SOP XXXX_PRO_001 Clause 4.1.6.2 & 4.2.4",
+        "why": {
+          "en": "SOP Clause 4.1.6.2 & 4.2.4: Whenever returnable packaging (FLCs, plastic bins, or trolleys) is taken out, an authorized manual Delivery Challan (DC) must be verified and DEO must perform SAP YMM_GATE_EXIT before Security unlocks the departure gate.",
+          "hi": "SOP क्लॉज 4.1.6.2 और 4.2.4: जब भी रिटर्नेबल पैकेजिंग (FLC, प्लास्टिक डिब्बे या ट्रॉली) बाहर निकाली जाती है, तो एक अधिकृत मैनुअल डिलीवरी चालान (DC) सत्यापित होना चाहिए और सुरक्षा द्वारा प्रस्थान गेट खोलने से पहले DEO को SAP YMM_GATE_EXIT निष्पादित करना चाहिए।",
+          "mr": "SOP कलम 4.1.6.2 आणि 4.2.4: जेव्हा जेव्हा रिटर्नेबल पॅकेजिंग (FLC, प्लास्टिक डबे किंवा ट्रॉली) बाहेर काढले जाते, तेव्हा अधिकृत मॅन्युअल डिलिव्हरी चलन (DC) तपासले पाहिजे आणि सुरक्षा रक्षकाने प्रस्थान गेट उघडण्यापूर्वी DEO ने SAP YMM_GATE_EXIT करणे आवश्यक आहे."
+        }
+      }
     }
   ]
 }

@@ -4,6 +4,12 @@ import { AtherLogo } from '../common/AtherLogo';
 import { LanguageSwitcher } from '../common/LanguageSwitcher';
 import type { LanguageCode } from '../../engine/story/types';
 
+export interface StageTabItem {
+  id: string;
+  stageNumber: number;
+  shortTitle: string;
+}
+
 interface Props {
   stageTitle: string;
   sopDoc: string;
@@ -12,6 +18,9 @@ interface Props {
   xp: number;
   hearts: number; // Max 3
   onReset: () => void;
+  stages?: StageTabItem[];
+  currentStageIndex?: number;
+  onSelectStage?: (index: number) => void;
 }
 
 export const StoryHud: React.FC<Props> = ({
@@ -21,12 +30,15 @@ export const StoryHud: React.FC<Props> = ({
   onSelectLang,
   xp,
   hearts,
-  onReset
+  onReset,
+  stages,
+  currentStageIndex = 0,
+  onSelectStage
 }) => {
   return (
     <header className="shrink-0 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-2xs z-30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 flex items-center justify-between gap-3">
-        {/* Left: Ather Brand + Stage info */}
+        {/* Left: Ather Brand + Stage info + Stage Switcher */}
         <div className="flex items-center gap-3">
           <AtherLogo className="h-8 sm:h-9" />
           <div className="h-6 w-px bg-slate-200 hidden sm:block" />
@@ -38,6 +50,29 @@ export const StoryHud: React.FC<Props> = ({
               AURIC M002 · Doc No: {sopDoc}
             </span>
           </div>
+
+          {/* Optional Stage Switcher Pills */}
+          {stages && stages.length > 1 && onSelectStage && (
+            <div className="flex items-center gap-1 bg-slate-100 p-0.5 rounded-xl border border-slate-200 ml-1">
+              {stages.map((stg, sIdx) => {
+                const isSelected = sIdx === currentStageIndex;
+                return (
+                  <button
+                    key={stg.id}
+                    type="button"
+                    onClick={() => onSelectStage(sIdx)}
+                    className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                      isSelected
+                        ? 'bg-white text-blue-600 shadow-2xs font-extrabold'
+                        : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    Stage {stg.stageNumber}
+                  </button>
+                );
+              })}
+            </div>
+          )}
         </div>
 
         {/* Center / Right: Live Metrics (3 Hearts + XP) */}

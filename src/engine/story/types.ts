@@ -99,7 +99,42 @@ export interface SpotErrorInteraction {
   options: SpotErrorOption[];
 }
 
-export type SceneInteraction = McqInteraction | DragDropInteraction | SequenceInteraction | HotspotInteraction | SpotErrorInteraction;
+export interface StopGoInteraction {
+  type: 'stop_go';
+  questionId: string;
+  safetyCritical: boolean;
+  question: LocalizedText;
+  situation: LocalizedText;
+  correctAction: 'stop' | 'go';
+  stopLabel?: LocalizedText;
+  goLabel?: LocalizedText;
+  stopDescription?: LocalizedText;
+  goDescription?: LocalizedText;
+}
+
+export interface CountStepperInteraction {
+  type: 'count_stepper';
+  questionId: string;
+  safetyCritical: boolean;
+  question: LocalizedText;
+  instruction?: LocalizedText;
+  min: number;
+  max: number;
+  step?: number;
+  initialValue?: number;
+  correctNumber: number;
+  unit: LocalizedText;
+  visualItemName?: LocalizedText;
+}
+
+export type SceneInteraction =
+  | McqInteraction
+  | DragDropInteraction
+  | SequenceInteraction
+  | HotspotInteraction
+  | SpotErrorInteraction
+  | StopGoInteraction
+  | CountStepperInteraction;
 
 export interface SceneMedia {
   videoSrc?: string;

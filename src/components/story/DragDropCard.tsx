@@ -75,7 +75,9 @@ export const DragDropCard: React.FC<Props> = ({
             <Layers className="w-4 h-4" />
           </div>
           <span className="text-xs font-mono font-bold tracking-wider text-slate-500 uppercase">
-            Document Sorting Desk
+            {interaction.zones.length === 3
+              ? (lang === 'hi' ? 'IQC परिणाम वर्गीकरण डेस्क' : lang === 'mr' ? 'IQC निकाल वर्गीकरण डेस्क' : 'IQC Outcome Disposition Desk')
+              : (lang === 'hi' ? 'दस्तावेज़ वर्गीकरण डेस्क' : lang === 'mr' ? 'कागदपत्र वर्गीकरण डेस्क' : 'Document Sorting Desk')}
           </span>
         </div>
 
@@ -99,10 +101,10 @@ export const DragDropCard: React.FC<Props> = ({
         </p>
       </div>
 
-      {/* 1. Unassigned Documents Deck */}
+      {/* 1. Unassigned Documents / Items Deck */}
       <div className="p-3.5 bg-slate-50 rounded-2xl border border-dashed border-slate-300">
         <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">
-          Driver's Document Folder ({unassignedItems.length} remaining to sort)
+          {lang === 'hi' ? `आइटम सूची (${unassignedItems.length} शेष)` : lang === 'mr' ? `आयटम यादी (${unassignedItems.length} शिल्लक)` : `Pending Action Items (${unassignedItems.length} remaining)`}
         </div>
 
         {unassignedItems.length > 0 ? (
@@ -131,13 +133,19 @@ export const DragDropCard: React.FC<Props> = ({
         ) : (
           <div className="text-xs font-mono text-emerald-600 font-bold py-1 flex items-center gap-1.5">
             <CheckCircle2 className="w-4 h-4" />
-            All 5 documents placed on desks! Verify your distribution below.
+            {lang === 'hi' ? `सभी ${interaction.items.length} आइटम वर्गीकृत! नीचे अपने आवंटन की पुष्टि करें।` : lang === 'mr' ? `सर्व ${interaction.items.length} आयटम वर्गीकृत केले! खाली आपल्या वाटपाची पडताळणी करा.` : `All ${interaction.items.length} items classified! Verify your assignments below.`}
           </div>
         )}
       </div>
 
-      {/* 2. Target Reception Zones (Desks) */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 pt-1">
+      {/* 2. Target Reception Zones */}
+      <div className={`grid gap-3.5 pt-1 ${
+        interaction.zones.length === 3
+          ? 'grid-cols-1 md:grid-cols-3'
+          : interaction.zones.length === 2
+          ? 'grid-cols-1 md:grid-cols-2'
+          : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'
+      }`}>
         {interaction.zones.map((zone) => {
           const assignedHere = interaction.items.filter(
             (item) => assignments[item.id] === zone.id
@@ -164,7 +172,7 @@ export const DragDropCard: React.FC<Props> = ({
                   </span>
                 </div>
                 <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">
-                  {assignedHere.length} papers
+                  {assignedHere.length} assigned
                 </span>
               </div>
 

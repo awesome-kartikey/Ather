@@ -1,0 +1,511 @@
+{
+  "stageId": "c1_s2_iqc_clearance",
+  "category": 1,
+  "stageNumber": 2,
+  "sopDoc": "SOP for IQC Issuance for AURIC (Doc No: 02_C1_S2)",
+  "stageTitle": {
+    "en": "Stage 2: Receiving & IQC Clearance",
+    "hi": "चरण 2: रिसीविंग और IQC क्लीयरेंस",
+    "mr": "टप्पा 2: रिसीव्हिंग आणि IQC क्लिअरन्स"
+  },
+  "scenes": [
+    {
+      "id": "c1_s2_sc01_grn_sticker",
+      "stepNumber": 1,
+      "title": {
+        "en": "Pallet Offload & GRN Sticker Audit",
+        "hi": "पैलेट ऑफलोड और GRN स्टिकर ऑडिट",
+        "mr": "पॅलेट ऑफलोड आणि GRN स्टिकर ऑडिट"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s2_sc01_grn_sticker.mp4",
+        "posterSrc": "/images/scenes/c1_s2_sc01_poster.jpg",
+        "fallbackAnimation": "grn_sticker_staging",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "Welcome to Stage 2: Receiving & IQC Clearance! The forklift has offloaded a pallet of brake calipers at Dock 04 Inbound Staging. Look closely at the freshly pasted GRN sticker on the pallet. What does that large '?' symbol tell us?",
+            "hi": "स्टेज 2: रिसीविंग और IQC क्लीयरेंस में आपका स्वागत है! फोर्कलिफ्ट ने डॉक 04 इनबाउंड स्टेजिंग में ब्रेक कैलिपर्स का एक पैलेट उतार दिया है। पैलेट पर नए लगे GRN स्टिकर को ध्यान से देखें। वह बड़ा '?' प्रतीक हमें क्या बताता है?",
+            "mr": "स्टेज 2: रिसीव्हिंग आणि IQC क्लिअरन्समध्ये आपले स्वागत आहे! फोर्कलिफ्टने डॉक 04 इनबाउंड स्टेजिंगमध्ये ब्रेक कॅलिपर्सचे एक पॅलेट उतरवले आहे. पॅलेटवर नवीन लावलेल्या GRN स्टिकरकडे काळजीपूर्वक पहा. ते मोठे '?' चिन्ह आपल्याला काय सांगते?"
+          },
+          "audioSrc": "/audio/mascot/c1_s2_sc01_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Spot on! Under the SOP for IQC Issuance (Clause 4.1), a '?' on the GRN sticker designates Non-DOL (Non-Direct-on-Line) material. It requires mandatory 10% sampling and testing by IQC before it can be put away into storage!",
+            "hi": "बिल्कुल सही! IQC इश्यूएंस SOP (क्लॉज 4.1) के तहत, GRN स्टिकर पर '?' नॉन-DOL (नॉन-डायरेक्ट-ऑन-लाइन) सामग्री को दर्शाता है। स्टोरेज रैक में रखने से पहले IQC द्वारा अनिवार्य 10% सैंपलिंग और परीक्षण आवश्यक है!",
+            "mr": "अगदी बरोबर! IQC इश्यूअन्स SOP (कलम 4.1) नुसार, GRN स्टिकरवरील '?' नॉन-DOL (नॉन-डायरेक्ट-ऑन-लाइन) साहित्य दर्शवते. स्टोरेज रॅकमध्ये ठेवण्यापूर्वी IQC द्वारे अनिवार्य 10% सॅम्पलिंग आणि चाचणी आवश्यक आहे!"
+          },
+          "audioSrc": "/audio/mascot/c1_s2_sc01_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Hold on! A '?' symbol does not mean scrap or direct-to-line. It means Non-DOL—the material must undergo mandatory IQC sampling. Premature put-away of uninspected stock will be blocked by SAP EWM!",
+            "hi": "रुकिए! '?' प्रतीक का मतलब स्क्रैप या डायरेक्ट-टू-लाइन नहीं है। इसका मतलब नॉन-DOL है—सामग्री की अनिवार्य IQC सैंपलिंग होनी चाहिए। बिना जांचे स्टॉक का समयपूर्व पुट-अवे SAP EWM द्वारा ब्लॉक कर दिया जाएगा!",
+            "mr": "थांबा! '?' चिन्हाचा अर्थ स्क्रॅप किंवा डायरेक्ट-टू-लाइन असा होत नाही. याचा अर्थ नॉन-DOL आहे—साहित्याची अनिवार्य IQC सॅम्पलिंग झाली पाहिजे. तपासणी न केलेल्या स्टॉकचे वेळेपूर्वी पुट-अवे SAP EWM द्वारे ब्लॉक केले जाईल!"
+          },
+          "audioSrc": "/audio/mascot/c1_s2_sc01_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c1-q10",
+        "safetyCritical": false,
+        "question": {
+          "en": "Forklifts have offloaded the pallet into Inbound Staging. You inspect the freshly pasted GRN sticker and spot a large '?' printed on it. What does this symbol mean?",
+          "hi": "फोर्कलिफ्ट ने पैलेट को इनबाउंड स्टेजिंग में उतार दिया है। आप नए लगे GRN स्टिकर का निरीक्षण करते हैं और उस पर एक बड़ा '?' छपा पाते हैं। इस प्रतीक का क्या अर्थ है?",
+          "mr": "फोर्कलिफ्टने पॅलेट इनबाउंड स्टेजिंगमध्ये उतरवले आहे. तुम्ही नवीन लावलेल्या GRN स्टिकरची पाहणी करता आणि त्यावर मोठे '?' छापलेले दिसते. या चिन्हाचा अर्थ काय आहे?"
+        },
+        "options": [
+          {
+            "id": "opt_non_dol",
+            "correct": true,
+            "label": {
+              "en": "Non-DOL material: Mandatory 10% sampling and testing by IQC required before put-away.",
+              "hi": "नॉन-DOL सामग्री: पुट-अवे से पहले IQC द्वारा अनिवार्य 10% सैंपलिंग और परीक्षण आवश्यक है।",
+              "mr": "नॉन-DOL साहित्य: पुट-अवे करण्यापूर्वी IQC द्वारे अनिवार्य 10% सॅम्पलिंग आणि चाचणी आवश्यक आहे."
+            }
+          },
+          {
+            "id": "opt_scrap",
+            "correct": false,
+            "label": {
+              "en": "Damaged packaging: Transit damage detected; immediately tag for scrap.",
+              "hi": "क्षतिग्रस्त पैकेजिंग: पारगमन क्षति पाई गई; इसे तुरंत स्क्रैप के लिए टैग करें।",
+              "mr": "खराब पॅकेजिंग: वाहतुकीदरम्यान नुकसान आढळले; ताबडतोब स्क्रॅपसाठी टॅग करा."
+            }
+          },
+          {
+            "id": "opt_dol",
+            "correct": false,
+            "label": {
+              "en": "Direct-On-Line (DOL): Inspection is waived; transport directly to the assembly line.",
+              "hi": "डायरेक्ट-ऑन-लाइन (DOL): गुणवत्ता जांच माफ है; इसे सीधे उत्पादन असेंबली लाइन पर ले जाएं।",
+              "mr": "डायरेक्ट-ऑन-लाइन (DOL): गुणवत्ता तपासणी माफ आहे; थेट उत्पादन असेंब्ली लाइनवर घेऊन जा."
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 100,
+        "sopClause": "SOP for IQC Issuance for AURIC Clause 4.1 & Clause 5.1",
+        "why": {
+          "en": "SOP Clause 4.1: A '?' mark on the GRN sticker indicates Non-DOL (Non-Direct-on-Line) material. It cannot be put away into high-rise racks until IQC takes a 10% sample and seals it with 'QC Pass'. Premature put-away leaves warehouse tasks open in SAP EWM.",
+          "hi": "SOP क्लॉज 4.1: GRN स्टिकर पर '?' का निशान नॉन-DOL सामग्री को इंगित करता है। इसे हाई-राइज रैक में तब तक नहीं रखा जा सकता जब तक कि IQC 10% सैंपल न ले ले और उस पर 'QC Pass' की सील न लगा दे। समयपूर्व पुट-अवे SAP EWM में वेयरहाउस टास्क को खुला छोड़ देता है।",
+          "mr": "SOP कलम 4.1: GRN स्टिकरवरील '?' चिन्ह नॉन-DOL साहित्य दर्शवते. IQC ने 10% नमुना घेऊन त्यावर 'QC Pass' चा शिक्का मारल्याशिवाय ते हाय-राइज रॅकमध्ये ठेवता येत नाही. वेळेपूर्वी पुट-अवे केल्यास SAP EWM मधील वेअरहाऊस टास्क अपूर्ण राहतात."
+        }
+      }
+    },
+    {
+      "id": "c1_s2_sc02_sampling_calc",
+      "stepNumber": 2,
+      "title": {
+        "en": "10% Lot Statistical Sampling Rule",
+        "hi": "10% लॉट सांख्यिकीय सैंपलिंग नियम",
+        "mr": "10% लॉट सांख्यिकीय सॅम्पलिंग नियम"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s2_sc02_sampling_calc.mp4",
+        "posterSrc": "/images/scenes/c1_s2_sc02_poster.jpg",
+        "fallbackAnimation": "iqc_sampling_transfer",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "Now that we know the shipment is Non-DOL, we must apply the 10% statistical sampling rule! The Purchase Order contains 10 FLC crates (100 total brake calipers). Exactly how many FLC crates must be separated and transferred to the IQC testing area?",
+            "hi": "अब जब हम जानते हैं कि खेप नॉन-DOL है, तो हमें 10% सांख्यिकीय सैंपलिंग नियम लागू करना होगा! परचेज ऑर्डर में 10 FLC क्रेट (कुल 100 ब्रेक कैलिपर्स) हैं। IQC परीक्षण क्षेत्र में ठीक कितने FLC क्रेट अलग करके स्थानांतरित किए जाने चाहिए?",
+            "mr": "आता आपल्याला माहित आहे की डिलिव्हरी नॉन-DOL आहे, म्हणून आपण 10% सांख्यिकीय सॅम्पलिंग नियम लागू केला पाहिजे! खरेदी ऑर्डरमध्ये 10 FLC क्रेट्स (एकूण 100 ब्रेक कॅलिपर्स) आहेत. IQC चाचणी भागात नेमके किती FLC क्रेट्स वेगळे करून पाठवले पाहिजेत?"
+          },
+          "audioSrc": "/audio/mascot/c1_s2_sc02_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Spot on! SOP for IQC Issuance (Clause 4.2): Exactly 10% of the lot volume (1 out of 10 FLCs) is transferred to IQC staging. The remaining 9 FLCs must stay safely in unloading staging until IQC clears the sample!",
+            "hi": "बिल्कुल सही! IQC इश्यूएंस SOP (क्लॉज 4.2): लॉट वॉल्यूम का ठीक 10% (10 में से 1 FLC) IQC स्टेजिंग में स्थानांतरित किया जाता है। शेष 9 FLC को IQC द्वारा सैंपल पास करने तक अनलोडिंग स्टेजिंग में सुरक्षित रहना चाहिए!",
+            "mr": "अगदी बरोबर! IQC इश्यूअन्स SOP (कलम 4.2): लॉटच्या आकाराच्या बरोबर 10% (10 पैकी 1 FLC) IQC स्टेजिंगमध्ये हस्तांतरित केले जाते. IQC नमुना मंजूर करेपर्यंत उर्वरित 9 FLC अनलोडिंग स्टेजिंगमध्ये सुरक्षित राहिले पाहिजेत!"
+          },
+          "audioSrc": "/audio/mascot/c1_s2_sc02_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Calculation error! Under SOP Clause 4.2, exactly 10% of the inward volume must be sampled. For a 10-FLC lot, sending more than 1 FLC clutters the test lab, while sending less violates ISO/SOP statistical standards.",
+            "hi": "गणना त्रुटि! SOP क्लॉज 4.2 के अनुसार आवक वॉल्यूम का ठीक 10% सैंपल लिया जाना चाहिए। 10-FLC लॉट के लिए, 1 FLC से अधिक भेजने से लैब भर जाती है, जबकि कम भेजना ISO/SOP मानकों का उल्लंघन करता है।",
+            "mr": "हिशेबात चूक! SOP कलम 4.2 नुसार एकूण इनवर्ड आकाराच्या बरोबर 10% नमुना घेतला पाहिजे. 10-FLC लॉटसाठी, 1 पेक्षा जास्त पाठवल्यास चाचणी लॅब भरून जाईल, आणि कमी पाठवल्यास मानकांचे उल्लंघन होईल."
+          },
+          "audioSrc": "/audio/mascot/c1_s2_sc02_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "count_stepper",
+        "questionId": "c1-q12",
+        "safetyCritical": false,
+        "question": {
+          "en": "A Non-DOL lot of 10 FLCs has arrived. Under the SOP 10% statistical sampling rule, how many FLC crates must go to IQC?",
+          "hi": "10 FLC का एक नॉन-DOL लॉट आ गया है। SOP 10% सांख्यिकीय सैंपलिंग नियम के तहत, कितने FLC क्रेट IQC में जाने चाहिए?",
+          "mr": "10 FLC चा एक नॉन-DOL लॉट आला आहे. SOP 10% सांख्यिकीय सॅम्पलिंग नियमानुसार, किती FLC क्रेट्स IQC कडे गेले पाहिजेत?"
+        },
+        "instruction": {
+          "en": "Use the − and + buttons to adjust the exact number of FLC sample crates, then confirm:",
+          "hi": "FLC सैंपल क्रेट्स की सटीक संख्या समायोजित करने के लिए − और + बटन का उपयोग करें, फिर पुष्टि करें:",
+          "mr": "FLC सॅम्पल क्रेट्सची अचूक संख्या समायोजित करण्यासाठी − आणि + बटणे वापरा, नंतर पुष्टी करा:"
+        },
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "initialValue": 0,
+        "correctNumber": 1,
+        "unit": {
+          "en": "FLC Crate (10% Sample)",
+          "hi": "FLC क्रेट (10% सैंपल)",
+          "mr": "FLC क्रेट (10% नमुना)"
+        }
+      },
+      "rules": {
+        "xp": 100,
+        "sopClause": "SOP for IQC Issuance for AURIC Clause 4.2 & Question Bank Q12",
+        "why": {
+          "en": "SOP Clause 4.2: Inward Non-DOL lots undergo 10% volume statistical sampling. For an inward lot of 10 FLCs, exactly 1 FLC is transferred to IQC staging, while the remaining 9 FLCs wait in unloading staging under quarantine cones until clearance.",
+          "hi": "SOP क्लॉज 4.2: आवक नॉन-DOL लॉट की 10% वॉल्यूम सांख्यिकीय सैंपलिंग की जाती है। 10 FLC के आवक लॉट के लिए, ठीक 1 FLC को IQC स्टेजिंग में स्थानांतरित किया जाता है, जबकि शेष 9 FLC क्लीयरेंस मिलने तक क्वारंटाइन कोन के तहत अनलोडिंग स्टेजिंग में प्रतीक्षा करते हैं।",
+          "mr": "SOP कलम 4.2: इनवर्ड नॉन-DOL लॉटची 10% आकारमानानुसार सांख्यिकीय सॅम्पलिंग केली जाते. 10 FLC च्या इनवर्ड लॉटसाठी, बरोबर 1 FLC IQC स्टेजिंगमध्ये हलवले जाते, तर उर्वरित 9 FLC क्लिअरन्स मिळेपर्यंत क्वारंटाइन कोन्सखाली अनलोडिंग स्टेजिंगमध्ये वाट पाहतात."
+        }
+      }
+    },
+    {
+      "id": "c1_s2_sc03_iqc_cones",
+      "stepNumber": 3,
+      "title": {
+        "en": "Staging Visual Quarantine Demarcation",
+        "hi": "स्टेजिंग विजुअल क्वारंटाइन सीमांकन",
+        "mr": "स्टेजिंग व्हिज्युअल क्वारंटाइन सीमांकन"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s2_sc03_iqc_cones.mp4",
+        "posterSrc": "/images/scenes/c1_s2_sc03_poster.jpg",
+        "fallbackAnimation": "iqc_cones_staging",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "The 1 sample crate has gone to the testing lab, but 9 crates of brake calipers are waiting in Inbound Staging! While IQC inspects the sample for up to 2 hours, what mandatory visual identifier must be placed around this staged lot?",
+            "hi": "1 सैंपल क्रेट परीक्षण लैब में चला गया है, लेकिन ब्रेक कैलिपर्स के 9 क्रेट इनबाउंड स्टेजिंग में प्रतीक्षा कर रहे हैं! जब तक IQC 2 घंटे तक सैंपल का निरीक्षण करता है, तब तक इस स्टेज्ड लॉट के चारों ओर कौन सा अनिवार्य दृश्य पहचानकर्ता रखा जाना चाहिए?",
+            "mr": "1 सॅम्पल क्रेट चाचणी लॅबमध्ये गेला आहे, परंतु ब्रेक कॅलिपर्सचे 9 क्रेट्स इनबाउंड स्टेजिंगमध्ये वाट पाहत आहेत! IQC 2 तासांपर्यंत नमुन्याची तपासणी करत असताना, या स्टेज केलेल्या लॉटभोवती कोणते अनिवार्य दृश्य चिन्ह ठेवले पाहिजे?"
+          },
+          "audioSrc": "/audio/mascot/c1_s2_sc03_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Spot on! SOP for IQC Issuance (Clause 4.3): Bright yellow 'UNDER IQC' cones must be placed at the staging perimeter. This visual quarantine stops forklift drivers from mistakenly picking or putting away uninspected stock!",
+            "hi": "बिल्कुल सही! IQC इश्यूएंस SOP (क्लॉज 4.3): स्टेजिंग परिधि पर चमकीले पीले 'UNDER IQC' कोन रखे जाने चाहिए। यह विजुअल क्वारंटाइन फोर्कलिफ्ट चालकों को बिना जांचे स्टॉक को गलती से उठाने या पुट-अवे करने से रोकता है!",
+            "mr": "अगदी बरोबर! IQC इश्यूअन्स SOP (कलम 4.3): स्टेजिंगच्या परिमितीवर चमकदार पिवळे 'UNDER IQC' कोन्स ठेवले पाहिजेत. हे दृश्य क्वारंटाइन फोर्कलिफ्ट चालकांना तपासणी न केलेला साठा चुकीने उचलण्यापासून किंवा पुट-अवे करण्यापासून रोखते!"
+          },
+          "audioSrc": "/audio/mascot/c1_s2_sc03_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Quality risk! Never leave uninspected staging unmarked. Yellow 'UNDER IQC' cones are mandatory. Red tags are only for confirmed scrap, and green seals require a passed inspection report.",
+            "hi": "गुणवत्ता का जोखिम! बिना जांचे स्टेजिंग को कभी भी बिना निशान के न छोड़ें। पीले 'UNDER IQC' कोन अनिवार्य हैं। लाल टैग केवल पुष्टि किए गए स्क्रैप के लिए हैं, और हरे रंग की सील के लिए पास निरीक्षण रिपोर्ट की आवश्यकता होती है।",
+            "mr": "गुणवत्ता धोका! तपासणी न केलेले स्टेजिंग कधीही चिन्हांकित केल्याशिवाय सोडू नका. पिवळे 'UNDER IQC' कोन्स अनिवार्य आहेत. लाल टॅग फक्त नाकारलेल्या स्क्रॅपसाठी असतात आणि हिरव्या सीलसाठी उत्तीर्ण तपासणी अहवाल आवश्यक असतो."
+          },
+          "audioSrc": "/audio/mascot/c1_s2_sc03_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c1-q17-cones",
+        "safetyCritical": true,
+        "question": {
+          "en": "The 9 remaining FLC crates are waiting in staging during the 2-hour IQC testing window. What mandatory visual containment must be placed around them?",
+          "hi": "2 घंटे की IQC परीक्षण विंडो के दौरान 9 शेष FLC क्रेट स्टेजिंग में प्रतीक्षा कर रहे हैं। उनके चारों ओर कौन सा अनिवार्य दृश्य नियंत्रण रखा जाना चाहिए?",
+          "mr": "2 तासांच्या IQC चाचणी कालावधीत उर्वरित 9 FLC क्रेट्स स्टेजिंगमध्ये वाट पाहत आहेत. त्यांच्याभोवती कोणते अनिवार्य दृश्य नियंत्रण ठेवले पाहिजे?"
+        },
+        "options": [
+          {
+            "id": "opt_yellow_cones",
+            "correct": true,
+            "label": {
+              "en": "Yellow 'UNDER IQC' Quarantine Cones: Positioned at pallet corners to signal testing in progress.",
+              "hi": "पीले 'UNDER IQC' क्वारंटाइन कोन: परीक्षण प्रगति पर होने का संकेत देने के लिए पैलेट के कोनों पर स्थित।",
+              "mr": "पिवळे 'UNDER IQC' क्वारंटाइन कोन्स: चाचणी सुरू असल्याचे दर्शवण्यासाठी पॅलेटच्या कोपऱ्यांवर ठेवले जातात."
+            }
+          },
+          {
+            "id": "opt_red_tags",
+            "correct": false,
+            "label": {
+              "en": "Red 'NG REJECTED' Defect Tags: Prematurely label all 9 crates as failed quality scrap.",
+              "hi": "लाल 'NG REJECTED' डिफेक्ट टैग: समय से पहले सभी 9 क्रेटों को गुणवत्ता में विफल स्क्रैप के रूप में लेबल करें।",
+              "mr": "लाल 'NG REJECTED' डिफेक्ट टॅग्स: वेळेपूर्वी सर्व 9 क्रेट्सना अयशस्वी गुणवत्ता स्क्रॅप म्हणून लेबल करा."
+            }
+          },
+          {
+            "id": "opt_green_pass",
+            "correct": false,
+            "label": {
+              "en": "Green 'QC PASS' Seals: Seal all crates immediately before the lab results arrive.",
+              "hi": "हरे 'QC PASS' सील: लैब परिणाम आने से पहले ही सभी क्रेटों को तुरंत सील कर दें।",
+              "mr": "हिरवे 'QC PASS' सील्स: लॅबचे निकाल येण्यापूर्वीच सर्व क्रेट्स त्वरित सील करा."
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 100,
+        "sopClause": "SOP for IQC Issuance for AURIC Clause 4.3 & Flowchart",
+        "why": {
+          "en": "SOP Clause 4.3 & Process Flow: Inward stock pending inspection must be physically demarcated with yellow 'UNDER IQC' cones in the staging area. This visual containment prevents premature put-away and ensures warehouse operators do not feed unapproved parts to the production line.",
+          "hi": "SOP क्लॉज 4.3 और प्रोसेस फ्लो: निरीक्षण लंबित आवक स्टॉक को स्टेजिंग क्षेत्र में पीले 'UNDER IQC' कोन के साथ भौतिक रूप से सीमांकित किया जाना चाहिए। यह विजुअल कंटेनमेंट समयपूर्व पुट-अवे को रोकता है और यह सुनिश्चित करता है कि वेयरहाउस ऑपरेटर उत्पादन लाइन में अस्वीकृत पार्ट्स न भेजें।",
+          "mr": "SOP कलम 4.3 आणि प्रोसेस फ्लो: तपासणी प्रलंबित असलेला इनवर्ड साठा स्टेजिंग भागात पिवळ्या 'UNDER IQC' कोन्ससह प्रत्यक्ष चिन्हांकित केला पाहिजे. हे दृश्य नियंत्रण वेळेपूर्वी पुट-अवे होण्यापासून रोखते आणि वेअरहाऊस ऑपरेटर उत्पादन लाइनवर अप्रमाणित भाग पुरवणार नाहीत याची खात्री करते."
+        }
+      }
+    },
+    {
+      "id": "c1_s2_sc04_handover_sla",
+      "stepNumber": 4,
+      "title": {
+        "en": "IQC Sample Handover SLA & Countdown",
+        "hi": "IQC सैंपल हैंडओवर SLA और काउंटडाउन",
+        "mr": "IQC सॅम्पल हस्तांतरण SLA आणि काउंटडाउन"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s2_sc04_handover_sla.mp4",
+        "posterSrc": "/images/scenes/c1_s2_sc04_poster.jpg",
+        "fallbackAnimation": "iqc_handover_sla_clock",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "The GRN sticker is pasted and the 10% sample is loaded onto the pallet truck! The factory clock is ticking. What is the maximum permissible SLA time window for inbound manpower to physically hand over this sample to the IQC testing room?",
+            "hi": "GRN स्टिकर लग चुका है और 10% सैंपल पैलेट ट्रक पर लोड है! फैक्ट्री की घड़ी टिक-टिक कर रही है। इनबाउंड मैनपावर के लिए इस सैंपल को IQC परीक्षण कक्ष में भौतिक रूप से सौंपने की अधिकतम अनुमेय SLA समय सीमा क्या है?",
+            "mr": "GRN स्टिकर लावला आहे आणि 10% नमुना पॅलेट ट्रकवर लोड केला आहे! कारखान्याचे घड्याळ सुरू झाले आहे. इनबाउंड कर्मचाऱ्यांसाठी हा नमुना प्रत्यक्ष IQC चाचणी कक्षात सोपवण्यासाठी कमाल अनुज्ञेय SLA कालावधी काय आहे?"
+          },
+          "audioSrc": "/audio/mascot/c1_s2_sc04_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Precision timing! SOP for IQC Issuance (Clause 4.1): Inbound manpower must hand over the Non-DOL sample to IQC within exactly 30 minutes of GRN pasting. Meeting this SLA ensures the 2-hour testing window finishes before production needs the parts!",
+            "hi": "सटीक समय प्रबंधन! IQC इश्यूएंस SOP (क्लॉज 4.1): इनबाउंड मैनपावर को GRN पेस्टिंग के ठीक 30 मिनट के भीतर IQC को नॉन-DOL सैंपल सौंपना होगा। इस SLA को पूरा करने से यह सुनिश्चित होता है कि उत्पादन को पार्ट्स की आवश्यकता होने से पहले 2 घंटे की परीक्षण विंडो समाप्त हो जाए!",
+            "mr": "अचूक वेळ व्यवस्थापन! IQC इश्यूअन्स SOP (कलम 4.1): इनबाउंड कर्मचाऱ्यांनी GRN लावल्यापासून बरोबर 30 मिनिटांच्या आत नॉन-DOL नमुना IQC कडे सोपवला पाहिजे. या SLA चे पालन केल्याने उत्पादनाला सुट्या भागांची गरज भासण्यापूर्वी 2 तासांची चाचणी पूर्ण होते!"
+          },
+          "audioSrc": "/audio/mascot/c1_s2_sc04_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "SLA breach warning! Under SOP Failure Mode 2, delaying sample handover beyond 30 minutes leaves the Warehouse Order open in SAP EWM. This blocks subsequent picking orders and delays vehicle assembly line feeding!",
+            "hi": "SLA उल्लंघन चेतावनी! SOP विफलता मोड 2 के तहत, सैंपल हैंडओवर में 30 मिनट से अधिक की देरी से SAP EWM में वेयरहाउस ऑर्डर खुला रह जाता है। यह बाद के पिकिंग ऑर्डरों को ब्लॉक करता है और वाहन असेंबली लाइन फीडिंग में देरी करता है!",
+            "mr": "SLA उल्लंघन चेतावणी! SOP फेल्युअर मोड 2 नुसार, नमुना हस्तांतरणात 30 मिनिटांपेक्षा जास्त उशीर झाल्यास SAP EWM मधील वेअरहाऊस ऑर्डर उघडी राहते. यामुळे पुढील पिकिंग ऑर्डर्स ब्लॉक होतात आणि व्हेईकल असेंब्ली लाइनला पार्ट्स मिळण्यास विलंब होतो!"
+          },
+          "audioSrc": "/audio/mascot/c1_s2_sc04_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c1-q13",
+        "safetyCritical": false,
+        "question": {
+          "en": "Following GRN label application, what is the strict SLA cutoff time for inbound manpower to hand over Non-DOL samples to the IQC testing room?",
+          "hi": "GRN लेबल लगाने के बाद, इनबाउंड मैनपावर द्वारा नॉन-DOL सैंपल को IQC परीक्षण कक्ष में सौंपने की सख्त SLA समय सीमा क्या है?",
+          "mr": "GRN लेबल लावल्यानंतर, इनबाउंड कर्मचाऱ्यांनी नॉन-DOL नमुने IQC चाचणी कक्षात सोपवण्यासाठी काटेकोर SLA कटऑफ वेळ कोणती आहे?"
+        },
+        "options": [
+          {
+            "id": "opt_30_mins",
+            "correct": true,
+            "label": {
+              "en": "Within 30 minutes after GRN pasting (Mandatory Handover SLA)",
+              "hi": "GRN पेस्टिंग के 30 मिनट के भीतर (अनिवार्य हैंडओवर SLA)",
+              "mr": "GRN लावल्यानंतर 30 मिनिटांच्या आत (अनिवार्य हस्तांतरण SLA)"
+            }
+          },
+          {
+            "id": "opt_2_hours",
+            "correct": false,
+            "label": {
+              "en": "Within 2 hours after GRN pasting (Confusion with IQC inspection window)",
+              "hi": "GRN पेस्टिंग के 2 घंटे के भीतर (IQC निरीक्षण विंडो के साथ भ्रम)",
+              "mr": "GRN लावल्यानंतर 2 तासांच्या आत (IQC तपासणी कालावधीबाबत संभ्रम)"
+            }
+          },
+          {
+            "id": "opt_end_shift",
+            "correct": false,
+            "label": {
+              "en": "By the end of the shift / next working day (Blocks SAP picking orders)",
+              "hi": "शिफ्ट के अंत तक / अगले कार्य दिवस तक (SAP पिकिंग ऑर्डर ब्लॉक करता है)",
+              "mr": "शिफ्ट संपेपर्यंत / पुढील कामकाजाच्या दिवसापर्यंत (SAP पिकिंग ऑर्डर्स ब्लॉक करते)"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 100,
+        "sopClause": "SOP for IQC Issuance for AURIC Clause 4.1 & Failure Mode 2",
+        "why": {
+          "en": "SOP Clause 4.1 & Failure Mode 2: Inbound manpower must hand over Non-DOL samples to IQC within exactly 30 minutes after GRN label pasting. Delaying this handover keeps the Warehouse Order open in SAP EWM, blocking subsequent orders and creating catastrophic stock-outs at the vehicle assembly line.",
+          "hi": "SOP क्लॉज 4.1 और विफलता मोड 2: इनबाउंड मैनपावर को GRN लेबल चिपकाने के ठीक 30 मिनट के भीतर IQC को नॉन-DOL सैंपल सौंपना होगा। इस हैंडओवर में देरी से SAP EWM में वेयरहाउस ऑर्डर खुला रहता है, जिससे बाद के ऑर्डर ब्लॉक हो जाते हैं और वाहन असेंबली लाइन में पुर्जों की भारी कमी हो जाती है।",
+          "mr": "SOP कलम 4.1 आणि फेल्युअर मोड 2: इनबाउंड कर्मचाऱ्यांनी GRN लेबल लावल्यानंतर बरोबर 30 मिनिटांच्या आत नॉन-DOL नमुने IQC कडे सोपवले पाहिजेत. या हस्तांतरणात उशीर झाल्यास SAP EWM मधील वेअरहाऊस ऑर्डर उघडी राहते, ज्यामुळे पुढील ऑर्डर्स ब्लॉक होतात आणि व्हेईकल असेंब्ली लाइनवर पार्ट्सचा तुटवडा निर्माण होतो."
+        }
+      }
+    },
+    {
+      "id": "c1_s2_sc05_iqc_outcomes",
+      "stepNumber": 5,
+      "title": {
+        "en": "The 3-Way IQC Outcome & Disposition Protocol",
+        "hi": "3-तरफा IQC परिणाम और निपटान प्रोटोकॉल",
+        "mr": "3-मार्गी IQC निकाल आणि डिस्पोझिशन प्रोटोकॉल"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s2_sc05_iqc_outcomes.mp4",
+        "posterSrc": "/images/scenes/c1_s2_sc05_poster.jpg",
+        "fallbackAnimation": "iqc_disposition_workbench",
+        "durationSeconds": 20,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "The IQC inspector has finished testing the sample! The incoming lot will receive one of 3 distinct outcomes: Pass, Hold, or NG (Rejected). Warehouse operators must execute the exact physical SOP disposition protocol for each result. Match each action item to its correct outcome bucket!",
+            "hi": "IQC इंस्पेक्टर ने सैंपल का परीक्षण पूरा कर लिया है! आवक लॉट को 3 अलग-अलग परिणामों में से एक प्राप्त होगा: पास (Pass), होल्ड (Hold), या एनजी/अस्वीकृत (NG)। वेयरहाउस ऑपरेटरों को प्रत्येक परिणाम के लिए सटीक भौतिक SOP प्रोटोकॉल लागू करना होगा। प्रत्येक कार्रवाई आइटम को उसके सही परिणाम बकेट से मिलाएं!",
+            "mr": "IQC निरीक्षकाने नमुन्याची चाचणी पूर्ण केली आहे! इनवर्ड लॉटला 3 पैकी एक निकाल मिळेल: पास (Pass), होल्ड (Hold), किंवा एनजी/नाकारलेले (NG). वेअरहाऊस कर्मचाऱ्यांनी प्रत्येक निकालासाठी अचूक प्रत्यक्ष SOP प्रोटोकॉलचे पालन केले पाहिजे. प्रत्येक कृती आयटमला त्याच्या योग्य निकाल बकेटशी जोडा!"
+          },
+          "audioSrc": "/audio/mascot/c1_s2_sc05_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "trophy",
+          "text": {
+            "en": "Flawless quality compliance! Under SOP Clause 4.5: For PASS, seal the green 'QC Pass' on the GRN sticker to release put-away. For HOLD, place the yellow 'IQC Hold' cone. For NG, attach the red NG tag, log a Jira bug ticket with Part # and Lot ID, and transfer the entire lot volume to quarantine area SC01 BL by designated NG manpower! Module 2 Receiving & IQC Clearance is now 100% complete!",
+            "hi": "त्रुटिहीन गुणवत्ता अनुपालन! SOP क्लॉज 4.5 के तहत: PASS के लिए, पुट-अवे जारी करने के लिए GRN स्टिकर पर हरी 'QC Pass' सील लगाएं। HOLD के लिए, पीला 'IQC Hold' कोन लगाएं। NG के लिए, लाल NG टैग लगाएं, पार्ट # और लॉट ID के साथ जीरा टिकट दर्ज करें, और निर्दिष्ट NG कर्मियों द्वारा पूरे लॉट वॉल्यूम को क्वारंटाइन क्षेत्र SC01 BL में स्थानांतरित करें! मॉड्यूल 2 अब 100% पूरा हुआ!",
+            "mr": "उत्कृष्ट गुणवत्ता अनुपालन! SOP कलम 4.5 नुसार: PASS साठी, पुट-अवे सुरू करण्यासाठी GRN स्टिकरवर हिरवा 'QC Pass' शिक्का मारा. HOLD साठी, पिवळा 'IQC Hold' कोन लावा. NG साठी, लाल NG टॅग लावा, पार्ट # आणि लॉट ID सह जिरा तिकीट नोंदवा, आणि नियुक्त NG कर्मचाऱ्यांद्वारे संपूर्ण लॉट क्वारंटाइन जागा SC01 BL मध्ये हलवा! मॉड्यूल 2 आता 100% पूर्ण झाले आहे!"
+          },
+          "audioSrc": "/audio/mascot/c1_s2_sc05_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Disposition protocol error! Under SOP Clause 4.5, never move unsealed parts to High-Rise Racks. When a lot fails, the ENTIRE lot volume must be quarantined with an active Jira defect ticket, not just the defective sample pieces!",
+            "hi": "निपटान प्रोटोकॉल त्रुटि! SOP क्लॉज 4.5 के तहत, बिना सील किए गए पुर्जों को कभी भी हाई-राइज रैक में न ले जाएं। जब कोई लॉट विफल हो जाता है, तो केवल खराब सैंपल टुकड़ों के बजाय पूरे लॉट वॉल्यूम को सक्रिय जीरा टिकट के साथ क्वारंटाइन किया जाना चाहिए!",
+            "mr": "डिस्पोझिशन प्रोटोकॉल चूक! SOP कलम 4.5 नुसार, शिक्का नसलेले भाग कधीही हाय-राइज रॅकमध्ये हलवू नका. जेव्हा लॉट अयशस्वी होतो, तेव्हा केवळ नमुन्याचे तुकडे नव्हे तर संपूर्ण लॉट सक्रिय जिरा तिकिटासह क्वारंटाइन केला पाहिजे!"
+          },
+          "audioSrc": "/audio/mascot/c1_s2_sc05_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "drag_drop",
+        "questionId": "c1-q15",
+        "safetyCritical": true,
+        "question": {
+          "en": "Match the Incoming Quality Control (IQC) outcome to the mandatory physical warehouse action:",
+          "hi": "आवक गुणवत्ता नियंत्रण (IQC) परिणाम को अनिवार्य भौतिक वेयरहाउस कार्रवाई से सुमेलित करें:",
+          "mr": "इनकमिंग गुणवत्ता नियंत्रण (IQC) निकालाला अनिवार्य प्रत्यक्ष वेअरहाऊस कृतीशी जोडा:"
+        },
+        "instruction": {
+          "en": "Tap an action item to select it, then tap the appropriate outcome bucket to assign it:",
+          "hi": "कार्रवाई आइटम का चयन करने के लिए उस पर टैप करें, फिर उसे सौंपने के लिए उपयुक्त परिणाम बकेट पर टैप करें:",
+          "mr": "कृती आयटम निवडण्यासाठी त्यावर टॅप करा, नंतर ते वाटप करण्यासाठी योग्य निकाल बकेटवर टॅप करा:"
+        },
+        "zones": [
+          {
+            "id": "zone_pass",
+            "icon": "🟢",
+            "label": {
+              "en": "QC PASS (Accepted)",
+              "hi": "QC पास (स्वीकृत)",
+              "mr": "QC पास (मंजूर)"
+            }
+          },
+          {
+            "id": "zone_hold",
+            "icon": "🟡",
+            "label": {
+              "en": "IQC HOLD (Pending)",
+              "hi": "IQC होल्ड (लंबित)",
+              "mr": "IQC होल्ड (प्रलंबित)"
+            }
+          },
+          {
+            "id": "zone_ng",
+            "icon": "🔴",
+            "label": {
+              "en": "NG REJECTED (Defect)",
+              "hi": "NG अस्वीकृत (दोषपूर्ण)",
+              "mr": "NG नाकारले (दोषी)"
+            }
+          }
+        ],
+        "items": [
+          {
+            "id": "item_pass_stamp",
+            "icon": "✅",
+            "label": {
+              "en": "Seal 'QC Pass' on GRN sticker and release for Put-Away",
+              "hi": "GRN स्टिकर पर 'QC Pass' सील लगाएं और पुट-अवे के लिए जारी करें",
+              "mr": "GRN स्टिकरवर 'QC Pass' शिक्का मारा आणि पुट-अवेसाठी पाठवा"
+            },
+            "targetZoneId": "zone_pass"
+          },
+          {
+            "id": "item_hold_cone",
+            "icon": "⚠️",
+            "label": {
+              "en": "Place yellow 'IQC Hold' cone & freeze lot in staging",
+              "hi": "पीला 'IQC Hold' कोन लगाएं और स्टेजिंग में लॉट को फ्रीज करें",
+              "mr": "पिवळा 'IQC Hold' कोन लावा आणि स्टेजिंगमध्ये लॉट गोठवा"
+            },
+            "targetZoneId": "zone_hold"
+          },
+          {
+            "id": "item_ng_tag",
+            "icon": "🏷️",
+            "label": {
+              "en": "Attach red 'NG Tag' & log Jira Bug Ticket (Part #, Lot ID)",
+              "hi": "लाल 'NG Tag' लगाएं और जीरा टिकट (पार्ट #, लॉट ID) दर्ज करें",
+              "mr": "लाल 'NG Tag' लावा आणि जिरा तिकीट (पार्ट #, लॉट ID) नोंदवा"
+            },
+            "targetZoneId": "zone_ng"
+          },
+          {
+            "id": "item_ng_transfer",
+            "icon": "🚛",
+            "label": {
+              "en": "Move entire lot volume to NG Area (SC01 BL) via NG manpower",
+              "hi": "NG मैनपावर द्वारा पूरे लॉट वॉल्यूम को NG एरिया (SC01 BL) में भेजें",
+              "mr": "NG कर्मचाऱ्यांमार्फत संपूर्ण लॉट NG भागात (SC01 BL) हलवा"
+            },
+            "targetZoneId": "zone_ng"
+          }
+        ]
+      },
+      "rules": {
+        "xp": 120,
+        "sopClause": "SOP for IQC Issuance for AURIC Clause 4.5 & Question Bank Q15",
+        "why": {
+          "en": "SOP Clause 4.5: Quality disposition requires absolute physical and digital integrity. 'Pass' unlocks the SAP EWM put-away order via the physical QC Pass seal. 'Hold' visually protects the buffer from accidental handling using yellow cones. 'NG' requires a red physical tag, a Jira defect ticket with part number and lot ID, and full transfer of the entire lot volume to quarantine location SC01 BL by designated NG manpower.",
+          "hi": "SOP क्लॉज 4.5: गुणवत्ता निपटान के लिए पूर्ण भौतिक और डिजिटल अखंडता की आवश्यकता होती है। 'Pass' भौतिक QC पास सील के माध्यम से SAP EWM पुट-अवे ऑर्डर को अनलॉक करता है। 'Hold' पीले शंकु का उपयोग करके बफर को आकस्मिक छेड़छाड़ से बचाता है। 'NG' के लिए एक लाल भौतिक टैग, पार्ट नंबर और लॉट आईडी के साथ जीरा टिकट, और निर्दिष्ट NG कर्मियों द्वारा पूरे लॉट वॉल्यूम को क्वारंटाइन स्थान SC01 BL में स्थानांतरित करना अनिवार्य है।",
+          "mr": "SOP कलम 4.5: गुणवत्ता डिस्पोझिशनसाठी प्रत्यक्ष आणि डिजिटल अचूकता आवश्यक आहे. 'Pass' प्रत्यक्ष QC पास शिक्क्याद्वारे SAP EWM पुट-अवे ऑर्डर अनलॉक करते. 'Hold' पिवळ्या कोन्सचा वापर करून बफरचे चुकीच्या हाताळणीपासून रक्षण करते. 'NG' साठी लाल प्रत्यक्ष टॅग, पार्ट नंबर आणि लॉट आयडीसह जिरा तिकीट, आणि नियुक्त NG कर्मचाऱ्यांद्वारे संपूर्ण लॉट क्वारंटाइन जागा SC01 BL मध्ये हलवणे आवश्यक आहे."
+        }
+      }
+    }
+  ]
+}
