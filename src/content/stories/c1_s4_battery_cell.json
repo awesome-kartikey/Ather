@@ -1,0 +1,409 @@
+{
+  "stageId": "c1_s4_battery_cell",
+  "category": 1,
+  "stageNumber": 4,
+  "sopDoc": "Plant Operations Putaway for Battery Cell (Doc No: 04_C1_S3)",
+  "stageTitle": {
+    "en": "Stage 4: Specialized Battery Cell Put-Away",
+    "hi": "चरण 4: विशेष बैटरी सेल पुट-अवे",
+    "mr": "टप्पा 4: विशेष बॅटरी सेल पुट-अवे"
+  },
+  "scenes": [
+    {
+      "id": "c1_s4_sc01_mhe_auth",
+      "stepNumber": 1,
+      "title": {
+        "en": "Certified MHE Operator Authorization",
+        "hi": "प्रमाणित MHE ऑपरेटर प्राधिकरण",
+        "mr": "प्रमाणित MHE ऑपरेटर अधिकृतता"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s4_sc01_mhe_auth.mp4",
+        "posterSrc": "/images/scenes/c1_s4_sc01_poster.jpg",
+        "fallbackAnimation": "battery_dock_auth",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "warning",
+          "text": {
+            "en": "Welcome to Stage 4: Specialized Battery Cell Put-Away! High-value lithium-ion battery cell crates have arrived at Dock 01. These sensitive cells power the Ather 450X and are hazardous if mishandled. A general warehouse helper grabs a manual pallet truck to move the pallet to clear the dock floor. Should they proceed?",
+            "hi": "स्टेज 4: विशेष बैटरी सेल पुट-अवे में आपका स्वागत है! डॉक 01 पर उच्च-मूल्य वाले लिथियम-आयन बैटरी सेल क्रेट पहुंचे हैं। ये संवेदनशील सेल एथर 450X को शक्ति प्रदान करते हैं और यदि गलत तरीके से संभाले जाएं तो खतरनाक होते हैं। एक सामान्य वेयरहाउस हेल्पर डॉक फर्श को खाली करने के लिए मैनुअल पैलेट ट्रक से पैलेट को ले जाने की कोशिश करता है। क्या उन्हें आगे बढ़ना चाहिए?",
+            "mr": "स्टेज 4: विशेष बॅटरी सेल पुट-अवेमध्ये आपले स्वागत आहे! डॉक 01 वर उच्च-मूल्याचे लिथियम-आयन बॅटरी सेल क्रेट्स आले आहेत. हे संवेदनशील सेल्स एथर 450X ला उर्जा देतात आणि चुकीच्या पद्धतीने हाताळल्यास धोकादायक असतात. डॉकची जागा मोकळी करण्यासाठी एक सामान्य वेअरहाऊस हेल्पर मॅन्युअल पॅलेट ट्रकने पॅलेट हलवण्याचा प्रयत्न करतो. त्याने पुढे जावे का?"
+          },
+          "audioSrc": "/audio/mascot/c1_s4_sc01_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "STOP IS CORRECT! SOP for Battery Cell Put-Away (Clause 4.1): Battery cells must be handled and transported EXCLUSIVELY by certified MHE operators using designated electric reach-trucks or powered pallet trucks. Uncertified handling risks thermal shocks, mechanical puncture, or dangerous cell dropping!",
+            "hi": "STOP बिल्कुल सही निर्णय है! बैटरी सेल पुट-अवे SOP (क्लॉज 4.1): बैटरी सेल को विशेष रूप से प्रमाणित MHE ऑपरेटरों द्वारा नामित इलेक्ट्रिक रीच-ट्रक या पावर्ड पैलेट ट्रक का उपयोग करके संभाला और ले जाया जाना चाहिए। अप्रमाणित हैंडलिंग से थर्मल शॉक, यांत्रिक क्षति या खतरनाक सेल गिरने का जोखिम होता है!",
+            "mr": "STOP अगदी बरोबर निर्णय! बॅटरी सेल पुट-अवे SOP (कलम 4.1): बॅटरी सेल्स केवळ प्रमाणित MHE ऑपरेटरद्वारेच नियुक्त इलेक्ट्रिक रीच-ट्रक किंवा पावर्ड पॅलेट ट्रकचा वापर करून हाताळले आणि हलवले पाहिजेत. अप्रमाणित हाताळणीमुळे थर्मल शॉक, मेकॅनिकल डॅमेज किंवा सेल पडण्याचा मोठा धोका असतो!"
+          },
+          "audioSrc": "/audio/mascot/c1_s4_sc01_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "CRITICAL SAFETY VIOLATION! Under SOP Clause 4.1, general warehouse associates and manual helpers are strictly prohibited from moving lithium-ion cell shipments. Mishandling fragile battery cells can cause internal short circuits, fire hazards, and complete warranty voiding.",
+            "hi": "गंभीर सुरक्षा उल्लंघन! SOP क्लॉज 4.1 के तहत, सामान्य वेयरहाउस सहायकों और अकुशल हेल्परों को लिथियम-आयन सेल शिपमेंट को स्थानांतरित करने से सख्ती से प्रतिबंधित किया गया है। नाजुक बैटरी सेल की गलत हैंडलिंग से आंतरिक शॉर्ट सर्किट, आग का खतरा और वारंटी पूरी तरह से रद्द हो सकती है।",
+            "mr": "गंभीर सुरक्षा उल्लंघन! SOP कलम 4.1 नुसार, सामान्य वेअरहाऊस मदतनीसांना लिथियम-आयन सेल शिपमेंट हलवण्यास सक्त मनाई आहे. नाजूक बॅटरी सेल्सच्या चुकीच्या हाताळणीमुळे अंतर्गत शॉर्ट सर्किट, आगीचा धोका आणि वॉरंटी रद्द होऊ शकते."
+          },
+          "audioSrc": "/audio/mascot/c1_s4_sc01_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "stop_go",
+        "questionId": "c1-q19",
+        "safetyCritical": true,
+        "question": {
+          "en": "A general warehouse helper attempts to move an unloaded lithium-ion battery cell pallet using a manual hand pallet truck (HPT) to clear the dock floor. Allow or halt this transfer?",
+          "hi": "एक सामान्य वेयरहाउस हेल्पर डॉक फर्श को खाली करने के लिए मैनुअल हैंड पैलेट ट्रक (HPT) का उपयोग करके अनलोड किए गए लिथियम-आयन बैटरी सेल पैलेट को स्थानांतरित करने का प्रयास करता है। इस स्थानांतरण की अनुमति दें या रोकें?",
+          "mr": "एक सामान्य वेअरहाऊस हेल्पर डॉकची जागा मोकळी करण्यासाठी मॅन्युअल हँड पॅलेट ट्रक (HPT) चा वापर करून अनलोड केलेले लिथियम-आयन बॅटरी सेल पॅलेट हलवण्याचा प्रयत्न करतो. या हालचालीस परवानगी द्यावी की थांबवावी?"
+        },
+        "situation": {
+          "en": "SITUATION AUDIT: Pallet containing high-voltage Class 9 lithium-ion cells at Inbound Dock 01. Operator credentials: General Warehouse Labor (No certified MHE badge). Equipment: Manual Hand Pallet Truck.",
+          "hi": "स्थिति ऑडिट: इनबाउंड डॉक 01 पर उच्च-वोल्टेज क्लास 9 लिथियम-आयन सेल वाला पैलेट। ऑपरेटर क्रेडेंशियल्स: सामान्य वेयरहाउस हेल्पर (कोई प्रमाणित MHE बैज नहीं)। उपकरण: मैनुअल हैंड पैलेट ट्रक।",
+          "mr": "परिस्थिती ऑडिट: इनबाउंड डॉक 01 वर हाय-व्होल्टेज क्लास 9 लिथियम-आयन सेल्स असलेले पॅलेट. ऑपरेटर पात्रता: सामान्य वेअरहाऊस कामगार (प्रमाणित MHE बॅज नाही). उपकरण: मॅन्युअल हँड पॅलेट ट्रक."
+        },
+        "correctAction": "stop",
+        "stopLabel": {
+          "en": "STOP — HALT MOVEMENT",
+          "hi": "STOP — स्थानांतरण रोकें",
+          "mr": "STOP — हालचाल थांबवा"
+        },
+        "goLabel": {
+          "en": "GO — ALLOW TRANSFER",
+          "hi": "GO — अनुमति दें",
+          "mr": "GO — परवानगी द्या"
+        },
+        "stopDescription": {
+          "en": "HALT: Only trained & certified MHE operators may handle battery cell lots (Clause 4.1)",
+          "hi": "रोकें: केवल प्रशिक्षित और प्रमाणित MHE ऑपरेटर ही बैटरी सेल लॉट संभाल सकते हैं (क्लॉज 4.1)",
+          "mr": "थांबवा: केवळ प्रशिक्षित आणि प्रमाणित MHE ऑपरेटरच बॅटरी सेल लॉट हाताळू शकतात (कलम 4.1)"
+        },
+        "goDescription": {
+          "en": "ALLOW: Speed up dock clearing by letting the manual helper move the pallet",
+          "hi": "अनुमति दें: हेल्पर को पैलेट ले जाने देकर डॉक खाली करने की गति तेज करें",
+          "mr": "परवानगी द्या: मदतनीसाला पॅलेट हलवू देऊन डॉक लवकर मोकळा करा"
+        }
+      },
+      "rules": {
+        "xp": 110,
+        "sopClause": "SOP for Plant Operations Putaway for Battery Cell Clause 4.1 & Question Bank Q19",
+        "why": {
+          "en": "SOP Clause 4.1: Lithium-ion battery cells are hazardous (UN 3480, Class 9) and highly sensitive to mechanical shocks, vibrations, and drops. The SOP explicitly mandates that cell put-away must be performed EXCLUSIVELY by certified MHE operators with specialized battery safety training. Manual hand pallet trucks lack dampening and tilt stability, presenting severe thermal and fire risks if dropped.",
+          "hi": "SOP क्लॉज 4.1: लिथियम-आयन बैटरी सेल खतरनाक (UN 3480, क्लास 9) हैं और यांत्रिक झटके, कंपन और गिरने के प्रति अत्यधिक संवेदनशील हैं। SOP स्पष्ट रूप से आदेश देता है कि सेल पुट-अवे विशेष रूप से बैटरी सुरक्षा प्रशिक्षण वाले प्रमाणित MHE ऑपरेटरों द्वारा ही किया जाना चाहिए। मैनुअल हैंड पैलेट ट्रकों में शॉक डैम्पिंग और स्थिरता की कमी होती है, जिससे गिरने पर गंभीर थर्मल और आग का खतरा होता है।",
+          "mr": "SOP कलम 4.1: लिथियम-आयन बॅटरी सेल्स हे घातक (UN 3480, क्लास 9) आहेत आणि यांत्रिक धक्के, कंपने आणि पडण्याबाबत अत्यंत संवेदनशील असतात. SOP स्पष्टपणे सांगते की सेल पुट-अवे केवळ विशेष बॅटरी सुरक्षा प्रशिक्षण असलेल्या प्रमाणित MHE ऑपरेटरद्वारेच केले पाहिजे. मॅन्युअल पॅलेट ट्रकमध्ये शॉक अ‍ॅब्झॉर्बर नसतात, ज्यामुळे पॅलेट पडल्यास आगीचा मोठा धोका उद्भवू शकतो."
+        }
+      }
+    },
+    {
+      "id": "c1_s4_sc02_cleanroom_params",
+      "stepNumber": 2,
+      "title": {
+        "en": "Cleanroom Environmental Thresholds",
+        "hi": "क्लीनरूम पर्यावरण सीमाएं",
+        "mr": "क्लीनरूम पर्यावरण मर्यादा"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s4_sc02_cleanroom_params.mp4",
+        "posterSrc": "/images/scenes/c1_s4_sc02_poster.jpg",
+        "fallbackAnimation": "cleanroom_vault_env",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "The certified MHE operator has transported the lithium-ion cell pallet through the airlock into the sealed Battery Standard Room. Before stowing the pallet into the cell vault, the environmental telemetry monitors must be verified. What are the strict temperature and relative humidity thresholds mandated by Ather SOP?",
+            "hi": "प्रमाणित MHE ऑपरेटर ने एयरलॉक के माध्यम से लिथियम-आयन सेल पैलेट को सीलबंद बैटरी स्टैंडर्ड रूम में पहुंचाया है। पैलेट को सेल वॉल्ट में रखने से पहले, पर्यावरण टेलीमेट्री मॉनिटरों का सत्यापन किया जाना चाहिए। एथर SOP द्वारा अनिवार्य सख्त तापमान और सापेक्ष आर्द्रता सीमाएं क्या हैं?",
+            "mr": "प्रमाणित MHE ऑपरेटरने एअरलाँकद्वारे लिथियम-आयन सेल पॅलेट सीलबंद बॅटरी स्टँडर्ड रूममध्ये नेले आहे. पॅलेट सेल वॉल्टमध्ये ठेवण्यापूर्वी, पर्यावरणीय टेलिमेट्री मॉनिटर्स तपासले पाहिजेत. एथर SOP द्वारे अनिवार्य केलेल्या तापमान आणि सापेक्ष आर्द्रतेच्या अचूक मर्यादा कोणत्या आहेत?"
+          },
+          "audioSrc": "/audio/mascot/c1_s4_sc02_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Exact environmental calibration! SOP Clause 4.2: The Battery Standard Room must maintain 20°C–25°C temperature and 60%–65% Relative Humidity (RH) 24/7. This prevents thermal runaway, electrolyte crystallization, and moisture absorption inside cathode/anode layers!",
+            "hi": "सटीक पर्यावरणीय अंशांकन! SOP क्लॉज 4.2: बैटरी स्टैंडर्ड रूम को 24/7 20°C–25°C तापमान और 60%–65% सापेक्ष आर्द्रता (RH) बनाए रखनी चाहिए। यह थर्मल रनवे, इलेक्ट्रोलाइट क्रिस्टलीकरण, और कैथोड/एनोड परतों के अंदर नमी अवशोषण को रोकता है!",
+            "mr": "अचूक पर्यावरणीय कॅलिब्रेशन! SOP कलम 4.2: बॅटरी स्टँडर्ड रूममध्ये 24/7 20°C–25°C तापमान आणि 60%–65% सापेक्ष आर्द्रता (RH) राखली पाहिजे. हे थर्मल रनवे, इलेक्ट्रोलाइट क्रिस्टलायझेशन आणि कॅथोड/एनोड थरांमध्ये ओलावा शोषून घेण्यास प्रतिबंध करते!"
+          },
+          "audioSrc": "/audio/mascot/c1_s4_sc02_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Environmental non-compliance! Under SOP Clause 4.2, exceeding 25°C accelerates internal cell degradation, while dropping below 60% or exceeding 65% humidity creates condensation and static discharge hazards around sensitive battery terminals.",
+            "hi": "पर्यावरणीय गैर-अनुपालन! SOP क्लॉज 4.2 के तहत, 25°C से अधिक होने पर आंतरिक सेल क्षरण तेज हो जाता है, जबकि 60% से कम या 65% से अधिक आर्द्रता संवेदनशील बैटरी टर्मिनलों के आसपास संघनन और स्थैतिक निर्वहन (static discharge) का खतरा पैदा करती है।",
+            "mr": "पर्यावरणीय नियमांचे उल्लंघन! SOP कलम 4.2 नुसार, 25°C पेक्षा जास्त तापमान सेलचे नुकसान वेगाने करते, तर 60% पेक्षा कमी किंवा 65% पेक्षा जास्त आर्द्रता संवेदनशील बॅटरी टर्मिनल्सभोवती घनीभवन आणि स्टॅटिक डिस्चार्जचा धोका निर्माण करते."
+          },
+          "audioSrc": "/audio/mascot/c1_s4_sc02_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c1-q20",
+        "safetyCritical": true,
+        "question": {
+          "en": "Under Ather AURIC SOP Clause 4.2, what are the mandatory environmental thresholds for the Battery Cell Standard Room?",
+          "hi": "एथर AURIC SOP क्लॉज 4.2 के तहत, बैटरी सेल स्टैंडर्ड रूम के लिए अनिवार्य पर्यावरणीय सीमाएं क्या हैं?",
+          "mr": "एथर AURIC SOP कलम 4.2 नुसार, बॅटरी सेल स्टँडर्ड रूमसाठी अनिवार्य पर्यावरणीय मर्यादा कोणत्या आहेत?"
+        },
+        "options": [
+          {
+            "id": "opt_20_25_60_65",
+            "correct": true,
+            "label": {
+              "en": "Temperature: 20°C – 25°C and Relative Humidity: 60% – 65% RH (Mandatory SOP Standard)",
+              "hi": "तापमान: 20°C – 25°C और सापेक्ष आर्द्रता: 60% – 65% RH (अनिवार्य SOP मानक)",
+              "mr": "तापमान: 20°C – 25°C आणि सापेक्ष आर्द्रता: 60% – 65% RH (अनिवार्य SOP मानक)"
+            }
+          },
+          {
+            "id": "opt_30_35_40",
+            "correct": false,
+            "label": {
+              "en": "Temperature: 30°C – 35°C and Relative Humidity: 40% – 50% RH (Severe thermal degradation)",
+              "hi": "तापमान: 30°C – 35°C और सापेक्ष आर्द्रता: 40% – 50% RH (गंभीर थर्मल क्षरण)",
+              "mr": "तापमान: 30°C – 35°C आणि सापेक्ष आर्द्रता: 40% – 50% RH (गंभीर थर्मल नुकसान)"
+            }
+          },
+          {
+            "id": "opt_ambient",
+            "correct": false,
+            "label": {
+              "en": "Ambient factory floor conditions — no active HVAC control required",
+              "hi": "सामान्य फ़ैक्टरी फ़्लोर स्थिति — किसी सक्रिय HVAC नियंत्रण की आवश्यकता नहीं",
+              "mr": "सामान्य फॅक्टरी फ्लोअर स्थिती — सक्रिय HVAC नियंत्रणाची आवश्यकता नाही"
+            }
+          },
+          {
+            "id": "opt_cold_storage",
+            "correct": false,
+            "label": {
+              "en": "Freezing Cold Storage: Below 0°C and 10% – 20% RH (Causes electrolyte freezing)",
+              "hi": "अत्यधिक ठंडा भंडारण: 0°C से नीचे और 10% – 20% RH (इलेक्ट्रोलाइट जमने का कारण बनता है)",
+              "mr": "अति शीतगृह: 0°C खाली आणि 10% – 20% RH (इलेक्ट्रोलाइट गोठण्यास कारणीभूत ठरते)"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 110,
+        "sopClause": "SOP for Plant Operations Putaway for Battery Cell Clause 4.2 & Question Bank Q20",
+        "why": {
+          "en": "SOP Clause 4.2: Lithium-ion pouch and cylindrical cells are electrochemically vulnerable to ambient thermal stress and moisture ingress. Temperature must be strictly maintained between 20°C and 25°C, while Relative Humidity must stay locked between 60% and 65%. High humidity causes terminal corrosion and micro-shorts, whereas low humidity increases electrostatic discharge (ESD) risk.",
+          "hi": "SOP क्लॉज 4.2: लिथियम-आयन पाउच और बेलनाकार सेल परिवेशी थर्मल तनाव और नमी के प्रवेश के प्रति विद्युत-रासायनिक रूप से संवेदनशील होते हैं। तापमान को 20°C और 25°C के बीच सख्ती से बनाए रखा जाना चाहिए, जबकि सापेक्ष आर्द्रता को 60% और 65% के बीच लॉक रहना चाहिए। उच्च आर्द्रता टर्मिनल जंग और माइक्रो-शॉर्ट्स का कारण बनती है, जबकि कम आर्द्रता इलेक्ट्रोस्टैटिक डिस्चार्ज (ESD) के जोखिम को बढ़ाती है।",
+          "mr": "SOP कलम 4.2: लिथियम-आयन सेल्स हे वातावरणातील तापमान आणि ओलाव्यामुळे खराब होऊ शकतात. तापमान काटेकोरपणे 20°C ते 25°C दरम्यान राखले पाहिजे, तर सापेक्ष आर्द्रता 60% ते 65% दरम्यान लॉक राहिली पाहिजे. जास्त आर्द्रतेमुळे टर्मिनल्सवर गंज चढतो आणि शॉर्ट सर्किट होते, तर कमी आर्द्रतेमुळे इलेक्ट्रोस्टॅटिक डिस्चार्ज (ESD) चा धोका वाढतो."
+        }
+      }
+    },
+    {
+      "id": "c1_s4_sc03_sla_countdown",
+      "stepNumber": 3,
+      "title": {
+        "en": "2-Hour Strict Put-Away Countdown SLA",
+        "hi": "2-घंटे की सख्त पुट-अवे उलटी गिनती SLA",
+        "mr": "2-तासांची कडक पुट-अवे काउंटडाउन SLA"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s4_sc03_sla_countdown.mp4",
+        "posterSrc": "/images/scenes/c1_s4_sc03_poster.jpg",
+        "fallbackAnimation": "battery_sla_countdown",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "warning",
+          "text": {
+            "en": "Pay close attention to the warehouse clock! Lithium-ion battery cell pallets cannot sit idling on the open receiving dock. Uncontrolled ambient temperature and humidity accelerate electrochemical degradation. Under Ather SOP Clause 4.3, what is the mandatory maximum SLA window within which the entire battery cell put-away must be completed?",
+            "hi": "वेयरहाउस की घड़ी पर पूरा ध्यान दें! लिथियम-आयन बैटरी सेल पैलेट खुले रिसीविंग डॉक पर निष्क्रिय नहीं रह सकते। अनियंत्रित परिवेशी तापमान और आर्द्रता विद्युत-रासायनिक क्षरण को तेज करते हैं। एथर SOP क्लॉज 4.3 के तहत, वह अनिवार्य अधिकतम SLA समय सीमा क्या है जिसके भीतर पूरा बैटरी सेल पुट-अवे पूरा होना चाहिए?",
+            "mr": "वेअरहाऊसच्या घड्याळाकडे बारकाईने लक्ष द्या! लिथियम-आयन बॅटरी सेलचे पॅलेट्स खुल्या रिसीव्हिंग डॉकवर पडून राहू शकत नाहीत. अनियंत्रित तापमान आणि आर्द्रतेमुळे पेशींचे रासायनिक नुकसान वेगाने होते. एथर SOP कलम 4.3 नुसार, संपूर्ण बॅटरी सेल पुट-अवे पूर्ण करण्यासाठी अनिवार्य कमाल SLA कालमर्यादा किती आहे?"
+          },
+          "audioSrc": "/audio/mascot/c1_s4_sc03_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "SLA compliance verified! SOP Clause 4.3: Put-away from GRN staging into the Battery Standard Room has a strict 2-hour SLA. This guarantees that sensitive lithium-ion cells are protected inside the 20°C–25°C cleanroom before thermal stress or moisture can impact cell life!",
+            "hi": "SLA अनुपालन सत्यापित! SOP क्लॉज 4.3: GRN स्टेजिंग से बैटरी स्टैंडर्ड रूम में पुट-अवे का सख्त 2 घंटे का SLA है। यह गारंटी देता है कि संवेदनशील लिथियम-आयन सेल 20°C–25°C क्लीनरूम के अंदर सुरक्षित हैं, इससे पहले कि थर्मल तनाव या नमी सेल के जीवन को प्रभावित कर सके!",
+            "mr": "SLA नियमांचे अचूक पालन! SOP कलम 4.3: GRN स्टेजिंगमधून बॅटरी स्टँडर्ड रूममध्ये पुट-अवे करण्यासाठी 2 तासांची कडक SLA मुदत आहे. यामुळे थर्मल ताण किंवा ओलावा सेलच्या आयुष्यावर परिणाम करण्यापूर्वी संवेदनशील सेल्स 20°C–25°C च्या नियंत्रित रूममध्ये सुरक्षित होतात!"
+          },
+          "audioSrc": "/audio/mascot/c1_s4_sc03_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "SLA BREACH HAZARD! Under SOP Clause 4.3, leaving battery cells on the open dock beyond 2 hours violates Ather quality protocols. Ambient dock heat and humidity accelerate cell self-discharge and pose severe fire risks. The SLA is strictly 2 hours!",
+            "hi": "SLA उल्लंघन का खतरा! SOP क्लॉज 4.3 के तहत, बैटरी सेल को 2 घंटे से अधिक समय तक खुले डॉक पर छोड़ना एथर गुणवत्ता प्रोटोकॉल का उल्लंघन करता है। परिवेशी डॉक की गर्मी और नमी सेल के स्व-निर्वहन को तेज करती है और आग का गंभीर खतरा पैदा करती है। SLA सख्ती से 2 घंटे है!",
+            "mr": "SLA उल्लंघन धोका! SOP कलम 4.3 नुसार, बॅटरी सेल्स 2 तासांपेक्षा जास्त वेळ खुल्या डॉकवर ठेवणे एथर गुणवत्ता नियमांचे उल्लंघन आहे. डॉकवरील उष्णता आणि आर्द्रतेमुळे सेल्सचे डिस्चार्ज वाढते आणि आगीचा धोका उद्भवतो. SLA मुदत काटेकोरपणे 2 तास आहे!"
+          },
+          "audioSrc": "/audio/mascot/c1_s4_sc03_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c1-q20b",
+        "safetyCritical": true,
+        "question": {
+          "en": "Under Ather AURIC SOP Clause 4.3, what is the mandatory maximum SLA window for completing battery cell put-away from GRN staging into the standard room?",
+          "hi": "एथर AURIC SOP क्लॉज 4.3 के तहत, GRN स्टेजिंग से मानक कक्ष में बैटरी सेल पुट-अवे को पूरा करने के लिए अनिवार्य अधिकतम SLA समय सीमा क्या है?",
+          "mr": "एथर AURIC SOP कलम 4.3 नुसार, GRN स्टेजिंगमधून स्टँडर्ड रूममध्ये बॅटरी सेल पुट-अवे पूर्ण करण्यासाठी अनिवार्य कमाल SLA कालमर्यादा काय आहे?"
+        },
+        "options": [
+          {
+            "id": "opt_2_hours",
+            "correct": true,
+            "label": {
+              "en": "Within 2 Hours (Mandatory SOP SLA to prevent thermal aging & dock bottlenecks)",
+              "hi": "2 घंटे के भीतर (थर्मल क्षरण और डॉक की बाधाओं को रोकने के लिए अनिवार्य SOP SLA)",
+              "mr": "2 तासांच्या आत (थर्मल नुकसान आणि डॉकवरील अडथळे रोखण्यासाठी अनिवार्य SOP SLA)"
+            }
+          },
+          {
+            "id": "opt_8_hours",
+            "correct": false,
+            "label": {
+              "en": "Within 8 Hours (Anytime before shift conclusion)",
+              "hi": "8 घंटे के भीतर (शिफ्ट समाप्त होने से पहले कभी भी)",
+              "mr": "8 तासांच्या आत (शिफ्ट संपेपर्यंत कधीही)"
+            }
+          },
+          {
+            "id": "opt_24_hours",
+            "correct": false,
+            "label": {
+              "en": "Within 24 Hours (Next-day put-away cycle)",
+              "hi": "24 घंटे के भीतर (अगले दिन का पुट-अवे चक्र)",
+              "mr": "24 तासांच्या आत (दुसऱ्या दिवशीचा पुट-अवे सायकल)"
+            }
+          },
+          {
+            "id": "opt_no_sla",
+            "correct": false,
+            "label": {
+              "en": "No time limit as long as the pallet has a GRN sticker affixed",
+              "hi": "कोई समय सीमा नहीं जब तक कि पैलेट पर GRN स्टिकर चिपकाया गया हो",
+              "mr": "पॅलेटवर GRN स्टिकर चिटकवलेला असेपर्यंत कोणतीही वेळ मर्यादा नाही"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 115,
+        "sopClause": "SOP for Plant Operations Putaway for Battery Cell Clause 4.3 & SLA Standard",
+        "why": {
+          "en": "SOP Clause 4.3 specifies an uncompromising 2-Hour SLA for the entire battery cell put-away process (GRN staging -> MHE transport -> Standard room storage -> Location QR scan & SAP confirmation). Lithium-ion cells are sensitive to ambient warehouse heat and humidity swings. Leaving them on an uncontrolled dock floor impairs long-term cell capacity, causes dock bottlenecks, and breaches plant safety standards.",
+          "hi": "SOP क्लॉज 4.3 संपूर्ण बैटरी सेल पुट-अवे प्रक्रिया (GRN स्टेजिंग -> MHE ट्रांसपोर्ट -> स्टैंडर्ड रूम स्टोरेज -> लोकेशन QR स्कैन और SAP पुष्टिकरण) के लिए 2 घंटे का सख्त SLA निर्दिष्ट करता है। लिथियम-आयन सेल वेयरहाउस की परिवेशी गर्मी और आर्द्रता के उतार-चढ़ाव के प्रति संवेदनशील होते हैं। उन्हें अनियंत्रित डॉक फर्श पर छोड़ने से सेल की दीर्घकालिक क्षमता ख़राब होती है, डॉक पर बाधाएँ पैदा होती हैं, और संयंत्र सुरक्षा मानकों का उल्लंघन होता है।",
+          "mr": "SOP कलम 4.3 संपूर्ण बॅटरी सेल पुट-अवे प्रक्रियेसाठी (GRN स्टेजिंग -> MHE ट्रान्सपोर्ट -> स्टँडर्ड रूम स्टोरेज -> लोकेशन QR स्कॅन आणि SAP पुष्टीकरण) 2 तासांची कडक SLA मुदत निश्चित करते. लिथियम-आयन सेल्स वेअरहाऊसच्या उष्णता आणि आर्द्रतेतील बदलांमुळे खराब होऊ शकतात. त्यांना अनियंत्रित डॉकवर ठेवल्यास सेल क्षमतेचे नुकसान होते, डॉकवर गर्दी होते आणि प्लांटच्या सुरक्षा नियमांचा भंग होतो."
+        }
+      }
+    },
+    {
+      "id": "c1_s4_sc04_environmental_breach",
+      "stepNumber": 4,
+      "title": {
+        "en": "Environmental Breach Alarm & Containment",
+        "hi": "पर्यावरण उल्लंघन अलार्म और नियंत्रण",
+        "mr": "पर्यावरण उल्लंघन अलार्म आणि नियंत्रण"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s4_sc04_environmental_breach.mp4",
+        "posterSrc": "/images/scenes/c1_s4_sc04_poster.jpg",
+        "fallbackAnimation": "environmental_breach_alarm",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "warning",
+          "text": {
+            "en": "ALARM TRIPPED! As you prepare to complete cell vault put-away, the wall telemetry strobe begins flashing amber: Relative Humidity has spiked to 75.2% and temperature is rising to 27.4°C. Moisture is dangerous for exposed battery electrodes! What is your immediate mandatory escalation action under Ather SOP Clause 5.2?",
+            "hi": "अलार्म बज गया! जब आप सेल वॉल्ट पुट-अवे पूरा करने की तैयारी कर रहे हैं, तो दीवार की टेलीमेट्री एम्बर में चमकने लगती है: सापेक्ष आर्द्रता बढ़कर 75.2% हो गई है और तापमान 27.4°C तक बढ़ रहा है। नमी खुली बैटरी इलेक्ट्रोड के लिए खतरनाक है! एथर SOP क्लॉज 5.2 के तहत आपकी तत्काल अनिवार्य कार्रवाई क्या है?",
+            "mr": "अलार्म वाजला! तुम्ही सेल वॉल्ट पुट-अवे पूर्ण करण्याची तयारी करत असताना, वॉल टेलिमेट्री फ्लॅश होऊ लागली: सापेक्ष आर्द्रता 75.2% पर्यंत वाढली आहे आणि तापमान 27.4°C वर पोहोचले आहे. बॅटरी इलेक्ट्रोड्ससाठी जास्त ओलावा अतिशय धोकादायक आहे! एथर SOP कलम 5.2 नुसार तुमची तातडीची अनिवार्य कृती काय आहे?"
+          },
+          "audioSrc": "/audio/mascot/c1_s4_sc04_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "trophy",
+          "text": {
+            "en": "PERFECT CRISIS CONTAINMENT! SOP Clause 5.2: In the event of an environmental parameter breach, you must immediately halt pallet transit, seal airlock doors to isolate the chamber, and notify the Putaway Zone Leader and HVAC maintenance engineering. Never place sensitive cells into an out-of-spec vault!",
+            "hi": "उत्कृष्ट संकट नियंत्रण! SOP क्लॉज 5.2: पर्यावरणीय मापदंडों के उल्लंघन की स्थिति में, आपको तुरंत पैलेट स्थानांतरण को रोकना होगा, कक्ष को अलग करने के लिए एयरलॉक दरवाजों को सील करना होगा, और पुट-अवे ज़ोन लीडर और HVAC रखरखाव इंजीनियरिंग को सूचित करना होगा। संवेदनशील सेलों को कभी भी विनिर्देश से बाहर के वॉल्ट में न रखें!",
+            "mr": "उत्कृष्ट संकट नियंत्रण! SOP कलम 5.2: पर्यावरणीय मर्यादांचे उल्लंघन झाल्यास, तुम्ही त्वरित पॅलेट हालचाल थांबवली पाहिजे, चेंबर सुरक्षित ठेवण्यासाठी एअरलॉक दरवाजे बंद केले पाहिजेत आणि पुट-अवे झोन लीडर व HVAC मेंटेनन्स टीमला कळवले पाहिजे. संवेदनशील पेशी कधीही मर्यादाबाहेरील वॉल्टमध्ये ठेवू नका!"
+          },
+          "audioSrc": "/audio/mascot/c1_s4_sc04_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "CATASTROPHIC CONTAMINATION RISK! Never ignore an active environmental breach or attempt to bypass humidity trips. 75% RH triggers moisture condensation on lithium-ion terminals, creating hazardous internal micro-shorts and battery fires. Halt, isolate, and escalate immediately!",
+            "hi": "विनाशकारी संदूषण जोखिम! सक्रिय पर्यावरणीय उल्लंघन को कभी नज़रअंदाज़ न करें या आर्द्रता चेतावनियों को बायपास करने का प्रयास न करें। 75% RH लिथियम-आयन टर्मिनलों पर नमी के संघनन को ट्रिगर करता है, जिससे खतरनाक आंतरिक माइक्रो-शॉर्ट्स और बैटरी में आग लग सकती है। तुरंत रोकें, अलग करें और रिपोर्ट करें!",
+            "mr": "धोकादायक संदूषण धोका! सक्रिय पर्यावरणीय उल्लंघन कधीही दुर्लक्षित करू नका किंवा आर्द्रता अलार्म बायपास करण्याचा प्रयत्न करू नका. 75% RH मुळे लिथियम-आयन टर्मिनल्सवर ओलावा साचतो, ज्यामुळे अंतर्गत शॉर्ट सर्किट आणि आगीचा धोका उद्भवतो. ताबडतोब थांबवा, वेगळे करा आणि कळवा!"
+          },
+          "audioSrc": "/audio/mascot/c1_s4_sc04_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c1-q20c",
+        "safetyCritical": true,
+        "question": {
+          "en": "While transporting lithium-ion cells into the Standard Room, the wall telemetry flashes an amber alert: Relative Humidity has spiked to 75% (Limit: 60%–65%). What is your mandatory SOP action?",
+          "hi": "मानक कक्ष में लिथियम-आयन सेल ले जाते समय, दीवार की टेलीमेट्री एम्बर अलर्ट प्रदर्शित करती है: सापेक्ष आर्द्रता 75% (सीमा: 60%–65%) तक बढ़ गई है। आपकी अनिवार्य SOP कार्रवाई क्या है?",
+          "mr": "स्टँडर्ड रूममध्ये लिथियम-आयन सेल्स नेताना, वॉल टेलिमेट्री एम्बर अलर्ट दर्शवते: सापेक्ष आर्द्रता 75% (मर्यादा: 60%–65%) पर्यंत वाढली आहे. तुमची अनिवार्य SOP कृती काय आहे?"
+        },
+        "options": [
+          {
+            "id": "opt_halt_contain_escalate",
+            "correct": true,
+            "label": {
+              "en": "Halt pallet entry immediately, keep airlock doors sealed, and report to the Putaway Zone Leader (ZL) and HVAC maintenance team",
+              "hi": "पैलेट प्रवेश तुरंत रोकें, एयरलॉक दरवाजे बंद रखें, और पुट-अवे ज़ोन लीडर (ZL) और HVAC रखरखाव टीम को रिपोर्ट करें",
+              "mr": "पॅलेट प्रवेश ताबडतोब थांबवा, एअरलॉक दरवाजे बंद ठेवा आणि पुट-अवे झोन लीडर (ZL) व HVAC मेंटेनन्स टीमला कळवा"
+            }
+          },
+          {
+            "id": "opt_ignore_rush",
+            "correct": false,
+            "label": {
+              "en": "Ignore the telemetry sensor and rush the cells into the racks before anyone notices",
+              "hi": "टेलीमेट्री सेंसर को नज़रअंदाज़ करें और किसी के ध्यान देने से पहले सेलों को रैक में जल्दी से रख दें",
+              "mr": "टेलिमेट्री सेन्सरकडे दुर्लक्ष करा आणि कोणाच्या लक्षात येण्यापूर्वी सेल्स घाईघाईने रॅकमध्ये ठेवा"
+            }
+          },
+          {
+            "id": "opt_open_docks",
+            "correct": false,
+            "label": {
+              "en": "Prop open the outside warehouse dock doors to ventilate the cleanroom chamber",
+              "hi": "क्लीनरूम कक्ष को हवादार करने के लिए वेयरहाउस के बाहरी डॉक दरवाजे खोल दें",
+              "mr": "क्लीनरूममध्ये हवा खेळती ठेवण्यासाठी वेअरहाऊसचे बाहेरचे डॉक दरवाजे उघडे ठेवा"
+            }
+          },
+          {
+            "id": "opt_override_sensor",
+            "correct": false,
+            "label": {
+              "en": "Unplug the wall sensor or silence the audible siren to clear the error code",
+              "hi": "त्रुटि कोड हटाने के लिए वॉल सेंसर का प्लग निकालें या सायरन को बंद कर दें",
+              "mr": "एरर कोड घालवण्यासाठी वॉल सेन्सर अनप्लग करा किंवा सायरन बंद करा"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 120,
+        "sopClause": "SOP for Plant Operations Putaway for Battery Cell Clause 5.2 & Failure Mode Control",
+        "why": {
+          "en": "SOP Clause 5.2 mandates strict containment in the event of cleanroom climate failure. Battery cells are hyper-hygroscopic at the component level. If humidity surpasses 65% RH, moisture adheres to terminal surfaces, causing accelerated oxidation, short circuits, and thermal runaway. The operator must cease all transfers, isolate the chamber, and allow facilities engineering to restore the HVAC dehumidification system before any further cell placement.",
+          "hi": "SOP क्लॉज 5.2 क्लीनरूम जलवायु विफलता की स्थिति में सख्त नियंत्रण का आदेश देता है। बैटरी सेल घटक स्तर पर अत्यधिक नमी सोखने वाले होते हैं। यदि आर्द्रता 65% RH से अधिक हो जाती है, तो टर्मिनल सतहों पर नमी चिपक जाती है, जिससे तेज ऑक्सीकरण, शॉर्ट सर्किट और थर्मल रनवे होता है। ऑपरेटर को सभी स्थानांतरण बंद करने होंगे, कक्ष को अलग करना होगा, और आगे किसी भी सेल प्लेसमेंट से पहले सुविधा इंजीनियरिंग को HVAC डीह्यूमिडिफिकेशन सिस्टम को बहाल करने की अनुमति देनी होगी।",
+          "mr": "SOP कलम 5.2 क्लीनरूम क्लायमेट अयशस्वी झाल्यास कडक नियंत्रणाचे आदेश देते. बॅटरी सेल्स आर्द्रता पटकन शोषून घेतात. आर्द्रता 65% RH पेक्षा जास्त झाल्यास, टर्मिनल्सवर ओलावा साचतो, ज्यामुळे ऑक्सिडेशन, शॉर्ट सर्किट आणि थर्मल रनवे होतो. ऑपरेटरने सर्व हालचाली थांबवून चेंबर सील केले पाहिजे आणि पुढील सेल ठेवण्यापूर्वी मेंटेनन्स टीमला HVAC सिस्टीम पूर्ववत करू दिली पाहिजे."
+        }
+      }
+    }
+  ]
+}
