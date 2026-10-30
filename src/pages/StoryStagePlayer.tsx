@@ -13,6 +13,7 @@ import type {
 } from '../engine/story/types';
 import rawStage1Data from '../content/stories/c1_s1_gate_dock.json';
 import rawStage2Data from '../content/stories/c1_s2_iqc_clearance.json';
+import rawStage3Data from '../content/stories/c1_s3_putaway_parts.json';
 import { StoryHud } from '../components/story/StoryHud';
 import { MascotAura } from '../components/story/MascotAura';
 import { TruckGateAnimation } from '../components/story/TruckGateAnimation';
@@ -27,6 +28,10 @@ import { IqcSamplingAnimation } from '../components/story/IqcSamplingAnimation';
 import { IqcConesAnimation } from '../components/story/IqcConesAnimation';
 import { IqcHandoverSlaAnimation } from '../components/story/IqcHandoverSlaAnimation';
 import { IqcDispositionAnimation } from '../components/story/IqcDispositionAnimation';
+import { HuScanAnimation } from '../components/story/HuScanAnimation';
+import { RouteSegregationAnimation } from '../components/story/RouteSegregationAnimation';
+import { BinMarriageAnimation } from '../components/story/BinMarriageAnimation';
+import { OmittedScanHazardAnimation } from '../components/story/OmittedScanHazardAnimation';
 import { QuestionCard } from '../components/story/QuestionCard';
 import { DragDropCard } from '../components/story/DragDropCard';
 import { SequenceCard } from '../components/story/SequenceCard';
@@ -39,7 +44,8 @@ import { RefreshCcw, Layers, Trophy, Award, CheckCheck, ArrowRight, ArrowLeft } 
 
 const allStages: StoryStage[] = [
   rawStage1Data as unknown as StoryStage,
-  rawStage2Data as unknown as StoryStage
+  rawStage2Data as unknown as StoryStage,
+  rawStage3Data as unknown as StoryStage
 ];
 
 export const StoryStagePlayer: React.FC = () => {
@@ -302,6 +308,30 @@ export const StoryStagePlayer: React.FC = () => {
                 />
               ) : scene.media.fallbackAnimation === 'iqc_disposition_workbench' ? (
                 <IqcDispositionAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'hu_scan_initiation' ? (
+                <HuScanAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'route_segregation_junction' ? (
+                <RouteSegregationAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'bin_marriage_lift' ? (
+                <BinMarriageAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'omitted_scan_hazard' ? (
+                <OmittedScanHazardAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
@@ -600,17 +630,110 @@ export const StoryStagePlayer: React.FC = () => {
               <button
                 type="button"
                 onClick={() => {
-                  alert("Module 3 (Specialized Put-Away: Vehicle & Battery Parts) is the next training slice on the Master Blueprint!");
+                  handleSelectStage(2);
                 }}
                 className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
-                <span>Proceed to Module 3 (Specialized Put-Away)</span>
+                <span>Proceed to Module 3 (Vehicle &amp; Battery Parts Put-Away)</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        ) : currentStageIndex === 2 && currentSceneIndex >= 3 ? (
+          /* Module 3 Graduation Screen (Full 4/4 Scenes Completed) */
+          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
+            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-amber-500 to-orange-400 text-white flex items-center justify-center mx-auto shadow-xl shadow-amber-500/25">
+              <Trophy className="w-10 h-10" />
+            </div>
+
+            <div className="space-y-2">
+              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-amber-800 bg-amber-50 px-3.5 py-1.5 rounded-full border border-amber-300 shadow-xs">
+                <Award className="w-4 h-4 text-amber-600" />
+                <span>BADGE UNLOCKED: HIGH-RISE STOWAGE MASTER</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Module 3 Completed!
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
+                You have mastered all <strong>4 Standard Operating Procedure steps</strong> of Vehicle &amp; Battery Parts Put-Away under SOP <code>03_C1_S3</code> at Ather AURIC Plant M002.
+              </p>
+            </div>
+
+            {/* Performance Metric Strip */}
+            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
+              <div className="space-y-0.5">
+                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
+                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
+              </div>
+              <div className="space-y-0.5 border-x border-slate-200">
+                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
+                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
+              </div>
+              <div className="space-y-0.5">
+                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
+                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
+              </div>
+            </div>
+
+            {/* 4-Step Milestone Tracker */}
+            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
+              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
+                <span>Completed Module 3 Milestones (4/4):</span>
+                <span className="text-emerald-600 font-extrabold">100% SOP COMPLIANT</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                {stageData.scenes.map((s, i) => (
+                  <button
+                    key={s.id}
+                    type="button"
+                    onClick={() => handleSelectScene(i)}
+                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-amber-400 text-slate-700 hover:text-amber-700 transition-colors text-left cursor-pointer"
+                  >
+                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
+                      ✓
+                    </span>
+                    <span className="truncate font-medium">
+                      Sc {i + 1}: {s.title[lang] || s.title.en}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Next Chapter & Replay Actions */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+              <button
+                type="button"
+                onClick={() => handleSelectScene(0)}
+                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <RefreshCcw className="w-4 h-4" />
+                <span>Replay Module 3 from Start</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleSelectStage(1)}
+                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                <span>Review Module 2 (Receiving &amp; IQC)</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  alert("Module 4 (Specialized Battery Cell Put-Away) is the next training slice on the Master Blueprint!");
+                }}
+                className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <span>Proceed to Module 4 (Battery Cell Vault)</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
         ) : (
-          /* Module 2 Intermediate Milestone Screen */
+          /* Intermediate Milestone Screen (Stages 2 & 3) */
           <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
             <div className="w-16 h-16 rounded-2xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center mx-auto shadow-sm">
               <Layers className="w-8 h-8" />
@@ -618,10 +741,16 @@ export const StoryStagePlayer: React.FC = () => {
 
             <div className="space-y-2">
               <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-blue-700 bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-300 shadow-xs">
-                <span>MODULE 2 · MILESTONE {currentSceneIndex + 1} COMPLETED</span>
+                <span>MODULE {currentStageIndex + 1} · MILESTONE {currentSceneIndex + 1} COMPLETED</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                {currentSceneIndex === 3
+                {currentStageIndex === 2
+                  ? currentSceneIndex === 2
+                    ? 'Scene 3: Destination Bin Marriage Mastered!'
+                    : currentSceneIndex === 1
+                    ? 'Scene 2: Route Segregation Mastered!'
+                    : 'Scene 1: HU Barcode Scan & WH Task Mastered!'
+                  : currentSceneIndex === 3
                   ? 'Scene 4: 30-Minute Handover SLA Mastered!'
                   : currentSceneIndex === 2
                   ? 'Scene 3: Quarantine Demarcation Mastered!'
@@ -630,7 +759,13 @@ export const StoryStagePlayer: React.FC = () => {
                   : "Scene 1: GRN Sticker '?' Audit Mastered!"}
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                {currentSceneIndex === 3
+                {currentStageIndex === 2
+                  ? currentSceneIndex === 2
+                    ? 'You correctly scanned the rack location QR code on beam HRR-B-04-12, completing the SAP EWM bin marriage and updating G-stock. Next in Stage 3: Scene 4 (Clause 5.1: Failure Mode - Omitted Location Scan Consequences).'
+                    : currentSceneIndex === 1
+                    ? 'You correctly segregated FLC bins to High-Rise Racks (HRR) and wheeled vehicle trolleys to the Trolley Staging Area. Next in Stage 3: Scene 3 (Clause 4.3: Destination Bin Marriage & Task Closure via Location QR Scan).'
+                    : 'You correctly scanned the pallet-level Handling Unit barcode on the GRN sticker to generate the active SAP EWM Warehouse Task. Next in Stage 3: Scene 2 (Clause 4.2: Route Segregation - FLC to High Rise Racks vs Trolley Staging).'
+                  : currentSceneIndex === 3
                   ? 'You verified the strict 30-minute handover SLA cutoff from GRN application. Next in Stage 2: Scene 5 (Clause 4.5: The 3-Way IQC Outcome & Sealing - Pass, Hold, NG).'
                   : currentSceneIndex === 2
                   ? 'You correctly positioned yellow UNDER IQC cones around the staging buffer. Next in Stage 2: Scene 4 (Clause 4.4: 30-Minute Sample Handover SLA & Countdown).'
@@ -658,14 +793,16 @@ export const StoryStagePlayer: React.FC = () => {
 
             {/* Actions */}
             <div className="flex flex-wrap items-center justify-center gap-2.5 pt-2">
-              <button
-                type="button"
-                onClick={() => handleSelectScene(currentSceneIndex + 1)}
-                className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <span>Proceed to Scene {currentSceneIndex + 2}</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
+              {currentSceneIndex < stageData.scenes.length - 1 && (
+                <button
+                  type="button"
+                  onClick={() => handleSelectScene(currentSceneIndex + 1)}
+                  className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <span>Proceed to Scene {currentSceneIndex + 2}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              )}
 
               <button
                 type="button"
@@ -678,11 +815,11 @@ export const StoryStagePlayer: React.FC = () => {
 
               <button
                 type="button"
-                onClick={() => handleSelectStage(0)}
+                onClick={() => handleSelectStage(Math.max(0, currentStageIndex - 1))}
                 className="px-4 py-2.5 rounded-xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
-                <span>Return to Module 1</span>
+                <span>Return to Module {currentStageIndex}</span>
               </button>
             </div>
           </div>

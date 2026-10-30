@@ -1,0 +1,450 @@
+{
+  "stageId": "c1_s3_putaway_parts",
+  "category": 1,
+  "stageNumber": 3,
+  "sopDoc": "Plant Operations Putaway for Vehicle and Battery Parts (Doc No: 03_C1_S3)",
+  "stageTitle": {
+    "en": "Stage 3: Vehicle & Battery Parts Put-Away",
+    "hi": "चरण 3: वाहन और बैटरी पार्ट्स पुट-अवे",
+    "mr": "टप्पा 3: व्हेईकल आणि बॅटरी पार्ट्स पुट-अवे"
+  },
+  "scenes": [
+    {
+      "id": "c1_s3_sc01_hu_scan",
+      "stepNumber": 1,
+      "title": {
+        "en": "Warehouse Task Initiation via HU Barcode Scan",
+        "hi": "HU बारकोड स्कैन द्वारा वेयरहाउस टास्क आरंभ",
+        "mr": "HU बारकोड स्कॅनद्वारे वेअरहाऊस टास्क सुरू करणे"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s3_sc01_hu_scan.mp4",
+        "posterSrc": "/images/scenes/c1_s3_sc01_poster.jpg",
+        "fallbackAnimation": "hu_scan_initiation",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "Welcome to Stage 3: Vehicle & Battery Parts Put-Away! The incoming brake caliper lot has passed inspection and carries the green 'QC Pass' seal. An MHE reach-truck operator arrives with a rugged handheld terminal. Before moving any pallet toward the racks, what mandatory digital scan must be performed to initiate the SAP EWM Warehouse Task?",
+            "hi": "स्टेज 3: वाहन और बैटरी पार्ट्स पुट-अवे में आपका स्वागत है! आवक ब्रेक कैलीपर लॉट निरीक्षण में पास हो गया है और उस पर हरी 'QC Pass' सील लगी है। एक MHE रीच-ट्रक ऑपरेटर रग्ड हैंडहेल्ड टर्मिनल लेकर आता है। पैलेट को रैक की ओर ले जाने से पहले, SAP EWM वेयरहाउस टास्क शुरू करने के लिए कौन सा अनिवार्य डिजिटल स्कैन किया जाना चाहिए?",
+            "mr": "स्टेज 3: व्हेईकल आणि बॅटरी पार्ट्स पुट-अवेमध्ये आपले स्वागत आहे! इनवर्ड ब्रेक कॅलिपर लॉट तपासणीत मंजूर झाला असून त्यावर हिरवा 'QC Pass' शिक्का आहे. एक MHE रीच-ट्रक ऑपरेटर हँडहेल्ड टर्मिनल घेऊन येतो. पॅलेट रॅककडे नेण्यापूर्वी, SAP EWM वेअरहाऊस टास्क सुरू करण्यासाठी कोणते अनिवार्य डिजिटल स्कॅनिंग केले पाहिजे?"
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc01_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Standard procedure verified! SOP Clause 4.1: The operator must scan the pallet-level Handling Unit (HU) barcode on the GRN sticker first. Scanning the HU instructs SAP EWM to generate the Warehouse Task, displaying the target High-Rise Rack bin and part specifications!",
+            "hi": "मानक प्रक्रिया सत्यापित! SOP क्लॉज 4.1: ऑपरेटर को पहले GRN स्टिकर पर पैलेट-स्तरीय हैंडलिंग यूनिट (HU) बारकोड स्कैन करना होगा। HU को स्कैन करने से SAP EWM को वेयरहाउस टास्क बनाने का निर्देश मिलता है, जो लक्षित हाई-राइज रैक बिन और पार्ट विनिर्देश प्रदर्शित करता है!",
+            "mr": "मानक कार्यपद्धती पडताळली! SOP कलम 4.1: ऑपरेटरने प्रथम GRN स्टिकरवरील पॅलेट-स्तरीय हँडलिंग युनिट (HU) बारकोड स्कॅन केला पाहिजे. HU स्कॅन केल्याने SAP EWM ला वेअरहाऊस टास्क तयार करण्याचे निर्देश मिळतात, ज्यामध्ये टार्गेट हाय-राइज रॅक बिन आणि पार्ट तपशील दिसतात!"
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc01_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Incorrect scan sequence! Under SOP Clause 4.1, you cannot begin put-away without scanning the Handling Unit (HU) label first. Moving material before the HU scan leaves SAP EWM blind to pallet movement, causing open task backlogs and ERP stock mismatch.",
+            "hi": "गलत स्कैन क्रम! SOP क्लॉज 4.1 के तहत, आप पहले हैंडलिंग यूनिट (HU) लेबल को स्कैन किए बिना पुट-अवे शुरू नहीं कर सकते। HU स्कैन से पहले सामग्री ले जाने से SAP EWM पैलेट की आवाजाही को ट्रैक नहीं कर पाता, जिससे ओपन टास्क बैकलॉग और ERP स्टॉक मिसमैच होता है।",
+            "mr": "चुकीचा स्कॅन क्रम! SOP कलम 4.1 नुसार, हँडलिंग युनिट (HU) लेबल स्कॅन केल्याशिवाय तुम्ही पुट-अवे सुरू करू शकत नाही. HU स्कॅन करण्यापूर्वी साहित्य हलवल्यास SAP EWM मध्ये ट्रॅकिंग होत नाही, ज्यामुळे ओपन टास्कचा अनुशेष आणि ERP स्टॉक तफावत निर्माण होते."
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc01_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c1-q21",
+        "safetyCritical": true,
+        "question": {
+          "en": "In GRN staging, what must the MHE operator scan first with the rugged handheld terminal to generate the Put-Away Warehouse Task?",
+          "hi": "GRN स्टेजिंग में, पुट-अवे वेयरहाउस टास्क बनाने के लिए MHE ऑपरेटर को रग्ड हैंडहेल्ड टर्मिनल से सबसे पहले क्या स्कैन करना चाहिए?",
+          "mr": "GRN स्टेजिंगमध्ये, पुट-अवे वेअरहाऊस टास्क तयार करण्यासाठी MHE ऑपरेटरने हँडहेल्ड टर्मिनलद्वारे सर्वात आधी काय स्कॅन केले पाहिजे?"
+        },
+        "options": [
+          {
+            "id": "opt_hu_barcode",
+            "correct": true,
+            "label": {
+              "en": "Pallet-level Handling Unit (HU) barcode on the GRN sticker (Generates SAP WH Task)",
+              "hi": "GRN स्टिकर पर पैलेट-स्तरीय हैंडलिंग यूनिट (HU) बारकोड (SAP WH टास्क बनाता है)",
+              "mr": "GRN स्टिकरवरील पॅलेट-स्तरीय हँडलिंग युनिट (HU) बारकोड (SAP WH टास्क तयार करतो)"
+            }
+          },
+          {
+            "id": "opt_rack_bin",
+            "correct": false,
+            "label": {
+              "en": "Destination High-Rise Rack bin QR code (Premature: scanned only at drop-off)",
+              "hi": "गंतव्य हाई-राइज रैक बिन QR कोड (समयपूर्व: केवल सामान रखने के बाद स्कैन किया जाता है)",
+              "mr": "गंतव्य हाय-राइज रॅक बिन QR कोड (अवेळी: फक्त प्रत्यक्ष ड्रॉप-ऑफ झाल्यावर स्कॅन केले जाते)"
+            }
+          },
+          {
+            "id": "opt_gate_pass",
+            "correct": false,
+            "label": {
+              "en": "Security Gate Pass barcode (Already closed during dock entry)",
+              "hi": "सुरक्षा गेट पास बारकोड (डॉक प्रवेश के दौरान पहले ही बंद हो चुका है)",
+              "mr": "सुरक्षा गेट पास बारकोड (डॉक प्रवेशादरम्यान आधीच बंद झालेला असतो)"
+            }
+          },
+          {
+            "id": "opt_no_scan",
+            "correct": false,
+            "label": {
+              "en": "No scan needed — load onto forklift and drive immediately to any free space",
+              "hi": "किसी स्कैन की आवश्यकता नहीं — फोर्कलिफ्ट पर लोड करें और तुरंत किसी भी खाली जगह पर जाएं",
+              "mr": "कोणत्याही स्कॅनची आवश्यकता नाही — थेट फोर्कलिफ्टवर चढवा आणि कोणत्याही मोकळ्या जागेत ठेवा"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 100,
+        "sopClause": "SOP for Plant Operations Putaway for Vehicle and Battery Parts Clause 4.1",
+        "why": {
+          "en": "SOP Clause 4.1: The putaway cycle strictly begins by scanning the pallet-level Handling Unit (HU) label located on the GRN sticker. Scanning the HU barcode creates the active Warehouse (WH) Task in SAP EWM, automatically calculating the designated storage bin and putaway type. Moving pallets without an active WH task causes critical inventory discrepancies and untracked warehouse labor.",
+          "hi": "SOP क्लॉज 4.1: पुट-अवे चक्र सख्ती से GRN स्टिकर पर स्थित पैलेट-स्तरीय हैंडलिंग यूनिट (HU) लेबल को स्कैन करके शुरू होता है। HU बारकोड को स्कैन करने से SAP EWM में सक्रिय वेयरहाउस (WH) टास्क बन जाता है, जो स्वचालित रूप से निर्दिष्ट स्टोरेज बिन और पुट-अवे प्रकार की गणना करता है। बिना सक्रिय WH कार्य के पैलेट ले जाने से गंभीर इन्वेंट्री विसंगतियां पैदा होती हैं।",
+          "mr": "SOP कलम 4.1: पुट-अवे सायकलची सुरुवात काटेकोरपणे GRN स्टिकरवरील पॅलेट-स्तरीय हँडलिंग युनिट (HU) लेबल स्कॅन करून होते. HU बारकोड स्कॅन केल्याने SAP EWM मध्ये सक्रिय वेअरहाऊस (WH) टास्क तयार होते, जे आपोआप स्टोरेज बिन आणि पुट-अवे प्रकार ठरवते. सक्रिय WH टास्कशिवाय पॅलेट हलवल्यास इन्व्हेंटरीमध्ये तफावत निर्माण होते."
+        }
+      }
+    },
+    {
+      "id": "c1_s3_sc02_route_segregation",
+      "stepNumber": 2,
+      "title": {
+        "en": "Route Segregation: HRR vs Trolley Staging",
+        "hi": "मार्ग पृथक्करण: HRR बनाम ट्रॉली स्टेजिंग",
+        "mr": "मार्ग विभाजन: HRR विरुद्ध ट्रॉली स्टेजिंग"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s3_sc02_route_segregation.mp4",
+        "posterSrc": "/images/scenes/c1_s3_sc02_poster.jpg",
+        "fallbackAnimation": "route_segregation_junction",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "The Handling Unit has been scanned and the warehouse task is active! The forklift reaches a major internal warehouse junction with two diverging paths. Inbound materials arrive in two different packaging forms: standard blue FLC crates and specialized wheeled body trolleys. How must these two material streams be segregated?",
+            "hi": "हैंडलिंग यूनिट को स्कैन कर लिया गया है और वेयरहाउस टास्क सक्रिय है! फोर्कलिफ्ट दो अलग-अलग रास्तों वाले एक प्रमुख आंतरिक वेयरहाउस जंक्शन पर पहुंचती है। आवक सामग्री दो अलग-अलग पैकेजिंग रूपों में आती है: मानक नीले FLC क्रेट और विशेष पहिएदार बॉडी ट्रॉलियां। इन दोनों सामग्री धाराओं को कैसे अलग किया जाना चाहिए?",
+            "mr": "हँडलिंग युनिट स्कॅन केले गेले आहे आणि वेअरहाऊस टास्क सक्रिय आहे! फोर्कलिफ्ट दोन वेगवेगळ्या मार्गांसह एका मुख्य अंतर्गत वेअरहाऊस जंक्शनवर पोहोचते. इनवर्ड साहित्य दोन वेगवेगळ्या पॅकेजिंग प्रकारांमध्ये येते: मानक निळे FLC क्रेट्स आणि विशेष चाके असलेल्या बॉडी ट्रॉलीज. या दोन साहित्याचे विभाजन कसे केले पाहिजे?"
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc02_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Spot on! SOP Clause 4.2: Standard FLC crates and bins are routed to High-Rise Racks (HRR) for vertical stowing via reach-trucks, while large body frames and battery modules on heavy trolleys are moved directly to the designated Trolley Staging Area for direct line feeding!",
+            "hi": "बिल्कुल सही! SOP क्लॉज 4.2: मानक FLC क्रेट और डिब्बे रीच-ट्रक द्वारा वर्टिकल स्टॉविंग के लिए हाई-राइज रैक (HRR) में भेजे जाते हैं, जबकि भारी ट्रॉलियों पर बड़े बॉडी फ्रेम और बैटरी मॉड्यूल सीधे नामित ट्रॉली स्टेजिंग क्षेत्र में ले जाए जाते हैं!",
+            "mr": "अगदी बरोबर! SOP कलम 4.2: मानक FLC क्रेट्स आणि डबे रीच-ट्रकद्वारे वर ठेवण्यासाठी हाय-राइज रॅक्स (HRR) कडे पाठवले जातात, तर मोठ्या बॉडी फ्रेम्स आणि हेवी ट्रॉलीवरील बॅटरी मॉड्यूल्स थेट नियुक्त ट्रॉली स्टेजिंग भागात नेले जातात!"
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc02_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Route routing error! Under SOP Clause 4.2, wheeled trolleys cannot be placed on High-Rise Racks due to beam clearance and weight distribution hazards, and FLC pallets cannot block the floor-level trolley feeding lanes!",
+            "hi": "मार्ग रूटिंग त्रुटि! SOP क्लॉज 4.2 के तहत, बीम क्लीयरेंस और वजन वितरण खतरों के कारण पहिएदार ट्रॉलियों को हाई-राइज रैक पर नहीं रखा जा सकता है, और FLC पैलेट फर्श-स्तरीय ट्रॉली फीडिंग लेन को ब्लॉक नहीं कर सकते हैं!",
+            "mr": "मार्ग नियोजन चूक! SOP कलम 4.2 नुसार, बीम क्लिअरन्स आणि वजन वितरणाच्या धोक्यांमुळे चाके असलेल्या ट्रॉली हाय-राइज रॅकमध्ये ठेवता येत नाहीत, आणि FLC पॅलेट्स तळमजल्यावरील ट्रॉली फीडिंग लेन अडवू शकत नाहीत!"
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc02_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "drag_drop",
+        "questionId": "c1-q24",
+        "safetyCritical": true,
+        "question": {
+          "en": "Where must each incoming container type be routed at the warehouse junction?",
+          "hi": "वेयरहाउस जंक्शन पर प्रत्येक आवक कंटेनर प्रकार को कहाँ भेजा जाना चाहिए?",
+          "mr": "वेअरहाऊस जंक्शनवर प्रत्येक इनवर्ड कंटेनर प्रकार कुठे पाठवला पाहिजे?"
+        },
+        "instruction": {
+          "en": "Tap an item, then select either the High-Rise Racks (HRR) or Trolley Staging Area zone:",
+          "hi": "किसी आइटम पर टैप करें, फिर हाई-राइज रैक (HRR) या ट्रॉली स्टेजिंग क्षेत्र ज़ोन का चयन करें:",
+          "mr": "आयटमवर टॅप करा, नंतर हाय-राइज रॅक्स (HRR) किंवा ट्रॉली स्टेजिंग क्षेत्र झोन निवडा:"
+        },
+        "zones": [
+          {
+            "id": "zone_hrr",
+            "icon": "🏢",
+            "label": {
+              "en": "High Rise Racks (HRR)",
+              "hi": "हाई राइज रैक (HRR)",
+              "mr": "हाय राइज रॅक्स (HRR)"
+            }
+          },
+          {
+            "id": "zone_trolley",
+            "icon": "🛒",
+            "label": {
+              "en": "Trolley Staging Area",
+              "hi": "ट्रॉली स्टेजिंग एरिया",
+              "mr": "ट्रॉली स्टेजिंग भाग"
+            }
+          }
+        ],
+        "items": [
+          {
+            "id": "item_flc_calipers",
+            "icon": "📦",
+            "label": {
+              "en": "Blue FLC Pallet (Brake Calipers & Motor Mounts)",
+              "hi": "नीला FLC पैलेट (ब्रेक कैलीपर्स और मोटर माउंट)",
+              "mr": "निळा FLC पॅलेट (ब्रेक कॅलिपर्स आणि मोटर माउंट्स)"
+            },
+            "targetZoneId": "zone_hrr"
+          },
+          {
+            "id": "item_bin_fasteners",
+            "icon": "🗃️",
+            "label": {
+              "en": "Plastic Storage Bins (Hardware & Brackets)",
+              "hi": "प्लास्टिक स्टोरेज डिब्बे (हार्डवेयर और ब्रैकेट)",
+              "mr": "प्लास्टिक स्टोरेज डबे (हार्डवेअर आणि ब्रॅकेट्स)"
+            },
+            "targetZoneId": "zone_hrr"
+          },
+          {
+            "id": "item_frame_trolley",
+            "icon": "🛵",
+            "label": {
+              "en": "Wheeled Chassis Frame Trolley (Ather 450X)",
+              "hi": "पहिएदार चेसिस फ्रेम ट्रॉली (एथर 450X)",
+              "mr": "चाकांची चेसिस फ्रेम ट्रॉली (एथर 450X)"
+            },
+            "targetZoneId": "zone_trolley"
+          },
+          {
+            "id": "item_battery_trolley",
+            "icon": "🔋",
+            "label": {
+              "en": "Wheeled Battery Module Sub-Assembly Trolley",
+              "hi": "पहिएदार बैटरी मॉड्यूल सब-असेंबली ट्रॉली",
+              "mr": "चाकांची बॅटरी मॉड्यूल सब-असेम्ब्ली ट्रॉली"
+            },
+            "targetZoneId": "zone_trolley"
+          }
+        ]
+      },
+      "rules": {
+        "xp": 110,
+        "sopClause": "SOP for Plant Operations Putaway for Vehicle and Battery Parts Clause 4.2 & Question Bank Q24",
+        "why": {
+          "en": "SOP Clause 4.2: Warehouse route segregation prevents traffic jams and severe structural rack damage. High-Rise Racks (HRR) are engineered strictly for palletized FLC bins stowed by certified reach-trucks. Oversized components arriving on custom wheeled trolleys (such as scooter mainframes and battery packs) are strictly routed to the designated floor Trolley Staging Area for direct tugger delivery to assembly lines.",
+          "hi": "SOP क्लॉज 4.2: वेयरहाउस रूट सेग्रीगेशन ट्रैफिक जाम और गंभीर संरचनात्मक रैक क्षति को रोकता है। हाई-राइज रैक (HRR) सख्ती से प्रमाणित रीच-ट्रक द्वारा रखे गए पैलेटाइज़्ड FLC डिब्बे के लिए इंजीनियर किए गए हैं। कस्टम पहिएदार ट्रॉलियों (जैसे स्कूटर मेनफ्रेम और बैटरी पैक) पर आने वाले बड़े घटकों को असेंबली लाइनों पर सीधे टगर डिलीवरी के लिए नामित फर्श ट्रॉली स्टेजिंग क्षेत्र में ले जाया जाता है।",
+          "mr": "SOP कलम 4.2: वेअरहाऊस मार्ग विभाजन ट्रॅफिक आणि रॅकचे नुकसान टाळते. हाय-राइज रॅक्स (HRR) हे रीच-ट्रकद्वारे ठेवलेल्या पॅलेटाइज्ड FLC डब्यांसाठी तयार केले आहेत. कस्टम चाकांच्या ट्रॉलीवरील मोठे भाग (जसे की चेसिस मेनफ्रेम आणि बॅटरी पॅक) थेट असेंब्ली लाइनवर नेण्यासाठी नियुक्त ट्रॉली स्टेजिंग भागात पाठवले जातात."
+        }
+      }
+    },
+    {
+      "id": "c1_s3_sc03_bin_marriage",
+      "stepNumber": 3,
+      "title": {
+        "en": "Destination Bin Marriage & Task Closure",
+        "hi": "गंतव्य बिन मैरिज और टास्क क्लोजर",
+        "mr": "गंतव्य बिन मॅरेज आणि टास्क क्लोजर"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s3_sc03_bin_marriage.mp4",
+        "posterSrc": "/images/scenes/c1_s3_sc03_poster.jpg",
+        "fallbackAnimation": "bin_marriage_lift",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "The reach-truck has safely transported the FLC pallet down Aisle B of the High-Rise Racks. The hydraulic forks elevate the pallet onto shelf level 4 at bin location 'HRR-B-04-12'. The pallet is physically resting on the steel beam. What final mandatory action must the operator execute right now before driving away?",
+            "hi": "रीच-ट्रक ने हाई-राइज रैक के आइल बी में FLC पैलेट को सुरक्षित रूप से पहुंचा दिया है। हाइड्रोलिक कांटे पैलेट को बिन स्थान 'HRR-B-04-12' पर शेल्फ स्तर 4 पर उठाते हैं। पैलेट भौतिक रूप से स्टील बीम पर रखा हुआ है। ऑपरेटर को वहां से जाने से पहले अभी कौन सी अंतिम अनिवार्य कार्रवाई करनी होगी?",
+            "mr": "रीच-ट्रकने FLC पॅलेट हाय-राइज रॅक्सच्या आइल बी मध्ये सुरक्षितपणे नेले आहे. हायड्रॉलिक फोर्क्स पॅलेटला बिन स्थानक 'HRR-B-04-12' वर शेल्फ लेव्हल 4 वर उचलतात. पॅलेट प्रत्यक्षपणे स्टील बीमवर ठेवलेले आहे. ऑपरेटरने तिथून निघण्यापूर्वी आता कोणती शेवटची अनिवार्य कृती केली पाहिजे?"
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc03_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Masterful execution! SOP Clause 4.3: The operator must scan the location QR code on rack beam 'HRR-B-04-12'. This marries the pallet Handling Unit (HU) to the specific storage bin in SAP EWM, updates system G-stock, and closes the active Warehouse Task!",
+            "hi": "उत्कृष्ट निष्पादन! SOP क्लॉज 4.3: ऑपरेटर को रैक बीम 'HRR-B-04-12' पर लगे लोकेशन QR कोड को स्कैन करना होगा। यह SAP EWM में पैलेट हैंडलिंग यूनिट (HU) को विशिष्ट स्टोरेज बिन से जोड़ता (मैरी करता) है, सिस्टम G-स्टॉक को अपडेट करता है और सक्रिय वेयरहाउस टास्क को बंद करता है!",
+            "mr": "उत्कृष्ट अंमलबजावणी! SOP कलम 4.3: ऑपरेटरने रॅक बीम 'HRR-B-04-12' वरील लोकेशन QR कोड स्कॅन केला पाहिजे. यामुळे SAP EWM मध्ये पॅलेट हँडलिंग युनिट (HU) चे विशिष्ट स्टोरेज बिनशी लग्न (मॅरेज) होते, सिस्टीम G-स्टॉक अपडेट होतो आणि सक्रिय वेअरहाऊस टास्क बंद होतो!"
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc03_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Critical omission! Under SOP Clause 4.3 and Failure Mode 2, leaving the rack without scanning the location QR code leaves the Warehouse Task open in SAP EWM. The inventory remains invisible to picking teams and negatively impacts your operator efficiency KPI!",
+            "hi": "गंभीर चूक! SOP क्लॉज 4.3 और विफलता मोड 2 के तहत, लोकेशन QR कोड को स्कैन किए बिना रैक छोड़ने से SAP EWM में वेयरहाउस टास्क खुला रह जाता है। इन्वेंट्री पिकिंग टीमों के लिए अदृश्य रहती है और आपके ऑपरेटर दक्षता KPI पर नकारात्मक प्रभाव डालती है!",
+            "mr": "गंभीर चूक! SOP कलम 4.3 आणि फेल्युअर मोड 2 नुसार, लोकेशन QR कोड स्कॅन न करता रॅक सोडल्यास SAP EWM मध्ये वेअरहाऊस टास्क उघडा राहतो. इन्व्हेंटरी पिकिंग टीमसाठी अदृश्य राहते आणि तुमच्या ऑपरेटर कार्यक्षमता KPI वर वाईट परिणाम होतो!"
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc03_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c1-q21b",
+        "safetyCritical": true,
+        "question": {
+          "en": "The FLC pallet is resting on shelf beam HRR-B-04-12. What mandatory action must the operator execute to formally conclude the put-away?",
+          "hi": "FLC पैलेट शेल्फ बीम HRR-B-04-12 पर रखा हुआ है। पुट-अवे को औपचारिक रूप से समाप्त करने के लिए ऑपरेटर को कौन सी अनिवार्य कार्रवाई करनी होगी?",
+          "mr": "FLC पॅलेट शेल्फ बीम HRR-B-04-12 वर ठेवलेले आहे. पुट-अवे अधिकृतपणे पूर्ण करण्यासाठी ऑपरेटरने कोणती अनिवार्य कृती केली पाहिजे?"
+        },
+        "options": [
+          {
+            "id": "opt_scan_bin_qr",
+            "correct": true,
+            "label": {
+              "en": "Scan the destination rack QR code 'HRR-B-04-12' (Marries HU to bin and closes SAP WH Task)",
+              "hi": "गंतव्य रैक QR कोड 'HRR-B-04-12' स्कैन करें (HU को बिन से जोड़ता है और SAP WH टास्क बंद करता है)",
+              "mr": "गंतव्य रॅक QR कोड 'HRR-B-04-12' स्कॅन करा (HU चे बिनशी मॅरेज करतो आणि SAP WH टास्क बंद करतो)"
+            }
+          },
+          {
+            "id": "opt_drive_away",
+            "correct": false,
+            "label": {
+              "en": "Drive away immediately — SAP detects pallet placement automatically via weight sensors",
+              "hi": "तुरंत वापस चले जाएं — SAP वजन सेंसर के माध्यम से पैलेट प्लेसमेंट का स्वचालित रूप से पता लगाता है",
+              "mr": "लगेच निघून जा — SAP वजन सेन्सरद्वारे पॅलेट ठेवल्याचे आपोआप ओळखते"
+            }
+          },
+          {
+            "id": "opt_scan_hu_again",
+            "correct": false,
+            "label": {
+              "en": "Scan the Handling Unit (HU) barcode on the pallet a second time",
+              "hi": "पैलेट पर हैंडलिंग यूनिट (HU) बारकोड को दूसरी बार स्कैन करें",
+              "mr": "पॅलेटवरील हँडलिंग युनिट (HU) बारकोड दुसऱ्यांदा स्कॅन करा"
+            }
+          },
+          {
+            "id": "opt_scan_level1",
+            "correct": false,
+            "label": {
+              "en": "Scan any convenient Level 1 bin barcode to save hydraulic reaching time",
+              "hi": "हाइड्रोलिक समय बचाने के लिए किसी भी सुविधाजनक लेवल 1 बिन बारकोड को स्कैन करें",
+              "mr": "वेळ वाचवण्यासाठी कोणत्याही सोयीस्कर लेव्हल 1 बिन बारकोड स्कॅन करा"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 110,
+        "sopClause": "SOP for Plant Operations Putaway for Vehicle and Battery Parts Clause 4.3 & Failure Mode 2",
+        "why": {
+          "en": "SOP Clause 4.3 & Failure Mode 2: Physical placement without a destination location scan creates ghost inventory. Scanning the rack QR code performs the 'bin marriage' in SAP EWM, officially transitioning the material into available G-stock. Skipping this scan leaves the Warehouse Task open against the operator ID and blocks downstream picking orders.",
+          "hi": "SOP क्लॉज 4.3 और विफलता मोड 2: गंतव्य स्थान स्कैन के बिना भौतिक नियुक्ति से घोस्ट इन्वेंट्री बनती है। रैक QR कोड को स्कैन करने से SAP EWM में 'बिन मैरिज' पूरी होती है, जिससे सामग्री आधिकारिक तौर पर उपलब्ध G-स्टॉक में बदल जाती है। इस स्कैन को छोड़ने से वेयरहाउस टास्क ऑपरेटर आईडी पर खुला रहता है और बाद के पिकिंग ऑर्डर ब्लॉक हो जाते हैं।",
+          "mr": "SOP कलम 4.3 आणि फेल्युअर मोड 2: गंतव्य स्थान स्कॅन न करता प्रत्यक्ष प्लेसमेंट केल्यास घोस्ट इन्व्हेंटरी तयार होते. रॅक QR कोड स्कॅन केल्याने SAP EWM मध्ये 'बिन मॅरेज' पूर्ण होते आणि साहित्य उपलब्ध G-स्टॉकमध्ये बदलते. हे स्कॅन वगळल्यास ऑपरेटर आयडीवर वेअरहाऊस टास्क उघडा राहतो आणि पुढील पिकिंग ऑर्डर्स ब्लॉक होतात."
+        }
+      }
+    },
+    {
+      "id": "c1_s3_sc04_omitted_scan_risk",
+      "stepNumber": 4,
+      "title": {
+        "en": "Failure Mode: Omitted Scan & KPI Impact",
+        "hi": "विफलता मोड: छूटा हुआ स्कैन और KPI प्रभाव",
+        "mr": "फेल्युअर मोड: वगळलेले स्कॅन आणि KPI परिणाम"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s3_sc04_omitted_scan.mp4",
+        "posterSrc": "/images/scenes/c1_s3_sc04_poster.jpg",
+        "fallbackAnimation": "omitted_scan_hazard",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "warning",
+          "text": {
+            "en": "Alert! A trainee operator lifted a pallet of 100 brake calipers onto beam HRR-B-04-12, lowered the forks, and immediately drove away toward the breakroom without scanning the rack QR code. What is the immediate operational and systemic impact of omitting this scan?",
+            "hi": "चेतावनी! एक प्रशिक्षु ऑपरेटर ने 100 ब्रेक कैलिपर्स का एक पैलेट बीम HRR-B-04-12 पर रखा, कांटे नीचे किए, और रैक QR कोड को स्कैन किए बिना तुरंत ब्रेक रूम की ओर चला गया। इस स्कैन को छोड़ने का तत्काल परिचालन और प्रणालीगत प्रभाव क्या होगा?",
+            "mr": "सावधान! एका प्रशिक्षणार्थी ऑपरेटरने 100 ब्रेक कॅलिपर्सचे पॅलेट बीम HRR-B-04-12 वर ठेवले, फोर्क्स खाली केले आणि रॅक QR कोड स्कॅन न करता लगेच निघून गेला. हे स्कॅन वगळल्याचा तात्काळ ऑपरेशनल आणि सिस्टीमवर काय परिणाम होईल?"
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc04_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "trophy",
+          "text": {
+            "en": "Critical SOP insight! SOP Clause 5.1 & Failure Mode 2: Because the destination scan was skipped, SAP EWM leaves the Warehouse Task in an 'OPEN' state. The stock is never posted to active G-stock, making it invisible to downstream assembly line pickers, and the overdue task reflects directly as a negative breach on the operator's efficiency KPI! The Zone Leader must intervene to manually trace and close the task. Module 3 Put-Away is now 100% complete!",
+            "hi": "महत्वपूर्ण SOP अंतर्दृष्टि! SOP क्लॉज 5.1 और विफलता मोड 2: चूंकि गंतव्य स्कैन छूट गया था, SAP EWM वेयरहाउस टास्क को 'OPEN' स्थिति में छोड़ देता है। स्टॉक कभी भी सक्रिय G-स्टॉक में पोस्ट नहीं होता है, जिससे यह डाउनस्ट्रीम असेंबली लाइन पिकर्स के लिए अदृश्य हो जाता है, और समय सीमा पार कर चुका कार्य सीधे ऑपरेटर के दक्षता KPI पर नकारात्मक उल्लंघन के रूप में दिखाई देता है! ज़ोन लीडर को कार्य को मैन्युअल रूप से ट्रेस करने और बंद करने के लिए हस्तक्षेप करना पड़ता है। मॉड्यूल 3 अब 100% पूरा हुआ!",
+            "mr": "महत्त्वपूर्ण SOP माहिती! SOP कलम 5.1 आणि फेल्युअर मोड 2: गंतव्य स्कॅन वगळल्यामुळे, SAP EWM वेअरहाऊस टास्क 'OPEN' स्थितीत ठेवते. साठा सक्रिय G-स्टॉकमध्ये नोंदवला जात नाही, ज्यामुळे असेंब्ली लाइन पिकर्ससाठी तो अदृश्य राहतो आणि रखडलेला टास्क थेट ऑपरेटरच्या कार्यक्षमता KPI वर नकारात्मक परिणाम करतो! झोन लीडरला मॅन्युअली शोध घेऊन टास्क बंद करावा लागतो. मॉड्यूल 3 आता 100% पूर्ण झाले आहे!"
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc04_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Misconception! ERP systems cannot detect physical placement without a confirmation barcode scan. Skipping the scan does NOT automatically complete; instead, it creates ghost inventory, keeps the Warehouse Task open, and breaches your individual KPI performance.",
+            "hi": "गलतफहमी! ERP सिस्टम पुष्टिकरण बारकोड स्कैन के बिना भौतिक नियुक्ति का पता नहीं लगा सकते हैं। स्कैन छोड़ने से कार्य स्वचालित रूप से पूरा नहीं होता; इसके बजाय, यह घोस्ट इन्वेंट्री बनाता है, वेयरहाउस टास्क को खुला रखता है, और आपके व्यक्तिगत KPI प्रदर्शन का उल्लंघन करता है।",
+            "mr": "गैरसमज! पुष्टीकरण बारकोड स्कॅनशिवाय ERP सिस्टीम प्रत्यक्ष प्लेसमेंट ओळखू शकत नाही. स्कॅन वगळल्याने टास्क आपोआप पूर्ण होत नाही; उलट यामुळे घोस्ट इन्व्हेंटरी तयार होते, वेअरहाऊस टास्क उघडा राहतो आणि तुमच्या वैयक्तिक KPI चे नुकसान होते."
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc04_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c1-q22",
+        "safetyCritical": true,
+        "question": {
+          "en": "An MHE operator placed an FLC pallet into the rack but forgot to scan the destination location QR code before driving away. What happens?",
+          "hi": "एक MHE ऑपरेटर ने रैक में एक FLC पैलेट रखा लेकिन जाने से पहले गंतव्य स्थान QR कोड को स्कैन करना भूल गया। क्या होगा?",
+          "mr": "एका MHE ऑपरेटरने रॅकमध्ये FLC पॅलेट ठेवले परंतु निघून जाण्यापूर्वी गंतव्य स्थान QR कोड स्कॅन करण्याचे विसरला. काय होईल?"
+        },
+        "options": [
+          {
+            "id": "opt_open_task_kpi",
+            "correct": true,
+            "label": {
+              "en": "The WH task stays open in SAP EWM, stock is not updated, and an overdue task penalizes operator KPI (Zone Leader must trace & fix)",
+              "hi": "SAP EWM में WH टास्क खुला रहता है, स्टॉक अपडेट नहीं होता है, और ओवरड्यू टास्क ऑपरेटर के KPI को नुकसान पहुंचाता है (ज़ोन लीडर को इसे ट्रेस और ठीक करना होगा)",
+              "mr": "SAP EWM मध्ये WH टास्क उघडा राहतो, स्टॉक अपडेट होत नाही आणि रखडलेला टास्क ऑपरेटरच्या KPI वर परिणाम करतो (झोन लीडरला दुरुस्त करावे लागते)"
+            }
+          },
+          {
+            "id": "opt_auto_complete",
+            "correct": false,
+            "label": {
+              "en": "SAP EWM automatically closes the task after 5 minutes using overhead smart cameras",
+              "hi": "SAP EWM ओवरहेड स्मार्ट कैमरों का उपयोग करके 5 मिनट के बाद टास्क को स्वचालित रूप से बंद कर देता है",
+              "mr": "SAP EWM स्मार्ट कॅमेऱ्यांचा वापर करून 5 मिनिटांनंतर टास्क आपोआप बंद करते"
+            }
+          },
+          {
+            "id": "opt_pallet_deletes",
+            "correct": false,
+            "label": {
+              "en": "The entire Purchase Order is deleted from SAP ERP and the supplier is charged a fine",
+              "hi": "पूरा परचेज ऑर्डर SAP ERP से हटा दिया जाता है और आपूर्तिकर्ता पर जुर्माना लगाया जाता है",
+              "mr": "संपूर्ण खरेदी ऑर्डर SAP ERP मधून हटवली जाते आणि पुरवठादारावर दंड आकारला जातो"
+            }
+          },
+          {
+            "id": "opt_nothing",
+            "correct": false,
+            "label": {
+              "en": "Nothing happens — physical placement is all that matters on the factory floor",
+              "hi": "कुछ नहीं होता — फ़ैक्टरी फ़्लोर पर केवल भौतिक प्लेसमेंट ही मायने रखता है",
+              "mr": "काहीही होत नाही — कारखान्यात केवळ प्रत्यक्ष प्लेसमेंट महत्त्वाची असते"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 120,
+        "sopClause": "SOP for Plant Operations Putaway for Vehicle and Battery Parts Clause 5.1 & Failure Mode 2 & Question Bank Q22",
+        "why": {
+          "en": "SOP Clause 5.1 & Failure Mode 2: MHE operators must never rely on memory or skip the destination location scan. Without the bin scan, the Warehouse Task remains open in SAP EWM, inventory is not available in G-stock, downstream picking tasks fail due to perceived zero-stock, and the overdue task flags on the operator's daily KPI scoreboard. The Putaway Zone Leader must expend labor to audit open tasks, backtrack physical racks, and manually close the task.",
+          "hi": "SOP क्लॉज 5.1 और विफलता मोड 2: MHE ऑपरेटरों को कभी भी स्मृति पर निर्भर नहीं रहना चाहिए या गंतव्य स्थान स्कैन छोड़ना नहीं चाहिए। बिन स्कैन के बिना, वेयरहाउस टास्क SAP EWM में खुला रहता है, इन्वेंट्री G-स्टॉक में उपलब्ध नहीं होती है, पिकिंग कार्य शून्य-स्टॉक के कारण विफल हो जाते हैं, और ओवरड्यू कार्य ऑपरेटर के दैनिक KPI स्कोरबोर्ड पर फ्लैग होता है। पुट-अवे ज़ोन लीडर को खुले कार्यों का ऑडिट करने, रैक की जांच करने और कार्य को मैन्युअल रूप से बंद करने के लिए अतिरिक्त श्रम खर्च करना पड़ता है।",
+          "mr": "SOP कलम 5.1 आणि फेल्युअर मोड 2: MHE ऑपरेटरने कधीही स्मरणशक्तीवर अवलंबून राहू नये किंवा गंतव्य स्थान स्कॅन वगळू नये. बिन स्कॅनशिवाय, वेअरहाऊस टास्क SAP EWM मध्ये उघडा राहतो, इन्व्हेंटरी G-स्टॉकमध्ये उपलब्ध नसते, पिकिंग टास्क शून्य-स्टॉक समजून अयशस्वी होतात आणि रखडलेला टास्क ऑपरेटरच्या दैनंदिन KPI वर फ्लॅग होतो. पुट-अवे झोन लीडरला प्रत्यक्ष तपासणी करून टास्क मॅन्युअली बंद करावा लागतो."
+        }
+      }
+    }
+  ]
+}
