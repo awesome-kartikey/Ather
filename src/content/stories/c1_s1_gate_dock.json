@@ -1,0 +1,689 @@
+{
+  "stageId": "c1_s1_gate_dock",
+  "category": 1,
+  "stageNumber": 1,
+  "sopDoc": "XXXX_PRO_001",
+  "stageTitle": {
+    "en": "Gate & Dock Operations",
+    "hi": "गेट और डॉक संचालन",
+    "mr": "गेट आणि डॉक ऑपरेशन्स"
+  },
+  "scenes": [
+    {
+      "id": "c1_s1_sc01_arrival",
+      "stepNumber": 1,
+      "title": {
+        "en": "Truck Arrival & Waiting Yard",
+        "hi": "ट्रक आगमन और वेटिंग यार्ड",
+        "mr": "ट्रक आगमन आणि वेटिंग यार्ड"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/scene_01_arrival.mp4",
+        "posterSrc": "/images/scenes/scene_01_poster.jpg",
+        "fallbackAnimation": "truck_arrival_gate",
+        "durationSeconds": 15,
+        "pauseAtSecond": 4.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "Namaste! An inbound logistics truck has just reported outside the AURIC main gate. Before the boom barrier opens, where must the driver wait?",
+            "hi": "नमस्ते! आपूर्तिकर्ता का एक ट्रक अभी AURIC के मुख्य गेट पर पहुंचा है। बूम बैरियर खोलने से पहले, चालक को कहां रुकना चाहिए?",
+            "mr": "नमस्ते! सप्लायरचा एक ट्रक नुकताच AURIC च्या मुख्य गेटवर आला आहे. बूम बॅरियर उघडण्यापूर्वी, चालकाने कुठे थांबले पाहिजे?"
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc01_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Spot on! SOP Clause 4.1.1 mandates that the driver park in the designated waiting area with engine off, and approach Security on foot.",
+            "hi": "बिल्कुल सही! SOP क्लॉज 4.1.1 के अनुसार चालक को इंजन बंद करके निर्धारित वेटिंग यार्ड में पार्क करना होगा और पैदल सुरक्षा डेस्क पर जाना होगा।",
+            "mr": "अगदी बरोबर! SOP कलम 4.1.1 नुसार चालकाने इंजिन बंद करून नियुक्त वेटिंग एरियामध्ये गाडी पार्क केली पाहिजे आणि पायी सुरक्षा डेस्कवर गेले पाहिजे."
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc01_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Careful! A truck must never drive straight inside or idle its engine. Vehicles must park in the designated waiting yard with engine off.",
+            "hi": "सावधान! ट्रक को कभी भी सीधे अंदर नहीं जाना चाहिए और न ही इंजन चालू छोड़ना चाहिए। वाहन को इंजन बंद करके वेटिंग यार्ड में पार्क करना अनिवार्य है।",
+            "mr": "लक्ष द्या! ट्रक कधीही थेट आत नेऊ नये किंवा इंजिन चालू ठेवू नये. वाहने इंजिन बंद करून नियुक्त वेटिंग भागातच पार्क केली पाहिजेत."
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc01_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c1-q01",
+        "safetyCritical": false,
+        "question": {
+          "en": "The supplier truck reaches the gate. Where does the driver park first?",
+          "hi": "ट्रक गेट पर पहुंचता है। चालक सबसे पहले वाहन कहां पार्क करता है?",
+          "mr": "ट्रक गेटवर पोहोचतो. चालक सर्वप्रथम वाहन कुठे पार्क करतो?"
+        },
+        "options": [
+          {
+            "id": "opt_dock",
+            "correct": false,
+            "label": {
+              "en": "Drive straight inside and stop next to Dock 04",
+              "hi": "सीधे अंदर जाएं और डॉक 04 के पास रुकें",
+              "mr": "थेट आत जावे आणि डॉक 04 जवळ थांबावे"
+            }
+          },
+          {
+            "id": "opt_waiting_yard",
+            "correct": true,
+            "label": {
+              "en": "In the designated waiting parking area, engine turned off",
+              "hi": "इंजन बंद करके निर्धारित वेटिंग पार्किंग क्षेत्र में",
+              "mr": "इंजिन बंद करून नियुक्त वेटिंग पार्किंग भागात"
+            }
+          },
+          {
+            "id": "opt_exit_gate",
+            "correct": false,
+            "label": {
+              "en": "Halt at the exit gate to speed up document check",
+              "hi": "दस्तावेज़ जांच तेज करने के लिए निकास द्वार पर रुकें",
+              "mr": "कागदपत्र तपासणी जलद करण्यासाठी बाहेर पडण्याच्या गेटवर थांबावे"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 100,
+        "sopClause": "SOP XXXX_PRO_001 Clause 4.1.1",
+        "why": {
+          "en": "Clause 4.1.1: Driver parks in designated waiting parking area, turns off engine, and proceeds on foot to the security desk with driver credentials.",
+          "hi": "क्लॉज 4.1.1: चालक निर्धारित वेटिंग पार्किंग क्षेत्र में पार्क करता है, इंजन बंद करता है, और क्रेडेंशियल्स के साथ पैदल सुरक्षा डेस्क पर जाता है।",
+          "mr": "कलम 4.1.1: चालक नियुक्त वेटिंग पार्किंग भागात गाडी पार्क करतो, इंजिन बंद करतो आणि कागदपत्रांसह पायी सुरक्षा डेस्कवर जातो."
+        }
+      }
+    },
+    {
+      "id": "c1_s1_sc02_doc_sorting",
+      "stepNumber": 2,
+      "title": {
+        "en": "Document Verification & Desk Sorting",
+        "hi": "दस्तावेज़ सत्यापन और डेस्क छँटाई",
+        "mr": "कागदपत्र पडताळणी आणि डेस्क वर्गीकरण"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/scene_02_doc_cabin.mp4",
+        "posterSrc": "/images/scenes/scene_02_poster.jpg",
+        "fallbackAnimation": "gatehouse_cabin_desk",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.0
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "The driver has walked into the gatehouse holding 5 physical documents. Let's make sure each document is submitted to the correct desk!",
+            "hi": "चालक 5 भौतिक दस्तावेज लेकर गेटहाउस के अंदर आ गया है। आइए सुनिश्चित करें कि प्रत्येक दस्तावेज़ सही डेस्क पर जमा किया जाए!",
+            "mr": "चालक 5 प्रत्यक्ष कागदपत्रे घेऊन गेटहाऊसमध्ये आला आहे. चला खात्री करूया की प्रत्येक कागदपत्र योग्य डेस्कवर जमा केले जाईल!"
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc02_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Excellent separation! Security handles personal driver & vehicle credentials, while the DEO processes shipping papers to generate the gate pass.",
+            "hi": "उत्कृष्ट छँटाई! सुरक्षा कर्मी व्यक्तिगत चालक और वाहन दस्तावेजों की जांच करते हैं, जबकि DEO गेट पास जनरेट करने के लिए शिपिंग दस्तावेजों को प्रोसेस करता है।",
+            "mr": "उत्कृष्ट वर्गीकरण! सुरक्षा रक्षक वैयक्तिक चालक आणि वाहन कागदपत्रे तपासतात, तर DEO गेट पास तयार करण्यासाठी शिपिंग कागदपत्रे प्रोसेस करतात."
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc02_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Watch out! Shipping documents (PO, ASN, Tax Invoice) must go to the DEO for SAP processing, while DL and RC go to Security.",
+            "hi": "ध्यान दें! शिपिंग दस्तावेज़ (PO, ASN, टैक्स इनवॉइस) SAP प्रोसेसिंग के लिए DEO के पास जाने चाहिए, जबकि DL और RC सुरक्षा कर्मी के पास।",
+            "mr": "लक्ष द्या! शिपिंग कागदपत्रे (PO, ASN, टॅक्स इन्व्हॉइस) SAP प्रोसेसिंगसाठी DEO कडे जाणे आवश्यक आहे, तर DL आणि RC सुरक्षा रक्षकाकडे."
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc02_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "drag_drop",
+        "questionId": "c1-q02",
+        "safetyCritical": false,
+        "question": {
+          "en": "Sort each incoming document to the correct reception desk:",
+          "hi": "प्रत्येक आने वाले दस्तावेज़ को सही रिसेप्शन डेस्क पर छाँटें:",
+          "mr": "प्रत्येक येणाऱ्या कागदपत्राचे योग्य रिसेप्शन डेस्कवर वर्गीकरण करा:"
+        },
+        "instruction": {
+          "en": "Tap a document card, then tap the destination desk to assign it.",
+          "hi": "दस्तावेज़ कार्ड पर टैप करें, फिर उसे असाइन करने के लिए गंतव्य डेस्क पर टैप करें।",
+          "mr": "कागदपत्र कार्डवर टॅप करा, नंतर ते वाटप करण्यासाठी संबंधित डेस्कवर टॅप करा."
+        },
+        "zones": [
+          {
+            "id": "zone_security",
+            "icon": "🛡️",
+            "label": {
+              "en": "Security Desk (Driver & Vehicle)",
+              "hi": "सुरक्षा डेस्क (चालक और वाहन)",
+              "mr": "सुरक्षा डेस्क (चालक आणि वाहन)"
+            }
+          },
+          {
+            "id": "zone_deo",
+            "icon": "💻",
+            "label": {
+              "en": "DEO Window (ERP & Shipping)",
+              "hi": "DEO विंडो (ERP और शिपिंग)",
+              "mr": "DEO विंडो (ERP आणि शिपिंग)"
+            }
+          }
+        ],
+        "items": [
+          {
+            "id": "doc_dl",
+            "icon": "🪪",
+            "targetZoneId": "zone_security",
+            "label": {
+              "en": "Driver's License (DL)",
+              "hi": "ड्राइविंग लाइसेंस (DL)",
+              "mr": "चालक परवाना (DL)"
+            }
+          },
+          {
+            "id": "doc_rc",
+            "icon": "📋",
+            "targetZoneId": "zone_security",
+            "label": {
+              "en": "Vehicle RC Book & Insurance",
+              "hi": "वाहन RC बुक और बीमा",
+              "mr": "वाहन RC बुक आणि विमा"
+            }
+          },
+          {
+            "id": "doc_po",
+            "icon": "📑",
+            "targetZoneId": "zone_deo",
+            "label": {
+              "en": "Purchase Order (PO)",
+              "hi": "परचेस ऑर्डर (PO)",
+              "mr": "खरेदी आदेश (PO)"
+            }
+          },
+          {
+            "id": "doc_asn",
+            "icon": "📦",
+            "targetZoneId": "zone_deo",
+            "label": {
+              "en": "Advance Shipment Notice (ASN)",
+              "hi": "अग्रिम शिपमेंट सूचना (ASN)",
+              "mr": "अ‍ॅडव्हान्स शिपमेंट नोटीस (ASN)"
+            }
+          },
+          {
+            "id": "doc_invoice",
+            "icon": "🧾",
+            "targetZoneId": "zone_deo",
+            "label": {
+              "en": "Vendor Tax Invoice & Challan",
+              "hi": "विक्रेता टैक्स इनवॉइस और चालान",
+              "mr": "व्हेंडर टॅक्स इन्व्हॉइस आणि चालान"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 100,
+        "sopClause": "SOP XXXX_PRO_001 Clause 4.1.1 & 4.1.2",
+        "why": {
+          "en": "Per SOP 4.1.1 & 4.1.2: Security verifies personal/vehicle identity (DL, RC, Insurance) in the logbook. The DEO at the gate window receives shipping papers (PO, ASN, Tax Invoice) to validate in SAP ERP.",
+          "hi": "SOP 4.1.1 और 4.1.2 के अनुसार: सुरक्षा कर्मी लॉगबुक में व्यक्तिगत/वाहन पहचान (DL, RC, बीमा) की पुष्टि करते हैं। DEO गेट विंडो पर SAP ERP में सत्यापन के लिए शिपिंग दस्तावेज़ (PO, ASN, टैक्स इनवॉइस) प्राप्त करता है।",
+          "mr": "SOP 4.1.1 आणि 4.1.2 नुसार: सुरक्षा रक्षक लॉगबुकमध्ये वैयक्तिक/वाहन ओळख (DL, RC, विमा) तपासतात. DEO गेट खिडकीवर SAP ERP मध्ये पडताळणीसाठी शिपिंग कागदपत्रे (PO, ASN, टॅक्स इन्व्हॉइस) स्वीकारतात."
+        }
+      }
+    },
+    {
+      "id": "c1_s1_sc03_sap_entry",
+      "stepNumber": 3,
+      "title": {
+        "en": "SAP Gate Entry & ASN Auto-Fill",
+        "hi": "SAP गेट एंट्री और ASN स्वतः भरना",
+        "mr": "SAP गेट एंट्री आणि ASN आपोआप भरणे"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/scene_03_sap_entry.mp4",
+        "posterSrc": "/images/scenes/scene_03_poster.jpg",
+        "fallbackAnimation": "sap_terminal_screen",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "Look at the DEO's screen! They have opened SAP GUI. By entering the vendor invoice, SAP checks if the physical delivery matches the digital ASN.",
+            "hi": "DEO की स्क्रीन देखें! उन्होंने SAP GUI खोला है। विक्रेता इनवॉइस दर्ज करके, SAP जांचता है कि क्या भौतिक डिलीवरी डिजिटल ASN से मेल खाती है।",
+            "mr": "DEO ची स्क्रीन पहा! त्यांनी SAP GUI उघडले आहे. व्हेंडर इन्व्हॉइस टाकून, SAP तपासते की प्रत्यक्ष डिलिव्हरी डिजिटल ASN शी जुळते का."
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc03_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Spot on! YMM_GATE_ENTRY auto-fills shipment data from the ASN. If the ASN doesn't match, gate entry is halted — zero manual overrides for bad data!",
+            "hi": "बिल्कुल सही! YMM_GATE_ENTRY ASN से शिपमेंट डेटा स्वतः भरता है। यदि ASN मेल नहीं खाता है, तो गेट एंट्री रोक दी जाती है — गलत डेटा के लिए कोई मैन्युअल ओवरराइड नहीं!",
+            "mr": "अगदी बरोबर! YMM_GATE_ENTRY ASN मधून शिपमेंट माहिती आपोआप भरते. ASN जुळले नाही तर गेट एंट्री थांबवली जाते — चुकीच्या डेटासाठी कोणतीही मॅन्युअल सवलत नाही!"
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc03_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Careful! In AURIC, there is zero manual override for mismatched paperwork. If the ASN is wrong, gate entry cannot proceed.",
+            "hi": "सावधान! AURIC में बेमेल कागजी कार्रवाई के लिए कोई मैन्युअल ओवरराइड नहीं है। यदि ASN गलत है, तो गेट एंट्री आगे नहीं बढ़ सकती।",
+            "mr": "लक्ष द्या! AURIC मध्ये कागदपत्रांमध्ये तफावत असल्यास कोणतीही मॅन्युअल सवलत दिली जात नाही. ASN चुकीचे असल्यास गेट एंट्री पुढे जाऊ शकत नाही."
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc03_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c1-q03",
+        "safetyCritical": false,
+        "question": {
+          "en": "The DEO enters the vendor invoice in YMM_GATE_ENTRY. What is the role of this transaction, and what happens if the ASN is wrong?",
+          "hi": "DEO YMM_GATE_ENTRY में विक्रेता इनवॉइस दर्ज करता है। इस ट्रांजैक्शन की क्या भूमिका है, और यदि ASN गलत हो तो क्या होता है?",
+          "mr": "DEO YMM_GATE_ENTRY मध्ये व्हेंडर इन्व्हॉइस टाकतो. या ट्रांझॅक्शनची भूमिका काय आहे, आणि ASN चुकीचे असल्यास काय होते?"
+        },
+        "options": [
+          {
+            "id": "opt_bypass",
+            "correct": false,
+            "label": {
+              "en": "Manually bypass the check and issue a slip to keep the truck queue moving",
+              "hi": "ट्रकों की कतार चालू रखने के लिए जांच छोड़ें और सीधे पर्ची जारी करें",
+              "mr": "ट्रकची रांग सुरू ठेवण्यासाठी तपासणी वगळा आणि थेट स्लिप जारी करा"
+            }
+          },
+          {
+            "id": "opt_validate_halt",
+            "correct": true,
+            "label": {
+              "en": "Validates the ASN and auto-populates data; if wrong, gate entry halts until corrected",
+              "hi": "ASN को सत्यापित करता है और डेटा स्वतः भरता है; गलत होने पर सुधार तक गेट एंट्री रुक जाती है",
+              "mr": "ASN पडताळते आणि माहिती आपोआप भरते; चुकीचे असल्यास सुधारणा होईपर्यंत गेट एंट्री थांबते"
+            }
+          },
+          {
+            "id": "opt_grn_direct",
+            "correct": false,
+            "label": {
+              "en": "Directly posts Goods Receipt (GRN) before the truck is unloaded",
+              "hi": "ट्रक अनलोड होने से पहले ही सीधे माल प्राप्ति (GRN) दर्ज कर देता है",
+              "mr": "ट्रक अनलोड होण्यापूर्वीच थेट माल पावती (GRN) नोंदवून घेतो"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 100,
+        "sopClause": "SOP XXXX_PRO_001 Clause 4.2.1 & 5.1",
+        "why": {
+          "en": "SOP Clause 4.2.1 & 5.1: YMM_GATE_ENTRY cross-references the invoice with the vendor's digital ASN to auto-populate vehicle and part details. If the ASN is invalid, the vehicle is placed on 'Hold due to ASN' with zero manual override.",
+          "hi": "SOP क्लॉज 4.2.1 और 5.1: YMM_GATE_ENTRY वाहन और सामग्री विवरण स्वतः भरने के लिए इनवॉइस को विक्रेता के डिजिटल ASN से मिलाता है। यदि ASN अमान्य है, तो बिना किसी मैन्युअल ओवरराइड के वाहन को 'Hold due to ASN' पर रखा जाता है।",
+          "mr": "SOP कलम 4.2.1 आणि 5.1: YMM_GATE_ENTRY वाहन आणि साहित्याची माहिती आपोआप भरण्यासाठी इन्व्हॉइसला व्हेंडरच्या डिजिटल ASN शी जुळवून पाहते. ASN अवैध असल्यास, कोणत्याही मॅन्युअल सवलतीशिवाय वाहनाला 'Hold due to ASN' स्थितीत ठेवले जाते."
+        }
+      }
+    },
+    {
+      "id": "c1_s1_sc04_barcode_sequence",
+      "stepNumber": 4,
+      "title": {
+        "en": "Barcode Pass Printing & Driver Sequence",
+        "hi": "बारकोड पास प्रिंटिंग और चालक क्रम",
+        "mr": "बारकोड पास प्रिंटिंग आणि चालक क्रम"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/scene_04_barcode_printer.mp4",
+        "posterSrc": "/images/scenes/scene_04_poster.jpg",
+        "fallbackAnimation": "thermal_printer_tv",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "The DEO runs YPR_GATEENTRY! The printer outputs the windshield barcode pass while the driver watches the status TV. Can you place the driver's gate journey in exact chronological order?",
+            "hi": "DEO YPR_GATEENTRY चलाता है! प्रिंटर विंडशील्ड बारकोड पास प्रिंट करता है जबकि चालक स्टेटस टीवी देखता है। क्या आप चालक के गेट यात्रा चरणों को सही कालानुक्रमिक क्रम में लगा सकते हैं?",
+            "mr": "DEO YPR_GATEENTRY चालवतो! प्रिंटर विंडशील्ड बारकोड पास प्रिंट करतो तर चालक स्टेटस टीव्ही पाहतो. तुम्ही चालकाच्या गेट प्रवासाच्या पायऱ्या योग्य कालक्रमानुसार लावू शकता का?"
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc04_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Flawless sequence! Following the exact order (Park ➔ Credentials ➔ ERP validation ➔ Barcode pass ➔ Dock move) prevents gate congestion and ensures 100% material traceability.",
+            "hi": "उत्कृष्ट क्रम! सटीक क्रम का पालन करने से (पार्क ➔ क्रेडेंशियल्स ➔ ERP सत्यापन ➔ बारकोड पास ➔ डॉक प्रस्थान) गेट पर जाम नहीं लगता और 100% ट्रैसबिलिटी सुनिश्चित होती है।",
+            "mr": "उत्कृष्ट क्रम! अचूक क्रमाचे पालन केल्याने (पार्क ➔ कागदपत्रे ➔ ERP पडताळणी ➔ बारकोड पास ➔ डॉककडे जाणे) गेटवर गर्दी होत नाही आणि साहित्याची 100% खात्रीशीर नोंद राहते."
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc04_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Hold on! The driver cannot move to the dock before collecting the printed barcode pass. Let's arrange the steps in the exact SOP order.",
+            "hi": "रुकिए! प्रिंटेड बारकोड पास प्राप्त करने से पहले चालक डॉक पर नहीं जा सकता। आइए चरणों को सटीक SOP क्रम में व्यवस्थित करें।",
+            "mr": "थांबा! प्रिंट केलेला बारकोड पास घेतल्याशिवाय चालक डॉककडे जाऊ शकत नाही. चला पायऱ्या अचूक SOP क्रमाने लावूया."
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc04_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "sequence",
+        "questionId": "c1-q04",
+        "safetyCritical": false,
+        "question": {
+          "en": "Arrange the driver's gate entry journey in the correct chronological order:",
+          "hi": "चालक की गेट एंट्री यात्रा को सही कालानुक्रमिक क्रम में व्यवस्थित करें:",
+          "mr": "चालकाच्या गेट एंट्री प्रवासाची योग्य कालक्रमानुसार मांडणी करा:"
+        },
+        "instruction": {
+          "en": "Use the up and down arrows to place the steps from first to last.",
+          "hi": "चरणों को पहले से अंतिम तक व्यवस्थित करने के लिए ऊपर और नीचे तीरों का उपयोग करें।",
+          "mr": "पायऱ्या पहिल्यापासून शेवटपर्यंत लावण्यासाठी वर आणि खाली बाणांचा वापर करा."
+        },
+        "steps": [
+          {
+            "id": "step_park",
+            "icon": "🅿️",
+            "label": {
+              "en": "Park in waiting yard with engine switched off",
+              "hi": "इंजन बंद करके निर्धारित वेटिंग यार्ड में पार्क करें",
+              "mr": "इंजिन बंद करून नियुक्त वेटिंग यार्डमध्ये पार्क करा"
+            }
+          },
+          {
+            "id": "step_security",
+            "icon": "🪪",
+            "label": {
+              "en": "Present DL, RC & insurance at Security Desk",
+              "hi": "सुरक्षा डेस्क पर DL, RC और बीमा दिखाएं",
+              "mr": "सुरक्षा डेस्कवर DL, RC आणि विमा सादर करा"
+            }
+          },
+          {
+            "id": "step_deo",
+            "icon": "💻",
+            "label": {
+              "en": "Submit PO, ASN & invoice to DEO for SAP validation",
+              "hi": "SAP सत्यापन के लिए DEO को PO, ASN और इनवॉइस जमा करें",
+              "mr": "SAP पडताळणीसाठी DEO कडे PO, ASN आणि इन्व्हॉइस जमा करा"
+            }
+          },
+          {
+            "id": "step_barcode",
+            "icon": "🏷️",
+            "label": {
+              "en": "Collect printed windshield barcode pass (YPR_GATEENTRY)",
+              "hi": "प्रिंटेड विंडशील्ड बारकोड पास प्राप्त करें (YPR_GATEENTRY)",
+              "mr": "प्रिंट केलेला विंडशील्ड बारकोड पास मिळवा (YPR_GATEENTRY)"
+            }
+          },
+          {
+            "id": "step_dock",
+            "icon": "🚚",
+            "label": {
+              "en": "Drive vehicle to designated Inbound Dock 04",
+              "hi": "वाहन को आवंटित इनबाउंड डॉक 04 पर ले जाएं",
+              "mr": "वाहन वाटप केलेल्या इनबाउंड डॉक 04 कडे घेऊन जा"
+            }
+          }
+        ],
+        "correctOrder": [
+          "step_park",
+          "step_security",
+          "step_deo",
+          "step_barcode",
+          "step_dock"
+        ]
+      },
+      "rules": {
+        "xp": 100,
+        "sopClause": "SOP XXXX_PRO_001 Clause 4.1.1–4.1.4 & 4.2.2",
+        "why": {
+          "en": "SOP Clause 4.1.1–4.1.4: Driver halts in waiting yard, security verifies credentials, DEO validates shipping data, prints barcode pass via YPR_GATEENTRY, and only then is the vehicle authorized to proceed to the dock.",
+          "hi": "SOP क्लॉज 4.1.1–4.1.4: चालक वेटिंग यार्ड में रुकता है, सुरक्षा कर्मी क्रेडेंशियल्स की जांच करते हैं, DEO डेटा सत्यापित करता है, YPR_GATEENTRY से बारकोड पास प्रिंट करता है, और तभी वाहन को डॉक पर जाने की अनुमति मिलती है।",
+          "mr": "SOP कलम 4.1.1–4.1.4: चालक वेटिंग यार्डमध्ये थांबतो, सुरक्षा रक्षक कागदपत्रे तपासतात, DEO माहिती पडताळतो, YPR_GATEENTRY द्वारे बारकोड पास प्रिंट करतो आणि त्यानंतरच वाहनाला डॉकवर जाण्याची परवानगी मिळते."
+        }
+      }
+    },
+    {
+      "id": "c1_s1_sc05_dock_alloc",
+      "stepNumber": 5,
+      "title": {
+        "en": "Inbound Bay & Dock Allocation",
+        "hi": "इनबाउंड बे और डॉक आवंटन",
+        "mr": "इनबाउंड बे आणि डॉक वाटप"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/scene_05_dock_allocation.mp4",
+        "posterSrc": "/images/scenes/scene_05_poster.jpg",
+        "fallbackAnimation": "dock_blueprint_map",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "The DEO executes YMM_DOCK_ALLOCATE! Based on our shipment of vehicle mechanical parts, which warehouse dock on the AURIC plant layout must be allocated?",
+            "hi": "DEO YMM_DOCK_ALLOCATE चलाता है! हमारे वाहन मैकेनिकल पार्ट्स के शिपमेंट के आधार पर, AURIC प्लांट लेआउट पर कौन सा वेयरहाउस डॉक आवंटित किया जाना चाहिए?",
+            "mr": "DEO YMM_DOCK_ALLOCATE चालवतो! आपल्या वाहनाच्या मेकॅनिकल पार्ट्सच्या डिलिव्हरीनुसार, AURIC प्लांट लेआउटवर कोणता वेअरहाऊस डॉक वाटप केला पाहिजे?"
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc05_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Spot on! Dock 04 in Inbound Bay B is designated for vehicle assembly components. Dock 01 is reserved for battery cells and Dock 06 for hazardous chemicals.",
+            "hi": "बिल्कुल सही! इनबाउंड बे B में डॉक 04 वाहन असेंबली घटकों के लिए निर्धारित है। डॉक 01 बैटरी सेल और डॉक 06 खतरनाक रसायनों के लिए आरक्षित है।",
+            "mr": "अगदी बरोबर! इनबाउंड बे B मधील डॉक 04 वाहन असेंब्ली सुट्या भागांसाठी नियुक्त केला आहे. डॉक 01 बॅटरी सेलसाठी आणि डॉक 06 घातक रसायनांसाठी राखीव आहे."
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc05_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Careful! Dock 01 is an environmentally controlled vault for battery cells only, and Dock 06 is for chemicals. Vehicle parts belong at Dock 04 (Bay B).",
+            "hi": "सावधान! डॉक 01 केवल बैटरी सेल के लिए नियंत्रित वॉल्ट है, और डॉक 06 रसायनों के लिए है। वाहन के पार्ट्स डॉक 04 (बे B) में जाने चाहिए।",
+            "mr": "लक्ष द्या! डॉक 01 फक्त बॅटरी सेलसाठी नियंत्रित वॉल्ट आहे, आणि डॉक 06 रसायनांसाठी आहे. वाहनाचे पार्ट्स डॉक 04 (बे B) वर गेले पाहिजेत."
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc05_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "hotspot",
+        "questionId": "c1-q05",
+        "safetyCritical": false,
+        "question": {
+          "en": "The DEO executes YMM_DOCK_ALLOCATE for vehicle assembly parts. Tap the correct allocated bay & dock on the AURIC plant layout:",
+          "hi": "DEO वाहन असेंबली पार्ट्स के लिए YMM_DOCK_ALLOCATE चलाता है। AURIC प्लांट लेआउट पर सही आवंटित बे और डॉक पर टैप करें:",
+          "mr": "DEO वाहन असेंब्ली सुट्या भागांसाठी YMM_DOCK_ALLOCATE चालवतो. AURIC प्लांट लेआउटवर योग्य वाटप केलेले बे आणि डॉक टॅप करा:"
+        },
+        "instruction": {
+          "en": "Select the authorized dock from the plant layout below:",
+          "hi": "नीचे दिए गए प्लांट लेआउट से अधिकृत डॉक चुनें:",
+          "mr": "खालील प्लांट लेआउटमधून अधिकृत डॉक निवडा:"
+        },
+        "targets": [
+          {
+            "id": "dock_01",
+            "correct": false,
+            "label": {
+              "en": "Dock 01: Inbound Bay A (Battery Cleanroom Vault)",
+              "hi": "डॉक 01: इनबाउंड बे A (बैटरी क्लीनरूम वॉल्ट)",
+              "mr": "डॉक 01: इनबाउंड बे A (बॅटरी क्लीनरूम वॉल्ट)"
+            },
+            "description": {
+              "en": "Restricted: 20°C–25°C & 60%–65% RH controlled for lithium cells only",
+              "hi": "प्रतिबंधित: केवल लिथियम सेल के लिए 20°C–25°C और 60%–65% RH नियंत्रित",
+              "mr": "प्रतिबंधित: फक्त लिथियम सेलसाठी 20°C–25°C आणि 60%–65% RH नियंत्रित"
+            }
+          },
+          {
+            "id": "dock_04",
+            "correct": true,
+            "label": {
+              "en": "Dock 04: Inbound Bay B (Allocated for Vehicle Parts)",
+              "hi": "डॉक 04: इनबाउंड बे B (वाहन पार्ट्स के लिए आवंटित)",
+              "mr": "डॉक 04: इनबाउंड बे B (व्हेईकल पार्ट्ससाठी वाटप केलेले)"
+            },
+            "description": {
+              "en": "Authorized: Dedicated unloading bay for vehicle frame and mechanical sub-assemblies",
+              "hi": "अधिकृत: वाहन फ्रेम और मैकेनिकल सब-असेंबली के लिए समर्पित अनलोडिंग बे",
+              "mr": "अधिकृत: वाहन फ्रेम आणि मेकॅनिकल सब-असेंब्लीसाठी समर्पित अनलोडिंग बे"
+            }
+          },
+          {
+            "id": "dock_06",
+            "correct": false,
+            "label": {
+              "en": "Dock 06: Chemical Annex (Flammables & Thinners)",
+              "hi": "डॉक 06: केमिकल एनेक्स (ज्वलनशील पदार्थ और थिनर)",
+              "mr": "डॉक 06: केमिकल अ‍ॅनेक्स (ज्वलनशील पदार्थ आणि थिनर)"
+            },
+            "description": {
+              "en": "Restricted: Separate detached building for hazardous paints and solvents",
+              "hi": "प्रतिबंधित: खतरनाक पेंट और सॉल्वैंट्स के लिए अलग पृथक भवन",
+              "mr": "प्रतिबंधित: धोकादायक पेंट्स आणि सॉल्व्हेंट्ससाठी वेगळी स्वतंत्र इमारत"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 100,
+        "sopClause": "SOP XXXX_PRO_001 Clause 4.2.3",
+        "why": {
+          "en": "SOP Clause 4.2.3: YMM_DOCK_ALLOCATE assigns warehouse docks based on commodity classification. Vehicle mechanical components are directed to Inbound Bay B (Dock 04), while battery cells must go to Dock 01 and chemicals to isolated annexes.",
+          "hi": "SOP क्लॉज 4.2.3: YMM_DOCK_ALLOCATE सामग्री के प्रकार के आधार पर वेयरहाउस डॉक आवंटित करता है। वाहन मैकेनिकल पार्ट्स को इनबाउंड बे B (डॉक 04) पर भेजा जाता है, जबकि बैटरी सेल डॉक 01 और रसायन अलग एनेक्स में जाने चाहिए।",
+          "mr": "SOP कलम 4.2.3: YMM_DOCK_ALLOCATE साहित्याच्या प्रकारानुसार वेअरहाऊस डॉक वाटप करते. वाहनाचे मेकॅनिकल पार्ट्स इनबाउंड बे B (डॉक 04) कडे पाठवले जातात, तर बॅटरी सेल डॉक 01 कडे आणि रसायने वेगळ्या अ‍ॅनेक्सकडे गेली पाहिजेत."
+        }
+      }
+    },
+    {
+      "id": "c1_s1_sc06_dock_safety",
+      "stepNumber": 6,
+      "title": {
+        "en": "Dock Arrival & Critical Safety Audit",
+        "hi": "डॉक आगमन और महत्वपूर्ण सुरक्षा ऑडिट",
+        "mr": "डॉक आगमन आणि गंभीर सुरक्षा ऑडिट"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/scene_06_dock_safety.mp4",
+        "posterSrc": "/images/scenes/scene_06_poster.jpg",
+        "fallbackAnimation": "dock_safety_chocks",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "The truck is docked at Bay B, Dock 04! Before keys and invoices are handed over and unloading begins, inspect the vehicle for a critical safety violation.",
+            "hi": "ट्रक बे B, डॉक 04 पर खड़ा हो गया है! चाबियां और इनवॉइस सौंपने तथा अनलोडिंग शुरू करने से पहले, वाहन में एक महत्वपूर्ण सुरक्षा उल्लंघन का निरीक्षण करें।",
+            "mr": "ट्रक बे B, डॉक 04 वर लागला आहे! चाव्या आणि इन्व्हॉइस देण्यापूर्वी तसेच अनलोडिंग सुरू करण्यापूर्वी, वाहनातील एका गंभीर सुरक्षा उल्लंघनाची तपासणी करा."
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc06_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Lifesaving catch! SOP Clause 4.1.5 mandates that heavy rubber wheel chocks be placed under rear tires to prevent trailer roll-away when forklifts enter.",
+            "hi": "जीवनरक्षक निरीक्षण! SOP क्लॉज 4.1.5 के अनुसार पिछले पहियों के नीचे भारी रबर व्हील चॉक्स लगाना अनिवार्य है ताकि फोर्कलिफ्ट प्रवेश करते समय ट्रेलर आगे न लुढ़के।",
+            "mr": "जीव वाचवणारी तत्परता! SOP कलम 4.1.5 नुसार मागील चाकांखाली जड रबर व्हील चॉक्स बसवणे बंधनकारक आहे, जेणेकरून फोर्कलिफ्ट आत शिरताना ट्रेलर पुढे घसरणार नाही."
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc06_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "High danger alert! If a 3-ton forklift drives inside an unchocked trailer, trailer creep will cause the forklift to plunge into the dock gap!",
+            "hi": "उच्च खतरे की चेतावनी! यदि 3-टन फोर्कलिफ्ट बिना चॉक्स वाले ट्रेलर में जाती है, तो ट्रेलर आगे खिसक जाएगा और फोर्कलिफ्ट डॉक गैप में गिर सकती है!",
+            "mr": "अतिधोक्याचा इशारा! जर 3-टन वजनाची फोर्कलिफ्ट चॉक्स नसलेल्या ट्रकमध्ये गेली, तर ट्रक पुढे सरकेल आणि फोर्कलिफ्ट डॉकच्या दरीत कोसळू शकते!"
+          },
+          "audioSrc": "/audio/mascot/c1_s1_sc06_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "spot_error",
+        "questionId": "c1-q06",
+        "safetyCritical": true,
+        "question": {
+          "en": "CRITICAL SAFETY AUDIT: Spot the immediate safety violation before keys are accepted and unloading starts:",
+          "hi": "महत्वपूर्ण सुरक्षा ऑडिट: चाबियां स्वीकारने और अनलोडिंग शुरू करने से पहले तुरंत सुरक्षा उल्लंघन को पहचानें:",
+          "mr": "गंभीर सुरक्षा ऑडिट: चाव्या स्वीकारण्यापूर्वी आणि अनलोडिंग सुरू करण्यापूर्वी तत्काळ होणारे सुरक्षा उल्लंघन ओळखा:"
+        },
+        "instruction": {
+          "en": "Audit the three inspection points around Dock 04 and tag the active violation:",
+          "hi": "डॉक 04 के आसपास के तीन निरीक्षण बिंदुओं का ऑडिट करें और सक्रिय उल्लंघन को टैग करें:",
+          "mr": "डॉक 04 भोवतालच्या तीन तपासणी बिंदूंचे ऑडिट करा आणि सक्रिय उल्लंघन टॅग करा:"
+        },
+        "options": [
+          {
+            "id": "err_chocks",
+            "isViolation": true,
+            "label": {
+              "en": "Missing Wheel Chocks: Truck rear tires unblocked (Roll-away hazard!)",
+              "hi": "व्हील चॉक्स गायब: ट्रक के पिछले पहिए खुले हैं (लुढ़कने का गंभीर खतरा!)",
+              "mr": "व्हील चॉक्स नाहीत: ट्रकची मागील चाके मोकळी आहेत (घसरण्याचा भीषण धोका!)"
+            },
+            "description": {
+              "en": "Trailer creep threat: Missing stoppers allow truck to drift away from dock when forklifts cross the leveler.",
+              "hi": "ट्रेलर खिसकने का खतरा: चॉक्स न होने से फोर्कलिफ्ट के लेवलर पार करते समय ट्रक डॉक से दूर खिसक सकता है।",
+              "mr": "ट्रक पुढे सरकण्याचा धोका: चॉक्स नसल्यास फोर्कलिफ्ट लेव्हलर ओलांडताना ट्रक डॉकपासून दूर सरकू शकतो."
+            }
+          },
+          {
+            "id": "safe_cushion",
+            "isViolation": false,
+            "label": {
+              "en": "Dock Cushions: Rubber bumpers flush against truck rear",
+              "hi": "डॉक कुशन: रबर बंपर ट्रक के पिछले हिस्से से ठीक से लगे हैं",
+              "mr": "डॉक कुशन: रबर बंपर्स ट्रकच्या मागील बाजूस योग्य स्थितीत आहेत"
+            },
+            "description": {
+              "en": "Compliant: Trailer is securely sealed against weather and dock walls.",
+              "hi": "अनुपालन: ट्रेलर मौसम और डॉक की दीवारों के खिलाफ सुरक्षित रूप से सील है।",
+              "mr": "सुसंगत: ट्रेलर हवामान आणि डॉकच्या भिंतीविरुद्ध सुरक्षितपणे सील आहे."
+            }
+          },
+          {
+            "id": "safe_engine",
+            "isViolation": false,
+            "label": {
+              "en": "Truck Cab: Engine turned off and ignition key removed",
+              "hi": "ट्रक केबिन: इंजन बंद है और इग्निशन चाबी निकाल ली गई है",
+              "mr": "ट्रक केबिन: इंजिन बंद केले असून इग्निशन चावी काढली आहे"
+            },
+            "description": {
+              "en": "Compliant: Driver has stepped down to ground level.",
+              "hi": "अनुपालन: चालक जमीन पर नीचे उतर आया है।",
+              "mr": "सुसंगत: चालक जमिनीवर खाली उतरला आहे."
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 100,
+        "sopClause": "SOP XXXX_PRO_001 Clause 4.1.5 (Mandatory Safety Rule)",
+        "why": {
+          "en": "SOP Clause 4.1.5: Before unloading initiates, the engine must be switched off and heavy-duty wheel chocks firmly blocked under rear tires. Unblocked tires can allow trailer creep, causing catastrophic forklift tipping.",
+          "hi": "SOP क्लॉज 4.1.5: अनलोडिंग शुरू होने से पहले, इंजन बंद होना चाहिए और पिछले पहियों के नीचे भारी व्हील चॉक्स मजबूती से लगे होने चाहिए। खुले पहियों से ट्रेलर खिसक सकता है, जिससे फोर्कलिफ्ट पलट सकती है।",
+          "mr": "SOP कलम 4.1.5: अनलोडिंग सुरू होण्यापूर्वी, इंजिन बंद केले पाहिजे आणि मागील चाकांखाली जड व्हील चॉक्स घट्ट बसवले पाहिजेत. चाके मोकळी राहिल्यास ट्रक पुढे सरकून फोर्कलिफ्ट पलटी होण्याचा धोका असतो."
+        }
+      }
+    }
+  ]
+}

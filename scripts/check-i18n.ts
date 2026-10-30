@@ -8,7 +8,6 @@ let totalFilesChecked = 0;
 let totalStringsChecked = 0;
 let unreviewedCount = 0;
 const errors: string[] = [];
-const warnings: string[] = [];
 
 function isLikelyLocalizedObject(obj: any): boolean {
   if (!obj || typeof obj !== 'object' || Array.isArray(obj)) return false;

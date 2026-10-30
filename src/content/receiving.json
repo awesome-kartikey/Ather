@@ -13,5 +13,394 @@
   },
   "placeholder": false,
   "demoScenes": [],
-  "steps": []
+  "steps": [
+    {
+      "id": "rec_s1_doc_verify",
+      "type": "dragDrop",
+      "safety": false,
+      "question": {
+        "en": "Truck arrives at AURIC gate. Sort the physical documents to the correct desk for verification.",
+        "hi": "ट्रक AURIC गेट पर रिपोर्ट करता है। भौतिक दस्तावेजों को सत्यापन के लिए सही डेस्क पर रखें।",
+        "mr": "ट्रक AURIC गेटवर आला आहे. पडताळणीसाठी कागदपत्रे योग्य डेस्कवर वितरित करा."
+      },
+      "instruction": {
+        "en": "Drag or tap documents to place them on the Security Desk or the DEO Gate Window.",
+        "hi": "दस्तावेजों को सुरक्षा डेस्क या DEO गेट विंडो पर रखने के लिए खींचें या टैप करें।",
+        "mr": "कागदपत्रे सुरक्षा डेस्कवर किंवा DEO गेट खिडकीवर ठेवण्यासाठी ओढा किंवा टॅप करा."
+      },
+      "explanation": {
+        "en": "Per AURIC SOP XXXX_PRO_001: Security verifies personal/vehicle papers (Driver License, RC book, insurance). The Data Entry Operator (DEO) at the gate window receives shipping papers (PO, ASN, Tax Invoice) for ERP processing.",
+        "hi": "AURIC SOP XXXX_PRO_001 के अनुसार: सुरक्षा कर्मी व्यक्तिगत और वाहन कागजात (ड्राइविंग लाइसेंस, RC बुक, बीमा) की जांच करते हैं। DEO गेट विंडो पर ERP के लिए शिपिंग दस्तावेज (PO, ASN, टैक्स इनवॉइस) प्राप्त करता है।",
+        "mr": "AURIC SOP XXXX_PRO_001 नुसार: सुरक्षा रक्षक वैयक्तिक आणि वाहन कागदपत्रे (ड्रायव्हिंग लायसन्स, RC बुक, विमा) तपासतात. DEO गेट खिडकीवर ERP साठी शिपिंग कागदपत्रे (PO, ASN, टॅक्स इन्व्हॉइस) स्वीकारतात."
+      },
+      "zones": [
+        {
+          "id": "zone_security",
+          "icon": "🛡️",
+          "label": {
+            "en": "Security Desk (Driver & Vehicle)",
+            "hi": "सुरक्षा डेस्क (चालक और वाहन)",
+            "mr": "सुरक्षा डेस्क (चालक आणि वाहन)"
+          }
+        },
+        {
+          "id": "zone_deo",
+          "icon": "💻",
+          "label": {
+            "en": "DEO Window (ERP & Shipping)",
+            "hi": "DEO विंडो (ERP और शिपिंग)",
+            "mr": "DEO विंडो (ERP आणि शिपिंग)"
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "doc_dl",
+          "icon": "🪪",
+          "targetZoneId": "zone_security",
+          "label": {
+            "en": "Driver's License (DL)",
+            "hi": "ड्राइविंग लाइसेंस (DL)",
+            "mr": "चालक परवाना (DL)"
+          }
+        },
+        {
+          "id": "doc_rc",
+          "icon": "📋",
+          "targetZoneId": "zone_security",
+          "label": {
+            "en": "Vehicle RC Book & Insurance",
+            "hi": "वाहन RC बुक और बीमा",
+            "mr": "वाहन RC बुक आणि विमा"
+          }
+        },
+        {
+          "id": "doc_po",
+          "icon": "📑",
+          "targetZoneId": "zone_deo",
+          "label": {
+            "en": "Purchase Order (PO)",
+            "hi": "परचेस ऑर्डर (PO)",
+            "mr": "खरेदी आदेश (PO)"
+          }
+        },
+        {
+          "id": "doc_asn",
+          "icon": "📦",
+          "targetZoneId": "zone_deo",
+          "label": {
+            "en": "Advance Shipment Notice (ASN)",
+            "hi": "अग्रिम शिपमेंट सूचना (ASN)",
+            "mr": "अ‍ॅडव्हान्स शिपमेंट नोटीस (ASN)"
+          }
+        },
+        {
+          "id": "doc_invoice",
+          "icon": "🧾",
+          "targetZoneId": "zone_deo",
+          "label": {
+            "en": "Vendor Tax Invoice & Challan",
+            "hi": "विक्रेता टैक्स इनवॉइस और चालान",
+            "mr": "व्हेंडर टॅक्स इन्व्हॉइस आणि चालान"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rec_s1_sap_code",
+      "type": "choice",
+      "safety": false,
+      "question": {
+        "en": "The DEO receives the Vendor Tax Invoice. Which SAP transaction validates the vendor ASN and auto-populates system data?",
+        "hi": "DEO को विक्रेता टैक्स इनवॉइस मिलता है। विक्रेता ASN को सत्यापित करने और सिस्टम डेटा स्वतः भरने के लिए कौन सा SAP कोड है?",
+        "mr": "DEO ला व्हेंडर टॅक्स इन्व्हॉइस मिळाले आहे. व्हेंडर ASN पडताळण्यासाठी आणि सिस्टम माहिती भरण्यासाठी कोणता SAP कोड वापरला जातो?"
+      },
+      "explanation": {
+        "en": "SOP Step 4.2.1: Launch transaction code YMM_GATE_ENTRY and enter the vendor's invoice number. This validates the vendor's ASN and automatically populates vehicle and material info.",
+        "hi": "SOP चरण 4.2.1: ट्रांजैक्शन कोड YMM_GATE_ENTRY चलाएं और विक्रेता का इनवॉइस नंबर दर्ज करें। यह विक्रेता के ASN को सत्यापित करता है और वाहन व सामग्री विवरण स्वतः भरता है।",
+        "mr": "SOP पायरी 4.2.1: ट्रांझॅक्शन कोड YMM_GATE_ENTRY सुरू करा आणि व्हेंडरचा इन्व्हॉइस नंबर टाका. यामुळे व्हेंडरचे ASN पडताळले जाते आणि वाहन व साहित्याची माहिती आपोआप भरली जाते."
+      },
+      "options": [
+        {
+          "id": "opt_ymm_gate_entry",
+          "correct": true,
+          "label": {
+            "en": "YMM_GATE_ENTRY (Enter Invoice No. to auto-fill ASN data)",
+            "hi": "YMM_GATE_ENTRY (ASN डेटा स्वतः भरने के लिए इनवॉइस नंबर दर्ज करें)",
+            "mr": "YMM_GATE_ENTRY (ASN माहिती आपोआप भरण्यासाठी इन्व्हॉइस क्रमांक टाका)"
+          }
+        },
+        {
+          "id": "opt_me21n",
+          "correct": false,
+          "label": {
+            "en": "ME21N (Standard Purchase Order Creation)",
+            "hi": "ME21N (मानक खरीद आदेश निर्माण)",
+            "mr": "ME21N (मानक खरेदी आदेश निर्मिती)"
+          }
+        },
+        {
+          "id": "opt_migo",
+          "correct": false,
+          "label": {
+            "en": "MIGO (Direct Goods Receipt Posting)",
+            "hi": "MIGO (प्रत्यक्ष माल प्राप्ति प्रविष्टि)",
+            "mr": "MIGO (थेट माल पावती नोंदणी)"
+          }
+        },
+        {
+          "id": "opt_vl01n",
+          "correct": false,
+          "label": {
+            "en": "VL01N (Outbound Delivery Document)",
+            "hi": "VL01N (आउटबाउंड डिलीवरी दस्तावेज़)",
+            "mr": "VL01N (आउटबाउंड डिलिव्हरी दस्तऐवज)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rec_s1_print_barcode",
+      "type": "scanSim",
+      "safety": false,
+      "question": {
+        "en": "Gate pass created in SAP. Execute YPR_GATEENTRY to print and verify the truck windshield barcode sticker.",
+        "hi": "SAP में गेट पास बन गया है। ट्रक विंडशील्ड बारकोड स्टीकर प्रिंट और सत्यापित करने के लिए YPR_GATEENTRY चलाएँ।",
+        "mr": "SAP मध्ये गेट पास तयार झाला आहे. ट्रकच्या विंडशील्डवरील बारकोड स्टिकर प्रिंट व पडताळणीसाठी YPR_GATEENTRY चालवा."
+      },
+      "explanation": {
+        "en": "SOP Step 4.2.2: Run transaction code YPR_GATEENTRY using the created gate entry TR number to print the barcode identification slip for the vehicle windshield.",
+        "hi": "SOP चरण 4.2.2: वाहन विंडशील्ड के लिए बारकोड पहचान पर्ची प्रिंट करने हेतु जनरेट किए गए TR नंबर का उपयोग करके YPR_GATEENTRY चलाएँ।",
+        "mr": "SOP पायरी 4.2.2: वाहनाच्या विंडशील्डसाठी बारकोड ओळख स्लिप प्रिंट करण्यासाठी मिळालेल्या TR क्रमांकाचा वापर करून YPR_GATEENTRY चालवा."
+      },
+      "expectedCode": "GE-AURIC-2026-0842",
+      "options": [
+        {
+          "id": "bar_correct",
+          "code": "GE-AURIC-2026-0842",
+          "correct": true
+        },
+        {
+          "id": "bar_po",
+          "code": "PO-450092140-M002",
+          "correct": false
+        },
+        {
+          "id": "bar_inv",
+          "code": "INV-TX-990142",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "rec_s1_dock_alloc",
+      "type": "hotspot",
+      "safety": false,
+      "image": "auric_dock_map",
+      "question": {
+        "en": "The DEO executes YMM_DOCK_ALLOCATE for incoming vehicle parts. Tap the allocated available dock on the AURIC plant layout.",
+        "hi": "DEO आने वाले वाहन पार्ट्स के लिए YMM_DOCK_ALLOCATE चलाता है। AURIC प्लांट लेआउट पर आवंटित उपलब्ध डॉक पर टैप करें।",
+        "mr": "DEO येणाऱ्या व्हेईकल पार्ट्ससाठी YMM_DOCK_ALLOCATE चालवतो. AURIC प्लांट लेआउटवर वाटप केलेल्या उपलब्ध डॉकवर टॅप करा."
+      },
+      "explanation": {
+        "en": "SOP Step 4.2.3: Open YMM_DOCK_ALLOCATE to assign an available warehouse dock (Dock 04 in Inbound Bay B for vehicle assembly components). The gate slip and documents are then handed back to the driver.",
+        "hi": "SOP चरण 4.2.3: उपलब्ध वेयरहाउस डॉक आवंटित करने के लिए YMM_DOCK_ALLOCATE खोलें (वाहन असेंबली घटकों के लिए इनबाउंड बे B में डॉक 04)। इसके बाद गेट स्लिप और दस्तावेज़ चालक को सौंप दिए जाते हैं।",
+        "mr": "SOP पायरी 4.2.3: उपलब्ध वेअरहाऊस डॉक वाटप करण्यासाठी YMM_DOCK_ALLOCATE उघडा (वाहन असेंब्ली सुट्या भागांसाठी इनबाउंड बे B मधील डॉक 04). त्यानंतर गेट स्लिप आणि कागदपत्रे चालकाकडे परत दिली जातात."
+      },
+      "targets": [
+        {
+          "id": "target_dock_01",
+          "x": 15,
+          "y": 25,
+          "width": 20,
+          "height": 30,
+          "correct": false,
+          "label": {
+            "en": "Dock 01 (Battery Cell Room - 22°C Controlled)",
+            "hi": "डॉक 01 (बैटरी सेल रूम - 22°C नियंत्रित)",
+            "mr": "डॉक 01 (बॅटरी सेल रूम - 22°C नियंत्रित)"
+          }
+        },
+        {
+          "id": "target_dock_04",
+          "x": 48,
+          "y": 25,
+          "width": 24,
+          "height": 30,
+          "correct": true,
+          "label": {
+            "en": "Dock 04: Inbound Bay B (Allocated for Vehicle Parts)",
+            "hi": "डॉक 04: इनबाउंड बे B (वाहन पार्ट्स के लिए आवंटित)",
+            "mr": "डॉक 04: इनबाउंड बे B (व्हेईकल पार्ट्ससाठी वाटप केलेले)"
+          }
+        },
+        {
+          "id": "target_dock_06",
+          "x": 80,
+          "y": 25,
+          "width": 18,
+          "height": 30,
+          "correct": false,
+          "label": {
+            "en": "Dock 06 (Chemicals & Thinners Annex)",
+            "hi": "डॉक 06 (रसायन और थिनर एनेक्स)",
+            "mr": "डॉक 06 (केमिकल्स आणि थिनर अ‍ॅनेक्स)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rec_s1_safety_chocks",
+      "type": "spotError",
+      "safety": true,
+      "poBadge": "SAFETY AUDIT · DOCK 04",
+      "question": {
+        "en": "CRITICAL SAFETY AUDIT: The truck is parked at Dock 04. Spot the immediate safety violation before keys are handed over.",
+        "hi": "महत्वपूर्ण सुरक्षा ऑडिट: ट्रक डॉक 04 पर खड़ा है। चाबियां सौंपने से पहले तुरंत सुरक्षा उल्लंघन को पहचानें।",
+        "mr": "गंभीर सुरक्षा ऑडिट: ट्रक डॉक 04 वर उभा आहे. चाव्या देण्यापूर्वी तत्काळ होणारे सुरक्षा उल्लंघन ओळखा."
+      },
+      "contextDocument": {
+        "en": "AURIC Warehouse Safety Standard: Engines must be turned off and wheel chocks (stoppers) secured under rear tires before unloading begins.",
+        "hi": "AURIC वेयरहाउस सुरक्षा मानक: अनलोडिंग शुरू होने से पहले इंजन बंद होना चाहिए और पिछले पहियों के नीचे व्हील चॉक्स (स्टॉपर्स) लगे होने चाहिए।",
+        "mr": "AURIC वेअरहाऊस सुरक्षा मानक: अनलोडिंग सुरू होण्यापूर्वी इंजिन बंद केले पाहिजे आणि मागील चाकांखाली व्हील चॉक्स (स्टॉपर्स) घट्ट बसवले पाहिजेत."
+      },
+      "explanation": {
+        "en": "MANDATORY SAFETY PROTOCOL (SOP 4.1.5): Once docked, the driver must turn off the engine and securely place wheel chocks (stoppers) under the tires. Missing wheel chocks can lead to vehicle roll-away and crushing during forklift loading.",
+        "hi": "अनिवार्य सुरक्षा नियम (SOP 4.1.5): डॉक पर पहुंचने के बाद, चालक को इंजन बंद करना चाहिए और पहियों के नीचे व्हील चॉक्स (स्टॉपर्स) लगाने चाहिए। चॉक्स न होने से फोर्कलिफ्ट लोडिंग के समय वाहन लुढ़क सकता है और गंभीर दुर्घटना हो सकती है।",
+        "mr": "अनिवार्य सुरक्षा नियम (SOP 4.1.5): डॉकवर पोहोचल्यावर, चालकाने इंजिन बंद करून चाकांखाली व्हील चॉक्स (स्टॉपर्स) घट्ट बसवले पाहिजेत. चाकांना चॉक्स नसल्यास फोर्कलिफ्ट लोडिंग दरम्यान वाहन घसरून भीषण अपघात होऊ शकतो."
+      },
+      "options": [
+        {
+          "id": "err_no_chocks",
+          "isError": true,
+          "rect": {
+            "x": 42,
+            "y": 68,
+            "width": 30,
+            "height": 24
+          },
+          "label": {
+            "en": "Missing Wheel Chocks: Truck tires unblocked (Roll-away danger!)",
+            "hi": "व्हील चॉक्स गायब: ट्रक के पहिए खुले हैं (लुढ़कने का खतरा!)",
+            "mr": "व्हील चॉक्स नाहीत: ट्रकची चाके मोकळी आहेत (घसरण्याचा धोका!)"
+          }
+        },
+        {
+          "id": "err_bumper_ok",
+          "isError": false,
+          "label": {
+            "en": "Dock Cushions: Rubber bumpers flush against truck rear",
+            "hi": "डॉक कुशन: रबर बंपर ट्रक के पिछले हिस्से से ठीक से लगे हैं",
+            "mr": "डॉक कुशन: रबर बंपर्स ट्रकच्या मागील बाजूस योग्य स्थितीत आहेत"
+          }
+        },
+        {
+          "id": "err_door_ok",
+          "isError": false,
+          "label": {
+            "en": "Truck Cabin: Engine shut off and driver stepped out",
+            "hi": "ट्रक केबिन: इंजन बंद है और चालक बाहर आ गया है",
+            "mr": "ट्रक केबिन: इंजिन बंद केले असून चालक बाहेर आला आहे"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rec_s1_empty_bin_dc",
+      "type": "choice",
+      "safety": false,
+      "question": {
+        "en": "Unloading complete. The truck is reloaded with 12 empty returnable FLC bins. What document MUST be obtained before departure?",
+        "hi": "अनलोडिंग पूरी हो गई। ट्रक में 12 खाली वापसी योग्य FLC डिब्बे लोड किए गए हैं। प्रस्थान से पहले कौन सा दस्तावेज़ प्राप्त करना अनिवार्य है?",
+        "mr": "अनलोडिंग पूर्ण झाले. ट्रकमध्ये 12 रिकामे परत करावयाचे FLC डबे भरले आहेत. बाहेर पडण्यापूर्वी कोणते कागदपत्र मिळवणे बंधनकारक आहे?"
+      },
+      "explanation": {
+        "en": "SOP Step 4.1.6.2 & 4.2.4: If return items (empty containers, trolleys, or bins) are loaded, the driver must obtain a manual Delivery Challan (DC). Security verifies the DC before running YMM_GATE_EXIT.",
+        "hi": "SOP चरण 4.1.6.2 और 4.2.4: यदि खाली कंटेनर, ट्रॉली या डिब्बे वापस लोड किए जाते हैं, तो चालक को एक मैनुअल डिलीवरी चालान (DC) प्राप्त करना होगा। सुरक्षा कर्मी YMM_GATE_EXIT चलाने से पहले DC की जांच करते हैं।",
+        "mr": "SOP पायरी 4.1.6.2 आणि 4.2.4: जर रिकामे कंटेनर, ट्रॉली किंवा डबे परत पाठवले जात असतील, तर चालकाने मॅन्युअल डिलिव्हरी चालान (DC) घेणे आवश्यक आहे. सुरक्षा रक्षक YMM_GATE_EXIT चालवण्यापूर्वी DC ची पडताळणी करतात."
+      },
+      "options": [
+        {
+          "id": "opt_manual_dc",
+          "correct": true,
+          "label": {
+            "en": "Manual Delivery Challan (DC) for return items",
+            "hi": "वापसी वस्तुओं के लिए मैनुअल डिलीवरी चालान (DC)",
+            "mr": "परतीच्या साहित्यासाठी मॅन्युअल डिलिव्हरी चालान (DC)"
+          }
+        },
+        {
+          "id": "opt_verbal",
+          "correct": false,
+          "label": {
+            "en": "Verbal clearance from the unloading supervisor",
+            "hi": "अनलोडिंग सुपरवाइजर से मौखिक अनुमति",
+            "mr": "अनलोडिंग सुपरवायझरकडून तोंडी परवानगी"
+          }
+        },
+        {
+          "id": "opt_inward_invoice",
+          "correct": false,
+          "label": {
+            "en": "Only the inward tax invoice is required",
+            "hi": "केवल आवक टैक्स इनवॉइस ही आवश्यक है",
+            "mr": "फक्त आवक टॅक्स इन्व्हॉइस आवश्यक आहे"
+          }
+        },
+        {
+          "id": "opt_blank_gatepass",
+          "correct": false,
+          "label": {
+            "en": "Driver logbook signature without challan",
+            "hi": "चालान के बिना ड्राइवर लॉगबुक हस्ताक्षर",
+            "mr": "चालानशिवाय चालक लॉगबुक स्वाक्षरी"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rec_s1_queue_kpi",
+      "type": "choice",
+      "safety": false,
+      "question": {
+        "en": "SOP FAILURE MODE: The gate-entry clearance KPI (15 mins) is breached due to a truck queue past parking. What is the standard SOP action?",
+        "hi": "SOP विफलता मोड: पार्किंग से बाहर ट्रकों की कतार लगने से गेट-एंट्री क्लीयरेंस KPI (15 मिनट) का उल्लंघन हुआ है। SOP के अनुसार क्या कार्रवाई करें?",
+        "mr": "SOP बिघाड मोड: पार्किंगच्या बाहेर ट्रकची रांग लागल्याने गेट-एंट्री क्लिअरन्स KPI (15 मिनिटे) चे उल्लंघन झाले आहे. SOP नुसार कोणती कारवाई करावी?"
+      },
+      "explanation": {
+        "en": "SOP 5.3: When arrivals surpass standard handling capacity, the DEO accelerates processing and gives priority to urgent materials required for immediate production lines.",
+        "hi": "SOP 5.3: जब ट्रकों की संख्या मानक क्षमता से अधिक हो जाती है, तो DEO प्रोसेसिंग तेज करता है और तत्काल उत्पादन के लिए आवश्यक महत्वपूर्ण सामग्रियों को प्राथमिकता देता है।",
+        "mr": "SOP 5.3: जेव्हा ट्रकची संख्या हाताळणी क्षमतेपेक्षा जास्त होते, तेव्हा DEO प्रक्रिया गतिमान करतो आणि तातडीच्या उत्पादनासाठी आवश्यक असलेल्या साहित्याला प्राधान्य देतो."
+      },
+      "options": [
+        {
+          "id": "opt_speed_priority",
+          "correct": true,
+          "label": {
+            "en": "Accelerate processing and prioritize urgent materials for immediate assembly",
+            "hi": "प्रोसेसिंग तेज करें और तत्काल असेंबली के लिए जरूरी सामग्री को प्राथमिकता दें",
+            "mr": "प्रक्रिया गतिमान करा आणि तातडीच्या असेंब्लीसाठी आवश्यक साहित्याला प्राधान्य द्या"
+          }
+        },
+        {
+          "id": "opt_reject_trucks",
+          "correct": false,
+          "label": {
+            "en": "Turn away trailing trucks and instruct them to return tomorrow morning",
+            "hi": "पीछे खड़े ट्रकों को वापस लौटाएं और कल सुबह आने का निर्देश दें",
+            "mr": "मागील ट्रक परत पाठवा आणि दुसऱ्या दिवशी सकाळी येण्यास सांगा"
+          }
+        },
+        {
+          "id": "opt_skip_checks",
+          "correct": false,
+          "label": {
+            "en": "Bypass security and document checks to clear the road queue immediately",
+            "hi": "सड़क से कतार हटाने के लिए सुरक्षा और दस्तावेज़ जांच को छोड़ दें",
+            "mr": "रस्त्यावरील रांग हटवण्यासाठी सुरक्षा आणि कागदपत्र तपासणी वगळा"
+          }
+        }
+      ]
+    }
+  ]
 }
