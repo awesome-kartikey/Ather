@@ -11,13 +11,8 @@ import type {
   StopGoInteraction,
   CountStepperInteraction
 } from '../engine/story/types';
-import rawStage1Data from '../content/stories/c1_s1_gate_dock.json';
-import rawStage2Data from '../content/stories/c1_s2_iqc_clearance.json';
-import rawStage3Data from '../content/stories/c1_s3_putaway_parts.json';
-import rawStage4Data from '../content/stories/c1_s4_battery_cell.json';
-import rawStage5Data from '../content/stories/c1_s5_chemicals_thinners.json';
-import rawStage6Data from '../content/stories/c1_s6_supermarket_sm.json';
-import rawStage7Data from '../content/stories/c1_s7_quarantine_disposition.json';
+import { category1Stages } from '../content/category1';
+import { category2Stages } from '../content/category2';
 import { StoryHud } from '../components/story/StoryHud';
 import { MascotAura } from '../components/story/MascotAura';
 import { TruckGateAnimation } from '../components/story/TruckGateAnimation';
@@ -53,6 +48,10 @@ import { RedTagJiraAnimation } from '../components/story/RedTagJiraAnimation';
 import { QuarantineSegregationAnimation } from '../components/story/QuarantineSegregationAnimation';
 import { DispositionFilterAnimation } from '../components/story/DispositionFilterAnimation';
 import { ScrapShredderAnimation } from '../components/story/ScrapShredderAnimation';
+import { MesWhTaskAnimation } from '../components/story/c2/MesWhTaskAnimation';
+import { SourceLocationQrAnimation } from '../components/story/c2/SourceLocationQrAnimation';
+import { TrolleyMarriageAnimation } from '../components/story/c2/TrolleyMarriageAnimation';
+import { WorkstationDeliveryAnimation } from '../components/story/c2/WorkstationDeliveryAnimation';
 import { QuestionCard } from '../components/story/QuestionCard';
 import { DragDropCard } from '../components/story/DragDropCard';
 import { SequenceCard } from '../components/story/SequenceCard';
@@ -64,13 +63,8 @@ import { FeedbackCard } from '../components/story/FeedbackCard';
 import { RefreshCcw, Layers, Trophy, Award, CheckCheck, ArrowRight, ArrowLeft } from 'lucide-react';
 
 const allStages: StoryStage[] = [
-  rawStage1Data as unknown as StoryStage,
-  rawStage2Data as unknown as StoryStage,
-  rawStage3Data as unknown as StoryStage,
-  rawStage4Data as unknown as StoryStage,
-  rawStage5Data as unknown as StoryStage,
-  rawStage6Data as unknown as StoryStage,
-  rawStage7Data as unknown as StoryStage
+  ...category1Stages,
+  ...category2Stages
 ];
 
 export const StoryStagePlayer: React.FC = () => {
@@ -459,6 +453,30 @@ export const StoryStagePlayer: React.FC = () => {
                 />
               ) : scene.media.fallbackAnimation === 'scrap_shredder_weighbridge' ? (
                 <ScrapShredderAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'c2_mes_wh_task' ? (
+                <MesWhTaskAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'c2_source_qr_reveal' ? (
+                <SourceLocationQrAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'c2_trolley_marriage' ? (
+                <TrolleyMarriageAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'c2_workstation_delivery' ? (
+                <WorkstationDeliveryAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
@@ -1235,6 +1253,106 @@ export const StoryStagePlayer: React.FC = () => {
               </button>
             </div>
           </div>
+        ) : currentStageIndex === 7 && currentSceneIndex >= 3 ? (
+          /* Module 8 Graduation Screen (Full 4/4 Scenes Completed - Order Picking Mastery) */
+          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
+            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-sky-600 via-cyan-500 to-emerald-500 text-white flex items-center justify-center mx-auto shadow-xl shadow-sky-600/25">
+              <Trophy className="w-10 h-10" />
+            </div>
+
+            <div className="space-y-2">
+              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-sky-800 bg-sky-50 px-3.5 py-1.5 rounded-full border border-sky-300 shadow-xs">
+                <Award className="w-4 h-4 text-sky-600" />
+                <span>BADGE UNLOCKED: LINE FEEDER CHAMPION</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Module 8 Completed · Vehicle Line Issuance Mastered!
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
+                You have mastered all <strong>4 Standard Operating Procedure steps</strong> of Vehicle Line Issuance &amp; Order Picking under SOP <code>01_C2_S1</code> at Ather AURIC Plant M002. From MES digital WH task activation to blind source QR scan, trolley marriage, supermarket lane verification, workstation delivery handshake, and reverse asset return!
+              </p>
+            </div>
+
+            {/* Performance Metric Strip */}
+            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
+              <div className="space-y-0.5">
+                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
+                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
+              </div>
+              <div className="space-y-0.5 border-x border-slate-200">
+                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
+                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
+              </div>
+              <div className="space-y-0.5">
+                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
+                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
+              </div>
+            </div>
+
+            {/* 4-Step Milestone Tracker */}
+            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
+              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
+                <span>Completed Module 8 Milestones (4/4):</span>
+                <span className="text-sky-600 font-extrabold">100% SOP COMPLIANT</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                {stageData.scenes.map((s, i) => (
+                  <button
+                    key={s.id}
+                    type="button"
+                    onClick={() => handleSelectScene(i)}
+                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-sky-400 text-slate-700 hover:text-sky-700 transition-colors text-left cursor-pointer"
+                  >
+                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
+                      ✓
+                    </span>
+                    <span className="truncate font-medium">
+                      Sc {i + 1}: {s.title[lang] || s.title.en}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Next Chapter & Replay Actions */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+              <button
+                type="button"
+                onClick={() => handleSelectScene(0)}
+                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <RefreshCcw className="w-4 h-4" />
+                <span>Replay Module 8 from Start</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleSelectStage(6)}
+                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                <span>Review Category 1 Finale (Quarantine &amp; Disposition)</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  if (allStages.length > 8) {
+                    handleSelectStage(8);
+                  }
+                }}
+                disabled={allStages.length <= 8}
+                className={`w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs transition-all flex items-center justify-center gap-2 ${
+                  allStages.length > 8
+                    ? 'bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-700 hover:to-cyan-700 text-white shadow-lg shadow-sky-600/25 cursor-pointer'
+                    : 'bg-slate-200 text-slate-400 cursor-not-allowed'
+                }`}
+              >
+                <span>Proceed to Module 9: Decanting &amp; Paint Shop Issuance</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
         ) : (
           /* Intermediate Milestone Screen (Stages 2, 3 & 4) */
           <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
@@ -1247,7 +1365,13 @@ export const StoryStagePlayer: React.FC = () => {
                 <span>MODULE {currentStageIndex + 1} · MILESTONE {currentSceneIndex + 1} COMPLETED</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                {currentStageIndex === 6
+                {currentStageIndex === 7
+                  ? currentSceneIndex === 2
+                    ? 'Scene 3: Trolley QR Marriage & Supermarket Lane Verification Mastered!'
+                    : currentSceneIndex === 1
+                    ? 'Scene 2: Source Location QR Scan & Blind Quantity Reveal Mastered!'
+                    : 'Scene 1: MES Trigger & Digital WH Task Activation Mastered!'
+                  : currentStageIndex === 6
                   ? currentSceneIndex === 3
                     ? 'Scene 4: The 4-Way Material Disposition Filter Mastered!'
                     : currentSceneIndex === 2
@@ -1288,7 +1412,11 @@ export const StoryStagePlayer: React.FC = () => {
                   : "Scene 1: GRN Sticker '?' Audit Mastered!"}
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                {currentStageIndex === 6
+                {currentStageIndex === 7
+                  ? currentSceneIndex === 1
+                    ? 'You correctly scanned the rack beam location QR at HRR-A-03-08 before revealing the authorized picking quantity, strictly enforcing Ather mistake-proofing (poka-yoke) standards. Next in Stage 8: Scene 3 (Failure Modes 5.1 & 5.2: Trolley QR Marriage & Supermarket Lane Verification).'
+                    : 'You correctly verified that line feeders receive automated WH picking tasks via MES on their HHT, containing exact part description, source location, and replenishment quantity based on real-time VIN consumption. Next in Stage 8: Scene 2 (Clause 4.1: Source Location QR Scan & Blind Quantity Reveal).'
+                  : currentStageIndex === 6
                   ? currentSceneIndex === 3
                     ? 'You correctly routed quarantined components through the 4-way filter: Auto-RTV for supplier errors, Rework with 100% re-QC, Use As-Is with signed deviation notes, and Scrap with Finance sign-off. Next in Stage 7: Scene 5 (Clause 4.5: Industrial Scrap Shredding & Weighbridge Dispatch).'
                     : currentSceneIndex === 2
