@@ -1,0 +1,329 @@
+{
+  "stageId": "c2_s9",
+  "stageNumber": 9,
+  "stageTitle": {
+    "en": "Paint Shop Line Issuance & Decanting",
+    "hi": "पेंट शॉप लाइन निर्गमन और डिकैन्टिंग प्रक्रियाएं",
+    "mr": "पेंट शॉप लाईन वाटप आणि डिकॅन्टिंग प्रक्रिया"
+  },
+  "sopDoc": "02_C2_S1_Line_Issuance_Paint_Shop & 03_C2_S2_Decanting_Paint_Shop",
+  "scenes": [
+    {
+      "id": "c2_s9_sc01_aced_trolley_issuance",
+      "name": {
+        "en": "ACED Metal Parts Trolley Issuance & Feeder Matrix",
+        "hi": "ACED धातु पुर्जे ट्रॉली निर्गमन और फीडर मैट्रिक्स",
+        "mr": "ACED धातूचे पार्ट ट्रॉली वाटप आणि फीडर मॅट्रिक्स"
+      },
+      "mascot": {
+        "name": "AURA",
+        "pose": "explaining",
+        "dialog": {
+          "en": "Welcome to Stage 9! At Ather AURIC Plant M002, metal body parts (like Mid-Frames, side brackets, and swingarm mounts) undergo Anodic Cathodic Electrodeposition (ACED) before painting. Under SOP 02_C2_S1, how are ACED metal parts inwarded and distributed among line feeders to ensure zero parts mix-up?",
+          "hi": "स्टेज 9 में आपका स्वागत है! एथर औरिक प्लांट M002 में, पेंटिंग से पहले धातु के शरीर के अंगों (जैसे मिड-फ्रेम, साइड ब्रैकेट और स्विंगआर्म माउंट) पर एनोडिक कैथोडिक इलेक्ट्रोडिपोजिशन (ACED) होता है। SOP 02_C2_S1 के तहत, शून्य पुर्जा मिश्रण सुनिश्चित करने के लिए ACED धातु के हिस्सों को कैसे प्राप्त किया जाता है और लाइन फीडरों के बीच वितरित किया जाता है?",
+          "mr": "स्टेज 9 मध्ये आपले स्वागत आहे! एथर औरिक प्लांट M002 मध्ये, पेंटिंगपूर्वी धातूच्या बॉडी पार्ट्सवर (उदा. मिड-फ्रेम, साइड ब्रॅकेट्स, स्विंगआर्म माउंट) अनोडीक कॅथोडीक इलेक्ट्रोडिपोझिशन (ACED) प्रक्रिया केली जाते. SOP 02_C2_S1 नुसार, पार्ट मिक्स-अप टाळण्यासाठी ACED चे पार्ट कसे साठवले जातात आणि लाईन फीडरमध्ये कसे वाटले जातात?"
+        }
+      },
+      "media": {
+        "type": "animation",
+        "fallbackAnimation": "c2_aced_trolley_issuance",
+        "caption": {
+          "en": "ACED Metal Parts Dispatch: 7–9 metal parts stored in specialized trolley format and distributed across 28 unique feeders",
+          "hi": "ACED धातु पुर्जे प्रेषण: 7-9 धातु के हिस्से विशेष ट्रॉली प्रारूप में संग्रहीत और 28 अद्वितीय फीडरों में वितरित किए गए",
+          "mr": "ACED धातू पार्ट वाटप: 7-9 धातूचे पार्ट खास ट्रॉली स्वरूपात साठवून 28 स्वतंत्र लाईन फीडरमध्ये वाटले जातात"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "id": "c2-q05-aced-feeder",
+        "prompt": {
+          "en": "Under SOP 02_C2_S1, how are ACED metal parts formatted in the storage area and distributed across line feeders?",
+          "hi": "SOP 02_C2_S1 के तहत, भंडारण क्षेत्र में ACED धातु के पुर्जों को कैसे स्वरूपित किया जाता है और लाइन फीडरों में कैसे वितरित किया जाता है?",
+          "mr": "SOP 02_C2_S1 नुसार, स्टोअरेज एरियामध्ये ACED चे धातूचे पार्ट कोणत्या स्वरूपात ठेवले जातात आणि फीडरमध्ये कसे वाटले जातात?"
+        },
+        "options": [
+          {
+            "id": "opt_trolley_28_unique",
+            "correct": true,
+            "label": {
+              "en": "Inwarded in trolley format with 7–9 metal parts stored in the trolley area; distributed across 28 feeders where each feeder handles unique SKUs and no two feeders share the same part",
+              "hi": "ट्रॉली प्रारूप में आवक, जहां 7-9 धातु के हिस्से ट्रॉली क्षेत्र में संग्रहीत होते हैं; 28 फीडरों में वितरित जहां प्रत्येक फीडर अद्वितीय SKU संभालता है और कोई भी दो फीडर एक ही हिस्सा साझा नहीं करते",
+              "mr": "ट्रॉली स्वरूपात साठवणूक करून 7-9 धातूचे पार्ट ट्रॉली एरियात ठेवले जातात; 28 स्वतंत्र फीडरमध्ये वाटणी असते, जिथे प्रत्येक फीडरकडे वेगळे पार्ट असतात आणि दोघांचे पार्ट कधीही एक नसतात"
+            }
+          },
+          {
+            "id": "opt_bulk_pile_any_worker",
+            "correct": false,
+            "label": {
+              "en": "Dumped in a mixed pile on the dock floor where any available worker grabs whatever metal piece they find first",
+              "hi": "डॉक के फर्श पर एक मिश्रित ढेर में फेंक दिया जाता है जहां कोई भी उपलब्ध कार्यकर्ता जो भी धातु का टुकड़ा पहले पाता है उसे पकड़ लेता है",
+              "mr": "डॉकवर एकाच ढिगाऱ्यात टाकले जातात आणि जो कामगार आधी पोहोचेल तो कोणताही लोखंडी पार्ट उचलतो"
+            }
+          },
+          {
+            "id": "opt_single_worker_all",
+            "correct": false,
+            "label": {
+              "en": "A single feeder handles all 500 vehicle assembly parts simultaneously using a manual handbarrow",
+              "hi": "एक अकेला फीडर मैनुअल हाथगाड़ी का उपयोग करके एक साथ सभी 500 वाहन असेंबली पुर्जों को संभालता है",
+              "mr": "एकच कामगार संपूर्ण फॅक्टरीचे सर्व 500 पार्ट एकाच वेळी हाताने गाडी ढकलून पुरवतो"
+            }
+          },
+          {
+            "id": "opt_supplier_delivers_direct",
+            "correct": false,
+            "label": {
+              "en": "Outside suppliers drive their delivery trucks straight onto the active assembly line conveyor",
+              "hi": "बाहरी आपूर्तिकर्ता अपने डिलीवरी ट्रकों को सीधे सक्रिय असेंबली लाइन कन्वेयर पर चलाते हैं",
+              "mr": "बाहेरचा सप्लायर आपला ट्रक थेट चालू असेंब्ली लाईनवर चालवून माल रिकाम करतो"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 130,
+        "sopClause": "SOP for Line Issuance Paint-Shop Clause 4.1 & Category 2 Stage Guide",
+        "why": {
+          "en": "SOP for Line Issuance Paint-Shop Clause 4.1 establishes: 'All line feeders have unique parts distributed among 28 feeders, meant to be issued at particular workstations for ACED and paint-line. ACED parts are inwarded in trolley format; a total of 7–9 metal parts are stored in the trolley area.' Distributing unique, non-overlapping SKUs across 28 feeders prevents workstation starvation and eliminates part cross-contamination during electrodeposition dipping.",
+          "hi": "लाइन निर्गमन पेंट-शॉप के लिए SOP क्लॉज 4.1 स्थापित करता है: 'सभी लाइन फीडरों के पास 28 फीडरों के बीच वितरित अद्वितीय हिस्से होते हैं, जो ACED और पेंट-लाइन के लिए विशेष वर्कस्टेशनों पर जारी किए जाने हैं। ACED हिस्से ट्रॉली प्रारूप में आवक होते हैं; कुल 7-9 धातु के हिस्से ट्रॉली क्षेत्र में संग्रहीत होते हैं।' 28 फीडरों में गैर-अतिव्यापी SKU का वितरण लाइन की कमी और क्रॉस-संदूषण को रोकता है।",
+          "mr": "SOP फॉर लाईन इश्यूअन्स पेंट-शॉप कलम 4.1 स्पष्ट सांगते: '28 लाईन फीडरमध्ये सर्व युनिक पार्ट वाटलेले असतात, जे ACED आणि पेंट लाईनवरील ठरलेल्या वर्कस्टेशनवर पोहोचवायचे असतात. ACED चे पार्ट ट्रॉली स्वरूपात येतात; ट्रॉली एरियात एकूण 7-9 धातूचे पार्ट साठवले जातात.' प्रत्येक फीडरकडे स्वतंत्र पार्ट असल्याने कामात गोंधळ होत नाही आणि इलेक्ट्रोडिपोझिशन कोटिंग प्रक्रियेत कोणताही दोष येत नाही."
+        }
+      }
+    },
+    {
+      "id": "c2_s9_sc02_twobin_ekanban",
+      "name": {
+        "en": "2-Pallet Decanting Buffer & e-Kanban RFID Trigger",
+        "hi": "2-पैलेट डिकैन्टिंग बफर और ई-कनबन आरएफआईडी ट्रिगर",
+        "mr": "2-पॅलेट डिकॅन्टिंग बफर आणि ई-कनबन RFID ट्रिगर"
+      },
+      "mascot": {
+        "name": "AURA",
+        "pose": "explaining",
+        "dialog": {
+          "en": "In the Paint Shop Decanting Area, scooter body parts arrive from suppliers in massive Foldable Large Containers (FLCs). Under SOP 03_C2_S2, how many pallet positions are allocated for each body part (like Tail Side Panels), and what is the exact trigger to summon replenishment from High-Rise Racks before stock runs out?",
+          "hi": "पेंट शॉप डिकैन्टिंग क्षेत्र में, स्कूटर के बॉडी पार्ट्स आपूर्तिकर्ताओं से बड़े फोल्डेबल लार्ज कंटेनर (FLC) में आते हैं। SOP 03_C2_S2 के तहत, प्रत्येक बॉडी पार्ट (जैसे टेल साइड पैनल) के लिए कितने पैलेट पोजीशन आवंटित किए जाते हैं, और स्टॉक खत्म होने से पहले हाई-राइज रैक से पुनःपूर्ति बुलाने का सटीक ट्रिगर क्या है?",
+          "mr": "पेंट शॉप डिकॅन्टिंग एरियामध्ये, स्कूटरचे बॉडी पार्ट्स सप्लायरकडून मोठ्या फोल्डेबल लार्ज कंटेनरमध्ये (FLC) येतात. SOP 03_C2_S2 नुसार, प्रत्येक बॉडी पार्टसाठी (उदा. टेल साइड पॅनेल्स - TSP) किती पॅलेट जागा राखीव असतात आणि माल संपण्यापूर्वी हाय-राईज रॅकमधून नवीन माल मागवण्याचा अचूक नियम काय आहे?"
+        }
+      },
+      "media": {
+        "type": "animation",
+        "fallbackAnimation": "c2_twobin_ekanban",
+        "caption": {
+          "en": "2-Pallet Decanting Buffer: Zone Leader maintains 2 pallet positions per body part and triggers e-Kanban RFID as soon as Bin 1 empties",
+          "hi": "2-पैलेट डिकैन्टिंग बफर: ज़ोन लीडर प्रति बॉडी पार्ट 2 पैलेट पोजीशन रखता है और बिन 1 खाली होते ही ई-कनबन आरएफआईडी ट्रिगर करता है",
+          "mr": "2-पॅलेट डिकॅन्टिंग बफर: झोन लीडर प्रत्येक पार्टसाठी 2 पॅलेट जागा ठेवतो आणि पहिली बिन संपताच ई-कनबन RFID ट्रिगर करतो"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "id": "c2-q06-twobin-trigger",
+        "prompt": {
+          "en": "Under SOP 03_C2_S2 Clause 4.1 & Failure Mode 5.2, what buffer rule must the Decanting Zone Leader maintain, and when is the replenishment e-Kanban triggered?",
+          "hi": "SOP 03_C2_S2 क्लॉज 4.1 और विफलता मोड 5.2 के तहत, डिकैन्टिंग ज़ोन लीडर को किस बफर नियम का पालन करना चाहिए, और पुनःपूर्ति ई-कनबन कब ट्रिगर किया जाता है?",
+          "mr": "SOP 03_C2_S2 कलम 4.1 आणि अपयश मोड 5.2 नुसार, डिकॅन्टिंग झोन लीडरने कोणता बफर नियम पाळला पाहिजे आणि रिप्लेनिशमेंट ई-कनबन कधी ट्रिगर केला पाहिजे?"
+        },
+        "options": [
+          {
+            "id": "opt_twobin_instant_trigger",
+            "correct": true,
+            "label": {
+              "en": "Maintain exactly 2 pallet positions per body part; as soon as Bin 1 is consumed, immediately trigger the e-Kanban RFID tag to retrieve a replacement FLC from High-Rise Racks before Bin 2 depletes",
+              "hi": "प्रति बॉडी पार्ट ठीक 2 पैलेट पोजीशन बनाए रखें; जैसे ही बिन 1 की खपत होती है, बिन 2 के समाप्त होने से पहले हाई-राइज रैक से प्रतिस्थापन FLC प्राप्त करने के लिए तुरंत ई-कनबन आरएफआईडी टैग ट्रिगर करें",
+              "mr": "प्रत्येक पार्टसाठी अचूक 2 पॅलेट जागा राखणे; पहिली बिन संपताच बिन 2 रिकामी होण्यापूर्वी हाय-राईज रॅकमधून नवीन FLC आणण्यासाठी तात्काळ ई-कनबन RFID टॅग ट्रिगर करणे"
+            }
+          },
+          {
+            "id": "opt_wait_both_empty",
+            "correct": false,
+            "label": {
+              "en": "Wait until both bins are 100% empty and the paint line stops before requesting replenishment",
+              "hi": "पुनःपूर्ति का अनुरोध करने से पहले दोनों डिब्बे 100% खाली होने और पेंट लाइन बंद होने तक प्रतीक्षा करें",
+              "mr": "दोन्ही बिन्स पूर्णपणे संपून पेंट लाईन बंद पडेपर्यंत वाट पाहणे आणि मग नवीन माल मागवणे"
+            }
+          },
+          {
+            "id": "opt_stack_ten_pallets",
+            "correct": false,
+            "label": {
+              "en": "Stack 10 loose pallets in the aisle without checking floor weight capacity or e-Kanban signals",
+              "hi": "फर्श की वजन क्षमता या ई-कनबन संकेतों की जांच किए बिना गलियारे में 10 खुले पैलेट ढेर करें",
+              "mr": "कोणतीही खात्री न करता येण्या-जाण्याच्या रस्त्यात 10 सुटे पॅलेट थप्पी लावून ठेवणे"
+            }
+          },
+          {
+            "id": "opt_paper_note_end_shift",
+            "correct": false,
+            "label": {
+              "en": "Send a handwritten paper slip to the warehouse supervisor at the end of the 8-hour shift",
+              "hi": "8 घंटे की शिफ्ट के अंत में वेयरहाउस सुपरवाइजर को हाथ से लिखी कागज की पर्ची भेजें",
+              "mr": "8 तासांची शिफ्ट संपल्यावर वेअरहाऊस सुपरवायझरला कागदावर लिहून चिठ्ठी पाठवणे"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 135,
+        "sopClause": "SOP for Decanting Processes Paint-Shop Clause 4.1 & Failure Mode 5.2",
+        "why": {
+          "en": "SOP for Decanting Processes Paint-Shop Clause 4.1 & Failure Mode 5.2 mandates: 'In decanting area, each body-part allocated two pallet positions for decanting. Decanting ZL must maintain 2 pallet/bin quantity of each body-part each time; to replenish, trigger kanban through device. If Zone Incharge does not generate e-Kanban RFID tag when bin depletes, both bins deplete, causing line stoppage.' The 2-bin buffer ensures that while Bin 2 is actively feeding the paint line, the MHE operator has sufficient SLA time to pull replacement FLCs from High-Rise Racks.",
+          "hi": "पेंट-शॉप डिकैन्टिंग प्रक्रियाओं के लिए SOP क्लॉज 4.1 और विफलता मोड 5.2 आदेश देता है: 'डिकैन्टिंग क्षेत्र में, प्रत्येक बॉडी पार्ट के लिए दो पैलेट पोजीशन आवंटित की जाती हैं। डिकैन्टिंग ZL को हर समय 2 पैलेट/बिन मात्रा बनाए रखनी चाहिए; पुनःपूर्ति के लिए, डिवाइस के माध्यम से कनबन ट्रिगर करें।' 2-बिन बफर यह सुनिश्चित करता है कि जब बिन 2 लाइन को खिला रहा हो, तो MHE ऑपरेटर के पास हाई-राइज रैक से नया FLC लाने के लिए पर्याप्त समय हो।",
+          "mr": "SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप कलम 4.1 आणि अपयश मोड 5.2 सांगते: 'डिकॅन्टिंग क्षेत्रात प्रत्येक बॉडी पार्टसाठी 2 पॅलेट जागा नेमून दिलेल्या असतात. झोन लीडरने नेहमी 2 पॅलेटचा साठा ठेवला पाहिजे; पहिली बिन संपताच तात्काळ ई-कनबन ट्रिगर करावा. जर झोन लीडरने वेळेत ई-कनबन RFID ट्रिगर केला नाही, तर दोन्ही बिन्स संपून पेंट लाईन ठप्प होते.' हा 2-बिन नियम लाईन कधीही बंद पडू न देण्यासाठी अत्यंत महत्त्वाचा आहे."
+        }
+      }
+    },
+    {
+      "id": "c2_s9_sc03_trolley_capacity_rule",
+      "name": {
+        "en": "The 100% Full Trolley Capacity Mandate",
+        "hi": "100% पूर्ण ट्रॉली क्षमता अनिवार्यता",
+        "mr": "100% पूर्ण ट्रॉली क्षमता नियम"
+      },
+      "mascot": {
+        "name": "AURA",
+        "pose": "explaining",
+        "dialog": {
+          "en": "Decanting manpower has opened an FLC of Tail Side Panels (TSPs). The FLC contains 110 panels, and the internal mobile trolley is designed to hold exactly 30 panels. The operator has transferred 24 panels and wants to dispatch the trolley to the paint line immediately to avoid waiting for the last 6 panels. Under SOP 03_C2_S2 Failure Mode 5.1, is this allowed? STOP OR GO?",
+          "hi": "डिकैन्टिंग जनशक्ति ने टेल साइड पैनल (TSP) का एक FLC खोला है। FLC में 110 पैनल हैं, और आंतरिक मोबाइल ट्रॉली को ठीक 30 पैनल रखने के लिए डिज़ाइन किया गया है। ऑपरेटर ने 24 पैनल स्थानांतरित किए हैं और अंतिम 6 पैनलों की प्रतीक्षा करने से बचने के लिए तुरंत ट्रॉली को पेंट लाइन पर भेजना चाहता है। SOP 03_C2_S2 विफलता मोड 5.1 के तहत, क्या इसकी अनुमति है? रुकें या जाएं?",
+          "mr": "डिकॅन्टिंग ऑपरेटरने टेल साइड पॅनेल्सचा (TSP) FLC उघडला आहे. FLC मध्ये 110 पॅनेल्स आहेत, आणि अंतर्गत मोबाईल ट्रॉलीची क्षमता बरोबर 30 पॅनेल्सची आहे. ऑपरेटरने 24 पॅनेल्स भरले आहेत आणि उर्वरित 6 पॅनेल्सची वाट न पाहता लगेच अर्धवट ट्रॉली पेंट लाईनवर पाठवू इच्छितो. SOP 03_C2_S2 अपयश मोड 5.1 नुसार, यास परवानगी आहे का? थांबा किंवा पुढे जा?"
+        }
+      },
+      "media": {
+        "type": "animation",
+        "fallbackAnimation": "c2_trolley_capacity",
+        "caption": {
+          "en": "100% Trolley Capacity Gate: Decanting operator must load exactly 30 TSPs; Zone Leader must reject partially filled trolleys",
+          "hi": "100% ट्रॉली क्षमता गेट: डिकैन्टिंग ऑपरेटर को ठीक 30 टीएसपी लोड करने होंगे; ज़ोन लीडर को आंशिक रूप से भरी ट्रॉलियों को अस्वीकार करना होगा",
+          "mr": "100% ट्रॉली क्षमता गेट: डिकॅन्टिंग ऑपरेटरने ट्रॉलीत बरोबर 30 TSP भरलेच पाहिजेत; अर्धवट भरलेली ट्रॉली झोन लीडरने रोखली पाहिजे"
+        }
+      },
+      "interaction": {
+        "type": "stop_go",
+        "questionId": "c2-q07-trolley-capacity",
+        "safetyCritical": true,
+        "question": {
+          "en": "DECISION GATE: Can the decanting operator dispatch a partially filled trolley (24/30 panels) to the paint line?",
+          "hi": "निर्णय गेट: क्या डिकैन्टिंग ऑपरेटर आंशिक रूप से भरी हुई ट्रॉली (24/30 पैनल) को पेंट लाइन पर भेज सकता है?",
+          "mr": "निर्णय गेट: डिकॅन्टिंग ऑपरेटर अर्धवट भरलेली ट्रॉली (24/30 पॅनेल्स) पेंट लाईनवर पाठवू शकतो का?"
+        },
+        "situation": {
+          "en": "The mobile trolley rated capacity is 30 Tail Side Panels. The operator loaded 24 panels and is attempting to push it to the paint line, stating: '24 is enough to keep the line running for the next 20 minutes.'",
+          "hi": "मोबाइल ट्रॉली की रेटेड क्षमता 30 टेल साइड पैनल है। ऑपरेटर ने 24 पैनल लोड किए और यह कहते हुए इसे पेंट लाइन पर धकेलने का प्रयास कर रहा है: 'अगले 20 मिनट तक लाइन चालू रखने के लिए 24 काफी है।'",
+          "mr": "मोबाईल ट्रॉलीची अधिकृत क्षमता 30 टेल साइड पॅनेल्सची आहे. ऑपरेटरने 24 पॅनेल्स भरले आणि 'पुढील 20 मिनिटे लाईन चालू ठेवण्यासाठी 24 पुरेसे आहेत' असे सांगून ती पेंट लाईनवर पाठवू पाहत आहे."
+        },
+        "correctAction": "stop",
+        "stopLabel": {
+          "en": "STOP - 100% FULL TROLLEY MANDATED",
+          "hi": "रुकें - 100% पूर्ण ट्रॉली अनिवार्य",
+          "mr": "थांबा - 100% पूर्ण ट्रॉली भरणे अनिवार्य"
+        },
+        "goLabel": {
+          "en": "GO - DISPATCH 24 PANELS NOW",
+          "hi": "आगे बढ़ें - अभी 24 पैनल भेजें",
+          "mr": "पुढे जा - आत्ताच 24 पॅनेल्स पाठवा"
+        },
+        "stopDescription": {
+          "en": "Halt immediately. SOP Failure Mode 5.1 strictly forbids partial trolleys. The operator must fill the trolley to exactly 30 panels, and the Zone Leader must verify 100% full capacity before release.",
+          "hi": "तुरंत रुकें। SOP विफलता मोड 5.1 आंशिक ट्रॉलियों को सख्ती से प्रतिबंधित करता है। ऑपरेटर को ट्रॉली को ठीक 30 पैनल भरना होगा, और ज़ोन लीडर को रिलीज से पहले 100% पूर्ण क्षमता सत्यापित करनी होगी।",
+          "mr": "त्वरित थांबा. SOP अपयश मोड 5.1 नुसार अर्धवट ट्रॉली पाठवण्यास सक्त मनाई आहे. ऑपरेटरने ट्रॉली पूर्ण 30 पॅनेल्सने भरली पाहिजे आणि झोन लीडरने खात्री केल्यावरच ट्रॉली लाईनवर पाठवली पाहिजे."
+        },
+        "goDescription": {
+          "en": "Send the partial trolley immediately to prevent the paint booth operator from having to wait 60 seconds.",
+          "hi": "पेंट बूथ ऑपरेटर को 60 सेकंड इंतजार करने से रोकने के लिए आंशिक ट्रॉली तुरंत भेजें।",
+          "mr": "पेंट बूथ ऑपरेटरला 60 सेकंद थांबावे लागू नये म्हणून आत्ताच अर्धवट ट्रॉली पाठवून द्या."
+        }
+      },
+      "rules": {
+        "xp": 140,
+        "sopClause": "SOP for Decanting Processes Paint-Shop Failure Mode 5.1",
+        "why": {
+          "en": "SOP for Decanting Processes Paint-Shop Failure Mode 5.1 dictates: 'The decanting operator does not refill the trolley completely / partly fills the trolley. Decanting operator must fill trolley completely before moving to ACED and paint line. Zone Leader must check before trolley is fed to line. Mandatory check while moving trolley to paint/ACED line eliminates possibility of partial trolley being moved.' Partially filled trolleys disrupt paint booth takt times, cause erratic conveyor loading, and lead to premature line starvation.",
+          "hi": "पेंट-शॉप डिकैन्टिंग प्रक्रियाओं के लिए SOP विफलता मोड 5.1 आदेश देता है: 'डिकैन्टिंग ऑपरेटर ट्रॉली को पूरी तरह से नहीं भरता है / आंशिक रूप से भरता है। ACED और पेंट लाइन पर जाने से पहले डिकैन्टिंग ऑपरेटर को ट्रॉली को पूरी तरह से भरना होगा। ज़ोन लीडर को लाइन में भेजने से पहले जांच करनी होगी।' आंशिक रूप से भरी ट्रॉलियां उत्पादन चक्र को बाधित करती हैं और लाइन की कमी का कारण बनती हैं।",
+          "mr": "SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप अपयश मोड 5.1 स्पष्ट आदेश देतो: 'डिकॅन्टिंग ऑपरेटरने ट्रॉली अर्धवट भरल्यास पेंट लाईनचा वेग मंदावतो. ACED किंवा पेंट लाईनवर पाठवण्यापूर्वी ऑपरेटरने ट्रॉली 100% पूर्ण भरलीच पाहिजे. झोन लीडरने तपासणी करून खात्री केल्याशिवाय कोणतीही ट्रॉली पुढे जाणार नाही.' अर्धवट ट्रॉलीमुळे पेंटिंग बूथचे टॅक्ट टाईम बिघडते आणि उत्पादन प्रक्रियेत गंभीर अडथळे येतात."
+        }
+      }
+    },
+    {
+      "id": "c2_s9_sc04_wrong_part_return",
+      "name": {
+        "en": "Closed-Loop Order Closure & Wrong Part Reverse Protocol",
+        "hi": "क्लोज्ड-लूप ऑर्डर क्लोजर और गलत पुर्जा रिवर्स प्रोटोकॉल",
+        "mr": "क्लोज्ड-लूप ऑर्डर बंद करणे आणि चुकीचा पार्ट परत करण्याचा प्रोटोकॉल"
+      },
+      "mascot": {
+        "name": "AURA",
+        "pose": "proud",
+        "dialog": {
+          "en": "An MHE forklift operator just dropped an FLC at the decanting station. Upon opening, the decanting team discovers Tail Centre Panels (TCP) instead of Tail Side Panels (TSP) due to a miskeyed e-Kanban RFID tag! Under SOP 03_C2_S2 Failure Modes 5.3 & 5.4, what exact protocol must the Zone Leader and MHE operator follow to resolve this without locking the SAP EWM queue?",
+          "hi": "एक MHE फोर्कलिफ्ट ऑपरेटर ने अभी-अभी डिकैन्टिंग स्टेशन पर एक FLC गिराया है। खोलने पर, डिकैन्टिंग टीम को गलत ई-कनबन आरएफआईडी टैग के कारण टेल साइड पैनल (TSP) के बजाय टेल सेंटर पैनल (TCP) का पता चलता है! SOP 03_C2_S2 विफलता मोड 5.3 और 5.4 के तहत, SAP EWM कतार को लॉक किए बिना इसे हल करने के लिए ज़ोन लीडर और MHE ऑपरेटर को किस सटीक प्रोटोकॉल का पालन करना चाहिए?",
+          "mr": "MHE फोर्कलिफ्ट ऑपरेटरने डिकॅन्टिंग स्टेशनवर FLC ठेवला आहे. पेटी उघडल्यावर चुकीच्या ई-कनबन टॅगमुळे टेल साइड पॅनेल्स ऐवजी (TSP) टेल सेंटर पॅनेल्स (TCP) आल्याचे लक्षात आले! SOP 03_C2_S2 अपयश मोड 5.3 व 5.4 नुसार, SAP EWM सिस्टीम अडकून न पडता हा प्रश्न सोडवण्यासाठी झोन लीडर व ऑपरेटरने कोणती अचूक प्रक्रिया केली पाहिजे?"
+        }
+      },
+      "media": {
+        "type": "animation",
+        "fallbackAnimation": "c2_wrong_part_return",
+        "caption": {
+          "en": "Reverse Protocol & Closed-Loop Scanning: Cancel wrong task, create Return WH task to HRR, trigger correct FLC, and scan to close order",
+          "hi": "रिवर्स प्रोटोकॉल और क्लोज्ड-लूप स्कैनिंग: गलत कार्य रद्द करें, HRR के लिए रिटर्न WH कार्य बनाएं, सही FLC ट्रिगर करें, और ऑर्डर बंद करने के लिए स्कैन करें",
+          "mr": "रिव्हर्स प्रोटोकॉल आणि क्लोज्ड-लूप स्कॅनिंग: चुकीचा टास्क रद्द करून HRR कडे परतीचा रिटर्न टास्क तयार करणे, योग्य FLC मागवणे आणि स्कॅन करून ऑर्डर बंद करणे"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "id": "c2-q08-wrong-part-recovery",
+        "prompt": {
+          "en": "Under SOP 03_C2_S2 Failure Modes 5.3 & 5.4, how must a wrong-part delivery be corrected and closed in SAP EWM?",
+          "hi": "SOP 03_C2_S2 विफलता मोड 5.3 और 5.4 के तहत, SAP EWM में गलत पुर्जे की डिलीवरी को कैसे ठीक किया जाना चाहिए और बंद किया जाना चाहिए?",
+          "mr": "SOP 03_C2_S2 अपयश मोड 5.3 आणि 5.4 नुसार, SAP EWM मध्ये चुकीच्या पार्टची डिलिव्हरी कशी दुरुस्त करून बंद केली जाते?"
+        },
+        "options": [
+          {
+            "id": "opt_cancel_return_correct_scan",
+            "correct": true,
+            "label": {
+              "en": "Cancel the erroneous WH task, create a Return WH task in SAP EWM to return wrong parts to HRR, trigger a new task for correct parts, and perform dual scanning (pickup & drop) to officially close the WH order before opening new tasks",
+              "hi": "गलत WH कार्य को रद्द करें, गलत भागों को HRR में वापस करने के लिए SAP EWM में एक रिटर्न WH कार्य बनाएं, सही भागों के लिए एक नया कार्य ट्रिगर करें, और नए कार्य खोलने से पहले WH ऑर्डर को आधिकारिक तौर पर बंद करने के लिए डुअल स्कैनिंग (पिकअप और ड्रॉप) करें",
+              "mr": "चुकीचा WH टास्क रद्द करणे, SAP EWM मध्ये चुकीचा माल HRR ला परत करण्यासाठी रिटर्न टास्क तयार करणे, योग्य पार्टसाठी नवीन टास्क तयार करणे, आणि नवीन काम घेण्यापूर्वी पिकअप व ड्रॉप दोन्ही स्कॅन करून जुनी ऑर्डर बंद करणे"
+            }
+          },
+          {
+            "id": "opt_force_assemble_wrong",
+            "correct": false,
+            "label": {
+              "en": "Force the paint shop operators to paint Tail Centre Panels anyway to see if customers notice the difference",
+              "hi": "पेंट शॉप ऑपरेटरों को वैसे भी टेल सेंटर पैनल पेंट करने के लिए मजबूर करें ताकि यह देखा जा सके कि ग्राहक अंतर देखते हैं या नहीं",
+              "mr": "ग्राहक फरक ओळखतात का हे पाहण्यासाठी पेंट शॉप ऑपरेटरला टेल सेंटर पॅनेल्सच रंगवण्यास भाग पाडणे"
+            }
+          },
+          {
+            "id": "opt_leave_in_hallway",
+            "correct": false,
+            "label": {
+              "en": "Abandon the wrong FLC in the main forklift corridor and delete the HHT app from the device",
+              "hi": "मुख्य फोर्कलिफ्ट गलियारे में गलत FLC को छोड़ दें और डिवाइस से HHT ऐप को हटा दें",
+              "mr": "मुख्य रस्त्यातच चुकीचा FLC टाकून देणे आणि हॅन्डहेल्ड डिव्हाईसमधून ॲप डिलीट करणे"
+            }
+          },
+          {
+            "id": "opt_hide_behind_racks",
+            "correct": false,
+            "label": {
+              "en": "Hide the wrong panels behind the garbage bins so the warehouse manager does not find out",
+              "hi": "कचरे के डिब्बे के पीछे गलत पैनल छिपाएं ताकि वेयरहाउस मैनेजर को पता न चले",
+              "mr": "वेअरहाऊस मॅनेजरला कळू नये म्हणून कचऱ्याच्या डब्यामागे चुकीचे पॅनेल्स लपवून ठेवणे"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 145,
+        "sopClause": "SOP for Decanting Processes Paint-Shop Failure Modes 5.3 & 5.4",
+        "why": {
+          "en": "SOP for Decanting Processes Paint-Shop Failure Modes 5.3 & 5.4 establishes: 'If e-Kanban triggers for wrong part, cancellation of WH task must be done. Zone leader creates WH task for return of wrongly issued parts, along with WH task for correct material replenishment. MHE operator completes replenishment task and then return task. Furthermore, scanning of picking and feeding must be done to close WH order. If MHE operator misses scanning, WH order will not close, halting subsequent tasks in SAP EWM.' Closed-loop scanning maintains inventory ledger precision and prevents system deadlocks.",
+          "hi": "पेंट-शॉप डिकैन्टिंग प्रक्रियाओं के लिए SOP विफलता मोड 5.3 और 5.4 स्थापित करता है: 'यदि ई-कनबन गलत हिस्से के लिए ट्रिगर होता है, तो WH कार्य को रद्द करना होगा। ज़ोन लीडर गलत पुर्जों की वापसी के लिए WH कार्य बनाता है, साथ ही सही सामग्री के लिए नया कार्य बनाता है। इसके अतिरिक्त, WH ऑर्डर को बंद करने के लिए पिकिंग और फीडिंग की स्कैनिंग अनिवार्य है। यदि ऑपरेटर स्कैनिंग छोड़ देता है, तो WH ऑर्डर बंद नहीं होगा, जिससे SAP EWM में आगे के कार्य रुक जाएंगे।' क्लोज्ड-लूप स्कैनिंग इन्वेंट्री सटीकता बनाए रखती है।",
+          "mr": "SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप अपयश मोड 5.3 आणि 5.4 सांगते: 'जर चुकीच्या पार्टसाठी ई-कनबन ट्रिगर झाला असेल, तर तो WH टास्क त्वरित रद्द करावा. झोन लीडर चुकीचा माल HRR ला परत करण्यासाठी रिटर्न टास्क बनवतो आणि योग्य मालासाठी नवीन टास्क देतो. तसेच ऑर्डर बंद करण्यासाठी पिकिंग आणि ड्रॉप दोन्ही ठिकाणी QR स्कॅन करणे बंधनकारक आहे. ऑपरेटरने स्कॅनिंग न केल्यास WH ऑर्डर बंद होत नाही आणि SAP EWM मध्ये पुढील सर्व कामे अडकून पडतात.' क्लोज्ड-लूप स्कॅनिंगमुळे गोदामाचा अचूक ताळेबंद राहतो."
+        }
+      }
+    }
+  ]
+}

@@ -52,6 +52,10 @@ import { MesWhTaskAnimation } from '../components/story/c2/MesWhTaskAnimation';
 import { SourceLocationQrAnimation } from '../components/story/c2/SourceLocationQrAnimation';
 import { TrolleyMarriageAnimation } from '../components/story/c2/TrolleyMarriageAnimation';
 import { WorkstationDeliveryAnimation } from '../components/story/c2/WorkstationDeliveryAnimation';
+import { AcedTrolleyIssuanceAnimation } from '../components/story/c2/AcedTrolleyIssuanceAnimation';
+import { TwoBinEkanbanAnimation } from '../components/story/c2/TwoBinEkanbanAnimation';
+import { TrolleyCapacityAnimation } from '../components/story/c2/TrolleyCapacityAnimation';
+import { MheWrongPartReturnAnimation } from '../components/story/c2/MheWrongPartReturnAnimation';
 import { QuestionCard } from '../components/story/QuestionCard';
 import { DragDropCard } from '../components/story/DragDropCard';
 import { SequenceCard } from '../components/story/SequenceCard';
@@ -477,6 +481,30 @@ export const StoryStagePlayer: React.FC = () => {
                 />
               ) : scene.media.fallbackAnimation === 'c2_workstation_delivery' ? (
                 <WorkstationDeliveryAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'c2_aced_trolley_issuance' ? (
+                <AcedTrolleyIssuanceAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'c2_twobin_ekanban' ? (
+                <TwoBinEkanbanAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'c2_trolley_capacity' ? (
+                <TrolleyCapacityAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'c2_wrong_part_return' ? (
+                <MheWrongPartReturnAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
@@ -1353,6 +1381,106 @@ export const StoryStagePlayer: React.FC = () => {
               </button>
             </div>
           </div>
+        ) : currentStageIndex === 8 && currentSceneIndex >= 3 ? (
+          /* Module 9 Graduation Screen (Full 4/4 Scenes Completed - Paint Decanting Mastery) */
+          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
+            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-amber-600 via-orange-500 to-emerald-500 text-white flex items-center justify-center mx-auto shadow-xl shadow-amber-600/25">
+              <Trophy className="w-10 h-10" />
+            </div>
+
+            <div className="space-y-2">
+              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-amber-800 bg-amber-50 px-3.5 py-1.5 rounded-full border border-amber-300 shadow-xs">
+                <Award className="w-4 h-4 text-amber-600" />
+                <span>BADGE UNLOCKED: PAINT &amp; DECANTING VIRTUOSO</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Module 9 Completed · Paint Shop Line Issuance &amp; Decanting Mastered!
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
+                You have mastered all <strong>4 Standard Operating Procedure steps</strong> of Paint Shop Line Issuance &amp; Decanting under SOPs <code>02_C2_S1</code> and <code>03_C2_S2</code> at Ather AURIC Plant M002. From the 28 unique feeder distribution matrix to 2-pallet e-Kanban RFID replenishment, 100% full trolley capacity discipline, and closed-loop MHE reverse recovery!
+              </p>
+            </div>
+
+            {/* Performance Metric Strip */}
+            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
+              <div className="space-y-0.5">
+                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
+                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
+              </div>
+              <div className="space-y-0.5 border-x border-slate-200">
+                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
+                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
+              </div>
+              <div className="space-y-0.5">
+                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
+                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
+              </div>
+            </div>
+
+            {/* 4-Step Milestone Tracker */}
+            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
+              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
+                <span>Completed Module 9 Milestones (4/4):</span>
+                <span className="text-amber-600 font-extrabold">100% SOP COMPLIANT</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                {stageData.scenes.map((s, i) => (
+                  <button
+                    key={s.id}
+                    type="button"
+                    onClick={() => handleSelectScene(i)}
+                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-amber-400 text-slate-700 hover:text-amber-700 transition-colors text-left cursor-pointer"
+                  >
+                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
+                      ✓
+                    </span>
+                    <span className="truncate font-medium">
+                      Sc {i + 1}: {s.title[lang] || s.title.en}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Next Chapter & Replay Actions */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+              <button
+                type="button"
+                onClick={() => handleSelectScene(0)}
+                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <RefreshCcw className="w-4 h-4" />
+                <span>Replay Module 9 from Start</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleSelectStage(7)}
+                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                <span>Review Module 8 (Vehicle Order Picking)</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  if (allStages.length > 9) {
+                    handleSelectStage(9);
+                  }
+                }}
+                disabled={allStages.length <= 9}
+                className={`w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs transition-all flex items-center justify-center gap-2 ${
+                  allStages.length > 9
+                    ? 'bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white shadow-lg shadow-amber-600/25 cursor-pointer'
+                    : 'bg-slate-200 text-slate-400 cursor-not-allowed'
+                }`}
+              >
+                <span>Proceed to Module 10: Vehicle Plant Decanting</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
         ) : (
           /* Intermediate Milestone Screen (Stages 2, 3 & 4) */
           <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
@@ -1365,7 +1493,13 @@ export const StoryStagePlayer: React.FC = () => {
                 <span>MODULE {currentStageIndex + 1} · MILESTONE {currentSceneIndex + 1} COMPLETED</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                {currentStageIndex === 7
+                {currentStageIndex === 8
+                  ? currentSceneIndex === 2
+                    ? 'Scene 3: The 100% Full Trolley Capacity Mandate Mastered!'
+                    : currentSceneIndex === 1
+                    ? 'Scene 2: 2-Pallet Decanting Buffer & e-Kanban RFID Trigger Mastered!'
+                    : 'Scene 1: ACED Metal Parts Trolley Issuance & Feeder Matrix Mastered!'
+                  : currentStageIndex === 7
                   ? currentSceneIndex === 2
                     ? 'Scene 3: Trolley QR Marriage & Supermarket Lane Verification Mastered!'
                     : currentSceneIndex === 1
