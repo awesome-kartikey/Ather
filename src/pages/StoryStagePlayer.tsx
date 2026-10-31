@@ -56,6 +56,10 @@ import { AcedTrolleyIssuanceAnimation } from '../components/story/c2/AcedTrolley
 import { TwoBinEkanbanAnimation } from '../components/story/c2/TwoBinEkanbanAnimation';
 import { TrolleyCapacityAnimation } from '../components/story/c2/TrolleyCapacityAnimation';
 import { MheWrongPartReturnAnimation } from '../components/story/c2/MheWrongPartReturnAnimation';
+import { MezzanineSequencingAnimation } from '../components/story/c2/MezzanineSequencingAnimation';
+import { BrakeMotorDecantingAnimation } from '../components/story/c2/BrakeMotorDecantingAnimation';
+import { WrongLaneRejectionAnimation } from '../components/story/c2/WrongLaneRejectionAnimation';
+import { LineSideEwmCloseAnimation } from '../components/story/c2/LineSideEwmCloseAnimation';
 import { QuestionCard } from '../components/story/QuestionCard';
 import { DragDropCard } from '../components/story/DragDropCard';
 import { SequenceCard } from '../components/story/SequenceCard';
@@ -505,6 +509,30 @@ export const StoryStagePlayer: React.FC = () => {
                 />
               ) : scene.media.fallbackAnimation === 'c2_wrong_part_return' ? (
                 <MheWrongPartReturnAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'c2_mezzanine_sequencing' ? (
+                <MezzanineSequencingAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'c2_brake_motor_decanting' ? (
+                <BrakeMotorDecantingAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'c2_wrong_lane_rejection' ? (
+                <WrongLaneRejectionAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'c2_lineside_ewm_close' ? (
+                <LineSideEwmCloseAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
@@ -1481,6 +1509,106 @@ export const StoryStagePlayer: React.FC = () => {
               </button>
             </div>
           </div>
+        ) : currentStageIndex === 9 && currentSceneIndex >= 3 ? (
+          /* Module 10 Graduation Screen (Full 4/4 Scenes Completed - Vehicle Decanting Mastery) */
+          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
+            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-purple-600 via-indigo-500 to-sky-500 text-white flex items-center justify-center mx-auto shadow-xl shadow-purple-600/25">
+              <Trophy className="w-10 h-10" />
+            </div>
+
+            <div className="space-y-2">
+              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-purple-800 bg-purple-50 px-3.5 py-1.5 rounded-full border border-purple-300 shadow-xs">
+                <Award className="w-4 h-4 text-purple-600" />
+                <span>BADGE UNLOCKED: VEHICLE KITTING &amp; ASSEMBLY PRO</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Module 10 Completed · Vehicle Plant Decanting &amp; Kitting Mastered!
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
+                You have mastered all <strong>4 Standard Operating Procedure steps</strong> of Vehicle Plant Decanting &amp; Kitting under SOP <code>04_C2_S2</code> at Ather AURIC Plant M002. From mezzanine painted body-part color sequencing (20 Black + 10 Red) to 30-unit mechanical component decanting, poka-yoke device error rejection, and line-side SAP EWM dual scan closure!
+              </p>
+            </div>
+
+            {/* Performance Metric Strip */}
+            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
+              <div className="space-y-0.5">
+                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
+                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
+              </div>
+              <div className="space-y-0.5 border-x border-slate-200">
+                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
+                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
+              </div>
+              <div className="space-y-0.5">
+                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
+                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
+              </div>
+            </div>
+
+            {/* 4-Step Milestone Tracker */}
+            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
+              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
+                <span>Completed Module 10 Milestones (4/4):</span>
+                <span className="text-purple-600 font-extrabold">100% SOP COMPLIANT</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                {stageData.scenes.map((s, i) => (
+                  <button
+                    key={s.id}
+                    type="button"
+                    onClick={() => handleSelectScene(i)}
+                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-purple-400 text-slate-700 hover:text-purple-700 transition-colors text-left cursor-pointer"
+                  >
+                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
+                      ✓
+                    </span>
+                    <span className="truncate font-medium">
+                      Sc {i + 1}: {s.title[lang] || s.title.en}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Next Chapter & Replay Actions */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+              <button
+                type="button"
+                onClick={() => handleSelectScene(0)}
+                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <RefreshCcw className="w-4 h-4" />
+                <span>Replay Module 10 from Start</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleSelectStage(8)}
+                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                <span>Review Module 9 (Paint Shop Line Issuance)</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  if (allStages.length > 10) {
+                    handleSelectStage(10);
+                  }
+                }}
+                disabled={allStages.length <= 10}
+                className={`w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs transition-all flex items-center justify-center gap-2 ${
+                  allStages.length > 10
+                    ? 'bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white shadow-lg shadow-purple-600/25 cursor-pointer'
+                    : 'bg-slate-200 text-slate-400 cursor-not-allowed'
+                }`}
+              >
+                <span>Proceed to Module 11: Production Inspection &amp; PIR</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
         ) : (
           /* Intermediate Milestone Screen (Stages 2, 3 & 4) */
           <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
@@ -1493,7 +1621,13 @@ export const StoryStagePlayer: React.FC = () => {
                 <span>MODULE {currentStageIndex + 1} · MILESTONE {currentSceneIndex + 1} COMPLETED</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                {currentStageIndex === 8
+                {currentStageIndex === 9
+                  ? currentSceneIndex === 2
+                    ? 'Scene 3: Poka-Yoke Device Rejection of Mismatched Lanes Mastered!'
+                    : currentSceneIndex === 1
+                    ? 'Scene 2: Brake & Motor Mechanical Decanting Mastered!'
+                    : 'Scene 1: Mezzanine Floor Body-Parts Sequencing Mastered!'
+                  : currentStageIndex === 8
                   ? currentSceneIndex === 2
                     ? 'Scene 3: The 100% Full Trolley Capacity Mandate Mastered!'
                     : currentSceneIndex === 1
