@@ -1,0 +1,484 @@
+{
+  "stageId": "c1_s5_chemicals_thinners",
+  "category": 1,
+  "stageNumber": 5,
+  "sopDoc": "Plant Operations Putaway for Chemicals and Thinners (Doc No: 05_C1_S3)",
+  "stageTitle": {
+    "en": "Stage 5: Hazardous Chemicals & Thinners Put-Away",
+    "hi": "चरण 5: खतरनाक रसायन और थिनर पुट-अवे",
+    "mr": "टप्पा 5: धोकादायक रसायने आणि थिनर पुट-अवे"
+  },
+  "scenes": [
+    {
+      "id": "c1_s5_sc01_facility_bypass",
+      "stepNumber": 1,
+      "title": {
+        "en": "Hazardous Chemical Facility Bypass Routing",
+        "hi": "खतरनाक रासायनिक सुविधा बाईपास रूटिंग",
+        "mr": "धोकादायक रासायनिक सुविधा बायपास रूटिंग"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s5_sc01_facility_bypass.mp4",
+        "posterSrc": "/images/scenes/c1_s5_sc01_poster.jpg",
+        "fallbackAnimation": "chemical_bypass_routing",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "warning",
+          "text": {
+            "en": "Welcome to Stage 5: Hazardous Chemicals & Thinners Put-Away! A supplier truck carrying drums of flammable thinners, paints, and hazardous solvents arrives at the AURIC Main Gate. The driver asks if they should dock at Inbound Dock 01 (Main Assembly Building) with the other standard trucks. Under Ather SOP Clause 4.1, where must chemical and thinner shipments proceed?",
+            "hi": "स्टेज 5: खतरनाक रसायन और थिनर पुट-अवे में आपका स्वागत है! ज्वलनशील थिनर, पेंट और खतरनाक सॉल्वैंट्स के ड्रम ले जाने वाला एक आपूर्तिकर्ता ट्रक AURIC मेन गेट पर पहुंचता है। ड्राइवर पूछता है कि क्या उन्हें अन्य सामान्य ट्रकों के साथ इनबाउंड डॉक 01 (मुख्य असेंबली बिल्डिंग) पर डॉक करना चाहिए। एथर SOP क्लॉज 4.1 के तहत, रसायन और थिनर शिपमेंट को कहां जाना चाहिए?",
+            "mr": "स्टेज 5: धोकादायक रसायने आणि थिनर पुट-अवेमध्ये आपले स्वागत आहे! ज्वलनशील थिनर, पेंट्स आणि घातक सॉल्व्हेंट्सचे ड्रम्स घेऊन आलेला सप्लायर ट्रक AURIC मेन गेटवर पोहोचतो. ड्रायव्हर विचारतो की त्यांनी इतर सामान्य गाड्यांप्रमाणे इनबाउंड डॉक 01 (मुख्य असेंब्ली इमारत) वर अनलोड करावे का? एथर SOP कलम 4.1 नुसार, रासायनिक आणि थिनर शिपमेंट कोठे पाठवले पाहिजे?"
+          },
+          "audioSrc": "/audio/mascot/c1_s5_sc01_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "PERFECT FACILITY BYPASS ROUTING! SOP Clause 4.1: Hazardous chemicals, thinners, and paints are stored in separate, designated buildings. The gate pass specifies the exact isolated building. Trucks must bypass the main assembly plant completely and dock directly at the detached Chemical Storage Annex equipped with flameproof fixtures and spill berms!",
+            "hi": "उत्कृष्ट सुविधा बाईपास रूटिंग! SOP क्लॉज 4.1: खतरनाक रसायन, थिनर और पेंट अलग, निर्दिष्ट भवनों में संग्रहीत किए जाते हैं। गेट पास में सटीक पृथक भवन निर्दिष्ट होता है। ट्रकों को मुख्य असेंबली प्लांट को पूरी तरह से बायपास करना चाहिए और फ्लेमप्रूफ फिक्स्चर और स्पिल बर्म से सुसज्जित अलग रासायनिक भंडारण एनेक्स पर सीधे डॉक करना चाहिए!",
+            "mr": "उत्कृष्ट सुविधा बायपास रूटिंग! SOP कलम 4.1: धोकादायक रसायने, थिनर आणि पेंट्स स्वतंत्र, नियुक्त इमारतींमध्ये साठवले जातात. गेट पासवर विशिष्ट वेगळी इमारत नमूद केलेली असते. ट्रक्सने मुख्य असेंब्ली प्लांट पूर्णपणे बायपास करून थेट फ्लेमप्रूफ आणि स्पिल बर्म्स असलेल्या स्वतंत्र रासायनिक स्टोअर अ‍ॅनेक्सवर डॉक केले पाहिजे!"
+          },
+          "audioSrc": "/audio/mascot/c1_s5_sc01_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "CRITICAL INDUSTRIAL FIRE HAZARD! Under SOP Clause 4.1, hazardous solvents, combustible paints, and thinners must NEVER enter the main manufacturing plant or general Dock 01. Vapors or accidental leaks near high-voltage assembly lines create catastrophic explosion risks!",
+            "hi": "गंभीर औद्योगिक आग का खतरा! SOP क्लॉज 4.1 के तहत, खतरनाक सॉल्वैंट्स, ज्वलनशील पेंट और थिनर को कभी भी मुख्य विनिर्माण संयंत्र या सामान्य डॉक 01 में प्रवेश नहीं करना चाहिए। हाई-वोल्टेज असेंबली लाइनों के पास वाष्प या आकस्मिक रिसाव से विनाशकारी विस्फोट का खतरा पैदा होता है!",
+            "mr": "गंभीर औद्योगिक आगीचा धोका! SOP कलम 4.1 नुसार, घातक सॉल्व्हेंट्स, ज्वलनशील पेंट्स आणि थिनरने कधीही मुख्य उत्पादन प्लांट किंवा सामान्य डॉक 01 मध्ये प्रवेश करू नये. हाय-व्होल्टेज असेंब्ली लाईन्सजवळ रासायनिक वाष्प किंवा गळतीमुळे भीषण स्फोटाचा धोका उद्भवू शकतो!"
+          },
+          "audioSrc": "/audio/mascot/c1_s5_sc01_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c1-q25",
+        "safetyCritical": true,
+        "question": {
+          "en": "A delivery truck arrives with drums of combustible thinners and industrial paints. The driver asks to unload at Dock 01 next to vehicle body panels. Where does Ather SOP Clause 4.1 mandate this vehicle proceed?",
+          "hi": "एक डिलीवरी ट्रक ज्वलनशील थिनर और औद्योगिक पेंट के ड्रम लेकर आता है। ड्राइवर वाहन बॉडी पैनल के बगल में डॉक 01 पर अनलोड करने के लिए कहता है। एथर SOP क्लॉज 4.1 इस वाहन को कहां जाने का आदेश देता है?",
+          "mr": "एक डिलिव्हरी ट्रक ज्वलनशील थिनर आणि औद्योगिक पेंट्सचे ड्रम्स घेऊन येतो. ड्रायव्हर व्हेईकल बॉडी पॅनल्सजवळ डॉक 01 वर अनलोड करण्याची विचारणा करतो. एथर SOP कलम 4.1 नुसार या वाहनाला कुठे जाण्याचे निर्देश आहेत?"
+        },
+        "options": [
+          {
+            "id": "opt_bypass_annex",
+            "correct": true,
+            "label": {
+              "en": "Bypass the main assembly plant entirely and proceed directly to the detached Chemical Storage Building specified on the Gate Pass",
+              "hi": "मुख्य असेंबली प्लांट को पूरी तरह से बायपास करें और गेट पास पर निर्दिष्ट अलग रासायनिक भंडारण भवन में सीधे जाएं",
+              "mr": "मुख्य असेंब्ली प्लांट पूर्णपणे बायपास करा आणि गेट पासवर नमूद केलेल्या स्वतंत्र केमिकल स्टोरेज इमारतीत थेट जा"
+            }
+          },
+          {
+            "id": "opt_dock01_inspect",
+            "correct": false,
+            "label": {
+              "en": "Dock at general Dock 01 so regular warehouse associates can inspect the drums alongside vehicle parts",
+              "hi": "सामान्य डॉक 01 पर डॉक करें ताकि नियमित वेयरहाउस सहयोगी वाहन के हिस्सों के साथ ड्रम का निरीक्षण कर सकें",
+              "mr": "सामान्य डॉक 01 वर डॉक करा जेणेकरून नियमित कामगार वाहनांच्या सुट्या भागांसह ड्रमची तपासणी करू शकतील"
+            }
+          },
+          {
+            "id": "opt_park_aisle",
+            "correct": false,
+            "label": {
+              "en": "Drive inside the main warehouse aisle and stage near High-Rise Racks (HRR)",
+              "hi": "मुख्य वेयरहाउस गलियारे के अंदर ड्राइव करें और हाई-राइज रैक (HRR) के पास स्टेज करें",
+              "mr": "मुख्य वेअरहाऊसच्या पॅसेजमध्ये गाडी न्या आणि हाय-राइज रॅक (HRR) जवळ ठेवा"
+            }
+          },
+          {
+            "id": "opt_parking_lot",
+            "correct": false,
+            "label": {
+              "en": "Leave the truck in the open parking lot until the next work shift",
+              "hi": "अगली कार्य शिफ्ट तक ट्रक को खुले पार्किंग स्थल में छोड़ दें",
+              "mr": "पुढील शिफ्ट येईपर्यंत ट्रक उघड्या पार्किंगच्या जागेत सोडून द्या"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 110,
+        "sopClause": "SOP for Plant Operations Putaway for Chemicals and Thinners Clause 4.1 & Question Bank",
+        "why": {
+          "en": "SOP Clause 4.1 specifies: Chemicals, thinners, and paints are hazardous Class 3 flammable liquids stored exclusively in separate designated buildings. The Gate-Entry Pass specifies the exact detached building aligned with the PO and ASN. Delivery trucks proceed directly to the designated chemical building immediately after security gate entry, bypassing main plant facilities entirely to mitigate factory fire and vapor contamination risks.",
+          "hi": "SOP क्लॉज 4.1 निर्दिष्ट करता है: रसायन, थिनर और पेंट खतरनाक क्लास 3 ज्वलनशील तरल पदार्थ हैं जिन्हें विशेष रूप से अलग निर्दिष्ट भवनों में संग्रहीत किया जाता है। गेट-एंट्री पास PO और ASN के अनुरूप सटीक पृथक भवन निर्दिष्ट करता है। डिलीवरी ट्रक सुरक्षा गेट प्रवेश के तुरंत बाद सीधे निर्दिष्ट रासायनिक भवन में जाते हैं, कारखाने में आग और वाष्प संदूषण के जोखिम को कम करने के लिए मुख्य संयंत्र सुविधाओं को पूरी तरह से बायपास करते हैं।",
+          "mr": "SOP कलम 4.1 स्पष्ट करते: रसायने, थिनर आणि पेंट्स हे घातक क्लास 3 ज्वलनशील द्रव आहेत जे केवळ स्वतंत्र नियुक्त इमारतींमध्ये साठवले जातात. गेट-एन्ट्री पास PO आणि ASN नुसार अचूक स्वतंत्र इमारत निर्दिष्ट करतो. आग आणि रासायनिक वाफेचा धोका टाळण्यासाठी डिलिव्हरी ट्रक्स सिक्युरिटी गेटवरून थेट नियुक्त केमिकल इमारतीकडे जातात आणि मुख्य प्लांट पूर्णपणे बायपास करतात."
+        }
+      }
+    },
+    {
+      "id": "c1_s5_sc02_ppe_spill_berm",
+      "stepNumber": 2,
+      "title": {
+        "en": "Chemical PPE & Spill-Containment Inspection",
+        "hi": "रासायनिक पीपीई और स्पिल-नियंत्रण निरीक्षण",
+        "mr": "रासायनिक पीपीई आणि स्पिल-नियंत्रण तपासणी"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s5_sc02_ppe_spill_berm.mp4",
+        "posterSrc": "/images/scenes/c1_s5_sc02_poster.jpg",
+        "fallbackAnimation": "chemical_unloading_spill",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "warning",
+          "text": {
+            "en": "At Chemical Annex C-04, the truck has docked and an operator begins unloading 200-liter steel drums of industrial thinner. Take a close look at the unloading setup. Under Ather SOP Clause 4.2, which critical safety hazard violates our mandatory chemical handling protocols?",
+            "hi": "रासायनिक एनेक्स C-04 पर, ट्रक डॉक हो गया है और एक ऑपरेटर औद्योगिक थिनर के 200-लीटर स्टील के ड्रम उतारना शुरू करता है। अनलोडिंग सेटअप पर बारीकी से नज़र डालें। एथर SOP क्लॉज 4.2 के तहत, कौन सा महत्वपूर्ण सुरक्षा खतरा हमारे अनिवार्य रासायनिक हैंडलिंग प्रोटोकॉल का उल्लंघन करता है?",
+            "mr": "केमिकल अ‍ॅनेक्स C-04 वर, ट्रक डॉक झाला आहे आणि ऑपरेटर औद्योगिक थिनरचे 200-लिटर स्टील ड्रम्स उतरवण्यास सुरुवात करतो. अनलोडिंग सेटअपचे काळजीपूर्वक निरीक्षण करा. एथर SOP कलम 4.2 नुसार, कोणता मोठा सुरक्षिततेचा धोका आमच्या अनिवार्य रासायनिक हाताळणी नियमांचे उल्लंघन करतो?"
+          },
+          "audioSrc": "/audio/mascot/c1_s5_sc02_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "HAZARD SPOTTED! SOP Clause 4.2: Flammable liquids must NEVER be staged on bare concrete without secondary spill containment, and steel drums must be clamped to an earthing reel before handling. Electrostatic discharge (ESD) can ignite volatile thinner fumes into an instant fireball, and uncontained spills create severe environmental contamination!",
+            "hi": "खतरे की पहचान की गई! SOP क्लॉज 4.2: ज्वलनशील तरल पदार्थों को कभी भी द्वितीयक स्पिल रोकथाम के बिना नंगे कंक्रीट पर नहीं रखा जाना चाहिए, और स्टील के ड्रमों को संभालने से पहले अर्थिंग रील से जोड़ा जाना चाहिए। इलेक्ट्रोस्टैटिक डिस्चार्ज (ESD) वाष्पशील थिनर के धुएं को तुरंत आग के गोले में बदल सकता है, और अनियंत्रित रिसाव से गंभीर पर्यावरण संदूषण होता है!",
+            "mr": "धोका अचूक ओळखला! SOP कलम 4.2: ज्वलनशील रसायने कधीही दुय्यम स्पिल ट्रे / बंडशिवाय उघड्या सिमेंटच्या जमिनीवर ठेवू नयेत, आणि स्टील ड्रम्स हाताळण्यापूर्वी त्यांना अर्थिंग क्लॅम्प जोडणे अनिवार्य आहे. इलेक्ट्रोस्टॅटिक ठिणगीमुळे (ESD) थिनरच्या वाफेला भीषण आग लागू शकते आणि गळतीमुळे गंभीर प्रदूषण होते!"
+          },
+          "audioSrc": "/audio/mascot/c1_s5_sc02_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "CRITICAL SAFETY RISK OVERLOOKED! Staging flammable solvent drums directly on bare concrete with disconnected grounding earthing wires is an extreme industrial hazard. A single static discharge spark can ignite the entire chemical warehouse!",
+            "hi": "महत्वपूर्ण सुरक्षा जोखिम अनदेखा किया गया! डिस्कनेक्ट किए गए ग्राउंडिंग अर्थिंग तारों के साथ सीधे नंगे कंक्रीट पर ज्वलनशील सॉल्वेंट ड्रम रखना एक अत्यधिक औद्योगिक खतरा है। एक भी स्थिर डिस्चार्ज चिंगारी पूरे रासायनिक गोदाम में आग लगा सकती है!",
+            "mr": "मोठा सुरक्षिततेचा धोका दुर्लक्षित झाला! अर्थिंग क्लॅम्पशिवाय आणि स्पिल पॅलेटशिवाय ज्वलनशील थिनरचे ड्रम थेट जमिनीवर ठेवणे अत्यंत घातक आहे. एका लहान इलेक्ट्रोस्टॅटिक ठिणगीमुळे संपूर्ण केमिकल गोदामात आग लागू शकते!"
+          },
+          "audioSrc": "/audio/mascot/c1_s5_sc02_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "spot_error",
+        "questionId": "c1-q25b",
+        "safetyCritical": true,
+        "question": {
+          "en": "Spot the Safety Violation: An operator is unloading 200L flammable thinner drums at Chemical Annex C-04. Which condition violates Ather safety protocols?",
+          "hi": "सुरक्षा उल्लंघन पहचानें: एक ऑपरेटर रासायनिक एनेक्स C-04 पर 200L ज्वलनशील थिनर ड्रम उतार रहा है। कौन सी स्थिति एथर सुरक्षा प्रोटोकॉल का उल्लंघन करती है?",
+          "mr": "सुरक्षिततेचे उल्लंघन ओळखा: एक ऑपरेटर केमिकल अ‍ॅनेक्स C-04 वर 200L ज्वलनशील थिनर ड्रम्स उतरवत आहे. कोणती परिस्थिती एथर सुरक्षा नियमांचे उल्लंघन करते?"
+        },
+        "instruction": {
+          "en": "Audit the dock setup below and tap the critical safety violation.",
+          "hi": "नीचे दिए गए डॉक सेटअप का ऑडिट करें और महत्वपूर्ण सुरक्षा उल्लंघन पर टैप करें।",
+          "mr": "खालील डॉक सेटअपचे ऑडिट करा आणि गंभीर सुरक्षा उल्लंघनावर टॅप करा."
+        },
+        "options": [
+          {
+            "id": "opt_violation_grounding_spill",
+            "isViolation": true,
+            "label": {
+              "en": "Drums unloaded directly onto bare concrete with no secondary spill pallet and no static earthing clamp attached",
+              "hi": "ड्रम सीधे नंगे कंक्रीट पर उतारे गए हैं, जिसमें कोई द्वितीयक स्पिल पैलेट नहीं है और कोई स्थिर अर्थिंग क्लैंप नहीं लगा है",
+              "mr": "ड्रम्स थेट सिमेंटच्या जमिनीवर उतरवले आहेत, कोणतीही सेकंडरी स्पिल पॅलेट नाही आणि अर्थिंग क्लॅम्प लावलेला नाही"
+            },
+            "description": {
+              "en": "Violates SOP Clause 4.2: High risk of static spark ignition and environmental soil seepage",
+              "hi": "SOP क्लॉज 4.2 का उल्लंघन: स्थिर चिंगारी प्रज्वलन और पर्यावरणीय मिट्टी में रिसाव का उच्च जोखिम",
+              "mr": "SOP कलम 4.2 चे उल्लंघन: स्टॅटिक ठिणगीने आग लागण्याचा आणि जमिनीत केमिकल मुरण्याचा मोठा धोका"
+            }
+          },
+          {
+            "id": "opt_valid_flameproof",
+            "isViolation": false,
+            "label": {
+              "en": "The unloading dock is equipped with ATEX-rated explosion-proof (EX) ceiling floodlights",
+              "hi": "अनलोडिंग डॉक ATEX-रेटेड विस्फोट-प्रूफ (EX) सीलिंग फ्लडलाइट्स से सुसज्जित है",
+              "mr": "अनलोडिंग डॉकवर ATEX-प्रमाणित स्फोट-प्रतिरोधक (EX) छतावरील दिवे बसवले आहेत"
+            },
+            "description": {
+              "en": "Compliant: Standard requirement for flammable storage areas to prevent electrical arcing",
+              "hi": "अनुरूप: विद्युत स्पार्किंग को रोकने के लिए ज्वलनशील भंडारण क्षेत्रों के लिए मानक आवश्यकता",
+              "mr": "योग्य: इलेक्ट्रिकल स्पार्क रोखण्यासाठी ज्वलनशील भागांसाठी आवश्यक मानक"
+            }
+          },
+          {
+            "id": "opt_valid_gate_pass",
+            "isViolation": false,
+            "label": {
+              "en": "Delivery driver carries an authorized Gate Pass indicating Annex C-04 chemical unloading zone",
+              "hi": "डिलीवरी ड्राइवर के पास एनेक्स C-04 रासायनिक अनलोडिंग ज़ोन दर्शाने वाला अधिकृत गेट पास है",
+              "mr": "डिलिव्हरी ड्रायव्हरकडे अ‍ॅनेक्स C-04 केमिकल अनलोडिंग झोन दर्शवणारा अधिकृत गेट पास आहे"
+            },
+            "description": {
+              "en": "Compliant: Validated routing verified during security gate entry",
+              "hi": "अनुरूप: सुरक्षा गेट प्रवेश के दौरान सत्यापित रूटिंग",
+              "mr": "योग्य: सिक्युरिटी गेटवर पडताळलेली अधिकृत एंट्री"
+            }
+          },
+          {
+            "id": "opt_valid_hazardous_reach",
+            "isViolation": false,
+            "label": {
+              "en": "Operator utilizes flame-retardant industrial equipment rated for chemical transport",
+              "hi": "ऑपरेटर रासायनिक परिवहन के लिए रेटेड ज्वाला-मंदक औद्योगिक उपकरणों का उपयोग करता है",
+              "mr": "ऑपरेटर केमिकल वाहतुकीसाठी प्रमाणित फ्लेम-रिटार्डंट उपकरणांचा वापर करतो"
+            },
+            "description": {
+              "en": "Compliant: Certified MHE used for hazardous material handling",
+              "hi": "अनुरूप: खतरनाक सामग्री प्रबंधन के लिए प्रमाणित MHE का उपयोग",
+              "mr": "योग्य: घातक रसायनांसाठी प्रमाणित MHE चा वापर"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 115,
+        "sopClause": "SOP for Plant Operations Putaway for Chemicals and Thinners Clause 4.2 & Safety Guidelines",
+        "why": {
+          "en": "SOP Clause 4.2 strictly mandates that all Class 3 flammable solvent drums must be placed onto secondary spill-containment bund pallets capable of holding at least 110% of drum volume. Furthermore, spark-proof earthing grounding clamps must be affixed to dissipate electrostatic charge generated during fluid movement, preventing static arc ignition in solvent vapor zones.",
+          "hi": "SOP क्लॉज 4.2 सख्त आदेश देता है कि सभी क्लास 3 ज्वलनशील सॉल्वेंट ड्रमों को ड्रम की मात्रा का कम से कम 110% रखने में सक्षम द्वितीयक स्पिल-कंटेनमेंट बंड पैलेट पर रखा जाना चाहिए। इसके अलावा, सॉल्वेंट वाष्प क्षेत्रों में स्थिर चाप प्रज्वलन को रोकने के लिए तरल आंदोलन के दौरान उत्पन्न इलेक्ट्रोस्टैटिक चार्ज को खत्म करने के लिए स्पार्क-प्रूफ अर्थिंग ग्राउंडिंग क्लैंप लगाए जाने चाहिए।",
+          "mr": "SOP कलम 4.2 काटेकोरपणे आदेश देते की सर्व क्लास 3 ज्वलनशील सॉल्व्हेंट ड्रम्स हे ड्रमच्या 110% क्षमता असलेल्या दुय्यम स्पिल-कंटेनमेंट बंड पॅलेट्सवरच ठेवले पाहिजेत. याव्यतिरिक्त, रासायनिक द्रव हलवताना निर्माण होणारा इलेक्ट्रोस्टॅटिक चार्ज विसर्जित करण्यासाठी स्पार्क-प्रूफ अर्थिंग क्लॅम्प जोडणे अनिवार्य आहे, जेणेकरून वाफेमुळे आग लागणार नाही."
+        }
+      }
+    },
+    {
+      "id": "c1_s5_sc03_segregation_sla",
+      "stepNumber": 3,
+      "title": {
+        "en": "Flammability Segregation & 2-Hour Put-Away SLA",
+        "hi": "ज्वलनशीलता पृथक्करण और 2-घंटे का पुट-अवे SLA",
+        "mr": "ज्वलनशीलता विलगीकरण आणि 2-तासांचे पुट-अवे SLA"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s5_sc03_segregation_sla.mp4",
+        "posterSrc": "/images/scenes/c1_s5_sc03_poster.jpg",
+        "fallbackAnimation": "chemical_segregation_matrix",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "Inside Chemical Annex C-04, 4 different hazardous drums need to be slotted into storage. Chemical safety rules strictly prohibit storing incompatible classes in the same containment bay: mixing flammable solvents with oxidizers causes spontaneous explosion! In addition, Ather SOP Clause 4.3 mandates all chemicals must be stowed within a strict 2-hour SLA. Sort each incoming drum into its compliant containment bay before time expires!",
+            "hi": "रासायनिक एनेक्स C-04 के अंदर, 4 अलग-अलग खतरनाक ड्रमों को भंडारण में रखने की आवश्यकता है। रासायनिक सुरक्षा नियम एक ही नियंत्रण बे में असंगत वर्गों को संग्रहीत करने से सख्ती से रोकते हैं: ऑक्सीडाइज़र के साथ ज्वलनशील सॉल्वैंट्स को मिलाने से स्वतःस्फूर्त विस्फोट होता है! इसके अलावा, एथर SOP क्लॉज 4.3 आदेश देता है कि सभी रसायनों को सख्त 2 घंटे के SLA के भीतर रखा जाना चाहिए। समय समाप्त होने से पहले प्रत्येक आने वाले ड्रम को उसके अनुरूप नियंत्रण बे में क्रमबद्ध करें!",
+            "mr": "केमिकल अ‍ॅनेक्स C-04 च्या आत, 4 वेगवेगळ्या धोकादायक ड्रम्सचे स्टोरेज करायचे आहे. रासायनिक सुरक्षा नियमांनुसार विसंगत वर्गांची रसायने एकाच कंटेनमेंट बे मध्ये ठेवण्यास सक्त मनाई आहे: ज्वलनशील सॉल्व्हेंट्स आणि ऑक्सिडायझर्स एकत्र आल्यास भीषण स्फोट होऊ शकतो! तसेच, एथर SOP कलम 4.3 नुसार सर्व रसायने 2 तासांच्या कडक SLA मुदतीत सुरक्षित रॅकवर ठेवली पाहिजेत. मुदत संपण्यापूर्वी प्रत्येक ड्रम योग्य बे मध्ये वर्गीकृत करा!"
+          },
+          "audioSrc": "/audio/mascot/c1_s5_sc03_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "CHEMICAL MATRIX COMPLIANCE ACHIEVED! SOP Clause 4.3: Class 3 Flammables (Thinners & Paints), Class 5.1 Oxidizers (Peroxides), and Class 8 Corrosives (Pre-Treatment Acids) are fully segregated into isolated bund bays, and all stowing completed within the mandatory 2-hour SLA!",
+            "hi": "रासायनिक मैट्रिक्स अनुपालन प्राप्त हुआ! SOP क्लॉज 4.3: क्लास 3 ज्वलनशील (थिनर और पेंट), क्लास 5.1 ऑक्सीडाइज़र (पेरॉक्साइड), और क्लास 8 संक्षारक (प्री-ट्रीटमेंट एसिड) पूरी तरह से अलग बंड बे में विभाजित हैं, और सभी स्टॉविंग अनिवार्य 2 घंटे के SLA के भीतर पूरी हो गई है!",
+            "mr": "केमिकल मॅट्रिक्स नियमांचे अचूक पालन! SOP कलम 4.3: क्लास 3 ज्वलनशील (थिनर आणि पेंट्स), क्लास 5.1 ऑक्सिडायझर्स (पेरॉक्साइड्स) आणि क्लास 8 कॉरोसिव्ह (अ‍ॅसिड वॉश) पूर्णपणे स्वतंत्र बे मध्ये वेगळे केले आहेत, आणि सर्व पुट-अवे 2 तासांच्या अनिवार्य SLA मुदतीत पूर्ण झाले आहे!"
+          },
+          "audioSrc": "/audio/mascot/c1_s5_sc03_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "CRITICAL INCOMPATIBLE STORAGE HAZARD! Storing oxidizing agents next to flammable solvents causes exothermic decomposition and catastrophic chemical fires. Incompatible hazard classes must always be segregated into isolated sumps!",
+            "hi": "गंभीर असंगत भंडारण खतरा! ज्वलनशील सॉल्वैंट्स के बगल में ऑक्सीकरण एजेंटों को संग्रहीत करने से एक्सोथर्मिक अपघटन और विनाशकारी रासायनिक आग लग सकती है। असंगत खतरा वर्गों को हमेशा अलग-अलग संपों में अलग किया जाना चाहिए!",
+            "mr": "धोकादायक विसंगत साठवणूक! ज्वलनशील सॉल्व्हेंट्सजवळ ऑक्सिडायझर्स ठेवल्यास रासायनिक प्रक्रियेमुळे प्रचंड उष्णता निर्माण होऊन स्फोट होऊ शकतो. विसंगत वर्ग नेहमी स्वतंत्र संपमध्ये वेगळे ठेवले पाहिजेत!"
+          },
+          "audioSrc": "/audio/mascot/c1_s5_sc03_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "drag_drop",
+        "questionId": "c1-q24-chem",
+        "safetyCritical": true,
+        "question": {
+          "en": "Segregate incoming chemicals into their designated storage bays according to Ather SOP Clause 4.3 and the 2-Hour SLA limit:",
+          "hi": "एथर SOP क्लॉज 4.3 और 2-घंटे की SLA सीमा के अनुसार आने वाले रसायनों को उनके निर्दिष्ट भंडारण बे में अलग करें:",
+          "mr": "एथर SOP कलम 4.3 आणि 2-तासांच्या SLA मर्यादेनुसार इनवर्ड रसायने त्यांच्या नियुक्त स्टोरेज बे मध्ये वेगळी करा:"
+        },
+        "instruction": {
+          "en": "Tap a chemical drum below, then tap its compliant storage bay.",
+          "hi": "नीचे एक रासायनिक ड्रम पर टैप करें, फिर उसके अनुरूप भंडारण बे पर टैप करें।",
+          "mr": "खालील केमिकल ड्रमवर टॅप करा आणि नंतर त्याच्या योग्य स्टोरेज बे वर टॅप करा."
+        },
+        "zones": [
+          {
+            "id": "zone_flammable",
+            "icon": "flame",
+            "label": {
+              "en": "Bay 1: Flammables (Class 3)",
+              "hi": "बे 1: ज्वलनशील पदार्थ (क्लास 3)",
+              "mr": "बे 1: ज्वलनशील पदार्थ (क्लास 3)"
+            }
+          },
+          {
+            "id": "zone_oxidizer",
+            "icon": "zap",
+            "label": {
+              "en": "Bay 2: Oxidizers (Class 5.1)",
+              "hi": "बे 2: ऑक्सीडाइज़र (क्लास 5.1)",
+              "mr": "बे 2: ऑक्सिडायझर्स (क्लास 5.1)"
+            }
+          },
+          {
+            "id": "zone_corrosive",
+            "icon": "shield-alert",
+            "label": {
+              "en": "Bay 3: Corrosives (Class 8)",
+              "hi": "बे 3: संक्षारक पदार्थ (क्लास 8)",
+              "mr": "बे 3: कॉरोसिव्ह पदार्थ (क्लास 8)"
+            }
+          }
+        ],
+        "items": [
+          {
+            "id": "item_thinner",
+            "icon": "flame",
+            "targetZoneId": "zone_flammable",
+            "label": {
+              "en": "Thinner & Ketone Solvents (Class 3)",
+              "hi": "थिनर और कीटोन सॉल्वैंट्स (क्लास 3)",
+              "mr": "थिनर आणि कीटोन सॉल्व्हेंट्स (क्लास 3)"
+            }
+          },
+          {
+            "id": "item_paint",
+            "icon": "flame",
+            "targetZoneId": "zone_flammable",
+            "label": {
+              "en": "Chassis Topcoat Paints & Resins (Class 3)",
+              "hi": "चेसिस टॉपकोट पेंट और रेजिन (क्लास 3)",
+              "mr": "चेसिस टॉपकोट पेंट्स आणि रेजिन्स (क्लास 3)"
+            }
+          },
+          {
+            "id": "item_peroxide",
+            "icon": "zap",
+            "targetZoneId": "zone_oxidizer",
+            "label": {
+              "en": "Peroxide Hardener & Catalyst (Class 5.1)",
+              "hi": "पेरॉक्साइड हार्डनर और उत्प्रेरक (क्लास 5.1)",
+              "mr": "पेरॉक्साइड हार्डनर आणि कॅटॅलिस्ट (क्लास 5.1)"
+            }
+          },
+          {
+            "id": "item_etching",
+            "icon": "shield-alert",
+            "targetZoneId": "zone_corrosive",
+            "label": {
+              "en": "Phosphoric Pre-Treatment Acid (Class 8)",
+              "hi": "फॉस्फोरिक प्री-ट्रीटमेंट एसिड (क्लास 8)",
+              "mr": "फॉस्फरिक प्री-ट्रीटमेंट अ‍ॅसिड (क्लास 8)"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 120,
+        "sopClause": "SOP for Plant Operations Putaway for Chemicals and Thinners Clause 4.3 & 2-Hour SLA Standard",
+        "why": {
+          "en": "SOP Clause 4.3 mandates strict chemical segregation according to global dangerous goods matrices and factory insurance compliance. Flammable liquids (Class 3) must never be staged in the same containment sump as oxidizing reagents (Class 5.1), because oxidizers release nascent oxygen that will trigger spontaneous ignition of volatile organic vapors. Furthermore, the entire putaway cycle must finish within the 2-Hour SLA to avoid loading dock congestion and minimize ambient vapor exposure.",
+          "hi": "SOP क्लॉज 4.3 वैश्विक खतरनाक सामान मैट्रिक्स और फैक्ट्री बीमा अनुपालन के अनुसार सख्त रासायनिक पृथक्करण का आदेश देता है। ज्वलनशील तरल पदार्थों (क्लास 3) को कभी भी ऑक्सीकरण अभिकर्मकों (क्लास 5.1) के समान कंटेनमेंट संप में नहीं रखा जाना चाहिए, क्योंकि ऑक्सीडाइज़र नवजात ऑक्सीजन छोड़ते हैं जो वाष्पशील कार्बनिक वाष्पों के स्वतःस्फूर्त प्रज्वलन को ट्रिगर करेगा। इसके अलावा, लोडिंग डॉक की भीड़ से बचने और परिवेशी वाष्प जोखिम को कम करने के लिए पूरे पुट-अवे चक्र को 2 घंटे के SLA के भीतर समाप्त होना चाहिए।",
+          "mr": "SOP कलम 4.3 जागतिक धोकादायक वस्तू नियमांनुसार रासायनिक विलगीकरणाचे काटेकोर पालन करण्याचे आदेश देते. क्लास 3 ज्वलनशील रसायने कधीही क्लास 5.1 ऑक्सिडायझर्ससोबत एकाच संपमध्ये ठेवू नयेत, कारण ऑक्सिडायझर्समुळे वाफेला अचानक आग लागण्याचा धोका असतो. याशिवाय, डॉकवरील गर्दी टाळण्यासाठी आणि वाष्पाचा धोका कमी करण्यासाठी संपूर्ण पुट-अवे प्रक्रिया 2 तासांच्या SLA मुदतीत पूर्ण झाली पाहिजे."
+        }
+      }
+    },
+    {
+      "id": "c1_s5_sc04_deo_grn_posting",
+      "stepNumber": 4,
+      "title": {
+        "en": "DEO Manual GRN Generation & ERP Stock Posting",
+        "hi": "DEO मैनुअल GRN जनरेशन और ERP स्टॉक पोस्टिंग",
+        "mr": "DEO मॅन्युअल GRN जनरेशन आणि ERP स्टॉक पोस्टिंग"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s5_sc04_deo_grn_posting.mp4",
+        "posterSrc": "/images/scenes/c1_s5_sc04_poster.jpg",
+        "fallbackAnimation": "chemical_deo_posting",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "At Chemical Annex C-04, the put-away operator has successfully unloaded, inspected, and segregated 20 drums of industrial thinner into Bay 1. Who is responsible under Ather SOP Clause 4.4 for generating the official Goods Receipt Note (GRN) in SAP and posting the inventory stock into the ERP system?",
+            "hi": "रासायनिक एनेक्स C-04 पर, पुट-अवे ऑपरेटर ने बे 1 में औद्योगिक थिनर के 20 ड्रमों को सफलतापूर्वक अनलोड, निरीक्षण और अलग कर दिया है। SAP में आधिकारिक माल रसीद नोट (GRN) बनाने और ERP सिस्टम में इन्वेंट्री स्टॉक पोस्ट करने के लिए एथर SOP क्लॉज 4.4 के तहत कौन जिम्मेदार है?",
+            "mr": "केमिकल अ‍ॅनेक्स C-04 वर, पुट-अवे ऑपरेटरने औद्योगिक थिनरचे 20 ड्रम्स बे 1 मध्ये यशस्वीरित्या अनलोड, तपासणी आणि वर्गीकरण केले आहे. एथर SOP कलम 4.4 नुसार SAP मध्ये अधिकृत गुड्स रिसीट नोट (GRN) तयार करण्यासाठी आणि ERP सिस्टीममध्ये इन्व्हेंटरी स्टॉक पोस्ट करण्यासाठी कोण जबाबदार आहे?"
+          },
+          "audioSrc": "/audio/mascot/c1_s5_sc04_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "trophy",
+          "text": {
+            "en": "EXACT ROLE HANDOVER! SOP Clause 4.4 & Question Bank Q25: The put-away operator conducts the physical unloading and verification check. Once verified, the Data Entry Operator (DEO) generates the official Goods Receipt Note (GRN), affixes labels, and posts inventory into SAP EWM when stowage is finished!",
+            "hi": "सटीक भूमिका हस्तांतरण! SOP क्लॉज 4.4 और प्रश्न बैंक Q25: पुट-अवे ऑपरेटर भौतिक अनलोडिंग और सत्यापन जांच करता है। एक बार सत्यापित होने के बाद, डेटा एंट्री ऑपरेटर (DEO) आधिकारिक माल रसीद नोट (GRN) बनाता है, लेबल चिपकाता है, और स्टॉवेज समाप्त होने पर SAP EWM में इन्वेंट्री पोस्ट करता है!",
+            "mr": "अचूक जबाबदारी वाटप! SOP कलम 4.4 आणि प्रश्न बँक Q25: पुट-अवे ऑपरेटर प्रत्यक्ष अनलोडिंग आणि तपासणी करतो. तपासणी पूर्ण झाल्यावर, डेटा एन्ट्री ऑपरेटर (DEO) SAP मध्ये अधिकृत GRN तयार करतो, लेबल्स चिटकवतो आणि पुट-अवे पूर्ण झाल्यावर इन्व्हेंटरी पोस्ट करतो!"
+          },
+          "audioSrc": "/audio/mascot/c1_s5_sc04_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "ROLE CONFUSION HAZARD! Put-away operators handle physical material movement, safety earthing, and stowage, but they do NOT generate the GRN. The Data Entry Operator (DEO) is designated to generate the GRN and execute SAP inventory postings.",
+            "hi": "भूमिका भ्रम खतरा! पुट-अवे ऑपरेटर भौतिक सामग्री की आवाजाही, सुरक्षा अर्थिंग और स्टॉवेज को संभालते हैं, लेकिन वे GRN नहीं बनाते हैं। डेटा एंट्री ऑपरेटर (DEO) को GRN बनाने और SAP इन्वेंट्री पोस्टिंग निष्पादित करने के लिए नामित किया गया है।",
+            "mr": "कामातील गैरसमज! पुट-अवे ऑपरेटर प्रत्यक्ष मालाची हालचाल, अर्थिंग आणि साठवणूक करतो, परंतु तो GRN बनवत नाही. अधिकृत GRN तयार करणे आणि SAP मध्ये स्टॉक पोस्ट करणे ही डेटा एन्ट्री ऑपरेटरची (DEO) जबाबदारी आहे."
+          },
+          "audioSrc": "/audio/mascot/c1_s5_sc04_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c1-q25-deo",
+        "safetyCritical": false,
+        "question": {
+          "en": "After a chemical delivery truck is unloaded and physically verified at Annex C-04, who is responsible for creating the Goods Receipt Note (GRN) in SAP?",
+          "hi": "एनेक्स C-04 पर रासायनिक डिलीवरी ट्रक को अनलोड करने और भौतिक रूप से सत्यापित करने के बाद, SAP में गुड्स रिसीट नोट (GRN) बनाने के लिए कौन जिम्मेदार है?",
+          "mr": "अ‍ॅनेक्स C-04 वर केमिकल डिलिव्हरी ट्रक अनलोड करून प्रत्यक्ष तपासणी केल्यानंतर, SAP मध्ये गुड्स रिसीट नोट (GRN) तयार करण्यासाठी कोण जबाबदार आहे?"
+        },
+        "options": [
+          {
+            "id": "opt_deo",
+            "correct": true,
+            "label": {
+              "en": "Data Entry Operator (DEO) for Chemicals and Thinners (Generates GRN & updates SAP stock)",
+              "hi": "रसायन और थिनर के लिए डेटा एंट्री ऑपरेटर (DEO) (GRN बनाता है और SAP स्टॉक अपडेट करता है)",
+              "mr": "केमिकल्स आणि थिनरसाठी डेटा एन्ट्री ऑपरेटर (DEO) (GRN तयार करतो आणि SAP स्टॉक अपडेट करतो)"
+            }
+          },
+          {
+            "id": "opt_operator",
+            "correct": false,
+            "label": {
+              "en": "The put-away forklift operator (Performs physical handling and stowage only)",
+              "hi": "पुट-अवे फोर्कलिफ्ट ऑपरेटर (केवल भौतिक हैंडलिंग और स्टॉवेज करता है)",
+              "mr": "पुट-अवे फोर्कलिफ्ट ऑपरेटर (केवळ प्रत्यक्ष माल हाताळणी आणि साठवणूक करतो)"
+            }
+          },
+          {
+            "id": "opt_driver",
+            "correct": false,
+            "label": {
+              "en": "The supplier truck driver (Responsible only for transport and bill of lading)",
+              "hi": "आपूर्तिकर्ता ट्रक ड्राइवर (केवल परिवहन और लदान बिल के लिए जिम्मेदार)",
+              "mr": "सप्लायर ट्रक ड्रायव्हर (केवळ वाहतूक आणि डिलिव्हरी चलनासाठी जबाबदार)"
+            }
+          },
+          {
+            "id": "opt_security",
+            "correct": false,
+            "label": {
+              "en": "Security guard at Main Gate (Handles gate-entry log only)",
+              "hi": "मेन गेट पर सुरक्षा गार्ड (केवल गेट-एंट्री लॉग संभालता है)",
+              "mr": "मेन गेटवरील सुरक्षा रक्षक (केवळ गेट-एन्ट्री नोंद हाताळतो)"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 110,
+        "sopClause": "SOP for Plant Operations Putaway for Chemicals and Thinners Clause 4.4 & Question Bank Q25",
+        "why": {
+          "en": "SOP Clause 4.4 establishes strict separation of physical and digital custody: Putaway personnel handle unloading, secondary spill bund staging, and static earthing verification. Following successful physical verification, the Data Entry Operator (DEO) generates the Goods Receipt Note (GRN) for the inward lot and updates system inventory stock in SAP EWM upon putaway conclusion.",
+          "hi": "SOP क्लॉज 4.4 भौतिक और डिजिटल कस्टडी के सख्त पृथक्करण को स्थापित करता है: पुट-अवे कार्मिक अनलोडिंग, सेकेंडरी स्पिल बंड स्टेजिंग और स्टैटिक अर्थिंग सत्यापन को संभालते हैं। सफल भौतिक सत्यापन के बाद, डेटा एंट्री ऑपरेटर (DEO) इनवर्ड लॉट के लिए माल रसीद नोट (GRN) बनाता है और पुट-अवे निष्कर्ष पर SAP EWM में सिस्टम इन्वेंट्री स्टॉक को अपडेट करता है।",
+          "mr": "SOP कलम 4.4 प्रत्यक्ष आणि डिजिटल जबाबदाऱ्यांचे अचूक विभाजन करते: पुट-अवे कामगार अनलोडिंग, स्पिल बंड स्टेजिंग आणि अर्थिंग तपासणी पूर्ण करतात. प्रत्यक्ष तपासणी झाल्यावर, डेटा एन्ट्री ऑपरेटर (DEO) इनवर्ड लॉटसाठी GRN तयार करतो आणि काम पूर्ण झाल्यावर SAP EWM मध्ये अधिकृत इन्व्हेंटरी स्टॉक अपडेट करतो."
+        }
+      }
+    }
+  ]
+}

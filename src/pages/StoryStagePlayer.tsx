@@ -15,6 +15,7 @@ import rawStage1Data from '../content/stories/c1_s1_gate_dock.json';
 import rawStage2Data from '../content/stories/c1_s2_iqc_clearance.json';
 import rawStage3Data from '../content/stories/c1_s3_putaway_parts.json';
 import rawStage4Data from '../content/stories/c1_s4_battery_cell.json';
+import rawStage5Data from '../content/stories/c1_s5_chemicals_thinners.json';
 import { StoryHud } from '../components/story/StoryHud';
 import { MascotAura } from '../components/story/MascotAura';
 import { TruckGateAnimation } from '../components/story/TruckGateAnimation';
@@ -37,6 +38,10 @@ import { BatteryDockArrivalAnimation } from '../components/story/BatteryDockArri
 import { CleanroomVaultAnimation } from '../components/story/CleanroomVaultAnimation';
 import { BatterySlaCountdownAnimation } from '../components/story/BatterySlaCountdownAnimation';
 import { EnvironmentalAlarmAnimation } from '../components/story/EnvironmentalAlarmAnimation';
+import { ChemicalBypassAnimation } from '../components/story/ChemicalBypassAnimation';
+import { ChemicalUnloadingAnimation } from '../components/story/ChemicalUnloadingAnimation';
+import { ChemicalSegregationAnimation } from '../components/story/ChemicalSegregationAnimation';
+import { ChemicalDeoPostingAnimation } from '../components/story/ChemicalDeoPostingAnimation';
 import { QuestionCard } from '../components/story/QuestionCard';
 import { DragDropCard } from '../components/story/DragDropCard';
 import { SequenceCard } from '../components/story/SequenceCard';
@@ -51,7 +56,8 @@ const allStages: StoryStage[] = [
   rawStage1Data as unknown as StoryStage,
   rawStage2Data as unknown as StoryStage,
   rawStage3Data as unknown as StoryStage,
-  rawStage4Data as unknown as StoryStage
+  rawStage4Data as unknown as StoryStage,
+  rawStage5Data as unknown as StoryStage
 ];
 
 export const StoryStagePlayer: React.FC = () => {
@@ -362,6 +368,30 @@ export const StoryStagePlayer: React.FC = () => {
                 />
               ) : scene.media.fallbackAnimation === 'environmental_breach_alarm' ? (
                 <EnvironmentalAlarmAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'chemical_bypass_routing' ? (
+                <ChemicalBypassAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'chemical_unloading_spill' ? (
+                <ChemicalUnloadingAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'chemical_segregation_matrix' ? (
+                <ChemicalSegregationAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'chemical_deo_posting' ? (
+                <ChemicalDeoPostingAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
@@ -846,11 +876,104 @@ export const StoryStagePlayer: React.FC = () => {
               <button
                 type="button"
                 onClick={() => {
-                  alert("Module 5: Hazardous Chemicals & Thinners Put-Away is the next upcoming module in Category 1!");
+                  handleSelectStage(4);
                 }}
                 className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-cyan-600 hover:bg-cyan-700 text-white shadow-lg shadow-cyan-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Proceed to Module 5 (Hazardous Chemicals &amp; Thinners)</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        ) : currentStageIndex === 4 && currentSceneIndex >= 3 ? (
+          /* Module 5 Graduation Screen (Full 4/4 Scenes Completed) */
+          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
+            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-amber-500 to-rose-600 text-white flex items-center justify-center mx-auto shadow-xl shadow-amber-500/25">
+              <Trophy className="w-10 h-10" />
+            </div>
+
+            <div className="space-y-2">
+              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-amber-800 bg-amber-50 px-3.5 py-1.5 rounded-full border border-amber-300 shadow-xs">
+                <Award className="w-4 h-4 text-amber-600" />
+                <span>BADGE UNLOCKED: HAZMAT CUSTODIAN</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Module 5 Completed!
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
+                You have mastered all <strong>4 Standard Operating Procedure steps</strong> of Hazardous Chemicals &amp; Thinners Put-Away under SOP <code>05_C1_S3</code> at Ather AURIC Plant M002.
+              </p>
+            </div>
+
+            {/* Performance Metric Strip */}
+            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
+              <div className="space-y-0.5">
+                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
+                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
+              </div>
+              <div className="space-y-0.5 border-x border-slate-200">
+                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
+                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
+              </div>
+              <div className="space-y-0.5">
+                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
+                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
+              </div>
+            </div>
+
+            {/* 4-Step Milestone Tracker */}
+            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
+              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
+                <span>Completed Module 5 Milestones (4/4):</span>
+                <span className="text-emerald-600 font-extrabold">100% SOP COMPLIANT</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                {stageData.scenes.map((s, i) => (
+                  <button
+                    key={s.id}
+                    type="button"
+                    onClick={() => handleSelectScene(i)}
+                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-amber-400 text-slate-700 hover:text-amber-700 transition-colors text-left cursor-pointer"
+                  >
+                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
+                      ✓
+                    </span>
+                    <span className="truncate font-medium">
+                      Sc {i + 1}: {s.title[lang] || s.title.en}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Next Chapter & Replay Actions */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+              <button
+                type="button"
+                onClick={() => handleSelectScene(0)}
+                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <RefreshCcw className="w-4 h-4" />
+                <span>Replay Module 5 from Start</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleSelectStage(3)}
+                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                <span>Review Module 4 (Battery Cells)</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  alert("Module 6: Supermarket C-Class Parts Put-Away (MH1) is the next upcoming module in Category 1!");
+                }}
+                className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <span>Proceed to Module 6 (Supermarket Put-Away)</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
@@ -867,7 +990,13 @@ export const StoryStagePlayer: React.FC = () => {
                 <span>MODULE {currentStageIndex + 1} · MILESTONE {currentSceneIndex + 1} COMPLETED</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                {currentStageIndex === 3
+                {currentStageIndex === 4
+                  ? currentSceneIndex === 2
+                    ? 'Scene 3: Flammability Segregation & 2-Hour SLA Mastered!'
+                    : currentSceneIndex === 1
+                    ? 'Scene 2: Spill-Containment & Earthing Mastered!'
+                    : 'Scene 1: Chemical Bypass Routing Mastered!'
+                  : currentStageIndex === 3
                   ? currentSceneIndex === 2
                     ? 'Scene 3: 2-Hour Put-Away SLA Mastered!'
                     : currentSceneIndex === 1
@@ -888,7 +1017,13 @@ export const StoryStagePlayer: React.FC = () => {
                   : "Scene 1: GRN Sticker '?' Audit Mastered!"}
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                {currentStageIndex === 3
+                {currentStageIndex === 4
+                  ? currentSceneIndex === 2
+                    ? 'You correctly sorted all flammable, oxidizing, and corrosive chemicals into isolated containment bays within the mandatory 2-hour SLA. Next in Stage 5: Scene 4 (Clause 4.4: DEO Manual GRN & ERP Stock Posting).'
+                    : currentSceneIndex === 1
+                    ? 'You correctly audited the Annex C-04 dock and spotted the missing secondary spill bund and detached static grounding clamp. Next in Stage 5: Scene 3 (Clause 4.3: Flammability Segregation & 2-Hour SLA).'
+                    : 'You correctly routed the flammable chemical tanker directly to the detached Chemical Storage Annex, bypassing the main assembly plant. Next in Stage 5: Scene 2 (Clause 4.2: Chemical PPE & Secondary Spill-Containment Inspection).'
+                  : currentStageIndex === 3
                   ? currentSceneIndex === 2
                     ? 'You correctly verified the 2-Hour strict put-away SLA window for battery cells from dock arrival to cell vault stowing. Next in Stage 4: Scene 4 (Clause 5.2: Environmental Breach Alarm & Containment Protocol).'
                     : currentSceneIndex === 1
