@@ -17,6 +17,7 @@ import rawStage3Data from '../content/stories/c1_s3_putaway_parts.json';
 import rawStage4Data from '../content/stories/c1_s4_battery_cell.json';
 import rawStage5Data from '../content/stories/c1_s5_chemicals_thinners.json';
 import rawStage6Data from '../content/stories/c1_s6_supermarket_sm.json';
+import rawStage7Data from '../content/stories/c1_s7_quarantine_disposition.json';
 import { StoryHud } from '../components/story/StoryHud';
 import { MascotAura } from '../components/story/MascotAura';
 import { TruckGateAnimation } from '../components/story/TruckGateAnimation';
@@ -47,6 +48,11 @@ import { SupermarketMh1DeskAnimation } from '../components/story/SupermarketMh1D
 import { SupermarketCountAuditAnimation } from '../components/story/SupermarketCountAuditAnimation';
 import { GravityFlowRackAnimation } from '../components/story/GravityFlowRackAnimation';
 import { SupermarketKanbanAnimation } from '../components/story/SupermarketKanbanAnimation';
+import { IqcLotQuarantineAnimation } from '../components/story/IqcLotQuarantineAnimation';
+import { RedTagJiraAnimation } from '../components/story/RedTagJiraAnimation';
+import { QuarantineSegregationAnimation } from '../components/story/QuarantineSegregationAnimation';
+import { DispositionFilterAnimation } from '../components/story/DispositionFilterAnimation';
+import { ScrapShredderAnimation } from '../components/story/ScrapShredderAnimation';
 import { QuestionCard } from '../components/story/QuestionCard';
 import { DragDropCard } from '../components/story/DragDropCard';
 import { SequenceCard } from '../components/story/SequenceCard';
@@ -63,7 +69,8 @@ const allStages: StoryStage[] = [
   rawStage3Data as unknown as StoryStage,
   rawStage4Data as unknown as StoryStage,
   rawStage5Data as unknown as StoryStage,
-  rawStage6Data as unknown as StoryStage
+  rawStage6Data as unknown as StoryStage,
+  rawStage7Data as unknown as StoryStage
 ];
 
 export const StoryStagePlayer: React.FC = () => {
@@ -422,6 +429,36 @@ export const StoryStagePlayer: React.FC = () => {
                 />
               ) : scene.media.fallbackAnimation === 'supermarket_bin_kanban' ? (
                 <SupermarketKanbanAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'iqc_lot_quarantine' ? (
+                <IqcLotQuarantineAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'red_tag_jira_logging' ? (
+                <RedTagJiraAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'quarantine_cage_segregation' ? (
+                <QuarantineSegregationAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'disposition_filter_mrb' ? (
+                <DispositionFilterAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'scrap_shredder_weighbridge' ? (
+                <ScrapShredderAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
@@ -1103,6 +1140,101 @@ export const StoryStagePlayer: React.FC = () => {
               </button>
             </div>
           </div>
+        ) : currentStageIndex === 6 && currentSceneIndex >= 4 ? (
+          /* Module 7 Graduation Screen (Full 5/5 Scenes Completed - Category 1 Finale) */
+          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
+            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-rose-600 via-red-500 to-amber-500 text-white flex items-center justify-center mx-auto shadow-xl shadow-rose-600/25">
+              <Trophy className="w-10 h-10" />
+            </div>
+
+            <div className="space-y-2">
+              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-rose-800 bg-rose-50 px-3.5 py-1.5 rounded-full border border-rose-300 shadow-xs">
+                <Award className="w-4 h-4 text-rose-600" />
+                <span>BADGE UNLOCKED: QUARANTINE SENTINEL &amp; DISPOSITION MASTER</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Module 7 Completed · Category 1 Fully Mastered!
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
+                You have mastered all <strong>5 Standard Operating Procedure steps</strong> of Quality Rejections, Quarantine &amp; Disposition under SOPs <code>07_C1_S4</code> and <code>08_C1_S4</code> at Ather AURIC Plant M002. Category 1 (Modules 1–7) is now 100% complete!
+              </p>
+            </div>
+
+            {/* Performance Metric Strip */}
+            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
+              <div className="space-y-0.5">
+                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
+                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
+              </div>
+              <div className="space-y-0.5 border-x border-slate-200">
+                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
+                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
+              </div>
+              <div className="space-y-0.5">
+                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
+                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
+              </div>
+            </div>
+
+            {/* 5-Step Milestone Tracker */}
+            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
+              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
+                <span>Completed Module 7 Milestones (5/5):</span>
+                <span className="text-rose-600 font-extrabold">100% SOP COMPLIANT</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                {stageData.scenes.map((s, i) => (
+                  <button
+                    key={s.id}
+                    type="button"
+                    onClick={() => handleSelectScene(i)}
+                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-rose-400 text-slate-700 hover:text-rose-700 transition-colors text-left cursor-pointer"
+                  >
+                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
+                      ✓
+                    </span>
+                    <span className="truncate font-medium">
+                      Sc {i + 1}: {s.title[lang] || s.title.en}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Next Chapter & Replay Actions */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+              <button
+                type="button"
+                onClick={() => handleSelectScene(0)}
+                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <RefreshCcw className="w-4 h-4" />
+                <span>Replay Module 7 from Start</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleSelectStage(5)}
+                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                <span>Review Module 6 (Supermarket Put-Away)</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  if (allStages.length > 7) {
+                    handleSelectStage(7);
+                  }
+                }}
+                className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-lg shadow-emerald-600/25 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <span>Proceed to Category 2 (Module 8: Order Picking)</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
         ) : (
           /* Intermediate Milestone Screen (Stages 2, 3 & 4) */
           <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
@@ -1115,7 +1247,15 @@ export const StoryStagePlayer: React.FC = () => {
                 <span>MODULE {currentStageIndex + 1} · MILESTONE {currentSceneIndex + 1} COMPLETED</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                {currentStageIndex === 5
+                {currentStageIndex === 6
+                  ? currentSceneIndex === 3
+                    ? 'Scene 4: The 4-Way Material Disposition Filter Mastered!'
+                    : currentSceneIndex === 2
+                    ? 'Scene 3: Quarantine Cage Storage SC01 BL & Root Cause Segregation Mastered!'
+                    : currentSceneIndex === 1
+                    ? 'Scene 2: Red Tagging, QC Stickers & JIRA Defect Logging Mastered!'
+                    : 'Scene 1: Defective Sample Detection & Entire Lot Quarantine Mastered!'
+                  : currentStageIndex === 5
                   ? currentSceneIndex === 2
                     ? 'Scene 3: Gravity Flow FIFO Roller Rack Put-Away Mastered!'
                     : currentSceneIndex === 1
@@ -1148,7 +1288,15 @@ export const StoryStagePlayer: React.FC = () => {
                   : "Scene 1: GRN Sticker '?' Audit Mastered!"}
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                {currentStageIndex === 5
+                {currentStageIndex === 6
+                  ? currentSceneIndex === 3
+                    ? 'You correctly routed quarantined components through the 4-way filter: Auto-RTV for supplier errors, Rework with 100% re-QC, Use As-Is with signed deviation notes, and Scrap with Finance sign-off. Next in Stage 7: Scene 5 (Clause 4.5: Industrial Scrap Shredding & Weighbridge Dispatch).'
+                    : currentSceneIndex === 2
+                    ? 'You correctly stowed rejected stock into blocked storage SC01 BL and segregated materials into dedicated bays based on defect root cause (Vendor Defect, Transit Damage, In-House Handling). Next in Stage 7: Scene 4 (Clause 4.4: The 4-Way Disposition Filter - Auto-RTV, Rework, Use As-Is, Scrap).'
+                    : currentSceneIndex === 1
+                    ? 'You correctly enforced the dual physical tagging rule (Red Tag + QC Sticker) and verified that JIRA tickets must have a valid Bug ID before NG logistics collection. Next in Stage 7: Scene 3 (Clause 4.3: Transfer to Caged Store SC01 BL & Root Cause Segregation).'
+                    : 'You correctly quarantined the entire 1,000-piece batch along with the 2 defective burnt samples into the NG Quarantine area, preventing fire hazards in assembly. Next in Stage 7: Scene 2 (Clause 4.2: Red Tagging, QC Stickers & JIRA Defect Ticket Creation).'
+                  : currentStageIndex === 5
                   ? currentSceneIndex === 2
                     ? 'You correctly sequenced the 4 gravity flow rack put-away steps, ensuring loading occurs strictly from the REAR lane to mechanically enforce 100% First-In, First-Out (FIFO) stock rotation. Next in Stage 6: Scene 4 (Clause 4.4 & 4.5: Physical Bin Card & e-Kanban Replenishment Trigger).'
                     : currentSceneIndex === 1

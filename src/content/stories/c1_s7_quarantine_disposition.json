@@ -1,0 +1,450 @@
+{
+  "stageId": "c1_s7",
+  "stageNumber": 7,
+  "stageTitle": {
+    "en": "Quality Rejections, Quarantine & Disposition",
+    "hi": "गुणवत्ता अस्वीकृति, क्वारंटाइन और निस्तारण",
+    "mr": "गुणवत्ता नकार, क्वारंटाइन आणि विल्हेवाट"
+  },
+  "sopDoc": "07_C1_S4_NG_RTV & 08_C1_S4_NG_Scrap",
+  "scenes": [
+    {
+      "id": "c1_s7_sc01_entire_lot_quarantine",
+      "name": {
+        "en": "Defective Sample Detection & Entire Lot Quarantine",
+        "hi": "दोषपूर्ण नमूना पहचान और संपूर्ण लॉट क्वारंटाइन",
+        "mr": "दोषपूर्ण नमुना ओळख आणि संपूर्ण लॉट क्वारंटाइन"
+      },
+      "mascot": {
+        "name": "AURA",
+        "pose": "explaining",
+        "dialog": {
+          "en": "Critical quality alert at IQC Test Bench 02! While inspecting a 10-piece sample from an incoming batch of 1,000 battery harness connectors, the inspector discovers 2 burnt, defective terminals with critical high resistance. Under SOP 07_C1_S4 and IQC Clause 4.1, which parts must immediately be sent to the NG Quarantine area?",
+          "hi": "IQC टेस्ट बेंच 02 पर गंभीर गुणवत्ता चेतावनी! 1,000 बैटरी हार्नेस कनेक्टर्स के आने वाले बैच से 10-नग के नमूने का निरीक्षण करते समय, निरीक्षक को 2 जले हुए, अत्यधिक प्रतिरोध वाले दोषपूर्ण टर्मिनल मिलते हैं। SOP 07_C1_S4 और IQC क्लॉज 4.1 के तहत, किन पुर्जों को तुरंत NG क्वारंटाइन क्षेत्र में भेजा जाना चाहिए?",
+          "mr": "IQC टेस्ट बेंच 02 वर गंभीर गुणवत्ता इशारा! 1,000 बॅटरी हार्नेस कनेक्टर्सच्या आलेल्या बॅचमधून 10 नगांच्या नमुन्याची तपासणी करताना, निरीक्षकाला 2 जळालेले व धोकादायक दोषपूर्ण टर्मिनल्स सापडतात. SOP 07_C1_S4 व IQC कलम 4.1 नुसार कोणते साहित्य तात्काळ NG क्वारंटाइन भागात पाठवले पाहिजे?"
+        }
+      },
+      "media": {
+        "type": "animation",
+        "fallbackAnimation": "iqc_lot_quarantine",
+        "caption": {
+          "en": "IQC Inspection Bench: 2 defective burnt connector samples trigger an immediate quarantine lockdown of all 1,000 units",
+          "hi": "IQC निरीक्षण बेंच: 2 दोषपूर्ण जले हुए कनेक्टर नमूने सभी 1,000 इकाइयों के तत्काल क्वारंटाइन लॉकडाउन को ट्रिगर करते हैं",
+          "mr": "IQC तपासणी बेंच: 2 जळालेले सदोष नमुने संपूर्ण 1,000 युनिट्सच्या तात्काळ क्वारंटाइन लॉकडाऊनला कारणीभूत ठरतात"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "id": "c1-q31",
+        "prompt": {
+          "en": "When IQC finds 2 defective burnt connectors in a 10-piece sample from a 1,000-piece lot, what materials must be moved to the NG Quarantine area?",
+          "hi": "जब IQC को 1,000-टुकड़ों के लॉट से 10-टुकड़ों के नमूने में 2 दोषपूर्ण जले हुए कनेक्टर मिलते हैं, तो कौन सी सामग्री NG क्वारंटाइन क्षेत्र में ले जानी चाहिए?",
+          "mr": "जेव्हा IQC ला 1,000 नगांच्या लॉटमधून घेतलेल्या 10 नमुन्यांमध्ये 2 जळालेले सदोष कनेक्टर्स सापडतात, तेव्हा कोणते साहित्य NG क्वारंटाइन विभागात हलवले पाहिजे?"
+        },
+        "options": [
+          {
+            "id": "opt_whole_lot_and_samples",
+            "correct": true,
+            "label": {
+              "en": "The 2 defective samples AND the entire remaining lot volume (all 1,000 connectors) must move to the NG Quarantine area",
+              "hi": "2 दोषपूर्ण नमूने और शेष संपूर्ण लॉट मात्रा (सभी 1,000 कनेक्टर) को NG क्वारंटाइन क्षेत्र में ले जाना चाहिए",
+              "mr": "ते 2 सदोष नमुने आणि उरलेला संपूर्ण लॉट (सर्व 1,000 कनेक्टर्स) NG क्वारंटाइन विभागात हलवले पाहिजेत"
+            }
+          },
+          {
+            "id": "opt_only_samples",
+            "correct": false,
+            "label": {
+              "en": "Only the 2 defective burnt samples move to NG; put away the other 998 uninspected connectors directly into assembly racks",
+              "hi": "केवल 2 दोषपूर्ण जले हुए नमूने NG में जाते हैं; अन्य 998 अनिरीक्षित कनेक्टर्स को सीधे असेंबली रैक में रख दें",
+              "mr": "केवळ 2 जळालेले सदोष नमुने NG मध्ये टाका; उरलेले 998 न तपासलेले कनेक्टर्स थेट असेंब्ली रॅकमध्ये भरून टाका"
+            }
+          },
+          {
+            "id": "opt_scrap_in_trash",
+            "correct": false,
+            "label": {
+              "en": "Discard the 2 burnt samples into the warehouse trash bin and clear the remaining 998 without logging a defect",
+              "hi": "2 जले हुए नमूनों को गोदाम के कूड़ेदान में फेंक दें और बिना कोई दोष दर्ज किए शेष 998 को पास कर दें",
+              "mr": "ते 2 जळालेले नमुने गोदामातील कचरापेटीत टाकून द्या आणि कोणताही दोष न नोंदवता उरलेले 998 पास करा"
+            }
+          },
+          {
+            "id": "opt_hide_samples",
+            "correct": false,
+            "label": {
+              "en": "Hide the defective samples until next week's vendor meeting to preserve supplier quality scorecard rating",
+              "hi": "आपूर्तिकर्ता गुणवत्ता स्कोरकार्ड रेटिंग को बनाए रखने के लिए अगले सप्ताह की विक्रेता बैठक तक दोषपूर्ण नमूनों को छिपाएं",
+              "mr": "सप्लायरचे रेटिंग खराब होऊ नये म्हणून पुढच्या आठवड्यातील व्हेंडर मिटिंगपर्यंत ते सदोष नमुने लपवून ठेवा"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 125,
+        "sopClause": "SOP for IQC Issuance and Clearance at AURIC Clause 4.1 & SOP for NG-RTV Clause 4.1 / Question Bank Q31 & Q32",
+        "why": {
+          "en": "SOP-IQC-AURIC & SOP-NG-RTV Clause 4.1 strictly mandate: 'If provided samples got rejected during inspection, the IQC inspector will attach an NG tag and raise a ticket to NG through JIRA. Those samples along with the whole lot move to NG area by NG manpower.' Statistical quality sampling proves that defect risk is shared across the entire manufacturing batch. Isolating only the 2 bad samples while releasing the uninspected bulk into vehicle assembly risks severe electrical fires and roadside power loss!",
+          "hi": "SOP-IQC-AURIC और SOP-NG-RTV क्लॉज 4.1 सख्ती से आदेश देते हैं: 'यदि निरीक्षण के दौरान प्रदान किए गए नमूने खारिज हो जाते हैं, तो IQC निरीक्षक एक NG टैग संलग्न करेगा और JIRA के माध्यम से NG के लिए टिकट जारी करेगा। वे नमूने पूरे लॉट के साथ NG मैनपावर द्वारा NG क्षेत्र में ले जाए जाएंगे।' केवल 2 खराब नमूनों को अलग करना और बाकी अनिरीक्षित स्टॉक को असेंबली में भेजना गंभीर बिजली की आग और सड़क पर स्कूटर रुकने का जोखिम पैदा करता है!",
+          "mr": "SOP-IQC-AURIC आणि SOP-NG-RTV कलम 4.1 कडकपणे सांगते: 'तपासणीत नमुने बाद (Reject) झाल्यास, IQC निरीक्षक NG टॅग लावून JIRA मध्ये तिकीट तयार करेल. ते नमुने आणि संपूर्ण लॉट NG कर्मचाऱ्यांमार्फत NG क्वारंटाइन भागात हलवला जाईल.' केवळ 2 नमुने बाजूला काढून उरलेला न तपासलेला माल असेंब्ली लाईनवर पाठवल्यास स्कूटरमध्ये शॉर्ट सर्किट, बॅटरीला आग आणि अचानक ब्रेकडाऊन होण्याचा भयंकर धोका निर्माण होतो!"
+        }
+      }
+    },
+    {
+      "id": "c1_s7_sc02_jira_red_tag",
+      "name": {
+        "en": "Red Tagging, QC Stickers & JIRA Defect Logging",
+        "hi": "रेड टैगिंग, QC स्टिकर और JIRA डिफेक्ट लॉगिंग",
+        "mr": "रेड टॅगिंग, QC स्टिकर्स आणि JIRA दोष नोंदणी"
+      },
+      "mascot": {
+        "name": "AURA",
+        "pose": "explaining",
+        "dialog": {
+          "en": "The NG Logistics manpower team arrives at the IQC staging desk to collect a rejected pallet of high-voltage wiring harnesses. You inspect the pallet: it has a physical Red Tag affixed, but the QC sticker is missing, and the digital JIRA ticket has no Bug ID and lists root cause as 'Unknown'. Under SOP for NG-RTV Clause 4.2 and Question Bank Q34/Q35, what MUST the NG team do?",
+          "hi": "NG लॉजिस्टिक्स मैनपावर टीम उच्च-वोल्टेज वायरिंग हार्नेस के एक खारिज पैलेट को इकट्ठा करने के लिए IQC स्टेजिंग डेस्क पर पहुंचती है। आप पैलेट का निरीक्षण करते हैं: इस पर एक भौतिक रेड टैग चिपका हुआ है, लेकिन QC स्टिकर गायब है, और डिजिटल JIRA टिकट में कोई बग आईडी नहीं है और मूल कारण 'अज्ञात' सूचीबद्ध है। SOP NG-RTV क्लॉज 4.2 और प्रश्न बैंक Q34/Q35 के तहत, NG टीम को क्या करना चाहिए?",
+          "mr": "हाय-व्होल्टेज वायरिंग हार्नेसचा बाद झालेला पॅलेट गोळा करण्यासाठी NG लॉजिस्टिक्स टीम IQC डेस्कवर पोहोचते. तुम्ही पॅलेट तपासता: त्यावर लाल रंगाचा Red Tag लावलेला आहे, पण QC स्टिकर गायब आहे आणि JIRA तिकीटामध्ये Bug ID नसून कारण 'Unknown' दाखवत आहे. SOP NG-RTV कलम 4.2 व प्रश्न संच Q34/Q35 नुसार NG टीमने काय केले पाहिजे?"
+        }
+      },
+      "media": {
+        "type": "animation",
+        "fallbackAnimation": "red_tag_jira_logging",
+        "caption": {
+          "en": "Physical Dual Marking (Red Tag + QC Sticker) and Digital JIRA Validation with mandatory Bug ID",
+          "hi": "भौतिक दोहरा अंकन (रेड टैग + क्यूसी स्टिकर) और अनिवार्य बग आईडी के साथ डिजिटल JIRA सत्यापन",
+          "mr": "प्रत्यक्ष दुहेरी मार्किंग (रेड टॅग + QC स्टिकर) आणि अनिवार्य Bug ID सह डिजिटल JIRA पडताळणी"
+        }
+      },
+      "interaction": {
+        "type": "stop_go",
+        "id": "c1-q35",
+        "prompt": {
+          "en": "A rejected lot carries a Red Tag, but the QC sticker is missing and the JIRA ticket has no Bug ID ('Unknown Cause'). Can the NG team collect it?",
+          "hi": "एक अस्वीकृत पैलेट पर रेड टैग है, लेकिन QC स्टिकर गायब है और JIRA टिकट में कोई बग आईडी नहीं है ('अज्ञात कारण')। क्या NG टीम इसे एकत्र कर सकती है?",
+          "mr": "नाकारलेल्या पॅलेटवर Red Tag आहे, पण QC स्टिकर गायब आहे आणि JIRA तिकीटात Bug ID नसून 'Unknown Cause' लिहिले आहे. NG टीम तो पॅलेट गोळा करू शकते का?"
+        },
+        "goOption": {
+          "label": {
+            "en": "GO: Collect the pallet immediately into NG caged storage SC01 BL to keep the IQC staging dock clear",
+            "hi": "GO: IQC स्टेजिंग डॉक को साफ रखने के लिए तुरंत NG पिंजरे वाले भंडारण SC01 BL में पैलेट एकत्र करें",
+            "mr": "GO: IQC स्टेजिंग डॉक मोकळा ठेवण्यासाठी ताबडतोब NG केज्ड स्टोरेज SC01 BL मध्ये पॅलेट घेऊन जा"
+          }
+        },
+        "stopOption": {
+          "label": {
+            "en": "STOP: Refuse collection! Every rejected part MUST have both a Red Tag AND QC sticker, plus a JIRA ticket showing 'QC Done: Fail' with a valid Bug ID (wait up to 2 days for SQA/MQA)",
+            "hi": "STOP: संग्रह अस्वीकार करें! प्रत्येक खारिज भाग में रेड टैग और QC स्टिकर दोनों होने चाहिए, साथ ही एक वैध बग आईडी के साथ 'QC Done: Fail' दिखाने वाला JIRA टिकट होना चाहिए (SQA/MQA के लिए 2 दिनों तक प्रतीक्षा करें)",
+            "mr": "STOP: माल उचलण्यास नकार द्या! प्रत्येक नाकारलेल्या भागावर Red Tag आणि QC स्टिकर दोन्ही असलेच पाहिजेत, तसेच वैध Bug ID सह JIRA तिकीटावर 'QC Done: Fail' स्टेटस असले पाहिजे (SQA/MQA साठी 2 दिवस थांबा)"
+          }
+        },
+        "correct": "STOP"
+      },
+      "rules": {
+        "xp": 120,
+        "sopClause": "SOP for NG - RTV Clause 4.2 & Question Bank Q34 & Q35",
+        "why": {
+          "en": "SOP for NG - RTV Clause 4.2 mandates that every rejected component must carry TWO physical identifiers before logistics collection: a Red Tag AND a QC sticker. Simultaneously, the digital JIRA ticket must have status 'QC Done: Fail' accompanied by a registered Bug ID and verified supplier defect root cause. If the Bug ID is missing or cause is marked 'Unknown', the NG team must strictly refuse collection and wait up to 2 days for SQA (Supplier Quality Assurance) or MQA to investigate and update the ticket. Collecting untracked parts creates untraceable ghost inventory in quarantine cage SC01 BL and renders vendor warranty debit notes legally void!",
+          "hi": "SOP for NG - RTV क्लॉज 4.2 आदेश देता है कि लॉजिस्टिक्स संग्रह से पहले प्रत्येक खारिज घटक में दो भौतिक पहचानकर्ता होने चाहिए: एक रेड टैग और एक QC स्टिकर। साथ ही, डिजिटल JIRA टिकट में पंजीकृत बग आईडी और सत्यापित आपूर्तिकर्ता दोष मूल कारण के साथ 'QC Done: Fail' स्थिति होनी चाहिए। यदि बग आईडी गायब है या कारण 'अज्ञात' है, तो NG टीम को संग्रह से सख्ती से इनकार करना चाहिए और SQA/MQA के लिए 2 दिनों तक प्रतीक्षा करनी चाहिए।",
+          "mr": "SOP for NG - RTV कलम 4.2 नुसार लॉजिस्टिक्स टीमने माल उचलण्यापूर्वी प्रत्येक नाकारलेल्या भागावर दोन गोष्टी असणे बंधनकारक आहे: Red Tag आणि QC स्टिकर. त्याचबरोबर JIRA तिकीटावर वैध Bug ID, सप्लायरचे नाव आणि कारणासह 'QC Done: Fail' स्टेटस असणे आवश्यक आहे. Bug ID नसल्यास किंवा कारण 'Unknown' असल्यास माल उचलण्यास सक्त मनाई आहे आणि SQA/MQA कडून दुरुस्ती होईपर्यंत 2 दिवस वाट पाहिली जाते."
+        }
+      }
+    },
+    {
+      "id": "c1_s7_sc03_quarantine_transfer",
+      "name": {
+        "en": "Quarantine Cage Storage SC01 BL & Root Cause Segregation",
+        "hi": "क्वारंटाइन केज स्टोरेज SC01 BL और मूल कारण पृथक्करण",
+        "mr": "क्वारंटाइन केज स्टोरेज SC01 BL आणि मूळ कारणानुसार वर्गीकरण"
+      },
+      "mascot": {
+        "name": "AURA",
+        "pose": "explaining",
+        "dialog": {
+          "en": "We have entered the high-security caged Quarantine Store (Storage Location: SC01 BL)! As rejected materials are stowed here, SAP EWM moves inventory to Blocked Stock and the digital JIRA ticket transitions to 'Quality Failed'. Under SOP NG-RTV Clause 4.3 and Question Bank Q36 & Q37, how must rejected materials be segregated inside the cage?",
+          "hi": "हम उच्च-सुरक्षा पिंजरे वाले क्वारंटाइन स्टोर (भंडारण स्थान: SC01 BL) में प्रवेश कर चुके हैं! जैसे ही खारिज सामग्री को यहां संग्रहीत किया जाता है, SAP EWM इन्वेंट्री को ब्लॉक स्टॉक में ले जाता है और डिजिटल JIRA टिकट 'Quality Failed' में बदल जाता है। SOP NG-RTV क्लॉज 4.3 और प्रश्न बैंक Q36 और Q37 के तहत, पिंजरे के अंदर अस्वीकृत सामग्रियों को कैसे अलग किया जाना चाहिए?",
+          "mr": "आपण अति-सुरक्षित केज्ड क्वारंटाइन स्टोअरमध्ये (लोकेशन: SC01 BL) प्रवेश केला आहे! नाकारलेले साहित्य येथे ठेवताच SAP मधील स्टॉक Blocked Stock मध्ये जातो आणि JIRA तिकीट 'Quality Failed' स्टेटसमध्ये बदलते. SOP NG-RTV कलम 4.3 आणि प्रश्न संच Q36 व Q37 नुसार केजच्या आत साहित्याची वर्गवारी कशी केली पाहिजे?"
+        }
+      },
+      "media": {
+        "type": "animation",
+        "fallbackAnimation": "quarantine_cage_segregation",
+        "caption": {
+          "en": "Caged Store SC01 BL: Segregating rejected stock by root cause across Vendor, Transit, and In-House bays",
+          "hi": "केज्ड स्टोर SC01 BL: वेंडर, ट्रांजिट और इन-हाउस बे में मूल कारण द्वारा खारिज स्टॉक को अलग करना",
+          "mr": "केज्ड स्टोअर SC01 BL: व्हेंडर, ट्रान्झिट आणि इन-हाऊस बे मध्ये कारणांनुसार नाकारलेल्या साहित्याचे वर्गीकरण"
+        }
+      },
+      "interaction": {
+        "type": "drag_drop",
+        "id": "c1-q37",
+        "prompt": {
+          "en": "Drag each rejected lot to its correct dedicated containment bay inside Quarantine Cage SC01 BL based on its defect root cause:",
+          "hi": "प्रत्येक खारिज लॉट को उसके दोष के मूल कारण के आधार पर क्वारंटाइन केज SC01 BL के अंदर उसके सही समर्पित बे में खींचें:",
+          "mr": "दोष निर्मितीच्या कारणावर आधारित प्रत्येक नाकारलेला लॉट क्वारंटाइन केज SC01 BL मधील योग्य बे मध्ये ड्रॅग करा:"
+        },
+        "zones": [
+          {
+            "id": "zone_vendor",
+            "title": {
+              "en": "Bay A: Vendor Defect (SQA Hold)",
+              "hi": "बे A: आपूर्तिकर्ता दोष (SQA)",
+              "mr": "बे A: सप्लायर दोष (SQA)"
+            }
+          },
+          {
+            "id": "zone_transit",
+            "title": {
+              "en": "Bay B: Transit Logistics Damage",
+              "hi": "बे B: पारगमन लॉजिस्टिक्स क्षति",
+              "mr": "बे B: वाहतूक व ट्रान्झिट नुकसान"
+            }
+          },
+          {
+            "id": "zone_inhouse",
+            "title": {
+              "en": "Bay C: In-House Handling Rejection",
+              "hi": "बे C: इन-हाउस हैंडलिंग अस्वीकृति",
+              "mr": "बे C: फॅक्टरी अंतर्गत हाताळणी नुकसान"
+            }
+          }
+        ],
+        "items": [
+          {
+            "id": "item_harness",
+            "correctZone": "zone_vendor",
+            "label": {
+              "en": "Battery harness with loose contact crimps manufactured out-of-spec by supplier",
+              "hi": "आपूर्तिकर्ता द्वारा विनिर्देश से बाहर निर्मित ढीले संपर्क क्रिम्प के साथ बैटरी हार्नेस",
+              "mr": "सप्लायरकडून स्पेसिफिकेशनबाहेर सैल क्रिम केलेले बॅटरी हार्नेस टर्मिनल्स"
+            }
+          },
+          {
+            "id": "item_lens",
+            "correctZone": "zone_transit",
+            "label": {
+              "en": "Carton of headlamp lenses waterlogged by rain through a torn 3PL truck tarpaulin",
+              "hi": "फटे हुए 3PL ट्रक तिरपाल से बारिश के पानी में भीगे हेडलाइट लेंस का कार्टन",
+              "mr": "ट्रान्स्पोर्ट ट्रकचे ताडपत्री फाटल्याने पावसाच्या पाण्यात भिजलेले हेडलाईट लेन्सचे बॉक्स"
+            }
+          },
+          {
+            "id": "item_fairing",
+            "correctZone": "zone_inhouse",
+            "label": {
+              "en": "Ather 450X side fairing cracked after being dropped from an assembly line trolley",
+              "hi": "असेंबली लाइन ट्रॉली से गिरने के बाद चटका हुआ Ather 450X साइड पैनल",
+              "mr": "अ‍ॅसेंब्ली लाईन ट्रॉलीवरून खाली पडून तडकलेले Ather 450X चे साईड फेअरिंग पॅनेल"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 130,
+        "sopClause": "SOP for NG - RTV Clause 4.3 & Question Bank Q36 & Q37",
+        "why": {
+          "en": "SOP for NG - RTV Clause 4.3 mandates: 'Parts are physically segregated in the NG area strictly based on the cause of rejection: Vendor Manufacturing Defects, Transit Damage, or In-House Handling Rejections.' Each category has completely different commercial and legal accountability: Vendor defects are billed via SQA debit notes to suppliers; transit damage is claimed against third-party logistics insurance policies; and in-house handling rejections are charged to plant scrap cost centers. Mixing causes leads to rejected warranty claims and incorrect SAP inventory financial postings.",
+          "hi": "SOP for NG - RTV क्लॉज 4.3 कहता है: 'NG क्षेत्र में भागों को अस्वीकृति के कारण के आधार पर सख्ती से अलग किया जाता है: विक्रेता विनिर्माण दोष, पारगमन क्षति, या इन-हाउस हैंडलिंग अस्वीकृति।' प्रत्येक श्रेणी की पूरी तरह से अलग वाणिज्यिक और कानूनी जवाबदेही होती है: विक्रेता दोषों को SQA डेबिट नोटों के माध्यम से आपूर्तिकर्ताओं को बिल किया जाता है; पारगमन क्षति का दावा 3PL बीमा पॉलिसियों के खिलाफ किया जाता है; और आंतरिक नुकसान को प्लांट स्क्रैप लागत केंद्रों से वसूला जाता है।",
+          "mr": "SOP for NG - RTV कलम 4.3 सांगते: 'NG विभागात साहित्य कडकपणे दोषाच्या कारणावर आधारित वेगळे ठेवले जाते: सप्लायर उत्पादन दोष, वाहतूक नुकसान, किंवा अंतर्गत हाताळणी नुकसान.' प्रत्येक श्रेणीची आर्थिक व कायदेशीर जबाबदारी वेगळी असते: सप्लायर दोषांसाठी डेबिट नोट निघते; वाहतूक नुकसानीसाठी इन्शुरन्स क्लेम केला जातो; आणि फॅक्टरी अंतर्गत नुकसानीचा खर्च संबंधित विभागाच्या स्क्रॅप खात्यात पडतो. हे एकत्र मिसळल्यास इन्शुरन्स क्लेम रद्द होतो."
+        }
+      }
+    },
+    {
+      "id": "c1_s7_sc04_disposition_filter",
+      "name": {
+        "en": "The 4-Way Material Disposition Filter",
+        "hi": "4-तरफा सामग्री निस्तारण फ़िल्टर",
+        "mr": "4-मार्ग साहित्य विल्हेवाट फिल्टर"
+      },
+      "mascot": {
+        "name": "AURA",
+        "pose": "explaining",
+        "dialog": {
+          "en": "The Material Review Board (MRB) — comprising SQA, Manufacturing Quality, Production, and Warehouse — convenes inside caged store SC01 BL to decide the fate of 4 quarantined lots. Verbal approvals are strictly illegal at Ather AURIC Plant M002! Route each quarantined component case study to its authorized disposition path (Auto-RTV, Rework, Use As-Is Deviation, or Scrap).",
+          "hi": "मटेरियल रिव्यू बोर्ड (MRB) — जिसमें SQA, मैन्युफैक्चरिंग क्वालिटी, प्रोडक्शन और वेयरहाउस शामिल हैं — 4 क्वारंटाइन लॉट के भाग्य का फैसला करने के लिए केज्ड स्टोर SC01 BL के अंदर बैठक करता है। एथर औरिक प्लांट M002 में मौखिक अनुमोदन सख्त अवैध हैं! प्रत्येक क्वारंटाइन घटक केस स्टडी को उसके अधिकृत निस्तारण पथ (Auto-RTV, Rework, Use As-Is Deviation, या Scrap) पर भेजें।",
+          "mr": "मटेरियल रिव्ह्यू बोर्ड (MRB) — ज्यामध्ये SQA, उत्पादन गुणवत्ता, प्रोडक्शन आणि वेअरहाऊस प्रमुख असतात — 4 क्वारंटाइन लॉट्सच्या विल्हेवाटीचा निर्णय घेण्यासाठी SC01 BL मध्ये एकत्र येतो. एथर औरिक प्लांट M002 मध्ये तोंडी संमतीला सक्त मनाई आहे! प्रत्येक केस स्टडीला तिच्या अधिकृत विल्हेवाट मार्गावर (Auto-RTV, Rework, Use As-Is Deviation, किंवा Scrap) पाठवा."
+        }
+      },
+      "media": {
+        "type": "animation",
+        "fallbackAnimation": "disposition_filter_mrb",
+        "caption": {
+          "en": "Material Review Board (MRB): 4-Way Disposition Gateways (Auto-RTV, Rework, Use As-Is, Scrap)",
+          "hi": "सामग्री समीक्षा बोर्ड (MRB): 4-तरफा निस्तारण द्वार (Auto-RTV, Rework, Use As-Is, Scrap)",
+          "mr": "मटेरियल रिव्ह्यू बोर्ड (MRB): 4-मार्ग विल्हेवाट दालने (Auto-RTV, Rework, Use As-Is, Scrap)"
+        }
+      },
+      "interaction": {
+        "type": "drag_drop",
+        "id": "c1-q36-mrb",
+        "prompt": {
+          "en": "Sort the 4 quarantined material cases into their legally authorized disposition routes under Ather SOP 07_C1_S4:",
+          "hi": "एथर SOP 07_C1_S4 के तहत 4 क्वारंटाइन सामग्री मामलों को उनके कानूनी रूप से अधिकृत निस्तारण मार्गों में क्रमबद्ध करें:",
+          "mr": "एथर SOP 07_C1_S4 नुसार 4 क्वारंटाइन साहित्यांची त्यांच्या अधिकृत विल्हेवाट मार्गानुसार वर्गवारी करा:"
+        },
+        "zones": [
+          {
+            "id": "zone_rtv",
+            "title": {
+              "en": "1. Auto-RTV (Return to Vendor)",
+              "hi": "1. ऑटो-RTV (आपूर्तिकर्ता को वापसी)",
+              "mr": "1. ऑटो-RTV (सप्लायरला परत)"
+            }
+          },
+          {
+            "id": "zone_rework",
+            "title": {
+              "en": "2. Internal Rework (100% Re-QC)",
+              "hi": "2. आंतरिक रिवर्क (100% पुनः निरीक्षण)",
+              "mr": "2. फॅक्टरी अंतर्गत रिवर्क (100% पुन्हा तपासणी)"
+            }
+          },
+          {
+            "id": "zone_as_is",
+            "title": {
+              "en": "3. Use As-Is (Signed Deviation Note)",
+              "hi": "3. जसा आहे तसा वापरा (स्वाक्षरी केलेले डेव्हिएशन नोट)",
+              "mr": "3. युज अ‍ॅज-इज (अधिकृत डेव्हिएशन नोट)"
+            }
+          },
+          {
+            "id": "zone_scrap",
+            "title": {
+              "en": "4. Scrap (Finance Sign-Off & Shredder)",
+              "hi": "4. स्क्रॅप (वित्त हस्ताक्षर और श्रेडर)",
+              "mr": "4. स्क्रॅप (फायनान्स मंजुरी आणि श्रेडिंग)"
+            }
+          }
+        ],
+        "items": [
+          {
+            "id": "item_cast_swingarm",
+            "correctZone": "zone_rtv",
+            "label": {
+              "en": "500 Cast Swingarms with unmachined axle holes due to supplier CNC tooling offset",
+              "hi": "आपूर्तिकर्ता सीएनसी टूलिंग ऑफसेट के कारण बिना मशीनीकृत एक्सल छेद वाले 500 कास्ट स्विंगआर्म्स",
+              "mr": "सप्लायरच्या सीएनसी टूलिंग चुकीमुळे मशीनिंग न केलेले अ‍ॅक्सल होल असलेले 500 कास्ट स्विंगआर्म्स"
+            }
+          },
+          {
+            "id": "item_harness_housing",
+            "correctZone": "zone_rework",
+            "label": {
+              "en": "50 Sub-assembly harnesses with misaligned plastic clips easily re-seated with an approved jig",
+              "hi": "अनुमोदित जिग के साथ आसानी से पुन: लगाए जा सकने वाले गलत संरेखित प्लास्टिक क्लिप के साथ 50 हार्नेस",
+              "mr": "मान्यताप्राप्त जिगच्या मदतीने सहज पुन्हा बसवता येणाऱ्या चुकीच्या प्लास्टिक क्लिप्स असलेले 50 हार्नेस"
+            }
+          },
+          {
+            "id": "item_frame_discolor",
+            "correctZone": "zone_as_is",
+            "label": {
+              "en": "200 Internal battery trays with cosmetic primer shade variation inside sealed chassis (Zero structural/safety effect)",
+              "hi": "सील चेसिस के अंदर कॉस्मेटिक प्राइमर शेड भिन्नता वाले 200 आंतरिक ट्रे (शून्य संरचनात्मक/सुरक्षा प्रभाव)",
+              "mr": "सील चेसिसच्या आतल्या भागात कॉस्मेटिक प्राइमरचा रंग थोडा बदललेले 200 बॅटरी ट्रे (शून्य सुरक्षा प्रभाव)"
+            }
+          },
+          {
+            "id": "item_punctured_cell",
+            "correctZone": "zone_scrap",
+            "label": {
+              "en": "3 Punctured lithium-ion cell packs with internal short circuits that cannot be salvaged or shipped back",
+              "hi": "आंतरिक शॉर्ट सर्किट वाले 3 छिद्रित लिथियम-आयन सेल पैक जिन्हें बचाया या वापस नहीं भेजा जा सकता",
+              "mr": "शॉर्ट सर्किट झालेले आणि परत पाठवणे अशक्य असलेले 3 पंचर झालेले लिथियम-आयन सेल पॅक्स"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 135,
+        "sopClause": "SOP for NG - RTV Clause 4.4 & SOP for NG - Scrap Clause 4.1",
+        "why": {
+          "en": "SOP for NG - RTV Clause 4.4 defines the strict 4-way filter. Supplier manufacturing discrepancies qualify for Auto-RTV with immediate debit notes. Fixable discrepancies undergo documented internal rework and must undergo 100% re-inspection by IQC before stock entry. Cosmetic deviations require formal Engineering Deviation approval signed by the Chief Technical Officer and Head of Quality. Dangerous, hazardous, or unrepairable materials require joint Production & Finance approval to move into Scrapyard SC01 BL for verified industrial shredding.",
+          "hi": "SOP for NG - RTV क्लॉज 4.4 सख्त 4-तरफा फिल्टर को परिभाषित करता है। आपूर्तिकर्ता विनिर्माण विसंगतियां तत्काल डेबिट नोटों के साथ ऑटो-RTV के लिए योग्य हैं। मरम्मत योग्य विसंगतियों का प्रलेखित आंतरिक रीवर्क होता है और स्टॉक प्रविष्टि से पहले IQC द्वारा 100% पुनः निरीक्षण किया जाना चाहिए। कॉस्मेटिक विचलन के लिए सीटीओ और गुणवत्ता प्रमुख द्वारा हस्ताक्षरित औपचारिक इंजीनियरिंग विचलन अनुमोदन की आवश्यकता होती है। खतरनाक या अपूरणीय सामग्री को औद्योगिक श्रेडिंग के लिए स्क्रैप SC01 BL में ले जाने के लिए संयुक्त उत्पादन और वित्त अनुमोदन की आवश्यकता होती है।",
+          "mr": "SOP for NG - RTV कलम 4.4 नुसार 4 मार्गांची कडक छाननी होते: सप्लायरच्या दोषांसाठी तात्काळ डेबिट नोटसह Auto-RTV होते. दुरुस्त करण्यायोग्य भागांचे अधिकृत रिवर्क होऊन IQC कडून 100% फेरतपासणी होते. कॉस्मेटिक दोषांसाठी चीफ इंजिनिअर व क्वालिटी प्रमुखांचे स्वाक्षरी केलेले Deviation Note लागते. आणि धोकादायक किंवा दुरुस्त न होणाऱ्या भागांसाठी फायनान्स व प्रोडक्शन मंजुरी घेऊन SC01 BL स्क्रॅप यार्डमध्ये श्रेडिंग केले जाते."
+        }
+      }
+    },
+    {
+      "id": "c1_s7_sc05_scrap_weighbridge_exit",
+      "name": {
+        "en": "Scrap Shredding Verification & Weighbridge Gate Exit",
+        "hi": "स्क्रैप श्रेडिंग सत्यापन और वेईब्रिज गेट निकास",
+        "mr": "स्क्रॅप श्रेडिंग पडताळणी आणि वेईब्रिज गेट एक्झिट"
+      },
+      "mascot": {
+        "name": "AURA",
+        "pose": "explaining",
+        "dialog": {
+          "en": "Final station of Category 1! We are at the Ather Scrapyard Building and Outbound Weighbridge. Defective structural components approved for scrap by Finance and Production must be physically shredded to ensure zero unauthorized street resale, followed by strict weighbridge verification before truck gate exit. Put the 4 steps of the complete scrap disposal lifecycle in the exact SOP sequence!",
+          "hi": "श्रेणी 1 का अंतिम स्टेशन! हम एथर स्क्रैपयार्ड बिल्डिंग और आउटबाउंड वेईब्रिज पर हैं। वित्त और उत्पादन द्वारा स्क्रैप के लिए अनुमोदित दोषपूर्ण संरचनात्मक घटकों को शारीरिक रूप से काटा जाना चाहिए ताकि शून्य अनधिकृत सड़क पुनर्विक्रय सुनिश्चित हो सके, जिसके बाद ट्रक गेट से बाहर निकलने से पहले सख्त वेईब्रिज सत्यापन हो। पूर्ण स्क्रैप निपटान जीवनचक्र के 4 चरणों को सटीक SOP क्रम में रखें!",
+          "mr": "कॅटेगरी 1 चा अंतिम टप्पा! आपण एथर स्क्रॅप यार्ड आणि आऊटबाउंड वेईब्रिजवर पोहोचलो आहोत. फायनान्स व प्रोडक्शनने स्क्रॅप मंजूर केलेल्या नाकारलेल्या साहित्याचे औद्योगिक श्रेडरमध्ये तुकडे केले पाहिजेत जेणेकरून ते पुन्हा बाजारात जाऊ नये, आणि त्यानंतर वेईब्रिजवर वजन करून ट्रक सोडला जातो. अधिकृत SOP नुसार स्क्रॅप विल्हेवाटीच्या 4 टप्प्यांचा अचूक क्रम लावा!"
+        }
+      },
+      "media": {
+        "type": "animation",
+        "fallbackAnimation": "scrap_shredder_weighbridge",
+        "caption": {
+          "en": "Ather Scrapyard & Weighbridge: Industrial twin-shaft shredding and net tare/gross weight verification for Delivery Challan",
+          "hi": "एथर स्क्रैपयार्ड और वेईब्रिज: डिलीवरी चालान के लिए औद्योगिक ट्विन-शाफ्ट श्रेडिंग और शुद्ध वजन सत्यापन",
+          "mr": "एथर स्क्रॅप यार्ड आणि वेईब्रिज: डिलिव्हरी चलनासाठी औद्योगिक श्रेडिंग आणि प्रत्यक्ष नेट वजनाची खात्री"
+        }
+      },
+      "interaction": {
+        "type": "sequence",
+        "id": "c1-q-scrap-seq",
+        "prompt": {
+          "en": "Arrange the 4 steps of the Ather Scrap & Vendor Weighbridge Exit lifecycle in the strictly mandated SOP sequence:",
+          "hi": "कड़ाई से अनिवार्य SOP अनुक्रम में एथर स्क्रैप और विक्रेता वेईब्रिज निकास जीवन चक्र के 4 चरणों को व्यवस्थित करें:",
+          "mr": "कडक SOP नियमांनुसार एथर स्क्रॅप आणि वेईब्रिज गेट एक्झिटच्या 4 टप्प्यांची अचूक क्रमाने मांडणी करा:"
+        },
+        "items": [
+          {
+            "id": "step_scrap_approval",
+            "correctOrder": 1,
+            "label": {
+              "en": "1. Secure signed Finance and Production Scrap Approval Note, transition JIRA to 'To be Scrapped', and move stock to SC01 BL in SAP",
+              "hi": "1. हस्ताक्षरित वित्त और उत्पादन स्क्रैप अनुमोदन नोट सुरक्षित करें, JIRA को 'To be Scrapped' में बदलें, और SAP में स्टॉक को SC01 BL में ले जाएं",
+              "mr": "1. फायनान्स व प्रोडक्शनची अधिकृत स्क्रॅप मंजुरी मिळवा, JIRA स्टेटस 'To be Scrapped' करा आणि SAP मधील स्टॉक SC01 BL मध्ये हलवा"
+            }
+          },
+          {
+            "id": "step_witness_shredding",
+            "correctOrder": 2,
+            "label": {
+              "en": "2. Physically transfer rejected parts to Scrapyard and execute witnessed industrial twin-shaft mechanical shredding",
+              "hi": "2. खारिज किए गए पुर्जों को शारीरिक रूप से स्क्रैपयार्ड में स्थानांतरित करें और गवाहों की उपस्थिति में औद्योगिक ट्विन-शाफ्ट यांत्रिक श्रेडिंग निष्पादित करें",
+              "mr": "2. नाकारलेले साहित्य स्क्रॅप यार्डमध्ये नेऊन सुपरवायझरच्या उपस्थितीत औद्योगिक श्रेडरमध्ये त्याचे पूर्णपणे तुकडे करा"
+            }
+          },
+          {
+            "id": "step_jira_proof_upload",
+            "correctOrder": 3,
+            "label": {
+              "en": "3. Upload destruction photos and disposal certificates into JIRA tickets and transition status to 'Scrapped'",
+              "hi": "3. JIRA टिकटों में विनाश की तस्वीरें और निपटान प्रमाणपत्र अपलोड करें और स्थिति को 'Scrapped' में बदलें",
+              "mr": "3. JIRA तिकीटावर श्रेडिंगचे फोटो व विल्हेवाट प्रमाणपत्र अपलोड करा आणि स्टेटस 'Scrapped' करा"
+            }
+          },
+          {
+            "id": "step_weighbridge_dc",
+            "correctOrder": 4,
+            "label": {
+              "en": "4. Weigh empty vendor truck (Tare), load shredded scrap, weigh full truck (Gross), and obtain Finance Delivery Challan for gate exit",
+              "hi": "4. खाली विक्रेता ट्रक का वजन करें (Tare), कटा हुआ स्क्रैप लोड करें, भरे हुए ट्रक का वजन करें (Gross), और गेट से बाहर निकलने के लिए वित्त डिलीवरी चालान प्राप्त करें",
+              "mr": "4. रिकाम्या ट्रकचे वजन करा (Tare), स्क्रॅप लोड करा, भरलेल्या ट्रकचे वजन करा (Gross), आणि फायनान्सकडून डिलिव्हरी चलन घेऊन गेट एक्झिट करा"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 140,
+        "sopClause": "SOP for NG - Scrap (08_C1_S4) Clause 4.1 to 4.5 & Category 2 Long SOP Section 7",
+        "why": {
+          "en": "SOP for NG - Scrap mandates an unbroken chain of custody for scrapped assets: (1) Finance and Production sign-off prevents unauthorized write-offs; (2) Mechanical shredding guarantees rejected battery connectors, structural frames, and branded body panels can never re-enter grey replacement markets or cause consumer safety hazards; (3) JIRA photo proof legally completes internal audit trails; (4) Weighbridge dual measurement (Tare vs Gross) confirms exact tonnage to ensure zero pilferage before Finance signs the final outbound Delivery Challan.",
+          "hi": "SOP for NG - Scrap स्क्रैप की गई संपत्तियों के लिए कस्टडी की एक अटूट श्रृंखला का आदेश देता है: (1) वित्त और उत्पादन साइन-ऑफ अनधिकृत राइट-ऑफ को रोकता है; (2) यांत्रिक श्रेडिंग गारंटी देती है कि खारिज किए गए बैटरी कनेक्टर, चेसिस फ्रेम और ब्रांडेड बॉडी पैनल कभी भी ग्रे रिप्लेसमेंट बाजारों में फिर से प्रवेश नहीं कर सकते हैं; (3) JIRA फोटो प्रूफ कानूनी रूप से आंतरिक ऑडिट ट्रेल्स को पूरा करता है; (4) वेईब्रिज दोहरा माप (खाली बनाम भरा) वित्त द्वारा अंतिम आउटबाउंड डिलीवरी चालान पर हस्ताक्षर करने से पहले शून्य चोरी सुनिश्चित करने के लिए सटीक टन भार की पुष्टि करता है।",
+          "mr": "SOP for NG - Scrap स्क्रॅप मालमत्तेसाठी कडक नियमावली सांगते: (1) फायनान्स व प्रोडक्शन मंजुरी अनधिकृत स्क्रॅप रोखते; (2) यांत्रिक श्रेडिंगमुळे नाकारलेले चेसिस किंवा बॅटरीचे सुटे भाग पुन्हा बाजारात विकले जाण्याचा किंवा अपघात होण्याचा धोका संपतो; (3) JIRA वरील फोटो पुरावे अंतर्गत ऑडिटसाठी बंधनकारक आहेत; (4) वेईब्रिजवर रिकाम्या व भरलेल्या ट्रकचे अचूक वजन करून चोरी रोखली जाते आणि फायनान्सचे डिलिव्हरी चलन घेऊनच गेटमधून ट्रक बाहेर पडतो."
+        }
+      }
+    }
+  ]
+}
