@@ -12,7 +12,11 @@ export const ChemicalUnloadingAnimation: React.FC<Props> = ({
   isPaused,
   onPauseReached
 }) => {
-  const [videoAvailable, setVideoAvailable] = useState<boolean>(false);
+  const [videoAvailable, setVideoAvailable] = useState<boolean>(Boolean(videoSrc));
+
+  useEffect(() => {
+    setVideoAvailable(Boolean(videoSrc));
+  }, [videoSrc]);
   const [hasTriggeredPause, setHasTriggeredPause] = useState(false);
   const [sparkPulse, setSparkPulse] = useState(false);
 
@@ -49,8 +53,13 @@ export const ChemicalUnloadingAnimation: React.FC<Props> = ({
         />
       )}
 
-      {/* Atmospheric Industrial Grid Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 opacity-95 pointer-events-none" />
+      {/* Atmospheric Industrial Grid Background with Authentic Chemical Building Photo */}
+      <img
+        src="/Assets/Background%20Environments/bg_chemical_building.jpg"
+        alt="Chemical Storage Building"
+        className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay pointer-events-none"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 opacity-90 pointer-events-none" />
       <div 
         className="absolute inset-0 opacity-10 pointer-events-none"
         style={{

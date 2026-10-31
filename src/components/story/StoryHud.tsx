@@ -1,8 +1,9 @@
-import React from 'react';
-import { Heart, Award, ArrowLeft } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Heart, Award, ArrowLeft, Volume2, VolumeX } from 'lucide-react';
 import { AtherLogo } from '../common/AtherLogo';
 import { LanguageSwitcher } from '../common/LanguageSwitcher';
 import type { LanguageCode } from '../../engine/story/types';
+import { getAutoVoiceover, setAutoVoiceover, subscribeAutoVoiceover } from '../../engine/sound';
 
 export interface StageTabItem {
   id: string;
@@ -36,6 +37,11 @@ export const StoryHud: React.FC<Props> = ({
   onSelectStage
 }) => {
   const [catFilter, setCatFilter] = React.useState<'all' | 'cat1' | 'cat2'>('all');
+  const [autoVoice, setAutoVoice] = useState<boolean>(getAutoVoiceover());
+
+  useEffect(() => {
+    return subscribeAutoVoiceover((val) => setAutoVoice(val));
+  }, []);
 
   const filteredStages = (stages || []).filter((stg) => {
     if (catFilter === 'cat1') return stg.stageNumber <= 7;
@@ -46,11 +52,17 @@ export const StoryHud: React.FC<Props> = ({
   return (
     <header className="shrink-0 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-2xs z-30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 flex items-center justify-between gap-3">
-        {/* Left: Ather Brand + Stage info + Category Filter & Stage Switcher */}
+        {/* Left: Ather Brand + Tetrahedron Logo + Stage info + Category Filter & Stage Switcher */}
         <div className="flex items-center gap-2.5">
           <AtherLogo className="h-8 sm:h-9" />
           <div className="h-6 w-px bg-slate-200 hidden sm:block" />
-          <div className="hidden sm:flex flex-col">
+          <img
+            src="/logo/Tetrahedron-logo-transparent.svg"
+            alt="Tetrahedron"
+            className="h-6 sm:h-7 object-contain opacity-85 hover:opacity-100 transition-opacity hidden sm:block"
+          />
+          <div className="h-6 w-px bg-slate-200 hidden md:block" />
+          <div className="hidden md:flex flex-col">
             <span className="text-xs font-bold text-slate-800 tracking-tight">
               {stageTitle}
             </span>
@@ -151,6 +163,40 @@ export const StoryHud: React.FC<Props> = ({
 
           {/* Language Switcher Pill */}
           <LanguageSwitcher currentLang={lang} onSelectLang={onSelectLang} />
+
+          {/* Auto-Read / Auto-Play Voiceover Toggle */}
+          <button
+            type="button"
+            onClick={() => setAutoVoiceover(!autoVoice)}
+            title={
+              autoVoice
+                ? 'Auto-Play Voiceover: ACTIVE (Click to Mute Auto-Read)'
+                : 'Auto-Play Voiceover: MUTED (Click to Enable Auto-Read)'
+            }
+            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-full border text-xs font-mono font-bold transition-all cursor-pointer ${
+              autoVoice
+                ? 'bg-emerald-50 text-emerald-800 border-emerald-300 shadow-2xs hover:bg-emerald-100'
+                : 'bg-slate-50 text-slate-500 border-slate-200 hover:bg-slate-100 hover:text-slate-700'
+            }`}
+          >
+            {autoVoice ? (
+              <>
+                <Volume2 className="w-3.5 h-3.5 text-emerald-600" />
+                <span className="hidden sm:inline">Auto Voice</span>
+                <span className="text-[10px] bg-emerald-600 text-white px-1.5 py-0.2 rounded-full font-extrabold">
+                  ON
+                </span>
+              </>
+            ) : (
+              <>
+                <VolumeX className="w-3.5 h-3.5 text-slate-400" />
+                <span className="hidden sm:inline">Auto Voice</span>
+                <span className="text-[10px] bg-slate-200 text-slate-600 px-1.5 py-0.2 rounded-full font-bold">
+                  OFF
+                </span>
+              </>
+            )}
+          </button>
 
           {/* Restart Button */}
           <button

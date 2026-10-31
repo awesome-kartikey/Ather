@@ -12,7 +12,11 @@ export const TruckGateAnimation: React.FC<Props> = ({
   isPaused,
   onPauseReached
 }) => {
-  const [videoAvailable, setVideoAvailable] = useState<boolean>(false);
+  const [videoAvailable, setVideoAvailable] = useState<boolean>(Boolean(videoSrc));
+
+  useEffect(() => {
+    setVideoAvailable(Boolean(videoSrc));
+  }, [videoSrc]);
   const [hasTriggeredPause, setHasTriggeredPause] = useState(false);
 
   // Trigger pause after 4.5 seconds of driving in

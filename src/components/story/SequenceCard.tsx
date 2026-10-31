@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowUp, ArrowDown, CheckCircle2, RotateCcw, ListOrdered } from 'lucide-react';
 import type { SequenceInteraction, LanguageCode } from '../../engine/story/types';
+import { resolvePropForQuestion } from '../../engine/story/assetRegistry';
 
 interface Props {
   interaction: SequenceInteraction;
@@ -17,6 +18,10 @@ export const SequenceCard: React.FC<Props> = ({
 }) => {
   const steps = interaction.steps || (interaction as any).items || [];
   const questionText = interaction.question || (interaction as any).prompt;
+
+  const qId = interaction.questionId || (interaction as any).id || 'SEQ';
+  const qPrompt = questionText?.en || '';
+  const propImg = (interaction as any).propImage || resolvePropForQuestion(qId, qPrompt);
 
   // Initial shuffle so the user has to sort it
   const [orderedIds, setOrderedIds] = useState<string[]>(() => {
@@ -93,6 +98,23 @@ export const SequenceCard: React.FC<Props> = ({
           </p>
         )}
       </div>
+
+      {/* Contextual Floor Prop Cutout (if applicable) */}
+      {propImg && (
+        <div className="flex items-center gap-3 p-3 rounded-2xl bg-blue-50/50 border border-blue-200/80">
+          <div className="w-12 h-12 shrink-0 p-1 rounded-xl bg-white border border-blue-200 shadow-xs flex items-center justify-center">
+            <img src={propImg} alt="Floor Tool" className="max-w-full max-h-full object-contain" />
+          </div>
+          <div className="space-y-0.5">
+            <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-blue-700 block">
+              Reference Floor Prop / Tool
+            </span>
+            <p className="text-xs text-slate-700 font-medium">
+              Verified operational artifact required for this process sequence.
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* Steps List Stack */}
       <div className="flex flex-col gap-2.5 pt-1">

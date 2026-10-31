@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AlertTriangle, CheckCircle2, Octagon, ShieldAlert } from 'lucide-react';
 import type { StopGoInteraction, LanguageCode } from '../../engine/story/types';
+import { resolvePropForQuestion } from '../../engine/story/assetRegistry';
 
 interface Props {
   interaction: StopGoInteraction;
@@ -16,6 +17,10 @@ export const StopGoCard: React.FC<Props> = ({
   disabled
 }) => {
   const [selectedAction, setSelectedAction] = useState<'stop' | 'go' | null>(null);
+
+  const qId = interaction.questionId || (interaction as any).id || 'SG';
+  const qPrompt = interaction.question?.en || (interaction as any).prompt?.en || '';
+  const propImg = (interaction as any).propImage || resolvePropForQuestion(qId, qPrompt);
 
   const handleAction = (action: 'stop' | 'go') => {
     if (disabled || selectedAction !== null) return;
@@ -64,6 +69,23 @@ export const StopGoCard: React.FC<Props> = ({
           {interaction.question?.[lang] || interaction.question?.en || (interaction as any).prompt?.[lang] || (interaction as any).prompt?.en || ''}
         </h3>
 
+        {/* Contextual Floor Prop Cutout (if applicable) */}
+        {propImg && (
+          <div className="flex items-center gap-3 p-3 rounded-2xl bg-slate-50 border border-slate-200/80">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 shrink-0 p-1.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center">
+              <img src={propImg} alt="Floor Prop" className="max-w-full max-h-full object-contain" />
+            </div>
+            <div className="space-y-0.5">
+              <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-slate-500 block">
+                Safety Reference Tool / Floor Prop
+              </span>
+              <p className="text-xs text-slate-700 font-medium">
+                Mandatory operational equipment verified prior to making this stop/go call.
+              </p>
+            </div>
+          </div>
+        )}
+
         <div className="p-3.5 sm:p-4 rounded-2xl bg-amber-50/70 border border-amber-200 flex items-start gap-3">
           <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
           <div className="space-y-1">
@@ -99,21 +121,19 @@ export const StopGoCard: React.FC<Props> = ({
               >
                 🛑
               </div>
-              <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wide">
+              <span className="font-extrabold text-sm sm:text-base tracking-tight block">
                 {stopTitle}
               </span>
             </div>
-            {selectedAction === 'stop' && (
-              <CheckCircle2 className="w-5 h-5 text-white animate-bounce" />
-            )}
+            {selectedAction === 'stop' && <CheckCircle2 className="w-5 h-5 text-white" />}
           </div>
-          <p
-            className={`text-[11px] font-medium mt-2 leading-relaxed ${
-              selectedAction === 'stop' ? 'text-rose-100' : 'text-rose-800'
+          <span
+            className={`text-xs mt-2 font-medium leading-snug block ${
+              selectedAction === 'stop' ? 'text-rose-100' : 'text-rose-800/90'
             }`}
           >
             {stopDesc}
-          </p>
+          </span>
         </button>
 
         {/* GO BUTTON */}
@@ -136,21 +156,19 @@ export const StopGoCard: React.FC<Props> = ({
               >
                 🟢
               </div>
-              <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wide">
+              <span className="font-extrabold text-sm sm:text-base tracking-tight block">
                 {goTitle}
               </span>
             </div>
-            {selectedAction === 'go' && (
-              <CheckCircle2 className="w-5 h-5 text-white animate-bounce" />
-            )}
+            {selectedAction === 'go' && <CheckCircle2 className="w-5 h-5 text-white" />}
           </div>
-          <p
-            className={`text-[11px] font-medium mt-2 leading-relaxed ${
-              selectedAction === 'go' ? 'text-emerald-100' : 'text-emerald-800'
+          <span
+            className={`text-xs mt-2 font-medium leading-snug block ${
+              selectedAction === 'go' ? 'text-emerald-100' : 'text-emerald-800/90'
             }`}
           >
             {goDesc}
-          </p>
+          </span>
         </button>
       </div>
     </div>

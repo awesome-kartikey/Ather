@@ -12,7 +12,11 @@ export const GatehouseCabinAnimation: React.FC<Props> = ({
   isPaused,
   onPauseReached
 }) => {
-  const [videoAvailable, setVideoAvailable] = useState<boolean>(false);
+  const [videoAvailable, setVideoAvailable] = useState<boolean>(Boolean(videoSrc));
+
+  useEffect(() => {
+    setVideoAvailable(Boolean(videoSrc));
+  }, [videoSrc]);
   const [hasTriggeredPause, setHasTriggeredPause] = useState(false);
 
   useEffect(() => {
@@ -42,8 +46,15 @@ export const GatehouseCabinAnimation: React.FC<Props> = ({
 
       {/* Procedural SVG/CSS Gatehouse Interior Canvas */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
+        {/* Authentic Factory Background Photo */}
+        <img
+          src="/Assets/Background%20Environments/bg_deo_gate_office.jpg"
+          alt="DEO Gate Office"
+          className="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-overlay pointer-events-none"
+        />
+
         {/* Background Cabin Room Lighting */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-950 opacity-95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-950 opacity-90" />
 
         <svg
           viewBox="0 0 1000 400"

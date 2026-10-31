@@ -18,8 +18,8 @@
         "mr": "ट्रक आगमन आणि वेटिंग यार्ड"
       },
       "media": {
-        "videoSrc": "/videos/scenes/scene_01_arrival.mp4",
-        "posterSrc": "/images/scenes/scene_01_poster.jpg",
+        "videoSrc": "/Assets/8%20Sequential%20Scenes/1%20Inbound%20Truck%20Gate%20Arrival/scene_01_gate_arrival.mp4",
+        "posterSrc": "/Assets/8%20Sequential%20Scenes/1%20Inbound%20Truck%20Gate%20Arrival/scene_01_gate_arrival_poster.jpg",
         "fallbackAnimation": "truck_arrival_gate",
         "durationSeconds": 15,
         "pauseAtSecond": 4.5
@@ -32,7 +32,7 @@
             "hi": "नमस्ते! आपूर्तिकर्ता का एक ट्रक अभी AURIC के मुख्य गेट पर पहुंचा है। बूम बैरियर खोलने से पहले, चालक को कहां रुकना चाहिए?",
             "mr": "नमस्ते! सप्लायरचा एक ट्रक नुकताच AURIC च्या मुख्य गेटवर आला आहे. बूम बॅरियर उघडण्यापूर्वी, चालकाने कुठे थांबले पाहिजे?"
           },
-          "audioSrc": "/audio/mascot/c1_s1_sc01_intro.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-01-AURA-WELCOME.mp3"
         },
         "onCorrect": {
           "pose": "success",
@@ -41,7 +41,7 @@
             "hi": "बिल्कुल सही! SOP क्लॉज 4.1.1 के अनुसार चालक को इंजन बंद करके निर्धारित वेटिंग यार्ड में पार्क करना होगा और पैदल सुरक्षा डेस्क पर जाना होगा।",
             "mr": "अगदी बरोबर! SOP कलम 4.1.1 नुसार चालकाने इंजिन बंद करून नियुक्त वेटिंग एरियामध्ये गाडी पार्क केली पाहिजे आणि पायी सुरक्षा डेस्कवर गेले पाहिजे."
           },
-          "audioSrc": "/audio/mascot/c1_s1_sc01_correct.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q01-CORRECT.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -50,7 +50,7 @@
             "hi": "सावधान! ट्रक को कभी भी सीधे अंदर नहीं जाना चाहिए और न ही इंजन चालू छोड़ना चाहिए। वाहन को इंजन बंद करके वेटिंग यार्ड में पार्क करना अनिवार्य है।",
             "mr": "लक्ष द्या! ट्रक कधीही थेट आत नेऊ नये किंवा इंजिन चालू ठेवू नये. वाहने इंजिन बंद करून नियुक्त वेटिंग भागातच पार्क केली पाहिजेत."
           },
-          "audioSrc": "/audio/mascot/c1_s1_sc01_wrong.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q01-WRONG.mp3"
         }
       },
       "interaction": {
@@ -96,7 +96,8 @@
           "hi": "ट्रक गेट पर पहुंचता है। चालक सबसे पहले वाहन कहां पार्क करता है?",
           "mr": "ट्रक गेटवर पोहोचतो. चालक सर्वप्रथम वाहन कुठे पार्क करतो?"
         },
-        "id": "c1-q01"
+        "id": "c1-q01",
+        "audioSrc": "/audio/voiceover_neerja/ACT-01-Q01-PROMPT.mp3"
       },
       "rules": {
         "xp": 100,
@@ -131,7 +132,7 @@
             "hi": "चालक 5 भौतिक दस्तावेज लेकर गेटहाउस के अंदर आ गया है। आइए सुनिश्चित करें कि प्रत्येक दस्तावेज़ सही डेस्क पर जमा किया जाए!",
             "mr": "चालक 5 प्रत्यक्ष कागदपत्रे घेऊन गेटहाऊसमध्ये आला आहे. चला खात्री करूया की प्रत्येक कागदपत्र योग्य डेस्कवर जमा केले जाईल!"
           },
-          "audioSrc": "/audio/mascot/c1_s1_sc02_intro.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q02-PROMPT.mp3"
         },
         "onCorrect": {
           "pose": "success",
@@ -140,7 +141,7 @@
             "hi": "उत्कृष्ट छँटाई! सुरक्षा कर्मी व्यक्तिगत चालक और वाहन दस्तावेजों की जांच करते हैं, जबकि DEO गेट पास जनरेट करने के लिए शिपिंग दस्तावेजों को प्रोसेस करता है।",
             "mr": "उत्कृष्ट वर्गीकरण! सुरक्षा रक्षक वैयक्तिक चालक आणि वाहन कागदपत्रे तपासतात, तर DEO गेट पास तयार करण्यासाठी शिपिंग कागदपत्रे प्रोसेस करतात."
           },
-          "audioSrc": "/audio/mascot/c1_s1_sc02_correct.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q02-CORRECT.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -149,7 +150,7 @@
             "hi": "ध्यान दें! शिपिंग दस्तावेज़ (PO, ASN, टैक्स इनवॉइस) SAP प्रोसेसिंग के लिए DEO के पास जाने चाहिए, जबकि DL और RC सुरक्षा कर्मी के पास।",
             "mr": "लक्ष द्या! शिपिंग कागदपत्रे (PO, ASN, टॅक्स इन्व्हॉइस) SAP प्रोसेसिंगसाठी DEO कडे जाणे आवश्यक आहे, तर DL आणि RC सुरक्षा रक्षकाकडे."
           },
-          "audioSrc": "/audio/mascot/c1_s1_sc02_wrong.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q02-WRONG.mp3"
         }
       },
       "interaction": {
@@ -377,7 +378,7 @@
             "hi": "DEO YPR_GATEENTRY चलाता है! प्रिंटर विंडशील्ड बारकोड पास प्रिंट करता है जबकि चालक स्टेटस टीवी देखता है। क्या आप चालक के गेट यात्रा चरणों को सही कालानुक्रमिक क्रम में लगा सकते हैं?",
             "mr": "DEO YPR_GATEENTRY चालवतो! प्रिंटर विंडशील्ड बारकोड पास प्रिंट करतो तर चालक स्टेटस टीव्ही पाहतो. तुम्ही चालकाच्या गेट प्रवासाच्या पायऱ्या योग्य कालक्रमानुसार लावू शकता का?"
           },
-          "audioSrc": "/audio/mascot/c1_s1_sc04_intro.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q04-PROMPT.mp3"
         },
         "onCorrect": {
           "pose": "success",
@@ -386,7 +387,7 @@
             "hi": "उत्कृष्ट क्रम! सटीक क्रम का पालन करने से (पार्क ➔ क्रेडेंशियल्स ➔ ERP सत्यापन ➔ बारकोड पास ➔ डॉक प्रस्थान) गेट पर जाम नहीं लगता और 100% ट्रैसबिलिटी सुनिश्चित होती है।",
             "mr": "उत्कृष्ट क्रम! अचूक क्रमाचे पालन केल्याने (पार्क ➔ कागदपत्रे ➔ ERP पडताळणी ➔ बारकोड पास ➔ डॉककडे जाणे) गेटवर गर्दी होत नाही आणि साहित्याची 100% खात्रीशीर नोंद राहते."
           },
-          "audioSrc": "/audio/mascot/c1_s1_sc04_correct.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q04-CORRECT.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -395,7 +396,7 @@
             "hi": "रुकिए! प्रिंटेड बारकोड पास प्राप्त करने से पहले चालक डॉक पर नहीं जा सकता। आइए चरणों को सटीक SOP क्रम में व्यवस्थित करें।",
             "mr": "थांबा! प्रिंट केलेला बारकोड पास घेतल्याशिवाय चालक डॉककडे जाऊ शकत नाही. चला पायऱ्या अचूक SOP क्रमाने लावूया."
           },
-          "audioSrc": "/audio/mascot/c1_s1_sc04_wrong.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q04-WRONG.mp3"
         }
       },
       "interaction": {
@@ -611,8 +612,8 @@
         "mr": "डॉक आगमन आणि गंभीर सुरक्षा ऑडिट"
       },
       "media": {
-        "videoSrc": "/videos/scenes/scene_06_dock_safety.mp4",
-        "posterSrc": "/images/scenes/scene_06_poster.jpg",
+        "videoSrc": "/Assets/8%20Sequential%20Scenes/2%20Loading%20Dock%20%26%20Wheel%20Chock%20Safety/scene_02_wheel_chock_safety.mp4",
+        "posterSrc": "/Assets/8%20Sequential%20Scenes/2%20Loading%20Dock%20%26%20Wheel%20Chock%20Safety/scene_02_wheel_chock_safety_poster.jpg",
         "fallbackAnimation": "dock_safety_chocks",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -625,7 +626,7 @@
             "hi": "ट्रक बे B, डॉक 04 पर खड़ा हो गया है! चाबियां और इनवॉइस सौंपने तथा अनलोडिंग शुरू करने से पहले, वाहन में एक महत्वपूर्ण सुरक्षा उल्लंघन का निरीक्षण करें।",
             "mr": "ट्रक बे B, डॉक 04 वर लागला आहे! चाव्या आणि इन्व्हॉइस देण्यापूर्वी तसेच अनलोडिंग सुरू करण्यापूर्वी, वाहनातील एका गंभीर सुरक्षा उल्लंघनाची तपासणी करा."
           },
-          "audioSrc": "/audio/mascot/c1_s1_sc06_intro.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q05-PROMPT.mp3"
         },
         "onCorrect": {
           "pose": "success",
@@ -634,7 +635,7 @@
             "hi": "जीवनरक्षक निरीक्षण! SOP क्लॉज 4.1.5 के अनुसार पिछले पहियों के नीचे भारी रबर व्हील चॉक्स लगाना अनिवार्य है ताकि फोर्कलिफ्ट प्रवेश करते समय ट्रेलर आगे न लुढ़के।",
             "mr": "जीव वाचवणारी तत्परता! SOP कलम 4.1.5 नुसार मागील चाकांखाली जड रबर व्हील चॉक्स बसवणे बंधनकारक आहे, जेणेकरून फोर्कलिफ्ट आत शिरताना ट्रेलर पुढे घसरणार नाही."
           },
-          "audioSrc": "/audio/mascot/c1_s1_sc06_correct.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q05-CORRECT.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -643,7 +644,7 @@
             "hi": "उच्च खतरे की चेतावनी! यदि 3-टन फोर्कलिफ्ट बिना चॉक्स वाले ट्रेलर में जाती है, तो ट्रेलर आगे खिसक जाएगा और फोर्कलिफ्ट डॉक गैप में गिर सकती है!",
             "mr": "अतिधोक्याचा इशारा! जर 3-टन वजनाची फोर्कलिफ्ट चॉक्स नसलेल्या ट्रकमध्ये गेली, तर ट्रक पुढे सरकेल आणि फोर्कलिफ्ट डॉकच्या दरीत कोसळू शकते!"
           },
-          "audioSrc": "/audio/mascot/c1_s1_sc06_wrong.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q05-WRONG.mp3"
         }
       },
       "interaction": {

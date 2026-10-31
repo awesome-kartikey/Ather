@@ -12,7 +12,11 @@ export const MrsCostCenterAuditAnimation: React.FC<Props> = ({
   isPaused,
   onPauseReached
 }) => {
-  const [videoAvailable, setVideoAvailable] = useState<boolean>(false);
+  const [videoAvailable, setVideoAvailable] = useState<boolean>(Boolean(videoSrc));
+
+  useEffect(() => {
+    setVideoAvailable(Boolean(videoSrc));
+  }, [videoSrc]);
   const [hasTriggeredPause, setHasTriggeredPause] = useState(false);
   const [highlightField, setHighlightField] = useState<'costCenter' | 'storageLoc'>('costCenter');
 

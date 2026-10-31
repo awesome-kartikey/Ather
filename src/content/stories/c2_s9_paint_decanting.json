@@ -22,6 +22,27 @@
           "en": "Welcome to Stage 9! At Ather AURIC Plant M002, metal body parts (like Mid-Frames, side brackets, and swingarm mounts) undergo Anodic Cathodic Electrodeposition (ACED) before painting. Under SOP 02_C2_S1, how are ACED metal parts inwarded and distributed among line feeders to ensure zero parts mix-up?",
           "hi": "स्टेज 9 में आपका स्वागत है! एथर औरिक प्लांट M002 में, पेंटिंग से पहले धातु के शरीर के अंगों (जैसे मिड-फ्रेम, साइड ब्रैकेट और स्विंगआर्म माउंट) पर एनोडिक कैथोडिक इलेक्ट्रोडिपोजिशन (ACED) होता है। SOP 02_C2_S1 के तहत, शून्य पुर्जा मिश्रण सुनिश्चित करने के लिए ACED धातु के हिस्सों को कैसे प्राप्त किया जाता है और लाइन फीडरों के बीच वितरित किया जाता है?",
           "mr": "स्टेज 9 मध्ये आपले स्वागत आहे! एथर औरिक प्लांट M002 मध्ये, पेंटिंगपूर्वी धातूच्या बॉडी पार्ट्सवर (उदा. मिड-फ्रेम, साइड ब्रॅकेट्स, स्विंगआर्म माउंट) अनोडीक कॅथोडीक इलेक्ट्रोडिपोझिशन (ACED) प्रक्रिया केली जाते. SOP 02_C2_S1 नुसार, पार्ट मिक्स-अप टाळण्यासाठी ACED चे पार्ट कसे साठवले जातात आणि लाईन फीडरमध्ये कसे वाटले जातात?"
+        },
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-05-Q32-PROMPT.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-05-Q32-CORRECT.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-05-Q32-WRONG.mp3"
         }
       },
       "media": {
@@ -31,7 +52,9 @@
           "en": "ACED Metal Parts Dispatch: 7–9 metal parts stored in specialized trolley format and distributed across 28 unique feeders",
           "hi": "ACED धातु पुर्जे प्रेषण: 7-9 धातु के हिस्से विशेष ट्रॉली प्रारूप में संग्रहीत और 28 अद्वितीय फीडरों में वितरित किए गए",
           "mr": "ACED धातू पार्ट वाटप: 7-9 धातूचे पार्ट खास ट्रॉली स्वरूपात साठवून 28 स्वतंत्र लाईन फीडरमध्ये वाटले जातात"
-        }
+        },
+        "videoSrc": "/Assets/8%20Sequential%20Scenes/6%20Bulk%20Decanting%20(FLC%20to%20Assembly%20Trolley)/scene_06_bulk_decanting_trolley.mp4",
+        "posterSrc": "/Assets/8%20Sequential%20Scenes/6%20Bulk%20Decanting%20(FLC%20to%20Assembly%20Trolley)/scene_06_bulk_decanting_trolley_poster.jpg"
       },
       "interaction": {
         "type": "mcq",
@@ -140,6 +163,7 @@
         "step": 1,
         "initialValue": 4,
         "correctNumber": 2,
+        "targetCount": 2,
         "unit": {
           "en": "Pallet Positions",
           "hi": "पैलेट पोजीशन",
@@ -515,6 +539,7 @@
         "step": 1,
         "initialValue": 1,
         "correctNumber": 3,
+        "targetCount": 3,
         "unit": {
           "en": "Full Trolleys",
           "hi": "पूर्ण ट्रॉलियां",
@@ -565,7 +590,7 @@
             "hi": "कार्रवाई में डिजिटल एमईएस योजना! शिफ्ट 1 के लिए संयंत्र उत्पादन योजना 20 स्पेस ब्लैक और 10 ट्रू रेड एथर स्कूटरों की मांग करती है। प्रश्न बैंक Q13 के तहत इन बॉडी पैनलों को पेंट लाइन में खिलाने के लिए SAP EWM वेयरहाउस ऑर्डर के अंदर कितने अलग वेयरहाउस टास्क उत्पन्न करेगा?",
             "mr": "डिजिटल MES नियोजन प्रत्यक्षात! शिफ्ट 1 च्या उत्पादन योजनेनुसार 20 स्पेस ब्लॅक आणि 10 ट्रू रेड एथर स्कूटर्स तयार करायच्या आहेत. प्रश्न संच Q13 नुसार हे बॉडी पॅनेल्स पेंट लाईनवर पुरवण्यासाठी SAP EWM वेअरहाऊस ऑर्डरमध्ये किती स्वतंत्र WH टास्क तयार करेल?"
           },
-          "audioSrc": "/audio/mascot/c2_s9_sc07_intro.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-05-Q35-PROMPT.mp3"
         },
         "onCorrect": {
           "pose": "success",
@@ -574,7 +599,7 @@
             "hi": "सिस्टम सटीकता की पुष्टि! प्रश्न बैंक Q13: ठीक 2 WH कार्य! 20 काले पुर्जे चुनने के लिए एक कार्य और 10 लाल पुर्जे चुनने के लिए एक कार्य। SAP EWM में विभिन्न रंगों के अलग-अलग पार्ट नंबर (SKU) होते हैं, इसलिए प्रत्येक संस्करण को अपना अलग वेयरहाउस पिकिंग कार्य मिलता है!",
             "mr": "अचूक सिस्टीम नियम! प्रश्न बँक Q13: बरोबर 2 WH टास्क! एक टास्क 20 काळे पार्ट उचलण्यासाठी आणि दुसरा टास्क 10 लाल पार्ट उचलण्यासाठी. वेगवेगळ्या रंगांचे पार्ट नंबर (SKU) SAP EWM मध्ये वेगळे असतात, त्यामुळे प्रत्येक रंगासाठी स्वतंत्र टास्क तयार होतो!"
           },
-          "audioSrc": "/audio/mascot/c2_s9_sc07_correct.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-05-Q35-CORRECT.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -583,7 +608,7 @@
             "hi": "गलत कार्य तर्क! विभिन्न रंग रूपों को एक ही कार्य में शामिल नहीं किया जा सकता है। SAP EWM में, पेंट बूथ रंग मिश्रण को रोकने के लिए प्रत्येक अद्वितीय भाग संख्या अपना अलग वेयरहाउस कार्य उत्पन्न करती है!",
             "mr": "चुकीचा नियम! वेगवेगळ्या रंगांचा माल एकाच टास्कमध्ये एकत्र करता येत नाही. रंगांचा गोंधळ टाळण्यासाठी प्रत्येक पार्ट नंबरचा स्वतंत्र WH टास्क तयार होतो!"
           },
-          "audioSrc": "/audio/mascot/c2_s9_sc07_wrong.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-05-Q35-WRONG.mp3"
         }
       },
       "interaction": {

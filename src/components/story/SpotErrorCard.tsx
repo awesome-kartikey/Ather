@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AlertTriangle, ShieldAlert } from 'lucide-react';
 import type { SpotErrorInteraction, LanguageCode } from '../../engine/story/types';
+import { resolvePropForQuestion } from '../../engine/story/assetRegistry';
 
 interface Props {
   interaction: SpotErrorInteraction;
@@ -16,6 +17,10 @@ export const SpotErrorCard: React.FC<Props> = ({
   disabled
 }) => {
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
+
+  const qId = interaction.questionId || (interaction as any).id || 'SE';
+  const qPrompt = interaction.question?.en || (interaction as any).prompt?.en || '';
+  const propImg = (interaction as any).propImage || resolvePropForQuestion(qId, qPrompt);
 
   const handleSelect = (optionId: string) => {
     if (disabled) return;
@@ -37,7 +42,7 @@ export const SpotErrorCard: React.FC<Props> = ({
             <ShieldAlert className="w-4 h-4 text-rose-600 animate-pulse" />
           </div>
           <span className="text-xs font-mono font-bold tracking-wider text-rose-700 uppercase">
-            Mandatory Dock Safety Gate
+            Mandatory Floor Safety Audit
           </span>
         </div>
 
@@ -45,6 +50,23 @@ export const SpotErrorCard: React.FC<Props> = ({
           SAFETY CRITICAL
         </span>
       </div>
+
+      {/* Contextual Floor Prop Cutout (if applicable) */}
+      {propImg && (
+        <div className="flex items-center gap-3 p-3 rounded-2xl bg-rose-50/50 border border-rose-200">
+          <div className="w-14 h-14 sm:w-16 sm:h-16 shrink-0 p-1.5 rounded-xl bg-white border border-rose-200 shadow-xs flex items-center justify-center">
+            <img src={propImg} alt="Floor Prop" className="max-w-full max-h-full object-contain" />
+          </div>
+          <div className="space-y-0.5">
+            <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-rose-800 block">
+              Floor Prop / Audit Equipment
+            </span>
+            <p className="text-xs text-rose-950 font-medium">
+              Inspect equipment placement and physical boundaries before clearing this gate.
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* Instruction */}
       <div className="space-y-1">
@@ -79,22 +101,22 @@ export const SpotErrorCard: React.FC<Props> = ({
               <div
                 className={`w-5 h-5 rounded-full border-2 mt-0.5 flex items-center justify-center shrink-0 transition-colors ${
                   isSelected
-                    ? 'border-rose-600 bg-rose-600'
+                    ? 'border-rose-600 bg-rose-600 text-white'
                     : 'border-slate-300 bg-white'
                 }`}
               >
                 {isSelected && <div className="w-2 h-2 rounded-full bg-white" />}
               </div>
 
-              {/* Text Label & Specs */}
-              <div className="flex-1 space-y-0.5">
-                <div className="text-xs sm:text-sm font-bold text-slate-900 flex items-center gap-1.5">
-                  <span>{option.label[lang] || option.label.en}</span>
-                </div>
+              {/* Label & Description */}
+              <div className="flex-1 space-y-1">
+                <span className="text-sm sm:text-base font-bold leading-snug block">
+                  {option.label[lang] || option.label.en}
+                </span>
                 {option.description && (
-                  <div className="text-[11px] text-slate-500 font-medium leading-relaxed">
+                  <p className="text-xs text-slate-500 leading-relaxed font-normal">
                     {option.description[lang] || option.description.en}
-                  </div>
+                  </p>
                 )}
               </div>
             </button>
@@ -108,14 +130,14 @@ export const SpotErrorCard: React.FC<Props> = ({
           type="button"
           disabled={!selectedOptionId || disabled}
           onClick={handleSubmit}
-          className={`w-full min-h-[64px] px-6 py-4 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer ${
+          className={`w-full min-h-[64px] px-6 py-4 rounded-2xl font-bold text-base flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer ${
             selectedOptionId && !disabled
-              ? 'bg-rose-600 hover:bg-rose-700 text-white shadow-rose-600/30'
-              : 'bg-slate-200 text-slate-400 shadow-none cursor-not-allowed'
+              ? 'bg-rose-600 hover:bg-rose-500 text-white shadow-rose-900/20 active:scale-[0.99]'
+              : 'bg-slate-200 text-slate-400 cursor-not-allowed shadow-none'
           }`}
         >
           <AlertTriangle className="w-5 h-5" />
-          <span>Flag Safety Audit Breach</span>
+          <span>Confirm Hazard Selection</span>
         </button>
       </div>
     </div>

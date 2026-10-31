@@ -227,6 +227,27 @@
           "en": "Count audits are cleared! Now we proceed to Supermarket Aisle SM-04 gravity flow racks. These 3.5-degree inclined roller tracks operate on strict FIFO (First-In, First-Out). You must ALWAYS load from the REAR loading lane so boxes glide forward to the front picking face. Loading from the front traps older parts behind, causing reverse LIFO and part degradation. Arrange the 4 put-away steps in the exact SOP sequence!",
           "hi": "गिनती का ऑडिट पूरा हो गया है! अब हम सुपरमार्केट ऐल SM-04 ग्रैविटी फ्लो रैक पर चलते हैं। ये 3.5-डिग्री झुके हुए रोलर ट्रैक सख्त FIFO (पहले आना, पहले जाना) पर काम करते हैं। आपको हमेशा पीछे (REAR) लोडिंग लेन से लोड करना चाहिए ताकि बॉक्स आगे पिकिंग फेस पर स्लाइड हों। आगे से लोड करने से पुराना स्टॉक पीछे फंस जाता है। पुट-अवे के 4 चरणों को सही SOP क्रम में व्यवस्थित करें!",
           "mr": "मोजणी ऑडिट पूर्ण झाले आहे! आता आपण सुपरमार्केट Aisle SM-04 ग्रॅव्हिटी फ्लो रॅकवर जाऊया. हे 3.5 अंश झुकलेले रोलर ट्रॅक कडक FIFO नियमावर चालतात. तुम्ही नेहमी मागील (REAR) लोडिंग लेनमधूनच माल भरला पाहिजे जेणेकरून बॉक्सेस समोरील पिकिंग फेसवर पुढे सरकतील. पुढून भरल्यास जुना माल मागे अडकून खराब होतो. पुट-अवेचे 4 टप्पे अचूक SOP क्रमाने लावा!"
+        },
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-03-Q21-PROMPT.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-03-Q21-CORRECT.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-03-Q21-WRONG.mp3"
         }
       },
       "media": {

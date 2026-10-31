@@ -12,7 +12,11 @@ export const IndirectHandoverProtocolAnimation: React.FC<Props> = ({
   isPaused,
   onPauseReached
 }) => {
-  const [videoAvailable, setVideoAvailable] = useState<boolean>(false);
+  const [videoAvailable, setVideoAvailable] = useState<boolean>(Boolean(videoSrc));
+
+  useEffect(() => {
+    setVideoAvailable(Boolean(videoSrc));
+  }, [videoSrc]);
   const [hasTriggeredPause, setHasTriggeredPause] = useState(false);
   const [activeStep, setActiveStep] = useState<number>(0);
 

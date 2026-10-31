@@ -22,6 +22,27 @@
           "en": "Welcome to Category 2: Line Issuance & Order Picking at Ather AURIC Plant M002! On the vehicle assembly line, real-time VIN consumption triggers the Manufacturing Execution System (MES) to auto-generate a digital Warehouse (WH) Picking Task on your Handheld Terminal (HHT). Before picking any parts, what critical information must the line feeder verify on the HHT task screen?",
           "hi": "एथर औरिक प्लांट M002 में श्रेणी 2: लाइन निर्गमन और ऑर्डर पिकिंग में आपका स्वागत है! वाहन असेंबली लाइन पर, वास्तविक समय VIN खपत विनिर्माण निष्पादन प्रणाली (MES) को आपके हैंडहेल्ड टर्मिनल (HHT) पर डिजिटल वेयरहाउस (WH) पिकिंग टास्क को ऑटो-जेनरेट करने के लिए ट्रिगर करती है। किसी भी हिस्से को चुनने से पहले, लाइन फीडर को HHT टास्क स्क्रीन पर किस महत्वपूर्ण जानकारी को सत्यापित करना होगा?",
           "mr": "एथर औरिक प्लांट M002 मधील कॅटेगरी 2: लाईन इश्यूअन्स आणि ऑर्डर पिकिंगमध्ये आपले स्वागत आहे! वाहन असेंब्ली लाईनवर, रिअल-टाइम VIN वापरामुळे मॅन्युफॅक्चरिंग एक्झिक्युशन सिस्टीम (MES) द्वारे तुमच्या हॅन्डहेल्ड टर्मिनलवर (HHT) डिजिटल वेअरहाऊस पिकिंग टास्क आपोआप तयार होते. कोणतेही साहित्य उचलण्यापूर्वी, लाईन फीडरने HHT स्क्रीनवर कोणती महत्त्वाची माहिती तपासली पाहिजे?"
+        },
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-06-Q38-PROMPT.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-06-Q38-CORRECT.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-06-Q38-WRONG.mp3"
         }
       },
       "media": {
@@ -287,6 +308,27 @@
           "en": "You have arrived at Workstation 08 on the vehicle assembly line and offloaded the kitted wiring harnesses into the station rack. Under SOP Clause 4.2 and Failure Mode 5.3, what two mandatory actions must you perform before leaving the workstation to ensure your delivery cycle is officially closed and shopfloor safety is maintained?",
           "hi": "आप वाहन असेंबली लाइन पर वर्कस्टेशन 08 पर पहुंच गए हैं और स्टेशन रैक में किटेड वायरिंग हार्नेस उतार दिए हैं। SOP क्लॉज 4.2 और विफलता मोड 5.3 के तहत, यह सुनिश्चित करने के लिए कि आपका डिलीवरी चक्र आधिकारिक तौर पर बंद हो गया है और शॉपफ्लोर सुरक्षा बनी रहे, वर्कस्टेशन छोड़ने से पहले आपको कौन से दो अनिवार्य कार्य करने होंगे?",
           "mr": "तुम्ही व्हेईकल असेंब्ली लाईनवरील वर्कस्टेशन 08 जवळ पोहोचला आहात आणि स्टेशन रॅकवर वायरिंग हार्नेसचे साहित्य व्यवस्थित ठेवले आहे. SOP कलम 4.2 आणि अपयश मोड 5.3 नुसार, डिलिव्हरी अधिकृतपणे पूर्ण होण्यासाठी आणि सुरक्षेसाठी वर्कस्टेशन सोडण्यापूर्वी तुम्ही कोणते दोन अनिवार्य नियम पाळले पाहिजेत?"
+        },
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-06-Q39-PROMPT.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-06-Q39-CORRECT.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-06-Q39-WRONG.mp3"
         }
       },
       "media": {
@@ -296,7 +338,9 @@
           "en": "Workstation Handshake: Destination QR scan closes the digital MES task while empty bins/trolleys return for reverse logistics",
           "hi": "वर्कस्टेशन हैंडशेक: डेस्टिनेशन क्यूआर स्कैन डिजिटल एमईएस टास्क को बंद करता है जबकि खाली डिब्बे/ट्रॉलियां रिवर्स लॉजिस्टिक्स के लिए लौटती हैं",
           "mr": "वर्कस्टेशन हँडशेक: डेस्टिनेशन QR स्कॅन केल्याने डिजिटल MES टास्क बंद होतो आणि रिकाम्या ट्रॉली/बिन्स रिव्हर्स लॉजिस्टिकसाठी परत पाठवले जातात"
-        }
+        },
+        "videoSrc": "/Assets/8%20Sequential%20Scenes/7%20Milk%20Run%20Line%20Delivery%20%26%20Station%20Drop-off/scene_07_milk_run_delivery.mp4",
+        "posterSrc": "/Assets/8%20Sequential%20Scenes/7%20Milk%20Run%20Line%20Delivery%20%26%20Station%20Drop-off/scene_07_milk_run_delivery_poster.jpg"
       },
       "interaction": {
         "type": "spot_error",

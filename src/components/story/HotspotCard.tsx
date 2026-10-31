@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MapPin, ShieldCheck } from 'lucide-react';
 import type { HotspotInteraction, LanguageCode } from '../../engine/story/types';
+import { BACKGROUND_IMAGE_MAP } from '../../engine/story/assetRegistry';
 
 interface Props {
   interaction: HotspotInteraction;
@@ -58,6 +59,18 @@ export const HotspotCard: React.FC<Props> = ({
         )}
       </div>
 
+      {/* Authentic Plant Map Visualization */}
+      <div className="relative w-full h-44 sm:h-52 rounded-2xl overflow-hidden border border-slate-200 shadow-inner bg-slate-950 flex items-center justify-center">
+        <img
+          src={BACKGROUND_IMAGE_MAP.plantMapHotspot}
+          alt="Ather AURIC Plant Blueprint Map"
+          className="w-full h-full object-cover opacity-90 transition-opacity"
+        />
+        <div className="absolute top-2 left-2 px-2.5 py-1 rounded-md bg-slate-950/85 backdrop-blur-xs border border-emerald-500/50 text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-wider">
+          Ather AURIC Plant Layout · Inbound Docks
+        </div>
+      </div>
+
       {/* Dock Target Selection Cards (≥64px touch target) */}
       <div className="grid grid-cols-1 gap-3 pt-1">
         {interaction.targets.map((target) => {
@@ -79,43 +92,41 @@ export const HotspotCard: React.FC<Props> = ({
               <div
                 className={`w-5 h-5 rounded-full border-2 mt-0.5 flex items-center justify-center shrink-0 transition-colors ${
                   isSelected
-                    ? 'border-emerald-600 bg-emerald-600'
+                    ? 'border-emerald-600 bg-emerald-600 text-white'
                     : 'border-slate-300 bg-white'
                 }`}
               >
                 {isSelected && <div className="w-2 h-2 rounded-full bg-white" />}
               </div>
 
-              {/* Text Label & Specs */}
+              {/* Target Label */}
               <div className="flex-1 space-y-0.5">
-                <div className="text-xs sm:text-sm font-bold text-slate-900">
+                <span className="text-sm sm:text-base font-bold leading-snug block">
                   {target.label[lang] || target.label.en}
-                </div>
-                {target.description && (
-                  <div className="text-[11px] text-slate-500 font-medium leading-relaxed">
-                    {target.description[lang] || target.description.en}
-                  </div>
-                )}
+                </span>
+                <span className="text-[11px] font-mono text-slate-500 block uppercase">
+                  Location Code: {target.id.toUpperCase()}
+                </span>
               </div>
             </button>
           );
         })}
       </div>
 
-      {/* Action Button (≥64px touch target) */}
+      {/* Submit Button (≥64px touch target) */}
       <div className="pt-2">
         <button
           type="button"
           disabled={!selectedTargetId || disabled}
           onClick={handleConfirm}
-          className={`w-full min-h-[64px] px-6 py-4 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer ${
+          className={`w-full min-h-[64px] px-6 py-4 rounded-2xl font-bold text-base flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer ${
             selectedTargetId && !disabled
-              ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-600/30'
-              : 'bg-slate-200 text-slate-400 shadow-none cursor-not-allowed'
+              ? 'bg-emerald-600 hover:bg-emerald-500 text-white shadow-emerald-900/20 active:scale-[0.99]'
+              : 'bg-slate-200 text-slate-400 cursor-not-allowed shadow-none'
           }`}
         >
           <ShieldCheck className="w-5 h-5" />
-          <span>Confirm Dock Allocation</span>
+          <span>Confirm Bay Allocation</span>
         </button>
       </div>
     </div>

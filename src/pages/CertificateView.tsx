@@ -79,6 +79,12 @@ export const CertificateView: React.FC<Props> = ({
             <div className="flex items-center gap-3">
               <AtherLogo className="h-10" />
               <div className="h-8 w-px bg-slate-200 mx-1" />
+              <img
+                src="/logo/Tetrahedron-logo-transparent.svg"
+                alt="Tetrahedron"
+                className="h-8 object-contain opacity-90"
+              />
+              <div className="h-8 w-px bg-slate-200 mx-1" />
               <div className="flex flex-col">
                 <span className="text-[11px] font-mono font-bold tracking-widest text-slate-500 uppercase">
                   AURIC Plant M002 · Sambhajinagar

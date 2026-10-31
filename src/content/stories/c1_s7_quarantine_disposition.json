@@ -110,6 +110,33 @@
           "en": "The NG Logistics manpower team arrives at the IQC staging desk to collect a rejected pallet of high-voltage wiring harnesses. You inspect the pallet: it has a physical Red Tag affixed, but the QC sticker is missing, and the digital JIRA ticket has no Bug ID and lists root cause as 'Unknown'. Under SOP for NG-RTV Clause 4.2 and Question Bank Q34/Q35, what MUST the NG team do?",
           "hi": "NG लॉजिस्टिक्स मैनपावर टीम उच्च-वोल्टेज वायरिंग हार्नेस के एक खारिज पैलेट को इकट्ठा करने के लिए IQC स्टेजिंग डेस्क पर पहुंचती है। आप पैलेट का निरीक्षण करते हैं: इस पर एक भौतिक रेड टैग चिपका हुआ है, लेकिन QC स्टिकर गायब है, और डिजिटल JIRA टिकट में कोई बग आईडी नहीं है और मूल कारण 'अज्ञात' सूचीबद्ध है। SOP NG-RTV क्लॉज 4.2 और प्रश्न बैंक Q34/Q35 के तहत, NG टीम को क्या करना चाहिए?",
           "mr": "हाय-व्होल्टेज वायरिंग हार्नेसचा बाद झालेला पॅलेट गोळा करण्यासाठी NG लॉजिस्टिक्स टीम IQC डेस्कवर पोहोचते. तुम्ही पॅलेट तपासता: त्यावर लाल रंगाचा Red Tag लावलेला आहे, पण QC स्टिकर गायब आहे आणि JIRA तिकीटामध्ये Bug ID नसून कारण 'Unknown' दाखवत आहे. SOP NG-RTV कलम 4.2 व प्रश्न संच Q34/Q35 नुसार NG टीमने काय केले पाहिजे?"
+        },
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "The NG Logistics manpower team arrives at the IQC staging desk to collect a rejected pallet of high-voltage wiring harnesses. You inspect the pallet: it has a physical Red Tag affixed, but the QC sticker is missing, and the digital JIRA ticket has no Bug ID and lists root cause as 'Unknown'. Under SOP for NG-RTV Clause 4.2 and Question Bank Q34/Q35, what MUST the NG team do?",
+            "hi": "NG लॉजिस्टिक्स मैनपावर टीम उच्च-वोल्टेज वायरिंग हार्नेस के एक खारिज पैलेट को इकट्ठा करने के लिए IQC स्टेजिंग डेस्क पर पहुंचती है। आप पैलेट का निरीक्षण करते हैं: इस पर एक भौतिक रेड टैग चिपका हुआ है, लेकिन QC स्टिकर गायब है, और डिजिटल JIRA टिकट में कोई बग आईडी नहीं है और मूल कारण 'अज्ञात' सूचीबद्ध है। SOP NG-RTV क्लॉज 4.2 और प्रश्न बैंक Q34/Q35 के तहत, NG टीम को क्या करना चाहिए?",
+            "mr": "हाय-व्होल्टेज वायरिंग हार्नेसचा बाद झालेला पॅलेट गोळा करण्यासाठी NG लॉजिस्टिक्स टीम IQC डेस्कवर पोहोचते. तुम्ही पॅलेट तपासता: त्यावर लाल रंगाचा Red Tag लावलेला आहे, पण QC स्टिकर गायब आहे आणि JIRA तिकीटामध्ये Bug ID नसून कारण 'Unknown' दाखवत आहे. SOP NG-RTV कलम 4.2 व प्रश्न संच Q34/Q35 नुसार NG टीमने काय केले पाहिजे?"
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-04-Q22-PROMPT.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "ABSOLUTELY STOP! Under SOP for NG-RTV Clause 4.2, every rejected part MUST have BOTH a Red Tag AND a QC sticker, plus a JIRA ticket with a valid Bug ID! Collecting untracked parts creates ghost inventory and voids supplier warranty debit notes!",
+            "hi": "बिल्कुल STOP! SOP NG-RTV क्लॉज 4.2 के तहत, प्रत्येक खारिज हिस्से पर रेड टैग और QC स्टिकर दोनों होने चाहिए, साथ ही एक वैध बग आईडी वाला JIRA टिकट भी होना चाहिए! अपंजीकृत सामग्री उठाने से इन्वेंट्री खो जाती है और वारंटी दावे रद्द हो जाते हैं!",
+            "mr": "नक्कीच STOP! SOP NG-RTV कलम 4.2 नुसार, प्रत्येक नाकारलेल्या भागावर Red Tag आणि QC स्टिकर दोन्ही असणे आणि वैध Bug ID सह JIRA तिकीट असणे बंधनकारक आहे! असा माल उचलल्यास सिस्टममध्ये माल गहाळ होतो आणि सप्लायरवरील वॉरंटी क्लेम रद्द होतो!"
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-04-Q22-CORRECT.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "CRITICAL HAZARD! Never move rejected stock without dual physical identification (Red Tag + QC sticker) and an active JIRA Bug ID. Doing so causes untraceable inventory in the quarantine cage!",
+            "hi": "गंभीर खतरा! दोहरे भौतिक सत्यापन (रेड टैग + QC स्टिकर) और सक्रिय JIRA बग आईडी के बिना कभी भी अस्वीकृत स्टॉक को स्थानांतरित न करें। ऐसा करने से क्वारंटाइन केज में अज्ञात स्टॉक जमा हो जाता है!",
+            "mr": "गंभीर चूक! दुहेरी भौतिक पडताळणी (Red Tag + QC स्टिकर) आणि सक्रिय JIRA Bug ID असल्याशिवाय नाकारलेला माल कधीही हलवू नका. अन्यथा क्वारंटाइन केजमध्ये हिशोब न लागणारा माल जमा होतो!"
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-04-Q22-WRONG.mp3"
         }
       },
       "media": {
@@ -124,6 +151,40 @@
       "interaction": {
         "type": "stop_go",
         "id": "c1-q35",
+        "questionId": "c1-q35",
+        "safetyCritical": true,
+        "correctAction": "stop",
+        "correct": "STOP",
+        "question": {
+          "en": "A rejected lot carries a Red Tag, but the QC sticker is missing and the JIRA ticket has no Bug ID ('Unknown Cause'). Can the NG team collect it?",
+          "hi": "एक अस्वीकृत पैलेट पर रेड टैग है, लेकिन QC स्टिकर गायब है और JIRA टिकट में कोई बग आईडी नहीं है ('अज्ञात कारण')। क्या NG टीम इसे एकत्र कर सकती है?",
+          "mr": "नाकारलेल्या पॅलेटवर Red Tag आहे, पण QC स्टिकर गायब आहे आणि JIRA तिकीटात Bug ID नसून 'Unknown Cause' लिहिले आहे. NG टीम तो पॅलेट गोळा करू शकते का?"
+        },
+        "situation": {
+          "en": "A rejected lot carries a physical Red Tag, but the QC sticker is missing and the digital JIRA ticket has no Bug ID ('Unknown Cause').",
+          "hi": "एक अस्वीकृत लॉट पर भौतिक रेड टैग है, लेकिन QC स्टिकर गायब है और डिजिटल JIRA टिकट में कोई बग आईडी नहीं है ('अज्ञात कारण')।",
+          "mr": "नाकारलेल्या लॉटवर Red Tag आहे, पण QC स्टिकर गायब आहे आणि डिजिटल JIRA तिकीटात Bug ID नसून 'Unknown Cause' लिहिले आहे."
+        },
+        "stopLabel": {
+          "en": "STOP (Refuse Collection)",
+          "hi": "STOP (संग्रह अस्वीकार करें)",
+          "mr": "STOP (माल उचलण्यास नकार)"
+        },
+        "goLabel": {
+          "en": "GO (Collect Pallet)",
+          "hi": "GO (पैलेट एकत्र करें)",
+          "mr": "GO (पॅलेट गोळा करा)"
+        },
+        "stopDescription": {
+          "en": "Refuse collection! Every rejected part MUST have both Red Tag AND QC sticker, plus JIRA Bug ID.",
+          "hi": "संग्रह अस्वीकार करें! प्रत्येक खारिज भाग में रेड टैग और QC स्टिकर दोनों होने चाहिए, साथ ही JIRA बग आईडी।",
+          "mr": "माल उचलण्यास नकार द्या! प्रत्येक नाकारलेल्या भागावर Red Tag आणि QC स्टिकर दोन्ही व JIRA Bug ID असणे आवश्यक आहे."
+        },
+        "goDescription": {
+          "en": "Collect pallet immediately to clear dock regardless of missing tags.",
+          "hi": "टैग गायब होने के बावजूद डॉक साफ करने के लिए तुरंत पैलेट एकत्र करें।",
+          "mr": "टॅग नसले तरी डॉक मोकळा करण्यासाठी लगेच पॅलेट घेऊन जा."
+        },
         "prompt": {
           "en": "A rejected lot carries a Red Tag, but the QC sticker is missing and the JIRA ticket has no Bug ID ('Unknown Cause'). Can the NG team collect it?",
           "hi": "एक अस्वीकृत पैलेट पर रेड टैग है, लेकिन QC स्टिकर गायब है और JIRA टिकट में कोई बग आईडी नहीं है ('अज्ञात कारण')। क्या NG टीम इसे एकत्र कर सकती है?",
@@ -142,14 +203,7 @@
             "hi": "STOP: संग्रह अस्वीकार करें! प्रत्येक खारिज भाग में रेड टैग और QC स्टिकर दोनों होने चाहिए, साथ ही एक वैध बग आईडी के साथ 'QC Done: Fail' दिखाने वाला JIRA टिकट होना चाहिए (SQA/MQA के लिए 2 दिनों तक प्रतीक्षा करें)",
             "mr": "STOP: माल उचलण्यास नकार द्या! प्रत्येक नाकारलेल्या भागावर Red Tag आणि QC स्टिकर दोन्ही असलेच पाहिजेत, तसेच वैध Bug ID सह JIRA तिकीटावर 'QC Done: Fail' स्टेटस असले पाहिजे (SQA/MQA साठी 2 दिवस थांबा)"
           }
-        },
-        "correct": "STOP",
-        "question": {
-          "en": "A rejected lot carries a Red Tag, but the QC sticker is missing and the JIRA ticket has no Bug ID ('Unknown Cause'). Can the NG team collect it?",
-          "hi": "एक अस्वीकृत पैलेट पर रेड टैग है, लेकिन QC स्टिकर गायब है और JIRA टिकट में कोई बग आईडी नहीं है ('अज्ञात कारण')। क्या NG टीम इसे एकत्र कर सकती है?",
-          "mr": "नाकारलेल्या पॅलेटवर Red Tag आहे, पण QC स्टिकर गायब आहे आणि JIRA तिकीटात Bug ID नसून 'Unknown Cause' लिहिले आहे. NG टीम तो पॅलेट गोळा करू शकते का?"
-        },
-        "questionId": "c1-q35"
+        }
       },
       "rules": {
         "xp": 120,
@@ -280,6 +334,27 @@
           "en": "The Material Review Board (MRB) — comprising SQA, Manufacturing Quality, Production, and Warehouse — convenes inside caged store SC01 BL to decide the fate of 4 quarantined lots. Verbal approvals are strictly illegal at Ather AURIC Plant M002! Route each quarantined component case study to its authorized disposition path (Auto-RTV, Rework, Use As-Is Deviation, or Scrap).",
           "hi": "मटेरियल रिव्यू बोर्ड (MRB) — जिसमें SQA, मैन्युफैक्चरिंग क्वालिटी, प्रोडक्शन और वेयरहाउस शामिल हैं — 4 क्वारंटाइन लॉट के भाग्य का फैसला करने के लिए केज्ड स्टोर SC01 BL के अंदर बैठक करता है। एथर औरिक प्लांट M002 में मौखिक अनुमोदन सख्त अवैध हैं! प्रत्येक क्वारंटाइन घटक केस स्टडी को उसके अधिकृत निस्तारण पथ (Auto-RTV, Rework, Use As-Is Deviation, या Scrap) पर भेजें।",
           "mr": "मटेरियल रिव्ह्यू बोर्ड (MRB) — ज्यामध्ये SQA, उत्पादन गुणवत्ता, प्रोडक्शन आणि वेअरहाऊस प्रमुख असतात — 4 क्वारंटाइन लॉट्सच्या विल्हेवाटीचा निर्णय घेण्यासाठी SC01 BL मध्ये एकत्र येतो. एथर औरिक प्लांट M002 मध्ये तोंडी संमतीला सक्त मनाई आहे! प्रत्येक केस स्टडीला तिच्या अधिकृत विल्हेवाट मार्गावर (Auto-RTV, Rework, Use As-Is Deviation, किंवा Scrap) पाठवा."
+        },
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-04-Q24-PROMPT.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-04-Q24-CORRECT.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-04-Q24-WRONG.mp3"
         }
       },
       "media": {
@@ -402,6 +477,27 @@
           "en": "Final station of Category 1! We are at the Ather Scrapyard Building and Outbound Weighbridge. Defective structural components approved for scrap by Finance and Production must be physically shredded to ensure zero unauthorized street resale, followed by strict weighbridge verification before truck gate exit. Put the 4 steps of the complete scrap disposal lifecycle in the exact SOP sequence!",
           "hi": "श्रेणी 1 का अंतिम स्टेशन! हम एथर स्क्रैपयार्ड बिल्डिंग और आउटबाउंड वेईब्रिज पर हैं। वित्त और उत्पादन द्वारा स्क्रैप के लिए अनुमोदित दोषपूर्ण संरचनात्मक घटकों को शारीरिक रूप से काटा जाना चाहिए ताकि शून्य अनधिकृत सड़क पुनर्विक्रय सुनिश्चित हो सके, जिसके बाद ट्रक गेट से बाहर निकलने से पहले सख्त वेईब्रिज सत्यापन हो। पूर्ण स्क्रैप निपटान जीवनचक्र के 4 चरणों को सटीक SOP क्रम में रखें!",
           "mr": "कॅटेगरी 1 चा अंतिम टप्पा! आपण एथर स्क्रॅप यार्ड आणि आऊटबाउंड वेईब्रिजवर पोहोचलो आहोत. फायनान्स व प्रोडक्शनने स्क्रॅप मंजूर केलेल्या नाकारलेल्या साहित्याचे औद्योगिक श्रेडरमध्ये तुकडे केले पाहिजेत जेणेकरून ते पुन्हा बाजारात जाऊ नये, आणि त्यानंतर वेईब्रिजवर वजन करून ट्रक सोडला जातो. अधिकृत SOP नुसार स्क्रॅप विल्हेवाटीच्या 4 टप्प्यांचा अचूक क्रम लावा!"
+        },
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-04-Q29-PROMPT.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-04-Q29-CORRECT.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-04-Q29-WRONG.mp3"
         }
       },
       "media": {

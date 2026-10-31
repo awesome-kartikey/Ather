@@ -12,7 +12,11 @@ export const QuarantineSegregationAnimation: React.FC<Props> = ({
   isPaused,
   onPauseReached
 }) => {
-  const [videoAvailable, setVideoAvailable] = useState<boolean>(false);
+  const [videoAvailable, setVideoAvailable] = useState<boolean>(Boolean(videoSrc));
+
+  useEffect(() => {
+    setVideoAvailable(Boolean(videoSrc));
+  }, [videoSrc]);
   const [hasTriggeredPause, setHasTriggeredPause] = useState(false);
   const [activeBay, setActiveBay] = useState(0);
 
@@ -49,8 +53,13 @@ export const QuarantineSegregationAnimation: React.FC<Props> = ({
         />
       )}
 
-      {/* Atmospheric Security Wire-Mesh Industrial Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 opacity-95 pointer-events-none" />
+      {/* Atmospheric Security Wire-Mesh Background with Authentic NG Quarantine Photo */}
+      <img
+        src="/Assets/Background%20Environments/bg_ng_quarantine_area.jpg"
+        alt="Quarantine Rejection Area"
+        className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay pointer-events-none"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 opacity-90 pointer-events-none" />
       <div 
         className="absolute inset-0 opacity-15 pointer-events-none"
         style={{

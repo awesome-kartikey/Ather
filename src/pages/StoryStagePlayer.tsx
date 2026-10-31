@@ -278,6 +278,7 @@ export const StoryStagePlayer: React.FC = () => {
   if (phase === 'interaction_paused') {
     currentPose = 'thinking';
     currentDialogue = interactionData?.question || interactionData?.prompt || currentDialogue;
+    currentAudio = interactionData?.audioSrc || currentAudio;
   } else if (phase === 'feedback') {
     if (isLastCorrect) {
       currentPose = 'success';

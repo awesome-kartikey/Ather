@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Layers, CheckCircle2, RotateCcw } from 'lucide-react';
 import type { DragDropInteraction, LanguageCode } from '../../engine/story/types';
+import { resolvePropForQuestion } from '../../engine/story/assetRegistry';
 
 interface Props {
   interaction: DragDropInteraction;
@@ -18,6 +19,10 @@ export const DragDropCard: React.FC<Props> = ({
   // Map of itemId -> zoneId
   const [assignments, setAssignments] = useState<Record<string, string>>({});
   const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
+
+  const qId = interaction.questionId || (interaction as any).id || 'DD';
+  const qPrompt = interaction.question?.en || (interaction as any).prompt?.en || '';
+  const propImg = (interaction as any).propImage || resolvePropForQuestion(qId, qPrompt);
 
   const unassignedItems = interaction.items.filter((item) => !assignments[item.id]);
   const allAssigned = Object.keys(assignments).length === interaction.items.length;
@@ -102,6 +107,23 @@ export const DragDropCard: React.FC<Props> = ({
           </p>
         )}
       </div>
+
+      {/* Contextual Floor Prop Cutout (if applicable) */}
+      {propImg && (
+        <div className="flex items-center gap-3 p-3 rounded-2xl bg-blue-50/50 border border-blue-200/80">
+          <div className="w-12 h-12 shrink-0 p-1 rounded-xl bg-white border border-blue-200 shadow-xs flex items-center justify-center">
+            <img src={propImg} alt="Floor Tool" className="max-w-full max-h-full object-contain" />
+          </div>
+          <div className="space-y-0.5">
+            <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-blue-700 block">
+              Reference Floor Prop / Tool
+            </span>
+            <p className="text-xs text-slate-700 font-medium">
+              Verified operational artifact required for this sorting procedure.
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* 1. Unassigned Documents / Items Deck */}
       <div className="p-3.5 bg-slate-50 rounded-2xl border border-dashed border-slate-300">

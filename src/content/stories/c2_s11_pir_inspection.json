@@ -99,6 +99,27 @@
           "en": "Now that the Budget ID is verified on ticket PIR-AURIC-1042, the requester asks you to pick the materials immediately. However, the ticket requests 30 Brake Calipers worth ₹45,000. Under SOP 05_C2_S3 Clause 4.2 & Failure Mode 5.1, what two mandatory sign-offs are required before warehouse manpower is authorized to pick?",
           "hi": "अब जब टिकट PIR-AURIC-1042 पर बजट आईडी सत्यापित हो गई है, तो अनुरोधकर्ता आपसे तुरंत सामग्री चुनने के लिए कहता है। हालांकि, टिकट में ₹45,000 मूल्य के 30 ब्रेक कैलीपर्स का अनुरोध किया गया है। SOP 05_C2_S3 क्लॉज 4.2 और विफलता मोड 5.1 के तहत, वेयरहाउस जनशक्ति को पिकिंग के लिए अधिकृत किए जाने से पहले कौन से दो अनिवार्य हस्ताक्षर आवश्यक हैं?",
           "mr": "आता PIR-AURIC-1042 वर बजेट आयडी तपासला गेला आहे, पण विनंतीदार म्हणतो की ताबडतोब माल उचलून द्या. या तिकिटात ₹45,000 किमतीचे 30 ब्रेक कॅलिपर्स मागवले आहेत. SOP 05_C2_S3 कलम 4.2 आणि अपयश मोड 5.1 नुसार, गोदामातून माल उचलण्यापूर्वी कोणत्या दोन अधिकाऱ्यांची मंजुरी असणे अनिवार्य आहे?"
+        },
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-07-Q45-PROMPT.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-07-Q45-CORRECT.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-07-Q45-WRONG.mp3"
         }
       },
       "media": {
@@ -216,6 +237,27 @@
           "en": "A fully authorized PIR ticket for 5 replacement instrument clusters arrives in the warehouse dispatch queue at 4:15 PM on Friday afternoon. Under SOP 05_C2_S3 Clause 4.2 & Failure Mode 5.1, what is the mandatory dispatch schedule and warehouse handling rule?",
           "hi": "5 प्रतिस्थापन उपकरण क्लस्टर के लिए एक पूरी तरह से अधिकृत पीआईआर टिकट शुक्रवार दोपहर 4:15 बजे वेयरहाउस प्रेषण कतार में आता है। SOP 05_C2_S3 क्लॉज 4.2 और विफलता मोड 5.1 के तहत, अनिवार्य प्रेषण कार्यक्रम और वेयरहाउस हैंडलिंग नियम क्या है?",
           "mr": "5 नवीन इन्स्ट्रुमेंट क्लस्टर्ससाठी सर्व मंजुऱ्या मिळालेले एक PIR तिकीट शुक्रवारी दुपारी 4:15 वाजता गोदामाच्या डिस्पॅच स्क्रीनवर येते. SOP 05_C2_S3 कलम 4.2 आणि अपयश मोड 5.1 नुसार, डिस्पॅचचे वेळापत्रक आणि गोदामाचा अनिवार्य नियम काय सांगतो?"
+        },
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-07-Q46-PROMPT.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-07-Q46-CORRECT.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-07-Q46-WRONG.mp3"
         }
       },
       "media": {

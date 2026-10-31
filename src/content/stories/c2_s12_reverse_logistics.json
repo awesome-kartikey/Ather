@@ -146,6 +146,27 @@
           "en": "Outstanding work enforcing the Defect Validation Gate in Scene 1! Now, the supplier-caused NG parts are safely staged in the NG Quarantine Area marked 'Quality Failed'. Under SOP 06_C2_S4 Clause 4.2, all supplier-caused defects default to 'Auto RTV' within a strict 3-Day SLA. However, the assembly line is critically starving for handlebar grip sleeves! SQA discovers the defect is purely a minor cosmetic color shade variance. The Supplier Manager initiates a 'Use As It Is' deviation request in JIRA. Who has the sole authority to approve this deviation, and how is the stock systematically restored into SAP for production?",
           "hi": "दृश्य 1 में दोष सत्यापन गेट को लागू करने का उत्कृष्ट कार्य! अब, सप्लायर-जनित एनजी भागों को 'Quality Failed' चिह्नित एनजी क्वारंटाइन क्षेत्र में सुरक्षित रखा गया है। SOP 06_C2_S4 क्लॉज 4.2 के तहत, सभी सप्लायर-जनित दोष एक सख्त 3-दिवसीय SLA के भीतर 'Auto RTV' पर डिफॉल्ट होते हैं। हालाँकि, असेंबली लाइन पर हैंडलबार ग्रिप स्लीव्स की भारी कमी है! SQA को पता चलता है कि दोष केवल एक मामूली कॉस्मेटिक रंग भिन्नता है। सप्लायर मैनेजर JIRA में 'Use As It Is' विचलन का अनुरोध करता है। इस विचलन को स्वीकृत करने का एकमात्र अधिकार किसके पास है, और उत्पादन के लिए स्टॉक को व्यवस्थित रूप से SAP में कैसे बहाल किया जाता है?",
           "mr": "दृश्य 1 मधील दोष पडताळणी गेट यशस्वीरीत्या पार पाडल्याबद्दल अभिनंदन! आता सप्लायरमुळे नाकारलेला माल 'Quality Failed' म्हणून NG क्वारंटाईन भागात ठेवला आहे. SOP 06_C2_S4 कलम 4.2 नुसार, सप्लायरच्या सर्व दोषांवर आपोआप 3 दिवसांच्या मुदतीत 'Auto RTV' लागू होते. परंतु, असेंब्ली लाईनवर हँडलबार ग्रिप स्लीव्ह्सचा मोठा तुटवडा निर्माण झाला आहे! SQA ला आढळले की हा केवळ रंगाचा किरकोळ फरक आहे. सप्लायर मॅनेजरने JIRA मध्ये 'Use As It Is' विचलनाची मागणी केली. JIRA मध्ये हे विचलन मंजूर करण्याचा एकमेव अधिकार कोणाचा आहे आणि उत्पादनासाठी SAP मध्ये स्टॉक कसा उपलब्ध केला जातो?"
+        },
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-04-Q28-PROMPT.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-04-Q28-CORRECT.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-04-Q28-WRONG.mp3"
         }
       },
       "media": {
@@ -321,6 +342,27 @@
           "en": "This is it—the final gate of Stage 12 and the Grand Finale of our 12-Module Warehouse Training Journey! At the outbound reverse logistics dock, the designated transporter truck is positioned with wheel chocks set. We have 24 strapped empty bins (under 5 feet) and 12 supplier-rejected RTV crates with Red Tags and Debit Notes attached. To maintain airtight legal compliance and audit traceability before security gate-out, what is the mandatory sequence of actions under SOP 06_C2_S4 Clause 4.10 and SOP 08_C2_S4?",
           "hi": "यही है—स्टेज 12 का अंतिम गेट और हमारी 12-मॉड्यूल वेयरहाउस प्रशिक्षण यात्रा का भव्य समापन! आउटबाउंड रिवर्स लॉजिस्टिक्स डॉक पर, व्हील चॉक्स सेट के साथ निर्दिष्ट ट्रांसपोर्टर ट्रक तैनात है। हमारे पास 24 स्ट्रैप किए गए खाली डिब्बे (5 फीट से कम) और 12 सप्लायर-अस्वीकृत आरटीवी क्रेट हैं जिनमें रेड टैग और डेबिट नोट जुड़े हैं। सुरक्षा गेट-आउट से पहले एयरटाइट कानूनी अनुपालन और ऑडिट ट्रैसेबिलिटी बनाए रखने के लिए, SOP 06_C2_S4 क्लॉज 4.10 और SOP 08_C2_S4 के तहत कार्यों का अनिवार्य क्रम क्या है?",
           "mr": "हाच तो क्षण—स्टेज 12 चे अंतिम गेट आणि संपूर्ण 12-मॉड्यूल वेअरहाऊस प्रशिक्षण प्रवासाचा महा-अंतिम टप्पा! आउटबाउंड रिव्हर्स लॉजिस्टिक्स डॉकवर व्हेंडरचा ट्रक व्हील चॉक्स लावून सज्ज आहे. आपल्याकडे 24 पट्टे बांधलेल्या रिकाम्या पेट्या (5 फुटांपेक्षा कमी उंची) आणि लाल टॅग व डेबिट नोट लावलेल्या 12 RTV नाकारलेल्या पेट्या आहेत. सुरक्षा गेटबाहेर जाण्यापूर्वी संपूर्ण कायदेशीर पूर्तता आणि ऑडिट नोंदींसाठी SOP 06_C2_S4 कलम 4.10 व SOP 08_C2_S4 नुसार अनिवार्य क्रम कोणता आहे?"
+        },
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-08-Q51-PROMPT.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-08-Q51-CORRECT.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-08-Q51-WRONG.mp3"
         }
       },
       "media": {
@@ -330,7 +372,9 @@
           "en": "Reverse Dispatch Compliance: Physical load verification → SAP Delivery Challan & E-Way Bill → Signed LR Proof of Handover → JIRA status transition to 'Returned to vendor'",
           "hi": "रिवर्स प्रेषण अनुपालन: भौतिक भार सत्यापन → SAP डिलीवरी चालान और ई-वे बिल → हस्ताक्षरित LR प्रूफ ऑफ हैंडओवर → JIRA स्थिति 'Returned to vendor' में संक्रमण",
           "mr": "रिव्हर्स डिस्पॅच पूर्तता: प्रत्यक्ष मालाची तपासणी → SAP डिलिव्हरी चलन व ई-वे बिल → ट्रान्सपोर्टरची स्वाक्षरी असलेली LR पावती → JIRA मध्ये 'Returned to vendor' नोंद"
-        }
+        },
+        "videoSrc": "/Assets/8%20Sequential%20Scenes/8%20Empty%20Bin%20Stacking%20%26%20Strapping/scene_08_empty_bin_strapping.mp4",
+        "posterSrc": "/Assets/8%20Sequential%20Scenes/8%20Empty%20Bin%20Stacking%20%26%20Strapping/scene_08_empty_bin_strapping_poster.jpg"
       },
       "interaction": {
         "type": "sequence",
@@ -1176,7 +1220,7 @@
             "hi": "ग्रैंडमास्टर प्रमाणन मील का पत्थर! आप एथर औरिक प्लांट M002 वेयरहाउस प्रशिक्षण कार्यक्रम के 91वें और अंतिम दृश्य पर पहुंच गए हैं! 12 व्यापक मॉड्यूलों में, आपने इनबाउंड डॉक्स, IQC क्लीयरेंस, पुट-अवे, बैटरी रूम, खतरनाक रसायन, सुपरमार्केट, क्वारंटाइन, ऑर्डर पिकिंग, पेंट डिकैन्टिंग, अप्रत्यक्ष स्टोर, पीआईआर प्रेषण और रिवर्स लॉजिस्टिक्स में महारत हासिल की। कौन सा मौलिक सिद्धांत हमारे गोदाम में हर एक कार्रवाई को नियंत्रित करता है?",
             "mr": "ग्रँडमास्टर प्रमाणपत्र महा-टप्पा! तुम्ही एथर औरिक प्लांट M002 वेअरहाऊस प्रशिक्षण कार्यक्रमाच्या 91 व्या आणि अंतिम टप्प्यावर पोहोचला आहात! संपूर्ण 12 मॉड्यूल्समध्ये तुम्ही इनबाउंड डॉक, IQC तपासणी, पुट-अवे, बॅटरी रूम, घातक रसायने, सुपरमार्केट, क्वारंटाईन, ऑर्डर पिकिंग, पेंट डिकॅन्टिंग, अप्रत्यक्ष स्टोअर, PIR डिस्पॅच आणि रिव्हर्स लॉजिस्टिकमध्ये प्रावीण्य मिळवले आहे. आपल्या गोदामातील प्रत्येक कामाला नियंत्रित करणारा मूळ पाया कोणता आहे?"
           },
-          "audioSrc": "/audio/mascot/c2_s12_sc12_intro.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-08-VICTORY.mp3"
         },
         "onCorrect": {
           "pose": "celebrating",
@@ -1185,7 +1229,7 @@
             "hi": "बधाई हो, ग्रैंडमास्टर! अटूट दोहरा सत्यापन: 100% VIN ट्रैसेबिलिटी और शून्य दोष रिसाव की गारंटी के लिए हर भौतिक आंदोलन को वास्तविक समय के डिजिटल सिस्टम स्कैन (SAP EWM, MES, JIRA) से जोड़ा जाना चाहिए! आपने सभी 12 मॉड्यूलों में सभी 91 दृश्यों को विशिष्टता के साथ पूरा कर लिया है! आपका आधिकारिक एथर औरिक ग्रैंडमास्टर प्रमाणन अब अनलॉक हो गया है!",
             "mr": "अभिनंदन, ग्रँडमास्टर! अढळ दुहेरी पडताळणी: 100% VIN ट्रॅकिंग आणि शून्य त्रुटीच्या हमीसाठी प्रत्येक प्रत्यक्ष मालाची हालचाल डिजिटल सिस्टीम स्कॅनिंगशी (SAP EWM, MES, JIRA) जोडलीच पाहिजे! तुम्ही सर्व 12 मॉड्यूल्समधील सर्व 91 सीन्स अत्यंत उत्कृष्टतेने पूर्ण केले आहेत! तुमचे अधिकृत एथर औरिक ग्रँडमास्टर प्रमाणपत्र आता अनलॉक झाले आहे!"
           },
-          "audioSrc": "/audio/mascot/c2_s12_sc12_correct.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-08-VICTORY.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -1194,7 +1238,7 @@
             "hi": "डिजिटल सत्यापन पर कभी समझौता न करें! सिस्टम अनुशासन के बिना वेयरहाउस की गति लाइन रुकने और दोष रिसाव का कारण बनती है। हमेशा भौतिक हैंडलिंग को डिजिटल बारकोड स्कैन से जोड़ें!",
             "mr": "डिजिटल पडताळणीत कधीही तडजोड करू नका! सिस्टीम नियमांशिवाय घाई केल्यास असेंब्ली लाईन बंद पडते. नेहमी प्रत्यक्ष कामाला बारकोड स्कॅनिंगची जोड द्या!"
           },
-          "audioSrc": "/audio/mascot/c2_s12_sc12_wrong.mp3"
+          "audioSrc": "/audio/voiceover_neerja/ACT-08-VICTORY.mp3"
         }
       },
       "interaction": {

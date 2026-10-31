@@ -27,6 +27,27 @@
           "en": "Welcome to Stage 10: Indirect Material Handling under SOP 10_C2_S1! Centralized Indirect Stores (CM01) houses plant consumables, lubricants, safety gear, and machine spares. A line maintenance supervisor rushes to the counter demanding 10 boxes of nitrile gloves and 2 tubes of synthetic grease immediately for an emergency breakdown, stating: 'Give them to me right away, I will raise the SAP slip after lunch!' Under SOP Clause 4.1 & Failure Mode 5.1, what is your mandatory operational decision? STOP OR GO?",
           "hi": "SOP 10_C2_S1 के तहत स्टेज 10: अप्रत्यक्ष सामग्री प्रबंधन में आपका स्वागत है! केंद्रीकृत अप्रत्यक्ष स्टोर (CM01) में संयंत्र उपभोग्य वस्तुएं, स्नेहक, सुरक्षा उपकरण और मशीन स्पेयर रखे जाते हैं। एक लाइन रखरखाव पर्यवेक्षक आपातकालीन ब्रेकडाउन के लिए तुरंत 10 बॉक्स नाइट्राइल दस्ताने और 2 ट्यूब सिंथेटिक ग्रीस की मांग करते हुए काउंटर पर आता है, यह कहते हुए: 'मुझे अभी दे दो, मैं दोपहर के भोजन के बाद SAP पर्ची बनाऊंगा!' SOP क्लॉज 4.1 और विफलता मोड 5.1 के तहत, आपका अनिवार्य परिचालन निर्णय क्या है? रुकें या जाएं?",
           "mr": "SOP 10_C2_S1 नुसार स्टेज 10: अप्रत्यक्ष साहित्य हाताळणीमध्ये आपले स्वागत आहे! मध्यवर्ती अप्रत्यक्ष स्टोअरमध्ये (CM01) कारखान्यातील उपभोग्य वस्तू, वंगण, सुरक्षा उपकरणे (PPE) आणि मशीनचे सुटे भाग ठेवले जातात. लाईन मेंटेनन्स सुपरवायझर घाईघाईत काउंटरवर येतो आणि म्हणतो: 'तातडीने ब्रेकडाउन दुरुस्तीसाठी मला 10 बॉक्स नायट्रिल ग्लोव्हज आणि 2 ट्यूब ग्रीस आत्ताच द्या, मी जेवणानंतर SAP मध्ये स्लिप बनवून देईन!' SOP कलम 4.1 आणि अपयश मोड 5.1 नुसार, तुमचा निर्णय काय असेल? थांबा किंवा पुढे जा?"
+        },
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-07-Q43-PROMPT.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-07-Q43-CORRECT.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": ""
+          },
+          "audioSrc": "/audio/voiceover_neerja/ACT-07-Q43-WRONG.mp3"
         }
       },
       "media": {
