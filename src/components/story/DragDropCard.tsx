@@ -94,11 +94,13 @@ export const DragDropCard: React.FC<Props> = ({
       {/* Instruction */}
       <div className="space-y-1">
         <h3 className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
-          {interaction.question[lang] || interaction.question.en}
+          {interaction.question?.[lang] || interaction.question?.en || (interaction as any).prompt?.[lang] || (interaction as any).prompt?.en || ''}
         </h3>
-        <p className="text-xs text-slate-500 font-medium">
-          {interaction.instruction[lang] || interaction.instruction.en}
-        </p>
+        {interaction.instruction && (
+          <p className="text-xs text-slate-500 font-medium">
+            {interaction.instruction[lang] || interaction.instruction.en}
+          </p>
+        )}
       </div>
 
       {/* 1. Unassigned Documents / Items Deck */}
@@ -116,7 +118,7 @@ export const DragDropCard: React.FC<Props> = ({
                   key={item.id}
                   type="button"
                   onClick={() => handleItemClick(item.id)}
-                  className={`min-h-[48px] px-3.5 py-2 rounded-xl text-left flex items-center gap-2 transition-all cursor-pointer border ${
+                  className={`min-h-[56px] px-4 py-3 rounded-xl text-left flex items-center gap-2.5 transition-all cursor-pointer border ${
                     isSelected
                       ? 'bg-blue-600 text-white border-blue-700 shadow-md scale-105 ring-2 ring-blue-400/40'
                       : 'bg-white text-slate-800 border-slate-200 hover:border-slate-400 hover:shadow-xs'
@@ -214,7 +216,7 @@ export const DragDropCard: React.FC<Props> = ({
           type="button"
           disabled={!allAssigned || disabled}
           onClick={handleVerify}
-          className={`w-full min-h-[58px] px-6 py-3.5 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer ${
+          className={`w-full min-h-[64px] px-6 py-4 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer ${
             allAssigned && !disabled
               ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-600/30'
               : 'bg-slate-200 text-slate-400 shadow-none cursor-not-allowed'

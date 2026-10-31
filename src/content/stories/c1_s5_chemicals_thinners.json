@@ -99,7 +99,13 @@
               "mr": "पुढील शिफ्ट येईपर्यंत ट्रक उघड्या पार्किंगच्या जागेत सोडून द्या"
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "A delivery truck arrives with drums of combustible thinners and industrial paints. The driver asks to unload at Dock 01 next to vehicle body panels. Where does Ather SOP Clause 4.1 mandate this vehicle proceed?",
+          "hi": "एक डिलीवरी ट्रक ज्वलनशील थिनर और औद्योगिक पेंट के ड्रम लेकर आता है। ड्राइवर वाहन बॉडी पैनल के बगल में डॉक 01 पर अनलोड करने के लिए कहता है। एथर SOP क्लॉज 4.1 इस वाहन को कहां जाने का आदेश देता है?",
+          "mr": "एक डिलिव्हरी ट्रक ज्वलनशील थिनर आणि औद्योगिक पेंट्सचे ड्रम्स घेऊन येतो. ड्रायव्हर व्हेईकल बॉडी पॅनल्सजवळ डॉक 01 वर अनलोड करण्याची विचारणा करतो. एथर SOP कलम 4.1 नुसार या वाहनाला कुठे जाण्याचे निर्देश आहेत?"
+        },
+        "id": "c1-q25"
       },
       "rules": {
         "xp": 110,
@@ -226,7 +232,13 @@
               "mr": "योग्य: घातक रसायनांसाठी प्रमाणित MHE चा वापर"
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "Spot the Safety Violation: An operator is unloading 200L flammable thinner drums at Chemical Annex C-04. Which condition violates Ather safety protocols?",
+          "hi": "सुरक्षा उल्लंघन पहचानें: एक ऑपरेटर रासायनिक एनेक्स C-04 पर 200L ज्वलनशील थिनर ड्रम उतार रहा है। कौन सी स्थिति एथर सुरक्षा प्रोटोकॉल का उल्लंघन करती है?",
+          "mr": "सुरक्षिततेचे उल्लंघन ओळखा: एक ऑपरेटर केमिकल अ‍ॅनेक्स C-04 वर 200L ज्वलनशील थिनर ड्रम्स उतरवत आहे. कोणती परिस्थिती एथर सुरक्षा नियमांचे उल्लंघन करते?"
+        },
+        "id": "c1-q25b"
       },
       "rules": {
         "xp": 115,
@@ -366,7 +378,13 @@
               "mr": "फॉस्फरिक प्री-ट्रीटमेंट अ‍ॅसिड (क्लास 8)"
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "Segregate incoming chemicals into their designated storage bays according to Ather SOP Clause 4.3 and the 2-Hour SLA limit:",
+          "hi": "एथर SOP क्लॉज 4.3 और 2-घंटे की SLA सीमा के अनुसार आने वाले रसायनों को उनके निर्दिष्ट भंडारण बे में अलग करें:",
+          "mr": "एथर SOP कलम 4.3 आणि 2-तासांच्या SLA मर्यादेनुसार इनवर्ड रसायने त्यांच्या नियुक्त स्टोरेज बे मध्ये वेगळी करा:"
+        },
+        "id": "c1-q24-chem"
       },
       "rules": {
         "xp": 120,
@@ -468,7 +486,13 @@
               "mr": "मेन गेटवरील सुरक्षा रक्षक (केवळ गेट-एन्ट्री नोंद हाताळतो)"
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "After a chemical delivery truck is unloaded and physically verified at Annex C-04, who is responsible for creating the Goods Receipt Note (GRN) in SAP?",
+          "hi": "एनेक्स C-04 पर रासायनिक डिलीवरी ट्रक को अनलोड करने और भौतिक रूप से सत्यापित करने के बाद, SAP में गुड्स रिसीट नोट (GRN) बनाने के लिए कौन जिम्मेदार है?",
+          "mr": "अ‍ॅनेक्स C-04 वर केमिकल डिलिव्हरी ट्रक अनलोड करून प्रत्यक्ष तपासणी केल्यानंतर, SAP मध्ये गुड्स रिसीट नोट (GRN) तयार करण्यासाठी कोण जबाबदार आहे?"
+        },
+        "id": "c1-q25-deo"
       },
       "rules": {
         "xp": 110,
@@ -477,6 +501,102 @@
           "en": "SOP Clause 4.4 establishes strict separation of physical and digital custody: Putaway personnel handle unloading, secondary spill bund staging, and static earthing verification. Following successful physical verification, the Data Entry Operator (DEO) generates the Goods Receipt Note (GRN) for the inward lot and updates system inventory stock in SAP EWM upon putaway conclusion.",
           "hi": "SOP क्लॉज 4.4 भौतिक और डिजिटल कस्टडी के सख्त पृथक्करण को स्थापित करता है: पुट-अवे कार्मिक अनलोडिंग, सेकेंडरी स्पिल बंड स्टेजिंग और स्टैटिक अर्थिंग सत्यापन को संभालते हैं। सफल भौतिक सत्यापन के बाद, डेटा एंट्री ऑपरेटर (DEO) इनवर्ड लॉट के लिए माल रसीद नोट (GRN) बनाता है और पुट-अवे निष्कर्ष पर SAP EWM में सिस्टम इन्वेंट्री स्टॉक को अपडेट करता है।",
           "mr": "SOP कलम 4.4 प्रत्यक्ष आणि डिजिटल जबाबदाऱ्यांचे अचूक विभाजन करते: पुट-अवे कामगार अनलोडिंग, स्पिल बंड स्टेजिंग आणि अर्थिंग तपासणी पूर्ण करतात. प्रत्यक्ष तपासणी झाल्यावर, डेटा एन्ट्री ऑपरेटर (DEO) इनवर्ड लॉटसाठी GRN तयार करतो आणि काम पूर्ण झाल्यावर SAP EWM मध्ये अधिकृत इन्व्हेंटरी स्टॉक अपडेट करतो."
+        }
+      }
+    },
+    {
+      "id": "c1_s5_sc05_static_bonding_clamp",
+      "stepNumber": 5,
+      "title": {
+        "en": "Static Bonding Clamp & Flammable Vapor Flash Fire Prevention",
+        "hi": "स्टैटिक बॉन्डिंग क्लैंप और ज्वलनशील वाष्प फ्लैश फायर रोकथाम",
+        "mr": "स्टॅटिक बॉन्डिंग क्लॅम्प आणि ज्वलनशील वाष्प फ्लॅश फायर प्रतिबंध"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s5_sc05_grounding_clamp.mp4",
+        "posterSrc": "/images/scenes/c1_s5_sc05_poster.jpg",
+        "fallbackAnimation": "static_bonding_clamp",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "warning",
+          "text": {
+            "en": "Urgent safety audit at Chemical Annex C-04! A drum of industrial thinner has been safely placed on the spill pallet. Before opening the bung cap to sample the viscosity, the operator reaches for the steel wrench without attaching the copper static earthing clamp to the plant grounding busbar. The operator insists, 'It's just a 10-second inspection.' Should this action be allowed or halted immediately?",
+            "hi": "रासायनिक एनेक्स C-04 पर तत्काल सुरक्षा ऑडिट! औद्योगिक थिनर का एक ड्रम स्पिल पैलेट पर सुरक्षित रूप से रखा गया है। चिपचिपाहट का नमूना लेने के लिए बंग कैप खोलने से पहले, ऑपरेटर कॉपर स्टैटिक अर्थिंग क्लैंप को प्लांट ग्राउंडिंग बसबार से जोड़े बिना स्टील रिंच उठाता है। ऑपरेटर का कहना है, 'यह सिर्फ 10 सेकंड का निरीक्षण है।' क्या इस कार्रवाई की अनुमति दी जानी चाहिए या तुरंत रोक दी जानी चाहिए?",
+            "mr": "केमिकल अ‍ॅनेक्स C-04 वर तातडीचे सुरक्षा ऑडिट! औद्योगिक थिनरचा एक ड्रम स्पिल पॅलेटवर सुरक्षित ठेवला आहे. व्हिस्कोसिटी सॅम्पल तपासण्यासाठी ड्रमचे झाकण उघडण्यापूर्वी, ऑपरेटर कॉपर स्टॅटिक अर्थिंग क्लॅम्प प्लांटच्या अर्थिंग पट्टीला न जोडता स्टील पाना हाताळतो. ऑपरेटर म्हणतो, 'फक्त 10 सेकंदांची तपासणी आहे.' या कृतीस परवानगी द्यावी की ताबडतोब थांबवावे?"
+          },
+          "audioSrc": "/audio/mascot/c1_s5_sc05_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "trophy",
+          "text": {
+            "en": "HALT IS THE ONLY SURVIVAL DECISION! SOP Clause 4.5: Static electricity generated by wrench friction or liquid sloshing can spark an instantaneous vapor explosion exceeding 800°C! Grounding bonding clamps must be firmly connected to bare metal before touching or unsealing any flammable drum. Hazardous Chemicals & Thinners Module 5 is now 100% complete!",
+            "hi": "HALT ही एकमात्र जीवनरक्षक निर्णय है! SOP क्लॉज 4.5: रिंच के घर्षण या तरल के हिलने से उत्पन्न स्थिर बिजली 800°C से अधिक का तात्कालिक वाष्प विस्फोट कर सकती है! किसी भी ज्वलनशील ड्रम को छूने या खोलने से पहले ग्राउंडिंग बॉन्डिंग क्लैंप को नंगे धातु से मजबूती से जोड़ा जाना चाहिए। मॉड्यूल 5 अब 100% पूरा हुआ!",
+            "mr": "HALT हाच एकमेव सुरक्षित निर्णय! SOP कलम 4.5: पाना फिरवताना होणाऱ्या घर्षणामुळे किंवा द्रवाच्या हालचालीमुळे निर्माण होणाऱ्या स्टॅटिक ठिणगीने 800°C पेक्षा जास्त तापमानाचा भीषण स्फोट होऊ शकतो! ज्वलनशील ड्रमचे झाकण उघडण्यापूर्वी अर्थिंग बॉन्डिंग क्लॅम्प धातूच्या पृष्ठभागावर जोडणे अनिवार्य आहे. मॉड्यूल 5 आता 100% पूर्ण झाले आहे!"
+          },
+          "audioSrc": "/audio/mascot/c1_s5_sc05_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "CATASTROPHIC FIRE VIOLATION! Flammable solvent vapors linger invisibly around drum bungs. Metal-on-metal spark without grounding causes immediate deflagration and factory-wide evacuation! Never loosen a chemical drum bung without active earthing!",
+            "hi": "विनाशकारी आग का उल्लंघन! ज्वलनशील विलायक वाष्प ड्रम बंग के चारों ओर अदृश्य रूप से मौजूद रहते हैं। ग्राउंडिंग के बिना धातु से धातु की चिंगारी तत्काल विस्फोट और पूरे कारखाने को खाली करने का कारण बनती है! सक्रिय अर्थिंग के बिना रासायनिक ड्रम का ढक्कन कभी न ढीला करें!",
+            "mr": "गंभीर आगीचे उल्लंघन! ड्रमच्या झाकणाभोवती अदृश्य ज्वलनशील वाष्प असते. अर्थिंगशिवाय धातूवर धातू आदळल्यास पडणाऱ्या ठिणगीमुळे क्षणार्धात आग लागून संपूर्ण फॅक्टरी रिकामी करावी लागू शकते! अर्थिंगशिवाय केमिकल ड्रम कधीही उघडू नका!"
+          },
+          "audioSrc": "/audio/mascot/c1_s5_sc05_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "stop_go",
+        "questionId": "c1-q25c",
+        "safetyCritical": true,
+        "question": {
+          "en": "An associate prepares to loosen a 200L solvent drum bung for QC sampling without attaching the static bonding grounding clamp. Allow or halt?",
+          "hi": "एक सहयोगी स्टैटिक बॉन्डिंग ग्राउंडिंग क्लैंप को जोड़े बिना QC सैंपलिंग के लिए 200L विलायक ड्रम बंग को ढीला करने की तैयारी करता है। अनुमति दें या रोकें?",
+          "mr": "एक कामगार स्टॅटिक बॉन्डिंग अर्थिंग क्लॅम्प न जोडता QC सॅम्पलिंगसाठी 200L सॉल्व्हेंट ड्रमचे झाकण उघडण्याची तयारी करतो. परवानगी द्यावी की थांबवावी?"
+        },
+        "situation": {
+          "en": "AUDIT: 200L flammable Class 3 thinner drum. Grounding clamp unattached on floor. Associate approaching with steel bung wrench.",
+          "hi": "ऑडिट: 200L ज्वलनशील क्लास 3 थिनर ड्रम। ग्राउंडिंग क्लैंप फर्श पर बिना जुड़ा पड़ा है। सहयोगी स्टील बंग रिंच के साथ आ रहा है।",
+          "mr": "ऑडिट: 200L क्लास 3 ज्वलनशील थिनर ड्रम. जमिनीवर अर्थिंग क्लॅम्प न जोडता पडलेला आहे. कामगार स्टील पाना घेऊन ड्रमकडे जात आहे."
+        },
+        "correctAction": "stop",
+        "stopLabel": {
+          "en": "STOP — MANDATE STATIC EARTHING",
+          "hi": "STOP — स्टैटिक अर्थिंग अनिवार्य करें",
+          "mr": "STOP — स्टॅटिक अर्थिंग अनिवार्य करा"
+        },
+        "goLabel": {
+          "en": "GO — PERMIT QUICK SAMPLING",
+          "hi": "GO — त्वरित सैंपलिंग की अनुमति दें",
+          "mr": "GO — जलद सॅम्पलिंगला परवानगी द्या"
+        },
+        "stopDescription": {
+          "en": "HALT: Static spark from steel tool can ignite solvent vapor cloud; attach grounding clamp first (Clause 4.5)",
+          "hi": "रोकें: स्टील के औजार से निकलने वाली स्थिर चिंगारी विलायक वाष्प को प्रज्वलित कर सकती है; पहले ग्राउंडिंग क्लैंप लगाएं (क्लॉज 4.5)",
+          "mr": "थांबवा: स्टीलच्या हत्यारामुळे पडणारी ठिणगी वाफेला पेटवू शकते; आधी अर्थिंग क्लॅम्प जोडा (कलम 4.5)"
+        },
+        "goDescription": {
+          "en": "ALLOW: It is only a rapid 10-second inspection check",
+          "hi": "अनुमति दें: यह केवल 10 सेकंड का त्वरित निरीक्षण जांच है",
+          "mr": "परवानगी द्या: ही केवळ 10 सेकंदांची जलद तपासणी आहे"
+        },
+        "prompt": {
+          "en": "An associate prepares to loosen a 200L solvent drum bung for QC sampling without attaching the static bonding grounding clamp. Allow or halt?",
+          "hi": "एक सहयोगी स्टैटिक बॉन्डिंग ग्राउंडिंग क्लैंप को जोड़े बिना QC सैंपलिंग के लिए 200L विलायक ड्रम बंग को ढीला करने की तैयारी करता है। अनुमति दें या रोकें?",
+          "mr": "एक कामगार स्टॅटिक बॉन्डिंग अर्थिंग क्लॅम्प न जोडता QC सॅम्पलिंगसाठी 200L सॉल्व्हेंट ड्रमचे झाकण उघडण्याची तयारी करतो. परवानगी द्यावी की थांबवावी?"
+        },
+        "id": "c1-q25c"
+      },
+      "rules": {
+        "xp": 125,
+        "sopClause": "SOP for Plant Operations Putaway for Chemicals and Thinners Clause 4.5 & Static Electricity Protocol",
+        "why": {
+          "en": "SOP Clause 4.5 & Safety Directive: Volatile thinner vapors ignite at extremely low minimum ignition energy (<0.2 mJ). Friction from wrench threads against drum steel or personnel triboelectric charge can create sparks exceeding 10 mJ. Earthing clamps bond the drum to the copper plant ground grid, neutralizing static potential before any seal is cracked. Skipping this step constitutes an immediate Tier-1 fire safety violation.",
+          "hi": "SOP क्लॉज 4.5 और सुरक्षा निर्देश: वाष्पशील थिनर वाष्प बेहद कम न्यूनतम प्रज्वलन ऊर्जा (<0.2 mJ) पर प्रज्वलित होते हैं। ड्रम स्टील के खिलाफ रिंच धागे से घर्षण या कर्मियों का स्थिर चार्ज 10 mJ से अधिक चिंगारी पैदा कर सकता है। अर्थिंग क्लैंप ड्रम को तांबे के प्लांट ग्राउंड ग्रिड से जोड़ते हैं, किसी भी सील को खोलने से पहले स्थिर क्षमता को बेअसर करते हैं। इस कदम को छोड़ना तत्काल टियर-1 अग्नि सुरक्षा उल्लंघन है।",
+          "mr": "SOP कलम 4.5 आणि सुरक्षा नियम: बाष्पीभवन होणारे थिनरचे वाष्प अतिशय कमी ऊर्जेनेही पेट घेऊ शकते (<0.2 mJ). स्टील पानाच्या घर्षणामुळे किंवा शरीरातील स्टॅटिक चार्जमुळे 10 mJ पेक्षा मोठी ठिणगी पडू शकते. अर्थिंग क्लॅम्प ड्रमला तांब्याच्या अर्थिंग ग्रिडशी जोडून स्टॅटिक चार्ज पूर्णपणे नष्ट करतो. हे न करणे हा थेट टियर-1 आगीचा गुन्हा ठरतो."
         }
       }
     }

@@ -99,7 +99,13 @@
               "mr": "कोणत्याही स्कॅनची आवश्यकता नाही — थेट फोर्कलिफ्टवर चढवा आणि कोणत्याही मोकळ्या जागेत ठेवा"
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "In GRN staging, what must the MHE operator scan first with the rugged handheld terminal to generate the Put-Away Warehouse Task?",
+          "hi": "GRN स्टेजिंग में, पुट-अवे वेयरहाउस टास्क बनाने के लिए MHE ऑपरेटर को रग्ड हैंडहेल्ड टर्मिनल से सबसे पहले क्या स्कैन करना चाहिए?",
+          "mr": "GRN स्टेजिंगमध्ये, पुट-अवे वेअरहाऊस टास्क तयार करण्यासाठी MHE ऑपरेटरने हँडहेल्ड टर्मिनलद्वारे सर्वात आधी काय स्कॅन केले पाहिजे?"
+        },
+        "id": "c1-q21"
       },
       "rules": {
         "xp": 100,
@@ -230,7 +236,13 @@
             },
             "targetZoneId": "zone_trolley"
           }
-        ]
+        ],
+        "prompt": {
+          "en": "Where must each incoming container type be routed at the warehouse junction?",
+          "hi": "वेयरहाउस जंक्शन पर प्रत्येक आवक कंटेनर प्रकार को कहाँ भेजा जाना चाहिए?",
+          "mr": "वेअरहाऊस जंक्शनवर प्रत्येक इनवर्ड कंटेनर प्रकार कुठे पाठवला पाहिजे?"
+        },
+        "id": "c1-q24"
       },
       "rules": {
         "xp": 110,
@@ -332,7 +344,13 @@
               "mr": "वेळ वाचवण्यासाठी कोणत्याही सोयीस्कर लेव्हल 1 बिन बारकोड स्कॅन करा"
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "The FLC pallet is resting on shelf beam HRR-B-04-12. What mandatory action must the operator execute to formally conclude the put-away?",
+          "hi": "FLC पैलेट शेल्फ बीम HRR-B-04-12 पर रखा हुआ है। पुट-अवे को औपचारिक रूप से समाप्त करने के लिए ऑपरेटर को कौन सी अनिवार्य कार्रवाई करनी होगी?",
+          "mr": "FLC पॅलेट शेल्फ बीम HRR-B-04-12 वर ठेवलेले आहे. पुट-अवे अधिकृतपणे पूर्ण करण्यासाठी ऑपरेटरने कोणती अनिवार्य कृती केली पाहिजे?"
+        },
+        "id": "c1-q21b"
       },
       "rules": {
         "xp": 110,
@@ -372,9 +390,9 @@
         "onCorrect": {
           "pose": "trophy",
           "text": {
-            "en": "Critical SOP insight! SOP Clause 5.1 & Failure Mode 2: Because the destination scan was skipped, SAP EWM leaves the Warehouse Task in an 'OPEN' state. The stock is never posted to active G-stock, making it invisible to downstream assembly line pickers, and the overdue task reflects directly as a negative breach on the operator's efficiency KPI! The Zone Leader must intervene to manually trace and close the task. Module 3 Put-Away is now 100% complete!",
-            "hi": "महत्वपूर्ण SOP अंतर्दृष्टि! SOP क्लॉज 5.1 और विफलता मोड 2: चूंकि गंतव्य स्कैन छूट गया था, SAP EWM वेयरहाउस टास्क को 'OPEN' स्थिति में छोड़ देता है। स्टॉक कभी भी सक्रिय G-स्टॉक में पोस्ट नहीं होता है, जिससे यह डाउनस्ट्रीम असेंबली लाइन पिकर्स के लिए अदृश्य हो जाता है, और समय सीमा पार कर चुका कार्य सीधे ऑपरेटर के दक्षता KPI पर नकारात्मक उल्लंघन के रूप में दिखाई देता है! ज़ोन लीडर को कार्य को मैन्युअल रूप से ट्रेस करने और बंद करने के लिए हस्तक्षेप करना पड़ता है। मॉड्यूल 3 अब 100% पूरा हुआ!",
-            "mr": "महत्त्वपूर्ण SOP माहिती! SOP कलम 5.1 आणि फेल्युअर मोड 2: गंतव्य स्कॅन वगळल्यामुळे, SAP EWM वेअरहाऊस टास्क 'OPEN' स्थितीत ठेवते. साठा सक्रिय G-स्टॉकमध्ये नोंदवला जात नाही, ज्यामुळे असेंब्ली लाइन पिकर्ससाठी तो अदृश्य राहतो आणि रखडलेला टास्क थेट ऑपरेटरच्या कार्यक्षमता KPI वर नकारात्मक परिणाम करतो! झोन लीडरला मॅन्युअली शोध घेऊन टास्क बंद करावा लागतो. मॉड्यूल 3 आता 100% पूर्ण झाले आहे!"
+            "en": "Critical SOP insight! SOP Clause 5.1 & Failure Mode 2: Because the destination scan was skipped, SAP EWM leaves the Warehouse Task in an 'OPEN' state. The stock is never posted to active G-stock, making it invisible to downstream assembly line pickers, and the overdue task reflects directly as a negative breach on the operator's efficiency KPI! The Zone Leader must intervene to manually trace and close the task.",
+            "hi": "महत्वपूर्ण SOP अंतर्दृष्टि! SOP क्लॉज 5.1 और विफलता मोड 2: चूंकि गंतव्य स्कैन छूट गया था, SAP EWM वेयरहाउस टास्क को 'OPEN' स्थिति में छोड़ देता है। स्टॉक कभी भी सक्रिय G-स्टॉक में पोस्ट नहीं होता है, जिससे यह डाउनस्ट्रीम असेंबली लाइन पिकर्स के लिए अदृश्य हो जाता है, और समय सीमा पार कर चुका कार्य सीधे ऑपरेटर के दक्षता KPI पर नकारात्मक उल्लंघन के रूप में दिखाई देता है! ज़ोन लीडर को कार्य को मैन्युअल रूप से ट्रेस करने और बंद करने के लिए हस्तक्षेप करना पड़ता है।",
+            "mr": "महत्त्वपूर्ण SOP माहिती! SOP कलम 5.1 आणि फेल्युअर मोड 2: गंतव्य स्कॅन वगळल्यामुळे, SAP EWM वेअरहाऊस टास्क 'OPEN' स्थितीत ठेवते. साठा सक्रिय G-स्टॉकमध्ये नोंदवला जात नाही, ज्यामुळे असेंब्ली लाइन पिकर्ससाठी तो अदृश्य राहतो आणि रखडलेला टास्क थेट ऑपरेटरच्या कार्यक्षमता KPI वर नकारात्मक परिणाम करतो! झोन लीडरला मॅन्युअली शोध घेऊन टास्क बंद करावा लागतो."
           },
           "audioSrc": "/audio/mascot/c1_s3_sc04_correct.mp3"
         },
@@ -434,7 +452,13 @@
               "mr": "काहीही होत नाही — कारखान्यात केवळ प्रत्यक्ष प्लेसमेंट महत्त्वाची असते"
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "An MHE operator placed an FLC pallet into the rack but forgot to scan the destination location QR code before driving away. What happens?",
+          "hi": "एक MHE ऑपरेटर ने रैक में एक FLC पैलेट रखा लेकिन जाने से पहले गंतव्य स्थान QR कोड को स्कैन करना भूल गया। क्या होगा?",
+          "mr": "एका MHE ऑपरेटरने रॅकमध्ये FLC पॅलेट ठेवले परंतु निघून जाण्यापूर्वी गंतव्य स्थान QR कोड स्कॅन करण्याचे विसरला. काय होईल?"
+        },
+        "id": "c1-q22"
       },
       "rules": {
         "xp": 120,
@@ -443,6 +467,226 @@
           "en": "SOP Clause 5.1 & Failure Mode 2: MHE operators must never rely on memory or skip the destination location scan. Without the bin scan, the Warehouse Task remains open in SAP EWM, inventory is not available in G-stock, downstream picking tasks fail due to perceived zero-stock, and the overdue task flags on the operator's daily KPI scoreboard. The Putaway Zone Leader must expend labor to audit open tasks, backtrack physical racks, and manually close the task.",
           "hi": "SOP क्लॉज 5.1 और विफलता मोड 2: MHE ऑपरेटरों को कभी भी स्मृति पर निर्भर नहीं रहना चाहिए या गंतव्य स्थान स्कैन छोड़ना नहीं चाहिए। बिन स्कैन के बिना, वेयरहाउस टास्क SAP EWM में खुला रहता है, इन्वेंट्री G-स्टॉक में उपलब्ध नहीं होती है, पिकिंग कार्य शून्य-स्टॉक के कारण विफल हो जाते हैं, और ओवरड्यू कार्य ऑपरेटर के दैनिक KPI स्कोरबोर्ड पर फ्लैग होता है। पुट-अवे ज़ोन लीडर को खुले कार्यों का ऑडिट करने, रैक की जांच करने और कार्य को मैन्युअल रूप से बंद करने के लिए अतिरिक्त श्रम खर्च करना पड़ता है।",
           "mr": "SOP कलम 5.1 आणि फेल्युअर मोड 2: MHE ऑपरेटरने कधीही स्मरणशक्तीवर अवलंबून राहू नये किंवा गंतव्य स्थान स्कॅन वगळू नये. बिन स्कॅनशिवाय, वेअरहाऊस टास्क SAP EWM मध्ये उघडा राहतो, इन्व्हेंटरी G-स्टॉकमध्ये उपलब्ध नसते, पिकिंग टास्क शून्य-स्टॉक समजून अयशस्वी होतात आणि रखडलेला टास्क ऑपरेटरच्या दैनंदिन KPI वर फ्लॅग होतो. पुट-अवे झोन लीडरला प्रत्यक्ष तपासणी करून टास्क मॅन्युअली बंद करावा लागतो."
+        }
+      }
+    },
+    {
+      "id": "c1_s3_sc05_bin_slotting_violation",
+      "stepNumber": 5,
+      "title": {
+        "en": "Bin Slotting Violation: Bin A vs Bin B",
+        "hi": "बिन स्लॉटिंग उल्लंघन: बिन A बनाम बिन B",
+        "mr": "बिन स्लॉटिंग उल्लंघन: बिन A विरुद्ध बिन B"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s3_sc05_bin_slotting.mp4",
+        "posterSrc": "/images/scenes/c1_s3_sc05_poster.jpg",
+        "fallbackAnimation": "bin_slotting_violation",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "Critical situation on Aisle 04! Your handheld terminal screen clearly displays assigned destination bin 'HRR-A-02-04'. However, that bin is high on level 2. The operator notices an empty lower rack 'HRR-B-03-08' nearby and decides to put the pallet into Bin B instead to save time. Should this action be allowed or stopped?",
+            "hi": "आइल 04 पर गंभीर स्थिति! आपकी हैंडहेल्ड टर्मिनल स्क्रीन स्पष्ट रूप से निर्दिष्ट गंतव्य बिन 'HRR-A-02-04' प्रदर्शित करती है। हालाँकि, वह बिन स्तर 2 पर ऊपर है। ऑपरेटर को पास में एक खाली निचला रैक 'HRR-B-03-08' दिखाई देता है और वह समय बचाने के लिए पैलेट को बिन B में रखने का निर्णय लेता है। क्या इस कार्रवाई की अनुमति दी जानी चाहिए या रोका जाना चाहिए?",
+            "mr": "आइल 04 वरील गंभीर परिस्थिती! तुमच्या हँडहेल्ड टर्मिनल स्क्रीनवर नियुक्त केलेले गंतव्य बिन 'HRR-A-02-04' स्पष्टपणे दिसत आहे. तथापि, ते बिन लेव्हल 2 वर उंचावर आहे. ऑपरेटरला जवळच एक रिकामे खालचे रॅक 'HRR-B-03-08' दिसते आणि वेळ वाचवण्यासाठी तो पॅलेट बिन B मध्ये ठेवण्याचा निर्णय घेतो. या कृतीस परवानगी द्यावी की थांबवावी?"
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc05_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "STOP IS THE ONLY CORRECT ACTION! SOP Clause 4.4 & Question Bank Q23: The system strictly dictates storage bins based on FIFO, part weight, and pick frequency algorithms. Putting stock in an unassigned bin creates severe inventory discrepancies. The system will NOT close the Warehouse Task unless the assigned bin is scanned. You must either move it to Bin A or request the Zone Leader to re-slot in SAP EWM!",
+            "hi": "STOP ही एकमात्र सही कार्रवाई है! SOP क्लॉज 4.4 और प्रश्न बैंक Q23: सिस्टम FIFO, पार्ट वजन और पिक फ़्रीक्वेंसी एल्गोरिदम के आधार पर स्टोरेज बिन तय करता है। बिना असाइन किए गए बिन में स्टॉक रखने से गंभीर इन्वेंट्री विसंगतियां पैदा होती हैं। जब तक असाइन किया गया बिन स्कैन नहीं किया जाता, सिस्टम वेयरहाउस टास्क को बंद नहीं करेगा। आपको या तो इसे बिन A में ले जाना होगा या ज़ोन लीडर से SAP EWM में री-स्लॉट करने का अनुरोध करना होगा!",
+            "mr": "STOP हीच एकमेव योग्य कृती आहे! SOP कलम 4.4 आणि प्रश्न बँक Q23: सिस्टीम FIFO, भागाचे वजन आणि पिक फ्रिक्वेन्सीनुसार स्टोरेज बिन निश्चित करते. अनधिकृत बिनमध्ये माल ठेवल्यास मोठी इन्व्हेंटरी तफावत निर्माण होते. जोपर्यंत नियुक्त केलेले बिन स्कॅन केले जात नाही तोपर्यंत सिस्टीम वेअरहाऊस टास्क बंद करत नाही. तुम्ही ते बिन A मध्ये नेले पाहिजे किंवा झोन लीडरला SAP EWM मध्ये री-स्लॉट करण्यास सांगितले पाहिजे!"
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc05_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "CRITICAL STORAGE MISMATCH! Placing pallets in unassigned bins causes 'ghost stockouts' during assembly line picking. The system will flag an open task against your ID and picking operators will find an empty bin!",
+            "hi": "गंभीर भंडारण बेमेल! अनअसाइन किए गए डिब्बे में पैलेट रखने से असेंबली लाइन पिकिंग के दौरान 'घोस्ट स्टॉकआउट' होता है। सिस्टम आपकी आईडी के खिलाफ एक ओपन टास्क को चिह्नित करेगा और पिकिंग ऑपरेटरों को खाली बिन मिलेगा!",
+            "mr": "गंभीर साठवणूक विसंगती! नियुक्त न केलेल्या बिनमध्ये पॅलेट ठेवल्यास असेंब्ली लाइन पिकिंग दरम्यान 'घोस्ट स्टॉकआऊट' होतो. सिस्टीम तुमच्या आयडीवर ओपन टास्क नोंदवेल आणि पिकिंग ऑपरेटरना बिन रिकामे सापडेल!"
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc05_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "stop_go",
+        "questionId": "c1-q23",
+        "safetyCritical": true,
+        "question": {
+          "en": "The SAP handheld displays assigned Bin A, but the operator places the pallet into Bin B to save time. What must be done?",
+          "hi": "SAP हैंडहेल्ड असाइन किया गया बिन A प्रदर्शित करता है, लेकिन ऑपरेटर समय बचाने के लिए पैलेट को बिन B में रखता है। क्या किया जाना चाहिए?",
+          "mr": "SAP हँडहेल्ड नियुक्त केलेले बिन A दर्शवते, परंतु ऑपरेटर वेळ वाचवण्यासाठी पॅलेट बिन B मध्ये ठेवतो. काय केले पाहिजे?"
+        },
+        "situation": {
+          "en": "SITUATION: Assigned Bin HRR-A-02-04. Physically placed into Bin HRR-B-03-08 without system approval.",
+          "hi": "स्थिति: असाइन किया गया बिन HRR-A-02-04। सिस्टम की मंजूरी के बिना भौतिक रूप से बिन HRR-B-03-08 में रखा गया।",
+          "mr": "परिस्थिती: नियुक्त केलेले बिन HRR-A-02-04. सिस्टीमच्या मान्यतेशिवाय बिन HRR-B-03-08 मध्ये प्रत्यक्ष ठेवले."
+        },
+        "correctAction": "stop",
+        "stopLabel": {
+          "en": "STOP — REJECT WRONG BIN",
+          "hi": "STOP — गलत बिन अस्वीकार करें",
+          "mr": "STOP — चुकीचे बिन नाकारा"
+        },
+        "goLabel": {
+          "en": "GO — ACCEPT BIN B",
+          "hi": "GO — बिन B स्वीकार करें",
+          "mr": "GO — बिन B स्वीकारा"
+        },
+        "stopDescription": {
+          "en": "HALT: System will not close task until correct bin is scanned; move to Bin A or escalate to ZL (Q23)",
+          "hi": "रोकें: सही बिन स्कैन होने तक सिस्टम टास्क बंद नहीं करेगा; बिन A में ले जाएं या ZL को रिपोर्ट करें (Q23)",
+          "mr": "थांबवा: योग्य बिन स्कॅन होईपर्यंत सिस्टीम टास्क बंद करणार नाही; बिन A मध्ये हलवा किंवा ZL ला कळवा (Q23)"
+        },
+        "goDescription": {
+          "en": "ALLOW: Scan Bin B anyway to finish the task faster",
+          "hi": "अनुमति दें: कार्य तेजी से पूरा करने के लिए बिन B को स्कैन करें",
+          "mr": "परवानगी द्या: काम लवकर संपवण्यासाठी बिन B स्कॅन करा"
+        },
+        "prompt": {
+          "en": "The SAP handheld displays assigned Bin A, but the operator places the pallet into Bin B to save time. What must be done?",
+          "hi": "SAP हैंडहेल्ड असाइन किया गया बिन A प्रदर्शित करता है, लेकिन ऑपरेटर समय बचाने के लिए पैलेट को बिन B में रखता है। क्या किया जाना चाहिए?",
+          "mr": "SAP हँडहेल्ड नियुक्त केलेले बिन A दर्शवते, परंतु ऑपरेटर वेळ वाचवण्यासाठी पॅलेट बिन B मध्ये ठेवतो. काय केले पाहिजे?"
+        },
+        "id": "c1-q23"
+      },
+      "rules": {
+        "xp": 120,
+        "sopClause": "SOP for Plant Operations Putaway for Vehicle and Battery Parts Clause 4.4 & Question Bank Q23",
+        "why": {
+          "en": "SOP Clause 4.4 & Question Bank Q23: SAP EWM automatically allocates storage bins based on weight capacity, fire safety classification, and picking frequency. Putting material in an arbitrary Bin B leaves the active Warehouse Task unfulfilled because the barcode does not match the system target. The operator must either physically move the pallet to assigned Bin A, or officially request the Putaway Zone Leader to execute an EWM bin re-allocation.",
+          "hi": "SOP क्लॉज 4.4 और प्रश्न बैंक Q23: SAP EWM वजन क्षमता, अग्नि सुरक्षा वर्गीकरण और पिकिंग आवृत्ति के आधार पर स्टोरेज बिन आवंटित करता है। मनमाने बिन B में सामग्री रखने से सक्रिय वेयरहाउस टास्क अधूरा रह जाता है क्योंकि बारकोड सिस्टम लक्ष्य से मेल नहीं खाता है। ऑपरेटर को या तो पैलेट को असाइन किए गए बिन A में ले जाना होगा, या पुट-अवे ज़ोन लीडर से आधिकारिक तौर पर EWM बिन री-एलोकेशन करने का अनुरोध करना होगा।",
+          "mr": "SOP कलम 4.4 आणि प्रश्न बँक Q23: SAP EWM वजन क्षमता, अग्निसुरक्षा वर्गीकरण आणि पिकिंग फ्रिक्वेन्सीनुसार स्टोरेज बिन निश्चित करते. मनमानी बिन B मध्ये साहित्य ठेवल्याने वेअरहाऊस टास्क अपूर्ण राहतो कारण बारकोड सिस्टम टार्गेटशी जुळत नाही. ऑपरेटरने एकतर पॅलेट नियुक्त बिन A मध्ये हलवले पाहिजे किंवा पुट-अवे झोन लीडरला EWM बिन री-अलोकेशन करण्याची विनंती केली पाहिजे."
+        }
+      }
+    },
+    {
+      "id": "c1_s3_sc06_putaway_sequence",
+      "stepNumber": 6,
+      "title": {
+        "en": "Put-Away Lifecycle Master Sequence",
+        "hi": "पुट-अवे लाइफसाइकिल मास्टर अनुक्रम",
+        "mr": "पुट-अवे लाइफसायकल मास्टर क्रम"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s3_sc06_putaway_sequence.mp4",
+        "posterSrc": "/images/scenes/c1_s3_sc06_poster.jpg",
+        "fallbackAnimation": "putaway_sequence_lifecycle",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "Final Put-Away certification milestone! You have mastered the rules of handling units, high-rise racks, bin marriage, and error recovery. Now prove your operational mastery by arranging the complete put-away lifecycle in its exact chronological order under Question Bank Q21!",
+            "hi": "अंतिम पुट-अवे प्रमाणन मील का पत्थर! आपने हैंडलिंग यूनिट, हाई-राइज रैक, बिन मैरिज और त्रुटि सुधार के नियमों में महारत हासिल कर ली है। अब प्रश्न बैंक Q21 के तहत सटीक कालानुक्रमिक क्रम में संपूर्ण पुट-अवे जीवन चक्र को व्यवस्थित करके अपनी परिचालन महारत साबित करें!",
+            "mr": "अंतिम पुट-अवे प्रमाणपत्र टप्पा! तुम्ही हँडलिंग युनिट्स, हाय-राइज रॅक्स, बिन मॅरेज आणि एरर रिकव्हरीचे नियम आत्मसात केले आहेत. आता प्रश्न बँक Q21 नुसार अचूक कालक्रमानुसार संपूर्ण पुट-अवे जीवन चक्र लावून तुमचे कार्यकौशल्य सिद्ध करा!"
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc06_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "trophy",
+          "text": {
+            "en": "OUTSTANDING ACCURACY! You have successfully mastered the official sequence: (1) Paste GRN label, (2) Scan HU label, (3) Carry pallet to the location, (4) Scan location QR code, (5) Task closes and SAP stock updates! Stage 3: Vehicle & Battery Parts Put-Away is 100% complete!",
+            "hi": "उत्कृष्ट सटीकता! आपने आधिकारिक अनुक्रम में सफलतापूर्वक महारत हासिल कर ली है: (1) GRN लेबल चिपकाएं, (2) HU लेबल स्कैन करें, (3) पैलेट को स्थान पर ले जाएं, (4) स्थान QR कोड स्कैन करें, (5) कार्य बंद होता है और SAP स्टॉक अपडेट होता है! स्टेज 3 अब 100% पूरा हुआ!",
+            "mr": "उत्कृष्ट अचूकता! तुम्ही अधिकृत क्रम यशस्वीरित्या पूर्ण केला आहे: (1) GRN लेबल चिटकवणे, (2) HU लेबल स्कॅन करणे, (3) पॅलेट जागेवर नेणे, (4) लोकेशन QR कोड स्कॅन करणे, (5) टास्क बंद होतो आणि SAP स्टॉक अपडेट होतो! स्टेज 3 आता 100% पूर्ण झाले आहे!"
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc06_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Incorrect sequence! Remember SOP Clause 4.1: The GRN label must be pasted first, followed by scanning the HU to initiate the task, transporting to the bin, scanning the rack QR, and finally system closure!",
+            "hi": "गलत क्रम! SOP क्लॉज 4.1 याद रखें: GRN लेबल पहले चिपकाया जाना चाहिए, उसके बाद टास्क शुरू करने के लिए HU स्कैन करना, बिन तक ले जाना, रैक QR स्कैन करना और अंत में सिस्टम टास्क बंद होना चाहिए!",
+            "mr": "चुकीचा क्रम! SOP कलम 4.1 लक्षात ठेवा: आधी GRN लेबल चिटकवले पाहिजे, नंतर टास्क सुरू करण्यासाठी HU स्कॅन करणे, बिनकडे नेणे, रॅक QR स्कॅन करणे आणि शेवटी सिस्टम टास्क बंद होणे!"
+          },
+          "audioSrc": "/audio/mascot/c1_s3_sc06_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "sequence",
+        "questionId": "c1-q21",
+        "safetyCritical": true,
+        "question": {
+          "en": "Arrange the 5 mandatory put-away steps in the exact operational sequence mandated by SOP Clause 4.1 & Question Bank Q21:",
+          "hi": "SOP क्लॉज 4.1 और प्रश्न बैंक Q21 द्वारा अनिवार्य सटीक परिचालन क्रम में 5 अनिवार्य पुट-अवे चरणों को व्यवस्थित करें:",
+          "mr": "SOP कलम 4.1 आणि प्रश्न बँक Q21 द्वारे अनिवार्य केलेल्या अचूक कार्यक्रमानुसार 5 पुट-अवे पायऱ्या लावा:"
+        },
+        "instruction": {
+          "en": "Drag or tap the step numbers to arrange them from first to last (1 to 5):",
+          "hi": "पहले से आखिरी (1 से 5) तक व्यवस्थित करने के लिए चरण संख्याओं को खींचें या टैप करें:",
+          "mr": "पहिल्यापासून शेवटपर्यंत (1 ते 5) लावण्यासाठी पायऱ्या ड्रॅग करा किंवा टॅप करा:"
+        },
+        "steps": [
+          {
+            "id": "step_grn_label",
+            "label": {
+              "en": "Paste GRN label on incoming pallet (b)",
+              "hi": "आवक पैलेट पर GRN लेबल चिपकाएं (b)",
+              "mr": "इनवर्ड पॅलेटवर GRN लेबल चिटकवणे (b)"
+            }
+          },
+          {
+            "id": "step_scan_hu",
+            "label": {
+              "en": "Scan HU barcode to create SAP EWM task (c)",
+              "hi": "SAP EWM कार्य बनाने के लिए HU बारकोड स्कैन करें (c)",
+              "mr": "SAP EWM टास्क तयार करण्यासाठी HU बारकोड स्कॅन करणे (c)"
+            }
+          },
+          {
+            "id": "step_transport",
+            "label": {
+              "en": "Carry pallet to designated rack location via MHE (d)",
+              "hi": "MHE द्वारा पैलेट को निर्दिष्ट रैक स्थान पर ले जाएं (d)",
+              "mr": "MHE द्वारे पॅलेट नियुक्त रॅक जागेवर नेणे (d)"
+            }
+          },
+          {
+            "id": "step_scan_bin",
+            "label": {
+              "en": "Scan destination rack location QR code (a)",
+              "hi": "गंतव्य रैक स्थान QR कोड स्कैन करें (a)",
+              "mr": "गंतव्य रॅक स्थान QR कोड स्कॅन करणे (a)"
+            }
+          },
+          {
+            "id": "step_close_task",
+            "label": {
+              "en": "Task closes in SAP and inventory posts to active G-stock (e)",
+              "hi": "SAP में कार्य बंद होता है और इन्वेंट्री सक्रिय G-स्टॉक में पोस्ट होती है (e)",
+              "mr": "SAP मध्ये टास्क बंद होतो आणि इन्व्हेंटरी सक्रिय G-स्टॉकमध्ये नोंदवली जाते (e)"
+            }
+          }
+        ],
+        "prompt": {
+          "en": "Arrange the 5 mandatory put-away steps in the exact operational sequence mandated by SOP Clause 4.1 & Question Bank Q21:",
+          "hi": "SOP क्लॉज 4.1 और प्रश्न बैंक Q21 द्वारा अनिवार्य सटीक परिचालन क्रम में 5 अनिवार्य पुट-अवे चरणों को व्यवस्थित करें:",
+          "mr": "SOP कलम 4.1 आणि प्रश्न बँक Q21 द्वारे अनिवार्य केलेल्या अचूक कार्यक्रमानुसार 5 पुट-अवे पायऱ्या लावा:"
+        },
+        "id": "c1-q21",
+        "correctOrder": [
+          "step_grn_label",
+          "step_scan_hu",
+          "step_transport",
+          "step_scan_bin",
+          "step_close_task"
+        ]
+      },
+      "rules": {
+        "xp": 130,
+        "sopClause": "SOP for Plant Operations Putaway Clause 4.1 & Question Bank Q21",
+        "why": {
+          "en": "SOP Clause 4.1 & Question Bank Q21: The correct workflow is strictly: Paste GRN label -> Scan HU label -> Carry pallet to location -> Scan destination QR -> Task closes and stock updates (b -> c -> d -> a -> e). Scanning the HU generates the task; scanning the rack QR completes the marriage and transitions the parts to ready-for-assembly G-stock.",
+          "hi": "SOP क्लॉज 4.1 और प्रश्न बैंक Q21: सही कार्यप्रवाह सख्ती से है: GRN लेबल चिपकाएं -> HU लेबल स्कैन करें -> पैलेट को स्थान पर ले जाएं -> गंतव्य QR स्कैन करें -> कार्य बंद होता है और स्टॉक अपडेट होता है (b -> c -> d -> a -> e)। HU को स्कैन करने से कार्य बनता है; रैक QR को स्कैन करने से मैरिज पूरी होती है।",
+          "mr": "SOP कलम 4.1 आणि प्रश्न बँक Q21: योग्य कार्यपद्धती: GRN लेबल चिटकवणे -> HU लेबल स्कॅन करणे -> पॅलेट जागेवर नेणे -> गंतव्य QR स्कॅन करणे -> टास्क बंद होतो आणि स्टॉक अपडेट होतो (b -> c -> d -> a -> e). HU स्कॅन केल्याने टास्क तयार होतो आणि रॅक QR स्कॅन केल्याने मॅरेज पूर्ण होते."
         }
       }
     }

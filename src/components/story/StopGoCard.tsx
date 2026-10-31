@@ -61,7 +61,7 @@ export const StopGoCard: React.FC<Props> = ({
       {/* Main Question & Situation Box */}
       <div className="space-y-3">
         <h3 className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
-          {interaction.question[lang] || interaction.question.en}
+          {interaction.question?.[lang] || interaction.question?.en || (interaction as any).prompt?.[lang] || (interaction as any).prompt?.en || ''}
         </h3>
 
         <div className="p-3.5 sm:p-4 rounded-2xl bg-amber-50/70 border border-amber-200 flex items-start gap-3">

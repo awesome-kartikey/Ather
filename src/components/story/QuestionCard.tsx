@@ -18,6 +18,8 @@ export const QuestionCard: React.FC<Props> = ({
   disabled
 }) => {
   const letters = ['A', 'B', 'C', 'D'];
+  const questionText = interaction.question || (interaction as any).prompt;
+  const qId = interaction.questionId || (interaction as any).id || 'Q';
 
   return (
     <div className="w-full bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-xl p-4 sm:p-6 space-y-4">
@@ -33,19 +35,20 @@ export const QuestionCard: React.FC<Props> = ({
         </div>
 
         <span className="text-[11px] font-mono font-bold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full">
-          Q-ID: {interaction.questionId}
+          Q-ID: {qId}
         </span>
       </div>
 
       {/* Question Prompt Text */}
       <h3 className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
-        {interaction.question[lang] || interaction.question.en}
+        {questionText?.[lang] || questionText?.en || ''}
       </h3>
 
       {/* Options Stack (Minimum 64px Touch Target for Industrial Tablets) */}
       <div className="grid grid-cols-1 gap-3 pt-1">
         {interaction.options.map((option, idx) => {
           const isSelected = selectedOptionId === option.id;
+          const optLabel = option.label || (option as any).text;
 
           return (
             <button
@@ -72,7 +75,7 @@ export const QuestionCard: React.FC<Props> = ({
 
               {/* Option Text Label */}
               <span className="text-xs sm:text-sm font-semibold leading-relaxed flex-1">
-                {option.label[lang] || option.label.en}
+                {optLabel?.[lang] || optLabel?.en || ''}
               </span>
             </button>
           );

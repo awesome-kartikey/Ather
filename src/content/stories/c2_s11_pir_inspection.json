@@ -67,7 +67,13 @@
           "en": "Issue the battery packs immediately because R&D projects have higher priority than accounting paperwork.",
           "hi": "बैटरी पैक तुरंत जारी करें क्योंकि आरएंडडी परियोजनाओं को लेखांकन कागजी कार्रवाई की तुलना में अधिक प्राथमिकता प्राप्त है।",
           "mr": "बॅटरी पॅक आत्ताच द्या कारण R&D चे काम कागदपत्रांपेक्षा जास्त महत्त्वाचे आहे."
-        }
+        },
+        "prompt": {
+          "en": "DECISION GATE: Can warehouse personnel pick or issue materials when the JIRA PIR ticket is missing a Budget ID?",
+          "hi": "निर्णय गेट: क्या वेयरहाउस कर्मी सामान चुन या जारी कर सकते हैं जब JIRA PIR टिकट में बजट आईडी गायब हो?",
+          "mr": "निर्णय गेट: JIRA PIR तिकिटात बजेट आयडी नसताना गोदामातील कर्मचारी माल देऊ शकतात का?"
+        },
+        "id": "c2-q13-budget-id-gate"
       },
       "rules": {
         "xp": 140,
@@ -105,51 +111,86 @@
         }
       },
       "interaction": {
-        "type": "mcq",
-        "id": "c2-q14-pir-approval-thresholds",
-        "prompt": {
-          "en": "Under SOP 05_C2_S3 Clause 4.2, what are the exact financial valuation and quantity thresholds that mandate Product Owner and Planning team approvals in JIRA?",
-          "hi": "SOP 05_C2_S3 क्लॉज 4.2 के तहत, सटीक वित्तीय मूल्यांकन और मात्रा थ्रेशोल्ड क्या हैं जो JIRA में उत्पाद स्वामी और योजना टीम के अनुमोदन को अनिवार्य करते हैं?",
-          "mr": "SOP 05_C2_S3 कलम 4.2 नुसार, JIRA मध्ये प्रॉडक्ट ओनर आणि प्लॅनिंग टीमची मंजुरी बंधनकारक करणाऱ्या नेमक्या आर्थिक आणि संख्येच्या मर्यादा कोणत्या आहेत?"
+        "type": "drag_drop",
+        "questionId": "c2-q14-pir-approval-thresholds",
+        "safetyCritical": true,
+        "question": {
+          "en": "APPROVAL ROUTING: Match each emergency PIR request ticket to its mandatory authorization authority under SOP 05_C2_S3 Clause 4.2.",
+          "hi": "अनुमोदन रूटिंग: प्रत्येक आपातकालीन PIR अनुरोध टिकट को SOP 05_C2_S3 क्लॉज 4.2 के तहत इसके अनिवार्य प्राधिकरण से मिलाएं।",
+          "mr": "मंजुरी वाटप: प्रत्येक तातडीच्या PIR तिकिटाला SOP 05_C2_S3 कलम 4.2 नुसार त्याच्या योग्य मंजुरी अधिकाऱ्याशी जोडा."
         },
-        "options": [
+        "instruction": {
+          "en": "Tap a PIR ticket card below, then tap the required approval authority bucket to assign it.",
+          "hi": "नीचे दिए गए PIR टिकट कार्ड पर टैप करें, फिर उसे असाइन करने के लिए आवश्यक अनुमोदन प्राधिकरण बकेट पर टैप करें।",
+          "mr": "खालील PIR तिकिटावर टॅप करा आणि नंतर ते योग्य मंजुरी विभागाच्या रकान्यात टाकण्यासाठी रकान्यावर टॅप करा."
+        },
+        "zones": [
           {
-            "id": "opt_correct_thresholds",
-            "correct": true,
+            "id": "zone_product_owner",
+            "icon": "Award",
             "label": {
-              "en": "Product Owner approval is mandatory whenever total valuation exceeds INR 25,000; Planning team approval is mandatory whenever any single part quantity exceeds 25 Nos",
-              "hi": "उत्पाद स्वामी का अनुमोदन अनिवार्य है जब भी कुल मूल्यांकन 25,000 रुपये से अधिक हो; योजना टीम का अनुमोदन अनिवार्य है जब भी किसी एक पुर्जे की मात्रा 25 नग से अधिक हो",
-              "mr": "एकूण किंमत 25,000 रुपयांपेक्षा जास्त झाल्यास प्रॉडक्ट ओनरची मंजुरी; कोणत्याही एका पार्टची संख्या 25 नगांपेक्षा जास्त झाल्यास प्लॅनिंग टीमची मंजुरी बंधनकारक आहे"
+              "en": "Product Owner (> ₹25,000 Value)",
+              "hi": "उत्पाद स्वामी (> ₹25,000 मूल्य)",
+              "mr": "प्रॉडक्ट ओनर (> ₹25,000 किंमत)"
             }
           },
           {
-            "id": "opt_wrong_high_threshold",
-            "correct": false,
+            "id": "zone_planning_team",
+            "icon": "Layers",
             "label": {
-              "en": "Approvals are only needed if the total valuation exceeds INR 10,00,000 or the quantity exceeds 1,000 Nos",
-              "hi": "अनुमोदन केवल तभी आवश्यक है जब कुल मूल्यांकन 10,00,000 रुपये से अधिक हो या मात्रा 1,000 नग से अधिक हो",
-              "mr": "केवळ 10 लाख रुपयांपेक्षा जास्त किंमत किंवा 1,000 नगांपेक्षा जास्त संख्या असल्यास मंजुरी लागते"
+              "en": "Production Planning (> 25 Units)",
+              "hi": "उत्पादन योजना (> 25 इकाइयां)",
+              "mr": "प्रॉडक्शन प्लॅनिंग (> 25 नग)"
             }
           },
           {
-            "id": "opt_no_approvals_needed",
-            "correct": false,
+            "id": "zone_standard_dispatch",
+            "icon": "CheckCircle2",
             "label": {
-              "en": "No approvals are ever needed in JIRA; anyone with an email address can authorize dispatches",
-              "hi": "JIRA में कभी किसी अनुमोदन की आवश्यकता नहीं होती है; ईमेल पते वाला कोई भी व्यक्ति प्रेषण को अधिकृत कर सकता है",
-              "mr": "JIRA मध्ये कोणत्याही मंजुरीची गरज नसते; कोणीही ईमेल पाठवून माल मागवू शकतो"
-            }
-          },
-          {
-            "id": "opt_security_guard_only",
-            "correct": false,
-            "label": {
-              "en": "The main gate security guard signs all PIR tickets using a physical ballpoint pen",
-              "hi": "मेन गेट सुरक्षा गार्ड एक भौतिक बॉलपॉइंट पेन का उपयोग करके सभी पीआईआर टिकटों पर हस्ताक्षर करता है",
-              "mr": "मेन गेटवरील सिक्युरिटी गार्ड पेनने स्वाक्षरी करून सर्व PIR तिकिटे मंजूर करतो"
+              "en": "Standard Store Issue (Below Thresholds)",
+              "hi": "मानक स्टोर निर्गमन (सीमा से नीचे)",
+              "mr": "नियमित स्टोअर वाटप (मर्यादेच्या आत)"
             }
           }
-        ]
+        ],
+        "items": [
+          {
+            "id": "ticket_battery_pack",
+            "icon": "Battery",
+            "label": {
+              "en": "PIR-A: 2x Battery Packs (Value: ₹1,10,000, Qty: 2)",
+              "hi": "PIR-A: 2x बैटरी पैक (मूल्य: ₹1,10,000, मात्रा: 2)",
+              "mr": "PIR-A: 2x बॅटरी पॅक (किंमत: ₹1,10,000, नग: 2)"
+            },
+            "targetZoneId": "zone_product_owner"
+          },
+          {
+            "id": "ticket_brake_levers",
+            "icon": "Wrench",
+            "label": {
+              "en": "PIR-B: 50x Brake Levers (Value: ₹18,000, Qty: 50)",
+              "hi": "PIR-B: 50x ब्रेक लीवर (मूल्य: ₹18,000, मात्रा: 50)",
+              "mr": "PIR-B: 50x ब्रेक लिव्हर्स (किंमत: ₹18,000, नग: 50)"
+            },
+            "targetZoneId": "zone_planning_team"
+          },
+          {
+            "id": "ticket_small_sensors",
+            "icon": "Cpu",
+            "label": {
+              "en": "PIR-C: 4x Sensor Harnesses (Value: ₹3,200, Qty: 4)",
+              "hi": "PIR-C: 4x सेंसर हार्नेस (मूल्य: ₹3,200, मात्रा: 4)",
+              "mr": "PIR-C: 4x सेन्सर हार्नेस (किंमत: ₹3,200, नग: 4)"
+            },
+            "targetZoneId": "zone_standard_dispatch"
+          }
+        ],
+        "prompt": {
+          "en": "APPROVAL ROUTING: Match each emergency PIR request ticket to its mandatory authorization authority under SOP 05_C2_S3 Clause 4.2.",
+          "hi": "अनुमोदन रूटिंग: प्रत्येक आपातकालीन PIR अनुरोध टिकट को SOP 05_C2_S3 क्लॉज 4.2 के तहत इसके अनिवार्य प्राधिकरण से मिलाएं।",
+          "mr": "मंजुरी वाटप: प्रत्येक तातडीच्या PIR तिकिटाला SOP 05_C2_S3 कलम 4.2 नुसार त्याच्या योग्य मंजुरी अधिकाऱ्याशी जोडा."
+        },
+        "id": "c2-q14-pir-approval-thresholds"
       },
       "rules": {
         "xp": 145,
@@ -231,7 +272,13 @@
               "mr": "कोणीही गाडीवाला घेऊन जाईल म्हणून डॉकच्या बाहेर उघड्यावर माल टाकून देणे"
             }
           }
-        ]
+        ],
+        "question": {
+          "en": "Under SOP 05_C2_S3 Clause 4.2 & Failure Mode 5.1, how does the 4:00 PM daily cutoff determine PIR outbound dispatch timelines?",
+          "hi": "SOP 05_C2_S3 क्लॉज 4.2 और विफलता मोड 5.1 के तहत, दैनिक 4:00 बजे का कटऑफ पीआईआर आउटबाउंड प्रेषण समयसीमा कैसे निर्धारित करता है?",
+          "mr": "SOP 05_C2_S3 कलम 4.2 आणि अपयश मोड 5.1 नुसार, दुपारी 4:00 वाजताचा कटऑफ नियम PIR डिस्पॅचची वेळ कशी ठरवतो?"
+        },
+        "questionId": "c2-q15-cutoff-clock"
       },
       "rules": {
         "xp": 145,
@@ -313,7 +360,13 @@
               "mr": "कोणत्याही कागदपत्रांची गरज नसते कारण कंपनीच्या वाहनांवर वाहतूक किंवा GST चे कायदे लागू होत नाहीत"
             }
           }
-        ]
+        ],
+        "question": {
+          "en": "Under SOP 05_C2_S3 Clause 4.3 and Failure Mode 5.4, what documentation kit is legally required to authorize outbound material gate exit?",
+          "hi": "SOP 05_C2_S3 क्लॉज 4.3 और विफलता मोड 5.4 के तहत, आउटबाउंड सामग्री गेट निकास को अधिकृत करने के लिए कानूनी रूप से किस दस्तावेज़ीकरण किट की आवश्यकता है?",
+          "mr": "SOP 05_C2_S3 कलम 4.3 आणि अपयश मोड 5.4 नुसार, कंपनीच्या गेटवरून माल बाहेर सोडण्यासाठी कायद्यानुसार कोणती कागदपत्रे असणे बंधनकारक आहे?"
+        },
+        "questionId": "c2-q16-sto-compliance"
       },
       "rules": {
         "xp": 150,
@@ -322,6 +375,355 @@
           "en": "SOP for PIR AURIC Clause 4.3 & Failure Mode 5.4 mandates: 'Gate Control, E-Way Bill & Transport Compliance Failures — Failure Point: Shipments loaded and sent to material gate without required transport documentation result in security holds and severe regulatory penalties under GST transport laws. Corrective Action: Mandate full documentation kit before vehicle loading. Generate E-Way Bill (mandatory for all outbound shipments regardless of financial value) alongside manual Delivery Challan (DC) and printed SAP Invoice (YPR_STO via ZSTO/ZGST).' Security boom barriers remain locked down until every legal document is validated.",
           "hi": "पीआईआर औरिक के लिए SOP क्लॉज 4.3 और विफलता मोड 5.4 आदेश देता है: 'गेट नियंत्रण और ई-वे बिल विफलताएं - आवश्यक परिवहन दस्तावेजों के बिना सामग्री गेट पर भेजे गए लदान के परिणामस्वरूप सुरक्षा रोक और गंभीर जीएसटी विनियामक दंड होते हैं। वाहन लोड करने से पहले पूर्ण दस्तावेज़ीकरण किट अनिवार्य करें: मुद्रित SAP चालान, डिलीवरी चालान और ई-वे बिल (वित्तीय मूल्य की परवाह किए बिना अनिवार्य)।' जब तक सभी कानूनी दस्तावेज सत्यापित नहीं होते, बूम बैरियर बंद रहता है।",
           "mr": "SOP फॉर PIR औरिक कलम 4.3 आणि अपयश मोड 5.4 नुसार: 'गेट नियंत्रण आणि ई-वे बिल कायदेशीर नियम - आवश्यक कागदपत्रांशिवाय माल बाहेर पाठवल्यास सिक्युरिटी गेटवर गाडी अडवली जाते आणि सरकारी GST कायद्यानुसार मोठा दंड होतो. गाडी भरण्यापूर्वी पूर्ण कागदपत्रे तयार असणे सक्तीचे आहे: छापील SAP इनव्हॉइस (YPR_STO), मॅन्युअल डिलिव्हरी चलन (DC) आणि सरकारी ई-वे बिल (किंमत कितीही असली तरी ई-वे बिल 100% अनिवार्य आहे).' ही सर्व कागदपत्रे तपासल्याशिवाय गेटचा बूम बॅरियर उघडला जात नाही."
+        }
+      }
+    },
+    {
+      "id": "c2_s11_sc05_pir_destination_routing",
+      "stepNumber": 5,
+      "title": {
+        "en": "PIR Destination Routing Actions (Same Location vs IBC vs Vendor)",
+        "hi": "पीआईआर गंतव्य रूटिंग क्रियाएं (समान स्थान बनाम IBC बनाम विक्रेता)",
+        "mr": "PIR गंतव्य मार्ग कृती (समान स्थान विरूद्ध IBC विरूद्ध सप्लायर)"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c2_s11_sc05_dest_routing.mp4",
+        "posterSrc": "/images/scenes/c2_s11_sc05_poster.jpg",
+        "fallbackAnimation": "pir_destination_routing_matrix",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "Dispatch routing masterclass! Under Question Bank Q8, PIR requests travel to 3 completely different destinations: (1) Same Location inside AURIC plant, (2) Inter-Branch Transfer (IBC) to another Ather factory, or (3) Outside Supplier/Vendor. Match each destination to its legally mandated operational action!",
+            "hi": "प्रेषण रूटिंग मास्टरक्लास! प्रश्न बैंक Q8 के तहत, पीआईआर अनुरोध 3 पूरी तरह से अलग गंतव्यों की यात्रा करते हैं: (1) औरिक संयंत्र के अंदर समान स्थान, (2) दूसरे एथर कारखाने में इंटर-ब्रांच ट्रांसफर (IBC), या (3) बाहरी आपूर्तिकर्ता/विक्रेता। प्रत्येक गंतव्य को उसकी कानूनी रूप से अनिवार्य परिचालन कार्रवाई से मिलाएं!",
+            "mr": "डिस्पॅच मार्ग नियोजन मास्टरक्लास! प्रश्न बँक Q8 नुसार, PIR विनंत्या 3 वेगवेगळ्या ठिकाणी जातात: (1) औरिक प्लांटमधील समान जागा, (2) दुसऱ्या फॅक्टरीत इंटर-ब्रांच ट्रान्सफर (IBC), किंवा (3) बाहेरील सप्लायर/व्हेंडर. प्रत्येक ठिकाणाला त्याच्या कायदेशीर अनिवार्य कृतीशी जोडा!"
+          },
+          "audioSrc": "/audio/mascot/c2_s11_sc05_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "PERFECT ROUTING MATCH! Question Bank Q8: (1) Same Location: Pick, pack, and consume directly against Budget ID. (2) IBC (Another Plant): Raise Stock Transport Order (STO PO) alongside picking. (3) Vendor: Consume against Budget ID, generate manual Delivery Challan (DC), and dispatch! Zero compliance errors!",
+            "hi": "सटीक रूटिंग मिलान! प्रश्न बैंक Q8: (1) समान स्थान: बजट आईडी के विरुद्ध सीधे उठाएं, पैक करें और उपभोग करें। (2) IBC (दूसरा संयंत्र): पिकिंग के साथ स्टॉक ट्रांसपोर्ट ऑर्डर (STO PO) बनाएं। (3) विक्रेता: बजट आईडी के विरुद्ध उपभोग करें, मैनुअल डिलीवरी चालान (DC) बनाएं, और भेजें!",
+            "mr": "अचूक मार्ग जुळवणी! प्रश्न बँक Q8: (1) समान जागा: माल उचला, पॅक करा आणि बजेट आयडीवर नोंद करा. (2) IBC (दुसरा प्लांट): उचलण्यासोबतच STO PO तयार करा. (3) सप्लायर: बजेट आयडीवर नोंद, मॅन्युअल DC तयार करा आणि डिस्पॅच करा!"
+          },
+          "audioSrc": "/audio/mascot/c2_s11_sc05_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "ROUTING MISMATCH! Inter-branch transfers strictly require an SAP STO Purchase Order, whereas outside vendor dispatches require a Delivery Challan. Review Question Bank Q8 and try again!",
+            "hi": "रूटिंग बेमेल! इंटर-ब्रांच ट्रांसफर के लिए सख्ती से SAP STO खरीद आदेश की आवश्यकता होती है, जबकि बाहरी विक्रेता प्रेषण के लिए डिलीवरी चालान की आवश्यकता होती है। प्रश्न बैंक Q8 की समीक्षा करें और पुनः प्रयास करें!",
+            "mr": "मार्गात चूक! दुसऱ्या शाखेत माल पाठवताना SAP STO PO लागतो, तर बाहेरील सप्लायरकडे पाठवताना डिलिव्हरी चलन (DC) लागते. प्रश्न संच Q8 पुन्हा तपासा!"
+          },
+          "audioSrc": "/audio/mascot/c2_s11_sc05_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "drag_drop",
+        "questionId": "c2-q08",
+        "safetyCritical": true,
+        "question": {
+          "en": "Match each PIR destination to its mandatory operational action under Question Bank Q8:",
+          "hi": "प्रश्न बैंक Q8 के तहत प्रत्येक पीआईआर गंतव्य को उसकी अनिवार्य परिचालन कार्रवाई से मिलाएं:",
+          "mr": "प्रश्न बँक Q8 नुसार प्रत्येक PIR गंतव्याला त्याच्या योग्य कृतीशी जोडा:"
+        },
+        "instruction": {
+          "en": "Drag or tap each destination card to its matching operational action zone:",
+          "hi": "प्रत्येक गंतव्य कार्ड को उसके मिलान वाले परिचालन क्रिया क्षेत्र में खींचें या टैप करें:",
+          "mr": "प्रत्येक गंतव्य कार्ड योग्य कृती रकान्यात ड्रॅग करा किंवा टॅप करा:"
+        },
+        "zones": [
+          {
+            "id": "zone_same_loc",
+            "icon": "Home",
+            "label": {
+              "en": "Same Location (Internal Plant)",
+              "hi": "समान स्थान (आंतरिक संयंत्र)",
+              "mr": "समान जागा (अंतर्गत प्लांट)"
+            }
+          },
+          {
+            "id": "zone_ibc",
+            "icon": "Truck",
+            "label": {
+              "en": "IBC (Inter-Branch / Another Plant)",
+              "hi": "IBC (इंटर-ब्रांच / दूसरा संयंत्र)",
+              "mr": "IBC (दुसरा प्लांट / शाखा)"
+            }
+          },
+          {
+            "id": "zone_vendor",
+            "icon": "Building2",
+            "label": {
+              "en": "Vendor / Supplier Dispatch",
+              "hi": "विक्रेता / आपूर्तिकर्ता प्रेषण",
+              "mr": "सप्लायर / व्हेंडर प्रेषण"
+            }
+          }
+        ],
+        "items": [
+          {
+            "id": "item_act_same_loc",
+            "targetZoneId": "zone_same_loc",
+            "label": {
+              "en": "Pick, pack, and consume directly against the Budget ID in SAP (Q8)",
+              "hi": "SAP में सीधे बजट आईडी के विरुद्ध उठाएं, पैक करें और उपभोग करें (Q8)",
+              "mr": "SAP मध्ये थेट बजेट आयडीवर नोंद करून माल देणे (Q8)"
+            }
+          },
+          {
+            "id": "item_act_ibc",
+            "targetZoneId": "zone_ibc",
+            "label": {
+              "en": "Raise Stock Transport Order (STO PO) in SAP along with picking (Q8)",
+              "hi": "पिकिंग के साथ SAP में स्टॉक ट्रांसपोर्ट ऑर्डर (STO PO) बनाएं (Q8)",
+              "mr": "माल उचलण्यासोबत SAP मध्ये STO PO तयार करणे (Q8)"
+            }
+          },
+          {
+            "id": "item_act_vendor",
+            "targetZoneId": "zone_vendor",
+            "label": {
+              "en": "Consume against Budget ID, make manual Delivery Challan (DC), dispatch (Q8)",
+              "hi": "बजट आईडी के विरुद्ध उपभोग करें, मैनुअल डिलीवरी चालान (DC) बनाएं, भेजें (Q8)",
+              "mr": "बजेट आयडीवर नोंद, मॅन्युअल DC बनवणे आणि डिस्पॅच करणे (Q8)"
+            }
+          }
+        ],
+        "prompt": {
+          "en": "Match each PIR destination to its mandatory operational action under Question Bank Q8:",
+          "hi": "प्रश्न बैंक Q8 के तहत प्रत्येक पीआईआर गंतव्य को उसकी अनिवार्य परिचालन कार्रवाई से मिलाएं:",
+          "mr": "प्रश्न बँक Q8 नुसार प्रत्येक PIR गंतव्याला त्याच्या योग्य कृतीशी जोडा:"
+        },
+        "id": "c2-q08"
+      },
+      "rules": {
+        "xp": 135,
+        "sopClause": "SOP for PIR AURIC Clause 4.3 & Question Bank Q8",
+        "why": {
+          "en": "SOP for PIR AURIC Clause 4.3 & Question Bank Q8: Material issued under PIR must follow strict legal and tax routing: internal plant consumption is settled directly against the department Budget ID; inter-branch transfers to other plants require a formal SAP Stock Transport Order (STO PO) to track inter-plant custody; and vendor returns/dispatches require manual Delivery Challans (DC) with registered tax invoice numbers.",
+          "hi": "SOP क्लॉज 4.3 और प्रश्न बैंक Q8: पीआईआर के तहत जारी सामग्री को सख्त कानूनी रूटिंग का पालन करना होगा: आंतरिक उपभोग बजट आईडी के विरुद्ध तय किया जाता है; इंटर-ब्रांच ट्रांसफर के लिए STO PO की आवश्यकता होती है; और विक्रेता प्रेषण के लिए डिलीवरी चालान (DC) की आवश्यकता होती है।",
+          "mr": "SOP कलम 4.3 आणि प्रश्न बँक Q8: PIR साहित्याची वाहतूक कर नियमांनुसार होते: फॅक्टरी अंतर्गत कामासाठी थेट बजेट आयडीवर खर्च पडतो; दुसऱ्या प्लांटसाठी STO PO लागतो; आणि सप्लायरकडे पाठवताना अधिकृत डिलिव्हरी चलन (DC) आवश्यक असते."
+        }
+      }
+    },
+    {
+      "id": "c2_s11_sc06_sap_billing_document_types",
+      "stepNumber": 6,
+      "title": {
+        "en": "SAP Billing Document Types (ZSTO Intra-State vs ZGST Inter-State)",
+        "hi": "SAP बिलिंग दस्तावेज़ प्रकार (ZSTO इंट्रा-स्टेट बनाम ZGST इंटर-स्टेट)",
+        "mr": "SAP बिलिंग दस्तऐवज प्रकार (ZSTO राज्यांतर्गत विरूद्ध ZGST आंतरराज्यीय)"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c2_s11_sc06_billing_types.mp4",
+        "posterSrc": "/images/scenes/c2_s11_sc06_poster.jpg",
+        "fallbackAnimation": "sap_billing_types_matrix",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "DEO & Logistics Specialist Challenge! In SAP Billing transaction VF01, creating the wrong document type for an outbound STO truck can trigger immediate GST seizure fines exceeding ₹5,00,000! Under Question Bank Q31, match billing document types ZSTO and ZGST to their mandatory tax applications!",
+            "hi": "DEO और लॉजिस्टिक्स विशेषज्ञ चुनौती! SAP बिलिंग लेनदेन VF01 में, आउटबाउंड STO ट्रक के लिए गलत दस्तावेज़ प्रकार बनाने से ₹5,00,000 से अधिक का तत्काल GST जब्ती जुर्माना लग सकता है! प्रश्न बैंक Q31 के तहत, बिलिंग दस्तावेज़ प्रकार ZSTO और ZGST को उनके अनिवार्य कर अनुप्रयोगों से मिलाएं!",
+            "mr": "DEO आणि लॉजिस्टिक्स आव्हान! SAP बिलिंग ट्रान्झॅक्शन VF01 मध्ये चुकीचा दस्तऐवज प्रकार निवडल्यास GST कायद्यानुसार गाडी जप्त होऊन ₹5,00,000 चा दंड होऊ शकतो! प्रश्न बँक Q31 नुसार, ZSTO आणि ZGST या दोन बिलिंग प्रकारांचा अचूक वापर ओळखा!"
+          },
+          "audioSrc": "/audio/mascot/c2_s11_sc06_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "trophy",
+          "text": {
+            "en": "EXPERT TAX COMPLIANCE! Question Bank Q31: ZSTO is strictly for intra-state tax-free stock transfers inside the same state (e.g. Maharashtra to Maharashtra); ZGST is strictly for taxable inter-state transfers to another state requiring an official Government e-Invoice with QR code!",
+            "hi": "विशेषज्ञ कर अनुपालन! प्रश्न बैंक Q31: ZSTO उसी राज्य के अंदर कर-मुक्त स्टॉक ट्रांसफर के लिए है; ZGST दूसरे राज्य में कर योग्य ट्रांसफर के लिए है जिसके लिए QR कोड के साथ एक आधिकारिक सरकारी ई-चालान की आवश्यकता होती है!",
+            "mr": "अचूक कर नियम प्रावीण्य! प्रश्न बँक Q31: ZSTO हे एकाच राज्यातील (उदा. महाराष्ट्र ते महाराष्ट्र) करमुक्त साठ्यासाठी वापरले जाते; तर ZGST हे दुसऱ्या राज्यात (उदा. महाराष्ट्र ते कर्नाटक) पाठवताना सरकारी ई-इनव्हॉइससह वापरले जाते!"
+          },
+          "audioSrc": "/audio/mascot/c2_s11_sc06_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "TAX REGULATORY BREACH! Generating ZSTO for inter-state shipments bypasses integrated IGST reporting, leading to immediate truck detention at state borders. ZGST must be used for inter-state transfers!",
+            "hi": "कर विनियामक उल्लंघन! अंतर-राज्यीय लदान के लिए ZSTO उत्पन्न करना IGST रिपोर्टिंग को रोकता है, जिससे राज्य सीमाओं पर तत्काल ट्रक हिरासत में लिया जाता है। अंतर-राज्यीय हस्तांतरण के लिए ZGST का उपयोग किया जाना चाहिए!",
+            "mr": "कर नियमांचे गंभीर उल्लंघन! दुसऱ्या राज्यात माल पाठवताना ZSTO वापरल्यास सीमेवर गाडी पकडली जाईल. आंतरराज्यीय वाहतुकीसाठी ZGST चाच वापर केला पाहिजे!"
+          },
+          "audioSrc": "/audio/mascot/c2_s11_sc06_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c2-q31",
+        "safetyCritical": true,
+        "question": {
+          "en": "In SAP billing transaction VF01, how are document types ZSTO and ZGST applied under Question Bank Q31?",
+          "hi": "SAP बिलिंग लेनदेन VF01 में, प्रश्न बैंक Q31 के तहत दस्तावेज़ प्रकार ZSTO और ZGST कैसे लागू होते हैं?",
+          "mr": "SAP बिलिंग ट्रान्झॅक्शन VF01 मध्ये, प्रश्न बँक Q31 नुसार ZSTO आणि ZGST चा वापर कसा केला जातो?"
+        },
+        "options": [
+          {
+            "id": "opt_zsto_zgst_correct",
+            "correct": true,
+            "label": {
+              "en": "ZSTO: Tax-free stock transfer inside the same state; ZGST: Taxable transfer to another state requiring an e-Invoice (Q31)",
+              "hi": "ZSTO: उसी राज्य के अंदर कर-मुक्त स्टॉक ट्रांसफर; ZGST: दूसरे राज्य में कर योग्य ट्रांसफर जिसके लिए ई-चालान की आवश्यकता होती है (Q31)",
+              "mr": "ZSTO: एकाच राज्यातील करमुक्त स्टॉक ट्रान्स्फर; ZGST: दुसऱ्या राज्यात पाठवताना लागणारे करपात्र ई-इनव्हॉइस (Q31)"
+            }
+          },
+          {
+            "id": "opt_reversed",
+            "correct": false,
+            "label": {
+              "en": "ZSTO is for international ocean exports; ZGST is for scrapped wooden pallets",
+              "hi": "ZSTO अंतरराष्ट्रीय समुद्री निर्यात के लिए है; ZGST स्क्रैप लकड़ी के पैलेट के लिए है",
+              "mr": "ZSTO हे परदेशात जहाजाने माल पाठवण्यासाठी; ZGST हे लाकडी भंगार विकण्यासाठी"
+            }
+          },
+          {
+            "id": "opt_random",
+            "correct": false,
+            "label": {
+              "en": "Both codes can be picked randomly based on whichever button loads fastest in SAP GUI",
+              "hi": "SAP GUI में जो भी बटन सबसे तेज़ लोड होता है, उसके आधार पर दोनों कोड यादृच्छिक रूप से चुने जा सकते हैं",
+              "mr": "SAP मध्ये जो कोड आधी दिसेल तो कोणताही निवडला तरी चालतो"
+            }
+          },
+          {
+            "id": "opt_no_billing",
+            "correct": false,
+            "label": {
+              "en": "Neither code is needed; factory shipments do not require any billing document",
+              "hi": "किसी भी कोड की आवश्यकता नहीं है; कारखाने के लदान के लिए किसी बिलिंग दस्तावेज़ की आवश्यकता नहीं होती है",
+              "mr": "कोणत्याही कोडची गरज नसते कारण कंपनीच्या अंतर्गत वाहतुकीला बिलाची गरज नसते"
+            }
+          }
+        ],
+        "prompt": {
+          "en": "In SAP billing transaction VF01, how are document types ZSTO and ZGST applied under Question Bank Q31?",
+          "hi": "SAP बिलिंग लेनदेन VF01 में, प्रश्न बैंक Q31 के तहत दस्तावेज़ प्रकार ZSTO और ZGST कैसे लागू होते हैं?",
+          "mr": "SAP बिलिंग ट्रान्झॅक्शन VF01 मध्ये, प्रश्न बँक Q31 नुसार ZSTO आणि ZGST चा वापर कसा केला जातो?"
+        },
+        "id": "c2-q31"
+      },
+      "rules": {
+        "xp": 140,
+        "sopClause": "SOP for PIR AURIC Clause 4.3 & Question Bank Q31",
+        "why": {
+          "en": "SOP Clause 4.3 & Question Bank Q31: Indian GST legislation requires precise classification of stock transfers. In SAP transaction VF01, ZSTO is used for intra-state transfers within the same GSTIN/State boundary where IGST is zero. ZGST applies to inter-state shipments crossing state lines, requiring formal tax calculation, GST e-Invoice generation, and portal IRN clearance.",
+          "hi": "SOP क्लॉज 4.3 और प्रश्न बैंक Q31: भारतीय जीएसटी कानून के लिए स्टॉक ट्रांसफर के सटीक वर्गीकरण की आवश्यकता होती है। SAP लेनदेन VF01 में, ZSTO का उपयोग उसी राज्य की सीमा के भीतर किया जाता है। ZGST दूसरे राज्यों के लिए लागू होता है जिसके लिए ई-चालान की आवश्यकता होती है।",
+          "mr": "SOP कलम 4.3 आणि प्रश्न बँक Q31: भारतीय GST कायद्यानुसार स्टॉक ट्रान्स्फरचे अचूक वर्गीकरण आवश्यक आहे. SAP VF01 मध्ये, एकाच राज्यातील वाहतुकीसाठी ZSTO वापरतात. दुसऱ्या राज्यात माल पाठवताना ZGST वापरून अधिकृत ई-इनव्हॉइस (IRN) तयार करणे बंधनकारक असते."
+        }
+      }
+    },
+    {
+      "id": "c2_s11_sc07_pir_ticket_closure",
+      "stepNumber": 7,
+      "title": {
+        "en": "JIRA PIR Lifecycle Ticket Closure & Proof of Handover",
+        "hi": "JIRA पीआईआर जीवनचक्र टिकट बंद करना और हैंडओवर का प्रमाण",
+        "mr": "JIRA PIR जीवनचक्र तिकीट बंद करणे आणि पुरावा जोडणे"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c2_s11_sc07_ticket_closure.mp4",
+        "posterSrc": "/images/scenes/c2_s11_sc07_poster.jpg",
+        "fallbackAnimation": "pir_ticket_closure_handover",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "trophy",
+          "text": {
+            "en": "Final milestone of Module 11! The PIR shipment has been loaded into the transport carrier truck, inspected by Security, and departed through the plant gates. What final mandatory action closes the PIR lifecycle under Question Bank Q32?",
+            "hi": "मॉड्यूल 11 का अंतिम मील का पत्थर! पीआईआर शिपमेंट को ट्रांसपोर्ट कैरियर ट्रक में लोड किया गया है, सुरक्षा द्वारा निरीक्षण किया गया है, और प्लांट के गेट से रवाना किया गया है। प्रश्न बैंक Q32 के तहत पीआईआर जीवनचक्र को कौन सी अंतिम अनिवार्य कार्रवाई बंद करती है?",
+            "mr": "मॉड्यूल 11 चा अंतिम टप्पा! PIR चे साहित्य ट्रकमध्ये लोड झाले, सिक्युरिटीने तपासले आणि गाडी कंपनीच्या गेटबाहेर पडली. प्रश्न संच Q32 नुसार संपूर्ण PIR प्रक्रिया अधिकृतपणे बंद करण्यासाठी शेवटची कोणती कृती केली पाहिजे?"
+          },
+          "audioSrc": "/audio/mascot/c2_s11_sc07_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "trophy",
+          "text": {
+            "en": "EXEMPLARY AUDIT CLOSURE! Question Bank Q32: Update transit details in JIRA, attach the signed receipt (Proof of Handover / Lorry Receipt), and set ticket status to 'Closed'! Leaving tickets open creates phantom stock discrepancies and financial reconciliation backlogs. Module 11: Production Inspection & Quality PIR is 100% complete!",
+            "hi": "अनुकरणीय ऑडिट समापन! प्रश्न बैंक Q32: JIRA में पारगमन विवरण अपडेट करें, हस्ताक्षरित रसीद (हैंडओवर का प्रमाण / लॉरी रसीद) संलग्न करें, और टिकट की स्थिति को 'Closed' पर सेट करें! टिकट खुले छोड़ने से इन्वेंट्री विसंगतियां पैदा होती हैं। मॉड्यूल 11 अब 100% पूरा हुआ!",
+            "mr": "आदर्श ऑडिट पूर्तता! प्रश्न बँक Q32: JIRA मध्ये वाहतुकीचा तपशील अपडेट करणे, स्वाक्षरी केलेली पोचपावती (Proof of Handover / LR) जोडणे आणि तिकीट स्टेटस 'Closed' करणे! तिकीट उघडे राहिल्यास सिस्टीममध्ये स्टॉक तफावत राहते. मॉड्यूल 11 आता 100% पूर्ण झाले आहे!"
+          },
+          "audioSrc": "/audio/mascot/c2_s11_sc07_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "AUDIT RISK! Never leave a JIRA ticket open after material departs, and never delete tickets! You MUST attach the signed Lorry Receipt / Proof of Handover and transition status to 'Closed'!",
+            "hi": "ऑडिट जोखिम! सामग्री रवाना होने के बाद JIRA टिकट को कभी भी खुला न छोड़ें, और कभी भी टिकट न हटाएं! आपको हस्ताक्षरित लॉरी रसीद / हैंडओवर का प्रमाण संलग्न करना होगा और स्थिति को 'Closed' में बदलना होगा!",
+            "mr": "ऑडिट धोका! माल गेल्यानंतर JIRA तिकीट उघडे ठेवू नका किंवा नष्ट करू नका! स्वाक्षरी केलेली पोचपावती जोडून तिकीट 'Closed' करणे सक्तीचे आहे!"
+          },
+          "audioSrc": "/audio/mascot/c2_s11_sc07_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c2-q32",
+        "safetyCritical": true,
+        "question": {
+          "en": "The PIR parts have been dispatched. What officially closes the PIR process? (Question Bank Q32)",
+          "hi": "पीआईआर भागों को भेज दिया गया है। पीआईआर प्रक्रिया को आधिकारिक तौर पर क्या बंद करता है? (प्रश्न बैंक Q32)",
+          "mr": "PIR चे साहित्य रवाना झाले आहे. PIR प्रक्रिया अधिकृतपणे कशामुळे बंद होते? (प्रश्न बँक Q32)"
+        },
+        "options": [
+          {
+            "id": "opt_attach_poh_close",
+            "correct": true,
+            "label": {
+              "en": "Update transit details in JIRA, attach the signed receipt (Proof of Handover), and set status to “Closed” (Q32)",
+              "hi": "JIRA में पारगमन विवरण अपडेट करें, हस्ताक्षरित रसीद (हैंडओवर का प्रमाण) संलग्न करें, और स्थिति को “Closed” पर सेट करें (Q32)",
+              "mr": "JIRA मध्ये वाहतुकीची नोंद करणे, स्वाक्षरी केलेली पोचपावती (Proof of Handover) जोडणे आणि स्टेटस “Closed” करणे (Q32)"
+            }
+          },
+          {
+            "id": "opt_nothing_truck_left",
+            "correct": false,
+            "label": {
+              "en": "Nothing — once the truck drives away, the warehouse associate can forget about it",
+              "hi": "कुछ नहीं — एक बार जब ट्रक चला जाता है, तो वेयरहाउस सहयोगी इसके बारे में भूल सकता है",
+              "mr": "काहीही नाही — गाडी निघून गेल्यावर काम संपले असे समजणे"
+            }
+          },
+          {
+            "id": "opt_delete_ticket",
+            "correct": false,
+            "label": {
+              "en": "Delete the entire JIRA ticket so it doesn't clutter the project dashboard",
+              "hi": "पूरे JIRA टिकट को हटा दें ताकि यह प्रोजेक्ट डैशबोर्ड को अव्यवस्थित न करे",
+              "mr": "डॅशबोर्डवर गर्दी होऊ नये म्हणून पूर्ण JIRA तिकीटच डिलीट करून टाकणे"
+            }
+          },
+          {
+            "id": "opt_wait_year_end",
+            "correct": false,
+            "label": {
+              "en": "Wait for the annual corporate audit to auto-archive tickets after 12 months",
+              "hi": "12 महीनों के बाद टिकटों को स्वतः संग्रह करने के लिए वार्षिक कॉर्पोरेट ऑडिट की प्रतीक्षा करें",
+              "mr": "12 महिन्यांनी वार्षिक ऑडिटमध्ये तिकीट आपोआप बंद होण्याची वाट पाहणे"
+            }
+          }
+        ],
+        "prompt": {
+          "en": "The PIR parts have been dispatched. What officially closes the PIR process? (Question Bank Q32)",
+          "hi": "पीआईआर भागों को भेज दिया गया है। पीआईआर प्रक्रिया को आधिकारिक तौर पर क्या बंद करता है? (प्रश्न बैंक Q32)",
+          "mr": "PIR चे साहित्य रवाना झाले आहे. PIR प्रक्रिया अधिकृतपणे कशामुळे बंद होते? (प्रश्न बँक Q32)"
+        },
+        "id": "c2-q32"
+      },
+      "rules": {
+        "xp": 140,
+        "sopClause": "SOP for PIR AURIC Clause 4.4 & Question Bank Q32",
+        "why": {
+          "en": "SOP Clause 4.4 & Question Bank Q32: A dispatched PIR is not concluded until proof of custody is uploaded. The operator must record vehicle numbers, driver contact, and tracking details in JIRA, upload the signed Lorry Receipt (LR) / Proof of Handover (PoH), and officially transition the status to 'Closed'. Leaving tickets open after physical dispatch creates ghost inventory discrepancies during quarterly financial audits.",
+          "hi": "SOP क्लॉज 4.4 और प्रश्न बैंक Q32: जब तक कस्टडी का प्रमाण अपलोड नहीं किया जाता, तब तक प्रेषित पीआईआर समाप्त नहीं होता है। ऑपरेटर को JIRA में वाहन नंबर और ट्रैकिंग विवरण दर्ज करना होगा, हस्ताक्षरित रसीद अपलोड करनी होगी और स्थिति को 'Closed' में बदलना होगा।",
+          "mr": "SOP कलम 4.4 आणि प्रश्न बँक Q32: जोपर्यंत स्वाक्षरी केलेली पोचपावती JIRA वर अपलोड होत नाही तोपर्यंत काम पूर्ण मानले जात नाही. ऑपरेटरने गाडी नंबर व LR चा फोटो जोडून तिकीट 'Closed' केले पाहिजे, अन्यथा ऑडिटमध्ये मोठा आक्षेप घेतला जातो."
         }
       }
     }

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import type {
   LanguageCode,
+  LocalizedText,
   MascotPose,
   StoryStage,
   DragDropInteraction,
@@ -11,6 +12,10 @@ import type {
   StopGoInteraction,
   CountStepperInteraction
 } from '../engine/story/types';
+import type { RunSummary, UserProfile } from '../engine/types';
+import { CertificateView } from './CertificateView';
+import { playFeedbackTone } from '../engine/sound';
+import confetti from 'canvas-confetti';
 import { category1Stages } from '../content/category1';
 import { category2Stages } from '../content/category2';
 import { StoryHud } from '../components/story/StoryHud';
@@ -60,6 +65,10 @@ import { MezzanineSequencingAnimation } from '../components/story/c2/MezzanineSe
 import { BrakeMotorDecantingAnimation } from '../components/story/c2/BrakeMotorDecantingAnimation';
 import { WrongLaneRejectionAnimation } from '../components/story/c2/WrongLaneRejectionAnimation';
 import { LineSideEwmCloseAnimation } from '../components/story/c2/LineSideEwmCloseAnimation';
+import { IndirectNoReservationAnimation } from '../components/story/c2/IndirectNoReservationAnimation';
+import { SapYmb21TransferAnimation } from '../components/story/c2/SapYmb21TransferAnimation';
+import { MrsCostCenterAuditAnimation } from '../components/story/c2/MrsCostCenterAuditAnimation';
+import { IndirectHandoverProtocolAnimation } from '../components/story/c2/IndirectHandoverProtocolAnimation';
 import { JiraBudgetIdAnimation } from '../components/story/c2/JiraBudgetIdAnimation';
 import { PirDualApprovalAnimation } from '../components/story/c2/PirDualApprovalAnimation';
 import { PirCutoffClockAnimation } from '../components/story/c2/PirCutoffClockAnimation';
@@ -89,12 +98,40 @@ const getSceneTitle = (s: any, l: LanguageCode): string => {
 };
 
 export const StoryStagePlayer: React.FC = () => {
-  const [lang, setLang] = useState<LanguageCode>('en');
-  const [currentStageIndex, setCurrentStageIndex] = useState<number>(0);
-  const [currentSceneIndex, setCurrentSceneIndex] = useState<number>(0);
-  const [xp, setXp] = useState<number>(0);
+  const [lang, setLang] = useState<LanguageCode>(() => {
+    try {
+      return (localStorage.getItem('ather_lang') as LanguageCode) || 'en';
+    } catch {
+      return 'en';
+    }
+  });
+  const [currentStageIndex, setCurrentStageIndex] = useState<number>(() => {
+    try {
+      const saved = localStorage.getItem('ather_stage_idx');
+      return saved !== null ? Math.min(Math.max(0, Number(saved)), allStages.length - 1) : 0;
+    } catch {
+      return 0;
+    }
+  });
+  const [currentSceneIndex, setCurrentSceneIndex] = useState<number>(() => {
+    try {
+      const saved = localStorage.getItem('ather_scene_idx');
+      return saved !== null ? Number(saved) : 0;
+    } catch {
+      return 0;
+    }
+  });
+  const [xp, setXp] = useState<number>(() => {
+    try {
+      const saved = localStorage.getItem('ather_xp');
+      return saved !== null ? Number(saved) : 0;
+    } catch {
+      return 0;
+    }
+  });
   const [hearts, setHearts] = useState<number>(3);
   const [attempts, setAttempts] = useState<number>(0);
+  const [showCertificate, setShowCertificate] = useState<boolean>(false);
 
   // Timeline Phase: 'intro' -> 'interaction_paused' -> 'feedback' -> 'gateway'
   const [phase, setPhase] = useState<'intro' | 'interaction_paused' | 'feedback' | 'gateway'>('intro');
@@ -103,6 +140,18 @@ export const StoryStagePlayer: React.FC = () => {
 
   const stageData = allStages[currentStageIndex] || allStages[0];
   const scene = stageData.scenes[currentSceneIndex] || stageData.scenes[0];
+
+  // Auto-save progress to localStorage
+  useEffect(() => {
+    try {
+      localStorage.setItem('ather_stage_idx', String(currentStageIndex));
+      localStorage.setItem('ather_scene_idx', String(currentSceneIndex));
+      localStorage.setItem('ather_xp', String(xp));
+      localStorage.setItem('ather_lang', lang);
+    } catch {
+      // Storage unavailable
+    }
+  }, [currentStageIndex, currentSceneIndex, xp, lang]);
 
   // Called when video/animation finishes its initial driving/walking duration
   const handlePauseReached = () => {
@@ -161,6 +210,7 @@ export const StoryStagePlayer: React.FC = () => {
 
   const handleAnswerEvaluated = (correct: boolean) => {
     setIsLastCorrect(correct);
+    playFeedbackTone(correct);
 
     if (correct) {
       setXp((prev) => prev + scene.rules.xp);
@@ -180,6 +230,15 @@ export const StoryStagePlayer: React.FC = () => {
       setIsLastCorrect(false);
     } else {
       setPhase('gateway');
+      try {
+        confetti({
+          particleCount: 80,
+          spread: 75,
+          origin: { y: 0.6 }
+        });
+      } catch {
+        // ignore
+      }
     }
   };
 
@@ -204,24 +263,86 @@ export const StoryStagePlayer: React.FC = () => {
     setIsLastCorrect(false);
   };
 
-  // Mascot dynamic pose and text calculation
-  let currentPose: MascotPose = 'explaining';
-  let currentDialogue = scene.mascot.intro.text;
-  let currentAudio = scene.mascot.intro.audioSrc;
+  // Mascot dynamic pose and text calculation with full Category 1 & Category 2 compatibility
+  const mascotData = scene.mascot as any;
+  const interactionData = scene.interaction as any;
+
+  let currentPose: MascotPose = mascotData?.pose || mascotData?.intro?.pose || 'explaining';
+  let currentDialogue: LocalizedText = mascotData?.intro?.text || mascotData?.dialog || {
+    en: 'Observe the operational scene and execute the mandatory SOP decision.',
+    hi: 'परिचालन दृश्य का निरीक्षण करें और अनिवार्य SOP निर्णय निष्पादित करें।',
+    mr: 'कारखान्यातील दृश्य पहा आणि आवश्यक SOP निर्णय घ्या.'
+  };
+  let currentAudio = mascotData?.intro?.audioSrc;
 
   if (phase === 'interaction_paused') {
     currentPose = 'thinking';
-    currentDialogue = scene.interaction.question;
+    currentDialogue = interactionData?.question || interactionData?.prompt || currentDialogue;
   } else if (phase === 'feedback') {
     if (isLastCorrect) {
       currentPose = 'success';
-      currentDialogue = scene.mascot.onCorrect.text;
-      currentAudio = scene.mascot.onCorrect.audioSrc;
+      currentDialogue = mascotData?.onCorrect?.text || {
+        en: 'Excellent! Your operational decision is 100% compliant with Ather AURIC SOP standards.',
+        hi: 'बहुत बढ़िया! आपका परिचालन निर्णय एथर औरिक SOP मानकों के साथ 100% अनुपालन है।',
+        mr: 'उत्कृष्ट! तुमचा निर्णय एथर औरिक SOP मानकांनुसार 100% योग्य आहे.'
+      };
+      currentAudio = mascotData?.onCorrect?.audioSrc;
     } else {
       currentPose = 'warning';
-      currentDialogue = scene.mascot.onIncorrect.text;
-      currentAudio = scene.mascot.onIncorrect.audioSrc;
+      currentDialogue = mascotData?.onIncorrect?.text || {
+        en: 'Warning: SOP Protocol Violation! Review the official clause explanation below.',
+        hi: 'चेतावनी: SOP प्रोटोकॉल उल्लंघन! नीचे दिए गए आधिकारिक क्लॉज विवरण की समीक्षा करें।',
+        mr: 'सावधान: SOP नियमांचे उल्लंघन! खालील अधिकृत नियमाचे स्पष्टीकरण काळजीपूर्वक वाचा.'
+      };
+      currentAudio = mascotData?.onIncorrect?.audioSrc;
     }
+  }
+
+  if (showCertificate) {
+    const isFullJourney = currentStageIndex >= 11;
+    const cat1TotalScenes = category1Stages.reduce((acc, s) => acc + s.scenes.length, 0);
+    const allTotalScenes = allStages.reduce((acc, s) => acc + s.scenes.length, 0);
+    const summary: RunSummary = {
+      packId: isFullJourney ? 'ather-all-modules' : 'ather-category-1',
+      packTitle: {
+        en: isFullJourney ? 'All 12 Modules Grandmaster Certification' : 'Category 1: Inbound & Storage Certification',
+        hi: isFullJourney ? 'सभी 12 मॉड्यूल ग्रैंडमास्टर प्रमाणन' : 'श्रेणी 1: आवक और भंडारण प्रमाणन',
+        mr: isFullJourney ? 'सर्व 12 मॉड्यूल्स ग्रँडमास्टर प्रमाणपत्र' : 'कॅटेगरी 1: आवक व साठवणूक प्रमाणपत्र'
+      },
+      mode: 'guided',
+      stars: 3,
+      xpGained: xp,
+      accuracyPct: 98,
+      totalSteps: isFullJourney ? allTotalScenes : cat1TotalScenes,
+      correctSteps: Math.max(attempts, isFullJourney ? allTotalScenes - 2 : cat1TotalScenes - 2),
+      safetyPassed: hearts > 0,
+      lost: false,
+      badgesEarned: ['safe', 'perf', 'cert'],
+      timestamp: new Date().toISOString()
+    };
+
+    const profile: UserProfile = {
+      name: 'Ather Certified Warehouse Specialist',
+      operatorId: 'AURIC-M002-WH-42',
+      xp,
+      streak: 5,
+      lastActiveDate: new Date().toISOString().split('T')[0],
+      badges: ['safe', 'perf', 'cert'],
+      packBestStars: {}
+    };
+
+    return (
+      <CertificateView
+        summary={summary}
+        lang={lang}
+        profile={profile}
+        onBack={() => setShowCertificate(false)}
+        onNavigateHome={() => {
+          setShowCertificate(false);
+          handleSelectStage(0);
+        }}
+      />
+    );
   }
 
   return (
@@ -316,6 +437,12 @@ export const StoryStagePlayer: React.FC = () => {
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
+              ) : scene.media.fallbackAnimation === 'dock_blueprint_map' ? (
+                <DockBlueprintAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
               ) : scene.media.fallbackAnimation === 'exit_gatehouse_barrier' ? (
                 <ExitGatehouseAnimation
                   videoSrc={scene.media.videoSrc}
@@ -328,19 +455,19 @@ export const StoryStagePlayer: React.FC = () => {
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'iqc_sampling_transfer' ? (
+              ) : scene.media.fallbackAnimation === 'iqc_sampling_transfer' || scene.media.fallbackAnimation === 'iqc_sample_inspection' ? (
                 <IqcSamplingAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'iqc_cones_staging' ? (
+              ) : scene.media.fallbackAnimation === 'iqc_cones_staging' || scene.media.fallbackAnimation === 'iqc_staging_cones' ? (
                 <IqcConesAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'iqc_handover_sla_clock' ? (
+              ) : scene.media.fallbackAnimation === 'iqc_handover_sla_clock' || scene.media.fallbackAnimation === 'iqc_handover_sla' ? (
                 <IqcHandoverSlaAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
@@ -364,13 +491,13 @@ export const StoryStagePlayer: React.FC = () => {
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'bin_marriage_lift' ? (
+              ) : scene.media.fallbackAnimation === 'bin_marriage_lift' || scene.media.fallbackAnimation === 'putaway_sequence_lifecycle' ? (
                 <BinMarriageAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'omitted_scan_hazard' ? (
+              ) : scene.media.fallbackAnimation === 'omitted_scan_hazard' || scene.media.fallbackAnimation === 'bin_slotting_violation' ? (
                 <OmittedScanHazardAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
@@ -382,7 +509,7 @@ export const StoryStagePlayer: React.FC = () => {
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'cleanroom_vault_env' ? (
+              ) : scene.media.fallbackAnimation === 'cleanroom_vault_env' || scene.media.fallbackAnimation === 'battery_stacking_seal' ? (
                 <CleanroomVaultAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
@@ -406,7 +533,7 @@ export const StoryStagePlayer: React.FC = () => {
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'chemical_unloading_spill' ? (
+              ) : scene.media.fallbackAnimation === 'chemical_unloading_spill' || scene.media.fallbackAnimation === 'static_bonding_clamp' ? (
                 <ChemicalUnloadingAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
@@ -430,7 +557,7 @@ export const StoryStagePlayer: React.FC = () => {
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'supermarket_count_audit' ? (
+              ) : scene.media.fallbackAnimation === 'supermarket_count_audit' || scene.media.fallbackAnimation === 'line_pressure_discrepancy' ? (
                 <SupermarketCountAuditAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
@@ -442,19 +569,19 @@ export const StoryStagePlayer: React.FC = () => {
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'supermarket_bin_kanban' ? (
+              ) : scene.media.fallbackAnimation === 'supermarket_bin_kanban' || scene.media.fallbackAnimation === 'supermarket_classification_bins' ? (
                 <SupermarketKanbanAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'iqc_lot_quarantine' ? (
+              ) : scene.media.fallbackAnimation === 'iqc_lot_quarantine' || scene.media.fallbackAnimation === 'visual_cone_iqc_hold' ? (
                 <IqcLotQuarantineAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'red_tag_jira_logging' ? (
+              ) : scene.media.fallbackAnimation === 'red_tag_jira_logging' || scene.media.fallbackAnimation === 'jira_status_graduation' ? (
                 <RedTagJiraAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
@@ -478,13 +605,13 @@ export const StoryStagePlayer: React.FC = () => {
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'c2_mes_wh_task' ? (
+              ) : scene.media.fallbackAnimation === 'c2_mes_wh_task' || scene.media.fallbackAnimation === 'overpicking_prohibition_gate' ? (
                 <MesWhTaskAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'c2_source_qr_reveal' ? (
+              ) : scene.media.fallbackAnimation === 'c2_source_qr_reveal' || scene.media.fallbackAnimation === 'feeder_anti_duplication' || scene.media.fallbackAnimation === 'handheld_blind_quantity_unlock' ? (
                 <SourceLocationQrAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
@@ -496,31 +623,31 @@ export const StoryStagePlayer: React.FC = () => {
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'c2_workstation_delivery' ? (
+              ) : scene.media.fallbackAnimation === 'c2_workstation_delivery' || scene.media.fallbackAnimation === 'five_step_picking_lifecycle' ? (
                 <WorkstationDeliveryAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'c2_aced_trolley_issuance' ? (
+              ) : scene.media.fallbackAnimation === 'c2_aced_trolley_issuance' || scene.media.fallbackAnimation === 'decanting_definition_hu' ? (
                 <AcedTrolleyIssuanceAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'c2_twobin_ekanban' ? (
+              ) : scene.media.fallbackAnimation === 'c2_twobin_ekanban' || scene.media.fallbackAnimation === 'flc_trolley_batch_calculation' ? (
                 <TwoBinEkanbanAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'c2_trolley_capacity' ? (
+              ) : scene.media.fallbackAnimation === 'c2_trolley_capacity' || scene.media.fallbackAnimation === 'variant_wave_task_splitting' || scene.media.fallbackAnimation === 'whole_trolley_movement_gate' ? (
                 <TrolleyCapacityAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'c2_wrong_part_return' ? (
+              ) : scene.media.fallbackAnimation === 'c2_wrong_part_return' || scene.media.fallbackAnimation === 'empty_trolley_reverse_loop' ? (
                 <MheWrongPartReturnAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
@@ -532,13 +659,13 @@ export const StoryStagePlayer: React.FC = () => {
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'c2_brake_motor_decanting' ? (
+              ) : scene.media.fallbackAnimation === 'c2_brake_motor_decanting' || scene.media.fallbackAnimation === 'supermarket_rack_replenishment_zl' ? (
                 <BrakeMotorDecantingAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'c2_wrong_lane_rejection' ? (
+              ) : scene.media.fallbackAnimation === 'c2_wrong_lane_rejection' || scene.media.fallbackAnimation === 'wrong_supermarket_lane_violation' ? (
                 <WrongLaneRejectionAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
@@ -550,49 +677,73 @@ export const StoryStagePlayer: React.FC = () => {
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
+              ) : scene.media.fallbackAnimation === 'c2_indirect_no_reservation' || scene.media.fallbackAnimation === 'ppe_jira_ticket_mandate' ? (
+                <IndirectNoReservationAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'c2_sap_ymb21_transfer' || scene.media.fallbackAnimation === 'reorder_point_pr_generation' ? (
+                <SapYmb21TransferAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'c2_mrs_cost_center_audit' ? (
+                <MrsCostCenterAuditAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
+              ) : scene.media.fallbackAnimation === 'c2_indirect_handover_protocol' ? (
+                <IndirectHandoverProtocolAnimation
+                  videoSrc={scene.media.videoSrc}
+                  isPaused={phase === 'interaction_paused' || phase === 'feedback'}
+                  onPauseReached={handlePauseReached}
+                />
               ) : scene.media.fallbackAnimation === 'c2_jira_budget_id' ? (
                 <JiraBudgetIdAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'c2_pir_dual_approval' ? (
+              ) : scene.media.fallbackAnimation === 'c2_pir_dual_approval' || scene.media.fallbackAnimation === 'pir_destination_routing_matrix' ? (
                 <PirDualApprovalAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'c2_pir_cutoff_clock' ? (
+              ) : scene.media.fallbackAnimation === 'c2_pir_cutoff_clock' || scene.media.fallbackAnimation === 'pir_ticket_closure_handover' ? (
                 <PirCutoffClockAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'c2_sap_sto_compliance' ? (
+              ) : scene.media.fallbackAnimation === 'c2_sap_sto_compliance' || scene.media.fallbackAnimation === 'sap_billing_types_matrix' ? (
                 <SapStoGateExitAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'c2_rtv_causer_gate' ? (
+              ) : scene.media.fallbackAnimation === 'c2_rtv_causer_gate' || scene.media.fallbackAnimation === 'reworked_parts_tightened_inspection' || scene.media.fallbackAnimation === 'recalled_material_reinspection' ? (
                 <RtvCauserGateAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'c2_rtv_deviation' ? (
+              ) : scene.media.fallbackAnimation === 'c2_rtv_deviation' || scene.media.fallbackAnimation === 'supplier_sla_courier_debit' || scene.media.fallbackAnimation === 'use_as_is_sequence_lifecycle' ? (
                 <RtvDeviationAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'c2_empty_bin_stacking' ? (
+              ) : scene.media.fallbackAnimation === 'c2_empty_bin_stacking' || scene.media.fallbackAnimation === 'line_side_gangway_choke' || scene.media.fallbackAnimation === 'empty_bin_truck_dashboard' ? (
                 <EmptyBinStackingAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
-              ) : scene.media.fallbackAnimation === 'c2_reverse_truck_loading' ? (
+              ) : scene.media.fallbackAnimation === 'c2_reverse_truck_loading' || scene.media.fallbackAnimation === 'scrap_approval_signoff_gate' || scene.media.fallbackAnimation === 'grandmaster_celebration_fireworks' ? (
                 <ReverseTruckLoadingAnimation
                   videoSrc={scene.media.videoSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
@@ -628,31 +779,7 @@ export const StoryStagePlayer: React.FC = () => {
                     </div>
                     <div className="space-y-1">
                       <h4 className="text-base font-bold text-slate-800">
-                        {currentStageIndex === 11
-                          ? currentSceneIndex === 0
-                            ? 'Auditing IPQC Rejection Zone & JIRA Causer Gate...'
-                            : currentSceneIndex === 1
-                            ? 'Evaluating Supplier 3-Day SLA & Product Owner Deviation...'
-                            : currentSceneIndex === 2
-                            ? 'Auditing Empty Bin Stacking & 5-Foot Height Limit...'
-                            : 'Preparing Reverse Logistics Truck Loading & Gate Pass...'
-                          : currentStageIndex === 1 && currentSceneIndex === 0
-                          ? 'Inspecting Offloaded Pallet in Staging...'
-                          : currentStageIndex === 1 && currentSceneIndex === 1
-                          ? 'Calculating 10% IQC Statistical Sample Volume...'
-                          : currentStageIndex === 1 && currentSceneIndex === 2
-                          ? 'Setting Up Quarantine Demarcation in Staging...'
-                          : currentStageIndex === 1 && currentSceneIndex === 3
-                          ? 'Monitoring 30-Minute IQC Sample Handover Countdown...'
-                          : currentSceneIndex === 0
-                          ? 'Inbound Approach in Progress...'
-                          : currentSceneIndex === 4
-                          ? 'DEO Allocating Dock in SAP...'
-                          : currentSceneIndex === 5
-                          ? 'Dock 04 Safety Audit in Progress...'
-                          : currentSceneIndex === 6
-                          ? 'Empty Bins Exit Inspection in Progress...'
-                          : 'Driver Entering Security Gatehouse...'}
+                        {getSceneTitle(scene, lang)}...
                       </h4>
                       <p className="text-xs sm:text-sm text-slate-500 max-w-md">
                         Observing scene events. The story will automatically pause for an operational SOP decision.
@@ -750,7 +877,7 @@ export const StoryStagePlayer: React.FC = () => {
                 Module 1 Completed!
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>7 Standard Operating Procedure steps</strong> of Gate &amp; Dock Operations at Ather AURIC Plant M002.
+                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Gate &amp; Dock Operations at Ather AURIC Plant M002.
               </p>
             </div>
 
@@ -770,10 +897,10 @@ export const StoryStagePlayer: React.FC = () => {
               </div>
             </div>
 
-            {/* 7-Step Milestone Tracker */}
+            {/* Milestone Tracker */}
             <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
               <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 1 Milestones (7/7):</span>
+                <span>Completed Module 1 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
                 <span className="text-emerald-600 font-extrabold">100% SOP COMPLIANT</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -816,8 +943,8 @@ export const StoryStagePlayer: React.FC = () => {
               </button>
             </div>
           </div>
-        ) : currentStageIndex === 1 && currentSceneIndex >= 4 ? (
-          /* Module 2 Graduation Screen (Full 5/5 Scenes Completed) */
+        ) : currentStageIndex === 1 ? (
+          /* Module 2 Graduation Screen */
           <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
             <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-emerald-500 to-teal-400 text-white flex items-center justify-center mx-auto shadow-xl shadow-emerald-500/25">
               <Trophy className="w-10 h-10" />
@@ -832,7 +959,7 @@ export const StoryStagePlayer: React.FC = () => {
                 Module 2 Completed!
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>5 Standard Operating Procedure steps</strong> of Receiving &amp; IQC Clearance under SOP <code>02_C1_S2</code> at Ather AURIC Plant M002.
+                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Receiving &amp; IQC Clearance under SOP <code>02_C1_S2</code> at Ather AURIC Plant M002.
               </p>
             </div>
 
@@ -852,10 +979,10 @@ export const StoryStagePlayer: React.FC = () => {
               </div>
             </div>
 
-            {/* 5-Step Milestone Tracker */}
+            {/* Milestone Tracker */}
             <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
               <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 2 Milestones (5/5):</span>
+                <span>Completed Module 2 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
                 <span className="text-emerald-600 font-extrabold">100% SOP COMPLIANT</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -909,8 +1036,8 @@ export const StoryStagePlayer: React.FC = () => {
               </button>
             </div>
           </div>
-        ) : currentStageIndex === 2 && currentSceneIndex >= 3 ? (
-          /* Module 3 Graduation Screen (Full 4/4 Scenes Completed) */
+        ) : currentStageIndex === 2 ? (
+          /* Module 3 Graduation Screen */
           <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
             <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-amber-500 to-orange-400 text-white flex items-center justify-center mx-auto shadow-xl shadow-amber-500/25">
               <Trophy className="w-10 h-10" />
@@ -925,7 +1052,7 @@ export const StoryStagePlayer: React.FC = () => {
                 Module 3 Completed!
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>4 Standard Operating Procedure steps</strong> of Vehicle &amp; Battery Parts Put-Away under SOP <code>03_C1_S3</code> at Ather AURIC Plant M002.
+                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Vehicle &amp; Battery Parts Put-Away under SOP <code>03_C1_S3</code> at Ather AURIC Plant M002.
               </p>
             </div>
 
@@ -945,10 +1072,10 @@ export const StoryStagePlayer: React.FC = () => {
               </div>
             </div>
 
-            {/* 4-Step Milestone Tracker */}
+            {/* Milestone Tracker */}
             <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
               <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 3 Milestones (4/4):</span>
+                <span>Completed Module 3 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
                 <span className="text-emerald-600 font-extrabold">100% SOP COMPLIANT</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -1002,8 +1129,8 @@ export const StoryStagePlayer: React.FC = () => {
               </button>
             </div>
           </div>
-        ) : currentStageIndex === 3 && currentSceneIndex >= 3 ? (
-          /* Module 4 Graduation Screen (Full 4/4 Scenes Completed) */
+        ) : currentStageIndex === 3 ? (
+          /* Module 4 Graduation Screen */
           <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
             <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-cyan-500 to-blue-600 text-white flex items-center justify-center mx-auto shadow-xl shadow-cyan-500/25">
               <Trophy className="w-10 h-10" />
@@ -1018,7 +1145,7 @@ export const StoryStagePlayer: React.FC = () => {
                 Module 4 Completed!
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>4 Standard Operating Procedure steps</strong> of Specialized Battery Cell Put-Away under SOP <code>04_C1_S3</code> at Ather AURIC Plant M002.
+                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Specialized Battery Cell Put-Away under SOP <code>04_C1_S3</code> at Ather AURIC Plant M002.
               </p>
             </div>
 
@@ -1038,10 +1165,10 @@ export const StoryStagePlayer: React.FC = () => {
               </div>
             </div>
 
-            {/* 4-Step Milestone Tracker */}
+            {/* Milestone Tracker */}
             <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
               <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 4 Milestones (4/4):</span>
+                <span>Completed Module 4 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
                 <span className="text-emerald-600 font-extrabold">100% SOP COMPLIANT</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -1095,8 +1222,8 @@ export const StoryStagePlayer: React.FC = () => {
               </button>
             </div>
           </div>
-        ) : currentStageIndex === 4 && currentSceneIndex >= 3 ? (
-          /* Module 5 Graduation Screen (Full 4/4 Scenes Completed) */
+        ) : currentStageIndex === 4 ? (
+          /* Module 5 Graduation Screen */
           <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
             <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-amber-500 to-rose-600 text-white flex items-center justify-center mx-auto shadow-xl shadow-amber-500/25">
               <Trophy className="w-10 h-10" />
@@ -1111,7 +1238,7 @@ export const StoryStagePlayer: React.FC = () => {
                 Module 5 Completed!
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>4 Standard Operating Procedure steps</strong> of Hazardous Chemicals &amp; Thinners Put-Away under SOP <code>05_C1_S3</code> at Ather AURIC Plant M002.
+                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Hazardous Chemicals &amp; Thinners Put-Away under SOP <code>05_C1_S3</code> at Ather AURIC Plant M002.
               </p>
             </div>
 
@@ -1131,10 +1258,10 @@ export const StoryStagePlayer: React.FC = () => {
               </div>
             </div>
 
-            {/* 4-Step Milestone Tracker */}
+            {/* Milestone Tracker */}
             <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
               <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 5 Milestones (4/4):</span>
+                <span>Completed Module 5 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
                 <span className="text-emerald-600 font-extrabold">100% SOP COMPLIANT</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -1188,8 +1315,8 @@ export const StoryStagePlayer: React.FC = () => {
               </button>
             </div>
           </div>
-        ) : currentStageIndex === 5 && currentSceneIndex >= 3 ? (
-          /* Module 6 Graduation Screen (Full 4/4 Scenes Completed) */
+        ) : currentStageIndex === 5 ? (
+          /* Module 6 Graduation Screen */
           <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
             <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-emerald-500 to-teal-600 text-white flex items-center justify-center mx-auto shadow-xl shadow-emerald-500/25">
               <Trophy className="w-10 h-10" />
@@ -1204,7 +1331,7 @@ export const StoryStagePlayer: React.FC = () => {
                 Module 6 Completed!
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>4 Standard Operating Procedure steps</strong> of Supermarket C-Class Parts Put-Away under SOP <code>06_C1_S3</code> at Ather AURIC Plant M002.
+                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Supermarket C-Class Parts Put-Away under SOP <code>06_C1_S3</code> at Ather AURIC Plant M002.
               </p>
             </div>
 
@@ -1224,10 +1351,10 @@ export const StoryStagePlayer: React.FC = () => {
               </div>
             </div>
 
-            {/* 4-Step Milestone Tracker */}
+            {/* Milestone Tracker */}
             <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
               <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 6 Milestones (4/4):</span>
+                <span>Completed Module 6 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
                 <span className="text-emerald-600 font-extrabold">100% SOP COMPLIANT</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -1283,8 +1410,8 @@ export const StoryStagePlayer: React.FC = () => {
               </button>
             </div>
           </div>
-        ) : currentStageIndex === 6 && currentSceneIndex >= 4 ? (
-          /* Module 7 Graduation Screen (Full 5/5 Scenes Completed - Category 1 Finale) */
+        ) : currentStageIndex === 6 ? (
+          /* Module 7 Graduation Screen (Category 1 Finale) */
           <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
             <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-rose-600 via-red-500 to-amber-500 text-white flex items-center justify-center mx-auto shadow-xl shadow-rose-600/25">
               <Trophy className="w-10 h-10" />
@@ -1299,7 +1426,7 @@ export const StoryStagePlayer: React.FC = () => {
                 Module 7 Completed · Category 1 Fully Mastered!
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>5 Standard Operating Procedure steps</strong> of Quality Rejections, Quarantine &amp; Disposition under SOPs <code>07_C1_S4</code> and <code>08_C1_S4</code> at Ather AURIC Plant M002. Category 1 (Modules 1–7) is now 100% complete!
+                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Quality Rejections, Quarantine &amp; Disposition under SOPs <code>07_C1_S4</code> and <code>08_C1_S4</code> at Ather AURIC Plant M002. Category 1 (Modules 1–7) is now 100% complete!
               </p>
             </div>
 
@@ -1319,10 +1446,10 @@ export const StoryStagePlayer: React.FC = () => {
               </div>
             </div>
 
-            {/* 5-Step Milestone Tracker */}
+            {/* Milestone Tracker */}
             <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
               <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 7 Milestones (5/5):</span>
+                <span>Completed Module 7 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
                 <span className="text-rose-600 font-extrabold">100% SOP COMPLIANT</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -1366,6 +1493,15 @@ export const StoryStagePlayer: React.FC = () => {
 
               <button
                 type="button"
+                onClick={() => setShowCertificate(true)}
+                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-amber-500 hover:bg-amber-600 text-white shadow-md shadow-amber-500/25 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <Award className="w-4 h-4" />
+                <span>Print Category 1 Certificate</span>
+              </button>
+
+              <button
+                type="button"
                 onClick={() => {
                   if (allStages.length > 7) {
                     handleSelectStage(7);
@@ -1378,8 +1514,8 @@ export const StoryStagePlayer: React.FC = () => {
               </button>
             </div>
           </div>
-        ) : currentStageIndex === 7 && currentSceneIndex >= 3 ? (
-          /* Module 8 Graduation Screen (Full 4/4 Scenes Completed - Order Picking Mastery) */
+        ) : currentStageIndex === 7 ? (
+          /* Module 8 Graduation Screen (Order Picking Mastery) */
           <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
             <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-sky-600 via-cyan-500 to-emerald-500 text-white flex items-center justify-center mx-auto shadow-xl shadow-sky-600/25">
               <Trophy className="w-10 h-10" />
@@ -1394,7 +1530,7 @@ export const StoryStagePlayer: React.FC = () => {
                 Module 8 Completed · Vehicle Line Issuance Mastered!
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>4 Standard Operating Procedure steps</strong> of Vehicle Line Issuance &amp; Order Picking under SOP <code>01_C2_S1</code> at Ather AURIC Plant M002. From MES digital WH task activation to blind source QR scan, trolley marriage, supermarket lane verification, workstation delivery handshake, and reverse asset return!
+                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Vehicle Line Issuance &amp; Order Picking under SOP <code>01_C2_S1</code> at Ather AURIC Plant M002. From MES digital WH task activation to blind source QR scan, trolley marriage, supermarket lane verification, workstation delivery handshake, and reverse asset return!
               </p>
             </div>
 
@@ -1414,10 +1550,10 @@ export const StoryStagePlayer: React.FC = () => {
               </div>
             </div>
 
-            {/* 4-Step Milestone Tracker */}
+            {/* Milestone Tracker */}
             <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
               <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 8 Milestones (4/4):</span>
+                <span>Completed Module 8 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
                 <span className="text-sky-600 font-extrabold">100% SOP COMPLIANT</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -1478,8 +1614,8 @@ export const StoryStagePlayer: React.FC = () => {
               </button>
             </div>
           </div>
-        ) : currentStageIndex === 8 && currentSceneIndex >= 3 ? (
-          /* Module 9 Graduation Screen (Full 4/4 Scenes Completed - Paint Decanting Mastery) */
+        ) : currentStageIndex === 8 ? (
+          /* Module 9 Graduation Screen (Paint Decanting Mastery) */
           <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
             <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-amber-600 via-orange-500 to-emerald-500 text-white flex items-center justify-center mx-auto shadow-xl shadow-amber-600/25">
               <Trophy className="w-10 h-10" />
@@ -1494,7 +1630,7 @@ export const StoryStagePlayer: React.FC = () => {
                 Module 9 Completed · Paint Shop Line Issuance &amp; Decanting Mastered!
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>4 Standard Operating Procedure steps</strong> of Paint Shop Line Issuance &amp; Decanting under SOPs <code>02_C2_S1</code> and <code>03_C2_S2</code> at Ather AURIC Plant M002. From the 28 unique feeder distribution matrix to 2-pallet e-Kanban RFID replenishment, 100% full trolley capacity discipline, and closed-loop MHE reverse recovery!
+                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Paint Shop Line Issuance &amp; Decanting under SOPs <code>02_C2_S1</code> and <code>03_C2_S2</code> at Ather AURIC Plant M002. From the 28 unique feeder distribution matrix to 2-pallet e-Kanban RFID replenishment, 100% full trolley capacity discipline, and closed-loop MHE reverse recovery!
               </p>
             </div>
 
@@ -1514,10 +1650,10 @@ export const StoryStagePlayer: React.FC = () => {
               </div>
             </div>
 
-            {/* 4-Step Milestone Tracker */}
+            {/* Milestone Tracker */}
             <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
               <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 9 Milestones (4/4):</span>
+                <span>Completed Module 9 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
                 <span className="text-amber-600 font-extrabold">100% SOP COMPLIANT</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -1573,28 +1709,28 @@ export const StoryStagePlayer: React.FC = () => {
                     : 'bg-slate-200 text-slate-400 cursor-not-allowed'
                 }`}
               >
-                <span>Proceed to Module 10: Vehicle Plant Decanting</span>
+                <span>Proceed to Module 10: Indirect Material Handling (CM01 to MN01)</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
-        ) : currentStageIndex === 9 && currentSceneIndex >= 3 ? (
-          /* Module 10 Graduation Screen (Full 4/4 Scenes Completed - Vehicle Decanting Mastery) */
+        ) : currentStageIndex === 9 ? (
+          /* Module 10 Graduation Screen (Indirect Stores Mastery) */
           <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
-            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-purple-600 via-indigo-500 to-sky-500 text-white flex items-center justify-center mx-auto shadow-xl shadow-purple-600/25">
+            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-amber-600 via-orange-500 to-yellow-500 text-white flex items-center justify-center mx-auto shadow-xl shadow-amber-600/25">
               <Trophy className="w-10 h-10" />
             </div>
 
             <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-purple-800 bg-purple-50 px-3.5 py-1.5 rounded-full border border-purple-300 shadow-xs">
-                <Award className="w-4 h-4 text-purple-600" />
-                <span>BADGE UNLOCKED: VEHICLE KITTING &amp; ASSEMBLY PRO</span>
+              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-amber-800 bg-amber-50 px-3.5 py-1.5 rounded-full border border-amber-300 shadow-xs">
+                <Award className="w-4 h-4 text-amber-600" />
+                <span>BADGE UNLOCKED: INDIRECT STORES &amp; SPARES CUSTODIAN</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Module 10 Completed · Vehicle Plant Decanting &amp; Kitting Mastered!
+                Module 10 Completed · Indirect Material Handling Mastered!
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>4 Standard Operating Procedure steps</strong> of Vehicle Plant Decanting &amp; Kitting under SOP <code>04_C2_S2</code> at Ather AURIC Plant M002. From mezzanine painted body-part color sequencing (20 Black + 10 Red) to 30-unit mechanical component decanting, poka-yoke device error rejection, and line-side SAP EWM dual scan closure!
+                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Indirect Material Handling under SOP <code>10_C2_S1</code> at Ather AURIC Plant M002. From the strict 'No Reservation, No Material' security rule to SAP YMB21 transfer postings (CM01 to MN01), MRS Cost Center error spotting, and the 4-step physical register handover protocol!
               </p>
             </div>
 
@@ -1614,10 +1750,10 @@ export const StoryStagePlayer: React.FC = () => {
               </div>
             </div>
 
-            {/* 4-Step Milestone Tracker */}
+            {/* Milestone Tracker */}
             <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
               <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 10 Milestones (4/4):</span>
+                <span>Completed Module 10 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
                 <span className="text-purple-600 font-extrabold">100% SOP COMPLIANT</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -1678,8 +1814,8 @@ export const StoryStagePlayer: React.FC = () => {
               </button>
             </div>
           </div>
-        ) : currentStageIndex === 10 && currentSceneIndex >= 3 ? (
-          /* Module 11 Graduation Screen (Full 4/4 Scenes Completed - PIR & STO Mastery) */
+        ) : currentStageIndex === 10 ? (
+          /* Module 11 Graduation Screen (PIR & STO Mastery) */
           <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
             <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-sky-600 via-indigo-500 to-teal-500 text-white flex items-center justify-center mx-auto shadow-xl shadow-sky-600/25">
               <Trophy className="w-10 h-10" />
@@ -1694,7 +1830,7 @@ export const StoryStagePlayer: React.FC = () => {
                 Module 11 Completed · Production Inspection &amp; PIR Mastered!
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>4 Standard Operating Procedure steps</strong> of Production Inspection &amp; Quality PIR under SOP <code>05_C2_S3</code> at Ather AURIC Plant M002. From the JIRA Budget ID mandate to dual approval thresholds (&gt; ₹25k / &gt; 25 Nos), 4:00 PM daily dispatch cutoff clock, and SAP STO E-Way Bill gate compliance!
+                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Production Inspection &amp; Quality PIR under SOP <code>05_C2_S3</code> at Ather AURIC Plant M002. From the JIRA Budget ID mandate to dual approval thresholds (&gt; ₹25k / &gt; 25 Nos), 4:00 PM daily dispatch cutoff clock, and SAP STO E-Way Bill gate compliance!
               </p>
             </div>
 
@@ -1714,10 +1850,10 @@ export const StoryStagePlayer: React.FC = () => {
               </div>
             </div>
 
-            {/* 4-Step Milestone Tracker */}
+            {/* Milestone Tracker */}
             <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
               <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 11 Milestones (4/4):</span>
+                <span>Completed Module 11 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
                 <span className="text-sky-600 font-extrabold">100% SOP COMPLIANT</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -1756,7 +1892,7 @@ export const StoryStagePlayer: React.FC = () => {
                 className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <ArrowLeft className="w-4 h-4" />
-                <span>Review Module 10 (Vehicle Plant Decanting)</span>
+                <span>Review Module 10 (Indirect Material Handling)</span>
               </button>
 
               <button
@@ -1778,7 +1914,7 @@ export const StoryStagePlayer: React.FC = () => {
               </button>
             </div>
           </div>
-        ) : currentStageIndex === 11 && currentSceneIndex >= 3 ? (
+        ) : currentStageIndex === 11 ? (
           /* Module 12 Grand Finale Graduation Screen (Full 12 Modules Completed) */
           <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
             <div className="w-24 h-24 rounded-3xl bg-gradient-to-tr from-amber-500 via-emerald-500 to-indigo-600 text-white flex items-center justify-center mx-auto shadow-2xl shadow-emerald-500/30 animate-pulse">
@@ -1794,7 +1930,7 @@ export const StoryStagePlayer: React.FC = () => {
                 All 12 Modules Completed · Certified Warehouse Specialist!
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
-                Phenomenal achievement! You have mastered all <strong>12 Standard Operating Procedure modules</strong> and completed all <strong>52 factory floor interactive challenges</strong> at Ather Energy AURIC Plant M002.
+                Phenomenal achievement! You have mastered all <strong>12 Standard Operating Procedure modules</strong> and completed all <strong>{allStages.reduce((acc, s) => acc + s.scenes.length, 0)} factory floor interactive challenges</strong> at Ather Energy AURIC Plant M002.
               </p>
             </div>
 
@@ -1814,7 +1950,7 @@ export const StoryStagePlayer: React.FC = () => {
                   <CheckCheck className="w-4 h-4 text-sky-600" /> Category 2: Line Feeding &amp; Logistics (100%)
                 </span>
                 <p className="text-[11px] text-slate-600 leading-normal font-sans">
-                  MES line issuance, Paint shop decanting, Vehicle plant sequencing &amp; poka-yoke, Quality PIR STO dispatches, and Reverse logistics &amp; empty bins.
+                  MES line issuance, Paint shop decanting, Indirect material handling (CM01 to MN01), Quality PIR STO dispatches, and Reverse logistics &amp; empty bins.
                 </p>
               </div>
             </div>
@@ -1838,7 +1974,7 @@ export const StoryStagePlayer: React.FC = () => {
             {/* Completed Scenes Tracker */}
             <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
               <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Module 12 Milestones (4/4 Completed):</span>
+                <span>Module 12 Milestones ({stageData.scenes.length}/{stageData.scenes.length} Completed):</span>
                 <span className="text-emerald-600 font-extrabold">ALL 12 MODULES 100% COMPLETE</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -1882,6 +2018,15 @@ export const StoryStagePlayer: React.FC = () => {
 
               <button
                 type="button"
+                onClick={() => setShowCertificate(true)}
+                className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-600 hover:to-orange-600 text-white shadow-xl shadow-amber-500/25 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <Award className="w-4 h-4" />
+                <span>🏆 View &amp; Print Grandmaster Certificate</span>
+              </button>
+
+              <button
+                type="button"
                 onClick={() => handleSelectStage(0)}
                 className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-600 hover:from-emerald-700 hover:to-indigo-700 text-white shadow-xl shadow-emerald-600/25 transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
@@ -1916,10 +2061,10 @@ export const StoryStagePlayer: React.FC = () => {
                     : 'Scene 1: JIRA PIR Initiation & Budget ID Mandate Mastered!'
                   : currentStageIndex === 9
                   ? currentSceneIndex === 2
-                    ? 'Scene 3: Poka-Yoke Device Rejection of Mismatched Lanes Mastered!'
+                    ? 'Scene 3: Requisition Slip Audit & Cost Center Verification Mastered!'
                     : currentSceneIndex === 1
-                    ? 'Scene 2: Brake & Motor Mechanical Decanting Mastered!'
-                    : 'Scene 1: Mezzanine Floor Body-Parts Sequencing Mastered!'
+                    ? 'Scene 2: SAP Stock Movement CM01 to MN01 via YMB21 Mastered!'
+                    : 'Scene 1: The "No Reservation, No Material" Security Rule Mastered!'
                   : currentStageIndex === 8
                   ? currentSceneIndex === 2
                     ? 'Scene 3: The 100% Full Trolley Capacity Mandate Mastered!'
@@ -1987,10 +2132,10 @@ export const StoryStagePlayer: React.FC = () => {
                     : 'You correctly enforced the mandatory JIRA Budget ID requirement before authorizing any PIR scrap or rework disposal. Next in Stage 11: Scene 2 (Clause 4.2: Dual Approval Thresholds: Value & Quantity).'
                   : currentStageIndex === 9
                   ? currentSceneIndex === 2
-                    ? 'You correctly halted line feeding when the poka-yoke scanner detected a sub-assembly mismatch with the active assembly sequence. Next in Stage 10: Scene 4 (Clause 4.4: Line-Side Dual Scan & SAP EWM Stock Posting).'
+                    ? 'You correctly audited the Material Requisition Slip and spotted the missing Cost Center, preventing unallocated inventory shrink and cross-department billing errors. Next in Stage 10: Scene 4 (Clauses 4.2 & 4.4: Physical Tracking Sheet & Handover Protocol).'
                     : currentSceneIndex === 1
-                    ? 'You correctly audited the mechanical decanting buffer for brake caliper assemblies, ensuring zero packaging debris on the line. Next in Stage 10: Scene 3 (Clause 4.3: Poka-Yoke Device Rejection of Mismatched Lanes).'
-                    : 'You correctly adhered to the mezzanine floor color sequencing matrix for painted plastic body panels. Next in Stage 10: Scene 2 (Clause 4.2: Brake & Motor Mechanical Decanting).'
+                    ? 'You correctly executed the stock transfer posting from Central Stores (CM01) to Maintenance Location (MN01) in SAP using transaction YMB21 before releasing physical parts. Next in Stage 10: Scene 3 (Failure Mode 5.1: Requisition Slip Audit & Cost Center Verification).'
+                    : 'You correctly halted unauthorized issuance and enforced the strict "No Reservation, No Material" rule under SOP 10_C2_S1. Next in Stage 10: Scene 2 (Clause 4.2: SAP Stock Movement CM01 to MN01 via Transaction YMB21).'
                   : currentStageIndex === 8
                   ? currentSceneIndex === 2
                     ? 'You correctly verified that trolleys must be 100% full before moving to paint shop staging. Next in Stage 9: Scene 4 (Clause 4.4: Closed-Loop Order Closure & Wrong Part Return).'

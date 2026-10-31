@@ -78,7 +78,13 @@
               "mr": "लाईनवर कोणता माल आणायचा हे विचारण्यासाठी ऑपरेटर वेअरहाऊस मॅनेजरला फोन करतो"
             }
           }
-        ]
+        ],
+        "question": {
+          "en": "Under SOP Clause 4.1, how does the Line Feeder receive picking instructions, and what must be verified before proceeding?",
+          "hi": "SOP क्लॉज 4.1 के तहत, लाइन फीडर को पिकिंग निर्देश कैसे प्राप्त होते हैं, और आगे बढ़ने से पहले क्या सत्यापित किया जाना चाहिए?",
+          "mr": "SOP कलम 4.1 नुसार, लाईन फीडरला पिकिंगच्या सूचना कशा मिळतात आणि पुढे जाण्यापूर्वी काय तपासणे बंधनकारक आहे?"
+        },
+        "questionId": "c2-q01-mes-task"
       },
       "rules": {
         "xp": 120,
@@ -116,51 +122,69 @@
         }
       },
       "interaction": {
-        "type": "mcq",
-        "id": "c2-q02-blind-reveal",
-        "prompt": {
-          "en": "Why does the HHT keep the picking quantity field locked and blank until the Line Feeder scans the physical rack QR code at the source location?",
-          "hi": "HHT पिकिंग मात्रा फ़ील्ड को तब तक लॉक और खाली क्यों रखता है जब तक कि लाइन फीडर स्रोत स्थान पर भौतिक रैक क्यूआर कोड को स्कैन नहीं करता?",
-          "mr": "जोपर्यंत लाईन फीडर प्रत्यक्ष रॅकवरील QR कोड स्कॅन करत नाही, तोपर्यंत HHT वरील आवश्यक संख्या लॉक का ठेवली जाते?"
+        "type": "sequence",
+        "questionId": "c2-q02-blind-reveal-sequence",
+        "safetyCritical": true,
+        "question": {
+          "en": "Under SOP Clause 4.1, arrange the mandatory 4-step sequence a Line Feeder must follow when executing a picking task:",
+          "hi": "SOP क्लॉज 4.1 के तहत, लाइन फीडर द्वारा पिकिंग कार्य करते समय पालन किए जाने वाले अनिवार्य 4-चरणीय क्रम को व्यवस्थित करें:",
+          "mr": "SOP कलम 4.1 नुसार, लाईन फीडरने पिकिंगचे काम करताना पाळावयाच्या अनिवार्य 4 पायऱ्या योग्य क्रमाने लावा:"
         },
-        "options": [
+        "instruction": {
+          "en": "Arrange the operational steps in correct chronological order from first to last.",
+          "hi": "परिचालन चरणों को पहले से अंतिम तक सही कालानुक्रमिक क्रम में व्यवस्थित करें।",
+          "mr": "कामाच्या पायऱ्या पहिल्यापासून शेवटपर्यंत योग्य कालक्रमाने लावा."
+        },
+        "steps": [
           {
-            "id": "opt_prevent_guesswork",
-            "correct": true,
+            "id": "step_receive_mes",
+            "icon": "📱",
             "label": {
-              "en": "To prevent operators from guessing counts and picking from convenient adjacent wrong bins; scanning the beam QR proves physical presence before quantity unlocks",
-              "hi": "ऑपरेटरों को मात्रा का अनुमान लगाने और सुविधाजनक आसन्न गलत डिब्बे से चुनने से रोकने के लिए; बीम क्यूआर को स्कैन करना मात्रा अनलॉक होने से पहले भौतिक उपस्थिति साबित करता है",
-              "mr": "ऑपरेटरने अंदाजाने शेजारच्या चुकीच्या बिनमधून माल उचलू नये म्हणून; रॅक बीमवरील QR स्कॅन केल्यानेच ऑपरेटर प्रत्यक्ष जागेवर असल्याची सिद्धता होते व संख्या दिसते"
+              "en": "Receive MES picking task on HHT specifying Part Number, Replenishment Qty & Source Rack Location",
+              "hi": "पार्ट नंबर, पुनःपूर्ति मात्रा और स्रोत रैक स्थान निर्दिष्ट करते हुए HHT पर MES पिकिंग कार्य प्राप्त करें",
+              "mr": "पार्ट नंबर, आवश्यक संख्या आणि सोर्स रॅक लोकेशन दाखवणारा MES पिकिंग टास्क HHT वर प्राप्त करणे"
             }
           },
           {
-            "id": "opt_slow_wifi",
-            "correct": false,
+            "id": "step_scan_rack_qr",
+            "icon": "🔍",
             "label": {
-              "en": "Because the warehouse Wi-Fi network is too slow to load numbers and letters simultaneously",
-              "hi": "क्योंकि गोदाम वाई-फाई नेटवर्क एक साथ संख्याओं और अक्षरों को लोड करने के लिए बहुत धीमा है",
-              "mr": "कारण गोदामातील वाय-फाय नेटवर्क अक्षरे आणि आकडे एकाच वेळी लोड करू शकत नाही इतके स्लो आहे"
+              "en": "Arrive at exact source rack beam and scan physical QR code to unlock the blind picking quantity",
+              "hi": "सटीक स्रोत रैक बीम पर पहुंचें और गुप्त पिकिंग मात्रा अनलॉक करने के लिए भौतिक क्यूआर कोड को स्कैन करें",
+              "mr": "सोर्स रॅक बीमवर पोहोचून प्रत्यक्ष QR कोड स्कॅन करणे जेणेकरून लॉक असलेली आवश्यक संख्या अनलॉक होईल"
             }
           },
           {
-            "id": "opt_free_pick",
-            "correct": false,
+            "id": "step_marry_trolley",
+            "icon": "🛒",
             "label": {
-              "en": "So line feeders can pick as many crates as they want and manually type their own preferred number later",
-              "hi": "ताकि लाइन फीडर जितने चाहें उतने बक्से चुन सकें और बाद में मैन्युअल रूप से अपनी पसंदीदा संख्या टाइप कर सकें",
-              "mr": "जेणेकरून ऑपरेटरला हवे तितके बॉक्स उचलता येतील आणि नंतर हवी ती संख्या हाताने टाईप करता येईल"
+              "en": "Pick verified quantity from that bin and scan mobile trolley QR barcode to marry trolley with picklist",
+              "hi": "उस बिन से सत्यापित मात्रा चुनें और पिकलिस्ट के साथ ट्रॉली को युग्मित करने के लिए मोबाइल ट्रॉली क्यूआर बारकोड को स्कैन करें",
+              "mr": "त्या बिनमधून अचूक संख्येत माल उचलणे आणि पिकलिस्टशी जोडणी करण्यासाठी मोबाईल ट्रॉलीचा QR स्कॅन करणे"
             }
           },
           {
-            "id": "opt_skip_scan",
-            "correct": false,
+            "id": "step_deliver_and_scan_dest",
+            "icon": "🏁",
             "label": {
-              "en": "To allow the line feeder to skip scanning completely if they are in a hurry",
-              "hi": "यदि वे जल्दी में हैं तो लाइन फीडर को पूरी तरह से स्कैनिंग छोड़ने की अनुमति देने के लिए",
-              "mr": "जर ऑपरेटर घाईत असेल तर त्याला स्कॅनिंग पूर्णपणे वगळण्याची परवानगी मिळावी म्हणून"
+              "en": "Feed parts to workstation rack and scan destination QR code on the line beam to close WH task in MES",
+              "hi": "वर्कस्टेशन रैक में पुर्जे रखें और MES में WH कार्य को बंद करने के लिए लाइन बीम पर गंतव्य क्यूआर कोड को स्कैन करें",
+              "mr": "वर्कस्टेशन रॅकवर साहित्य ठेवणे आणि MES मधील WH टास्क बंद करण्यासाठी लाईन बीमवरील डेस्टिनेशन QR स्कॅन करणे"
             }
           }
-        ]
+        ],
+        "correctOrder": [
+          "step_receive_mes",
+          "step_scan_rack_qr",
+          "step_marry_trolley",
+          "step_deliver_and_scan_dest"
+        ],
+        "prompt": {
+          "en": "Under SOP Clause 4.1, arrange the mandatory 4-step sequence a Line Feeder must follow when executing a picking task:",
+          "hi": "SOP क्लॉज 4.1 के तहत, लाइन फीडर द्वारा पिकिंग कार्य करते समय पालन किए जाने वाले अनिवार्य 4-चरणीय क्रम को व्यवस्थित करें:",
+          "mr": "SOP कलम 4.1 नुसार, लाईन फीडरने पिकिंगचे काम करताना पाळावयाच्या अनिवार्य 4 पायऱ्या योग्य क्रमाने लावा:"
+        },
+        "id": "c2-q02-blind-reveal-sequence"
       },
       "rules": {
         "xp": 125,
@@ -231,7 +255,13 @@
           "en": "Push the trolley to the line immediately because the physical parts are needed right now to avoid stopping the line.",
           "hi": "ट्रॉली को तुरंत लाइन पर धकेलें क्योंकि लाइन को रुकने से बचाने के लिए भौतिक भागों की अभी आवश्यकता है।",
           "mr": "लाईन बंद पडू नये म्हणून आत्ताच ट्रॉली लाईनवर ढकला कारण प्रत्यक्ष पार्टची तात्काळ गरज आहे."
-        }
+        },
+        "prompt": {
+          "en": "DECISION GATE: Can the line feeder move un-scanned materials directly to the assembly line?",
+          "hi": "निर्णय गेट: क्या लाइन फीडर बिना स्कैन की गई सामग्री को सीधे असेंबली लाइन में ले जा सकता है?",
+          "mr": "निर्णय गेट: लाईन फीडर स्कॅन न केलेले साहित्य थेट असेंब्ली लाईनवर घेऊन जाऊ शकतो का?"
+        },
+        "id": "c2-q03-trolley-marriage"
       },
       "rules": {
         "xp": 130,
@@ -269,51 +299,83 @@
         }
       },
       "interaction": {
-        "type": "mcq",
-        "id": "c2-q04-workstation-delivery",
-        "prompt": {
-          "en": "Under SOP Clause 4.2 and Failure Mode 5.3, how is a line-feeding task officially closed in MES, and what must be done with empty bins and trolleys at the workstation?",
-          "hi": "SOP क्लॉज 4.2 और विफलता मोड 5.3 के तहत, MES में लाइन-फीडिंग कार्य को आधिकारिक तौर पर कैसे बंद किया जाता है, और वर्कस्टेशन पर खाली डिब्बों और ट्रॉलियों का क्या किया जाना चाहिए?",
-          "mr": "SOP कलम 4.2 आणि अपयश मोड 5.3 नुसार, MES मध्ये लाईन-फीडिंगचे काम अधिकृतपणे कसे बंद होते आणि वर्कस्टेशनवरील रिकाम्या बिन्स व ट्रॉलींचे काय केले पाहिजे?"
+        "type": "spot_error",
+        "questionId": "c2-q04-workstation-violations",
+        "safetyCritical": true,
+        "question": {
+          "en": "SPOT THE VIOLATIONS: Inspect Workstation 08. Which two conditions violate Ather Line-Feeding and Shopfloor Safety SOPs?",
+          "hi": "उल्लंघन पहचानें: वर्कस्टेशन 08 का निरीक्षण करें। कौन सी दो स्थितियाँ एथर लाइन-फीडिंग और शॉपफ्लोर सुरक्षा SOP का उल्लंघन करती हैं?",
+          "mr": "नियमभंग ओळखा: वर्कस्टेशन 08 ची पाहणी करा. कोणत्या दोन बाबी एथर लाईन-फीडिंग आणि सुरक्षा नियमांचे उल्लंघन करतात?"
+        },
+        "instruction": {
+          "en": "Select the safety and operational violations that must be halted and corrected.",
+          "hi": "उन सुरक्षा और परिचालन उल्लंघनों का चयन करें जिन्हें रोका और ठीक किया जाना चाहिए।",
+          "mr": "ज्या त्रुटी त्वरित थांबवून दुरुस्त केल्या पाहिजेत त्या नियमभंग निवडा."
         },
         "options": [
           {
-            "id": "opt_dest_scan_and_empties",
-            "correct": true,
+            "id": "viol_abandoned_trolley",
+            "isViolation": true,
             "label": {
-              "en": "Scan the Workstation destination QR code on the line beam to close the WH task in MES, and ensure empty bins/trolleys are staged in designated return lanes for reverse logistics to prevent gangway choking",
-              "hi": "MES में WH कार्य को बंद करने के लिए लाइन बीम पर वर्कस्टेशन गंतव्य क्यूआर कोड को स्कैन करें, और गलियारे को अवरुद्ध होने से रोकने के लिए खाली डिब्बे/ट्रॉलियों को रिवर्स लॉजिस्टिक्स के लिए निर्दिष्ट रिटर्न लेन में रखना सुनिश्चित करें",
-              "mr": "MES मधील WH टास्क बंद करण्यासाठी लाईन बीमवरील वर्कस्टेशन डेस्टिनेशन QR स्कॅन करा, आणि रस्ता अडकू नये म्हणून रिकाम्या बिन्स/ट्रॉली रिव्हर्स लॉजिस्टिकसाठी ठरवून दिलेल्या रिटर्न लेनमध्ये पाठवा"
+              "en": "Empty mobile trolley abandoned across the yellow pedestrian fire exit corridor",
+              "hi": "पीले पैदल यात्री निकास गलियारे में खाली मोबाइल ट्रॉली छोड़ दी गई",
+              "mr": "पिवळ्या आपत्कालीन अग्निशामक रस्त्यामध्ये रिकामी मोबाईल ट्रॉली अडथळा करत सोडून देणे"
+            },
+            "description": {
+              "en": "SOP Failure Mode 5.3 strictly forbids leaving empty trolleys in walkways; it chokes gangways and obstructs emergency escape routes.",
+              "hi": "SOP विफलता मोड 5.3 वॉकवे में खाली ट्रॉलियों को छोड़ने पर सख्ती से रोक लगाता है; यह आपातकालीन निकास मार्गों को रोकता है।",
+              "mr": "SOP फेल्युअर मोड 5.3 नुसार रस्त्यात रिकाम्या ट्रॉली टाकण्यास सक्त मनाई आहे; यामुळे रस्ता अडकतो व आपत्कालीन मार्ग बंद होतो."
             }
           },
           {
-            "id": "opt_walk_away_silent",
-            "correct": false,
+            "id": "viol_unscanned_departure",
+            "isViolation": true,
             "label": {
-              "en": "Leave the materials and walk away silently; the MES system will automatically guess when the line operator uses the parts",
-              "hi": "सामग्री छोड़ें और चुपचाप चले जाएं; जब लाइन ऑपरेटर पुर्जों का उपयोग करेगा तो MES सिस्टम अपने आप अनुमान लगा लेगा",
-              "mr": "माल तिथेच ठेवून न सांगता निघून जा; जेव्हा लाईन ऑपरेटर पार्ट वापरेल तेव्हा सिस्टीम आपोआप अंदाज लावेल"
+              "en": "Line feeder unloaded crates onto station rack and walked away without scanning the line-side destination QR code",
+              "hi": "लाइन फीडर ने स्टेशन रैक पर बक्से उतारे और लाइन-साइड गंतव्य क्यूआर कोड को स्कैन किए बिना चला गया",
+              "mr": "लाईनमधील डेस्टिनेशन QR स्कॅन न करताच माल ठेवून ऑपरेटर निघून जाणे"
+            },
+            "description": {
+              "en": "SOP Clause 4.2 mandates destination QR scan. Skipping this leaves the WH task open in MES, causing inventory phantom errors and false line-starvation alerts.",
+              "hi": "SOP क्लॉज 4.2 गंतव्य क्यूआर स्कैन अनिवार्य करता है। इसे छोड़ने से MES में WH कार्य खुला रहता है और स्टॉक विसंगति होती है।",
+              "mr": "SOP कलम 4.2 नुसार डेस्टिनेशन QR स्कॅन करणे अनिवार्य आहे. हे वगळल्यास MES मधील WH टास्क उघडा राहून खोटा तुटवडा भासतो."
             }
           },
           {
-            "id": "opt_block_gangway",
-            "correct": false,
+            "id": "valid_flow_rack_loading",
+            "isViolation": false,
             "label": {
-              "en": "Abandon empty trolleys directly in the pedestrian walking pathway because line operators enjoy maneuvering around obstacles",
-              "hi": "खाली ट्रॉलियों को सीधे पैदल चलने के रास्ते में छोड़ दें क्योंकि लाइन ऑपरेटर बाधाओं के आसपास घूमने का आनंद लेते हैं",
-              "mr": "चालण्याच्या मुख्य रस्त्यातच रिकाम्या ट्रॉली सोडून द्या जेणेकरून ये-जा करणाऱ्यांना अडथळा होईल"
+              "en": "Kitted wiring harness crates seated firmly inside workstation gravity flow chute with part labels facing the assembler",
+              "hi": "किटेडेड वायरिंग हार्नेस क्रेट्स असेंबलर का सामना करने वाले पार्ट लेबल के साथ वर्कस्टेशन ग्रैविटी फ्लो च्यूट के अंदर मजबूती से बैठे हैं",
+              "mr": "पार्टचे लेबल कामगाराकडे तोंड करून ग्रॅव्हिटी फ्लो रॅकवर व्यवस्थित बसवलेले वायरिंग हार्नेसचे क्रेट्स"
+            },
+            "description": {
+              "en": "Compliant. Correct ergonomic presentation for assembly line operators.",
+              "hi": "अनुपालन। असेंबली लाइन ऑपरेटरों के लिए सही एर्गोनोमिक प्रस्तुति।",
+              "mr": "योग्य. असेंब्ली कामगारांना सहज पार्ट मिळण्यासाठीची अधिकृत पद्धत."
             }
           },
           {
-            "id": "opt_cancel_task",
-            "correct": false,
+            "id": "valid_empty_staging",
+            "isViolation": false,
             "label": {
-              "en": "Click 'Cancel Task' on the HHT so inventory records remain un-deducted from warehouse storage",
-              "hi": "HHT पर 'रद्द करें' पर क्लिक करें ताकि इन्वेंट्री रिकॉर्ड गोदाम भंडारण से कम न हो",
-              "mr": "HHT वरील टास्क रद्द करा जेणेकरून गोदामातून साहित्याचा स्टॉक कमी होणार नाही"
+              "en": "Emptied plastic totes stacked neatly inside the demarcated yellow reverse logistics return lane",
+              "hi": "चिह्नित पीली रिवर्स लॉजिस्टिक्स रिटर्न लेन के अंदर साफ-सुथरे ढंग से रखे गए खाली प्लास्टिक के डिब्बे",
+              "mr": "रिव्हर्स लॉजिस्टिकसाठी ठरवून दिलेल्या पिवळ्या रिटर्न लेनमध्ये व्यवस्थित रचून ठेवलेल्या रिकाम्या पेट्या"
+            },
+            "description": {
+              "en": "Compliant. Follows 5S shopfloor lane demarcation awaiting milk-run retrieval.",
+              "hi": "अनुपालन। मिल्क-रन पिकअप की प्रतीक्षा में 5S लेन सीमांकन का पालन करता है।",
+              "mr": "योग्य. 5S नियमानुसार ठरवलेल्या जागेत रिव्हर्स लॉजिस्टिकसाठी ठेवलेल्या पेट्या."
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "SPOT THE VIOLATIONS: Inspect Workstation 08. Which two conditions violate Ather Line-Feeding and Shopfloor Safety SOPs?",
+          "hi": "उल्लंघन पहचानें: वर्कस्टेशन 08 का निरीक्षण करें। कौन सी दो स्थितियाँ एथर लाइन-फीडिंग और शॉपफ्लोर सुरक्षा SOP का उल्लंघन करती हैं?",
+          "mr": "नियमभंग ओळखा: वर्कस्टेशन 08 ची पाहणी करा. कोणत्या दोन बाबी एथर लाईन-फीडिंग आणि सुरक्षा नियमांचे उल्लंघन करतात?"
+        },
+        "id": "c2-q04-workstation-violations"
       },
       "rules": {
         "xp": 140,
@@ -322,6 +384,550 @@
           "en": "SOP for Line Issuance Vehicle Plant Clause 4.2 & Failure Mode 5.3 establishes: 'After picking and feeding material to destination workstation, feeder scans QR code at line-side destination to close WH task. Closing WH task marks feeding of material completed, confirms stock deduction, and allows feeder to resume the next task. Separate manpower collects empty bins and trolleys from line side to move them to empty segregation area. If not collected, empty assets choke the gangway, block emergency exits, and starve upstream decanting of return containers.' Scanning the destination QR completes the dual-scan traceability handshake.",
           "hi": "लाइन निर्गमन वाहन संयंत्र के लिए SOP क्लॉज 4.2 और विफलता मोड 5.3 स्थापित करता है: 'गंतव्य वर्कस्टेशन पर सामग्री उठाने और खिलाने के बाद, फीडर WH कार्य को बंद करने के लिए लाइन-साइड गंतव्य पर क्यूआर कोड को स्कैन करता है। WH कार्य को बंद करना सामग्री के वितरण को पूरा करता है और स्टॉक कटौती की पुष्टि करता है। अलग से जनशक्ति खाली डिब्बे/ट्रॉलियों को लाइन साइड से एकत्र करती है। यदि समय पर नहीं किया गया, तो यह गलियारे को अवरुद्ध करता है।' डेस्टिनेशन क्यूआर को स्कैन करना डुअल-स्कैन ट्रैसेबिलिटी हैंडशेक को पूरा करता है।",
           "mr": "SOP फॉर लाईन इश्यूअन्स व्हेईकल प्लांट कलम 4.2 आणि फेल्युअर मोड 5.3 नुसार: 'वर्कस्टेशनवर माल दिल्यानंतर ऑपरेटरने लाईनवरील डेस्टिनेशन QR स्कॅन करणे बंधनकारक आहे, ज्याने MES मधील WH टास्क अधिकृतपणे बंद होतो आणि स्टॉक ट्रान्सफर पूर्ण होते. त्यानंतरच पुढचे काम घेता येते. तसेच रिकाम्या बिन्स व ट्रॉली स्वतंत्र टीम गोळा करून रिव्हर्स लॉजिस्टिकसाठी पाठवते. हे वेळेत न झाल्यास रस्ते अडकतात आणि गोदामात रिकाम्या पेट्यांचा तुटवडा होतो.' डेस्टिनेशन QR स्कॅन केल्यानेच ट्रॅकिंगची संपूर्ण प्रक्रिया पूर्ण होते."
+        }
+      }
+    },
+    {
+      "id": "c2_s8_sc05_overpicking_prohibition",
+      "stepNumber": 5,
+      "title": {
+        "en": "Over-Picking Prohibition Stop/Go (Pick 12 vs 15 on Rack)",
+        "hi": "ओवर-पिकिंग निषेध Stop/Go (12 उठाएं बनाम रैक पर 15)",
+        "mr": "अतिरिक्त माल उचलण्यास मनाई Stop/Go (12 ची गरज विरूद्ध रॅकवर 15)"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c2_s8_sc05_overpicking.mp4",
+        "posterSrc": "/images/scenes/c2_s8_sc05_poster.jpg",
+        "fallbackAnimation": "overpicking_prohibition_gate",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "warning",
+          "text": {
+            "en": "Attention Line Feeder! Your handheld screen clearly displays 'Pick 12 Pieces' for Workstation 06. When looking into the storage bin, you notice exactly 15 pieces remaining. You think: 'Let me just grab all 15 so the bin is empty and I won't have to make another walk next hour.' Should you allow or stop this over-picking?",
+            "hi": "सावधान लाइन फीडर! आपकी हैंडहेल्ड स्क्रीन वर्कस्टेशन 06 के लिए स्पष्ट रूप से 'Pick 12 Pieces' प्रदर्शित करती है। स्टोरेज बिन में देखने पर, आपको ठीक 15 टुकड़े बचे हुए दिखाई देते हैं। आप सोचते हैं: 'चलो मैं सभी 15 ले लेता हूं ताकि डिब्बा खाली हो जाए और मुझे अगले घंटे फिर से न आना पड़े।' क्या आपको इस ओवर-पिकिंग की अनुमति देनी चाहिए या रोकना चाहिए?",
+            "mr": "लक्ष द्या लाईन फीडर! तुमच्या हँडहेल्ड स्क्रीनवर वर्कस्टेशन 06 साठी 'Pick 12 Pieces' असा स्पष्ट मेसेज दिसत आहे. स्टोरेज बिनमध्ये पाहिल्यावर तुम्हाला बरोबर 15 पार्ट शिल्लक दिसतात. तुम्ही विचार करता: 'हे सर्व 15 पार्ट उचलून घेऊया, म्हणजे बिन रिकामे होईल आणि पुढच्या तासात पुन्हा फेरा मारावा लागणार नाही.' तुम्ही या जास्तीच्या माल उचलण्यास परवानगी द्याल की थांबवाल?"
+          },
+          "audioSrc": "/audio/mascot/c2_s8_sc05_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "STOP IS STRICTLY MANDATED! SOP Clause 4.1 & Question Bank Q29: Pick ONLY the quantity displayed on the device, from that specific location only! Grabbing the extra 3 pieces creates physical bin shortages for another feeder's active wave and distorts MES assembly line inventory balancing!",
+            "hi": "STOP सख्ती से अनिवार्य है! SOP क्लॉज 4.1 और प्रश्न बैंक Q29: केवल डिवाइस पर प्रदर्शित मात्रा ही चुनें, केवल उसी विशिष्ट स्थान से! अतिरिक्त 3 टुकड़े लेने से दूसरे फीडर के कार्य में कमी आती है और MES इन्वेंट्री संतुलन बिगड़ जाता है!",
+            "mr": "STOP करणे अत्यंत बंधनकारक आहे! SOP कलम 4.1 आणि प्रश्न बँक Q29: स्क्रीनवर जेवढी संख्या दाखवली आहे तेवढाच माल आणि त्याच ठिकाणाहून उचलावा! परस्पर 3 जास्तीचे तुकडे उचलल्यास दुसऱ्या ऑपरेटरच्या कामात तुटवडा निर्माण होतो आणि MES इन्व्हेंटरी बिघडते!"
+          },
+          "audioSrc": "/audio/mascot/c2_s8_sc05_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "INVENTORY CORRUPTION HAZARD! Taking extra pieces distorts line stock, causes phantom shortages for the next shift, and breaks MES vehicle BOM consumption records!",
+            "hi": "इन्वेंट्री विसंगति का खतरा! अतिरिक्त टुकड़े लेने से लाइन स्टॉक विकृत हो जाता है, अगली शिफ्ट के लिए कृत्रिम कमी हो जाती है, और MES खपत रिकॉर्ड टूट जाता है!",
+            "mr": "इन्व्हेंटरी बिघाडाचा मोठा धोका! परस्पर जास्तीचे पार्ट उचलल्यास लाईन स्टॉक खराब होतो, पुढच्या शिफ्टला माल सापडत नाही आणि MES मधील अचूक हिशोब चुकतो!"
+          },
+          "audioSrc": "/audio/mascot/c2_s8_sc05_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "stop_go",
+        "questionId": "c2-q29",
+        "safetyCritical": true,
+        "question": {
+          "en": "The HHT screen says 'Pick 12 pieces'. You see 15 on the rack bin. Take 15 to save a return trip?",
+          "hi": "HHT स्क्रीन कहती है '12 टुकड़े चुनें'। आप रैक बिन पर 15 देखते हैं। रिटर्न ट्रिप बचाने के लिए 15 लें?",
+          "mr": "HHT स्क्रीन सांगते '12 नग उचला'. रॅक बिनमध्ये 15 पार्ट आहेत. पुन्हा फेरा वाचवण्यासाठी 15 पार्ट उचलून घ्यावेत का?"
+        },
+        "situation": {
+          "en": "AUDIT: HHT WH Task requirement: 12 units. Physical bin contains 15 units. Feeder tempted to over-pick 3 units.",
+          "hi": "ऑडिट: HHT WH कार्य आवश्यकता: 12 इकाइयां। भौतिक बिन में 15 इकाइयां हैं। फीडर 3 अतिरिक्त इकाइयां लेने के लिए ललचाया।",
+          "mr": "ऑडिट: HHT टास्कनुसार 12 नगांची गरज. प्रत्यक्ष बिनमध्ये 15 नग आहेत. ऑपरेटर 3 नग जास्तीचे उचलण्याचा विचार करत आहे."
+        },
+        "correctAction": "stop",
+        "stopLabel": {
+          "en": "STOP — PICK STRICTLY 12 PCS",
+          "hi": "STOP — सख्ती से 12 नग उठाएं",
+          "mr": "STOP — काटेकोरपणे 12 नगच उचला"
+        },
+        "goLabel": {
+          "en": "GO — TAKE ALL 15 TO SAVE TIME",
+          "hi": "GO — समय बचाने के लिए सभी 15 लें",
+          "mr": "GO — वेळ वाचवण्यासाठी सर्व 15 घेऊन जा"
+        },
+        "stopDescription": {
+          "en": "HALT: Pick only the displayed quantity from that location only; over-picking causes stockout for other waves (Q29)",
+          "hi": "रोकें: केवल उस स्थान से प्रदर्शित मात्रा ही चुनें; ओवर-पिकिंग से अन्य कार्यों के लिए स्टॉक समाप्त हो जाता है (Q29)",
+          "mr": "थांबवा: केवळ दाखवलेली संख्याच उचला; जास्त माल उचलल्यास दुसऱ्या कामात तुटवडा भासतो (Q29)"
+        },
+        "goDescription": {
+          "en": "ALLOW: Take all 15 parts to avoid walking back later",
+          "hi": "अनुमति दें: बाद में वापस चलने से बचने के लिए सभी 15 भाग लें",
+          "mr": "परवानगी द्या: नंतर पुन्हा फेरा वाचवण्यासाठी सर्व 15 पार्ट घेऊन जा"
+        },
+        "prompt": {
+          "en": "The HHT screen says 'Pick 12 pieces'. You see 15 on the rack bin. Take 15 to save a return trip?",
+          "hi": "HHT स्क्रीन कहती है '12 टुकड़े चुनें'। आप रैक बिन पर 15 देखते हैं। रिटर्न ट्रिप बचाने के लिए 15 लें?",
+          "mr": "HHT स्क्रीन सांगते '12 नग उचला'. रॅक बिनमध्ये 15 पार्ट आहेत. पुन्हा फेरा वाचवण्यासाठी 15 पार्ट उचलून घ्यावेत का?"
+        },
+        "id": "c2-q29"
+      },
+      "rules": {
+        "xp": 120,
+        "sopClause": "SOP for Line Issuance Vehicle Plant Clause 4.1 & Question Bank Q29",
+        "why": {
+          "en": "SOP for Line Issuance Vehicle Plant Clause 4.1 & Question Bank Q29: Feeders must strictly adhere to the exact pick quantity specified by the MES algorithm. Picking unallocated stock depletes safety stock reserves designated for parallel picking waves, creates inventory variances on cycle count audits, and results in cluttered, unergonomic line-side workstations.",
+          "hi": "लाइन निर्गमन वाहन संयंत्र के लिए SOP क्लॉज 4.1 और प्रश्न बैंक Q29: फीडरों को MES एल्गोरिदम द्वारा निर्दिष्ट सटीक पिक मात्रा का सख्ती से पालन करना चाहिए। अप्रयुक्त स्टॉक लेने से समानांतर कार्यों के लिए नामित सुरक्षा बफर समाप्त हो जाता है, ऑडिट में इन्वेंट्री विसंगतियां पैदा होती हैं, और वर्कस्टेशन पर अव्यवस्था होती है।",
+          "mr": "SOP फॉर लाईन इश्यूअन्स व्हेईकल प्लांट कलम 4.1 आणि प्रश्न बँक Q29: लाईन फीडरने MES सिस्टीमने ठरवून दिलेल्या संख्येइतकाच माल उचलला पाहिजे. परस्पर जास्तीचा माल नेल्यास दुसऱ्या लाईनसाठीचा राखीव स्टॉक संपतो, ऑडिटमध्ये तफावत आढळते आणि वर्कस्टेशनवर अनावश्यक गर्दी होते."
+        }
+      }
+    },
+    {
+      "id": "c2_s8_sc06_feeder_part_ownership",
+      "stepNumber": 6,
+      "title": {
+        "en": "Line Feeder Part Ownership & Anti-Duplication Rule",
+        "hi": "लाइन फीडर पार्ट स्वामित्व और एंटी-डुप्लिकेशन नियम",
+        "mr": "लाईन फीडर पार्ट वाटप आणि दुहेरी माल प्रतिबंध नियम"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c2_s8_sc06_feeder_ownership.mp4",
+        "posterSrc": "/images/scenes/c2_s8_sc06_poster.jpg",
+        "fallbackAnimation": "feeder_anti_duplication",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "On the busy factory floor, two line feeders are working in adjacent aisles. Feeder A is assigned wiring harnesses and Feeder B is assigned brake caliper assemblies. Can both feeders pick and carry the same part number to the vehicle assembly line at the same time?",
+            "hi": "व्यस्त फैक्ट्री फ्लोर पर, दो लाइन फीडर बगल के गलियारों में काम कर रहे हैं। फीडर A को वायरिंग हार्नेस और फीडर B को ब्रेक कैलिपर असेंबली सौंपी गई है। क्या दोनों फीडर एक ही समय में वाहन असेंबली लाइन में एक ही पार्ट नंबर उठा और ले जा सकते हैं?",
+            "mr": "कारखान्यामध्ये दोन लाईन फीडर शेजारील पॅसेजमध्ये काम करत आहेत. फीडर A कडे वायरिंग हार्नेस आणि फीडर B कडे ब्रेक कॅलिपरचे काम आहे. दोन्ही फीडर एकाच वेळी एकाच पार्ट नंबरचा माल उचलून असेंब्ली लाईनवर नेऊ शकतात का?"
+          },
+          "audioSrc": "/audio/mascot/c2_s8_sc06_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "EXACT SOP PROTOCOL! SOP Clause 4.1 & Question Bank Q22: No two feeders may carry the same part! Every feeder is assigned their own unique parts divided by assembly zone and VIN schedule. This ensures zero double-feeding, prevents shopfloor gangway congestion, and maintains clear accountability!",
+            "hi": "सटीक SOP प्रोटोकॉल! SOP क्लॉज 4.1 और प्रश्न बैंक Q22: कोई भी दो फीडर एक ही हिस्सा नहीं ले जा सकते! प्रत्येक फीडर को असेंबली ज़ोन और VIN शेड्यूल द्वारा विभाजित अपने स्वयं के अनूठे पुर्जे सौंपे जाते हैं। यह सुनिश्चित करता है कि दोहरा भरण न हो और स्पष्ट जवाबदेही बनी रहे!",
+            "mr": "अचूक SOP नियम! SOP कलम 4.1 आणि प्रश्न बँक Q22: कोणतेही दोन फीडर एकाच पार्टची वाहतूक करू शकत नाहीत! प्रत्येक फीडरला त्याच्या असेंब्ली झोननुसार स्वतंत्र पार्ट वाटून दिलेले असतात. यामुळे लाईनवर एकाच साहित्याची दुहेरी गर्दी होत नाही आणि कामाची स्पष्ट जबाबदारी राहते!"
+          },
+          "audioSrc": "/audio/mascot/c2_s8_sc06_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "OPERATIONAL PROTOCOL VIOLATION! Having multiple feeders move the same part creates severe line-side overflow, trolley collisions in gangways, and chaotic inventory allocation in SAP!",
+            "hi": "परिचालन प्रोटोकॉल का उल्लंघन! कई फीडरों द्वारा एक ही हिस्से को ले जाने से लाइन-साइड ओवरफ्लो होता है, गलियारों में ट्रॉलियां टकराती हैं, और SAP में अराजक इन्वेंट्री आवंटन होता है!",
+            "mr": "कार्यपद्धतीचे उल्लंघन! अनेक फीडरनी एकच माल आणल्यास लाईनवर साहित्याची अवाजवी गर्दी होते, रस्त्यामध्ये ट्रॉलियांची धडक होते आणि SAP मधील स्टॉक वाटप बिघडते!"
+          },
+          "audioSrc": "/audio/mascot/c2_s8_sc06_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c2-q22",
+        "safetyCritical": false,
+        "question": {
+          "en": "Under Ather Plant SOP Clause 4.1 & Question Bank Q22, can two line feeders carry the same part to the assembly line?",
+          "hi": "एथर प्लांट SOP क्लॉज 4.1 और प्रश्न बैंक Q22 के तहत, क्या दो लाइन फीडर असेंबली लाइन पर एक ही हिस्सा ले जा सकते हैं?",
+          "mr": "एथर प्लांट SOP कलम 4.1 आणि प्रश्न बँक Q22 नुसार, दोन लाईन फीडर एकाच पार्टचे साहित्य असेंब्ली लाईनवर नेऊ शकतात का?"
+        },
+        "options": [
+          {
+            "id": "opt_unique_parts",
+            "correct": true,
+            "label": {
+              "en": "No — Every feeder has their own unique parts divided by station so no part is fed twice (Q22)",
+              "hi": "नहीं — प्रत्येक फीडर के पास स्टेशन द्वारा विभाजित अपने स्वयं के अनूठे पुर्जे होते हैं ताकि कोई भी हिस्सा दोबारा न जाए (Q22)",
+              "mr": "नाही — प्रत्येक फीडरला स्वतंत्र पार्ट वाटून दिलेले असतात जेणेकरून कोणताही पार्ट दोनदा लाईनवर जाणार नाही (Q22)"
+            }
+          },
+          {
+            "id": "opt_both_allowed",
+            "correct": false,
+            "label": {
+              "en": "Yes — Whichever feeder is fastest should grab whatever parts they see on the rack",
+              "hi": "हाँ — जो भी फीडर सबसे तेज़ हो उसे रैक पर जो भी भाग दिखाई दे उसे ले लेना चाहिए",
+              "mr": "होय — जो फीडर जलद असेल त्याने रॅकवर दिसणारा कोणताही पार्ट उचलून नेला पाहिजे"
+            }
+          },
+          {
+            "id": "opt_split_crates",
+            "correct": false,
+            "label": {
+              "en": "Yes — They should split every crate in half and carry half each to share the physical weight",
+              "hi": "हाँ — उन्हें वजन साझा करने के लिए प्रत्येक क्रेट को आधा विभाजित करना चाहिए और आधा ले जाना चाहिए",
+              "mr": "होय — वजन वाटून घेण्यासाठी त्यांनी प्रत्येक क्रेट अर्धा करून प्रत्येकी अर्धा नेला पाहिजे"
+            }
+          },
+          {
+            "id": "opt_supervisor_call",
+            "correct": false,
+            "label": {
+              "en": "Yes — If the assembly supervisor shouts on the microphone for more parts",
+              "hi": "हाँ — यदि असेंबली सुपरवाइजर माइक्रोफोन पर अधिक पुर्जों के लिए चिल्लाता है",
+              "mr": "होय — असेंब्ली सुपरवायझरने माईकवरून अधिक मालाची मागणी केली असल्यास"
+            }
+          }
+        ],
+        "prompt": {
+          "en": "Under Ather Plant SOP Clause 4.1 & Question Bank Q22, can two line feeders carry the same part to the assembly line?",
+          "hi": "एथर प्लांट SOP क्लॉज 4.1 और प्रश्न बैंक Q22 के तहत, क्या दो लाइन फीडर असेंबली लाइन पर एक ही हिस्सा ले जा सकते हैं?",
+          "mr": "एथर प्लांट SOP कलम 4.1 आणि प्रश्न बँक Q22 नुसार, दोन लाईन फीडर एकाच पार्टचे साहित्य असेंब्ली लाईनवर नेऊ शकतात का?"
+        },
+        "id": "c2-q22"
+      },
+      "rules": {
+        "xp": 115,
+        "sopClause": "SOP for Line Issuance Vehicle Plant Clause 4.1 & Question Bank Q22",
+        "why": {
+          "en": "SOP Clause 4.1 & Question Bank Q22 enforces single-point line feeding accountability: Material feeding routes are strictly segregated by part category and workstation zone. Dividing parts uniquely among certified feeders ensures that no part is duplicate-fed, preventing line congestion and maintaining clean, traceable WH order execution.",
+          "hi": "SOP क्लॉज 4.1 और प्रश्न बैंक Q22 एकल-बिंदु लाइन फीडिंग जवाबदेही लागू करता है: सामग्री फीडिंग मार्गों को पार्ट श्रेणी और वर्कस्टेशन ज़ोन द्वारा सख्ती से अलग किया जाता है। प्रमाणित फीडरों के बीच विशिष्ट रूप से भागों को विभाजित करने से यह सुनिश्चित होता है कि कोई भी हिस्सा दोबारा न जाए।",
+          "mr": "SOP कलम 4.1 आणि प्रश्न बँक Q22 लाईन फीडिंगच्या कामाची स्पष्ट जबाबदारी निश्चित करते: साहित्याची वाहतूक पार्टच्या प्रकारानुसार आणि वर्कस्टेशननुसार विभागलेली असते. यामुळे एकाच पार्टचे दुहेरी वाटप टळते आणि लाईनवर गोंधळ होत नाही."
+        }
+      }
+    },
+    {
+      "id": "c2_s8_sc07_handheld_troubleshooting",
+      "stepNumber": 7,
+      "title": {
+        "en": "Handheld Blind Quantity Troubleshooting",
+        "hi": "हैंडहेल्ड गुप्त मात्रा समस्या निवारण",
+        "mr": "हँडहेल्ड गुप्त संख्या समस्या निवारण"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c2_s8_sc07_blind_quantity.mp4",
+        "posterSrc": "/images/scenes/c2_s8_sc07_poster.jpg",
+        "fallbackAnimation": "handheld_blind_quantity_unlock",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "A new trainee feeder is standing in front of Rack Bin HRR-C-02-05. They look confused at their handheld terminal and say: 'The screen shows the part description and location, but the picking quantity field is completely blank! Is my device broken?' Under Question Bank Q21, why can't the feeder see the picking quantity?",
+            "hi": "एक नया प्रशिक्षु फीडर रैक बिन HRR-C-02-05 के सामने खड़ा है। वे अपने हैंडहेल्ड टर्मिनल को देखकर भ्रमित होते हैं और कहते हैं: 'स्क्रीन पार्ट का विवरण और स्थान दिखाती है, लेकिन पिकिंग मात्रा फ़ील्ड पूरी तरह से खाली है! क्या मेरा डिवाइस खराब है?' प्रश्न बैंक Q21 के तहत, फीडर पिकिंग मात्रा क्यों नहीं देख सकता है?",
+            "mr": "एक नवीन प्रशिक्षणार्थी फीडर रॅक बिन HRR-C-02-05 समोर उभा आहे. तो हँडहेल्ड स्क्रीनकडे पाहून गोंधळून विचारतो: 'स्क्रीनवर पार्टचे नाव आणि जागा दिसतेय, पण किती नग उचलायचे ती संख्या रिकामी दिसतेय! माझे मशीन बिघडले आहे का?' प्रश्न संच Q21 नुसार, ऑपरेटरला संख्या का दिसत नाही?"
+          },
+          "audioSrc": "/audio/mascot/c2_s8_sc07_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "CORRECT SOP POKA-YOKE! SOP Clause 4.1 & Question Bank Q21: No scan, no quantity! The device intentionally keeps the quantity blind until the operator physically scans the rack location QR code. This error-proofing ensures the operator has reached the true bin before picking!",
+            "hi": "सही SOP पोका-योक! SOP क्लॉज 4.1 और प्रश्न बैंक Q21: कोई स्कैन नहीं, कोई मात्रा नहीं! जब तक ऑपरेटर भौतिक रैक स्थान क्यूआर कोड को स्कैन नहीं करता, डिवाइस जानबूझकर मात्रा को गुप्त रखता है। यह त्रुटि-रोधी सुनिश्चित करता है कि ऑपरेटर पिकिंग से पहले वास्तविक बिन तक पहुंच गया है!",
+            "mr": "अचूक SOP पोका-योक नियम! SOP कलम 4.1 आणि प्रश्न बँक Q21: स्कॅन नाही, तर संख्या नाही! जोपर्यंत ऑपरेटर प्रत्यक्ष रॅक लोकेशनवरील QR कोड स्कॅन करत नाही, तोपर्यंत सिस्टीम आवश्यक संख्या दाखवत नाही. यामुळे ऑपरेटर योग्य ठिकाणी पोहोचल्याची खात्री होते!"
+          },
+          "audioSrc": "/audio/mascot/c2_s8_sc07_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "MISUNDERSTANDING! The terminal is not broken and the battery is not dead. Ather SAP EWM enforces blind quantity gating: you MUST scan the source location QR code to reveal the picking number!",
+            "hi": "गलतफहमी! टर्मिनल टूटा नहीं है और बैटरी खत्म नहीं हुई है। एथर SAP EWM ब्लाइंड क्वांटिटी गेटिंग लागू करता है: पिकिंग नंबर प्रकट करने के लिए आपको स्रोत स्थान क्यूआर कोड को स्कैन करना होगा!",
+            "mr": "गैरसमज! मशीन बिघडलेले नाही. एथर SAP EWM मध्ये ब्लाइंड क्वांटिटी नियम लागू आहे: रॅकवरील लोकेशन QR स्कॅन केल्यावरच उचलावयाची संख्या अनलॉक होते!"
+          },
+          "audioSrc": "/audio/mascot/c2_s8_sc07_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c2-q21",
+        "safetyCritical": true,
+        "question": {
+          "en": "You cannot see the picking quantity on the handheld terminal screen. Why? (Question Bank Q21)",
+          "hi": "आप हैंडहेल्ड टर्मिनल स्क्रीन पर पिकिंग मात्रा नहीं देख सकते हैं। क्यों? (प्रश्न बैंक Q21)",
+          "mr": "तुम्हाला हँडहेल्ड टर्मिनल स्क्रीनवर उचलावयाची संख्या का दिसत नाही? (प्रश्न बँक Q21)"
+        },
+        "options": [
+          {
+            "id": "opt_not_scanned_qr",
+            "correct": true,
+            "label": {
+              "en": "You have not scanned the source location QR code yet (No scan, no quantity poka-yoke)",
+              "hi": "आपने अभी तक स्रोत स्थान QR कोड स्कैन नहीं किया है (कोई स्कैन नहीं, कोई मात्रा नहीं पोका-योक)",
+              "mr": "तुम्ही अजून सोर्स लोकेशनचा QR कोड स्कॅन केलेला नाही (स्कॅन नाही, तर संख्या नाही हा पोका-योक नियम)"
+            }
+          },
+          {
+            "id": "opt_device_broken",
+            "correct": false,
+            "label": {
+              "en": "The rugged handheld terminal is broken and needs replacement by IT support",
+              "hi": "रग्ड हैंडहेल्ड टर्मिनल टूट गया है और इसे आईटी सपोर्ट द्वारा बदलने की आवश्यकता है",
+              "mr": "हँडहेल्ड मशीन बिघडले असून आयटी टीमकडून बदलून घेणे गरजेचे आहे"
+            }
+          },
+          {
+            "id": "opt_part_finished",
+            "correct": false,
+            "label": {
+              "en": "The part is completely finished across the entire factory inventory",
+              "hi": "पूरे कारखाने की इन्वेंट्री में यह हिस्सा पूरी तरह से समाप्त हो गया है",
+              "mr": "संपूर्ण फॅक्टरीमधील त्या पार्टचा साठा पूर्णपणे संपलेला आहे"
+            }
+          },
+          {
+            "id": "opt_network_down",
+            "correct": false,
+            "label": {
+              "en": "The warehouse Wi-Fi network has disconnected and gone offline",
+              "hi": "गोदाम का वाई-फाई नेटवर्क डिस्कनेक्ट हो गया है और ऑफ़लाइन हो गया है",
+              "mr": "वेअरहाऊसमधील वाय-फाय नेटवर्क बंद पडले आहे"
+            }
+          }
+        ],
+        "prompt": {
+          "en": "You cannot see the picking quantity on the handheld terminal screen. Why? (Question Bank Q21)",
+          "hi": "आप हैंडहेल्ड टर्मिनल स्क्रीन पर पिकिंग मात्रा नहीं देख सकते हैं। क्यों? (प्रश्न बैंक Q21)",
+          "mr": "तुम्हाला हँडहेल्ड टर्मिनल स्क्रीनवर उचलावयाची संख्या का दिसत नाही? (प्रश्न बँक Q21)"
+        },
+        "id": "c2-q21"
+      },
+      "rules": {
+        "xp": 110,
+        "sopClause": "SOP for Line Issuance Vehicle Plant Clause 4.1 & Question Bank Q21",
+        "why": {
+          "en": "SOP Clause 4.1 & Question Bank Q21: The picking quantity remains hidden until the feeder physically scans the source bin QR barcode. This eliminates memory picking errors, guarantees physical presence at the specified bin, and prevents associates from grabbing parts from adjacent racks.",
+          "hi": "SOP क्लॉज 4.1 और प्रश्न बैंक Q21: जब तक फीडर भौतिक बिन क्यूआर बारकोड को स्कैन नहीं करता, तब तक पिकिंग मात्रा छिपी रहती है। यह याददाश्त से चुनने की गलतियों को समाप्त करता है और निर्दिष्ट बिन पर शारीरिक उपस्थिति की गारंटी देता है।",
+          "mr": "SOP कलम 4.1 आणि प्रश्न बँक Q21: ऑपरेटरने रॅकवरील लोकेशन QR स्कॅन करेपर्यंत संख्या दिसत नाही. यामुळे स्मरणशक्तीवरून चुकीचा माल उचलणे टळते आणि ऑपरेटर प्रत्यक्ष योग्य जागेवर असल्याची खात्री होते."
+        }
+      }
+    },
+    {
+      "id": "c2_s8_sc08_wrong_lane_violation",
+      "stepNumber": 8,
+      "title": {
+        "en": "Wrong Supermarket Lane Picking Violation",
+        "hi": "गलत सुपरमार्केट लेन पिकिंग उल्लंघन",
+        "mr": "चुकीच्या सुपरमार्केट लेनमधून माल उचलण्याचे उल्लंघन"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c2_s8_sc08_wrong_lane.mp4",
+        "posterSrc": "/images/scenes/c2_s8_sc08_poster.jpg",
+        "fallbackAnimation": "wrong_supermarket_lane_violation",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "warning",
+          "text": {
+            "en": "Urgent quality escalation! A line feeder in a rush needs brake levers from Supermarket Lane 02. However, the aisle is narrow, so the feeder casually grabs 10 lever boxes from adjacent Lane 03 without scanning the lane QR code and loads them onto the mobile trolley. Under SOP Failure Mode 5.2 & Question Bank Q23, what happens?",
+            "hi": "तत्काल गुणवत्ता वृद्धि! जल्दी में एक लाइन फीडर को सुपरमार्केट लेन 02 से ब्रेक लीवर की आवश्यकता है। हालांकि, गलियारा संकीर्ण है, इसलिए फीडर लेन क्यूआर कोड को स्कैन किए बिना आसन्न लेन 03 से 10 लीवर बॉक्स ले लेता है और उन्हें मोबाइल ट्रॉली पर लोड करता है। SOP विफलता मोड 5.2 और प्रश्न बैंक Q23 के तहत, क्या होता है?",
+            "mr": "तातडीचा गुणवत्ता इशारा! एका घाईत असलेल्या लाईन फीडरला सुपरमार्केट लेन 02 मधून ब्रेक लिव्हर्स हवे आहेत. रस्ता अरुंद असल्याने, तो लेनचा QR स्कॅन न करता शेजारच्या लेन 03 मधून 10 लिव्हरचे बॉक्सेस उचलून ट्रॉलीवर भरतो. SOP फेल्युअर मोड 5.2 आणि प्रश्न संच Q23 नुसार काय घडते?"
+          },
+          "audioSrc": "/audio/mascot/c2_s8_sc08_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "EXACT SYSTEM IMPACT! SOP Failure Mode 5.2 & Question Bank Q23: The correct part's WH task remains OPEN in MES, while a material mismatch alert flashes at the assembly line! The Zone Leader must intervene, halt the line, return the wrong trolley, log a defect report, and retrain the operator. Always scan the lane QR code before picking!",
+            "hi": "सटीक सिस्टम प्रभाव! SOP विफलता मोड 5.2 और प्रश्न बैंक Q23: सही हिस्से का WH कार्य MES में खुला रहता है, जबकि असेंबली लाइन पर एक सामग्री बेमेल चेतावनी चमकती है! ज़ोन लीडर को हस्तक्षेप करना चाहिए, लाइन रोकनी चाहिए, गलत ट्रॉली वापस करनी चाहिए, और ऑपरेटर को फिर से प्रशिक्षित करना चाहिए। पिकिंग से पहले हमेशा लेन क्यूआर कोड को स्कैन करें!",
+            "mr": "अचूक सिस्टीम परिणाम! SOP फेल्युअर मोड 5.2 आणि प्रश्न बँक Q23: योग्य पार्टचा WH टास्क MES मध्ये उघडाच राहतो, आणि असेंब्ली लाईनवर चुकीचा माल आल्याचा अलर्ट वाजतो! झोन लीडरला हस्तक्षेप करून लाईन थांबवावी लागते, चुकीची ट्रॉली परत पाठवावी लागते आणि ऑपरेटरला पुन्हा प्रशिक्षण द्यावे लागते. माल उचलण्यापूर्वी नेहमी लेनचा QR स्कॅन करा!"
+          },
+          "audioSrc": "/audio/mascot/c2_s8_sc08_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "CRITICAL MISCONCEPTION! The system does not fix wrong picks automatically. Picking without scanning the lane QR creates line defects, keeps the original task open, and risks assembling wrong model brake levers on scooters!",
+            "hi": "गंभीर गलतफहमी! सिस्टम स्वचालित रूप से गलत चयनों को ठीक नहीं करता है। लेन क्यूआर स्कैन किए बिना चुनने से लाइन में खराबी आती है और स्कूटरों पर गलत मॉडल के ब्रेक लीवर असेंबल होने का जोखिम होता है!",
+            "mr": "गंभीर गैरसमज! सिस्टीम आपोआप चूक सुधारत नाही. लेन QR स्कॅन न करता माल उचलल्याने लाईनवर चुकीचे पार्ट जाऊन वाहनांचे गंभीर नुकसान होऊ शकते!"
+          },
+          "audioSrc": "/audio/mascot/c2_s8_sc08_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c2-q23",
+        "safetyCritical": true,
+        "question": {
+          "en": "You pick from the wrong supermarket lane without scanning the lane QR code. What happens? (Question Bank Q23)",
+          "hi": "आप लेन क्यूआर कोड को स्कैन किए बिना गलत सुपरमार्केट लेन से चुनते हैं। क्या होता है? (प्रश्न बैंक Q23)",
+          "mr": "तुम्ही लेनचा QR कोड स्कॅन न करता चुकीच्या सुपरमार्केट लेनमधून माल उचलता. काय होते? (प्रश्न बँक Q23)"
+        },
+        "options": [
+          {
+            "id": "opt_open_task_alert",
+            "correct": true,
+            "label": {
+              "en": "The correct part's task stays open, a material alert shows at the line, and the ZL must return the wrong trolley and retrain you (Q23)",
+              "hi": "सही हिस्से का कार्य खुला रहता है, लाइन पर एक सामग्री चेतावनी दिखाई देती है, और ZL को गलत ट्रॉली वापस करनी होगी और आपको फिर से प्रशिक्षित करना होगा (Q23)",
+              "mr": "मूळ पार्टचा टास्क उघडा राहतो, लाईनवर मटेरियल अलर्ट वाजतो आणि ZL ला चुकीची ट्रॉली परत करून तुम्हाला पुन्हा प्रशिक्षण द्यावे लागते (Q23)"
+            }
+          },
+          {
+            "id": "opt_nothing_happens",
+            "correct": false,
+            "label": {
+              "en": "Nothing happens — all supermarket lanes hold interchangeable screws and bolts",
+              "hi": "कुछ नहीं होता — सभी सुपरमार्केट लेनों में विनिमेय स्क्रू और बोल्ट होते हैं",
+              "mr": "काहीही होत नाही — सर्व लेनमध्ये सारखेच नट-बोल्ट असतात"
+            }
+          },
+          {
+            "id": "opt_line_makes_part",
+            "correct": false,
+            "label": {
+              "en": "The vehicle assembly line manufactures the missing part itself using 3D printers",
+              "hi": "वाहन असेंबली लाइन 3D प्रिंटर का उपयोग करके गायब हिस्से का निर्माण करती है",
+              "mr": "असेंब्ली लाईन 3D प्रिंटरच्या मदतीने स्वतःच पार्ट तयार करून घेते"
+            }
+          },
+          {
+            "id": "opt_auto_adjust",
+            "correct": false,
+            "label": {
+              "en": "SAP ERP automatically adjusts the inventory without any supervisor intervention",
+              "hi": "SAP ERP बिना किसी पर्यवेक्षक हस्तक्षेप के इन्वेंट्री को स्वचालित रूप से समायोजित करता है",
+              "mr": "SAP ERP कोणाच्याही हस्तक्षेपाशिवाय इन्व्हेंटरी आपोआप दुरुस्त करते"
+            }
+          }
+        ],
+        "prompt": {
+          "en": "You pick from the wrong supermarket lane without scanning the lane QR code. What happens? (Question Bank Q23)",
+          "hi": "आप लेन क्यूआर कोड को स्कैन किए बिना गलत सुपरमार्केट लेन से चुनते हैं। क्या होता है? (प्रश्न बैंक Q23)",
+          "mr": "तुम्ही लेनचा QR कोड स्कॅन न करता चुकीच्या सुपरमार्केट लेनमधून माल उचलता. काय होते? (प्रश्न बँक Q23)"
+        },
+        "id": "c2-q23"
+      },
+      "rules": {
+        "xp": 120,
+        "sopClause": "SOP for Line Issuance Vehicle Plant Failure Mode 5.2 & Question Bank Q23",
+        "why": {
+          "en": "SOP Failure Mode 5.2 & Question Bank Q23: Picking from an incorrect supermarket lane without scanning the lane QR creates a dual disaster: the assigned WH task remains open on the feeder's ID, and mismatched parts arrive at the assembly line station, triggering an emergency Poka-Yoke material mismatch alarm. The Zone Leader must trace the error, swap the incorrect trolley, and record a non-conformance infraction against the feeder.",
+          "hi": "SOP विफलता मोड 5.2 और प्रश्न बैंक Q23: लेन क्यूआर को स्कैन किए बिना गलत सुपरमार्केट लेन से चुनने से दोहरा संकट पैदा होता है: सौंपा गया WH कार्य फीडर की आईडी पर खुला रहता है, और बेमेल हिस्से असेंबली लाइन स्टेशन पर पहुंच जाते हैं, जिससे आपातकालीन अलार्म बजता है।",
+          "mr": "SOP फेल्युअर मोड 5.2 आणि प्रश्न बँक Q23: लेन QR स्कॅन न करता चुकीचा माल उचलल्याने ऑपरेटरच्या आयडीवर टास्क उघडा राहतो आणि लाईनवर चुकीचा माल पोहोचल्याने आपत्कालीन अलार्म वाजतो. झोन लीडरला माल परत करून ऑपरेटरविरुद्ध रिपोर्ट नोंदवावा लागतो."
+        }
+      }
+    },
+    {
+      "id": "c2_s8_sc09_five_step_picking_lifecycle",
+      "stepNumber": 9,
+      "title": {
+        "en": "The 5-Step Order Picking Standard Operating Lifecycle",
+        "hi": "5-चरणीय ऑर्डर पिकिंग मानक संचालन जीवनचक्र",
+        "mr": "5-पायऱ्यांचे ऑर्डर पिकिंग मानक कार्यपद्धती जीवनचक्र"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c2_s8_sc09_lifecycle.mp4",
+        "posterSrc": "/images/scenes/c2_s8_sc09_poster.jpg",
+        "fallbackAnimation": "five_step_picking_lifecycle",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "trophy",
+          "text": {
+            "en": "Final milestone of Module 8! You have mastered MES triggers, blind-quantity reveals, trolley marriage, over-picking rules, and workstation deliveries. Now prove your expertise by arranging the complete 5-step picking sequence in its exact chronological order under Question Bank Q20!",
+            "hi": "मॉड्यूल 8 का अंतिम मील का पत्थर! आपने MES ट्रिगर, ब्लाइंड-क्वांटिटी रीवील, ट्रॉली मैरिज, ओवर-पिकिंग नियम और वर्कस्टेशन डिलीवरी में महारत हासिल कर ली है। अब प्रश्न बैंक Q20 के तहत सटीक कालानुक्रमिक क्रम में संपूर्ण 5-चरणीय पिकिंग अनुक्रम को व्यवस्थित करके अपनी विशेषज्ञता साबित करें!",
+            "mr": "मॉड्यूल 8 चा अंतिम टप्पा! तुम्ही MES ट्रिगर्स, ब्लाइंड-क्वांटिटी, ट्रॉली मॅरेज, अतिरिक्त माल न उचलण्याचे नियम आणि वर्कस्टेशन डिलिव्हरीमध्ये प्रावीण्य मिळवले आहे. आता प्रश्न बँक Q20 नुसार संपूर्ण 5 पायऱ्यांचा अचूक क्रम लावून तुमचे कौशल्य सिद्ध करा!"
+          },
+          "audioSrc": "/audio/mascot/c2_s8_sc09_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "trophy",
+          "text": {
+            "en": "PERFECT 5-STEP LIFECYCLE MASTERY! Question Bank Q20: (b) Scan source location QR -> (c) Pick shown quantity -> (d) Move to the workstation -> (a) Scan destination QR -> (e) Start the next WH task! Stage 8: Vehicle Line Issuance & Order Picking is 100% complete!",
+            "hi": "उत्कृष्ट 5-चरणीय जीवनचक्र महारत! प्रश्न बैंक Q20: (b) स्रोत स्थान QR स्कैन करें -> (c) दिखाई गई मात्रा चुनें -> (d) वर्कस्टेशन पर जाएं -> (a) गंतव्य QR स्कैन करें -> (e) अगला WH कार्य शुरू करें! स्टेज 8 अब 100% पूरा हुआ!",
+            "mr": "अतिशय उत्कृष्ट 5-पायऱ्यांचे प्रावीण्य! प्रश्न बँक Q20: (b) सोर्स लोकेशनचा QR स्कॅन करणे -> (c) दाखवलेली संख्या उचलणे -> (d) वर्कस्टेशनवर जाणे -> (a) डेस्टिनेशन QR स्कॅन करणे -> (e) पुढचा WH टास्क सुरू करणे! स्टेज 8 आता 100% पूर्ण झाले आहे!"
+          },
+          "audioSrc": "/audio/mascot/c2_s8_sc09_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "INCORRECT SEQUENCE! Remember SOP Clause 4.1: You must scan source location QR first to unlock quantity, pick parts, move to station, scan destination QR to close the task, and only then start the next task!",
+            "hi": "गलत क्रम! SOP क्लॉज 4.1 याद रखें: मात्रा अनलॉक करने के लिए आपको पहले स्रोत स्थान QR को स्कैन करना होगा, पुर्जे चुनना होगा, स्टेशन पर जाना होगा, कार्य को बंद करने के लिए गंतव्य QR को स्कैन करना होगा, और उसके बाद ही अगला कार्य शुरू करना होगा!",
+            "mr": "चुकीचा क्रम! SOP कलम 4.1 लक्षात ठेवा: संख्या पाहण्यासाठी आधी सोर्स QR स्कॅन करा, माल उचला, स्टेशनवर जा, टास्क बंद करण्यासाठी डेस्टिनेशन QR स्कॅन करा आणि त्यानंतरच पुढचा टास्क सुरू करा!"
+          },
+          "audioSrc": "/audio/mascot/c2_s8_sc09_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "sequence",
+        "questionId": "c2-q20",
+        "safetyCritical": true,
+        "question": {
+          "en": "Arrange the 5 feeder steps in the strictly mandated order under SOP Clause 4.1 & Question Bank Q20:",
+          "hi": "SOP क्लॉज 4.1 और प्रश्न बैंक Q20 के तहत कड़ाई से अनिवार्य क्रम में 5 फीडर चरणों को व्यवस्थित करें:",
+          "mr": "SOP कलम 4.1 आणि प्रश्न बँक Q20 नुसार लाईन फीडरच्या 5 पायऱ्या योग्य क्रमाने लावा:"
+        },
+        "instruction": {
+          "en": "Drag or tap the step numbers to arrange them from first to last (1 to 5):",
+          "hi": "पहले से आखिरी (1 से 5) तक व्यवस्थित करने के लिए चरण संख्याओं को खींचें या टैप करें:",
+          "mr": "पहिल्यापासून शेवटपर्यंत (1 ते 5) लावण्यासाठी पायऱ्या ड्रॅग करा किंवा टॅप करा:"
+        },
+        "steps": [
+          {
+            "id": "step_scan_source_qr",
+            "label": {
+              "en": "Scan source location QR code on rack beam to unlock blind quantity (b)",
+              "hi": "गुप्त मात्रा अनलॉक करने के लिए रैक बीम पर स्रोत स्थान QR कोड स्कैन करें (b)",
+              "mr": "गुप्त संख्या अनलॉक करण्यासाठी रॅक बीमवरील सोर्स लोकेशनचा QR कोड स्कॅन करणे (b)"
+            }
+          },
+          {
+            "id": "step_pick_shown_qty",
+            "label": {
+              "en": "Pick the exact shown quantity from that location only (c)",
+              "hi": "केवल उसी स्थान से सटीक दिखाई गई मात्रा चुनें (c)",
+              "mr": "केवळ त्याच ठिकाणाहून स्क्रीनवर दाखवलेली अचूक संख्या उचलणे (c)"
+            }
+          },
+          {
+            "id": "step_move_workstation",
+            "label": {
+              "en": "Move mobile trolley safely to the destination workstation rack (d)",
+              "hi": "मोबाइल ट्रॉली को गंतव्य वर्कस्टेशन रैक पर सुरक्षित रूप से ले जाएं (d)",
+              "mr": "मोबाईल ट्रॉली सुरक्षितपणे वर्कस्टेशन रॅकवर घेऊन जाणे (d)"
+            }
+          },
+          {
+            "id": "step_scan_dest_qr",
+            "label": {
+              "en": "Scan destination location QR code on the line beam to close WH task (a)",
+              "hi": "WH कार्य को बंद करने के लिए लाइन बीम पर गंतव्य स्थान QR कोड स्कैन करें (a)",
+              "mr": "WH टास्क बंद करण्यासाठी लाईन बीमवरील डेस्टिनेशन लोकेशन QR कोड स्कॅन करणे (a)"
+            }
+          },
+          {
+            "id": "step_start_next_task",
+            "label": {
+              "en": "Confirm task closure and start the next MES WH task on the handheld (e)",
+              "hi": "कार्य बंद होने की पुष्टि करें और हैंडहेल्ड पर अगला MES WH कार्य शुरू करें (e)",
+              "mr": "टास्क बंद झाल्याची खात्री करून हँडहेल्डवर पुढचा MES WH टास्क सुरू करणे (e)"
+            }
+          }
+        ],
+        "prompt": {
+          "en": "Arrange the 5 feeder steps in the strictly mandated order under SOP Clause 4.1 & Question Bank Q20:",
+          "hi": "SOP क्लॉज 4.1 और प्रश्न बैंक Q20 के तहत कड़ाई से अनिवार्य क्रम में 5 फीडर चरणों को व्यवस्थित करें:",
+          "mr": "SOP कलम 4.1 आणि प्रश्न बँक Q20 नुसार लाईन फीडरच्या 5 पायऱ्या योग्य क्रमाने लावा:"
+        },
+        "id": "c2-q20",
+        "correctOrder": [
+          "step_scan_source_qr",
+          "step_pick_shown_qty",
+          "step_move_workstation",
+          "step_scan_dest_qr",
+          "step_start_next_task"
+        ]
+      },
+      "rules": {
+        "xp": 135,
+        "sopClause": "SOP for Line Issuance Vehicle Plant Clause 4.1 & Question Bank Q20",
+        "why": {
+          "en": "SOP for Line Issuance Vehicle Plant Clause 4.1 & Question Bank Q20: The standard sequence is strictly: (b) Scan source location QR -> (c) Pick shown quantity -> (d) Move to workstation -> (a) Scan destination QR -> (e) Start next WH task. Scanning the destination QR closes the open task in MES, posts inventory consumption against the vehicle VIN, and clears the operator's queue for the next wave.",
+          "hi": "लाइन निर्गमन वाहन संयंत्र के लिए SOP क्लॉज 4.1 और प्रश्न बैंक Q20: मानक क्रम सख्ती से है: (b) स्रोत स्थान QR स्कैन करें -> (c) दिखाई गई मात्रा चुनें -> (d) वर्कस्टेशन पर जाएं -> (a) गंतव्य QR स्कैन करें -> (e) अगला कार्य शुरू करें। गंतव्य QR को स्कैन करने से MES में कार्य बंद हो जाता है और अगले कार्य के लिए कतार साफ हो जाती है।",
+          "mr": "SOP फॉर लाईन इश्यूअन्स व्हेईकल प्लांट कलम 4.1 आणि प्रश्न बँक Q20: मानक कार्यपद्धती: (b) सोर्स QR स्कॅन करणे -> (c) दाखवलेली संख्या उचलणे -> (d) वर्कस्टेशनवर जाणे -> (a) डेस्टिनेशन QR स्कॅन करणे -> (e) पुढचा टास्क सुरू करणे. डेस्टिनेशन QR स्कॅन केल्याने MES मधील टास्क बंद होतो आणि वाहनाच्या VIN नंबरवर स्टॉक ट्रान्सफर पूर्ण होते."
         }
       }
     }

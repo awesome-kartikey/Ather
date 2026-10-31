@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ather AURIC Voiceover Studio & Audio Comparator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #10b981;
+      --primary-hover: #059669;
+      --accent-blue: #38bdf8;
+      --accent-amber: #fbbf24;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 32px 20px;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .badge {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--primary);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-size: 15px;
+    }
+    .stats-bar {
+      display: flex;
+      gap: 20px;
+      margin: 20px 0 28px 0;
+      flex-wrap: wrap;
+    }
+    .stat-pill {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .stat-pill strong { color: var(--accent-blue); }
+    .filters {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    input[type="text"] {
+      flex: 1;
+      min-width: 250px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+    }
+    input[type="text"]:focus {
+      border-color: var(--accent-blue);
+    }
+    select {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: border-color 0.2s ease;
+    }
+    .card:hover {
+      border-color: #475569;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      gap: 12px;
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .card-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .type-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+    .type-opener { background: #3b82f6; color: white; }
+    .type-prompt { background: #6366f1; color: white; }
+    .type-correct { background: #10b981; color: white; }
+    .type-wrong { background: #ef4444; color: white; }
+    .type-victory { background: #f59e0b; color: white; }
+
+    .script-box {
+      background: #0f172a;
+      border-left: 3px solid var(--primary);
+      padding: 12px 16px;
+      border-radius: 4px;
+      font-size: 14px;
+      color: #e2e8f0;
+      margin-bottom: 16px;
+    }
+
+    .audio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 14px;
+      background: #111827;
+      padding: 14px;
+      border-radius: 8px;
+    }
+    .audio-channel {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .channel-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .channel-tag {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .tag-neerja { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+    .tag-jenny { background: rgba(56, 189, 248, 0.2); color: #7dd3fc; }
+    .tag-gemini { background: rgba(251, 191, 36, 0.2); color: #fcd34d; }
+
+    audio {
+      width: 100%;
+      height: 38px;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>
+        Ather AURIC Voiceover Studio
+        <span class="badge">A/B Audio Comparator</span>
+      </h1>
+      <p class="subtitle">
+        Compare voiceover performances side-by-side across voice models, accents, and phonetic tunings.
+      </p>
+      
+      <div class="stats-bar">
+        <div class="stat-pill">
+          <span>Total Screenplay Clips:</span> <strong>71</strong>
+        </div>
+        <div class="stat-pill">
+          <span>Channel 1:</span> <strong>en-IN-Neerja (Indian English / Plant Native)</strong>
+        </div>
+        <div class="stat-pill">
+          <span>Channel 2:</span> <strong>en-US-Jenny (US Everyday Assistant)</strong>
+        </div>
+        <div class="stat-pill">
+          <span>Channel 3:</span> <strong>gemini-3.8-flash-tts (Google AI Studio WAVs)</strong>
+        </div>
+      </div>
+
+      <div class="filters">
+        <input type="text" id="searchInput" placeholder="Search prompts, words (e.g. 'SAP', 'Rizta', 'IQC')...">
+        <select id="actFilter">
+          <option value="ALL">All Acts (I to VIII)</option>
+          <option value="Act I">Act I: Inbound Gate Entry</option>
+          <option value="Act II">Act II: Receiving & IQC</option>
+          <option value="Act III">Act III: Systematic Putaway</option>
+          <option value="Act IV">Act IV: Non-Conforming Disposition</option>
+          <option value="Act V">Act V: Bulk Decanting</option>
+          <option value="Act VI">Act VI: Milk Runs</option>
+          <option value="Act VII">Act VII: Indirect Materials & PIR</option>
+          <option value="Act VIII">Act VIII: Container Management</option>
+        </select>
+      </div>
+    </header>
+
+    <div id="clipsContainer">
+      <div style="text-align: center; padding: 40px; color: var(--text-muted);">Loading clips manifest...</div>
+    </div>
+  </div>
+
+  <script>
+    let manifestData = [];
+
+    async function loadData() {
+      try {
+        const res = await fetch('/audio/voiceover_neerja/manifest.json');
+        manifestData = await res.json();
+        renderClips();
+      } catch (e) {
+        document.getElementById('clipsContainer').innerHTML = `
+          <div style="color: #ef4444; padding: 20px;">
+            Error loading manifest. Make sure your local server is running (e.g. <code>pnpm dev</code> or Vite).
+          </div>`;
+      }
+    }
+
+    function renderClips() {
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+      const actFilter = document.getElementById('actFilter').value;
+
+      const filtered = manifestData.filter(item => {
+        const matchesAct = actFilter === 'ALL' || item.act.includes(actFilter);
+        const matchesSearch = item.script.toLowerCase().includes(searchTerm) || 
+                              item.id.toLowerCase().includes(searchTerm) ||
+                              item.number.toLowerCase().includes(searchTerm);
+        return matchesAct && matchesSearch;
+      });
+
+      const container = document.getElementById('clipsContainer');
+      if (filtered.length === 0) {
+        container.innerHTML = `<div style="text-align: center; padding: 40px; color: var(--text-muted);">No clips match your search.</div>`;
+        return;
+      }
+
+      container.innerHTML = filtered.map(item => {
+        const geminiWavPath = `/audio/voiceover/${item.id}.wav`;
+        // Check if ID is one of the 7 generated gemini clips
+        const isGeminiAvailable = ['ACT-01-AURA-WELCOME', 'ACT-01-Q01-PROMPT', 'ACT-01-Q01-CORRECT', 'ACT-01-Q01-WRONG', 'ACT-01-Q02-PROMPT', 'ACT-01-Q02-CORRECT', 'ACT-01-Q02-WRONG'].includes(item.id);
+
+        return `
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">${item.number}: ${item.id}</div>
+                <div class="card-meta">${item.act} &bull; <em>${item.trigger}</em></div>
+              </div>
+              <span class="type-tag type-${item.type}">${item.type}</span>
+            </div>
+
+            <div class="script-box">
+              "${item.script}"
+            </div>
+
+            <div class="audio-grid">
+              <!-- Channel 1: Neerja -->
+              <div class="audio-channel">
+                <div class="channel-label">
+                  <span>Voice A: Neerja (Indian English)</span>
+                  <span class="channel-tag tag-neerja">Ather Factory Native</span>
+                </div>
+                <audio controls preload="none">
+                  <source src="/audio/voiceover_neerja/${item.id}.mp3" type="audio/mpeg">
+                  Your browser does not support audio.
+                </audio>
+              </div>
+
+              <!-- Channel 2: Jenny -->
+              <div class="audio-channel">
+                <div class="channel-label">
+                  <span>Voice B: Jenny (US English)</span>
+                  <span class="channel-tag tag-jenny">Corporate Assistant</span>
+                </div>
+                <audio controls preload="none">
+                  <source src="/audio/voiceover/${item.id}.mp3" type="audio/mpeg">
+                  Your browser does not support audio.
+                </audio>
+              </div>
+
+              <!-- Channel 3: Gemini TTS (if available) -->
+              ${isGeminiAvailable ? `
+                <div class="audio-channel">
+                  <div class="channel-label">
+                    <span>Voice C: gemini-3.8-flash-tts</span>
+                    <span class="channel-tag tag-gemini">Google AI Studio</span>
+                  </div>
+                  <audio controls preload="none">
+                    <source src="${geminiWavPath}" type="audio/wav">
+                    Your browser does not support audio.
+                  </audio>
+                </div>
+              ` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    document.getElementById('searchInput').addEventListener('input', renderClips);
+    document.getElementById('actFilter').addEventListener('change', renderClips);
+
+    loadData();
+  </script>
+</body>
+</html>

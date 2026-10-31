@@ -15,9 +15,21 @@ export const FeedbackCard: React.FC<Props> = ({
   isCorrect,
   onContinue
 }) => {
+  const mascotData = scene.mascot as any;
+  const defaultSuccess: Record<LanguageCode, string> = {
+    en: 'Excellent! Your operational decision is 100% compliant with Ather AURIC SOP standards.',
+    hi: 'बहुत बढ़िया! आपका परिचालन निर्णय एथर औरिक SOP मानकों के साथ 100% अनुपालन है।',
+    mr: 'उत्कृष्ट! तुमचा निर्णय एथर औरिक SOP मानकांनुसार 100% योग्य आहे.'
+  };
+  const defaultWarning: Record<LanguageCode, string> = {
+    en: 'Warning: SOP Protocol Violation! Review the official clause explanation below.',
+    hi: 'चेतावनी: SOP प्रोटोकॉल उल्लंघन! नीचे दिए गए आधिकारिक क्लॉज विवरण की समीक्षा करें।',
+    mr: 'सावधान: SOP नियमांचे उल्लंघन! खालील अधिकृत नियमाचे स्पष्टीकरण काळजीपूर्वक वाचा.'
+  };
+
   const mascotText = isCorrect
-    ? scene.mascot.onCorrect.text[lang] || scene.mascot.onCorrect.text.en
-    : scene.mascot.onIncorrect.text[lang] || scene.mascot.onIncorrect.text.en;
+    ? mascotData?.onCorrect?.text?.[lang] || mascotData?.onCorrect?.text?.en || defaultSuccess[lang]
+    : mascotData?.onIncorrect?.text?.[lang] || mascotData?.onIncorrect?.text?.en || defaultWarning[lang];
 
   const whyText = scene.rules.why[lang] || scene.rules.why.en;
 
@@ -90,7 +102,7 @@ export const FeedbackCard: React.FC<Props> = ({
         <button
           type="button"
           onClick={onContinue}
-          className={`w-full min-h-[56px] px-6 py-3.5 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer ${
+          className={`w-full min-h-[64px] px-6 py-4 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer ${
             isCorrect
               ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-600/30'
               : 'bg-amber-600 hover:bg-amber-700 text-white shadow-amber-600/30'

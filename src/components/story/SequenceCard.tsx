@@ -15,9 +15,12 @@ export const SequenceCard: React.FC<Props> = ({
   onComplete,
   disabled
 }) => {
+  const steps = interaction.steps || (interaction as any).items || [];
+  const questionText = interaction.question || (interaction as any).prompt;
+
   // Initial shuffle so the user has to sort it
   const [orderedIds, setOrderedIds] = useState<string[]>(() => {
-    const ids = interaction.steps.map((s) => s.id);
+    const ids = steps.map((s: any) => s.id);
     // Deterministic shuffle different from correctOrder
     return [...ids].reverse();
   });
@@ -46,12 +49,13 @@ export const SequenceCard: React.FC<Props> = ({
 
   const handleReset = () => {
     if (disabled) return;
-    setOrderedIds([...interaction.steps.map((s) => s.id)].reverse());
+    setOrderedIds([...steps.map((s: any) => s.id)].reverse());
   };
 
   const handleVerify = () => {
     if (disabled) return;
-    const isCorrect = orderedIds.every((id, idx) => id === interaction.correctOrder[idx]);
+    const correctIds = interaction.correctOrder || (steps as any[]).sort((a: any, b: any) => (a.correctOrder || 0) - (b.correctOrder || 0)).map((s: any) => s.id) || [];
+    const isCorrect = orderedIds.every((id, idx) => id === correctIds[idx]);
     onComplete(isCorrect);
   };
 
@@ -81,7 +85,7 @@ export const SequenceCard: React.FC<Props> = ({
       {/* Instruction */}
       <div className="space-y-1">
         <h3 className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
-          {interaction.question[lang] || interaction.question.en}
+          {questionText?.[lang] || questionText?.en || ''}
         </h3>
         {interaction.instruction && (
           <p className="text-xs text-slate-500 font-medium">
@@ -93,13 +97,13 @@ export const SequenceCard: React.FC<Props> = ({
       {/* Steps List Stack */}
       <div className="flex flex-col gap-2.5 pt-1">
         {orderedIds.map((stepId, index) => {
-          const stepItem = interaction.steps.find((s) => s.id === stepId);
+          const stepItem = steps.find((s: any) => s.id === stepId);
           if (!stepItem) return null;
 
           return (
             <div
               key={stepId}
-              className="min-h-[58px] p-3 sm:p-3.5 rounded-2xl border-2 border-slate-200 bg-slate-50/60 hover:bg-white hover:border-blue-400/80 transition-all flex items-center justify-between gap-3 shadow-2xs"
+              className="min-h-[64px] p-3.5 sm:p-4 rounded-2xl border-2 border-slate-200 bg-slate-50/60 hover:bg-white hover:border-blue-400/80 transition-all flex items-center justify-between gap-3 shadow-2xs"
             >
               {/* Left: Step Number Badge + Icon + Text */}
               <div className="flex items-center gap-3 min-w-0">
@@ -153,7 +157,7 @@ export const SequenceCard: React.FC<Props> = ({
           type="button"
           disabled={disabled}
           onClick={handleVerify}
-          className="w-full min-h-[58px] px-6 py-3.5 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg bg-blue-600 hover:bg-blue-700 text-white shadow-blue-600/30 transition-all cursor-pointer"
+          className="w-full min-h-[64px] px-6 py-4 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg bg-blue-600 hover:bg-blue-700 text-white shadow-blue-600/30 transition-all cursor-pointer"
         >
           <CheckCircle2 className="w-5 h-5" />
           <span>Verify Chronological Sequence</span>

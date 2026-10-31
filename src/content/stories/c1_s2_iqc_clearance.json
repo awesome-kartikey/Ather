@@ -90,7 +90,13 @@
               "mr": "डायरेक्ट-ऑन-लाइन (DOL): गुणवत्ता तपासणी माफ आहे; थेट उत्पादन असेंब्ली लाइनवर घेऊन जा."
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "Forklifts have offloaded the pallet into Inbound Staging. You inspect the freshly pasted GRN sticker and spot a large '?' printed on it. What does this symbol mean?",
+          "hi": "फोर्कलिफ्ट ने पैलेट को इनबाउंड स्टेजिंग में उतार दिया है। आप नए लगे GRN स्टिकर का निरीक्षण करते हैं और उस पर एक बड़ा '?' छपा पाते हैं। इस प्रतीक का क्या अर्थ है?",
+          "mr": "फोर्कलिफ्टने पॅलेट इनबाउंड स्टेजिंगमध्ये उतरवले आहे. तुम्ही नवीन लावलेल्या GRN स्टिकरची पाहणी करता आणि त्यावर मोठे '?' छापलेले दिसते. या चिन्हाचा अर्थ काय आहे?"
+        },
+        "id": "c1-q10"
       },
       "rules": {
         "xp": 100,
@@ -169,7 +175,13 @@
           "en": "FLC Crate (10% Sample)",
           "hi": "FLC क्रेट (10% सैंपल)",
           "mr": "FLC क्रेट (10% नमुना)"
-        }
+        },
+        "prompt": {
+          "en": "A Non-DOL lot of 10 FLCs has arrived. Under the SOP 10% statistical sampling rule, how many FLC crates must go to IQC?",
+          "hi": "10 FLC का एक नॉन-DOL लॉट आ गया है। SOP 10% सांख्यिकीय सैंपलिंग नियम के तहत, कितने FLC क्रेट IQC में जाने चाहिए?",
+          "mr": "10 FLC चा एक नॉन-DOL लॉट आला आहे. SOP 10% सांख्यिकीय सॅम्पलिंग नियमानुसार, किती FLC क्रेट्स IQC कडे गेले पाहिजेत?"
+        },
+        "id": "c1-q12"
       },
       "rules": {
         "xp": 100,
@@ -262,7 +274,13 @@
               "mr": "हिरवे 'QC PASS' सील्स: लॅबचे निकाल येण्यापूर्वीच सर्व क्रेट्स त्वरित सील करा."
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "The 9 remaining FLC crates are waiting in staging during the 2-hour IQC testing window. What mandatory visual containment must be placed around them?",
+          "hi": "2 घंटे की IQC परीक्षण विंडो के दौरान 9 शेष FLC क्रेट स्टेजिंग में प्रतीक्षा कर रहे हैं। उनके चारों ओर कौन सा अनिवार्य दृश्य नियंत्रण रखा जाना चाहिए?",
+          "mr": "2 तासांच्या IQC चाचणी कालावधीत उर्वरित 9 FLC क्रेट्स स्टेजिंगमध्ये वाट पाहत आहेत. त्यांच्याभोवती कोणते अनिवार्य दृश्य नियंत्रण ठेवले पाहिजे?"
+        },
+        "id": "c1-q17-cones"
       },
       "rules": {
         "xp": 100,
@@ -355,7 +373,13 @@
               "mr": "शिफ्ट संपेपर्यंत / पुढील कामकाजाच्या दिवसापर्यंत (SAP पिकिंग ऑर्डर्स ब्लॉक करते)"
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "Following GRN label application, what is the strict SLA cutoff time for inbound manpower to hand over Non-DOL samples to the IQC testing room?",
+          "hi": "GRN लेबल लगाने के बाद, इनबाउंड मैनपावर द्वारा नॉन-DOL सैंपल को IQC परीक्षण कक्ष में सौंपने की सख्त SLA समय सीमा क्या है?",
+          "mr": "GRN लेबल लावल्यानंतर, इनबाउंड कर्मचाऱ्यांनी नॉन-DOL नमुने IQC चाचणी कक्षात सोपवण्यासाठी काटेकोर SLA कटऑफ वेळ कोणती आहे?"
+        },
+        "id": "c1-q13"
       },
       "rules": {
         "xp": 100,
@@ -495,7 +519,13 @@
             },
             "targetZoneId": "zone_ng"
           }
-        ]
+        ],
+        "prompt": {
+          "en": "Match the Incoming Quality Control (IQC) outcome to the mandatory physical warehouse action:",
+          "hi": "आवक गुणवत्ता नियंत्रण (IQC) परिणाम को अनिवार्य भौतिक वेयरहाउस कार्रवाई से सुमेलित करें:",
+          "mr": "इनकमिंग गुणवत्ता नियंत्रण (IQC) निकालाला अनिवार्य प्रत्यक्ष वेअरहाऊस कृतीशी जोडा:"
+        },
+        "id": "c1-q15"
       },
       "rules": {
         "xp": 120,
@@ -504,6 +534,429 @@
           "en": "SOP Clause 4.5: Quality disposition requires absolute physical and digital integrity. 'Pass' unlocks the SAP EWM put-away order via the physical QC Pass seal. 'Hold' visually protects the buffer from accidental handling using yellow cones. 'NG' requires a red physical tag, a Jira defect ticket with part number and lot ID, and full transfer of the entire lot volume to quarantine location SC01 BL by designated NG manpower.",
           "hi": "SOP क्लॉज 4.5: गुणवत्ता निपटान के लिए पूर्ण भौतिक और डिजिटल अखंडता की आवश्यकता होती है। 'Pass' भौतिक QC पास सील के माध्यम से SAP EWM पुट-अवे ऑर्डर को अनलॉक करता है। 'Hold' पीले शंकु का उपयोग करके बफर को आकस्मिक छेड़छाड़ से बचाता है। 'NG' के लिए एक लाल भौतिक टैग, पार्ट नंबर और लॉट आईडी के साथ जीरा टिकट, और निर्दिष्ट NG कर्मियों द्वारा पूरे लॉट वॉल्यूम को क्वारंटाइन स्थान SC01 BL में स्थानांतरित करना अनिवार्य है।",
           "mr": "SOP कलम 4.5: गुणवत्ता डिस्पोझिशनसाठी प्रत्यक्ष आणि डिजिटल अचूकता आवश्यक आहे. 'Pass' प्रत्यक्ष QC पास शिक्क्याद्वारे SAP EWM पुट-अवे ऑर्डर अनलॉक करते. 'Hold' पिवळ्या कोन्सचा वापर करून बफरचे चुकीच्या हाताळणीपासून रक्षण करते. 'NG' साठी लाल प्रत्यक्ष टॅग, पार्ट नंबर आणि लॉट आयडीसह जिरा तिकीट, आणि नियुक्त NG कर्मचाऱ्यांद्वारे संपूर्ण लॉट क्वारंटाइन जागा SC01 BL मध्ये हलवणे आवश्यक आहे."
+        }
+      }
+    },
+    {
+      "id": "c1_s2_sc06_iqc_definition",
+      "stepNumber": 6,
+      "title": {
+        "en": "IQC Definition & Quality Verification Mandate",
+        "hi": "IQC परिभाषा और गुणवत्ता सत्यापन अनिवार्यता",
+        "mr": "IQC व्याख्या आणि गुणवत्ता पडताळणी नियम"
+      },
+      "media": {
+        "fallbackAnimation": "iqc_sample_inspection",
+        "durationSeconds": 15,
+        "pauseAtSecond": 4.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "Welcome to the IQC quality gate! Every pallet offloaded at Dock 04 undergoes strict verification. What does IQC stand for, and what is its primary operational role in Ather AURIC Plant M002?",
+            "hi": "IQC गुणवत्ता गेट में आपका स्वागत है! डॉक 04 पर उतारे गए प्रत्येक पैलेट का कड़ा सत्यापन होता है। IQC का पूर्ण रूप क्या है, और एथर औरिक प्लांट M002 में इसकी प्राथमिक परिचालन भूमिका क्या है?",
+            "mr": "IQC गुणवत्ता गेटमध्ये आपले स्वागत आहे! डॉक 04 वर उतरवलेल्या प्रत्येक साहित्याची कडक तपासणी होते. IQC चा अर्थ काय आहे आणि एथर औरिक कारखान्यात त्याची मुख्य जबाबदारी काय आहे?"
+          }
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Correct! IQC stands for Incoming Quality Control. Their team tests incoming supplier components against technical blueprints before parts enter production storage.",
+            "hi": "सही! IQC का अर्थ इनकमिंग क्वालिटी कंट्रोल है। उनकी टीम तकनीकी ब्लूप्रिंट के खिलाफ आने वाले आपूर्तिकर्ता घटकों का परीक्षण करती है इससे पहले कि पुर्जे उत्पादन भंडारण में प्रवेश करें।",
+            "mr": "बरोबर! IQC म्हणजे Incoming Quality Control (इनकमिंग क्वालिटी कंट्रोल). माल गोदामात साठवण्यापूर्वी तो तांत्रिक मानकांनुसार योग्य आहे की नाही हे तपासण्याचे काम IQC करते."
+          }
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Incorrect. IQC stands for Incoming Quality Control, ensuring zero defect parts reach vehicle assembly lines.",
+            "hi": "गलत। IQC का अर्थ इनकमिंग क्वालिटी कंट्रोल है, जो सुनिश्चित करता है कि शून्य दोष वाले हिस्से वाहन असेंबली लाइनों तक पहुंचें।",
+            "mr": "चुकीचे. IQC म्हणजे Incoming Quality Control, जेणेकरून एकही सदोष पार्ट वाहनांच्या मुख्य लाईनवर जाऊ नये."
+          }
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c1-q11-iqc-definition",
+        "safetyCritical": true,
+        "question": {
+          "en": "What does IQC stand for, and what is its primary purpose at Ather AURIC?",
+          "hi": "IQC का पूर्ण रूप क्या है, और एथर औरिक में इसका प्राथमिक उद्देश्य क्या है?",
+          "mr": "IQC चा पूर्ण अर्थ काय आहे आणि एथर औरिकमध्ये त्याचा मुख्य उद्देश काय आहे?"
+        },
+        "options": [
+          {
+            "id": "opt_incoming_quality",
+            "correct": true,
+            "label": {
+              "en": "Incoming Quality Control; verifies incoming supplier materials meet engineering specs before stock release",
+              "hi": "इनकमिंग क्वालिटी कंट्रोल; स्टॉक रिलीज से पहले आने वाले आपूर्तिकर्ता सामग्री इंजीनियरिंग विनिर्देशों को पूरा करती है या नहीं इसका सत्यापन करता है",
+              "mr": "Incoming Quality Control; माल गोदामात वर्ग करण्यापूर्वी तो कंपनीच्या मानकांनुसार योग्य असल्याची खात्री करणे"
+            }
+          },
+          {
+            "id": "opt_internal_count",
+            "correct": false,
+            "label": {
+              "en": "Internal Quantity Count; manually counts packing screws in bins",
+              "hi": "इंटरनल क्वांटिटी काउंट; डिब्बे में पैकिंग स्क्रू की मैन्युअल गणना करता है",
+              "mr": "इंटरनल क्वांटिटी काउंट; बॉक्समधील स्क्रू हाताने मोजणे"
+            }
+          },
+          {
+            "id": "opt_indirect_check",
+            "correct": false,
+            "label": {
+              "en": "Indirect Quality Check; cleans facility floor tiles",
+              "hi": "इनडायरेक्ट क्वालिटी चेक; सुविधा फर्श टाइल्स साफ करता है",
+              "mr": "इनडायरेक्ट क्वालिटी चेक; कारखान्यातील फरशी पुसणे"
+            }
+          },
+          {
+            "id": "opt_invoice_clearance",
+            "correct": false,
+            "label": {
+              "en": "Invoice Quick Clearance; approves driver toll receipts",
+              "hi": "चालान त्वरित निकासी; चालक टोल प्राप्तियों को मंजूरी देता है",
+              "mr": "इनव्हॉईस क्लिअरन्स; चालकांच्या टोल पावत्या मंजूर करणे"
+            }
+          }
+        ],
+        "prompt": {
+          "en": "What does IQC stand for, and what is its primary purpose at Ather AURIC?",
+          "hi": "IQC का पूर्ण रूप क्या है, और एथर औरिक में इसका प्राथमिक उद्देश्य क्या है?",
+          "mr": "IQC चा पूर्ण अर्थ काय आहे आणि एथर औरिकमध्ये त्याचा मुख्य उद्देश काय आहे?"
+        },
+        "id": "c1-q11-iqc-definition"
+      },
+      "rules": {
+        "xp": 100,
+        "sopClause": "SOP for IQC Issuance for AURIC Clause 4.1 & Question Bank Q11",
+        "why": {
+          "en": "SOP Clause 4.1 establishes Incoming Quality Control (IQC) as the primary quality barrier protecting vehicle assembly from defective supplier parts.",
+          "hi": "SOP क्लॉज 4.1 वाहन असेंबली को दोषपूर्ण आपूर्तिकर्ता भागों से बचाने वाली प्राथमिक गुणवत्ता बाधा के रूप में इनकमिंग क्वालिटी कंट्रोल (IQC) स्थापित करता है।",
+          "mr": "SOP कलम 4.1 नुसार Incoming Quality Control (IQC) हा सदोष माल फॅक्टरीत येण्यापासून रोखणारा मुख्य संरक्षक विभाग आहे."
+        }
+      }
+    },
+    {
+      "id": "c1_s2_sc07_six_month_rampup",
+      "stepNumber": 7,
+      "title": {
+        "en": "Factory Ramp-Up 100% IQC Inspection Rule",
+        "hi": "फैक्ट्री रैंप-अप 100% IQC निरीक्षण नियम",
+        "mr": "नवीन फॅक्टरी 100% IQC तपासणी नियम"
+      },
+      "media": {
+        "fallbackAnimation": "iqc_sample_inspection",
+        "durationSeconds": 15,
+        "pauseAtSecond": 4.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "Under Ather Quality Policy, during the first 6 months of a new factory launch (AURIC Plant ramp-up), which inward supplier materials must be routed to IQC before put-away?",
+            "hi": "एथर गुणवत्ता नीति के तहत, एक नई फैक्ट्री लॉन्च (औरिक प्लांट रैंप-अप) के पहले 6 महीनों के दौरान, पुट-अवे से पहले किन आवक आपूर्तिकर्ता सामग्रियों को IQC में भेजा जाना चाहिए?",
+            "mr": "एथरच्या गुणवत्ता धोरणानुसार, नवीन फॅक्टरी सुरू झाल्यानंतरच्या पहिल्या 6 महिन्यांत (AURIC रॅम्प-अप), साठवणुकीपूर्वी कोणता माल IQC तपासणीसाठी पाठवणे बंधनकारक आहे?"
+          }
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Exactly right! During the initial 6-month ramp-up phase, Direct-on-Line (DOL) privileges are suspended. 100% of all inward parts are treated as Non-DOL to validate supplier consistency.",
+            "hi": "बिल्कुल सही! शुरुआती 6 महीने के रैंप-अप चरण के दौरान, डायरेक्ट-ऑन-लाइन (DOL) विशेषाधिकार निलंबित रहते हैं। आपूर्तिकर्ता निरंतरता को मान्य करने के लिए 100% सभी आवक भागों को गैर-DOL माना जाता है।",
+            "mr": "अगदी बरोबर! पहिल्या 6 महिन्यांच्या सुरुवातीच्या काळात, सर्वच्या सर्व (100%) माल नॉन-DOL मानून सप्लायरच्या गुणवत्तेची खात्री करण्यासाठी IQC तपासणी केली जाते."
+          }
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Careful! For the first 6 months of plant launch, ALL incoming supplier parts must undergo IQC inspection to establish baseline quality.",
+            "hi": "सावधान! प्लांट लॉन्च के पहले 6 महीनों के लिए, बेसलाइन गुणवत्ता स्थापित करने के लिए सभी आने वाले आपूर्तिकर्ता भागों को IQC निरीक्षण से गुजरना होगा।",
+            "mr": "सावध रहा! फॅक्टरी सुरू झाल्यावर पहिल्या 6 महिन्यांत येणारा 100% माल तपासणीसाठी IQC कडे गेलाच पाहिजे."
+          }
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c1-q14-rampup-rule",
+        "safetyCritical": true,
+        "question": {
+          "en": "In a new factory, during the first 6 months, which inward parts must go to IQC?",
+          "hi": "एक नई फैक्ट्री में, पहले 6 महीनों के दौरान, किन आवक पुर्जों को IQC में जाना चाहिए?",
+          "mr": "नवीन फॅक्टरीमध्ये, पहिल्या 6 महिन्यांत कोणता आवक माल IQC कडे गेला पाहिजे?"
+        },
+        "options": [
+          {
+            "id": "opt_all_inward_parts",
+            "correct": true,
+            "label": {
+              "en": "100% of all inward parts are treated as Non-DOL and must undergo IQC sample inspection",
+              "hi": "100% सभी आवक भागों को गैर-DOL माना जाता है और उन्हें IQC नमूना निरीक्षण से गुजरना होगा",
+              "mr": "येणारा 100% सर्व माल नॉन-DOL मानला जातो आणि त्याची नमुना तपासणी करणे सक्तीचे असते"
+            }
+          },
+          {
+            "id": "opt_only_battery",
+            "correct": false,
+            "label": {
+              "en": "Only high-voltage battery packs while other parts skip inspection",
+              "hi": "केवल हाई-वोल्टेज बैटरी पैक जबकि अन्य भाग निरीक्षण छोड़ देते हैं",
+              "mr": "फक्त हाय-व्होल्टेज बॅटरी पॅक, बाकी पार्ट तपासणी न करता थेट घेतले जातात"
+            }
+          },
+          {
+            "id": "opt_zero_parts",
+            "correct": false,
+            "label": {
+              "en": "Zero parts; suppliers self-certify all shipments without internal tests",
+              "hi": "शून्य भाग; आपूर्तिकर्ता आंतरिक परीक्षणों के बिना सभी शिपमेंट को स्व-प्रमाणित करते हैं",
+              "mr": "एकही पार्ट नाही; सप्लायर परस्पर स्वतःच माल मंजूर करतो"
+            }
+          },
+          {
+            "id": "opt_vendor_choice",
+            "correct": false,
+            "label": {
+              "en": "The delivery truck driver decides which crates look suspicious",
+              "hi": "डिलीवरी ट्रक चालक तय करता है कि कौन से बक्से संदिग्ध लगते हैं",
+              "mr": "ट्रक ड्रायव्हर ठरवतो की कोणता बॉक्स संशयास्पद वाटतो"
+            }
+          }
+        ],
+        "prompt": {
+          "en": "In a new factory, during the first 6 months, which inward parts must go to IQC?",
+          "hi": "एक नई फैक्ट्री में, पहले 6 महीनों के दौरान, किन आवक पुर्जों को IQC में जाना चाहिए?",
+          "mr": "नवीन फॅक्टरीमध्ये, पहिल्या 6 महिन्यांत कोणता आवक माल IQC कडे गेला पाहिजे?"
+        },
+        "id": "c1-q14-rampup-rule"
+      },
+      "rules": {
+        "xp": 110,
+        "sopClause": "SOP for IQC Issuance for AURIC Clause 4.2 & Question Bank Q14",
+        "why": {
+          "en": "SOP Clause 4.2 dictates: In a new factory, for the first 6 months, all inward parts are treated as Non-DOL to build supplier process capability and prevent line stoppages during initial product launch.",
+          "hi": "SOP क्लॉज 4.2 निर्देश देता है: एक नई फैक्ट्री में, पहले 6 महीनों के लिए, सभी आवक भागों को गैर-DOL माना जाता है ताकि आपूर्तिकर्ता प्रक्रिया क्षमता का निर्माण किया जा सके और लाइन ठहराव को रोका जा सके।",
+          "mr": "SOP कलम 4.2 स्पष्ट सांगते: नवीन कारखान्यात पहिल्या 6 महिन्यांत सर्व माल नॉन-DOL मानून तपासला जातो जेणेकरून सप्लायरच्या चुकांमुळे चालू उत्पादन थांबणार नाही."
+        }
+      }
+    },
+    {
+      "id": "c1_s2_sc08_receiving_sequence",
+      "stepNumber": 8,
+      "title": {
+        "en": "End-to-End Receiving & IQC Lifecycle Sequence",
+        "hi": "शुरुआत से अंत तक प्राप्ति और IQC जीवनचक्र अनुक्रम",
+        "mr": "प्राप्ती आणि IQC तपासणीचा संपूर्ण अधिकृत क्रम"
+      },
+      "media": {
+        "fallbackAnimation": "iqc_staging_cones",
+        "durationSeconds": 15,
+        "pauseAtSecond": 4.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "Mastering the chronological rhythm of receiving is essential! Arrange the 4 mandatory operational stages of Non-DOL material receiving under SOP Clauses 4.1 through 4.5.",
+            "hi": "प्राप्ति की कालानुक्रमिक लय में महारत हासिल करना आवश्यक है! SOP क्लॉज 4.1 से 4.5 के तहत गैर-DOL सामग्री प्राप्ति के 4 अनिवार्य परिचालन चरणों को व्यवस्थित करें।",
+            "mr": "माल स्वीकारण्याच्या अचूक क्रमाचे ज्ञान असणे अत्यंत आवश्यक आहे! SOP कलम 4.1 ते 4.5 नुसार नॉन-DOL साहित्याच्या प्राप्तीचा योग्य क्रम लावा."
+          }
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Outstanding! Unload & paste GRN label $\\to$ Collect 10% sample & place Under IQC cones $\\to$ Physical handover to lab within 30-min SLA $\\to$ Issue Pass, Hold, or NG disposition.",
+            "hi": "उत्कृष्ट! अनलोड करें और GRN लेबल चिपकाएं $\\to$ 10% नमूना एकत्र करें और अंडर IQC शंकु लगाएं $\\to$ 30-मिनट के SLA के भीतर लैब को भौतिक हैंडओवर $\\to$ पास, होल्ड या NG स्वभाव जारी करें।",
+            "mr": "उत्कृष्ट! अनलोड करून GRN लेबल लावणे $\\to$ 10% सॅम्पल बाजूला काढून त्यावर Under IQC कोन ठेवणे $\\to$ 30 मिनिटांत लॅबकडे प्रत्यक्ष सुपूर्द करणे $\\to$ Pass, Hold किंवा NG चा अधिकृत निर्णय देणे."
+          }
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Out of sequence! The GRN label must be pasted before sampling, and the 10% sample must be demarcated with cones before lab handover.",
+            "hi": "क्रम से बाहर! नमूना लेने से पहले GRN लेबल चिपकाया जाना चाहिए, और लैब हैंडओवर से पहले 10% नमूने को शंकु के साथ सीमांकित किया जाना चाहिए।",
+            "mr": "चुकीचा क्रम! सॅम्पल काढण्यापूर्वी GRN लेबल लावले पाहिजे आणि लॅबमध्ये देण्यापूर्वी 10% नमुन्यावर पिवळे कोन ठेवले पाहिजेत."
+          }
+        }
+      },
+      "interaction": {
+        "type": "sequence",
+        "questionId": "c1-q17-receiving-sequence",
+        "safetyCritical": true,
+        "question": {
+          "en": "Put the Non-DOL Receiving and IQC steps in correct chronological order:",
+          "hi": "गैर-DOL प्राप्ति और IQC चरणों को सही कालानुक्रमिक क्रम में रखें:",
+          "mr": "नॉन-DOL माल प्राप्ती आणि IQC च्या पायऱ्या योग्य कालक्रमाने लावा:"
+        },
+        "instruction": {
+          "en": "Arrange the steps from first to last.",
+          "hi": "चरणों को पहले से अंतिम तक व्यवस्थित करें।",
+          "mr": "पायऱ्या पहिल्यापासून शेवटपर्यंत लावा."
+        },
+        "steps": [
+          {
+            "id": "step_unload_grn",
+            "icon": "📦",
+            "label": {
+              "en": "Unload pallet from truck at Dock 04 and paste physical GRN barcode label",
+              "hi": "डॉक 04 पर ट्रक से पैलेट अनलोड करें और भौतिक GRN बारकोड लेबल चिपकाएं",
+              "mr": "डॉक 04 वर ट्रक रिकाम करून बॉक्सवर प्रत्यक्ष GRN बारकोड लेबल लावणे"
+            }
+          },
+          {
+            "id": "step_sample_cone",
+            "icon": "⚠️",
+            "label": {
+              "en": "Segregate 10% sample crate and place yellow 'Under IQC' visual cones on remaining staged lot",
+              "hi": "10% नमूना क्रेट को अलग करें और शेष स्टेज किए गए लॉट पर पीले 'Under IQC' दृश्य शंकु रखें",
+              "mr": "10% सॅम्पल बॉक्स वेगळा करणे आणि स्टेजिंगमधील उर्वरित बॉक्सवर 'Under IQC' चे पिवळे कोन ठेवणे"
+            }
+          },
+          {
+            "id": "step_sla_handover",
+            "icon": "⏱️",
+            "label": {
+              "en": "Hand over sample crate to IQC test lab within 30-minute SLA and sign the physical logbook",
+              "hi": "30-मिनट के SLA के भीतर नमूना क्रेट IQC परीक्षण लैब को सौंपें और भौतिक लॉगबुक पर हस्ताक्षर करें",
+              "mr": "30 मिनिटांच्या आत नमुना IQC लॅबमध्ये नेऊन देणे आणि प्रत्यक्ष रजिस्टरमध्ये सही करणे"
+            }
+          },
+          {
+            "id": "step_disposition_seal",
+            "icon": "✅",
+            "label": {
+              "en": "IQC completes inspection within 2 hours and issues final Pass (Green Seal), Hold, or NG tag",
+              "hi": "IQC 2 घंटे के भीतर निरीक्षण पूरा करता है और अंतिम पास (ग्रीन सील), होल्ड या NG टैग जारी करता है",
+              "mr": "IQC ने 2 तासांत तपासणी पूर्ण करून Pass (हिरवा शिक्का), Hold किंवा NG चा अंतिम निर्णय देणे"
+            }
+          }
+        ],
+        "correctOrder": [
+          "step_unload_grn",
+          "step_sample_cone",
+          "step_sla_handover",
+          "step_disposition_seal"
+        ],
+        "prompt": {
+          "en": "Put the Non-DOL Receiving and IQC steps in correct chronological order:",
+          "hi": "गैर-DOL प्राप्ति और IQC चरणों को सही कालानुक्रमिक क्रम में रखें:",
+          "mr": "नॉन-DOL माल प्राप्ती आणि IQC च्या पायऱ्या योग्य कालक्रमाने लावा:"
+        },
+        "id": "c1-q17-receiving-sequence"
+      },
+      "rules": {
+        "xp": 125,
+        "sopClause": "SOP for IQC Issuance for AURIC Clauses 4.1 to 4.5 & Question Bank Q17",
+        "why": {
+          "en": "SOP Clauses 4.1 to 4.5 establish the standard operational lifecycle: Unload & GRN label $\\to$ 10% Sampling & Cones $\\to$ 30-minute Handover $\\to$ 2-hour IQC testing and Pass/Hold/NG sealing.",
+          "hi": "SOP क्लॉज 4.1 से 4.5 मानक परिचालन जीवनचक्र स्थापित करते हैं: अनलोड और GRN लेबल $\\to$ 10% नमूनाकरण और शंकु $\\to$ 30-मिनट हैंडओवर $\\to$ 2-घंटे का IQC परीक्षण और पास/होल्ड/NG सीलिंग।",
+          "mr": "SOP कलम 4.1 ते 4.5 संपूर्ण अधिकृत जीवनचक्र ठरवते: अनलोडिंग व GRN लेबल $\\to$ 10% सॅम्पल व पिवळे कोन $\\to$ 30 मिनिटांत हँडओव्हर $\\to$ 2 तासांत चाचणी व पास/होल्ड/NG चा अंतिम शिक्का."
+        }
+      }
+    },
+    {
+      "id": "c1_s2_sc09_sla_overrun_risk",
+      "stepNumber": 9,
+      "title": {
+        "en": "IQC Handover SLA Overrun & Deadlock Prevention",
+        "hi": "IQC हैंडओवर SLA ओवररन और गतिरोध रोकथाम",
+        "mr": "IQC हँडओव्हर मुदत संपणे आणि अडथळा प्रतिबंध"
+      },
+      "media": {
+        "fallbackAnimation": "iqc_handover_sla",
+        "durationSeconds": 15,
+        "pauseAtSecond": 4.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "thinking",
+          "text": {
+            "en": "Non-DOL sample crates have been sitting in receiving staging for 75 minutes because the team was busy offloading another truck! Under SOP Failure Mode 5.1, what is the critical systemic risk of exceeding the 30-minute handover SLA?",
+            "hi": "गैर-DOL नमूना क्रेट 75 मिनट से प्राप्त स्टेजिंग में बैठे हैं क्योंकि टीम दूसरे ट्रक को अनलोड करने में व्यस्त थी! SOP विफलता मोड 5.1 के तहत, 30-मिनट के हैंडओवर SLA को पार करने का महत्वपूर्ण प्रणालीगत जोखिम क्या है?",
+            "mr": "दुसऱ्या ट्रकच्या अनलोडिंगमध्ये टीम व्यस्त राहिल्यामुळे नॉन-DOL चे सॅम्पल तब्बल 75 मिनिटे स्टेजिंगमध्येच पडून राहिले! SOP अपयश मोड 5.1 नुसार 30 मिनिटांची मुदत ओलांडल्यास कोणता गंभीर फटका बसतो?"
+          }
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Spot-on! If samples are not issued within 30 minutes, the open SAP WH order stays locked, blocking put-away tasks for all subsequent shipments and starving the vehicle assembly line.",
+            "hi": "बिल्कुल सही! यदि 30 मिनट के भीतर नमूने जारी नहीं किए जाते हैं, तो खुला SAP WH ऑर्डर लॉक रहता है, जो बाद के सभी शिपमेंट के लिए पुट-अवे कार्यों को अवरुद्ध करता है और असेंबली लाइन को भूखा रखता है।",
+            "mr": "अगदी बरोबर! 30 मिनिटांत सॅम्पल न दिल्यास SAP WH ऑर्डर उघडाच राहतो, ज्यामुळे पुढील सर्व मालाची साठवणूक ठप्प होते आणि व्हेईकल असेंब्ली लाईन खोळंबते."
+          }
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Violation! Delayed IQC handover deadlocks the SAP EWM queue. Inbound Zone Leader must immediately prioritize sample delivery to clear the system block.",
+            "hi": "उल्लंघन! विलंबित IQC हैंडओवर SAP EWM कतार को अवरुद्ध करता है। इनबाउंड ज़ोन लीडर को सिस्टम ब्लॉक को खाली करने के लिए तुरंत नमूना वितरण को प्राथमिकता देनी चाहिए।",
+            "mr": "नियमभंग! उशिरा सॅम्पल दिल्याने SAP EWM सिस्टीम जाम होते. इनबाउंड झोन लीडरने तात्काळ सॅम्पल लॅबमध्ये पाठवून सिस्टीम मोकळी केली पाहिजे."
+          }
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c1-q18-sla-overrun",
+        "safetyCritical": true,
+        "question": {
+          "en": "Non-DOL samples are not issued to IQC within the 30-minute SLA. What is the operational risk?",
+          "hi": "गैर-DOL नमूने 30-मिनट के SLA के भीतर IQC को जारी नहीं किए जाते हैं। परिचालन जोखिम क्या है?",
+          "mr": "नॉन-DOL चे सॅम्पल 30 मिनिटांच्या आत IQC कडे न दिल्यास कोणता धोका निर्माण होतो?"
+        },
+        "options": [
+          {
+            "id": "opt_wh_order_blocks",
+            "correct": true,
+            "label": {
+              "en": "The open WH order stays locked in SAP, blocking subsequent warehouse put-away tasks and starving the assembly line",
+              "hi": "खुला WH ऑर्डर SAP में लॉक रहता है, बाद के वेयरहाउस पुट-अवे कार्यों को अवरुद्ध करता है और असेंबली लाइन को रोकता है",
+              "mr": "SAP मधील WH ऑर्डर उघडा राहून पुढील सर्व साठवणूक अडकते आणि असेंब्ली लाईनला वेळेत माल मिळत नाही"
+            }
+          },
+          {
+            "id": "opt_samples_evaporate",
+            "correct": false,
+            "label": {
+              "en": "The physical parts magically dissolve after 30 minutes",
+              "hi": "भौतिक भाग 30 मिनट के बाद जादुई रूप से गायब हो जाते हैं",
+              "mr": "30 मिनिटांनंतर बॉक्समधील माल आपोआप गायब होतो"
+            }
+          },
+          {
+            "id": "opt_iqc_speeds_up",
+            "correct": false,
+            "label": {
+              "en": "The IQC laboratory tests components twice as fast to make up for lost time",
+              "hi": "IQC प्रयोगशाला खोए हुए समय की भरपाई के लिए घटकों का दोगुना तेजी से परीक्षण करती है",
+              "mr": "वेळ भरून काढण्यासाठी IQC लॅब दुप्पट वेगाने घाईघाईत तपासणी करते"
+            }
+          },
+          {
+            "id": "opt_no_impact",
+            "correct": false,
+            "label": {
+              "en": "Nothing happens because warehouse delivery schedules are purely suggestions",
+              "hi": "कुछ नहीं होता क्योंकि वेयरहाउस डिलीवरी शेड्यूल केवल सुझाव हैं",
+              "mr": "काहीही होत नाही कारण गोदामातील वेळेचे नियम केवळ औपचारिकता असतात"
+            }
+          }
+        ],
+        "prompt": {
+          "en": "Non-DOL samples are not issued to IQC within the 30-minute SLA. What is the operational risk?",
+          "hi": "गैर-DOL नमूने 30-मिनट के SLA के भीतर IQC को जारी नहीं किए जाते हैं। परिचालन जोखिम क्या है?",
+          "mr": "नॉन-DOL चे सॅम्पल 30 मिनिटांच्या आत IQC कडे न दिल्यास कोणता धोका निर्माण होतो?"
+        },
+        "id": "c1-q18-sla-overrun"
+      },
+      "rules": {
+        "xp": 115,
+        "sopClause": "SOP for IQC Issuance for AURIC Failure Mode 5.1 & Question Bank Q18",
+        "why": {
+          "en": "SOP Failure Mode 5.1 establishes: If Non-DOL samples are not issued within 30 minutes, the open WH order blocks subsequent put-away queues, creating dock congestion and triggering vehicle line-starvation alerts.",
+          "hi": "SOP विफलता मोड 5.1 स्थापित करता है: यदि 30 मिनट के भीतर गैर-DOL नमूने जारी नहीं किए जाते हैं, तो खुला WH ऑर्डर बाद के पुट-अवे कतारों को अवरुद्ध करता है, जिससे डॉक पर भीड़ होती है और लाइन-स्टार्शन अलर्ट ट्रिगर होते हैं।",
+          "mr": "SOP अपयश मोड 5.1 स्पष्ट करतो: 30 मिनिटांत सॅम्पल न दिल्यास जुना WH ऑर्डर सिस्टीममध्ये अडकतो, ज्यामुळे संपूर्ण डॉकवर गर्दी होते आणि असेंब्ली लाईनवर मालाचा तुटवडा भासतो."
         }
       }
     }

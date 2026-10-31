@@ -59,7 +59,7 @@ export const CountStepperCard: React.FC<Props> = ({
       {/* Main Question & Instructions */}
       <div className="space-y-1.5">
         <h3 className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
-          {interaction.question[lang] || interaction.question.en}
+          {interaction.question?.[lang] || interaction.question?.en || (interaction as any).prompt?.[lang] || (interaction as any).prompt?.en || ''}
         </h3>
         {interaction.instruction && (
           <p className="text-xs text-slate-500 font-medium">
@@ -141,12 +141,12 @@ export const CountStepperCard: React.FC<Props> = ({
         </button>
       </div>
 
-      {/* Confirm Button */}
+      {/* Confirm Button (≥64px touch target) */}
       <button
         type="button"
         disabled={disabled || hasSubmitted}
         onClick={handleSubmit}
-        className="w-full min-h-[56px] py-3.5 px-6 rounded-2xl bg-blue-600 hover:bg-blue-700 active:scale-[0.99] text-white font-extrabold text-sm sm:text-base shadow-lg shadow-blue-600/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2 cursor-pointer"
+        className="w-full min-h-[64px] py-4 px-6 rounded-2xl bg-blue-600 hover:bg-blue-700 active:scale-[0.99] text-white font-extrabold text-sm sm:text-base shadow-lg shadow-blue-600/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2 cursor-pointer"
       >
         <CheckCircle2 className="w-5 h-5" />
         <span>Confirm IQC Sample Count</span>

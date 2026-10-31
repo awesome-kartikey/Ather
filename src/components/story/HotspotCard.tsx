@@ -49,7 +49,7 @@ export const HotspotCard: React.FC<Props> = ({
       {/* Instruction */}
       <div className="space-y-1">
         <h3 className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
-          {interaction.question[lang] || interaction.question.en}
+          {interaction.question?.[lang] || interaction.question?.en || (interaction as any).prompt?.[lang] || (interaction as any).prompt?.en || ''}
         </h3>
         {interaction.instruction && (
           <p className="text-xs text-slate-500 font-medium">
@@ -102,13 +102,13 @@ export const HotspotCard: React.FC<Props> = ({
         })}
       </div>
 
-      {/* Action Button */}
+      {/* Action Button (≥64px touch target) */}
       <div className="pt-2">
         <button
           type="button"
           disabled={!selectedTargetId || disabled}
           onClick={handleConfirm}
-          className={`w-full min-h-[58px] px-6 py-3.5 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer ${
+          className={`w-full min-h-[64px] px-6 py-4 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer ${
             selectedTargetId && !disabled
               ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-600/30'
               : 'bg-slate-200 text-slate-400 shadow-none cursor-not-allowed'

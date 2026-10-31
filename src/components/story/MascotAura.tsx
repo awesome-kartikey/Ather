@@ -17,7 +17,7 @@ export const MascotAura: React.FC<MascotAuraProps> = ({
 }) => {
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
 
-  const textToSpeak = dialogue[lang] || dialogue.en;
+  const textToSpeak = dialogue?.[lang] || dialogue?.en || '';
 
   const handlePlayVoice = () => {
     if (isPlayingAudio) {

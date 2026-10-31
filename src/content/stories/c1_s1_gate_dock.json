@@ -90,7 +90,13 @@
               "mr": "कागदपत्र तपासणी जलद करण्यासाठी बाहेर पडण्याच्या गेटवर थांबावे"
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "The supplier truck reaches the gate. Where does the driver park first?",
+          "hi": "ट्रक गेट पर पहुंचता है। चालक सबसे पहले वाहन कहां पार्क करता है?",
+          "mr": "ट्रक गेटवर पोहोचतो. चालक सर्वप्रथम वाहन कुठे पार्क करतो?"
+        },
+        "id": "c1-q01"
       },
       "rules": {
         "xp": 100,
@@ -115,7 +121,7 @@
         "posterSrc": "/images/scenes/scene_02_poster.jpg",
         "fallbackAnimation": "gatehouse_cabin_desk",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.0
+        "pauseAtSecond": 3
       },
       "mascot": {
         "intro": {
@@ -231,7 +237,13 @@
               "mr": "व्हेंडर टॅक्स इन्व्हॉइस आणि चालान"
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "Sort each incoming document to the correct reception desk:",
+          "hi": "प्रत्येक आने वाले दस्तावेज़ को सही रिसेप्शन डेस्क पर छाँटें:",
+          "mr": "प्रत्येक येणाऱ्या कागदपत्राचे योग्य रिसेप्शन डेस्कवर वर्गीकरण करा:"
+        },
+        "id": "c1-q02"
       },
       "rules": {
         "xp": 100,
@@ -324,7 +336,13 @@
               "mr": "ट्रक अनलोड होण्यापूर्वीच थेट माल पावती (GRN) नोंदवून घेतो"
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "The DEO enters the vendor invoice in YMM_GATE_ENTRY. What is the role of this transaction, and what happens if the ASN is wrong?",
+          "hi": "DEO YMM_GATE_ENTRY में विक्रेता इनवॉइस दर्ज करता है। इस ट्रांजैक्शन की क्या भूमिका है, और यदि ASN गलत हो तो क्या होता है?",
+          "mr": "DEO YMM_GATE_ENTRY मध्ये व्हेंडर इन्व्हॉइस टाकतो. या ट्रांझॅक्शनची भूमिका काय आहे, आणि ASN चुकीचे असल्यास काय होते?"
+        },
+        "id": "c1-q03"
       },
       "rules": {
         "xp": 100,
@@ -447,7 +465,13 @@
           "step_deo",
           "step_barcode",
           "step_dock"
-        ]
+        ],
+        "prompt": {
+          "en": "Arrange the driver's gate entry journey in the correct chronological order:",
+          "hi": "चालक की गेट एंट्री यात्रा को सही कालानुक्रमिक क्रम में व्यवस्थित करें:",
+          "mr": "चालकाच्या गेट एंट्री प्रवासाची योग्य कालक्रमानुसार मांडणी करा:"
+        },
+        "id": "c1-q04"
       },
       "rules": {
         "xp": 100,
@@ -560,7 +584,13 @@
               "mr": "प्रतिबंधित: धोकादायक पेंट्स आणि सॉल्व्हेंट्ससाठी वेगळी स्वतंत्र इमारत"
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "The DEO executes YMM_DOCK_ALLOCATE for vehicle assembly parts. Tap the correct allocated bay & dock on the AURIC plant layout:",
+          "hi": "DEO वाहन असेंबली पार्ट्स के लिए YMM_DOCK_ALLOCATE चलाता है। AURIC प्लांट लेआउट पर सही आवंटित बे और डॉक पर टैप करें:",
+          "mr": "DEO वाहन असेंब्ली सुट्या भागांसाठी YMM_DOCK_ALLOCATE चालवतो. AURIC प्लांट लेआउटवर योग्य वाटप केलेले बे आणि डॉक टॅप करा:"
+        },
+        "id": "c1-q05"
       },
       "rules": {
         "xp": 100,
@@ -673,7 +703,13 @@
               "mr": "सुसंगत: चालक जमिनीवर खाली उतरला आहे."
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "CRITICAL SAFETY AUDIT: Spot the immediate safety violation before keys are accepted and unloading starts:",
+          "hi": "महत्वपूर्ण सुरक्षा ऑडिट: चाबियां स्वीकारने और अनलोडिंग शुरू करने से पहले तुरंत सुरक्षा उल्लंघन को पहचानें:",
+          "mr": "गंभीर सुरक्षा ऑडिट: चाव्या स्वीकारण्यापूर्वी आणि अनलोडिंग सुरू करण्यापूर्वी तत्काळ होणारे सुरक्षा उल्लंघन ओळखा:"
+        },
+        "id": "c1-q06"
       },
       "rules": {
         "xp": 100,
@@ -763,7 +799,13 @@
           "en": "Raise barrier because parts were unloaded and empty bins belong to the regular return cycle.",
           "hi": "बैरियर उठाएं क्योंकि पार्ट्स अनलोड हो चुके हैं और खाली डिब्बे नियमित रिटर्न चक्र के हैं।",
           "mr": "बॅरियर उघडा कारण पार्ट्स अनलोड झाले आहेत आणि रिकामे डबे नियमित रिटर्न सायकलचे आहेत."
-        }
+        },
+        "prompt": {
+          "en": "DECISION GATE: The driver wants to leave with 20 empty FLC bins without a manual Delivery Challan (DC):",
+          "hi": "निर्णय गेट: चालक बिना मैनुअल डिलीवरी चालान (DC) के 20 खाली FLC डिब्बों के साथ निकलना चाहता है:",
+          "mr": "निर्णय गेट: चालक मॅन्युअल डिलिव्हरी चलन (DC) शिवाय 20 रिकाम्या FLC डब्यांसह बाहेर पडू इच्छितो:"
+        },
+        "id": "c1-q07"
       },
       "rules": {
         "xp": 100,
@@ -772,6 +814,200 @@
           "en": "SOP Clause 4.1.6.2 & 4.2.4: Whenever returnable packaging (FLCs, plastic bins, or trolleys) is taken out, an authorized manual Delivery Challan (DC) must be verified and DEO must perform SAP YMM_GATE_EXIT before Security unlocks the departure gate.",
           "hi": "SOP क्लॉज 4.1.6.2 और 4.2.4: जब भी रिटर्नेबल पैकेजिंग (FLC, प्लास्टिक डिब्बे या ट्रॉली) बाहर निकाली जाती है, तो एक अधिकृत मैनुअल डिलीवरी चालान (DC) सत्यापित होना चाहिए और सुरक्षा द्वारा प्रस्थान गेट खोलने से पहले DEO को SAP YMM_GATE_EXIT निष्पादित करना चाहिए।",
           "mr": "SOP कलम 4.1.6.2 आणि 4.2.4: जेव्हा जेव्हा रिटर्नेबल पॅकेजिंग (FLC, प्लास्टिक डबे किंवा ट्रॉली) बाहेर काढले जाते, तेव्हा अधिकृत मॅन्युअल डिलिव्हरी चलन (DC) तपासले पाहिजे आणि सुरक्षा रक्षकाने प्रस्थान गेट उघडण्यापूर्वी DEO ने SAP YMM_GATE_EXIT करणे आवश्यक आहे."
+        }
+      }
+    },
+    {
+      "id": "c1_s1_sc08_asn_discrepancy",
+      "stepNumber": 8,
+      "title": {
+        "en": "ASN Mismatch & Gate Entry Halt Gate",
+        "hi": "ASN बेमेल और गेट एंट्री रोक गेट",
+        "mr": "ASN तफावत आणि गेट एंट्री थांबवणे"
+      },
+      "media": {
+        "fallbackAnimation": "gatehouse_cabin_desk",
+        "durationSeconds": 15,
+        "pauseAtSecond": 4.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "thinking",
+          "text": {
+            "en": "Attention DEO! The driver presents an invoice for 50 battery harnesses, but the digital Advanced Shipping Notice (ASN) in SAP lists 40 pieces under PO 4500018920. Can gate entry proceed under SOP Clause 4.2.1?",
+            "hi": "ध्यान दें DEO! चालक 50 बैटरी हार्नेस के लिए एक चालान प्रस्तुत करता है, लेकिन SAP में डिजिटल उन्नत शिपिंग सूचना (ASN) PO 4500018920 के तहत 40 टुकड़े सूचीबद्ध करती है। क्या SOP क्लॉज 4.2.1 के तहत गेट एंट्री आगे बढ़ सकती है?",
+            "mr": "DEO लक्ष द्या! चालक 50 बॅटरी हार्नेसचे इनव्हॉईस सादर करतो, परंतु SAP मधील डिजिटल ॲडव्हान्स्ड शिपिंग नोटीस (ASN) PO 4500018920 अंतर्गत 40 नग दाखवते. SOP कलम 4.2.1 नुसार गेट एंट्री करता येईल का?"
+          }
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Correct decision! Never generate a gate pass for a mismatched ASN. The DEO halts the transaction and alerts the Inbound Gate Incharge (1-Hour SLA) to resolve the vendor ASN discrepancy.",
+            "hi": "सही निर्णय! बेमेल ASN के लिए कभी भी गेट पास न बनाएं। DEO लेनदेन रोकता है और विक्रेता ASN विसंगति को हल करने के लिए इनबाउंड गेट प्रभारी (1-घंटे का SLA) को सचेत करता है।",
+            "mr": "योग्य निर्णय! चुकीच्या ASN साठी कधीही गेट पास तयार करू नका. DEO व्यवहार थांबवतो आणि व्हेंडर ASN तफावत सोडवण्यासाठी इनबाउंड गेट प्रमुखाला (1-तासाची मुदत) सूचना देतो."
+          }
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Violation! Generating a gate pass with an incorrect ASN creates major inventory mismatches in SAP ERP that block IQC receiving and vendor payment clearance.",
+            "hi": "उल्लंघन! गलत ASN के साथ गेट पास बनाने से SAP ERP में बड़ी इन्वेंट्री विसंगतियां पैदा होती हैं जो IQC प्राप्ति और विक्रेता भुगतान निकासी को रोकती हैं।",
+            "mr": "नियमभंग! चुकीच्या ASN सह गेट पास दिल्यास SAP ERP मध्ये मोठी तफावत होते, ज्यामुळे IQC तपासणी आणि व्हेंडर पेमेंट अडकते."
+          }
+        }
+      },
+      "interaction": {
+        "type": "stop_go",
+        "questionId": "c1-q06-asn-discrepancy",
+        "safetyCritical": true,
+        "question": {
+          "en": "DECISION GATE: The physical invoice quantity differs from the digital ASN in SAP:",
+          "hi": "निर्णय गेट: भौतिक चालान मात्रा SAP में डिजिटल ASN से भिन्न है:",
+          "mr": "निर्णय गेट: प्रत्यक्ष इनव्हॉईसमधील संख्या SAP मधील डिजिटल ASN शी जुळत नाही:"
+        },
+        "situation": {
+          "en": "Driver invoice states 50 units of Wiring Harnesses, but SAP YMM_GATE_ENTRY shows ASN quantity is only 40 units. The driver insists: 'Enter it as 40 now and we will fix it tomorrow.'",
+          "hi": "चालक चालान में 50 यूनिट वायरिंग हार्नेस का उल्लेख है, लेकिन SAP YMM_GATE_ENTRY में ASN मात्रा केवल 40 यूनिट है। चालक जोर देता है: 'इसे अभी 40 दर्ज करें और हम इसे कल ठीक कर देंगे।'",
+          "mr": "चालकाच्या बिलावर 50 वायरिंग हार्नेस आहेत, परंतु SAP YMM_GATE_ENTRY मध्ये ASN फक्त 40 चा आहे. चालक सांगतो: 'आत्ता 40 ची नोंद करा, उद्या दुरुस्त करू.'"
+        },
+        "correctAction": "stop",
+        "stopLabel": {
+          "en": "STOP & HALT GATE ENTRY",
+          "hi": "रुकें और गेट एंट्री रोकें",
+          "mr": "थांबा आणि गेट एंट्री थांबवा"
+        },
+        "goLabel": {
+          "en": "PROCEED & GUESS NUMBERS",
+          "hi": "आगे बढ़ें और संख्याओं का अनुमान लगाएं",
+          "mr": "पुढे जा आणि अंदाजाने नोंद करा"
+        },
+        "stopDescription": {
+          "en": "Halt gate entry immediately. Notify Gate Incharge to coordinate with supplier for corrected ASN within 1-Hour SLA.",
+          "hi": "तुरंत गेट एंट्री रोकें। 1-घंटे के SLA के भीतर सही ASN के लिए आपूर्तिकर्ता से समन्वय करने हेतु गेट प्रभारी को सूचित करें।",
+          "mr": "गेट एंट्री त्वरित थांबवा. 1-तासाच्या मुदतीत दुरुस्त ASN मिळवण्यासाठी गेट प्रमुखाला कळवा."
+        },
+        "goDescription": {
+          "en": "Allow truck inside to avoid dock delays and try reconciling discrepancies during unloading.",
+          "hi": "डॉक की देरी से बचने के लिए ट्रक को अंदर आने दें और अनलोडिंग के दौरान विसंगतियों को दूर करने का प्रयास करें।",
+          "mr": "उशीर टाळण्यासाठी ट्रकला आत येऊ द्या आणि अनलोडिंग करताना फरक दुरुस्त करा."
+        },
+        "prompt": {
+          "en": "DECISION GATE: The physical invoice quantity differs from the digital ASN in SAP:",
+          "hi": "निर्णय गेट: भौतिक चालान मात्रा SAP में डिजिटल ASN से भिन्न है:",
+          "mr": "निर्णय गेट: प्रत्यक्ष इनव्हॉईसमधील संख्या SAP मधील डिजिटल ASN शी जुळत नाही:"
+        },
+        "id": "c1-q06-asn-discrepancy"
+      },
+      "rules": {
+        "xp": 110,
+        "sopClause": "SOP XXXX_PRO_001 Clause 4.2.1 & Question Bank Q6",
+        "why": {
+          "en": "SOP Clause 4.2.1 mandates that digital ASN numbers and line items must match the physical invoice 100%. If an ASN is incorrect, gate entry cannot proceed. The Gate Incharge has a 1-hour resolution window to obtain a revised ASN from the supplier.",
+          "hi": "SOP क्लॉज 4.2.1 आदेश देता है कि डिजिटल ASN नंबर और लाइन आइटम भौतिक चालान से 100% मेल खाने चाहिए। यदि ASN गलत है, तो गेट एंट्री आगे नहीं बढ़ सकती।",
+          "mr": "SOP कलम 4.2.1 नुसार डिजिटल ASN आणि प्रत्यक्ष बिल 100% जुळलेच पाहिजे. ASN चुकीचा असल्यास गेट एंट्री करता येत नाही. सप्लायरकडून दुरुस्त ASN आणण्यासाठी 1 तासाची मुदत असते."
+        }
+      }
+    },
+    {
+      "id": "c1_s1_sc09_max_stock_full",
+      "stepNumber": 9,
+      "title": {
+        "en": "Maximum Warehouse Capacity Full Protocol",
+        "hi": "अधिकतम गोदाम क्षमता पूर्ण प्रोटोकॉल",
+        "mr": "वेअरहाऊसची कमाल साठवणूक क्षमता पूर्ण नियम"
+      },
+      "media": {
+        "fallbackAnimation": "truck_arrival_gate",
+        "durationSeconds": 15,
+        "pauseAtSecond": 4.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "A scheduled chassis frame truck reports at Gate 01. However, the SAP inventory screen indicates that High-Rise Rack storage for frames is already at 100% maximum capacity! What is the mandatory DEO action under SOP Clause 4.2.1?",
+            "hi": "गेट 01 पर एक निर्धारित चेसिस फ्रेम ट्रक की रिपोर्ट है। हालांकि, SAP इन्वेंट्री स्क्रीन इंगित करती है कि फ्रेम के लिए हाई-राइज रैक स्टोरेज पहले से ही 100% अधिकतम क्षमता पर है! SOP क्लॉज 4.2.1 के तहत अनिवार्य DEO कार्रवाई क्या है?",
+            "mr": "गेट 01 वर चेसिस फ्रेमचा ट्रक आला आहे. परंतु SAP स्क्रीनवर दिसते की हाय-राईज रॅकमधील जागा 100% पूर्ण भरलेली आहे! SOP कलम 4.2.1 नुसार DEO ने कोणती अधिकृत कृती केली पाहिजे?"
+          }
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Spot-on! The truck remains in the designated waiting parking area until line assembly consumes existing stock and clears warehouse pallet positions. Dumping material on dock gangways is strictly forbidden.",
+            "hi": "बिल्कुल सही! ट्रक निर्दिष्ट प्रतीक्षा पार्किंग क्षेत्र में तब तक रहता है जब तक कि असेंबली लाइन मौजूदा स्टॉक की खपत नहीं करती और रैक स्पेस खाली नहीं करती। डॉक पर सामग्री फेंकना सख्त मना है।",
+            "mr": "अगदी बरोबर! असेंब्ली लाईनवर जुना माल वापरून रॅक मोकळे होईपर्यंत ट्रक वेटिंग यार्डमध्ये थांबवला जातो. डॉकवर रस्त्यात माल टाकण्यास सक्त मनाई आहे."
+          }
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Incorrect! Never dump material in active dock corridors or send the supplier away. Truck must wait in parking bay until pallet locations clear.",
+            "hi": "गलत! सक्रिय डॉक गलियारों में सामग्री कभी न फेंके या आपूर्तिकर्ता को वापस न भेजें। पैलेट स्थान खाली होने तक ट्रक को पार्किंग बे में प्रतीक्षा करनी चाहिए।",
+            "mr": "चुकीचे! डॉकच्या चालण्याच्या जागेत माल टाकू नका किंवा ट्रकला परत पाठवू नका. जागा मोकळी होईपर्यंत ट्रक पार्किंगमध्ये थांबवला पाहिजे."
+          }
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c1-q07-max-stock-full",
+        "safetyCritical": true,
+        "question": {
+          "en": "The maximum stock capacity for this material is full in the warehouse. What must the DEO do?",
+          "hi": "गोदाम में इस सामग्री के लिए अधिकतम स्टॉक क्षमता भरी हुई है। DEO को क्या करना चाहिए?",
+          "mr": "गोदामामध्ये या साहित्याची कमाल क्षमता पूर्ण भरलेली आहे. DEO ने काय केले पाहिजे?"
+        },
+        "options": [
+          {
+            "id": "opt_wait_pallet_clear",
+            "correct": true,
+            "label": {
+              "en": "Keep truck in waiting bay until assembly consumes stock and frees pallet positions, then process gate entry",
+              "hi": "ट्रक को प्रतीक्षा बे में तब तक रखें जब तक कि असेंबली स्टॉक की खपत न करे और पैलेट की जगह खाली न हो जाए, फिर गेट एंट्री प्रोसेस करें",
+              "mr": "असेंब्ली लाईनने माल वापरून जागा मोकळी करेपर्यंत ट्रकला वेटिंग एरियात थांबवणे आणि नंतरच गेट एंट्री करणे"
+            }
+          },
+          {
+            "id": "opt_unload_on_floor",
+            "correct": false,
+            "label": {
+              "en": "Instruct driver to dump all pallets directly on the dock walking floor to clear the truck quickly",
+              "hi": "ट्रक को जल्दी खाली करने के लिए चालक को डॉक के फर्श पर सीधे सभी पैलेट फेंकने का निर्देश दें",
+              "mr": "ट्रक पटकन मोकळा करण्यासाठी डॉकवरील चालण्याच्या रस्त्यावरच सर्व माल उतरवून ठेवण्यास सांगणे"
+            }
+          },
+          {
+            "id": "opt_send_truck_back",
+            "correct": false,
+            "label": {
+              "en": "Permanently reject and send the delivery truck back to the supplier without consulting Inbound Manager",
+              "hi": "इनबाउंड मैनेजर से परामर्श किए बिना डिलीवरी ट्रक को स्थायी रूप से अस्वीकार करें और आपूर्तिकर्ता को वापस भेजें",
+              "mr": "मॅनेजरला न विचारताच ट्रकला परत पाठवून डिलिव्हरी कायमस्वरूपी नाकारणे"
+            }
+          },
+          {
+            "id": "opt_fake_gate_pass",
+            "correct": false,
+            "label": {
+              "en": "Generate a fictitious gate entry and abandon the parts outside the security booth",
+              "hi": "एक काल्पनिक गेट एंट्री बनाएं और सुरक्षा बूथ के बाहर पुर्जे छोड़ दें",
+              "mr": "खोट्या गेट एंट्रीची नोंद करून सुरक्षा केबिनबाहेर माल सोडून देणे"
+            }
+          }
+        ],
+        "prompt": {
+          "en": "The maximum stock capacity for this material is full in the warehouse. What must the DEO do?",
+          "hi": "गोदाम में इस सामग्री के लिए अधिकतम स्टॉक क्षमता भरी हुई है। DEO को क्या करना चाहिए?",
+          "mr": "गोदामामध्ये या साहित्याची कमाल क्षमता पूर्ण भरलेली आहे. DEO ने काय केले पाहिजे?"
+        },
+        "id": "c1-q07-max-stock-full"
+      },
+      "rules": {
+        "xp": 115,
+        "sopClause": "SOP XXXX_PRO_001 Clause 4.2.1 & Question Bank Q7",
+        "why": {
+          "en": "SOP Clause 4.2.1 dictates: If warehouse capacity is full, the truck remains safely staged in the waiting parking area. Once internal assembly consumption frees designated pallet positions, the DEO executes the gate entry and allocates an unloading dock.",
+          "hi": "SOP क्लॉज 4.2.1 निर्देश देता है: यदि गोदाम की क्षमता भरी हुई है, तो ट्रक प्रतीक्षा पार्किंग क्षेत्र में सुरक्षित रूप से रहता है। एक बार आंतरिक खपत से पैलेट स्थान खाली हो जाने पर, DEO गेट एंट्री निष्पादित करता है।",
+          "mr": "SOP कलम 4.2.1 सांगते: गोदामात जागा नसल्यास ट्रक वेटिंग पार्किंगमध्येच थांबवला जातो. असेंब्लीने माल वापरून जागा मोकळी केल्यावरच DEO गेट एंट्री करून डॉक नंबर देतो."
         }
       }
     }

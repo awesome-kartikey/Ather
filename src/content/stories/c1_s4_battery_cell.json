@@ -87,7 +87,13 @@
           "en": "ALLOW: Speed up dock clearing by letting the manual helper move the pallet",
           "hi": "अनुमति दें: हेल्पर को पैलेट ले जाने देकर डॉक खाली करने की गति तेज करें",
           "mr": "परवानगी द्या: मदतनीसाला पॅलेट हलवू देऊन डॉक लवकर मोकळा करा"
-        }
+        },
+        "prompt": {
+          "en": "A general warehouse helper attempts to move an unloaded lithium-ion battery cell pallet using a manual hand pallet truck (HPT) to clear the dock floor. Allow or halt this transfer?",
+          "hi": "एक सामान्य वेयरहाउस हेल्पर डॉक फर्श को खाली करने के लिए मैनुअल हैंड पैलेट ट्रक (HPT) का उपयोग करके अनलोड किए गए लिथियम-आयन बैटरी सेल पैलेट को स्थानांतरित करने का प्रयास करता है। इस स्थानांतरण की अनुमति दें या रोकें?",
+          "mr": "एक सामान्य वेअरहाऊस हेल्पर डॉकची जागा मोकळी करण्यासाठी मॅन्युअल हँड पॅलेट ट्रक (HPT) चा वापर करून अनलोड केलेले लिथियम-आयन बॅटरी सेल पॅलेट हलवण्याचा प्रयत्न करतो. या हालचालीस परवानगी द्यावी की थांबवावी?"
+        },
+        "id": "c1-q19"
       },
       "rules": {
         "xp": 110,
@@ -189,7 +195,13 @@
               "mr": "अति शीतगृह: 0°C खाली आणि 10% – 20% RH (इलेक्ट्रोलाइट गोठण्यास कारणीभूत ठरते)"
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "Under Ather AURIC SOP Clause 4.2, what are the mandatory environmental thresholds for the Battery Cell Standard Room?",
+          "hi": "एथर AURIC SOP क्लॉज 4.2 के तहत, बैटरी सेल स्टैंडर्ड रूम के लिए अनिवार्य पर्यावरणीय सीमाएं क्या हैं?",
+          "mr": "एथर AURIC SOP कलम 4.2 नुसार, बॅटरी सेल स्टँडर्ड रूमसाठी अनिवार्य पर्यावरणीय मर्यादा कोणत्या आहेत?"
+        },
+        "id": "c1-q20"
       },
       "rules": {
         "xp": 110,
@@ -291,7 +303,13 @@
               "mr": "पॅलेटवर GRN स्टिकर चिटकवलेला असेपर्यंत कोणतीही वेळ मर्यादा नाही"
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "Under Ather AURIC SOP Clause 4.3, what is the mandatory maximum SLA window for completing battery cell put-away from GRN staging into the standard room?",
+          "hi": "एथर AURIC SOP क्लॉज 4.3 के तहत, GRN स्टेजिंग से मानक कक्ष में बैटरी सेल पुट-अवे को पूरा करने के लिए अनिवार्य अधिकतम SLA समय सीमा क्या है?",
+          "mr": "एथर AURIC SOP कलम 4.3 नुसार, GRN स्टेजिंगमधून स्टँडर्ड रूममध्ये बॅटरी सेल पुट-अवे पूर्ण करण्यासाठी अनिवार्य कमाल SLA कालमर्यादा काय आहे?"
+        },
+        "id": "c1-q20b"
       },
       "rules": {
         "xp": 115,
@@ -393,7 +411,13 @@
               "mr": "एरर कोड घालवण्यासाठी वॉल सेन्सर अनप्लग करा किंवा सायरन बंद करा"
             }
           }
-        ]
+        ],
+        "prompt": {
+          "en": "While transporting lithium-ion cells into the Standard Room, the wall telemetry flashes an amber alert: Relative Humidity has spiked to 75% (Limit: 60%–65%). What is your mandatory SOP action?",
+          "hi": "मानक कक्ष में लिथियम-आयन सेल ले जाते समय, दीवार की टेलीमेट्री एम्बर अलर्ट प्रदर्शित करती है: सापेक्ष आर्द्रता 75% (सीमा: 60%–65%) तक बढ़ गई है। आपकी अनिवार्य SOP कार्रवाई क्या है?",
+          "mr": "स्टँडर्ड रूममध्ये लिथियम-आयन सेल्स नेताना, वॉल टेलिमेट्री एम्बर अलर्ट दर्शवते: सापेक्ष आर्द्रता 75% (मर्यादा: 60%–65%) पर्यंत वाढली आहे. तुमची अनिवार्य SOP कृती काय आहे?"
+        },
+        "id": "c1-q20c"
       },
       "rules": {
         "xp": 120,
@@ -402,6 +426,102 @@
           "en": "SOP Clause 5.2 mandates strict containment in the event of cleanroom climate failure. Battery cells are hyper-hygroscopic at the component level. If humidity surpasses 65% RH, moisture adheres to terminal surfaces, causing accelerated oxidation, short circuits, and thermal runaway. The operator must cease all transfers, isolate the chamber, and allow facilities engineering to restore the HVAC dehumidification system before any further cell placement.",
           "hi": "SOP क्लॉज 5.2 क्लीनरूम जलवायु विफलता की स्थिति में सख्त नियंत्रण का आदेश देता है। बैटरी सेल घटक स्तर पर अत्यधिक नमी सोखने वाले होते हैं। यदि आर्द्रता 65% RH से अधिक हो जाती है, तो टर्मिनल सतहों पर नमी चिपक जाती है, जिससे तेज ऑक्सीकरण, शॉर्ट सर्किट और थर्मल रनवे होता है। ऑपरेटर को सभी स्थानांतरण बंद करने होंगे, कक्ष को अलग करना होगा, और आगे किसी भी सेल प्लेसमेंट से पहले सुविधा इंजीनियरिंग को HVAC डीह्यूमिडिफिकेशन सिस्टम को बहाल करने की अनुमति देनी होगी।",
           "mr": "SOP कलम 5.2 क्लीनरूम क्लायमेट अयशस्वी झाल्यास कडक नियंत्रणाचे आदेश देते. बॅटरी सेल्स आर्द्रता पटकन शोषून घेतात. आर्द्रता 65% RH पेक्षा जास्त झाल्यास, टर्मिनल्सवर ओलावा साचतो, ज्यामुळे ऑक्सिडेशन, शॉर्ट सर्किट आणि थर्मल रनवे होतो. ऑपरेटरने सर्व हालचाली थांबवून चेंबर सील केले पाहिजे आणि पुढील सेल ठेवण्यापूर्वी मेंटेनन्स टीमला HVAC सिस्टीम पूर्ववत करू दिली पाहिजे."
+        }
+      }
+    },
+    {
+      "id": "c1_s4_sc05_pallet_stacking_integrity",
+      "stepNumber": 5,
+      "title": {
+        "en": "Cell Crate Stacking Limits & Physical Seal Integrity",
+        "hi": "सेल क्रेट स्टैकिंग सीमाएं और भौतिक सील अखंडता",
+        "mr": "सेल क्रेट स्टॅकिंग मर्यादा आणि सील अखंडता"
+      },
+      "media": {
+        "videoSrc": "/videos/scenes/c1_s4_sc05_stacking_limit.mp4",
+        "posterSrc": "/images/scenes/c1_s4_sc05_poster.jpg",
+        "fallbackAnimation": "battery_stacking_seal",
+        "durationSeconds": 18,
+        "pauseAtSecond": 3.5
+      },
+      "mascot": {
+        "intro": {
+          "pose": "warning",
+          "text": {
+            "en": "Final Stage 4 Battery Cell Challenge! Inside the battery standard room, floor space is tight. An operator notices two lithium-ion cell crates already stacked on a pallet position and attempts to hoist a third crate on top (3-high stacking) while also ignoring a triggered red ShockWatch indicator on the box corner. Should this be allowed or stopped immediately?",
+            "hi": "अंतिम स्टेज 4 बैटरी सेल चुनौती! बैटरी स्टैंडर्ड रूम के अंदर, फर्श पर जगह कम है। एक ऑपरेटर एक पैलेट स्थिति पर पहले से ही रखे दो लिथियम-आयन सेल क्रेट देखता है और बॉक्स के कोने पर ट्रिगर किए गए लाल ShockWatch संकेतक को अनदेखा करते हुए शीर्ष पर तीसरा क्रेट (3-उच्च स्टैकिंग) फहराने का प्रयास करता है। क्या इसकी अनुमति दी जानी चाहिए या तुरंत रोका जाना चाहिए?",
+            "mr": "अंतिम टप्पा 4 बॅटरी सेल आव्हान! बॅटरी स्टँडर्ड रूममध्ये जागा कमी आहे. एका ऑपरेटरला पॅलेटवर आधीच ठेवलेले दोन लिथियम-आयन सेल क्रेट्स दिसतात आणि तो बॉक्सच्या कोपऱ्यावरील लाल ShockWatch इंडिकेटरकडे दुर्लक्ष करून त्यावर तिसरा क्रेट (3-हाय स्टॅकिंग) ठेवण्याचा प्रयत्न करतो. यास परवानगी द्यावी की ताबडतोब थांबवावे?"
+          },
+          "audioSrc": "/audio/mascot/c1_s4_sc05_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "trophy",
+          "text": {
+            "en": "STOP IS ABSOLUTELY MANDATORY! SOP Clause 4.4: Lithium-ion battery cell crates have a strict maximum stacking limit of 2 crates high to prevent bottom pouch crushing and internal dielectric puncture. Furthermore, any red ShockWatch or tilt indicator trigger mandates immediate quarantine isolation and Quality Engineering review. Battery Cell Put-Away Module 4 is now 100% complete!",
+            "hi": "STOP बिल्कुल अनिवार्य है! SOP क्लॉज 4.4: लिथियम-आयन बैटरी सेल क्रेट में नीचे के पाउच को दबने और आंतरिक ढांचा क्षतिग्रस्त होने से रोकने के लिए अधिकतम 2 क्रेट की सख्त स्टैकिंग सीमा होती है। इसके अलावा, कोई भी लाल ShockWatch या टिल्ट इंडिकेटर ट्रिगर होने पर तत्काल क्वारंटाइन अलगाव और गुणवत्ता इंजीनियरिंग समीक्षा अनिवार्य है। मॉड्यूल 4 अब 100% पूरा हुआ!",
+            "mr": "STOP पूर्णपणे अनिवार्य आहे! SOP कलम 4.4: खालच्या पेशी दबणे आणि अंतर्गत नुकसान रोखण्यासाठी लिथियम-आयन बॅटरी सेल क्रेट्सची कमाल स्टॅकिंग मर्यादा काटेकोरपणे 2 क्रेट्स आहे. याव्यतिरिक्त, लाल ShockWatch किंवा टिल्ट इंडिकेटर दिसल्यास त्वरित क्वारंटाइन आणि क्वालिटी इंजिनिअरिंग तपासणी अनिवार्य आहे. मॉड्यूल 4 आता 100% पूर्ण झाले आहे!"
+          },
+          "audioSrc": "/audio/mascot/c1_s4_sc05_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "CRITICAL SAFETY HAZARD! Stacking 3 crates high crushes fragile lithium-ion pouches, risking electrolyte leakage and internal short-circuit fire. A red shock indicator means the shipment suffered severe impact during transit and cannot enter active assembly stock!",
+            "hi": "गंभीर सुरक्षा खतरा! 3 क्रेट ऊंचे रखने से नाजुक लिथियम-आयन पाउच दब जाते हैं, जिससे इलेक्ट्रोलाइट रिसाव और आंतरिक शॉर्ट-सर्किट आग लगने का खतरा होता है। एक लाल शॉक संकेतक का मतलब है कि शिपमेंट को पारगमन के दौरान गंभीर झटका लगा है और यह सक्रिय असेंबली स्टॉक में प्रवेश नहीं कर सकता है!",
+            "mr": "गंभीर सुरक्षा धोका! 3 क्रेट्स एकावर एक ठेवल्यास नाजूक सेल्स दबले जातात, ज्यामुळे इलेक्ट्रोलाइट गळती आणि अंतर्गत शॉर्ट-सर्किटमुळे आग लागण्याचा धोका असतो. लाल शॉक इंडिकेटर दर्शवतो की वाहतुकीदरम्यान मोठा धक्का बसला आहे, त्यामुळे ते सक्रिय असेंब्ली स्टॉकमध्ये जाऊ शकत नाही!"
+          },
+          "audioSrc": "/audio/mascot/c1_s4_sc05_wrong.mp3"
+        }
+      },
+      "interaction": {
+        "type": "stop_go",
+        "questionId": "c1-q20d",
+        "safetyCritical": true,
+        "question": {
+          "en": "An operator attempts to stack battery cell crates 3-high on a storage pallet despite a triggered red ShockWatch impact indicator on the carton. Allow or halt?",
+          "hi": "कार्टन पर ट्रिगर किए गए लाल ShockWatch प्रभाव संकेतक के बावजूद एक ऑपरेटर स्टोरेज पैलेट पर बैटरी सेल क्रेट को 3-उच्च स्टैक करने का प्रयास करता है। अनुमति दें या रोकें?",
+          "mr": "कार्टनवर लाल ShockWatch इंडिकेटर ट्रिगर झालेला असतानाही एक ऑपरेटर स्टोरेज पॅलेटवर बॅटरी सेल क्रेट्स 3-थरांमध्ये ठेवण्याचा प्रयत्न करतो. परवानगी द्यावी की थांबवावी?"
+        },
+        "situation": {
+          "en": "AUDIT: Attempted 3-tier stacking of UN 3480 Lithium-Ion cell crates. ShockWatch label shows RED trigger (impact >50G).",
+          "hi": "ऑडिट: UN 3480 लिथियम-आयन सेल क्रेट्स की 3-स्तरीय स्टैकिंग का प्रयास। ShockWatch लेबल लाल ट्रिगर (प्रभाव >50G) दिखाता है।",
+          "mr": "ऑडिट: UN 3480 लिथियम-आयन सेल क्रेट्सचे 3-स्तरीय स्टॅकिंग करण्याचा प्रयत्न. ShockWatch लेबल लाल ट्रिगर (इम्पॅक्ट >50G) दर्शवते."
+        },
+        "correctAction": "stop",
+        "stopLabel": {
+          "en": "STOP — HALT STACKING & QUARANTINE",
+          "hi": "STOP — स्टैकिंग रोकें और क्वारंटाइन करें",
+          "mr": "STOP — स्टॅकिंग थांबवा आणि क्वारंटाइन करा"
+        },
+        "goLabel": {
+          "en": "GO — ALLOW 3-HIGH STACKING",
+          "hi": "GO — 3-उच्च स्टैकिंग की अनुमति दें",
+          "mr": "GO — 3-हाय स्टॅकिंगला परवानगी द्या"
+        },
+        "stopDescription": {
+          "en": "HALT: Max stacking is 2 crates high and red shock indicator requires mandatory Quality quarantine (Clause 4.4)",
+          "hi": "रोकें: अधिकतम स्टैकिंग 2 क्रेट ऊंची है और लाल शॉक संकेतक के लिए अनिवार्य गुणवत्ता क्वारंटाइन की आवश्यकता है (क्लॉज 4.4)",
+          "mr": "थांबवा: कमाल मर्यादा 2 क्रेट्स आहे आणि लाल शॉक इंडिकेटरसाठी अनिवार्य क्वालिटी क्वारंटाइन आवश्यक आहे (कलम 4.4)"
+        },
+        "goDescription": {
+          "en": "ALLOW: Save cleanroom floor space by stacking 3 crates high",
+          "hi": "अनुमति दें: 3 क्रेट ऊंचे रखकर क्लीनरूम फर्श की जगह बचाएं",
+          "mr": "परवानगी द्या: 3 क्रेट्स एकावर एक ठेवून क्लीनरूममधील जागा वाचवा"
+        },
+        "prompt": {
+          "en": "An operator attempts to stack battery cell crates 3-high on a storage pallet despite a triggered red ShockWatch impact indicator on the carton. Allow or halt?",
+          "hi": "कार्टन पर ट्रिगर किए गए लाल ShockWatch प्रभाव संकेतक के बावजूद एक ऑपरेटर स्टोरेज पैलेट पर बैटरी सेल क्रेट को 3-उच्च स्टैक करने का प्रयास करता है। अनुमति दें या रोकें?",
+          "mr": "कार्टनवर लाल ShockWatch इंडिकेटर ट्रिगर झालेला असतानाही एक ऑपरेटर स्टोरेज पॅलेटवर बॅटरी सेल क्रेट्स 3-थरांमध्ये ठेवण्याचा प्रयत्न करतो. परवानगी द्यावी की थांबवावी?"
+        },
+        "id": "c1-q20d"
+      },
+      "rules": {
+        "xp": 120,
+        "sopClause": "SOP for Plant Operations Putaway for Battery Cell Clause 4.4 & Quality Handling Standard",
+        "why": {
+          "en": "SOP Clause 4.4 dictates strict mechanical integrity safeguards for Class 9 lithium-ion cells. Pallet stacking is limited to a maximum of 2 tiers to avoid compressive deformation of cell anode/cathode layers. Any triggered impact sensor (ShockWatch/TiltWatch) indicates excessive transit g-force, requiring immediate segregation into IQC Quarantine for spectroscopic and impedance analysis.",
+          "hi": "SOP क्लॉज 4.4 क्लास 9 लिथियम-आयन सेल के लिए सख्त यांत्रिक सुरक्षा उपायों का आदेश देता है। सेल एनोड/कैथोड परतों के संपीड़न विरूपण से बचने के लिए पैलेट स्टैकिंग अधिकतम 2 स्तरों तक सीमित है। कोई भी ट्रिगर किया गया प्रभाव सेंसर (ShockWatch/TiltWatch) अत्यधिक पारगमन जी-बल को इंगित करता है, जिसके लिए स्पेक्ट्रोस्कोपिक और प्रतिबाधा विश्लेषण के लिए IQC संगरोध में तत्काल अलगाव की आवश्यकता होती है।",
+          "mr": "SOP कलम 4.4 क्लास 9 लिथियम-आयन सेल्ससाठी कडक यांत्रिक सुरक्षा उपायांचे निर्देश देते. सेलच्या थरांचे नुकसान टाळण्यासाठी पॅलेट स्टॅकिंग जास्तीत जास्त 2 थरांपर्यंत मर्यादित आहे. कोणताही ट्रिगर झालेला इम्पॅक्ट सेन्सर (ShockWatch/TiltWatch) वाहतुकीदरम्यान मोठा धक्का बसल्याचे दर्शवतो, ज्यासाठी तातडीने IQC क्वारंटाइनमध्ये वेगळे ठेवणे आवश्यक आहे."
         }
       }
     }
