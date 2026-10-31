@@ -1,0 +1,329 @@
+{
+  "stageId": "c2_s11",
+  "stageNumber": 11,
+  "stageTitle": {
+    "en": "Production Inspection & Quality PIR",
+    "hi": "उत्पादन निरीक्षण और गुणवत्ता पीआईआर",
+    "mr": "उत्पादन तपासणी आणि गुणवत्ता PIR"
+  },
+  "sopDoc": "05_C2_S3_PIR_AURIC",
+  "scenes": [
+    {
+      "id": "c2_s11_sc01_jira_budget_id",
+      "name": {
+        "en": "JIRA PIR Initiation & Budget ID Mandate",
+        "hi": "JIRA पीआईआर आरंभ और बजट आईडी अनिवार्यता",
+        "mr": "JIRA PIR सुरू करणे आणि बजेट आयडी बंधनकारक नियम"
+      },
+      "mascot": {
+        "name": "AURA",
+        "pose": "explaining",
+        "dialog": {
+          "en": "Welcome to Stage 11: Production Inspection & Quality Part Issuance Report (PIR)! At Ather AURIC, non-standard material requests (for engineering testing, validation, and warranty repairs) must be raised via a formal JIRA PIR ticket. These items are non-returnable and charged directly to a cost center. An R&D engineer arrives at the warehouse dock requesting 2 urgent battery packs with a JIRA ticket where the Budget ID field is blank, promising: 'Issue them now, I'll update the budget code in JIRA tomorrow.' Under SOP 05_C2_S3, can you issue the battery packs? STOP OR GO?",
+          "hi": "स्टेज 11 में आपका स्वागत है: उत्पादन निरीक्षण और गुणवत्ता पार्ट इश्यूअन्स रिपोर्ट (PIR)! एथर औरिक में, गैर-मानक सामग्री अनुरोध (इंजीनियरिंग परीक्षण, सत्यापन और वारंटी मरम्मत के लिए) एक औपचारिक JIRA PIR टिकट के माध्यम से उठाए जाने चाहिए। ये वस्तुएं गैर-वापसी योग्य हैं और सीधे लागत केंद्र से ली जाती हैं। एक आरएंडडी इंजीनियर गोदाम के डॉक पर 2 तत्काल बैटरी पैक का अनुरोध करते हुए एक JIRA टिकट के साथ आता है जहां बजट आईडी फ़ील्ड खाली है, यह वादा करते हुए: 'उन्हें अभी जारी करें, मैं कल JIRA में बजट कोड अपडेट कर दूंगा।' SOP 05_C2_S3 के तहत, क्या आप बैटरी पैक जारी कर सकते हैं? रुकें या जाएं?",
+          "mr": "स्टेज 11 मध्ये आपले स्वागत आहे: उत्पादन तपासणी आणि गुणवत्ता पार्ट इश्यूअन्स रिपोर्ट (PIR)! एथर औरिकमध्ये, विशेष कामांसाठी (उदा. R&D टेस्टिंग, व्हेलिडेशन, वॉरंटी बदल) लागणारे साहित्य JIRA PIR तिकिटाद्वारे मागवले जाते. हे साहित्य परत न येणारे (non-returnable) असते आणि त्याचा खर्च संबंधित विभागाच्या बजेट आयडीवर पडतो. एक R&D इंजिनिअर 2 बॅटरी पॅक मागण्यासाठी येतो, ज्याच्या JIRA तिकिटात बजेट आयडीची जागा रिकामी आहे; तो म्हणतो: 'आत्ता बॅटरी द्या, मी उद्या JIRA मध्ये बजेट आयडी टाकेन.' SOP 05_C2_S3 नुसार, तुम्ही बॅटरी पॅक देऊ शकता का? थांबा किंवा पुढे जा?"
+        }
+      },
+      "media": {
+        "type": "animation",
+        "fallbackAnimation": "c2_jira_budget_id",
+        "caption": {
+          "en": "Financial Cost Allocation Gate: Material issued under a PIR is non-returnable; valid Budget ID is mandatory before picking",
+          "hi": "वित्तीय लागत आवंटन गेट: पीआईआर के तहत जारी सामग्री गैर-वापसी योग्य है; पिकिंग से पहले वैध बजट आईडी अनिवार्य है",
+          "mr": "आर्थिक खर्च वाटप गेट: PIR अंतर्गत दिलेला माल परत येत नाही; माल उचलण्यापूर्वी वैध बजेट आयडी असणे सक्तीचे आहे"
+        }
+      },
+      "interaction": {
+        "type": "stop_go",
+        "questionId": "c2-q13-budget-id-gate",
+        "safetyCritical": true,
+        "question": {
+          "en": "DECISION GATE: Can warehouse personnel pick or issue materials when the JIRA PIR ticket is missing a Budget ID?",
+          "hi": "निर्णय गेट: क्या वेयरहाउस कर्मी सामान चुन या जारी कर सकते हैं जब JIRA PIR टिकट में बजट आईडी गायब हो?",
+          "mr": "निर्णय गेट: JIRA PIR तिकिटात बजेट आयडी नसताना गोदामातील कर्मचारी माल देऊ शकतात का?"
+        },
+        "situation": {
+          "en": "An R&D validation engineer urgently needs 2 battery packs (worth ₹1,65,000) for cold-chamber testing and presents JIRA ticket PIR-AURIC-1042 without a Budget ID, promising verbal email confirmation tomorrow.",
+          "hi": "एक आरएंडडी सत्यापन इंजीनियर को कोल्ड-चेंबर परीक्षण के लिए 2 बैटरी पैक (मूल्य ₹1,65,000) की तत्काल आवश्यकता है और बजट आईडी के बिना JIRA टिकट PIR-AURIC-1042 प्रस्तुत करता है, कल मौखिक ईमेल पुष्टि का वादा करता है।",
+          "mr": "एका R&D इंजिनिअरला टेस्टिंगसाठी 2 बॅटरी पॅक (किंमत ₹1,65,000) तात्काळ हवे आहेत आणि तो बजेट आयडी नसलेले JIRA तिकीट PIR-AURIC-1042 दाखवून 'उद्या ईमेलवर बजेट आयडी देतो' असे सांगतो."
+        },
+        "correctAction": "stop",
+        "stopLabel": {
+          "en": "STOP - MANDATE VALID BUDGET ID",
+          "hi": "रुकें - वैध बजट आईडी अनिवार्य करें",
+          "mr": "थांबा - वैध बजेट आयडीची सक्ती करा"
+        },
+        "goLabel": {
+          "en": "GO - ISSUE ON VERBAL PROMISE",
+          "hi": "आगे बढ़ें - मौखिक वादे पर जारी करें",
+          "mr": "पुढे जा - तोंडी आश्वासनावर माल द्या"
+        },
+        "stopDescription": {
+          "en": "Halt immediately. SOP 05_C2_S3 Failure Mode 5.2 strictly establishes: 'No Budget ID = No Picking.' PIR materials are non-returnable expenses charged directly to the requester's cost center. Picking without a Budget ID causes unallocated financial leakage and phantom inventory write-offs.",
+          "hi": "तुरंत रुकें। SOP 05_C2_S3 विफलता मोड 5.2 कड़ाई से स्थापित करता है: 'कोई बजट आईडी नहीं = कोई पिकिंग नहीं।' पीआईआर सामग्री गैर-वापसी योग्य खर्च है जो सीधे अनुरोधकर्ता के लागत केंद्र से लिया जाता है। बिना बजट आईडी के पिकिंग वित्तीय रिसाव का कारण बनती है।",
+          "mr": "त्वरित थांबा. SOP 05_C2_S3 अपयश मोड 5.2 कडकपणे सांगतो: 'बजेट आयडी नाही तर माल उचलणे नाही.' PIR चे साहित्य परत न येणारे असून त्याचा थेट खर्च संबंधित विभागावर टाकला जातो. बजेट आयडीशिवाय माल दिल्यास कंपनीचे मोठे आर्थिक नुकसान होते."
+        },
+        "goDescription": {
+          "en": "Issue the battery packs immediately because R&D projects have higher priority than accounting paperwork.",
+          "hi": "बैटरी पैक तुरंत जारी करें क्योंकि आरएंडडी परियोजनाओं को लेखांकन कागजी कार्रवाई की तुलना में अधिक प्राथमिकता प्राप्त है।",
+          "mr": "बॅटरी पॅक आत्ताच द्या कारण R&D चे काम कागदपत्रांपेक्षा जास्त महत्त्वाचे आहे."
+        }
+      },
+      "rules": {
+        "xp": 140,
+        "sopClause": "SOP for PIR AURIC Clause 4.1 & Failure Mode 5.2",
+        "why": {
+          "en": "SOP for PIR AURIC Clause 4.1 & Failure Mode 5.2 strictly defines: 'Items requested under the PIR process are considered non-returnable and are charged directly to the requester's Budget ID. Warehouse picker/packer must verify JIRA ticket for dual approvals and valid Budget ID before picking. Failure Point — Issuing Parts Without Budget ID: Material picked and issued without attached Budget ID prevents financial consumption posting and expense charging, resulting in unallocated company write-offs.' Strict financial poka-yoke gates protect plant operational budgets.",
+          "hi": "पीआईआर औरिक के लिए SOP क्लॉज 4.1 और विफलता मोड 5.2 कड़ाई से परिभाषित करता है: 'पीआईआर प्रक्रिया के तहत अनुरोधित वस्तुओं को गैर-वापसी योग्य माना जाता है और सीधे अनुरोधकर्ता के बजट आईडी पर चार्ज किया जाता है। वेयरहाउस पिकर/पैकर को पिकिंग से पहले दोहरे अनुमोदन और वैध बजट आईडी के लिए JIRA टिकट को सत्यापित करना होगा। बिना बजट आईडी के पुर्जे जारी करने से वित्तीय खपत पोस्टिंग रुक जाती है।' सख्त वित्तीय पोका-योक गेट संयंत्र के परिचालन बजट की रक्षा करते हैं।",
+          "mr": "SOP फॉर PIR औरिक कलम 4.1 आणि अपयश मोड 5.2 स्पष्ट आदेश देतो: 'PIR प्रक्रियेखाली मागवलेले साहित्य परत न येणारे (non-returnable) असते आणि त्याचा खर्च थेट मागणाऱ्याच्या बजेट आयडीवर टाकला जातो. गोदामातील कर्मचाऱ्याने माल उचलण्यापूर्वी JIRA तिकिटात वैध बजेट आयडी आणि आवश्यक मंजुऱ्या तपासल्याच पाहिजेत. बजेट आयडीशिवाय माल दिल्यास सिस्टीममध्ये खर्चाची नोंद होत नाही आणि गोदामात मोठी वित्तीय तूट निर्माण होते.' हा आर्थिक नियम पाळणे प्रत्येकावर बंधनकारक आहे."
+        }
+      }
+    },
+    {
+      "id": "c2_s11_sc02_pir_approvals",
+      "name": {
+        "en": "Dual Approval Thresholds: Value & Quantity",
+        "hi": "दोहरा अनुमोदन थ्रेशोल्ड: मूल्य और मात्रा",
+        "mr": "दुहेरी मंजुरी मर्यादा: किंमत आणि संख्या"
+      },
+      "mascot": {
+        "name": "AURA",
+        "pose": "explaining",
+        "dialog": {
+          "en": "Now that the Budget ID is verified on ticket PIR-AURIC-1042, the requester asks you to pick the materials immediately. However, the ticket requests 30 Brake Calipers worth ₹45,000. Under SOP 05_C2_S3 Clause 4.2 & Failure Mode 5.1, what two mandatory sign-offs are required before warehouse manpower is authorized to pick?",
+          "hi": "अब जब टिकट PIR-AURIC-1042 पर बजट आईडी सत्यापित हो गई है, तो अनुरोधकर्ता आपसे तुरंत सामग्री चुनने के लिए कहता है। हालांकि, टिकट में ₹45,000 मूल्य के 30 ब्रेक कैलीपर्स का अनुरोध किया गया है। SOP 05_C2_S3 क्लॉज 4.2 और विफलता मोड 5.1 के तहत, वेयरहाउस जनशक्ति को पिकिंग के लिए अधिकृत किए जाने से पहले कौन से दो अनिवार्य हस्ताक्षर आवश्यक हैं?",
+          "mr": "आता PIR-AURIC-1042 वर बजेट आयडी तपासला गेला आहे, पण विनंतीदार म्हणतो की ताबडतोब माल उचलून द्या. या तिकिटात ₹45,000 किमतीचे 30 ब्रेक कॅलिपर्स मागवले आहेत. SOP 05_C2_S3 कलम 4.2 आणि अपयश मोड 5.1 नुसार, गोदामातून माल उचलण्यापूर्वी कोणत्या दोन अधिकाऱ्यांची मंजुरी असणे अनिवार्य आहे?"
+        }
+      },
+      "media": {
+        "type": "animation",
+        "fallbackAnimation": "c2_pir_dual_approval",
+        "caption": {
+          "en": "Dual Approval Gate: Product Owner sign-off is mandatory if total value exceeds ₹25,000; Planning team sign-off is mandatory if quantity exceeds 25 Nos",
+          "hi": "दोहरा अनुमोदन गेट: कुल मूल्य ₹25,000 से अधिक होने पर उत्पाद स्वामी के हस्ताक्षर अनिवार्य हैं; मात्रा 25 से अधिक होने पर योजना टीम के हस्ताक्षर अनिवार्य हैं",
+          "mr": "दुहेरी मंजुरी गेट: एकूण किंमत ₹25,000 पेक्षा जास्त असल्यास प्रॉडक्ट ओनरची मंजुरी; संख्या 25 पेक्षा जास्त असल्यास प्लॅनिंग टीमची मंजुरी अनिवार्य आहे"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "id": "c2-q14-pir-approval-thresholds",
+        "prompt": {
+          "en": "Under SOP 05_C2_S3 Clause 4.2, what are the exact financial valuation and quantity thresholds that mandate Product Owner and Planning team approvals in JIRA?",
+          "hi": "SOP 05_C2_S3 क्लॉज 4.2 के तहत, सटीक वित्तीय मूल्यांकन और मात्रा थ्रेशोल्ड क्या हैं जो JIRA में उत्पाद स्वामी और योजना टीम के अनुमोदन को अनिवार्य करते हैं?",
+          "mr": "SOP 05_C2_S3 कलम 4.2 नुसार, JIRA मध्ये प्रॉडक्ट ओनर आणि प्लॅनिंग टीमची मंजुरी बंधनकारक करणाऱ्या नेमक्या आर्थिक आणि संख्येच्या मर्यादा कोणत्या आहेत?"
+        },
+        "options": [
+          {
+            "id": "opt_correct_thresholds",
+            "correct": true,
+            "label": {
+              "en": "Product Owner approval is mandatory whenever total valuation exceeds INR 25,000; Planning team approval is mandatory whenever any single part quantity exceeds 25 Nos",
+              "hi": "उत्पाद स्वामी का अनुमोदन अनिवार्य है जब भी कुल मूल्यांकन 25,000 रुपये से अधिक हो; योजना टीम का अनुमोदन अनिवार्य है जब भी किसी एक पुर्जे की मात्रा 25 नग से अधिक हो",
+              "mr": "एकूण किंमत 25,000 रुपयांपेक्षा जास्त झाल्यास प्रॉडक्ट ओनरची मंजुरी; कोणत्याही एका पार्टची संख्या 25 नगांपेक्षा जास्त झाल्यास प्लॅनिंग टीमची मंजुरी बंधनकारक आहे"
+            }
+          },
+          {
+            "id": "opt_wrong_high_threshold",
+            "correct": false,
+            "label": {
+              "en": "Approvals are only needed if the total valuation exceeds INR 10,00,000 or the quantity exceeds 1,000 Nos",
+              "hi": "अनुमोदन केवल तभी आवश्यक है जब कुल मूल्यांकन 10,00,000 रुपये से अधिक हो या मात्रा 1,000 नग से अधिक हो",
+              "mr": "केवळ 10 लाख रुपयांपेक्षा जास्त किंमत किंवा 1,000 नगांपेक्षा जास्त संख्या असल्यास मंजुरी लागते"
+            }
+          },
+          {
+            "id": "opt_no_approvals_needed",
+            "correct": false,
+            "label": {
+              "en": "No approvals are ever needed in JIRA; anyone with an email address can authorize dispatches",
+              "hi": "JIRA में कभी किसी अनुमोदन की आवश्यकता नहीं होती है; ईमेल पते वाला कोई भी व्यक्ति प्रेषण को अधिकृत कर सकता है",
+              "mr": "JIRA मध्ये कोणत्याही मंजुरीची गरज नसते; कोणीही ईमेल पाठवून माल मागवू शकतो"
+            }
+          },
+          {
+            "id": "opt_security_guard_only",
+            "correct": false,
+            "label": {
+              "en": "The main gate security guard signs all PIR tickets using a physical ballpoint pen",
+              "hi": "मेन गेट सुरक्षा गार्ड एक भौतिक बॉलपॉइंट पेन का उपयोग करके सभी पीआईआर टिकटों पर हस्ताक्षर करता है",
+              "mr": "मेन गेटवरील सिक्युरिटी गार्ड पेनने स्वाक्षरी करून सर्व PIR तिकिटे मंजूर करतो"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 145,
+        "sopClause": "SOP for PIR AURIC Clause 4.2 & Failure Mode 5.1",
+        "why": {
+          "en": "SOP for PIR AURIC Clause 4.2 & Failure Mode 5.1 explicitly mandates: 'Obtain Product Owner authorization whenever total PIR valuation surpasses INR 25,000. Mandate Planning team approval if any single part quantity exceeds 25 Nos (UoM). Failure Point — High-Value/Bulk Parts Issued Without Approval: Issuing parts, complete batteries, or vehicles without mandatory leadership sign-offs leads to budget overruns and assembly line shortages. Corrective Action: Enforce automated approval gates in JIRA before warehouse assignment.' Dual threshold controls safeguard both budget and production material availability.",
+          "hi": "पीआईआर औरिक के लिए SOP क्लॉज 4.2 और विफलता मोड 5.1 स्पष्ट रूप से आदेश देता है: 'जब भी कुल पीआईआर मूल्यांकन 25,000 रुपये से अधिक हो, तो उत्पाद स्वामी प्राधिकरण प्राप्त करें। यदि किसी एक हिस्से की मात्रा 25 नग से अधिक हो तो योजना टीम के अनुमोदन को अनिवार्य करें।' बिना अनुमोदन के उच्च-मूल्य या थोक भागों को जारी करने से लाइन में कमी और बजट रिसाव होता है।",
+          "mr": "SOP फॉर PIR औरिक कलम 4.2 आणि अपयश मोड 5.1 स्पष्ट आदेश देतो: 'एकूण PIR किंमत ₹25,000 च्या पुढे गेल्यास प्रॉडक्ट ओनरची मंजुरी अनिवार्य आहे. तसेच कोणत्याही एका पार्टची संख्या 25 नगांपेक्षा जास्त असल्यास प्लॅनिंग टीमची मंजुरी बंधनकारक आहे.' मंजुरीशिवाय महागडे पार्ट किंवा जास्त संख्येने पार्ट दिल्यास मुख्य असेंब्ली लाईनवर माल संपून लाईन बंद पडण्याचा धोका असतो."
+        }
+      }
+    },
+    {
+      "id": "c2_s11_sc03_pir_cutoff_clock",
+      "name": {
+        "en": "The 4:00 PM Dispatch SLA Cutoff Clock",
+        "hi": "शाम 4:00 बजे प्रेषण SLA कटऑफ घड़ी",
+        "mr": "दुपारी 4:00 वाजताची डिस्पॅच SLA कटऑफ वेळ"
+      },
+      "mascot": {
+        "name": "AURA",
+        "pose": "explaining",
+        "dialog": {
+          "en": "A fully authorized PIR ticket for 5 replacement instrument clusters arrives in the warehouse dispatch queue at 4:15 PM on Friday afternoon. Under SOP 05_C2_S3 Clause 4.2 & Failure Mode 5.1, what is the mandatory dispatch schedule and warehouse handling rule?",
+          "hi": "5 प्रतिस्थापन उपकरण क्लस्टर के लिए एक पूरी तरह से अधिकृत पीआईआर टिकट शुक्रवार दोपहर 4:15 बजे वेयरहाउस प्रेषण कतार में आता है। SOP 05_C2_S3 क्लॉज 4.2 और विफलता मोड 5.1 के तहत, अनिवार्य प्रेषण कार्यक्रम और वेयरहाउस हैंडलिंग नियम क्या है?",
+          "mr": "5 नवीन इन्स्ट्रुमेंट क्लस्टर्ससाठी सर्व मंजुऱ्या मिळालेले एक PIR तिकीट शुक्रवारी दुपारी 4:15 वाजता गोदामाच्या डिस्पॅच स्क्रीनवर येते. SOP 05_C2_S3 कलम 4.2 आणि अपयश मोड 5.1 नुसार, डिस्पॅचचे वेळापत्रक आणि गोदामाचा अनिवार्य नियम काय सांगतो?"
+        }
+      },
+      "media": {
+        "type": "animation",
+        "fallbackAnimation": "c2_pir_cutoff_clock",
+        "caption": {
+          "en": "The 4:00 PM Daily Cutoff: Requests cleared prior to 4 PM dispatch same day; tickets cleared after 4 PM automatically queue for next working day",
+          "hi": "दैनिक 4:00 बजे कटऑफ: शाम 4 बजे से पहले स्वीकृत अनुरोध उसी दिन प्रेषित होते हैं; शाम 4 बजे के बाद स्वीकृत टिकट स्वचालित रूप से अगले कार्य दिवस के लिए कतारबद्ध होते हैं",
+          "mr": "दुपारी 4:00 वाजताचा कटऑफ: दुपारी 4 पूर्वी मंजूर झालेले तिकीट त्याच दिवशी डिस्पॅच होते; दुपारी 4 नंतर मंजूर झालेले तिकीट आपोआप पुढच्या कामाच्या दिवशी पाठवले जाते"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "id": "c2-q15-cutoff-clock",
+        "prompt": {
+          "en": "Under SOP 05_C2_S3 Clause 4.2 & Failure Mode 5.1, how does the 4:00 PM daily cutoff determine PIR outbound dispatch timelines?",
+          "hi": "SOP 05_C2_S3 क्लॉज 4.2 और विफलता मोड 5.1 के तहत, दैनिक 4:00 बजे का कटऑफ पीआईआर आउटबाउंड प्रेषण समयसीमा कैसे निर्धारित करता है?",
+          "mr": "SOP 05_C2_S3 कलम 4.2 आणि अपयश मोड 5.1 नुसार, दुपारी 4:00 वाजताचा कटऑफ नियम PIR डिस्पॅचची वेळ कशी ठरवतो?"
+        },
+        "options": [
+          {
+            "id": "opt_next_working_day",
+            "correct": true,
+            "label": {
+              "en": "PIR tickets approved prior to 4:00 PM are dispatched same-day; tickets approved after the 4:00 PM daily cutoff are automatically queued for picking and dispatch on the next working day",
+              "hi": "शाम 4:00 बजे से पहले स्वीकृत पीआईआर टिकट उसी दिन प्रेषित किए जाते हैं; दैनिक 4:00 बजे कटऑफ के बाद स्वीकृत टिकट स्वचालित रूप से अगले कार्य दिवस पर पिकिंग और प्रेषण के लिए कतारबद्ध होते हैं",
+              "mr": "दुपारी 4:00 पूर्वी मंजूर झालेली PIR तिकिटे त्याच दिवशी पाठवली जातात; दुपारी 4:00 नंतर मंजूर झालेली तिकिटे आपोआप पुढच्या कामाच्या दिवशी सकाळी पिकिंग आणि डिस्पॅचसाठी लावली जातात"
+            }
+          },
+          {
+            "id": "opt_midnight_overtime",
+            "correct": false,
+            "label": {
+              "en": "Warehouse operators are forced to work until midnight to pack every late ticket immediately regardless of carrier cutoff",
+              "hi": "वेयरहाउस ऑपरेटरों को कैरियर कटऑफ की परवाह किए बिना तुरंत हर देर से आने वाले टिकट को पैक करने के लिए आधी रात तक काम करने के लिए मजबूर किया जाता है",
+              "mr": "रात्री 12 वाजेपर्यंत थांबवून सर्व उशिरा आलेली तिकिटे त्याच रात्री जबरदस्तीने पाठवली जातात"
+            }
+          },
+          {
+            "id": "opt_cancel_friday",
+            "correct": false,
+            "label": {
+              "en": "Cancel the request because outbound dispatches are permanently forbidden on Friday afternoons",
+              "hi": "अनुरोध रद्द करें क्योंकि शुक्रवार दोपहर को आउटबाउंड प्रेषण स्थायी रूप से प्रतिबंधित है",
+              "mr": "शुक्रवारी दुपारी डिस्पॅच करण्यास बंदी असल्याने विनंती थेट रद्द केली जाते"
+            }
+          },
+          {
+            "id": "opt_throw_away",
+            "correct": false,
+            "label": {
+              "en": "Leave the materials unboxed outside the dock gate for any passerby driver to collect",
+              "hi": "किसी भी राहगीर चालक को एकत्र करने के लिए डॉक गेट के बाहर बिना डिब्बे के सामग्री छोड़ दें",
+              "mr": "कोणीही गाडीवाला घेऊन जाईल म्हणून डॉकच्या बाहेर उघड्यावर माल टाकून देणे"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 145,
+        "sopClause": "SOP for PIR AURIC Clause 4.2 & Failure Mode 5.1",
+        "why": {
+          "en": "SOP for PIR AURIC Clause 4.2 & Failure Mode 5.1 explicitly defines: 'Track and complete all necessary approvals prior to 4:00 PM daily cutoff to meet same-day or next-working-day SLA. PIRs approved before 4:00 PM on a standard working day are dispatched or issued same day. Requests cleared after 4:00 PM are automatically scheduled for the next working day. Failure Point — Missed 4 PM Cutoff & Delayed Dispatches: Approvals cleared late in the shift miss transport carrier connections; strict adherence to the 4 PM cutoff eliminates dock congestion and guarantees reliable logistics scheduling.' Setting an uncompromised 4 PM gate prevents shift handover chaos.",
+          "hi": "पीआईआर औरिक के लिए SOP क्लॉज 4.2 और विफलता मोड 5.1 स्पष्ट रूप से परिभाषित करता है: 'समान-दिन या अगले कार्य दिवस SLA को पूरा करने के लिए दैनिक 4:00 बजे कटऑफ से पहले सभी आवश्यक अनुमोदन को ट्रैक और पूरा करें। शाम 4:00 बजे से पहले स्वीकृत पीआईआर उसी दिन प्रेषित किए जाते हैं। शाम 4:00 बजे के बाद स्वीकृत अनुरोध स्वचालित रूप से अगले कार्य दिवस के लिए निर्धारित होते हैं।' 4 बजे का कटऑफ नियम डॉक पर भीड़भाड़ को रोकता है।",
+          "mr": "SOP फॉर PIR औरिक कलम 4.2 आणि अपयश मोड 5.1 स्पष्ट नियम सांगतो: 'दुपारी 4:00 पूर्वी सर्व आवश्यक मंजुऱ्या मिळालेले PIR तिकीट त्याच दिवशी डिस्पॅच केले जाते. दुपारी 4:00 नंतर मंजुरी मिळालेली तिकिटे आपोआप पुढील कामाच्या दिवशी सकाळी शेड्यूल केली जातात.' 4:00 चा कटऑफ नियम पाळल्याने संध्याकाळच्या शिफ्टमध्ये गोंधळ होत नाही आणि ट्रान्सपोर्ट गाड्या वेळेवर निघतात."
+        }
+      }
+    },
+    {
+      "id": "c2_s11_sc04_sap_sto_compliance",
+      "name": {
+        "en": "SAP STO Processing & E-Way Bill Gate Compliance",
+        "hi": "SAP STO प्रसंस्करण और ई-वे बिल गेट अनुपालन",
+        "mr": "SAP STO प्रक्रिया आणि ई-वे बिल गेट पडताळणी"
+      },
+      "mascot": {
+        "name": "AURA",
+        "pose": "proud",
+        "dialog": {
+          "en": "The 30 brake calipers have been picked, foam-packed, and staged for dispatch to an Inter-Branch Plant (IBC). Outbound Delivery VL10B and Post Goods Issue VL02N are posted in SAP. The transport carrier truck is waiting at the exit gatehouse. Under SOP 05_C2_S3 Clause 4.3 & Failure Mode 5.4, what full documentation kit must Security physically verify before lifting the boom barrier?",
+          "hi": "30 ब्रेक कैलीपर्स को चुना गया है, फोम-पैक किया गया है और एक इंटर-ब्रांच प्लांट (IBC) में प्रेषण के लिए तैयार किया गया है। आउटबाउंड डिलीवरी VL10B और पोस्ट गुड्स इश्यू VL02N को SAP में पोस्ट किया गया है। ट्रांसपोर्ट कैरियर ट्रक एग्जिट गेटहाउस पर इंतजार कर रहा है। SOP 05_C2_S3 क्लॉज 4.3 और विफलता मोड 5.4 के तहत, बूम बैरियर उठाने से पहले सुरक्षा को भौतिक रूप से किस पूर्ण दस्तावेज़ीकरण किट को सत्यापित करना होगा?",
+          "mr": "30 ब्रेक कॅलिपर्स सुरक्षित फोममध्ये पॅक करून दुसऱ्या शाखेला (IBC) पाठवण्यासाठी तयार आहेत. SAP मध्ये आउटबाउंड डिलिव्हरी VL10B आणि पोस्ट गुड्स इश्यू VL02N ची नोंद झाली आहे. ट्रान्सपोर्टचा ट्रक बाहेर पडण्याच्या गेटवर उभा आहे. SOP 05_C2_S3 कलम 4.3 आणि अपयश मोड 5.4 नुसार, गेटचा बूम बॅरियर उघडण्यापूर्वी सिक्युरिटीने कोणत्या तीन अनिवार्य कागदपत्रांची तपासणी केली पाहिजे?"
+        }
+      },
+      "media": {
+        "type": "animation",
+        "fallbackAnimation": "c2_sap_sto_compliance",
+        "caption": {
+          "en": "Transport Compliance Kit: Security mandates printed SAP Invoice (YPR_STO), Delivery Challan (DC), and Government E-Way Bill before gate exit",
+          "hi": "परिवहन अनुपालन किट: गेट से बाहर निकलने से पहले सुरक्षा मुद्रित एसएपी चालान (YPR_STO), डिलीवरी चालान (DC), और सरकारी ई-वे बिल अनिवार्य करती है",
+          "mr": "वाहतूक नियम संच: गेटवरून गाडी बाहेर सोडण्यापूर्वी सिक्युरिटी छापील SAP इनव्हॉइस (YPR_STO), डिलिव्हरी चलन (DC) आणि सरकारी ई-वे बिल तपासणे अनिवार्य आहे"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "id": "c2-q16-sto-compliance",
+        "prompt": {
+          "en": "Under SOP 05_C2_S3 Clause 4.3 and Failure Mode 5.4, what documentation kit is legally required to authorize outbound material gate exit?",
+          "hi": "SOP 05_C2_S3 क्लॉज 4.3 और विफलता मोड 5.4 के तहत, आउटबाउंड सामग्री गेट निकास को अधिकृत करने के लिए कानूनी रूप से किस दस्तावेज़ीकरण किट की आवश्यकता है?",
+          "mr": "SOP 05_C2_S3 कलम 4.3 आणि अपयश मोड 5.4 नुसार, कंपनीच्या गेटवरून माल बाहेर सोडण्यासाठी कायद्यानुसार कोणती कागदपत्रे असणे बंधनकारक आहे?"
+        },
+        "options": [
+          {
+            "id": "opt_full_compliance_kit",
+            "correct": true,
+            "label": {
+              "en": "A complete 3-part documentation kit: Printed SAP Invoice (YPR_STO / ZSTO or ZGST), manual Delivery Challan (DC), and a mandatory Government E-Way Bill",
+              "hi": "एक पूर्ण 3-भाग दस्तावेज़ीकरण किट: मुद्रित SAP चालान (YPR_STO / ZSTO या ZGST), मैनुअल डिलीवरी चालान (DC), और एक अनिवार्य सरकारी ई-वे बिल",
+              "mr": "पूर्ण 3 कागदपत्रांचा संच: छापील SAP इनव्हॉइस (YPR_STO / ZSTO किंवा ZGST), मॅन्युअल डिलिव्हरी चलन (DC) आणि अनिवार्य सरकारी ई-वे बिल"
+            }
+          },
+          {
+            "id": "opt_handshake_driver",
+            "correct": false,
+            "label": {
+              "en": "A warm handshake and verbal promise from the truck driver that the parts are legitimate",
+              "hi": "ट्रक चालक से एक गर्मजोशी से हाथ मिलाना और मौखिक वादा कि पुर्जे वैध हैं",
+              "mr": "ट्रक ड्रायव्हरशी हस्तांदोलन आणि तो चांगला माणूस असल्याचा तोंडी भरवसा"
+            }
+          },
+          {
+            "id": "opt_blank_paper",
+            "correct": false,
+            "label": {
+              "en": "A blank piece of paper with an unofficial pencil sketch of an Ather scooter",
+              "hi": "एथर स्कूटर के अनौपचारिक पेंसिल स्केच के साथ कागज का एक खाली टुकड़ा",
+              "mr": "एका कोऱ्या कागदावर पेन्सिलने काढलेले स्कूटरचे चित्र"
+            }
+          },
+          {
+            "id": "opt_no_docs_needed",
+            "correct": false,
+            "label": {
+              "en": "No documents are ever required because internal plant vehicles are immune to state GST transport laws",
+              "hi": "कभी किसी दस्तावेज़ की आवश्यकता नहीं होती है क्योंकि आंतरिक संयंत्र के वाहन राज्य जीएसटी परिवहन कानूनों से मुक्त होते हैं",
+              "mr": "कोणत्याही कागदपत्रांची गरज नसते कारण कंपनीच्या वाहनांवर वाहतूक किंवा GST चे कायदे लागू होत नाहीत"
+            }
+          }
+        ]
+      },
+      "rules": {
+        "xp": 150,
+        "sopClause": "SOP for PIR AURIC Clause 4.3 & Failure Mode 5.4",
+        "why": {
+          "en": "SOP for PIR AURIC Clause 4.3 & Failure Mode 5.4 mandates: 'Gate Control, E-Way Bill & Transport Compliance Failures — Failure Point: Shipments loaded and sent to material gate without required transport documentation result in security holds and severe regulatory penalties under GST transport laws. Corrective Action: Mandate full documentation kit before vehicle loading. Generate E-Way Bill (mandatory for all outbound shipments regardless of financial value) alongside manual Delivery Challan (DC) and printed SAP Invoice (YPR_STO via ZSTO/ZGST).' Security boom barriers remain locked down until every legal document is validated.",
+          "hi": "पीआईआर औरिक के लिए SOP क्लॉज 4.3 और विफलता मोड 5.4 आदेश देता है: 'गेट नियंत्रण और ई-वे बिल विफलताएं - आवश्यक परिवहन दस्तावेजों के बिना सामग्री गेट पर भेजे गए लदान के परिणामस्वरूप सुरक्षा रोक और गंभीर जीएसटी विनियामक दंड होते हैं। वाहन लोड करने से पहले पूर्ण दस्तावेज़ीकरण किट अनिवार्य करें: मुद्रित SAP चालान, डिलीवरी चालान और ई-वे बिल (वित्तीय मूल्य की परवाह किए बिना अनिवार्य)।' जब तक सभी कानूनी दस्तावेज सत्यापित नहीं होते, बूम बैरियर बंद रहता है।",
+          "mr": "SOP फॉर PIR औरिक कलम 4.3 आणि अपयश मोड 5.4 नुसार: 'गेट नियंत्रण आणि ई-वे बिल कायदेशीर नियम - आवश्यक कागदपत्रांशिवाय माल बाहेर पाठवल्यास सिक्युरिटी गेटवर गाडी अडवली जाते आणि सरकारी GST कायद्यानुसार मोठा दंड होतो. गाडी भरण्यापूर्वी पूर्ण कागदपत्रे तयार असणे सक्तीचे आहे: छापील SAP इनव्हॉइस (YPR_STO), मॅन्युअल डिलिव्हरी चलन (DC) आणि सरकारी ई-वे बिल (किंमत कितीही असली तरी ई-वे बिल 100% अनिवार्य आहे).' ही सर्व कागदपत्रे तपासल्याशिवाय गेटचा बूम बॅरियर उघडला जात नाही."
+        }
+      }
+    }
+  ]
+}

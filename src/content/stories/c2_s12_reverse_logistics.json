@@ -1,0 +1,338 @@
+{
+  "stageId": "c2_s12",
+  "stageNumber": 12,
+  "stageTitle": {
+    "en": "Reverse Logistics, Scrap & Empty Bin Loading",
+    "hi": "रिवर्स लॉजिस्टिक्स, स्क्रैप और खाली बिन लोडिंग",
+    "mr": "रिव्हर्स लॉजिस्टिक्स, स्क्रॅप आणि रिकाम्या पेट्यांची लोडिंग"
+  },
+  "sopDoc": "06_C2_S4_NG_RTV, 07_C2_S4_NG_Scrap & 08_C2_S4_Empty_Bin_Collection",
+  "scenes": [
+    {
+      "id": "c2_s12_sc01_rtv_causer_gate",
+      "title": {
+        "en": "Defect Validation & Causer Identification Gate",
+        "hi": "दोष सत्यापन और कारक पहचान गेट",
+        "mr": "दोष पडताळणी आणि दोष निर्माणकर्त्याची खात्री"
+      },
+      "name": {
+        "en": "Defect Validation & Causer Identification Gate",
+        "hi": "दोष सत्यापन और कारक पहचान गेट",
+        "mr": "दोष पडताळणी आणि दोष निर्माणकर्त्याची खात्री"
+      },
+      "mascot": {
+        "name": "AURA",
+        "pose": "explaining",
+        "dialog": {
+          "en": "Welcome to Stage 12: The Grand Finale of Category 2! Today we tackle Reverse Logistics, NG Material handling, and Empty Bin Management. While doing the daily collection round in the IPQC rejection zone on the vehicle assembly line, a worker points to a crate of cracked scooter panels with a physical Red Tag. In the HHT JIRA screen, the ticket status is 'QC Done: Fail', but the Causer field reads 'Unknown' and Bug ID is missing! Under SOP 06_C2_S4 Clause 4.1, can you collect this material? STOP OR GO?",
+          "hi": "स्टेज 12 में आपका स्वागत है: श्रेणी 2 का भव्य समापन! आज हम रिवर्स लॉजिस्टिक्स, एनजी सामग्री प्रबंधन और खाली बिन प्रबंधन से निपटते हैं। वाहन असेंबली लाइन पर IPQC अस्वीकृति क्षेत्र में दैनिक संग्रह राउंड करते समय, एक कार्यकर्ता भौतिक लाल टैग वाले टूटे हुए स्कूटर पैनल के एक टोकरे की ओर इशारा करता है। HHT JIRA स्क्रीन में, टिकट की स्थिति 'QC Done: Fail' है, लेकिन कॉज़र फ़ील्ड 'Unknown' पढ़ता है और बग आईडी गायब है! SOP 06_C2_S4 क्लॉज 4.1 के तहत, क्या आप इस सामग्री को एकत्र कर सकते हैं? रुकें या जाएं?",
+          "mr": "स्टेज 12 मध्ये आपले स्वागत आहे: कॅटेगरी 2 चा महा-अंतिम टप्पा! आज आपण रिव्हर्स लॉजिस्टिक्स, NG (खराब) साहित्याचे व्यवस्थापन आणि रिकाम्या पेट्यांची हाताळणी शिकणार आहोत. असेंब्ली लाईनवरील IPQC रिजेक्शन झोनमधून रोजचा खराब माल गोळा करताना, एका कामगाराने लाल टॅग लावलेली क्रॅक पॅनेल्सची पेटी दाखवली. HHT वरील JIRA स्क्रीनवर 'QC Done: Fail' दिसते, परंतु दोष निर्माणकर्ता (Causer) मात्र 'Unknown' आहे आणि बग आयडी देखील नाही! SOP 06_C2_S4 कलम 4.1 नुसार, तुम्ही हा माल गोळा करू शकता का? थांबा किंवा पुढे जा?"
+        }
+      },
+      "media": {
+        "type": "animation",
+        "fallbackAnimation": "c2_rtv_causer_gate",
+        "caption": {
+          "en": "Defect Validation Gate: Warehouse strictly declines collection if Causer is 'Unknown' or Bug ID is missing until SQA/MQA investigation",
+          "hi": "दोष सत्यापन गेट: जब तक SQA/MQA जांच नहीं हो जाती, वेयरहाउस सख्ती से संग्रह अस्वीकार करता है यदि कॉज़र 'Unknown' है या बग आईडी गायब है",
+          "mr": "दोष पडताळणी गेट: जोपर्यंत SQA/MQA तपास पूर्ण करत नाही, तोपर्यंत दोष निर्माणकर्ता 'Unknown' असल्यास किंवा बग आयडी नसल्यास गोदामाने माल घेण्यास सक्त मनाई आहे"
+        }
+      },
+      "interaction": {
+        "type": "stop_go",
+        "questionId": "c2-q17-rtv-causer-gate",
+        "safetyCritical": true,
+        "question": {
+          "en": "DECISION GATE: Can warehouse personnel collect rejected parts from the line when the JIRA Causer is listed as 'Unknown'?",
+          "hi": "निर्णय गेट: क्या वेयरहाउस कर्मी लाइन से अस्वीकृत भागों को एकत्र कर सकते हैं जब JIRA कॉज़र 'Unknown' के रूप में सूचीबद्ध हो?",
+          "mr": "निर्णय गेट: JIRA मध्ये दोष निर्माणकर्ता 'Unknown' असताना गोदामातील कर्मचारी लाईनवरून खराब माल गोळा करू शकतात का?"
+        },
+        "situation": {
+          "en": "A line supervisor urges you to take 5 cracked panels to the quarantine cage immediately to clear line space, despite the JIRA ticket having no Bug ID and an 'Unknown' causer.",
+          "hi": "एक लाइन सुपरवाइजर आपसे लाइन की जगह खाली करने के लिए तुरंत 5 टूटे हुए पैनलों को क्वारंटाइन पिंजरे में ले जाने का आग्रह करता है, भले ही JIRA टिकट में कोई बग आईडी न हो और एक 'Unknown' कॉज़र हो।",
+          "mr": "लाईन सुपरवायझर जागा मोकळी करण्यासाठी 5 क्रॅक पॅनेल्स क्वारंटाईन पिंजऱ्यात नेण्याचा आग्रह करतो, जरी JIRA तिकिटात बग आयडी नसून कॉझर 'Unknown' आहे."
+        },
+        "correctAction": "stop",
+        "stopLabel": {
+          "en": "STOP - DECLINE COLLECTION & AWAIT SQA/MQA",
+          "hi": "रुकें - संग्रह अस्वीकार करें और SQA/MQA की प्रतीक्षा करें",
+          "mr": "थांबा - माल घेण्यास नकार द्या आणि SQA/MQA ची वाट पहा"
+        },
+        "goLabel": {
+          "en": "GO - COLLECT TO CLEAR LINE SPACE",
+          "hi": "आगे बढ़ें - लाइन की जगह खाली करने के लिए एकत्र करें",
+          "mr": "पुढे जा - जागा मोकळी करण्यासाठी माल घेऊन जा"
+        },
+        "stopDescription": {
+          "en": "Halt immediately. SOP 06_C2_S4 Clause 4.1 mandates: Warehouse declines collection if Causer is 'Unknown' or Bug ID is missing. The Analysis team (SQA/MQA) must investigate root cause within 2 days before parts can enter the NG Quarantine flow.",
+          "hi": "तुरंत रुकें। SOP 06_C2_S4 क्लॉज 4.1 आदेश देता है: यदि कॉज़र 'Unknown' है या बग आईडी गायब है तो वेयरहाउस संग्रह को अस्वीकार करता है। एनजी क्वारंटाइन प्रवाह में प्रवेश करने से पहले विश्लेषण टीम (SQA/MQA) को 2 दिनों के भीतर मूल कारण की जांच करनी चाहिए।",
+          "mr": "त्वरित थांबा. SOP 06_C2_S4 कलम 4.1 स्पष्ट सांगते: जर कॉझर 'Unknown' असेल किंवा बग आयडी नसेल तर गोदामाने माल घेण्यास सक्त नकार दिला पाहिजे. विश्लेषण टीमने (SQA/MQA) 2 दिवसांत मूळ कारण शोधल्यानंतरच हा माल NG भागात घेतला जातो."
+        },
+        "goDescription": {
+          "en": "Take the cracked panels anyway to keep the line supervisor happy, leaving root cause untracked.",
+          "hi": "लाइन सुपरवाइजर को खुश रखने के लिए वैसे भी टूटे हुए पैनल ले लें, जिससे मूल कारण का पता न चल सके।",
+          "mr": "सुपरवायझरला बरे वाटावे म्हणून माल घेऊन जा, ज्यामुळे खरा दोष कोणाचा आहे हे समजणार नाही."
+        }
+      },
+      "rules": {
+        "xp": 145,
+        "sopClause": "SOP for NG - RTV Clause 4.1",
+        "why": {
+          "en": "SOP for NG - RTV Clause 4.1 strictly establishes: 'Warehouse checks physical part and confirms rejection tag and QC stickers from rejection zone (IQC or IPQC). Cross-references physical part with JIRA ticket to ensure Bug ID attached and Causer identified. If causer is Unknown or Bug ID missing, Warehouse declines collection and waits for Analysis team (SQA/MQA) to update ticket (SLA: 2 days).' Moving material with an unknown causer prevents determining financial liability between supplier RTV chargeback and internal manufacturing scrap.",
+          "hi": "एनर्जी - आरटीवी के लिए SOP क्लॉज 4.1 कड़ाई से स्थापित करता है: 'वेयरहाउस भौतिक हिस्से की जांच करता है और रिजेक्शन टैग और क्यूसी स्टिकर की पुष्टि करता है। यदि कॉज़र Unknown है या बग आईडी गायब है, तो वेयरहाउस संग्रह को अस्वीकार करता है और विश्लेषण टीम द्वारा टिकट अपडेट करने की प्रतीक्षा करता है।' अज्ञात कॉज़र वाले सामान को स्थानांतरित करने से सप्लायर देनदारी और आंतरिक स्क्रैप के बीच वित्तीय निर्धारण रुक जाता है।",
+          "mr": "SOP फॉर NG - RTV कलम 4.1 कडकपणे नमूद करतो: 'गोदाम कर्मचाऱ्याने प्रत्यक्ष पार्ट, रिजेक्शन टॅग आणि QC स्टिकर्सची खात्री केली पाहिजे. JIRA तिकिटात बग आयडी आणि कॉझर नोंदवला आहे की नाही हे तपासले पाहिजे. जर कॉझर Unknown असेल किंवा बग आयडी नसेल, तर गोदामाने माल घेण्यास नकार देऊन SQA/MQA टीमच्या अहवालाची 2 दिवस वाट पाहिली पाहिजे.' कॉझर माहीत नसल्यास हा खर्च सप्लायरकडून वसूल करायचा की कंपनीच्या खात्यात स्क्रॅप दाखवायचा हे ठरवता येत नाही."
+        }
+      }
+    },
+    {
+      "id": "c2_s12_sc02_rtv_deviation",
+      "title": {
+        "en": "Supplier 3-Day SLA & 'Use As It Is' Deviation Route",
+        "hi": "सप्लायर 3-दिवसीय SLA और 'यथावत उपयोग' विचलन मार्ग",
+        "mr": "सप्लायर 3-दिवसांची मुदत आणि 'जसे आहे तसे वापरा' विचलन मार्ग"
+      },
+      "name": {
+        "en": "Supplier 3-Day SLA & 'Use As It Is' Deviation Route",
+        "hi": "सप्लायर 3-दिवसीय SLA और 'यथावत उपयोग' विचलन मार्ग",
+        "mr": "सप्लायर 3-दिवसांची मुदत और 'जसे आहे तसे वापरा' विचलन मार्ग"
+      },
+      "mascot": {
+        "name": "AURA",
+        "pose": "explaining",
+        "dialog": {
+          "en": "Outstanding work enforcing the Defect Validation Gate in Scene 1! Now, the supplier-caused NG parts are safely staged in the NG Quarantine Area marked 'Quality Failed'. Under SOP 06_C2_S4 Clause 4.2, all supplier-caused defects default to 'Auto RTV' within a strict 3-Day SLA. However, the assembly line is critically starving for handlebar grip sleeves! SQA discovers the defect is purely a minor cosmetic color shade variance. The Supplier Manager initiates a 'Use As It Is' deviation request in JIRA. Who has the sole authority to approve this deviation, and how is the stock systematically restored into SAP for production?",
+          "hi": "दृश्य 1 में दोष सत्यापन गेट को लागू करने का उत्कृष्ट कार्य! अब, सप्लायर-जनित एनजी भागों को 'Quality Failed' चिह्नित एनजी क्वारंटाइन क्षेत्र में सुरक्षित रखा गया है। SOP 06_C2_S4 क्लॉज 4.2 के तहत, सभी सप्लायर-जनित दोष एक सख्त 3-दिवसीय SLA के भीतर 'Auto RTV' पर डिफॉल्ट होते हैं। हालाँकि, असेंबली लाइन पर हैंडलबार ग्रिप स्लीव्स की भारी कमी है! SQA को पता चलता है कि दोष केवल एक मामूली कॉस्मेटिक रंग भिन्नता है। सप्लायर मैनेजर JIRA में 'Use As It Is' विचलन का अनुरोध करता है। इस विचलन को स्वीकृत करने का एकमात्र अधिकार किसके पास है, और उत्पादन के लिए स्टॉक को व्यवस्थित रूप से SAP में कैसे बहाल किया जाता है?",
+          "mr": "दृश्य 1 मधील दोष पडताळणी गेट यशस्वीरीत्या पार पाडल्याबद्दल अभिनंदन! आता सप्लायरमुळे नाकारलेला माल 'Quality Failed' म्हणून NG क्वारंटाईन भागात ठेवला आहे. SOP 06_C2_S4 कलम 4.2 नुसार, सप्लायरच्या सर्व दोषांवर आपोआप 3 दिवसांच्या मुदतीत 'Auto RTV' लागू होते. परंतु, असेंब्ली लाईनवर हँडलबार ग्रिप स्लीव्ह्सचा मोठा तुटवडा निर्माण झाला आहे! SQA ला आढळले की हा केवळ रंगाचा किरकोळ फरक आहे. सप्लायर मॅनेजरने JIRA मध्ये 'Use As It Is' विचलनाची मागणी केली. JIRA मध्ये हे विचलन मंजूर करण्याचा एकमेव अधिकार कोणाचा आहे आणि उत्पादनासाठी SAP मध्ये स्टॉक कसा उपलब्ध केला जातो?"
+        }
+      },
+      "media": {
+        "type": "animation",
+        "fallbackAnimation": "c2_rtv_deviation",
+        "caption": {
+          "en": "Deviation Routing: Supplier rejections default to Auto RTV (3-Day SLA); 'Use As It Is' deviation requires Product Owner approval in JIRA before SAP transfer to QI then UR",
+          "hi": "विचलन रूटिंग: सप्लायर अस्वीकृतियां ऑटो RTV (3-दिन SLA) पर डिफॉल्ट होती हैं; 'Use As It Is' विचलन के लिए SAP में QI फिर UR में ट्रांसफर से पहले JIRA में प्रोडक्ट ओनर की मंजूरी आवश्यक है",
+          "mr": "विचलन मार्ग: सप्लायरचा नाकारलेला माल ऑटो RTV (3-दिवसांची मुदत) वर जातो; 'Use As It Is' विचलनासाठी SAP मध्ये QI व नंतर UR मध्ये वर्ग करण्यापूर्वी JIRA मध्ये प्रॉडक्ट ओनरची मंजुरी अनिवार्य आहे"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c2-q18-rtv-deviation",
+        "question": {
+          "en": "Line assembly is starved for handlebar sleeves with a minor cosmetic tint flaw. Under SOP 06_C2_S4 Clauses 4.4 & 4.5, what is the mandatory approval and SAP stock conversion sequence for a 'Use As It Is' deviation?",
+          "hi": "हैंडलबार स्लीव्स के मामूली कॉस्मेटिक टिनट दोष के कारण लाइन असेंबली में पार्ट्स की कमी है। SOP 06_C2_S4 क्लॉज 4.4 और 4.5 के तहत, 'Use As It Is' विचलन के लिए अनिवार्य अनुमोदन और SAP स्टॉक रूपांतरण क्रम क्या है?",
+          "mr": "रंगाच्या किरकोळ फरकामुळे हँडलबार स्लीव्ह्स अभावी लाईन खोळंबली आहे. SOP 06_C2_S4 कलम 4.4 आणि 4.5 नुसार, 'Use As It Is' विचलनासाठी कोणाची मंजुरी आवश्यक आहे आणि SAP स्टॉक रूपांतरणाचा अचूक क्रम काय आहे?"
+        },
+        "options": [
+          {
+            "id": "opt-rtv-correct",
+            "text": {
+              "en": "Product Owner approves JIRA Deviation → Status 'Deviation Accepted' → WH moves stock to QI in SAP & updates 'Available for Build' → IQC posts QI to UR (Unrestricted)",
+              "hi": "प्रोडक्ट ओनर JIRA विचलन को मंजूरी देता है → स्थिति 'Deviation Accepted' → वेयरहाउस SAP में स्टॉक को QI में ले जाता है और 'Available for Build' अपडेट करता है → IQC स्टॉक को QI से UR (अप्रतिबंधित) में पोस्ट करता है",
+              "mr": "प्रॉडक्ट ओनर JIRA मध्ये विचलन मंजूर करतो → स्टेटस 'Deviation Accepted' → गोदाम SAP मध्ये QI मध्ये स्टॉक हलवतो व 'Available for Build' करतो → IQC टीम QI मधून UR (अनरेस्ट्रिक्टेड) मध्ये स्टॉक वर्ग करते"
+            },
+            "correct": true
+          },
+          {
+            "id": "opt-rtv-verbal",
+            "text": {
+              "en": "Line Supervisor verbally signs off on the shop floor → Warehouse immediately issues parts from NG blocked cage straight to the assembly workstations without SAP postings",
+              "hi": "लाइन सुपरवाइजर शॉप फ्लोर पर मौखिक रूप से हस्ताक्षर करता है → वेयरहाउस तुरंत एनजी ब्लॉक्ड केज से सीधे असेंबली वर्कस्टेशन पर बिना SAP पोस्टिंग के पार्ट्स जारी करता है",
+              "mr": "लाईन सुपरवायझर तोंडी संमती देतो → गोदाम SAP मध्ये कोणतीही नोंद न करता थेट क्वारंटाईन पिंजऱ्यातून असेंब्ली लाईनवर पार्ट देऊन टाकतो"
+            },
+            "correct": false
+          },
+          {
+            "id": "opt-rtv-sm-only",
+            "text": {
+              "en": "Supplier Manager approves the deviation ticket in JIRA directly without Product Owner review, and vendor ships replacements within 24 hours",
+              "hi": "सप्लायर मैनेजर प्रोडक्ट ओनर की समीक्षा के बिना सीधे JIRA में विचलन टिकट को मंजूरी देता है, और विक्रेता 24 घंटों के भीतर रिप्लेसमेंट भेजता है",
+              "mr": "सप्लायर मॅनेजर प्रॉडक्ट ओनरच्या परवानगीशिवाय परस्पर JIRA तिकीट मंजूर करतो आणि व्हेंडर 24 तासांत नवीन माल पाठवतो"
+            },
+            "correct": false
+          },
+          {
+            "id": "opt-rtv-scrap-bypass",
+            "text": {
+              "en": "Warehouse bypasses JIRA, transfers NG stock directly to Scrap SC01, and issues a Debit Note to the vendor without consulting Quality",
+              "hi": "वेयरहाउस JIRA को बायपास करता है, एनजी स्टॉक को सीधे स्क्रैप SC01 में ट्रांसफर करता है, और क्वालिटी से परामर्श किए बिना विक्रेता को डेबिट नोट जारी करता है",
+              "mr": "गोदाम JIRA कडे दुर्लक्ष करून हा माल परस्पर स्क्रॅप SC01 मध्ये टाकतो आणि क्वालिटीला न विचारताच व्हेंडरला डेबिट नोट पाठवतो"
+            },
+            "correct": false
+          }
+        ]
+      },
+      "rules": {
+        "xp": 150,
+        "sopClause": "SOP for NG - RTV Clauses 4.2 to 4.5",
+        "why": {
+          "en": "SOP for NG - RTV Clause 4.2 specifies that all supplier-caused defects automatically receive the 'RTV' disposition in JIRA with a 3-Day SLA. Clause 4.4 explicitly mandates: 'Product owner is to either approve or reject the Deviation request after going through the problem and justification mentioned in the JIRA Deviation Ticket.' Under Clause 4.5, upon securing 'Deviation Accepted' status, Warehouse moves material to staging and transfers stock in SAP to QI (Quality Inspection), updating JIRA to 'Deviated: Available for Build'. The IQC team then executes the final SAP movement from QI to UR (Unrestricted) for vehicle assembly. No shop supervisor or vendor has the authority to bypass this chain of custody.",
+          "hi": "एनर्जी - आरटीवी के लिए SOP क्लॉज 4.2 निर्दिष्ट करता है कि सभी सप्लायर-जनित दोषों को 3-दिन के SLA के साथ JIRA में स्वचालित रूप से 'RTV' स्वभाव प्राप्त होता है। क्लॉज 4.4 स्पष्ट रूप से आदेश देता है: 'प्रोडक्ट ओनर को JIRA विचलन टिकट में उल्लिखित समस्या और औचित्य से गुजरने के बाद विचलन अनुरोध को स्वीकृत या अस्वीकार करना होगा।' क्लॉज 4.5 के तहत, 'Deviation Accepted' स्थिति प्राप्त होने पर, वेयरहाउस सामग्री को स्टेजिंग में ले जाता है और SAP में स्टॉक को QI (क्वालिटी इंस्पेक्शन) में स्थानांतरित करता है, JIRA को 'Deviated: Available for Build' में अपडेट करता है। IQC टीम तब वाहन असेंबली के लिए QI से UR में अंतिम SAP आंदोलन निष्पादित करती है।",
+          "mr": "SOP फॉर NG - RTV कलम 4.2 नुसार सप्लायरच्या सर्व दोषांवर 3 दिवसांच्या मुदतीसह आपोआप 'RTV' लागू होते. कलम 4.4 स्पष्ट सांगतो: 'JIRA मधील कारण व पुराव्यांची तपासणी करून केवळ प्रॉडक्ट ओनरच विचलन मंजूर किंवा नामंजूर करू शकतो.' कलम 4.5 नुसार 'Deviation Accepted' झाल्यावर गोदाम कर्मचारी प्रत्यक्ष माल हलवून SAP मध्ये QI मध्ये घेतात व JIRA स्टेटस 'Deviated: Available for Build' करतात. त्यानंतर IQC टीम SAP मध्ये QI मधून UR (अनरेस्ट्रिक्टेड) मध्ये अंतिम नोंद करते जेणेकरून पार्ट वाहनासाठी वापरता येईल. कोणत्याही सुपरवायझरला परस्पर असा निर्णय घेण्याची परवानगी नाही."
+        }
+      }
+    },
+    {
+      "id": "c2_s12_sc03_empty_bin_stacking",
+      "title": {
+        "en": "Empty Bin Stacking, 5-Foot Height Limit & Gangway Clearance",
+        "hi": "खाली बिन स्टैकिंग, 5-फुट ऊंचाई सीमा और गैंगवे निकासी",
+        "mr": "रिकाम्या पेट्यांची थप्पी, 5-फूट कमाल मर्यादा आणि पॅसेज मोकळा ठेवणे"
+      },
+      "name": {
+        "en": "Empty Bin Stacking, 5-Foot Height Limit & Gangway Clearance",
+        "hi": "खाली बिन स्टैकिंग, 5-फुट ऊंचाई सीमा और गैंगवे निकासी",
+        "mr": "रिकाम्या पेट्यांची थप्पी, 5-फूट कमाल मर्यादा आणि पॅसेज मोकळा ठेवणे"
+      },
+      "mascot": {
+        "name": "AURA",
+        "pose": "explaining",
+        "dialog": {
+          "en": "Now we tackle shop floor EHS safety and empty asset circulation under SOP 08_C2_S4! As battery pack assembly proceeds at high velocity, empty plastic totes and crates accumulate rapidly by the workstation. To save gangway space, an energetic trainee wants to stack 8 empty crates into a single tall tower reaching 7.5 feet high, claiming it saves pallet footprint. He asks if he should add 2 more crates before moving the pallet. Under SOP 08_C2_S4 Clause 4.1 Safety Protocol, what is your mandatory operational decision? STOP OR GO?",
+          "hi": "अब हम SOP 08_C2_S4 के तहत शॉप फ्लोर ईएचएस सुरक्षा और खाली संपत्ति परिसंचरण से निपटते हैं! चूंकि बैटरी पैक असेंबली तेज गति से आगे बढ़ती है, वर्कस्टेशन के पास खाली प्लास्टिक के डिब्बे और टोकरे तेजी से जमा होते हैं। गैंगवे की जगह बचाने के लिए, एक उत्साही प्रशिक्षु पैलेट फुटप्रिंट बचाने का दावा करते हुए 8 खाली बक्सों को 7.5 फीट ऊंचे एक एकल टॉवर में रखना चाहता है। वह पूछता है कि क्या उसे पैलेट को ले जाने से पहले 2 और बक्से जोड़ने चाहिए। SOP 08_C2_S4 क्लॉज 4.1 सुरक्षा प्रोटोकॉल के तहत, आपका अनिवार्य परिचालन निर्णय क्या है? रुकें या जाएं?",
+          "mr": "आता आपण SOP 08_C2_S4 नुसार शॉप फ्लोअर EHS सुरक्षा आणि रिकाम्या पेट्यांचे व्यवस्थापन शिकणार आहोत! बॅटरी पॅक असेंब्ली वेगाने सुरू असताना वर्कस्टेशनजवळ रिकाम्या पेट्यांचा ढीग जमा होतो. पॅसेजमधील जागा वाचवण्याचा दावा करत एका नवीन कामगाराने तब्बल 7.5 फूट उंच 8 पेट्यांची एकच थप्पी रचली. तो विचारतो की पॅलेट हलवण्यापूर्वी त्यावर अजून 2 पेट्या ठेवू का? SOP 08_C2_S4 कलम 4.1 सुरक्षा नियमांनुसार तुमचा निर्णय काय असेल? थांबा किंवा पुढे जा?"
+        }
+      },
+      "media": {
+        "type": "animation",
+        "fallbackAnimation": "c2_empty_bin_stacking",
+        "caption": {
+          "en": "Empty Bin Safety Protocol: Maximum stacking height must never exceed 5 feet (operator height) with mandatory ratchet strapping; sweeps occur every 30 minutes",
+          "hi": "खाली बिन सुरक्षा प्रोटोकॉल: अनिवार्य शाफ़्ट स्ट्रैपिंग के साथ अधिकतम स्टैकिंग ऊंचाई कभी भी 5 फीट (ऑपरेटर ऊंचाई) से अधिक नहीं होनी चाहिए; सफाई हर 30 मिनट में होती है",
+          "mr": "रिकाम्या पेट्यांचा सुरक्षा नियम: थप्पीची उंची ऑपरेटरच्या उंचीपेक्षा (5 फूट) जास्त असता कामा नये आणि पट्टा बांधणे अनिवार्य आहे; दर 30 मिनिटांनी फेऱ्या मारल्या जातात"
+        }
+      },
+      "interaction": {
+        "type": "stop_go",
+        "questionId": "c2-q19-stacking-height",
+        "safetyCritical": true,
+        "question": {
+          "en": "DECISION GATE: Can an operator stack empty plastic bins higher than 5 feet (operator height) to conserve shop floor gangway space?",
+          "hi": "निर्णय गेट: क्या कोई ऑपरेटर शॉप फ्लोर गैंगवे स्पेस बचाने के लिए खाली प्लास्टिक के बक्सों को 5 फीट (ऑपरेटर ऊंचाई) से अधिक ऊंचा रख सकता है?",
+          "mr": "निर्णय गेट: पॅसेजमधील जागा वाचवण्यासाठी कामगार रिकाम्या प्लास्टिक पेट्यांची थप्पी 5 फुटांपेक्षा (स्वतःच्या उंचीपेक्षा) जास्त करू शकतो का?"
+        },
+        "situation": {
+          "en": "A trainee operator stacks 8 component crates up to 7.5 feet high, arguing it clears floor congestion faster, and asks to add more before wrapping.",
+          "hi": "एक प्रशिक्षु ऑपरेटर 8 कंपोनेंट क्रेट्स को 7.5 फीट ऊंचा रखता है, यह तर्क देते हुए कि यह फर्श की भीड़ को तेजी से साफ करता है, और लपेटने से पहले और जोड़ने के लिए कहता है।",
+          "mr": "एका शिकाऊ कामगाराने 7.5 फूट उंच 8 पेट्या रचल्या आणि जागा वाचवण्यासाठी त्यावर अजून पेट्या ठेवण्याची परवानगी मागितली."
+        },
+        "correctAction": "stop",
+        "stopLabel": {
+          "en": "STOP - STRICT 5-FOOT (OPERATOR HEIGHT) LIMIT & MANDATORY BELTING",
+          "hi": "रुकें - सख्त 5-फुट (ऑपरेटर ऊंचाई) सीमा और अनिवार्य बेल्टिंग",
+          "mr": "थांबा - सक्त 5-फूट कमाल मर्यादा आणि पट्टा बांधणे अनिवार्य"
+        },
+        "goLabel": {
+          "en": "GO - STACK TO 8 FEET TO SAVE GANGWAY SPACE",
+          "hi": "आगे बढ़ें - गैंगवे की जगह बचाने के लिए 8 फीट तक स्टैक करें",
+          "mr": "पुढे जा - जागा वाचवण्यासाठी 8 फुटांपर्यंत थप्पी रचा"
+        },
+        "stopDescription": {
+          "en": "Halt immediately. SOP 08_C2_S4 Clause 4.1 Safety Protocol strictly dictates: 'Ensure that the stacking of bins does not exceed the height of the operator (5 feet) to maintain visibility and prevent tipping. Also he must put the belt around the bins to avoid tripping & falling.' Stacks over 5 feet create severe toppling risks during manual or forklift transit and blind operator sightlines across active factory aisles.",
+          "hi": "तुरंत रुकें। SOP 08_C2_S4 क्लॉज 4.1 सुरक्षा प्रोटोकॉल सख्ती से निर्देशित करता है: 'दृश्यता बनाए रखने और गिरने से रोकने के लिए ऑपरेटर की ऊंचाई (5 फीट) से अधिक न हो यह सुनिश्चित करें। साथ ही गिरने से बचने के लिए बिन के चारों ओर बेल्ट लगाएं।' 5 फीट से अधिक के स्टैक से गंभीर खतरे पैदा होते हैं।",
+          "mr": "त्वरित थांबा. SOP 08_C2_S4 कलम 4.1 सुरक्षा नियम स्पष्ट बजावतो: 'समोरचे दिसावे आणि थप्पी कोसळू नये म्हणून रिकाम्या पेट्यांची उंची ऑपरेटरच्या उंचीपेक्षा (5 फूट) जास्त असू नये, तसेच पट्टा बांधणे अनिवार्य आहे.' 5 फुटांपेक्षा उंच थप्पी वाहतुकीदरम्यान कोसळून गंभीर अपघात होऊ शकतात."
+        },
+        "goDescription": {
+          "en": "Allow the 7.5-foot stack to stay, creating a severe falling crate and tipping hazard for passing MHE and workers.",
+          "hi": "7.5-फुट स्टैक को रहने दें, जिससे गुजरने वाले MHE और श्रमिकों के लिए एक गंभीर खतरा पैदा हो जाए।",
+          "mr": "7.5 फूट उंच थप्पी तशीच राहू द्या, ज्यामुळे जाणाऱ्या-येणाऱ्या कामगारांवर पेटी कोसळण्याचा मोठा धोका निर्माण होईल."
+        }
+      },
+      "rules": {
+        "xp": 145,
+        "sopClause": "SOP-EMPTYBIN COLLECTION AND LOADING Auric Clause 4.1",
+        "why": {
+          "en": "SOP-EMPTYBIN COLLECTION AND LOADING Auric Clause 4.1 sets the gold standard for material handling ergonomics and safety: 'Strictly ensure that the stacking of bins does not exceed the height of the operator (5 feet) to maintain visibility and prevent tipping. Also he must put the belt around the bins to avoid tripping & falling of parts.' Over-stacking obscures the driver's forward visibility when operating a pallet truck and shifts the center of gravity dangerously upward, making cornering prone to tip-overs. Empty bin sweeps must happen every 30 minutes to manage volume without compromising the 5-foot height ceiling.",
+          "hi": "खाली बिन संग्रह और लोडिंग SOP क्लॉज 4.1 सामग्री से निपटने के लिए एर्गोनॉमिक्स और सुरक्षा का मानक निर्धारित करता है: 'दृश्यता बनाए रखने और टिपिंग को रोकने के लिए सुनिश्चित करें कि डिब्बे का स्टैकिंग ऑपरेटर की ऊंचाई (5 फीट) से अधिक न हो। साथ ही बेल्ट लगाना अनिवार्य है।' 5 फीट की सीमा से समझौता किए बिना मात्रा को प्रबंधित करने के लिए हर 30 मिनट में खाली बिन संग्रह होना चाहिए।",
+          "mr": "SOP-EMPTYBIN COLLECTION AND LOADING Auric कलम 4.1 कामगारांच्या सुरक्षेचा कडक नियम स्पष्ट करतो: 'थप्पी कोसळू नये आणि दृष्टीआड होऊ नये म्हणून पेट्यांची उंची ऑपरेटरच्या उंचीपेक्षा (5 फूट) जास्त नसावी, तसेच पट्टा लावणे अनिवार्य आहे.' जास्त उंचीमुळे पॅलेट ट्रक चालवताना समोरचे दिसत नाही आणि वळण घेताना माल उलटून अपघात होतो. गर्दी टाळण्यासाठी दर 30 मिनिटांनी फेऱ्या मारल्या पाहिजेत, परंतु 5 फुटांची मर्यादा कधीही ओलांडता कामा नये."
+        }
+      }
+    },
+    {
+      "id": "c2_s12_sc04_reverse_truck_loading",
+      "title": {
+        "en": "Reverse Truck Loading, Delivery Challan & Grand Finale",
+        "hi": "रिवर्स ट्रक लोडिंग, डिलीवरी चालान और भव्य समापन",
+        "mr": "रिव्हर्स ट्रक लोडिंग, डिलिव्हरी चलन आणि महा-अंतिम टप्पा"
+      },
+      "name": {
+        "en": "Reverse Truck Loading, Delivery Challan & Grand Finale",
+        "hi": "रिवर्स ट्रक लोडिंग, डिलीवरी चालान और भव्य समापन",
+        "mr": "रिव्हर्स ट्रक लोडिंग, डिलिव्हरी चलन आणि महा-अंतिम टप्पा"
+      },
+      "mascot": {
+        "name": "AURA",
+        "pose": "celebrating",
+        "dialog": {
+          "en": "This is it—the final gate of Stage 12 and the Grand Finale of our 12-Module Warehouse Training Journey! At the outbound reverse logistics dock, the designated transporter truck is positioned with wheel chocks set. We have 24 strapped empty bins (under 5 feet) and 12 supplier-rejected RTV crates with Red Tags and Debit Notes attached. To maintain airtight legal compliance and audit traceability before security gate-out, what is the mandatory sequence of actions under SOP 06_C2_S4 Clause 4.10 and SOP 08_C2_S4?",
+          "hi": "यही है—स्टेज 12 का अंतिम गेट और हमारी 12-मॉड्यूल वेयरहाउस प्रशिक्षण यात्रा का भव्य समापन! आउटबाउंड रिवर्स लॉजिस्टिक्स डॉक पर, व्हील चॉक्स सेट के साथ निर्दिष्ट ट्रांसपोर्टर ट्रक तैनात है। हमारे पास 24 स्ट्रैप किए गए खाली डिब्बे (5 फीट से कम) और 12 सप्लायर-अस्वीकृत आरटीवी क्रेट हैं जिनमें रेड टैग और डेबिट नोट जुड़े हैं। सुरक्षा गेट-आउट से पहले एयरटाइट कानूनी अनुपालन और ऑडिट ट्रैसेबिलिटी बनाए रखने के लिए, SOP 06_C2_S4 क्लॉज 4.10 और SOP 08_C2_S4 के तहत कार्यों का अनिवार्य क्रम क्या है?",
+          "mr": "हाच तो क्षण—स्टेज 12 चे अंतिम गेट आणि संपूर्ण 12-मॉड्यूल वेअरहाऊस प्रशिक्षण प्रवासाचा महा-अंतिम टप्पा! आउटबाउंड रिव्हर्स लॉजिस्टिक्स डॉकवर व्हेंडरचा ट्रक व्हील चॉक्स लावून सज्ज आहे. आपल्याकडे 24 पट्टे बांधलेल्या रिकाम्या पेट्या (5 फुटांपेक्षा कमी उंची) आणि लाल टॅग व डेबिट नोट लावलेल्या 12 RTV नाकारलेल्या पेट्या आहेत. सुरक्षा गेटबाहेर जाण्यापूर्वी संपूर्ण कायदेशीर पूर्तता आणि ऑडिट नोंदींसाठी SOP 06_C2_S4 कलम 4.10 व SOP 08_C2_S4 नुसार अनिवार्य क्रम कोणता आहे?"
+        }
+      },
+      "media": {
+        "type": "animation",
+        "fallbackAnimation": "c2_reverse_truck_loading",
+        "caption": {
+          "en": "Reverse Dispatch Compliance: Physical load verification → SAP Delivery Challan & E-Way Bill → Signed LR Proof of Handover → JIRA status transition to 'Returned to vendor'",
+          "hi": "रिवर्स प्रेषण अनुपालन: भौतिक भार सत्यापन → SAP डिलीवरी चालान और ई-वे बिल → हस्ताक्षरित LR प्रूफ ऑफ हैंडओवर → JIRA स्थिति 'Returned to vendor' में संक्रमण",
+          "mr": "रिव्हर्स डिस्पॅच पूर्तता: प्रत्यक्ष मालाची तपासणी → SAP डिलिव्हरी चलन व ई-वे बिल → ट्रान्सपोर्टरची स्वाक्षरी असलेली LR पावती → JIRA मध्ये 'Returned to vendor' नोंद"
+        }
+      },
+      "interaction": {
+        "type": "mcq",
+        "questionId": "c2-q20-reverse-dispatch",
+        "question": {
+          "en": "Under SOP 06_C2_S4 Clause 4.10 & SOP 08_C2_S4, what is the mandatory dispatch sequence before a reverse logistics truck can exit the AURIC factory gates?",
+          "hi": "SOP 06_C2_S4 क्लॉज 4.10 और SOP 08_C2_S4 के तहत, रिवर्स लॉजिस्टिक्स ट्रक के ऑरिक फैक्ट्री गेट से बाहर निकलने से पहले अनिवार्य प्रेषण क्रम क्या है?",
+          "mr": "SOP 06_C2_S4 कलम 4.10 आणि SOP 08_C2_S4 नुसार, रिव्हर्स लॉजिस्टिक्स ट्रकने ऑरिक कारखान्याच्या गेटबाहेर जाण्यापूर्वी डिस्पॅचचा अनिवार्य क्रम कोणता आहे?"
+        },
+        "options": [
+          {
+            "id": "opt-rev-correct",
+            "text": {
+              "en": "1. Verify empty bin stack (≤5 ft) & RTV red tags → 2. Generate SAP Delivery Challan (DC) & E-Way Bill → 3. Transporter signs LR Proof of Handover (PoH) → 4. Attach PoH to JIRA & update status to 'Returned to vendor'",
+              "hi": "1. खाली बिन स्टैक (≤5 फीट) और आरटीवी लाल टैग सत्यापित करें → 2. SAP डिलीवरी चालान (DC) और ई-वे बिल जनरेट करें → 3. ट्रांसपोर्टर LR प्रूफ ऑफ हैंडओवर (PoH) पर हस्ताक्षर करता है → 4. JIRA में PoH संलग्न करें और स्थिति को 'Returned to vendor' में अपडेट करें",
+              "mr": "1. रिकाम्या पेट्यांची थप्पी (≤5 फूट) व RTV लाल टॅग तपासा → 2. SAP डिलिव्हरी चलन (DC) व ई-वे बिल तयार करा → 3. ट्रान्सपोर्टरकडून LR वर सही (Proof of Handover) घ्या → 4. JIRA मध्ये LR प्रत जोडून स्टेटस 'Returned to vendor' करा"
+            },
+            "correct": true
+          },
+          {
+            "id": "opt-rev-no-dc",
+            "text": {
+              "en": "Load the truck immediately without Delivery Challan or E-Way Bill, tell the driver to phone the warehouse upon arrival, and leave JIRA tickets open",
+              "hi": "डिलीवरी चालान या ई-वे बिल के बिना तुरंत ट्रक लोड करें, ड्राइवर को आगमन पर वेयरहाउस को फोन करने के लिए कहें, और JIRA टिकट खुला छोड़ दें",
+              "mr": "डिलिव्हरी चलन किंवा ई-वे बिलाशिवाय ट्रक भरून पाठवून द्या, ड्रायव्हरला पोहोचल्यावर फोन करायला सांगा आणि JIRA तिकीट तसेच उघडे ठेवा"
+            },
+            "correct": false
+          },
+          {
+            "id": "opt-rev-sto-mixup",
+            "text": {
+              "en": "Generate an internal STO invoice instead of a Delivery Challan, omit physical Lorry Receipt signatures, and update JIRA to 'Deviation Accepted'",
+              "hi": "डिलीवरी चालान के बजाय एक आंतरिक STO चालान जनरेट करें, भौतिक लॉरी रसीद हस्ताक्षरों को छोड़ दें, और JIRA को 'Deviation Accepted' में अपडेट करें",
+              "mr": "डिलिव्हरी चलनाऐवजी अंतर्गत STO इनव्हॉईस बनवा, LR वर कोणतीही सही घेऊ नका आणि JIRA स्टेटस 'Deviation Accepted' करा"
+            },
+            "correct": false
+          },
+          {
+            "id": "opt-rev-overstack",
+            "text": {
+              "en": "Stack empty bins to 9 feet to fill the truck faster, bypass security gate-out inspection, and debit the vendor without attaching the Proof of Handover",
+              "hi": "ट्रक को तेजी से भरने के लिए खाली डिब्बे 9 फीट तक रखें, सुरक्षा गेट-आउट निरीक्षण को बायपास करें, और प्रूफ ऑफ हैंडओवर संलग्न किए बिना विक्रेता को डेबिट करें",
+              "mr": "ट्रक पटकन भरण्यासाठी 9 फुटांपर्यंत पेट्या रचा, सिक्युरिटी गेट तपासणी टाळा आणि प्रूफ ऑफ हँडओव्हर न जोडताच व्हेंडरला परस्पर डेबिट लावा"
+            },
+            "correct": false
+          }
+        ]
+      },
+      "rules": {
+        "xp": 160,
+        "sopClause": "SOP for NG - RTV Clause 4.10 & SOP-EMPTYBIN Clause 4.2",
+        "why": {
+          "en": "SOP for NG - RTV Clause 4.10 explicitly mandates: 'Transporters issue an LR detailing box counts and quantities as Proof of Handover (PoH)... Attach PoH/PoD documents to the batch JIRA ticket for audit tracking and transition the JIRA status to Returned to vendor post physical movement.' Along with SOP 08_C2_S4, materials cannot leave Ather premises without a legally binding SAP Delivery Challan (DC), mandatory E-Way Bill, and verified physical strapping. Completing this closed-loop sequence maintains 100% financial audit compliance and eliminates phantom stock across all Ather Energy plant facilities.",
+          "hi": "एनर्जी - आरटीवी के लिए SOP क्लॉज 4.10 स्पष्ट रूप से आदेश देता है: 'ट्रांसपोर्टर हैंडओवर के प्रमाण (PoH) के रूप में बॉक्स की संख्या और मात्रा का विवरण देते हुए एक LR जारी करते हैं... ऑडिट ट्रैकिंग के लिए बैच JIRA टिकट में PoH/PoD दस्तावेज़ संलग्न करें और भौतिक आंदोलन के बाद JIRA स्थिति को 'Returned to vendor' में बदलें।' SOP 08_C2_S4 के साथ, सामग्री कानूनी रूप से बाध्यकारी SAP डिलीवरी चालान (DC), अनिवार्य ई-वे बिल और सत्यापित भौतिक स्ट्रैपिंग के बिना एथर परिसर से बाहर नहीं निकल सकती है।",
+          "mr": "SOP फॉर NG - RTV कलम 4.10 स्पष्ट सांगतो: 'ट्रान्सपोर्टरकडून बॉक्सची संख्या व प्रमाण नोंदवून LR पावतीवर प्रूफ ऑफ हँडओव्हर (PoH) म्हणून स्वाक्षरी घेतली पाहिजे... ऑडिटसाठी JIRA तिकिटात ही PoH/PoD प्रत जोडून प्रत्यक्ष माल रवाना झाल्यावर स्टेटस 'Returned to vendor' केले पाहिजे.' तसेच SOP 08_C2_S4 नुसार SAP डिलिव्हरी चलन (DC), ई-वे बिल आणि सुरक्षित पट्टा बांधल्याशिवाय कोणताही ट्रक गेटबाहेर जाऊ शकत नाही. ही संपूर्ण साखळी पूर्ण केल्यामुळे ऑडिटमध्ये कोणताही घोळ होत नाही व कंपनीचे नुकसान टळते."
+        }
+      }
+    }
+  ]
+}
