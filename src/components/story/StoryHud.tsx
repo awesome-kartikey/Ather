@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Heart, Award, ArrowLeft, Volume2, VolumeX } from 'lucide-react';
+import { Heart, Award, RotateCcw, Home, Volume2, VolumeX } from 'lucide-react';
 import { AtherLogo } from '../common/AtherLogo';
 import { LanguageSwitcher } from '../common/LanguageSwitcher';
 import type { LanguageCode } from '../../engine/story/types';
@@ -22,6 +22,7 @@ interface Props {
   stages?: StageTabItem[];
   currentStageIndex?: number;
   onSelectStage?: (index: number) => void;
+  onExitHome?: () => void;
 }
 
 export const StoryHud: React.FC<Props> = ({
@@ -34,7 +35,8 @@ export const StoryHud: React.FC<Props> = ({
   onReset,
   stages,
   currentStageIndex = 0,
-  onSelectStage
+  onSelectStage,
+  onExitHome
 }) => {
   const [catFilter, setCatFilter] = React.useState<'all' | 'cat1' | 'cat2'>('all');
   const [autoVoice, setAutoVoice] = useState<boolean>(getAutoVoiceover());
@@ -198,15 +200,28 @@ export const StoryHud: React.FC<Props> = ({
             )}
           </button>
 
-          {/* Restart Button */}
+          {/* Restart Scene Button */}
           <button
             type="button"
             onClick={onReset}
             title="Restart Scene"
             className="p-2 rounded-xl text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <RotateCcw className="w-4 h-4" />
           </button>
+
+          {/* Home Exit Button */}
+          {onExitHome && (
+            <button
+              type="button"
+              onClick={onExitHome}
+              title="Return to DOJO Home"
+              className="p-2 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-blue-50 border border-slate-200 transition-colors cursor-pointer flex items-center gap-1.5"
+            >
+              <Home className="w-4 h-4" />
+              <span className="hidden xl:inline text-xs font-bold">Home</span>
+            </button>
+          )}
         </div>
       </div>
     </header>

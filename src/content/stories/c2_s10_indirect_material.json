@@ -437,8 +437,6 @@
         "mr": "सेफ्टी शूज आणि PPE JIRA तिकीट नियम Stop/Go"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s10_sc05_ppe_ticket.mp4",
-        "posterSrc": "/images/scenes/c2_s10_sc05_poster.jpg",
         "fallbackAnimation": "ppe_jira_ticket_mandate",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -450,8 +448,7 @@
             "en": "Important PPE security check! An assembly technician arrives at the Indirect Stores counter requesting a brand new pair of steel-toe safety shoes and a company winter jacket. Instead of an approved JIRA ticket, they present a torn paper scrap with an informal handwritten signature from their team lead. Under SOP 10_C2_S1 Clause 4.1 & Question Bank Q29, should you allow or halt this issuance?",
             "hi": "महत्वपूर्ण पीपीई सुरक्षा जांच! एक असेंबली तकनीशियन अप्रत्यक्ष स्टोर काउंटर पर स्टील-टो सुरक्षा जूते और एक कंपनी शीतकालीन जैकेट की एक नई जोड़ी का अनुरोध करने के लिए आता है। एक अनुमोदित JIRA टिकट के बजाय, वे अपने टीम लीड से एक अनौपचारिक हस्तलिखित हस्ताक्षर के साथ एक फटा हुआ कागज का टुकड़ा प्रस्तुत करते हैं। SOP 10_C2_S1 क्लॉज 4.1 और प्रश्न बैंक Q29 के तहत, क्या आपको इस निर्गमन की अनुमति देनी चाहिए या रोकना चाहिए?",
             "mr": "महत्त्वाची PPE सुरक्षा तपासणी! एक असेंब्ली कामगार अप्रत्यक्ष स्टोअर काउंटरवर येऊन नवीन स्टील-टो सेफ्टी शूज आणि कंपनीचे विंटर जॅकेट मागतो. अधिकृत JIRA तिकिटाऐवजी तो टीम लीडरची साध्या कागदावर केलेली कच्ची स्वाक्षरी दाखवतो. SOP 10_C2_S1 कलम 4.1 आणि प्रश्न संच Q29 नुसार, तुम्ही हे साहित्य देण्यास परवानगी द्याल की थांबवाल?"
-          },
-          "audioSrc": "/audio/mascot/c2_s10_sc05_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "success",
@@ -459,8 +456,7 @@
             "en": "STOP IS ABSOLUTELY MANDATED! SOP Clause 4.1 & Question Bank Q29: Safety shoes, winter wear, and specialized uniforms strictly require an approved JIRA Ticket with valid Employee ID and size allotment before physical issuance! General spares require SAP reservation YMB21, but personal PPE requires JIRA HR/EHS authorization. Handwritten notes are strictly invalid!",
             "hi": "STOP बिल्कुल अनिवार्य है! SOP क्लॉज 4.1 और प्रश्न बैंक Q29: सुरक्षा जूते, सर्दियों के कपड़े, और विशेष वर्दी के लिए भौतिक निर्गमन से पहले वैध कर्मचारी आईडी और आकार आवंटन के साथ एक अनुमोदित JIRA टिकट की सख्त आवश्यकता होती है! सामान्य स्पेयर पार्ट्स के लिए SAP आरक्षण YMB21 की आवश्यकता होती है, लेकिन व्यक्तिगत PPE के लिए JIRA HR/EHS प्राधिकरण की आवश्यकता होती है। हस्तलिखित नोट पूरी तरह से अमान्य हैं!",
             "mr": "STOP करणे अत्यंत बंधनकारक आहे! SOP कलम 4.1 आणि प्रश्न बँक Q29: सेफ्टी शूज, विंटर जॅकेट आणि गणवेश यासाठी प्रत्यक्ष माल देण्यापूर्वी कर्मचाऱ्याचा आयडी आणि मापासह अधिकृत JIRA तिकीट असणे सक्तीचे आहे! सुट्या भागांसाठी SAP YMB21 आरक्षण लागते, पण PPE साहित्यासाठी JIRA मंजुरीच लागते. कागदावरील कच्च्या चिठ्ठ्यांना कोणतीही मान्यता नाही!"
-          },
-          "audioSrc": "/audio/mascot/c2_s10_sc05_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -468,8 +464,7 @@
             "en": "SECURITY BREACH! Handing out safety shoes and uniforms without JIRA tickets breaks HR asset tracking, bypasses company quota limits, and results in direct audit penalties!",
             "hi": "सुरक्षा उल्लंघन! JIRA टिकट के बिना सुरक्षा जूते और वर्दी सौंपना मानव संसाधन संपत्ति ट्रैकिंग को तोड़ता है, कंपनी कोटा सीमा को दरकिनार करता है, और सीधे ऑडिट दंड का परिणाम देता है!",
             "mr": "सुरक्षा नियमांचे उल्लंघन! JIRA तिकिटाशिवाय सेफ्टी शूज आणि जॅकेट दिल्यास कंपनीच्या मालमत्ता नोंदी चुकतात आणि ऑडिटमध्ये दंड होऊ शकतो!"
-          },
-          "audioSrc": "/audio/mascot/c2_s10_sc05_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -533,8 +528,6 @@
         "mr": "अप्रत्यक्ष स्टोअर पुनर्मागणी मर्यादा (ROP) आणि खरेदी मागणी (ME51N)"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s10_sc06_rop_pr.mp4",
-        "posterSrc": "/images/scenes/c2_s10_sc06_poster.jpg",
         "fallbackAnimation": "reorder_point_pr_generation",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -546,8 +539,7 @@
             "en": "Final milestone of Module 10! In Central Indirect Stores (CM01), the physical stock of critical synthetic motor grease has dropped below its Safety Stock Reorder Point (ROP). Under SOP 10_C2_S1, how does the Indirect Stores Executive initiate systemic replenishment to prevent plant-wide breakdown shortages?",
             "hi": "मॉड्यूल 10 का अंतिम मील का पत्थर! सेंट्रल इनडायरेक्ट स्टोर्स (CM01) में, महत्वपूर्ण सिंथेटिक मोटर ग्रीस का भौतिक स्टॉक अपने सुरक्षा स्टॉक पुनरावृत्ति बिंदु (ROP) से नीचे चला गया है। SOP 10_C2_S1 के तहत, प्लांट-व्यापी ब्रेकडाउन की कमी को रोकने के लिए इनडायरेक्ट स्टोर्स एक्जीक्यूटिव व्यवस्थित पुनःपूर्ति कैसे शुरू करता है?",
             "mr": "मॉड्यूल 10 चा अंतिम टप्पा! सेंट्रल इनडायरेक्ट स्टोअर्समध्ये (CM01), सिंथेटिक मोटर ग्रीसचा प्रत्यक्ष साठा सुरक्षा मर्यादेखाली (ROP) आला आहे. SOP 10_C2_S1 नुसार, कारखान्यात वंगणाचा तुटवडा पडू नये म्हणून स्टोअर एक्झिक्युटिव्ह SAP मध्ये कशी पुनर्नोंद करतो?"
-          },
-          "audioSrc": "/audio/mascot/c2_s10_sc06_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "trophy",
@@ -555,8 +547,7 @@
             "en": "PURCHASE REQUISITION MASTERY! SOP Clause 4.5: The Indirect Stores Executive generates an official Purchase Requisition (PR) in SAP via T-Code ME51N referencing the Material Master, approved Cost Center, and vendor contract! Stage 10: Indirect Material Handling (CM01 to MN01) is now 100% complete!",
             "hi": "खरीद मांग महारत! SOP क्लॉज 4.5: इनडायरेक्ट स्टोर्स एक्जीक्यूटिव मटेरियल मास्टर, अनुमोदित लागत केंद्र और विक्रेता अनुबंध का संदर्भ देते हुए टी-कोड ME51N के माध्यम से SAP में एक आधिकारिक खरीद मांग (PR) उत्पन्न करता है! स्टेज 10 अब 100% पूरा हुआ!",
             "mr": "खरेदी मागणी प्रावीण्य! SOP कलम 4.5: स्टोअर एक्झिक्युटिव्ह SAP टी-कोड ME51N द्वारे मटेरियल मास्टर आणि अधिकृत कॉस्ट सेंटरचा संदर्भ देऊन नवीन पर्चेस रिक्विझिशन (PR) तयार करतो! स्टेज 10 आता 100% पूर्ण झाले आहे!"
-          },
-          "audioSrc": "/audio/mascot/c2_s10_sc06_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -564,8 +555,7 @@
             "en": "INCORRECT REPLENISHMENT WORKFLOW! Central stores cannot purchase materials with petty cash or verbally call outside shops. Official replenishment requires an authorized SAP Purchase Requisition (ME51N) against approved plant budgets!",
             "hi": "गलत पुनःपूर्ति कार्यप्रवाह! केंद्रीय स्टोर नकद के साथ सामग्री नहीं खरीद सकते हैं या मौखिक रूप से बाहरी दुकानों को फोन नहीं कर सकते हैं। आधिकारिक पुनःपूर्ति के लिए स्वीकृत प्लांट बजट के विरुद्ध एक अधिकृत SAP खरीद मांग (ME51N) की आवश्यकता होती है!",
             "mr": "चुकीची कार्यपद्धती! स्टोअर कर्मचारी परस्पर रोख पैशाने किंवा बाहेरून फोन करून माल मागवू शकत नाहीत. अधिकृत खरेदीसाठी SAP ME51N द्वारे बजेटनुसार अधिकृत PR तयार करणे बंधनकारक असते!"
-          },
-          "audioSrc": "/audio/mascot/c2_s10_sc06_wrong.mp3"
+          }
         }
       },
       "interaction": {

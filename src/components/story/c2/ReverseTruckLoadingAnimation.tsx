@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { Truck, FileText, CheckCircle2, ShieldCheck, Warehouse, ClipboardCheck } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Truck, FileText, CheckCircle2, ShieldCheck, Warehouse, ClipboardCheck, Video, Eye } from 'lucide-react';
 
 interface Props {
   videoSrc?: string;
+  posterSrc?: string;
   isPaused: boolean;
   onPauseReached?: () => void;
 }
 
 export const ReverseTruckLoadingAnimation: React.FC<Props> = ({
   videoSrc,
+  posterSrc = '/Assets/videos/scene_08_empty_bin_strapping_poster.jpg',
   isPaused,
   onPauseReached
 }) => {
-  const [videoAvailable, setVideoAvailable] = useState<boolean>(Boolean(videoSrc));
-
-  useEffect(() => {
-    setVideoAvailable(Boolean(videoSrc));
-  }, [videoSrc]);
+  const [videoError, setVideoError] = useState<boolean>(false);
+  const [viewMode, setViewMode] = useState<'video' | 'svg'>('video');
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [hasTriggeredPause, setHasTriggeredPause] = useState(false);
   const [stepIndex, setStepIndex] = useState<number>(0);
 
@@ -29,6 +29,17 @@ export const ReverseTruckLoadingAnimation: React.FC<Props> = ({
       return () => clearTimeout(timer);
     }
   }, [hasTriggeredPause, isPaused, onPauseReached]);
+
+  // Sync video play/pause
+  useEffect(() => {
+    if (videoRef.current) {
+      if (isPaused) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play().catch(() => {});
+      }
+    }
+  }, [isPaused]);
 
   // Periodic cycling through the 4 dispatch milestones
   useEffect(() => {
@@ -47,28 +58,39 @@ export const ReverseTruckLoadingAnimation: React.FC<Props> = ({
 
   return (
     <div className="relative w-full h-[320px] sm:h-[390px] md:h-[430px] bg-slate-950 rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-slate-800 shadow-2xl select-none flex flex-col justify-between p-3 sm:p-5">
-      {/* Optional Real Video Player with Auto Fallback */}
-      {videoSrc && videoAvailable && (
+      {/* 3D MP4 Real Simulation Video */}
+      {videoSrc && viewMode === 'video' && !videoError && (
         <video
+          ref={videoRef}
+          key={videoSrc}
           src={videoSrc}
+          poster={posterSrc}
           autoPlay
           loop={!isPaused}
           muted
           playsInline
-          onError={() => setVideoAvailable(false)}
+          preload="auto"
+          onError={(e) => {
+            console.warn('[Ather DOJO] Video stream loading error:', videoSrc, e);
+            setVideoError(true);
+          }}
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
       )}
 
-      {/* Industrial Grid Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 opacity-95 pointer-events-none" />
-      <div
-        className="absolute inset-0 opacity-10 pointer-events-none"
-        style={{
-          backgroundImage: 'linear-gradient(to right, #6366f1 1px, transparent 1px), linear-gradient(to bottom, #6366f1 1px, transparent 1px)',
-          backgroundSize: '32px 32px'
-        }}
-      />
+      {/* Industrial Grid Background (Rendered when in SVG mode or when video errors) */}
+      {(viewMode === 'svg' || videoError || !videoSrc) && (
+        <>
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 opacity-95 pointer-events-none" />
+          <div
+            className="absolute inset-0 opacity-10 pointer-events-none"
+            style={{
+              backgroundImage: 'linear-gradient(to right, #6366f1 1px, transparent 1px), linear-gradient(to bottom, #6366f1 1px, transparent 1px)',
+              backgroundSize: '32px 32px'
+            }}
+          />
+        </>
+      )}
 
       {/* Header Bar */}
       <div className="relative z-10 flex items-center justify-between border-b border-slate-800 pb-2.5">
@@ -91,11 +113,35 @@ export const ReverseTruckLoadingAnimation: React.FC<Props> = ({
           </div>
         </div>
 
-        <div className="hidden sm:flex items-center gap-2 font-mono text-[11px] bg-slate-900/90 px-3 py-1.5 rounded-xl border border-slate-700/80">
-          <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-          <span className="text-emerald-300 font-bold">
-            STAGE 12 GRAND FINALE · DISPATCH AUTHORIZED
-          </span>
+        <div className="flex items-center gap-2">
+          {videoSrc && (
+            <button
+              type="button"
+              onClick={() => setViewMode((prev) => (prev === 'video' ? 'svg' : 'video'))}
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700 shadow-sm transition-all cursor-pointer"
+              title="Toggle between 3D Video and 2D SOP Blueprint"
+            >
+              {viewMode === 'video' ? (
+                <>
+                  <Video className="w-3.5 h-3.5 text-blue-400" />
+                  <span className="hidden sm:inline">3D VIDEO</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                </>
+              ) : (
+                <>
+                  <Eye className="w-3.5 h-3.5 text-amber-400" />
+                  <span className="hidden sm:inline">2D BLUEPRINT</span>
+                </>
+              )}
+            </button>
+          )}
+
+          <div className="hidden sm:flex items-center gap-2 font-mono text-[11px] bg-slate-900/90 px-3 py-1.5 rounded-xl border border-slate-700/80">
+            <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+            <span className="text-emerald-300 font-bold">
+              STAGE 12 GRAND FINALE · DISPATCH AUTHORIZED
+            </span>
+          </div>
         </div>
       </div>
 
@@ -162,21 +208,19 @@ export const ReverseTruckLoadingAnimation: React.FC<Props> = ({
               return (
                 <div
                   key={s.label}
-                  className={`p-2 rounded-lg border transition-all duration-300 flex items-center justify-between text-[11px] ${
-                    isCurrent
-                      ? 'bg-slate-900 border-indigo-500/60 shadow-md shadow-indigo-500/10'
-                      : isPast
+                  className={`p-2 rounded-lg border transition-all duration-300 flex items-center justify-between text-[11px] ${isCurrent
+                    ? 'bg-slate-900 border-indigo-500/60 shadow-md shadow-indigo-500/10'
+                    : isPast
                       ? 'bg-slate-950/60 border-emerald-500/30 opacity-80'
                       : 'bg-slate-950/40 border-slate-800/60 opacity-50'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center gap-2">
                     {isPast ? (
                       <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                     ) : (
-                      <span className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center text-[9px] font-bold shrink-0 ${
-                        isCurrent ? 'border-indigo-400 text-indigo-300 animate-pulse' : 'border-slate-600 text-slate-500'
-                      }`}>
+                      <span className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center text-[9px] font-bold shrink-0 ${isCurrent ? 'border-indigo-400 text-indigo-300 animate-pulse' : 'border-slate-600 text-slate-500'
+                        }`}>
                         {idx + 1}
                       </span>
                     )}

@@ -18,8 +18,8 @@
         "mr": "प्रमाणित MHE ऑपरेटर अधिकृतता"
       },
       "media": {
-        "videoSrc": "/Assets/8%20Sequential%20Scenes/5%20Battery%20Cell%20Vault%20%26%20Climate%20Inspection/scene_05_battery_vault_climate.mp4",
-        "posterSrc": "/Assets/8%20Sequential%20Scenes/5%20Battery%20Cell%20Vault%20%26%20Climate%20Inspection/scene_05_battery_vault_climate_poster.jpg",
+        "videoSrc": "/Assets/videos/scene_05_battery_vault_climate.mp4",
+        "posterSrc": "/Assets/videos/scene_05_battery_vault_climate_poster.jpg",
         "fallbackAnimation": "battery_dock_auth",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -31,8 +31,7 @@
             "en": "Welcome to Stage 4: Specialized Battery Cell Put-Away! High-value lithium-ion battery cell crates have arrived at Dock 01. These sensitive cells power the Ather 450X and are hazardous if mishandled. A general warehouse helper grabs a manual pallet truck to move the pallet to clear the dock floor. Should they proceed?",
             "hi": "स्टेज 4: विशेष बैटरी सेल पुट-अवे में आपका स्वागत है! डॉक 01 पर उच्च-मूल्य वाले लिथियम-आयन बैटरी सेल क्रेट पहुंचे हैं। ये संवेदनशील सेल एथर 450X को शक्ति प्रदान करते हैं और यदि गलत तरीके से संभाले जाएं तो खतरनाक होते हैं। एक सामान्य वेयरहाउस हेल्पर डॉक फर्श को खाली करने के लिए मैनुअल पैलेट ट्रक से पैलेट को ले जाने की कोशिश करता है। क्या उन्हें आगे बढ़ना चाहिए?",
             "mr": "स्टेज 4: विशेष बॅटरी सेल पुट-अवेमध्ये आपले स्वागत आहे! डॉक 01 वर उच्च-मूल्याचे लिथियम-आयन बॅटरी सेल क्रेट्स आले आहेत. हे संवेदनशील सेल्स एथर 450X ला उर्जा देतात आणि चुकीच्या पद्धतीने हाताळल्यास धोकादायक असतात. डॉकची जागा मोकळी करण्यासाठी एक सामान्य वेअरहाऊस हेल्पर मॅन्युअल पॅलेट ट्रकने पॅलेट हलवण्याचा प्रयत्न करतो. त्याने पुढे जावे का?"
-          },
-          "audioSrc": "/audio/mascot/c1_s4_sc01_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "success",
@@ -40,8 +39,7 @@
             "en": "STOP IS CORRECT! SOP for Battery Cell Put-Away (Clause 4.1): Battery cells must be handled and transported EXCLUSIVELY by certified MHE operators using designated electric reach-trucks or powered pallet trucks. Uncertified handling risks thermal shocks, mechanical puncture, or dangerous cell dropping!",
             "hi": "STOP बिल्कुल सही निर्णय है! बैटरी सेल पुट-अवे SOP (क्लॉज 4.1): बैटरी सेल को विशेष रूप से प्रमाणित MHE ऑपरेटरों द्वारा नामित इलेक्ट्रिक रीच-ट्रक या पावर्ड पैलेट ट्रक का उपयोग करके संभाला और ले जाया जाना चाहिए। अप्रमाणित हैंडलिंग से थर्मल शॉक, यांत्रिक क्षति या खतरनाक सेल गिरने का जोखिम होता है!",
             "mr": "STOP अगदी बरोबर निर्णय! बॅटरी सेल पुट-अवे SOP (कलम 4.1): बॅटरी सेल्स केवळ प्रमाणित MHE ऑपरेटरद्वारेच नियुक्त इलेक्ट्रिक रीच-ट्रक किंवा पावर्ड पॅलेट ट्रकचा वापर करून हाताळले आणि हलवले पाहिजेत. अप्रमाणित हाताळणीमुळे थर्मल शॉक, मेकॅनिकल डॅमेज किंवा सेल पडण्याचा मोठा धोका असतो!"
-          },
-          "audioSrc": "/audio/mascot/c1_s4_sc01_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -49,8 +47,7 @@
             "en": "CRITICAL SAFETY VIOLATION! Under SOP Clause 4.1, general warehouse associates and manual helpers are strictly prohibited from moving lithium-ion cell shipments. Mishandling fragile battery cells can cause internal short circuits, fire hazards, and complete warranty voiding.",
             "hi": "गंभीर सुरक्षा उल्लंघन! SOP क्लॉज 4.1 के तहत, सामान्य वेयरहाउस सहायकों और अकुशल हेल्परों को लिथियम-आयन सेल शिपमेंट को स्थानांतरित करने से सख्ती से प्रतिबंधित किया गया है। नाजुक बैटरी सेल की गलत हैंडलिंग से आंतरिक शॉर्ट सर्किट, आग का खतरा और वारंटी पूरी तरह से रद्द हो सकती है।",
             "mr": "गंभीर सुरक्षा उल्लंघन! SOP कलम 4.1 नुसार, सामान्य वेअरहाऊस मदतनीसांना लिथियम-आयन सेल शिपमेंट हलवण्यास सक्त मनाई आहे. नाजूक बॅटरी सेल्सच्या चुकीच्या हाताळणीमुळे अंतर्गत शॉर्ट सर्किट, आगीचा धोका आणि वॉरंटी रद्द होऊ शकते."
-          },
-          "audioSrc": "/audio/mascot/c1_s4_sc01_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -114,8 +111,6 @@
         "mr": "क्लीनरूम पर्यावरण मर्यादा"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c1_s4_sc02_cleanroom_params.mp4",
-        "posterSrc": "/images/scenes/c1_s4_sc02_poster.jpg",
         "fallbackAnimation": "cleanroom_vault_env",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -127,8 +122,7 @@
             "en": "The certified MHE operator has transported the lithium-ion cell pallet through the airlock into the sealed Battery Standard Room. Before stowing the pallet into the cell vault, the environmental telemetry monitors must be verified. What are the strict temperature and relative humidity thresholds mandated by Ather SOP?",
             "hi": "प्रमाणित MHE ऑपरेटर ने एयरलॉक के माध्यम से लिथियम-आयन सेल पैलेट को सीलबंद बैटरी स्टैंडर्ड रूम में पहुंचाया है। पैलेट को सेल वॉल्ट में रखने से पहले, पर्यावरण टेलीमेट्री मॉनिटरों का सत्यापन किया जाना चाहिए। एथर SOP द्वारा अनिवार्य सख्त तापमान और सापेक्ष आर्द्रता सीमाएं क्या हैं?",
             "mr": "प्रमाणित MHE ऑपरेटरने एअरलाँकद्वारे लिथियम-आयन सेल पॅलेट सीलबंद बॅटरी स्टँडर्ड रूममध्ये नेले आहे. पॅलेट सेल वॉल्टमध्ये ठेवण्यापूर्वी, पर्यावरणीय टेलिमेट्री मॉनिटर्स तपासले पाहिजेत. एथर SOP द्वारे अनिवार्य केलेल्या तापमान आणि सापेक्ष आर्द्रतेच्या अचूक मर्यादा कोणत्या आहेत?"
-          },
-          "audioSrc": "/audio/mascot/c1_s4_sc02_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "success",
@@ -136,8 +130,7 @@
             "en": "Exact environmental calibration! SOP Clause 4.2: The Battery Standard Room must maintain 20°C–25°C temperature and 60%–65% Relative Humidity (RH) 24/7. This prevents thermal runaway, electrolyte crystallization, and moisture absorption inside cathode/anode layers!",
             "hi": "सटीक पर्यावरणीय अंशांकन! SOP क्लॉज 4.2: बैटरी स्टैंडर्ड रूम को 24/7 20°C–25°C तापमान और 60%–65% सापेक्ष आर्द्रता (RH) बनाए रखनी चाहिए। यह थर्मल रनवे, इलेक्ट्रोलाइट क्रिस्टलीकरण, और कैथोड/एनोड परतों के अंदर नमी अवशोषण को रोकता है!",
             "mr": "अचूक पर्यावरणीय कॅलिब्रेशन! SOP कलम 4.2: बॅटरी स्टँडर्ड रूममध्ये 24/7 20°C–25°C तापमान आणि 60%–65% सापेक्ष आर्द्रता (RH) राखली पाहिजे. हे थर्मल रनवे, इलेक्ट्रोलाइट क्रिस्टलायझेशन आणि कॅथोड/एनोड थरांमध्ये ओलावा शोषून घेण्यास प्रतिबंध करते!"
-          },
-          "audioSrc": "/audio/mascot/c1_s4_sc02_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -145,8 +138,7 @@
             "en": "Environmental non-compliance! Under SOP Clause 4.2, exceeding 25°C accelerates internal cell degradation, while dropping below 60% or exceeding 65% humidity creates condensation and static discharge hazards around sensitive battery terminals.",
             "hi": "पर्यावरणीय गैर-अनुपालन! SOP क्लॉज 4.2 के तहत, 25°C से अधिक होने पर आंतरिक सेल क्षरण तेज हो जाता है, जबकि 60% से कम या 65% से अधिक आर्द्रता संवेदनशील बैटरी टर्मिनलों के आसपास संघनन और स्थैतिक निर्वहन (static discharge) का खतरा पैदा करती है।",
             "mr": "पर्यावरणीय नियमांचे उल्लंघन! SOP कलम 4.2 नुसार, 25°C पेक्षा जास्त तापमान सेलचे नुकसान वेगाने करते, तर 60% पेक्षा कमी किंवा 65% पेक्षा जास्त आर्द्रता संवेदनशील बॅटरी टर्मिनल्सभोवती घनीभवन आणि स्टॅटिक डिस्चार्जचा धोका निर्माण करते."
-          },
-          "audioSrc": "/audio/mascot/c1_s4_sc02_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -222,8 +214,6 @@
         "mr": "2-तासांची कडक पुट-अवे काउंटडाउन SLA"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c1_s4_sc03_sla_countdown.mp4",
-        "posterSrc": "/images/scenes/c1_s4_sc03_poster.jpg",
         "fallbackAnimation": "battery_sla_countdown",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -330,8 +320,6 @@
         "mr": "पर्यावरण उल्लंघन अलार्म आणि नियंत्रण"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c1_s4_sc04_environmental_breach.mp4",
-        "posterSrc": "/images/scenes/c1_s4_sc04_poster.jpg",
         "fallbackAnimation": "environmental_breach_alarm",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -343,8 +331,7 @@
             "en": "ALARM TRIPPED! As you prepare to complete cell vault put-away, the wall telemetry strobe begins flashing amber: Relative Humidity has spiked to 75.2% and temperature is rising to 27.4°C. Moisture is dangerous for exposed battery electrodes! What is your immediate mandatory escalation action under Ather SOP Clause 5.2?",
             "hi": "अलार्म बज गया! जब आप सेल वॉल्ट पुट-अवे पूरा करने की तैयारी कर रहे हैं, तो दीवार की टेलीमेट्री एम्बर में चमकने लगती है: सापेक्ष आर्द्रता बढ़कर 75.2% हो गई है और तापमान 27.4°C तक बढ़ रहा है। नमी खुली बैटरी इलेक्ट्रोड के लिए खतरनाक है! एथर SOP क्लॉज 5.2 के तहत आपकी तत्काल अनिवार्य कार्रवाई क्या है?",
             "mr": "अलार्म वाजला! तुम्ही सेल वॉल्ट पुट-अवे पूर्ण करण्याची तयारी करत असताना, वॉल टेलिमेट्री फ्लॅश होऊ लागली: सापेक्ष आर्द्रता 75.2% पर्यंत वाढली आहे आणि तापमान 27.4°C वर पोहोचले आहे. बॅटरी इलेक्ट्रोड्ससाठी जास्त ओलावा अतिशय धोकादायक आहे! एथर SOP कलम 5.2 नुसार तुमची तातडीची अनिवार्य कृती काय आहे?"
-          },
-          "audioSrc": "/audio/mascot/c1_s4_sc04_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "trophy",
@@ -352,8 +339,7 @@
             "en": "PERFECT CRISIS CONTAINMENT! SOP Clause 5.2: In the event of an environmental parameter breach, you must immediately halt pallet transit, seal airlock doors to isolate the chamber, and notify the Putaway Zone Leader and HVAC maintenance engineering. Never place sensitive cells into an out-of-spec vault!",
             "hi": "उत्कृष्ट संकट नियंत्रण! SOP क्लॉज 5.2: पर्यावरणीय मापदंडों के उल्लंघन की स्थिति में, आपको तुरंत पैलेट स्थानांतरण को रोकना होगा, कक्ष को अलग करने के लिए एयरलॉक दरवाजों को सील करना होगा, और पुट-अवे ज़ोन लीडर और HVAC रखरखाव इंजीनियरिंग को सूचित करना होगा। संवेदनशील सेलों को कभी भी विनिर्देश से बाहर के वॉल्ट में न रखें!",
             "mr": "उत्कृष्ट संकट नियंत्रण! SOP कलम 5.2: पर्यावरणीय मर्यादांचे उल्लंघन झाल्यास, तुम्ही त्वरित पॅलेट हालचाल थांबवली पाहिजे, चेंबर सुरक्षित ठेवण्यासाठी एअरलॉक दरवाजे बंद केले पाहिजेत आणि पुट-अवे झोन लीडर व HVAC मेंटेनन्स टीमला कळवले पाहिजे. संवेदनशील पेशी कधीही मर्यादाबाहेरील वॉल्टमध्ये ठेवू नका!"
-          },
-          "audioSrc": "/audio/mascot/c1_s4_sc04_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -361,8 +347,7 @@
             "en": "CATASTROPHIC CONTAMINATION RISK! Never ignore an active environmental breach or attempt to bypass humidity trips. 75% RH triggers moisture condensation on lithium-ion terminals, creating hazardous internal micro-shorts and battery fires. Halt, isolate, and escalate immediately!",
             "hi": "विनाशकारी संदूषण जोखिम! सक्रिय पर्यावरणीय उल्लंघन को कभी नज़रअंदाज़ न करें या आर्द्रता चेतावनियों को बायपास करने का प्रयास न करें। 75% RH लिथियम-आयन टर्मिनलों पर नमी के संघनन को ट्रिगर करता है, जिससे खतरनाक आंतरिक माइक्रो-शॉर्ट्स और बैटरी में आग लग सकती है। तुरंत रोकें, अलग करें और रिपोर्ट करें!",
             "mr": "धोकादायक संदूषण धोका! सक्रिय पर्यावरणीय उल्लंघन कधीही दुर्लक्षित करू नका किंवा आर्द्रता अलार्म बायपास करण्याचा प्रयत्न करू नका. 75% RH मुळे लिथियम-आयन टर्मिनल्सवर ओलावा साचतो, ज्यामुळे अंतर्गत शॉर्ट सर्किट आणि आगीचा धोका उद्भवतो. ताबडतोब थांबवा, वेगळे करा आणि कळवा!"
-          },
-          "audioSrc": "/audio/mascot/c1_s4_sc04_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -438,8 +423,6 @@
         "mr": "सेल क्रेट स्टॅकिंग मर्यादा आणि सील अखंडता"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c1_s4_sc05_stacking_limit.mp4",
-        "posterSrc": "/images/scenes/c1_s4_sc05_poster.jpg",
         "fallbackAnimation": "battery_stacking_seal",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -451,8 +434,7 @@
             "en": "Final Stage 4 Battery Cell Challenge! Inside the battery standard room, floor space is tight. An operator notices two lithium-ion cell crates already stacked on a pallet position and attempts to hoist a third crate on top (3-high stacking) while also ignoring a triggered red ShockWatch indicator on the box corner. Should this be allowed or stopped immediately?",
             "hi": "अंतिम स्टेज 4 बैटरी सेल चुनौती! बैटरी स्टैंडर्ड रूम के अंदर, फर्श पर जगह कम है। एक ऑपरेटर एक पैलेट स्थिति पर पहले से ही रखे दो लिथियम-आयन सेल क्रेट देखता है और बॉक्स के कोने पर ट्रिगर किए गए लाल ShockWatch संकेतक को अनदेखा करते हुए शीर्ष पर तीसरा क्रेट (3-उच्च स्टैकिंग) फहराने का प्रयास करता है। क्या इसकी अनुमति दी जानी चाहिए या तुरंत रोका जाना चाहिए?",
             "mr": "अंतिम टप्पा 4 बॅटरी सेल आव्हान! बॅटरी स्टँडर्ड रूममध्ये जागा कमी आहे. एका ऑपरेटरला पॅलेटवर आधीच ठेवलेले दोन लिथियम-आयन सेल क्रेट्स दिसतात आणि तो बॉक्सच्या कोपऱ्यावरील लाल ShockWatch इंडिकेटरकडे दुर्लक्ष करून त्यावर तिसरा क्रेट (3-हाय स्टॅकिंग) ठेवण्याचा प्रयत्न करतो. यास परवानगी द्यावी की ताबडतोब थांबवावे?"
-          },
-          "audioSrc": "/audio/mascot/c1_s4_sc05_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "trophy",
@@ -460,8 +442,7 @@
             "en": "STOP IS ABSOLUTELY MANDATORY! SOP Clause 4.4: Lithium-ion battery cell crates have a strict maximum stacking limit of 2 crates high to prevent bottom pouch crushing and internal dielectric puncture. Furthermore, any red ShockWatch or tilt indicator trigger mandates immediate quarantine isolation and Quality Engineering review. Battery Cell Put-Away Module 4 is now 100% complete!",
             "hi": "STOP बिल्कुल अनिवार्य है! SOP क्लॉज 4.4: लिथियम-आयन बैटरी सेल क्रेट में नीचे के पाउच को दबने और आंतरिक ढांचा क्षतिग्रस्त होने से रोकने के लिए अधिकतम 2 क्रेट की सख्त स्टैकिंग सीमा होती है। इसके अलावा, कोई भी लाल ShockWatch या टिल्ट इंडिकेटर ट्रिगर होने पर तत्काल क्वारंटाइन अलगाव और गुणवत्ता इंजीनियरिंग समीक्षा अनिवार्य है। मॉड्यूल 4 अब 100% पूरा हुआ!",
             "mr": "STOP पूर्णपणे अनिवार्य आहे! SOP कलम 4.4: खालच्या पेशी दबणे आणि अंतर्गत नुकसान रोखण्यासाठी लिथियम-आयन बॅटरी सेल क्रेट्सची कमाल स्टॅकिंग मर्यादा काटेकोरपणे 2 क्रेट्स आहे. याव्यतिरिक्त, लाल ShockWatch किंवा टिल्ट इंडिकेटर दिसल्यास त्वरित क्वारंटाइन आणि क्वालिटी इंजिनिअरिंग तपासणी अनिवार्य आहे. मॉड्यूल 4 आता 100% पूर्ण झाले आहे!"
-          },
-          "audioSrc": "/audio/mascot/c1_s4_sc05_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -469,8 +450,7 @@
             "en": "CRITICAL SAFETY HAZARD! Stacking 3 crates high crushes fragile lithium-ion pouches, risking electrolyte leakage and internal short-circuit fire. A red shock indicator means the shipment suffered severe impact during transit and cannot enter active assembly stock!",
             "hi": "गंभीर सुरक्षा खतरा! 3 क्रेट ऊंचे रखने से नाजुक लिथियम-आयन पाउच दब जाते हैं, जिससे इलेक्ट्रोलाइट रिसाव और आंतरिक शॉर्ट-सर्किट आग लगने का खतरा होता है। एक लाल शॉक संकेतक का मतलब है कि शिपमेंट को पारगमन के दौरान गंभीर झटका लगा है और यह सक्रिय असेंबली स्टॉक में प्रवेश नहीं कर सकता है!",
             "mr": "गंभीर सुरक्षा धोका! 3 क्रेट्स एकावर एक ठेवल्यास नाजूक सेल्स दबले जातात, ज्यामुळे इलेक्ट्रोलाइट गळती आणि अंतर्गत शॉर्ट-सर्किटमुळे आग लागण्याचा धोका असतो. लाल शॉक इंडिकेटर दर्शवतो की वाहतुकीदरम्यान मोठा धक्का बसला आहे, त्यामुळे ते सक्रिय असेंब्ली स्टॉकमध्ये जाऊ शकत नाही!"
-          },
-          "audioSrc": "/audio/mascot/c1_s4_sc05_wrong.mp3"
+          }
         }
       },
       "interaction": {

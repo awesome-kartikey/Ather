@@ -373,8 +373,8 @@
           "hi": "रिवर्स प्रेषण अनुपालन: भौतिक भार सत्यापन → SAP डिलीवरी चालान और ई-वे बिल → हस्ताक्षरित LR प्रूफ ऑफ हैंडओवर → JIRA स्थिति 'Returned to vendor' में संक्रमण",
           "mr": "रिव्हर्स डिस्पॅच पूर्तता: प्रत्यक्ष मालाची तपासणी → SAP डिलिव्हरी चलन व ई-वे बिल → ट्रान्सपोर्टरची स्वाक्षरी असलेली LR पावती → JIRA मध्ये 'Returned to vendor' नोंद"
         },
-        "videoSrc": "/Assets/8%20Sequential%20Scenes/8%20Empty%20Bin%20Stacking%20%26%20Strapping/scene_08_empty_bin_strapping.mp4",
-        "posterSrc": "/Assets/8%20Sequential%20Scenes/8%20Empty%20Bin%20Stacking%20%26%20Strapping/scene_08_empty_bin_strapping_poster.jpg"
+        "videoSrc": "/Assets/videos/scene_08_empty_bin_strapping.mp4",
+        "posterSrc": "/Assets/videos/scene_08_empty_bin_strapping_poster.jpg"
       },
       "interaction": {
         "type": "sequence",
@@ -460,8 +460,6 @@
         "mr": "लाईन-साइड रिकाम्या पेट्या सोडून देण्याचे उल्लंघन"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s12_sc05_gangway_choke.mp4",
-        "posterSrc": "/images/scenes/c2_s12_sc05_poster.jpg",
         "fallbackAnimation": "line_side_gangway_choke",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -473,8 +471,7 @@
             "en": "Urgent shopfloor safety audit! Along the main frame assembly line, an operator has emptied 6 plastic component totes and casually stacked them directly in the pedestrian yellow walkway, stating: 'I'll leave them here until shift end so I don't waste time walking to the collection area.' Under SOP 08_C2_S4 & Question Bank Q26, should this practice be allowed or stopped immediately?",
             "hi": "तत्काल शॉपफ्लोर सुरक्षा ऑडिट! मुख्य फ्रेम असेंबली लाइन के साथ, एक ऑपरेटर ने 6 प्लास्टिक कंपोनेंट टोट्स को खाली कर दिया है और उन्हें सीधे पैदल यात्री पीले वॉकवे में रख दिया है, यह कहते हुए: 'मैं उन्हें शिफ्ट के अंत तक यहां छोड़ दूंगा ताकि संग्रह क्षेत्र में जाने में समय बर्बाद न हो।' SOP 08_C2_S4 और प्रश्न बैंक Q26 के तहत, क्या इस प्रथा की अनुमति दी जानी चाहिए या तुरंत रोक दी जानी चाहिए?",
             "mr": "तातडीचे शॉपफ्लोर सुरक्षा ऑडिट! असेंब्ली लाईनच्या बाजूला, एका ऑपरेटरने 6 रिकाम्या प्लास्टिक पेट्या थेट पिवळ्या आपत्कालीन रस्त्यात टाकल्या आणि म्हणाला: 'मी शिफ्ट संपेपर्यंत या इथेच ठेवतो जेणेकरून मला चालत जावे लागणार नाही.' SOP 08_C2_S4 आणि प्रश्न संच Q26 नुसार, या कृतीला परवानगी द्यावी की थांबवावी?"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc05_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "success",
@@ -482,8 +479,7 @@
             "en": "STOP IS ABSOLUTELY ESSENTIAL! SOP 08_C2_S4 & Question Bank Q26: Leaving empty bins at line-side chokes the gangways, blocks emergency exits, and completely halts the reverse asset loop! Dedicated Empty Bin Collectors must sweep the line every 30 minutes to move containers to the segregation zone!",
             "hi": "STOP बिल्कुल आवश्यक है! SOP 08_C2_S4 और प्रश्न बैंक Q26: लाइन-साइड पर खाली डिब्बे छोड़ने से रास्ते अवरुद्ध हो जाते हैं, आपातकालीन निकास अवरुद्ध हो जाते हैं, और रिवर्स एसेट लूप पूरी तरह से रुक जाता है! समर्पित खाली बिन कलेक्टरों को कंटेनरों को अलग करने वाले क्षेत्र में ले जाने के लिए हर 30 मिनट में लाइन को साफ करना चाहिए!",
             "mr": "STOP करणे अत्यंत आवश्यक आहे! SOP 08_C2_S4 आणि प्रश्न बँक Q26: लाईनच्या बाजूला रिकाम्या पेट्या सोडल्यास रस्ता अडकतो, आगीच्या वेळी बाहेर पडण्याचा मार्ग बंद होतो आणि पेट्यांचा तुटवडा भासतो! रिकाम्या पेट्या गोळा करणाऱ्या स्वतंत्र टीमने दर 30 मिनिटांनी लाईन साफ केली पाहिजे!"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc05_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -491,8 +487,7 @@
             "en": "HAZARDOUS EHS VIOLATION! Abandoning empty bins on factory walkways creates tripping hazards, blocks emergency escape corridors, and starves receiving docks of empty packaging!",
             "hi": "खतरनाक ईएचएस उल्लंघन! फैक्ट्री वॉकवे पर खाली डिब्बे छोड़ने से ट्रिपिंग के खतरे पैदा होते हैं, आपातकालीन निकास गलियारे अवरुद्ध होते हैं, और खाली पैकेजिंग की कमी होती है!",
             "mr": "गंभीर सुरक्षा नियमभंग! रस्त्यावर रिकाम्या पेट्या टाकल्याने लोक अडखळून पडतात, आपत्कालीन रस्ता बंद होतो आणि गोदामात पेट्यांचा तुटवडा होतो!"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc05_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -556,8 +551,6 @@
         "mr": "सप्लायर 3-दिवसांची मुदत उल्लंघन आणि कुरिअर डेबिट नोट"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s12_sc06_courier_debit.mp4",
-        "posterSrc": "/images/scenes/c2_s12_sc06_poster.jpg",
         "fallbackAnimation": "supplier_sla_courier_debit",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -569,8 +562,7 @@
             "en": "Contractual quality compliance! A supplier of defective mirror mounts was notified via JIRA with status 'To be RTV'. However, after 3 full working days, the supplier has still failed to send a truck to pick up their rejected parts. Under Ather SOP & Question Bank Q34, what must the warehouse execute?",
             "hi": "संविदात्मक गुणवत्ता अनुपालन! दोषपूर्ण मिरर माउंट के एक आपूर्तिकर्ता को 'To be RTV' स्थिति के साथ JIRA के माध्यम से सूचित किया गया था। हालांकि, 3 पूर्ण कार्य दिवसों के बाद भी, आपूर्तिकर्ता अपने अस्वीकृत पुर्जों को लेने के लिए ट्रक भेजने में विफल रहा है। एथर SOP और प्रश्न बैंक Q34 के तहत, गोदाम को क्या निष्पादित करना चाहिए?",
             "mr": "सप्लायर नियम पूर्तता! सदोष मिरर माउंट्सच्या सप्लायरला JIRA द्वारे 'To be RTV' अशी अधिकृत सूचना दिली होती. परंतु, 3 दिवस उलटून गेले तरी सप्लायरने आपला नाकारलेला माल नेण्यासाठी गाडी पाठवली नाही. एथर SOP आणि प्रश्न संच Q34 नुसार गोदामाने कोणती कारवाई केली पाहिजे?"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc06_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "success",
@@ -578,8 +570,7 @@
             "en": "STANDARD RECOVERY PROTOCOL! Question Bank Q34: Dispatch the parts by commercial courier and debit the entire freight shipping cost to the supplier! Attach the courier receipt and debit note PDF to the JIRA ticket! We never store vendor defectives indefinitely or scrap them at Ather's expense!",
             "hi": "मानक पुनर्प्राप्ति प्रोटोकॉल! प्रश्न बैंक Q34: वाणिज्यिक कूरियर द्वारा भागों को भेजें और पूरे शिपिंग माल ढुलाई लागत को आपूर्तिकर्ता को डेबिट करें! JIRA टिकट में कूरियर रसीद और डेबिट नोट पीडीएफ संलग्न करें!",
             "mr": "प्रमाणित कारवाई पद्धत! प्रश्न बँक Q34: कमर्शियल कुरिअरने माल सप्लायरकडे पाठवून द्यावा आणि वाहतुकीचा संपूर्ण खर्च सप्लायरच्या खात्यावर डेबिट करावा! कुरिअर पावती आणि डेबिट नोटची PDF JIRA तिकिटाला जोडावी!"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc06_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -587,8 +578,7 @@
             "en": "COST MISMANAGEMENT! Holding rejected parts forever chokes warehouse cage storage, while scrapping them at Ather's cost loses company money. Ship via courier and debit the vendor!",
             "hi": "लागत कुप्रबंधन! अस्वीकृत भागों को हमेशा के लिए रखने से गोदाम का स्थान अवरुद्ध हो जाता है, जबकि उन्हें एथर की लागत पर स्क्रैप करने से कंपनी का पैसा बर्बाद होता है। कूरियर के माध्यम से भेजें और विक्रेता को डेबिट करें!",
             "mr": "आर्थिक निष्काळजीपणा! नाकारलेला माल गोदामात पडून राहिल्यास जागा अडकते आणि आपल्या खर्चाने भंगारात काढल्यास कंपनीचे नुकसान होते. कुरिअरने पाठवून सप्लायरला बिल लावावे!"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc06_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -664,8 +654,6 @@
         "mr": "'जसे आहे तसे वापरा' विचलन जीवनचक्र क्रम"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s12_sc07_use_as_is.mp4",
-        "posterSrc": "/images/scenes/c2_s12_sc07_poster.jpg",
         "fallbackAnimation": "use_as_is_sequence_lifecycle",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -677,8 +665,7 @@
             "en": "Engineering Deviation Mastery! Under Question Bank Q36, when a minor cosmetic flaw is accepted for production under a 'Use As Is' deviation, what is the exact chronological order of steps from initial approval to vehicle assembly?",
             "hi": "इंजीनियरिंग विचलन महारत! प्रश्न बैंक Q36 के तहत, जब 'Use As Is' विचलन के तहत उत्पादन के लिए एक मामूली कॉस्मेटिक दोष स्वीकार किया जाता है, तो प्रारंभिक अनुमोदन से वाहन असेंबली तक चरणों का सटीक कालानुक्रमिक क्रम क्या है?",
             "mr": "इंजिनिअरिंग विचलन प्रावीण्य! प्रश्न संच Q36 नुसार, जेव्हा 'Use As Is' विचलनाखाली किरकोळ दोषासह माल उत्पादनासाठी स्वीकारला जातो, तेव्हा मंजुरीपासून ते असेंब्ली लाईनपर्यंतचा अचूक क्रम काय असतो?"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc07_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "trophy",
@@ -686,8 +673,7 @@
             "en": "OUTSTANDING PROCESS ACCURACY! Question Bank Q36: (a) Ticket shows 'Deviation Accepted' -> (b) Warehouse moves parts to staging, SAP stock to QI, JIRA 'Deviated: Available for Build' -> (c) IQC moves stock from QI to UR in SAP -> (d) Parts go to vehicle assembly! Parts reach assembly only after IQC finishes the system move!",
             "hi": "उत्कृष्ट प्रक्रिया सटीकता! प्रश्न बैंक Q36: (a) टिकट 'Deviation Accepted' दिखाता है -> (b) वेयरहाउस भागों को स्टेजिंग में ले जाता है, SAP स्टॉक को QI में, JIRA 'Deviated: Available for Build' -> (c) IQC स्टॉक को SAP में QI से UR में ले जाता है -> (d) पुर्जे असेंबली में जाते हैं!",
             "mr": "अतिशय अचूक कार्यपद्धती! प्रश्न बँक Q36: (a) तिकीट स्टेटस 'Deviation Accepted' होते -> (b) गोदाम माल स्टेजिंगमध्ये आणते, SAP स्टॉक QI मध्ये जातो, JIRA 'Deviated: Available for Build' होते -> (c) IQC टीम SAP मध्ये QI मधून UR मध्ये स्टॉक वर्ग करते -> (d) पार्ट असेंब्ली लाईनवर पाठवले जातात!"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc07_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -695,8 +681,7 @@
             "en": "INCORRECT SEQUENCE! Parts cannot enter assembly until IQC officially transfers stock from QI (Quality Inspection) to UR (Unrestricted). Review Question Bank Q36!",
             "hi": "गलत क्रम! जब तक IQC आधिकारिक तौर पर स्टॉक को QI से UR में स्थानांतरित नहीं करता, तब तक पुर्जे असेंबली में प्रवेश नहीं कर सकते। प्रश्न बैंक Q36 की समीक्षा करें!",
             "mr": "चुकीचा क्रम! जोपर्यंत IQC टीम SAP मध्ये QI मधून UR मध्ये स्टॉक वर्ग करत नाही तोपर्यंत पार्ट लाईनवर जाऊ शकत नाहीत. प्रश्न बँक Q36 पुन्हा तपासा!"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc07_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -779,8 +764,6 @@
         "mr": "दुरुस्त केलेले पार्ट थेट लाईनवर नेण्यास मनाई"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s12_sc08_rework_gate.mp4",
-        "posterSrc": "/images/scenes/c2_s12_sc08_poster.jpg",
         "fallbackAnimation": "reworked_parts_tightened_inspection",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -792,8 +775,7 @@
             "en": "Rework quality containment gate! An internal rework team has repaired 50 instrument cluster brackets that had misaligned mounting pins. The rework technician pushes the trolley toward the main vehicle assembly line, saying: 'We fixed every single pin with our precision jig, so we can feed them straight to Station 05 right now.' Under SOP & Question Bank Q37, should this be allowed or stopped immediately?",
             "hi": "पुनः कार्य गुणवत्ता नियंत्रण गेट! एक आंतरिक पुनः कार्य टीम ने 50 उपकरण क्लस्टर ब्रैकेट की मरम्मत की है जिनमें गलत पिन संरेखण था। तकनीशियन ट्रॉली को सीधे असेंबली लाइन की ओर धकेलता है, यह कहते हुए: 'हमने हर एक पिन को ठीक कर दिया है, इसलिए हम उन्हें अभी सीधे स्टेशन 05 पर भेज सकते हैं।' SOP और प्रश्न बैंक Q37 के तहत, क्या इसकी अनुमति दी जानी चाहिए या तुरंत रोक दी जानी चाहिए?",
             "mr": "रिवर्क गुणवत्ता नियंत्रण गेट! कारखान्यातील रिवर्क टीमने 50 इन्स्ट्रुमेंट क्लस्टर ब्रॅकेट्स दुरुस्त केले आहेत. दुरुस्ती करणारा कामगार थेट असेंब्ली लाईनकडे ट्रॉली नेताना म्हणतो: 'आम्ही सर्व पिन्स जिगच्या मदतीने बरोबर केल्या आहेत, त्यामुळे हा माल आत्ताच थेट स्टेशन 05 वर नेऊन वापरू शकतो.' SOP आणि प्रश्न संच Q37 नुसार, यास परवानगी द्यावी की थांबवावे?"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc08_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "success",
@@ -801,8 +783,7 @@
             "en": "STOP IS MANDATORY! Question Bank Q37: Reworked parts can NEVER go straight to the line! Stock must first move back to QI in SAP, JIRA updated to 'Rework Done', and IQC must inspect them under 1.5x tightened sampling! If they fail re-inspection, they return immediately to the NG quarantine flow!",
             "hi": "STOP अनिवार्य है! प्रश्न बैंक Q37: पुनः कार्य किए गए हिस्से कभी भी सीधे लाइन पर नहीं जा सकते हैं! स्टॉक को पहले SAP में QI में वापस जाना चाहिए, JIRA को 'Rework Done' में अपडेट किया जाना चाहिए, और IQC को 1.5x कड़े नमूने के तहत उनका निरीक्षण करना चाहिए!",
             "mr": "STOP करणे सक्तीचे आहे! प्रश्न बँक Q37: दुरुस्त केलेले पार्ट कधीही थेट लाईनवर जाऊ शकत नाहीत! आधी माल SAP मध्ये QI मध्ये घेतला पाहिजे, JIRA स्टेटस 'Rework Done' केले पाहिजे आणि IQC कडून 1.5 पट कडक तपासणी झालीच पाहिजे!"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc08_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -810,8 +791,7 @@
             "en": "SEVERE QUALITY HAZARD! Releasing reworked parts without IQC re-inspection risks introducing hidden fractures or out-of-spec dimensions into customer vehicles. 1.5x sampling inspection is non-negotiable!",
             "hi": "गंभीर गुणवत्ता खतरा! IQC पुनः निरीक्षण के बिना पुनः कार्य किए गए भागों को जारी करने से वाहनों में छिपे हुए दोष शामिल होने का जोखिम होता है। 1.5x नमूना निरीक्षण गैर-परक्राम्य है!",
             "mr": "मोठा गुणवत्ता धोका! IQC च्या फेरतपासणीशिवाय माल लाईनवर पाठवल्यास ग्राहकांच्या वाहनांमध्ये मोठे दोष निर्माण होऊ शकतात. 1.5 पट कडक तपासणी अनिवार्य आहे!"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc08_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -875,8 +855,6 @@
         "mr": "फॅक्टरी अंतर्गत स्क्रॅप अधिकृत मंजुरी पद्धत"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s12_sc09_scrap_signoff.mp4",
-        "posterSrc": "/images/scenes/c2_s12_sc09_poster.jpg",
         "fallbackAnimation": "scrap_approval_signoff_gate",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -888,8 +866,7 @@
             "en": "Asset write-off governance! During internal assembly transit, 4 aluminum swingarms were dropped and severely cracked by an in-house forklift operator. Because the defect was caused in-house and not by the vendor, what mandatory documentation is required under Question Bank Q38 before these parts can be physically scrapped and shredded?",
             "hi": "संपत्ति बट्टे खाते शासन! आंतरिक असेंबली पारगमन के दौरान, इन-हाउस फोर्कलिफ्ट ऑपरेटर द्वारा 4 एल्यूमीनियम स्विंगआर्म गिरा दिए गए और गंभीर रूप से टूट गए। चूंकि दोष इन-हाउस के कारण हुआ था न कि विक्रेता द्वारा, इन भागों को शारीरिक रूप से स्क्रैप और कटाए जाने से पहले प्रश्न बैंक Q38 के तहत कौन सा अनिवार्य दस्तावेज़ आवश्यक है?",
             "mr": "कंपनी मालमत्ता हिशोब नियम! फॅक्टरी अंतर्गत वाहतुकीदरम्यान फोर्कलिफ्ट चालकाकडून पडून 4 अ‍ॅल्युमिनिअम स्विंगआर्म्स तडकले. हा दोष सप्लायरमुळे नसून फॅक्टरीमध्येच घडल्यामुळे, प्रश्न संच Q38 नुसार हे पार्ट स्क्रॅप यार्डमध्ये तोडण्यासाठी नेण्यापूर्वी कोणत्या कागदपत्रांची सक्ती असते?"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc09_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "success",
@@ -897,8 +874,7 @@
             "en": "FINANCIAL INTEGRITY ENFORCED! Question Bank Q38: Written approval from the Production or Functional Head AND an official signed Scrap Approval Note! Only then does SAP move stock to the scrap location, parts move to the Final Scrapyard, and JIRA transitions to 'Scrapped'!",
             "hi": "वित्तीय अखंडता लागू! प्रश्न बैंक Q38: उत्पादन या कार्यात्मक प्रमुख से लिखित अनुमोदन और एक आधिकारिक हस्ताक्षरित स्क्रैप अनुमोदन नोट! केवल तभी SAP स्टॉक को स्क्रैप स्थान पर ले जाता है, और JIRA 'Scrapped' में बदल जाता है!",
             "mr": "आर्थिक नियमांचे अचूक पालन! प्रश्न बँक Q38: प्रॉडक्शन किंवा फंक्शनल प्रमुखांची लेखी मंजुरी आणि अधिकृत स्वाक्षरी केलेले स्क्रॅप अ‍ॅप्रूव्हल नोट! त्यानंतरच SAP मधील स्टॉक स्क्रॅप खात्यात जातो आणि JIRA स्टेटस 'Scrapped' होतो!"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc09_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -906,8 +882,7 @@
             "en": "UNAUTHORIZED DISPOSAL! Never scrap plant assets based on verbal comments. Scrapping company materials without signed Production & Finance notes constitutes unauthorized write-off and audit fraud!",
             "hi": "अनधिकृत निपटान! मौखिक टिप्पणियों के आधार पर संयंत्र संपत्तियों को कभी भी स्क्रैप न करें। हस्ताक्षरित उत्पादन और वित्त नोटों के बिना सामग्री को स्क्रैप करना अनधिकृत राइट-ऑफ है!",
             "mr": "अनधिकृत विल्हेवाट! तोंडी सांगण्यावरून कधीही कंपनीचा माल तोडू नका. लेखी मंजुरीशिवाय स्क्रॅप करणे हा कंपनीच्या नियमांनुसार गुन्हा ठरतो!"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc09_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -983,8 +958,6 @@
         "mr": "रिकाम्या पेट्यांचे वर्गीकरण आणि सप्लायर ट्रक डॉकिंग डॅशबोर्ड"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s12_sc10_bin_dashboard.mp4",
-        "posterSrc": "/images/scenes/c2_s12_sc10_poster.jpg",
         "fallbackAnimation": "empty_bin_truck_dashboard",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -996,8 +969,7 @@
             "en": "Reverse logistics hub in action! Empty plastic bins collected from assembly lines have reached the central Segregation Area. Under Question Bank Q40, how must operators sort these containers, and how do they find which supplier truck is currently docked to load them?",
             "hi": "रिवर्स लॉजिस्टिक्स हब कार्रवाई में! असेंबली लाइनों से एकत्र किए गए खाली प्लास्टिक के डिब्बे केंद्रीय पृथक्करण क्षेत्र में पहुंच गए हैं। प्रश्न बैंक Q40 के तहत, ऑपरेटरों को इन कंटेनरों को कैसे क्रमबद्ध करना चाहिए, और वे कैसे पता लगाते हैं कि वर्तमान में उन्हें लोड करने के लिए कौन सा आपूर्तिकर्ता ट्रक डॉक किया गया है?",
             "mr": "रिव्हर्स लॉजिस्टिक्स केंद्र प्रत्यक्षात! लाईनवरून गोळा केलेल्या रिकाम्या पेट्या सेंट्रल सेग्रिगेशन भागात आल्या आहेत. प्रश्न संच Q40 नुसार, ऑपरेटरने या पेट्या कशा वेगळ्या करायच्या आणि त्या भरण्यासाठी कोणता सप्लायर ट्रक कोणत्या डॉकवर उभा आहे हे कसे शोधायचे?"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc10_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "success",
@@ -1005,8 +977,7 @@
             "en": "DIGITAL LOGISTICS MASTERY! Question Bank Q40: Sort by Supplier ID and Part Number in designated floor bays! Use the live Supplier Truck Dashboard to see docked vehicles and their assigned dock bay! This ensures returnable bins are loaded onto the exact matching supplier truck before it departs!",
             "hi": "डिजिटल लॉजिस्टिक्स महारत! प्रश्न बैंक Q40: निर्दिष्ट फ्लोर बे में आपूर्तिकर्ता आईडी और पार्ट नंबर द्वारा क्रमबद्ध करें! डॉक किए गए वाहनों और उनके निर्दिष्ट डॉक बे को देखने के लिए लाइव आपूर्तिकर्ता ट्रक डैशबोर्ड का उपयोग करें!",
             "mr": "डिजिटल लॉजिस्टिक्स प्रावीण्य! प्रश्न बँक Q40: ठरवून दिलेल्या जागेत सप्लायर आयडी आणि पार्ट नंबरनुसार पेट्यांची वर्गवारी करा! आणि कोणता ट्रक कोणत्या डॉकवर उभा आहे हे पाहण्यासाठी लाईव्ह सप्लायर ट्रक डॅशबोर्डचा वापर करा!"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc10_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -1014,8 +985,7 @@
             "en": "LOGISTICS DISORGANIZATION! Piling all vendor bins into a random heap causes wrong containers to be sent to wrong suppliers. Use the live docking dashboard and sort by vendor and part number!",
             "hi": "लॉजिस्टिक्स अव्यवस्था! सभी विक्रेता डिब्बे को एक यादृच्छिक ढेर में ढेर करने से गलत कंटेनर गलत आपूर्तिकर्ताओं को भेजे जाते हैं। लाइव डॉकिंग डैशबोर्ड का उपयोग करें और विक्रेता और पार्ट नंबर द्वारा क्रमबद्ध करें!",
             "mr": "अव्यवस्थित कारभार! सर्व पेट्या एकत्र ढिगाऱ्यात टाकल्यास चुकीच्या सप्लायरकडे चुकीच्या पेट्या जातील. डॅशबोर्ड पाहून सप्लायर आणि पार्टनुसारच पेट्या वेगळ्या करा!"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc10_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -1098,8 +1068,6 @@
         "mr": "परत मागवलेल्या साहित्याची फेरतपासणी आणि निर्णय"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s12_sc11_recalled_lot.mp4",
-        "posterSrc": "/images/scenes/c2_s12_sc11_poster.jpg",
         "fallbackAnimation": "recalled_material_reinspection",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -1111,8 +1079,7 @@
             "en": "Critical quality containment scenario! Following a field bulletin, a batch of 200 brake cables already in the supermarket was recalled for emergency safety re-testing. Quality conducts containment inspection and 4 cables fail tensile strength testing. Under Ather SOP & Question Bank Q41, what must happen immediately to this failed recalled lot?",
             "hi": "गंभीर गुणवत्ता नियंत्रण परिदृश्य! एक फील्ड बुलेटिन के बाद, सुपरमार्केट में पहले से मौजूद 200 ब्रेक केबलों के एक बैच को आपातकालीन सुरक्षा पुनः परीक्षण के लिए वापस बुलाया गया था। गुणवत्ता नियंत्रण निरीक्षण करता है और 4 केबल तन्यता ताकत परीक्षण में विफल होते हैं। एथर SOP और प्रश्न बैंक Q41 के तहत, इस विफल वापस बुलाए गए लॉट का तुरंत क्या होना चाहिए?",
             "mr": "अति-गंभीर गुणवत्ता नियंत्रण प्रसंग! तक्रारीनंतर सुपरमार्केटमध्ये असलेल्या 200 ब्रेक केबल्सचा लॉट तातडीने फेरतपासणीसाठी परत मागवला गेला. तपासणीमध्ये 4 केबल्स तुटून चाचणीत नापास झाल्या. एथर SOP आणि प्रश्न संच Q41 नुसार, या नापास झालेल्या लॉटवर तात्काळ कोणती कारवाई झाली पाहिजे?"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc11_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "success",
@@ -1120,8 +1087,7 @@
             "en": "CONTAINMENT ENFORCED! Question Bank Q41: Stock is immediately transferred to Blocked Stock in SAP, the NG logistics team moves the entire lot to the NG Quarantine Area, and the formal RTV return-to-vendor process begins! Defective recalled safety parts are strictly locked down to protect consumer safety!",
             "hi": "नियंत्रण लागू! प्रश्न बैंक Q41: स्टॉक तुरंत SAP में ब्लॉक स्टॉक में स्थानांतरित कर दिया जाता है, NG टीम पूरे लॉट को NG क्वारंटाइन क्षेत्र में ले जाती है, और औपचारिक RTV प्रक्रिया शुरू होती है!",
             "mr": "कडक नियंत्रण लागू! प्रश्न बँक Q41: माल तात्काळ SAP मध्ये Blocked Stock मध्ये वर्ग केला जातो, NG टीम संपूर्ण लॉट NG क्वारंटाईन विभागात हलवते आणि अधिकृत RTV प्रक्रिया सुरू होते! सुरक्षेशी तडजोड न करता सदोष माल पूर्णपणे रोखला जातो!"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc11_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -1129,8 +1095,7 @@
             "en": "CRITICAL SAFETY RISK! Recalled safety parts that fail re-inspection can NEVER return to unrestricted stock. They must be moved to Blocked stock in SAP and transferred to the NG quarantine cage for RTV!",
             "hi": "गंभीर सुरक्षा जोखिम! पुनः निरीक्षण में विफल होने वाले पुर्जे कभी भी अप्रतिबंधित स्टॉक में वापस नहीं आ सकते हैं। उन्हें SAP में ब्लॉक स्टॉक में ले जाना चाहिए और RTV के लिए NG केज में स्थानांतरित करना चाहिए!",
             "mr": "गंभीर सुरक्षा धोका! चाचणीत नापास झालेले सुरक्षिततेचे पार्ट कधीही वापरात आणता येत नाहीत. ते तात्काळ SAP मध्ये ब्लॉक करून NG क्वारंटाईनमध्ये RTV साठी पाठवलेच पाहिजेत!"
-          },
-          "audioSrc": "/audio/mascot/c2_s12_sc11_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -1206,8 +1171,6 @@
         "mr": "औरिक प्लांट ग्रँडमास्टर पदवीदान सोहळा: शून्य त्रुटी ट्रॅकिंग"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s12_sc12_grandmaster.mp4",
-        "posterSrc": "/images/scenes/c2_s12_sc12_poster.jpg",
         "fallbackAnimation": "grandmaster_celebration_fireworks",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5

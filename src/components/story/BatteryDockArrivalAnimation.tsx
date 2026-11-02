@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { BatteryCharging, PauseCircle, PlayCircle, ShieldAlert, UserCheck, UserX } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { BatteryCharging, PauseCircle, PlayCircle, ShieldAlert, UserCheck, UserX, Video, Eye } from 'lucide-react';
 
 interface Props {
   videoSrc?: string;
+  posterSrc?: string;
   isPaused: boolean;
   onPauseReached?: () => void;
 }
 
 export const BatteryDockArrivalAnimation: React.FC<Props> = ({
   videoSrc,
+  posterSrc = '/Assets/videos/scene_05_battery_vault_climate_poster.jpg',
   isPaused,
   onPauseReached
 }) => {
-  const [videoAvailable, setVideoAvailable] = useState<boolean>(Boolean(videoSrc));
-
-  useEffect(() => {
-    setVideoAvailable(Boolean(videoSrc));
-  }, [videoSrc]);
+  const [videoError, setVideoError] = useState<boolean>(false);
+  const [viewMode, setViewMode] = useState<'video' | 'svg'>('video');
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [hasTriggeredPause, setHasTriggeredPause] = useState(false);
 
   useEffect(() => {
@@ -29,30 +29,49 @@ export const BatteryDockArrivalAnimation: React.FC<Props> = ({
     }
   }, [hasTriggeredPause, isPaused, onPauseReached]);
 
+  useEffect(() => {
+    if (videoRef.current) {
+      if (isPaused) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play().catch(() => {});
+      }
+    }
+  }, [isPaused]);
+
   return (
     <div className="relative w-full h-[280px] sm:h-[360px] md:h-[400px] bg-slate-950 rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-slate-800 shadow-2xl select-none flex flex-col justify-between">
-      {/* Optional Real Video Player with Auto Fallback */}
-      {videoSrc && videoAvailable && (
+      {/* 3D MP4 Real Simulation Video */}
+      {videoSrc && viewMode === 'video' && !videoError && (
         <video
+          ref={videoRef}
+          key={videoSrc}
           src={videoSrc}
+          poster={posterSrc}
           autoPlay
           loop={!isPaused}
           muted
           playsInline
-          onError={() => setVideoAvailable(false)}
+          preload="auto"
+          onError={(e) => {
+            console.warn('[Ather DOJO] Video stream loading error:', videoSrc, e);
+            setVideoError(true);
+          }}
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
       )}
 
       {/* Procedural SVG/CSS Battery Dock Arrival Canvas */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden p-3 sm:p-5 flex flex-col justify-between">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 opacity-95" />
+      <div className="absolute inset-0 w-full h-full overflow-hidden p-3 sm:p-5 flex flex-col justify-between pointer-events-none">
+        {(viewMode === 'svg' || videoError || !videoSrc) && (
+          <>
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 opacity-95" />
 
-        <svg
-          viewBox="0 0 1000 400"
-          preserveAspectRatio="xMidYMid slice"
-          className="w-full h-full absolute inset-0 pointer-events-none"
-        >
+            <svg
+              viewBox="0 0 1000 400"
+              preserveAspectRatio="xMidYMid slice"
+              className="w-full h-full absolute inset-0 pointer-events-none"
+            >
           {/* Dock 01 Warehouse Wall & Heavy Roll-up Bay Door */}
           <rect x="0" y="0" width="1000" height="230" fill="#0b1329" />
           <line x1="0" y1="230" x2="1000" y2="230" stroke="#1e293b" strokeWidth="4" />
@@ -204,6 +223,8 @@ export const BatteryDockArrivalAnimation: React.FC<Props> = ({
             </text>
           </g>
         </svg>
+        </>
+        )}
 
         {/* Top Floating Status Bar */}
         <div className="relative z-10 flex items-center justify-between">
@@ -212,9 +233,32 @@ export const BatteryDockArrivalAnimation: React.FC<Props> = ({
             <span className="font-bold tracking-wider uppercase">AURIC Dock 01 · Battery Cell Protocol</span>
           </div>
 
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 backdrop-blur-md text-[11px] font-mono text-slate-300">
-            <ShieldAlert className="w-3.5 h-3.5 text-rose-400" />
-            <span>SOP 04_C1_S3 Clause 4.1</span>
+          <div className="flex items-center gap-2">
+            {videoSrc && (
+              <button
+                type="button"
+                onClick={() => setViewMode((prev) => (prev === 'video' ? 'svg' : 'video'))}
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700 shadow-sm transition-all cursor-pointer pointer-events-auto"
+                title="Toggle between 3D Video and 2D SOP Blueprint"
+              >
+                {viewMode === 'video' ? (
+                  <>
+                    <Video className="w-3.5 h-3.5 text-blue-400" />
+                    <span className="hidden sm:inline">3D VIDEO</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  </>
+                ) : (
+                  <>
+                    <Eye className="w-3.5 h-3.5 text-amber-400" />
+                    <span className="hidden sm:inline">2D BLUEPRINT</span>
+                  </>
+                )}
+              </button>
+            )}
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 backdrop-blur-md text-[11px] font-mono text-slate-300">
+              <ShieldAlert className="w-3.5 h-3.5 text-rose-400" />
+              <span>SOP 04_C1_S3 Clause 4.1</span>
+            </div>
           </div>
         </div>
 

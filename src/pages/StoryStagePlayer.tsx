@@ -85,7 +85,8 @@ import { SpotErrorCard } from '../components/story/SpotErrorCard';
 import { StopGoCard } from '../components/story/StopGoCard';
 import { CountStepperCard } from '../components/story/CountStepperCard';
 import { FeedbackCard } from '../components/story/FeedbackCard';
-import { RefreshCcw, Layers, Trophy, Award, CheckCheck, ArrowRight, ArrowLeft } from 'lucide-react';
+import { MilestoneGateway } from '../components/story/MilestoneGateway';
+import { Layers } from 'lucide-react';
 
 const allStages: StoryStage[] = [
   ...category1Stages,
@@ -97,15 +98,43 @@ const getSceneTitle = (s: any, l: LanguageCode): string => {
   return s.title?.[l] || s.title?.en || s.name?.[l] || s.name?.en || 'Scene';
 };
 
-export const StoryStagePlayer: React.FC = () => {
+export interface StoryStagePlayerProps {
+  initialStageIndex?: number;
+  initialSceneIndex?: number;
+  userProfile?: UserProfile;
+  onExitHome?: () => void;
+  onViewScorecard?: (summary: RunSummary) => void;
+  lang?: LanguageCode;
+  onSelectLang?: (lang: LanguageCode) => void;
+}
+
+export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
+  initialStageIndex,
+  initialSceneIndex,
+  userProfile,
+  onExitHome,
+  onViewScorecard,
+  lang: propLang,
+  onSelectLang: propOnSelectLang
+}) => {
   const [lang, setLang] = useState<LanguageCode>(() => {
+    if (propLang) return propLang;
     try {
       return (localStorage.getItem('ather_lang') as LanguageCode) || 'en';
     } catch {
       return 'en';
     }
   });
+
+  const handleSetLang = (newLang: LanguageCode) => {
+    setLang(newLang);
+    propOnSelectLang?.(newLang);
+  };
+
   const [currentStageIndex, setCurrentStageIndex] = useState<number>(() => {
+    if (initialStageIndex !== undefined) {
+      return Math.min(Math.max(0, initialStageIndex), allStages.length - 1);
+    }
     try {
       const saved = localStorage.getItem('ather_stage_idx');
       return saved !== null ? Math.min(Math.max(0, Number(saved)), allStages.length - 1) : 0;
@@ -114,6 +143,9 @@ export const StoryStagePlayer: React.FC = () => {
     }
   });
   const [currentSceneIndex, setCurrentSceneIndex] = useState<number>(() => {
+    if (initialSceneIndex !== undefined) {
+      return initialSceneIndex;
+    }
     try {
       const saved = localStorage.getItem('ather_scene_idx');
       return saved !== null ? Number(saved) : 0;
@@ -299,30 +331,41 @@ export const StoryStagePlayer: React.FC = () => {
     }
   }
 
-  if (showCertificate) {
+  const getRunSummary = (): RunSummary => {
     const isFullJourney = currentStageIndex >= 11;
     const cat1TotalScenes = category1Stages.reduce((acc, s) => acc + s.scenes.length, 0);
     const allTotalScenes = allStages.reduce((acc, s) => acc + s.scenes.length, 0);
-    const summary: RunSummary = {
-      packId: isFullJourney ? 'ather-all-modules' : 'ather-category-1',
+    return {
+      packId: isFullJourney ? 'ather-all-modules' : (currentStageIndex >= 7 ? 'ather-category-2' : 'ather-category-1'),
       packTitle: {
-        en: isFullJourney ? 'All 12 Modules Grandmaster Certification' : 'Category 1: Inbound & Storage Certification',
-        hi: isFullJourney ? 'सभी 12 मॉड्यूल ग्रैंडमास्टर प्रमाणन' : 'श्रेणी 1: आवक और भंडारण प्रमाणन',
-        mr: isFullJourney ? 'सर्व 12 मॉड्यूल्स ग्रँडमास्टर प्रमाणपत्र' : 'कॅटेगरी 1: आवक व साठवणूक प्रमाणपत्र'
+        en: isFullJourney
+          ? 'All 12 Modules Grandmaster Certification'
+          : (currentStageIndex >= 7 ? 'Category 2: Outbound & Material Issuance' : 'Category 1: Inbound & Storage Certification'),
+        hi: isFullJourney
+          ? 'सभी 12 मॉड्यूल ग्रैंडमास्टर प्रमाणन'
+          : (currentStageIndex >= 7 ? 'श्रेणी 2: जावक एवं सामग्री वितरण' : 'श्रेणी 1: आवक और भंडारण प्रमाणन'),
+        mr: isFullJourney
+          ? 'सर्व 12 मॉड्यूल्स ग्रँडमास्टर प्रमाणपत्र'
+          : (currentStageIndex >= 7 ? 'कॅटेगरी 2: जावक व साहित्य वाटप' : 'कॅटेगरी 1: आवक व साठवणूक प्रमाणपत्र')
       },
       mode: 'guided',
       stars: 3,
       xpGained: xp,
-      accuracyPct: 98,
-      totalSteps: isFullJourney ? allTotalScenes : cat1TotalScenes,
-      correctSteps: Math.max(attempts, isFullJourney ? allTotalScenes - 2 : cat1TotalScenes - 2),
+      accuracyPct: attempts > 0 ? Math.min(100, Math.round(((Math.max(1, attempts - Math.max(0, 3 - hearts))) / attempts) * 100)) : 100,
+      totalSteps: isFullJourney ? allTotalScenes : (currentStageIndex >= 7 ? allTotalScenes - cat1TotalScenes : cat1TotalScenes),
+      correctSteps: Math.max(attempts, 8),
       safetyPassed: hearts > 0,
       lost: false,
       badgesEarned: ['safe', 'perf', 'cert'],
       timestamp: new Date().toISOString()
     };
+  };
 
-    const profile: UserProfile = {
+  if (showCertificate) {
+    const isFullJourney = currentStageIndex >= 11;
+    const summary: RunSummary = getRunSummary();
+
+    const profile: UserProfile = userProfile || {
       name: 'Ather Certified Warehouse Specialist',
       operatorId: 'AURIC-M002-WH-42',
       xp,
@@ -337,10 +380,15 @@ export const StoryStagePlayer: React.FC = () => {
         summary={summary}
         lang={lang}
         profile={profile}
+        sopDoc={isFullJourney ? 'AURIC-PRO-ALL-012' : stageData.sopDoc}
         onBack={() => setShowCertificate(false)}
         onNavigateHome={() => {
           setShowCertificate(false);
-          handleSelectStage(0);
+          if (onExitHome) {
+            onExitHome();
+          } else {
+            handleSelectStage(0);
+          }
         }}
       />
     );
@@ -353,7 +401,7 @@ export const StoryStagePlayer: React.FC = () => {
         stageTitle={stageData.stageTitle[lang] || stageData.stageTitle.en}
         sopDoc={stageData.sopDoc}
         lang={lang}
-        onSelectLang={setLang}
+        onSelectLang={handleSetLang}
         xp={xp}
         hearts={hearts}
         onReset={handleResetCurrentScene}
@@ -364,13 +412,14 @@ export const StoryStagePlayer: React.FC = () => {
         }))}
         currentStageIndex={currentStageIndex}
         onSelectStage={handleSelectStage}
+        onExitHome={onExitHome}
       />
 
       {/* 2. Scene Stepper Pill Bar */}
       <div className="bg-white/80 border-b border-slate-200/80 px-4 py-2">
-        <div className="max-w-6xl mx-auto flex items-center justify-between text-xs font-mono">
-          <div className="flex items-center gap-2">
-            <span className="font-bold text-slate-400 uppercase">
+        <div className="max-w-6xl mx-auto flex items-center justify-between text-xs font-mono gap-3">
+          <div className="flex items-center gap-2 overflow-x-auto scrollbar-none py-1 flex-nowrap shrink">
+            <span className="font-bold text-slate-400 uppercase shrink-0">
               Stage {stageData.stageNumber} Timeline:
             </span>
             {stageData.scenes.map((s, idx) => {
@@ -381,13 +430,12 @@ export const StoryStagePlayer: React.FC = () => {
                   key={s.id}
                   type="button"
                   onClick={() => handleSelectScene(idx)}
-                  className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                    isActive
-                      ? 'bg-blue-600 text-white shadow-xs'
-                      : isPast
+                  className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 shrink-0 ${isActive
+                    ? 'bg-blue-600 text-white shadow-xs'
+                    : isPast
                       ? 'bg-emerald-100 text-emerald-800 hover:bg-emerald-200'
                       : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                  }`}
+                    }`}
                 >
                   <span>Scene {idx + 1}</span>
                   <span className="hidden sm:inline">· {getSceneTitle(s, lang)}</span>
@@ -396,7 +444,7 @@ export const StoryStagePlayer: React.FC = () => {
             })}
           </div>
 
-          <span className="text-slate-400 hidden md:block">
+          <span className="text-slate-400 hidden md:block shrink-0">
             Step {currentSceneIndex + 1} of {stageData.scenes.length}
           </span>
         </div>
@@ -411,6 +459,7 @@ export const StoryStagePlayer: React.FC = () => {
               {scene.media.fallbackAnimation === 'truck_arrival_gate' ? (
                 <TruckGateAnimation
                   videoSrc={scene.media.videoSrc}
+                  posterSrc={scene.media.posterSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
@@ -435,6 +484,7 @@ export const StoryStagePlayer: React.FC = () => {
               ) : scene.media.fallbackAnimation === 'dock_safety_chocks' ? (
                 <DockSafetyAnimation
                   videoSrc={scene.media.videoSrc}
+                  posterSrc={scene.media.posterSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
@@ -459,6 +509,7 @@ export const StoryStagePlayer: React.FC = () => {
               ) : scene.media.fallbackAnimation === 'iqc_sampling_transfer' || scene.media.fallbackAnimation === 'iqc_sample_inspection' ? (
                 <IqcSamplingAnimation
                   videoSrc={scene.media.videoSrc}
+                  posterSrc={scene.media.posterSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
@@ -495,6 +546,7 @@ export const StoryStagePlayer: React.FC = () => {
               ) : scene.media.fallbackAnimation === 'bin_marriage_lift' || scene.media.fallbackAnimation === 'putaway_sequence_lifecycle' ? (
                 <BinMarriageAnimation
                   videoSrc={scene.media.videoSrc}
+                  posterSrc={scene.media.posterSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
@@ -507,6 +559,7 @@ export const StoryStagePlayer: React.FC = () => {
               ) : scene.media.fallbackAnimation === 'battery_dock_auth' ? (
                 <BatteryDockArrivalAnimation
                   videoSrc={scene.media.videoSrc}
+                  posterSrc={scene.media.posterSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
@@ -627,12 +680,14 @@ export const StoryStagePlayer: React.FC = () => {
               ) : scene.media.fallbackAnimation === 'c2_workstation_delivery' || scene.media.fallbackAnimation === 'five_step_picking_lifecycle' ? (
                 <WorkstationDeliveryAnimation
                   videoSrc={scene.media.videoSrc}
+                  posterSrc={scene.media.posterSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
               ) : scene.media.fallbackAnimation === 'c2_aced_trolley_issuance' || scene.media.fallbackAnimation === 'decanting_definition_hu' ? (
                 <AcedTrolleyIssuanceAnimation
                   videoSrc={scene.media.videoSrc}
+                  posterSrc={scene.media.posterSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
@@ -747,6 +802,7 @@ export const StoryStagePlayer: React.FC = () => {
               ) : scene.media.fallbackAnimation === 'c2_reverse_truck_loading' || scene.media.fallbackAnimation === 'scrap_approval_signoff_gate' || scene.media.fallbackAnimation === 'grandmaster_celebration_fireworks' ? (
                 <ReverseTruckLoadingAnimation
                   videoSrc={scene.media.videoSrc}
+                  posterSrc={scene.media.posterSrc}
                   isPaused={phase === 'interaction_paused' || phase === 'feedback'}
                   onPauseReached={handlePauseReached}
                 />
@@ -850,1393 +906,30 @@ export const StoryStagePlayer: React.FC = () => {
                     scene={scene}
                     lang={lang}
                     isCorrect={isLastCorrect}
+                    selectedOptionId={selectedOptionId}
                     onContinue={handleContinueStory}
                   />
                 )}
               </div>
             </div>
           </>
-        ) : currentStageIndex === 0 ? (
-          /* Module 1 Full Completion & Grand Graduation Screen */
-          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
-            {/* Trophy & Badge Award */}
-            <div className="relative inline-block">
-              <div className="w-20 h-20 rounded-3xl bg-amber-50 border-2 border-amber-300 text-amber-500 flex items-center justify-center mx-auto shadow-lg shadow-amber-500/10 animate-bounce">
-                <Trophy className="w-10 h-10" />
-              </div>
-              <div className="absolute -bottom-2 -right-2 bg-emerald-500 text-white rounded-full p-1.5 shadow-md">
-                <CheckCheck className="w-4 h-4" />
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-amber-700 bg-amber-50 px-3.5 py-1.5 rounded-full border border-amber-300 shadow-xs">
-                <Award className="w-4 h-4 text-amber-600" />
-                <span>BADGE UNLOCKED: GATE KEEPER</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Module 1 Completed!
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Gate &amp; Dock Operations at Ather AURIC Plant M002.
-              </p>
-            </div>
-
-            {/* Performance Metric Strip */}
-            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
-                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
-              </div>
-              <div className="space-y-0.5 border-x border-slate-200">
-                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
-                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
-              </div>
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
-                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
-              </div>
-            </div>
-
-            {/* Milestone Tracker */}
-            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
-              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 1 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
-                <span className="text-emerald-600 font-extrabold">100% SOP COMPLIANT</span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                {stageData.scenes.map((s, i) => (
-                  <button
-                    key={s.id}
-                    type="button"
-                    onClick={() => handleSelectScene(i)}
-                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-blue-400 text-slate-700 hover:text-blue-700 transition-colors text-left cursor-pointer"
-                  >
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
-                      ✓
-                    </span>
-                    <span className="truncate font-medium">
-                      Sc {i + 1}: {getSceneTitle(s, lang)}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Next Chapter & Replay Actions */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <button
-                type="button"
-                onClick={() => handleSelectScene(0)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <RefreshCcw className="w-4 h-4" />
-                <span>Replay Module 1 from Start</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSelectStage(1)}
-                className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <span>Proceed to Module 2 (Receiving &amp; IQC)</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-        ) : currentStageIndex === 1 ? (
-          /* Module 2 Graduation Screen */
-          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
-            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-emerald-500 to-teal-400 text-white flex items-center justify-center mx-auto shadow-xl shadow-emerald-500/25">
-              <Trophy className="w-10 h-10" />
-            </div>
-
-            <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-emerald-800 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-300 shadow-xs">
-                <Award className="w-4 h-4 text-emerald-600" />
-                <span>BADGE UNLOCKED: QUALITY SENTINEL</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Module 2 Completed!
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Receiving &amp; IQC Clearance under SOP <code>02_C1_S2</code> at Ather AURIC Plant M002.
-              </p>
-            </div>
-
-            {/* Performance Metric Strip */}
-            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
-                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
-              </div>
-              <div className="space-y-0.5 border-x border-slate-200">
-                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
-                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
-              </div>
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
-                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
-              </div>
-            </div>
-
-            {/* Milestone Tracker */}
-            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
-              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 2 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
-                <span className="text-emerald-600 font-extrabold">100% SOP COMPLIANT</span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                {stageData.scenes.map((s, i) => (
-                  <button
-                    key={s.id}
-                    type="button"
-                    onClick={() => handleSelectScene(i)}
-                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-emerald-400 text-slate-700 hover:text-emerald-700 transition-colors text-left cursor-pointer"
-                  >
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
-                      ✓
-                    </span>
-                    <span className="truncate font-medium">
-                      Sc {i + 1}: {getSceneTitle(s, lang)}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Next Chapter & Replay Actions */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <button
-                type="button"
-                onClick={() => handleSelectScene(0)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <RefreshCcw className="w-4 h-4" />
-                <span>Replay Module 2 from Start</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSelectStage(0)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                <span>Review Module 1 (Gate &amp; Dock)</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  handleSelectStage(2);
-                }}
-                className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <span>Proceed to Module 3 (Vehicle &amp; Battery Parts Put-Away)</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-        ) : currentStageIndex === 2 ? (
-          /* Module 3 Graduation Screen */
-          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
-            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-amber-500 to-orange-400 text-white flex items-center justify-center mx-auto shadow-xl shadow-amber-500/25">
-              <Trophy className="w-10 h-10" />
-            </div>
-
-            <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-amber-800 bg-amber-50 px-3.5 py-1.5 rounded-full border border-amber-300 shadow-xs">
-                <Award className="w-4 h-4 text-amber-600" />
-                <span>BADGE UNLOCKED: HIGH-RISE STOWAGE MASTER</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Module 3 Completed!
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Vehicle &amp; Battery Parts Put-Away under SOP <code>03_C1_S3</code> at Ather AURIC Plant M002.
-              </p>
-            </div>
-
-            {/* Performance Metric Strip */}
-            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
-                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
-              </div>
-              <div className="space-y-0.5 border-x border-slate-200">
-                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
-                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
-              </div>
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
-                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
-              </div>
-            </div>
-
-            {/* Milestone Tracker */}
-            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
-              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 3 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
-                <span className="text-emerald-600 font-extrabold">100% SOP COMPLIANT</span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                {stageData.scenes.map((s, i) => (
-                  <button
-                    key={s.id}
-                    type="button"
-                    onClick={() => handleSelectScene(i)}
-                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-amber-400 text-slate-700 hover:text-amber-700 transition-colors text-left cursor-pointer"
-                  >
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
-                      ✓
-                    </span>
-                    <span className="truncate font-medium">
-                      Sc {i + 1}: {getSceneTitle(s, lang)}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Next Chapter & Replay Actions */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <button
-                type="button"
-                onClick={() => handleSelectScene(0)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <RefreshCcw className="w-4 h-4" />
-                <span>Replay Module 3 from Start</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSelectStage(1)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                <span>Review Module 2 (Receiving &amp; IQC)</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  handleSelectStage(3);
-                }}
-                className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <span>Proceed to Module 4 (Specialized Battery Cell Put-Away)</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-        ) : currentStageIndex === 3 ? (
-          /* Module 4 Graduation Screen */
-          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
-            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-cyan-500 to-blue-600 text-white flex items-center justify-center mx-auto shadow-xl shadow-cyan-500/25">
-              <Trophy className="w-10 h-10" />
-            </div>
-
-            <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-cyan-800 bg-cyan-50 px-3.5 py-1.5 rounded-full border border-cyan-300 shadow-xs">
-                <Award className="w-4 h-4 text-cyan-600" />
-                <span>BADGE UNLOCKED: CELL VAULT GUARDIAN</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Module 4 Completed!
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Specialized Battery Cell Put-Away under SOP <code>04_C1_S3</code> at Ather AURIC Plant M002.
-              </p>
-            </div>
-
-            {/* Performance Metric Strip */}
-            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
-                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
-              </div>
-              <div className="space-y-0.5 border-x border-slate-200">
-                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
-                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
-              </div>
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
-                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
-              </div>
-            </div>
-
-            {/* Milestone Tracker */}
-            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
-              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 4 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
-                <span className="text-emerald-600 font-extrabold">100% SOP COMPLIANT</span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                {stageData.scenes.map((s, i) => (
-                  <button
-                    key={s.id}
-                    type="button"
-                    onClick={() => handleSelectScene(i)}
-                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-cyan-400 text-slate-700 hover:text-cyan-700 transition-colors text-left cursor-pointer"
-                  >
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
-                      ✓
-                    </span>
-                    <span className="truncate font-medium">
-                      Sc {i + 1}: {getSceneTitle(s, lang)}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Next Chapter & Replay Actions */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <button
-                type="button"
-                onClick={() => handleSelectScene(0)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <RefreshCcw className="w-4 h-4" />
-                <span>Replay Module 4 from Start</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSelectStage(2)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                <span>Review Module 3 (Vehicle &amp; Battery Parts)</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  handleSelectStage(4);
-                }}
-                className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-cyan-600 hover:bg-cyan-700 text-white shadow-lg shadow-cyan-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <span>Proceed to Module 5 (Hazardous Chemicals &amp; Thinners)</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-        ) : currentStageIndex === 4 ? (
-          /* Module 5 Graduation Screen */
-          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
-            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-amber-500 to-rose-600 text-white flex items-center justify-center mx-auto shadow-xl shadow-amber-500/25">
-              <Trophy className="w-10 h-10" />
-            </div>
-
-            <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-amber-800 bg-amber-50 px-3.5 py-1.5 rounded-full border border-amber-300 shadow-xs">
-                <Award className="w-4 h-4 text-amber-600" />
-                <span>BADGE UNLOCKED: HAZMAT CUSTODIAN</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Module 5 Completed!
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Hazardous Chemicals &amp; Thinners Put-Away under SOP <code>05_C1_S3</code> at Ather AURIC Plant M002.
-              </p>
-            </div>
-
-            {/* Performance Metric Strip */}
-            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
-                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
-              </div>
-              <div className="space-y-0.5 border-x border-slate-200">
-                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
-                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
-              </div>
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
-                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
-              </div>
-            </div>
-
-            {/* Milestone Tracker */}
-            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
-              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 5 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
-                <span className="text-emerald-600 font-extrabold">100% SOP COMPLIANT</span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                {stageData.scenes.map((s, i) => (
-                  <button
-                    key={s.id}
-                    type="button"
-                    onClick={() => handleSelectScene(i)}
-                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-amber-400 text-slate-700 hover:text-amber-700 transition-colors text-left cursor-pointer"
-                  >
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
-                      ✓
-                    </span>
-                    <span className="truncate font-medium">
-                      Sc {i + 1}: {getSceneTitle(s, lang)}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Next Chapter & Replay Actions */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <button
-                type="button"
-                onClick={() => handleSelectScene(0)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <RefreshCcw className="w-4 h-4" />
-                <span>Replay Module 5 from Start</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSelectStage(3)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                <span>Review Module 4 (Battery Cells)</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  handleSelectStage(5);
-                }}
-                className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <span>Proceed to Module 6 (Supermarket Put-Away)</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-        ) : currentStageIndex === 5 ? (
-          /* Module 6 Graduation Screen */
-          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
-            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-emerald-500 to-teal-600 text-white flex items-center justify-center mx-auto shadow-xl shadow-emerald-500/25">
-              <Trophy className="w-10 h-10" />
-            </div>
-
-            <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-emerald-800 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-300 shadow-xs">
-                <Award className="w-4 h-4 text-emerald-600" />
-                <span>BADGE UNLOCKED: SUPERMARKET REPLENISHER</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Module 6 Completed!
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Supermarket C-Class Parts Put-Away under SOP <code>06_C1_S3</code> at Ather AURIC Plant M002.
-              </p>
-            </div>
-
-            {/* Performance Metric Strip */}
-            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
-                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
-              </div>
-              <div className="space-y-0.5 border-x border-slate-200">
-                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
-                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
-              </div>
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
-                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
-              </div>
-            </div>
-
-            {/* Milestone Tracker */}
-            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
-              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 6 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
-                <span className="text-emerald-600 font-extrabold">100% SOP COMPLIANT</span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                {stageData.scenes.map((s, i) => (
-                  <button
-                    key={s.id}
-                    type="button"
-                    onClick={() => handleSelectScene(i)}
-                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-emerald-400 text-slate-700 hover:text-emerald-700 transition-colors text-left cursor-pointer"
-                  >
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
-                      ✓
-                    </span>
-                    <span className="truncate font-medium">
-                      Sc {i + 1}: {getSceneTitle(s, lang)}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Next Chapter & Replay Actions */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <button
-                type="button"
-                onClick={() => handleSelectScene(0)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <RefreshCcw className="w-4 h-4" />
-                <span>Replay Module 6 from Start</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSelectStage(4)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                <span>Review Module 5 (Hazmat Chemicals)</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  if (allStages.length > 6) {
-                    handleSelectStage(6);
-                  }
-                }}
-                className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <span>Proceed to Module 7: Quality Rejections &amp; Quarantine</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-        ) : currentStageIndex === 6 ? (
-          /* Module 7 Graduation Screen (Category 1 Finale) */
-          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
-            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-rose-600 via-red-500 to-amber-500 text-white flex items-center justify-center mx-auto shadow-xl shadow-rose-600/25">
-              <Trophy className="w-10 h-10" />
-            </div>
-
-            <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-rose-800 bg-rose-50 px-3.5 py-1.5 rounded-full border border-rose-300 shadow-xs">
-                <Award className="w-4 h-4 text-rose-600" />
-                <span>BADGE UNLOCKED: QUARANTINE SENTINEL &amp; DISPOSITION MASTER</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Module 7 Completed · Category 1 Fully Mastered!
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Quality Rejections, Quarantine &amp; Disposition under SOPs <code>07_C1_S4</code> and <code>08_C1_S4</code> at Ather AURIC Plant M002. Category 1 (Modules 1–7) is now 100% complete!
-              </p>
-            </div>
-
-            {/* Performance Metric Strip */}
-            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
-                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
-              </div>
-              <div className="space-y-0.5 border-x border-slate-200">
-                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
-                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
-              </div>
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
-                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
-              </div>
-            </div>
-
-            {/* Milestone Tracker */}
-            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
-              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 7 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
-                <span className="text-rose-600 font-extrabold">100% SOP COMPLIANT</span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                {stageData.scenes.map((s, i) => (
-                  <button
-                    key={s.id}
-                    type="button"
-                    onClick={() => handleSelectScene(i)}
-                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-rose-400 text-slate-700 hover:text-rose-700 transition-colors text-left cursor-pointer"
-                  >
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
-                      ✓
-                    </span>
-                    <span className="truncate font-medium">
-                      Sc {i + 1}: {getSceneTitle(s, lang)}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Next Chapter & Replay Actions */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <button
-                type="button"
-                onClick={() => handleSelectScene(0)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <RefreshCcw className="w-4 h-4" />
-                <span>Replay Module 7 from Start</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSelectStage(5)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                <span>Review Module 6 (Supermarket Put-Away)</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setShowCertificate(true)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-amber-500 hover:bg-amber-600 text-white shadow-md shadow-amber-500/25 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <Award className="w-4 h-4" />
-                <span>Print Category 1 Certificate</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  if (allStages.length > 7) {
-                    handleSelectStage(7);
-                  }
-                }}
-                className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-lg shadow-emerald-600/25 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <span>Proceed to Category 2 (Module 8: Order Picking)</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-        ) : currentStageIndex === 7 ? (
-          /* Module 8 Graduation Screen (Order Picking Mastery) */
-          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
-            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-sky-600 via-cyan-500 to-emerald-500 text-white flex items-center justify-center mx-auto shadow-xl shadow-sky-600/25">
-              <Trophy className="w-10 h-10" />
-            </div>
-
-            <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-sky-800 bg-sky-50 px-3.5 py-1.5 rounded-full border border-sky-300 shadow-xs">
-                <Award className="w-4 h-4 text-sky-600" />
-                <span>BADGE UNLOCKED: LINE FEEDER CHAMPION</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Module 8 Completed · Vehicle Line Issuance Mastered!
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Vehicle Line Issuance &amp; Order Picking under SOP <code>01_C2_S1</code> at Ather AURIC Plant M002. From MES digital WH task activation to blind source QR scan, trolley marriage, supermarket lane verification, workstation delivery handshake, and reverse asset return!
-              </p>
-            </div>
-
-            {/* Performance Metric Strip */}
-            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
-                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
-              </div>
-              <div className="space-y-0.5 border-x border-slate-200">
-                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
-                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
-              </div>
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
-                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
-              </div>
-            </div>
-
-            {/* Milestone Tracker */}
-            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
-              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 8 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
-                <span className="text-sky-600 font-extrabold">100% SOP COMPLIANT</span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                {stageData.scenes.map((s, i) => (
-                  <button
-                    key={s.id}
-                    type="button"
-                    onClick={() => handleSelectScene(i)}
-                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-sky-400 text-slate-700 hover:text-sky-700 transition-colors text-left cursor-pointer"
-                  >
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
-                      ✓
-                    </span>
-                    <span className="truncate font-medium">
-                      Sc {i + 1}: {getSceneTitle(s, lang)}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Next Chapter & Replay Actions */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <button
-                type="button"
-                onClick={() => handleSelectScene(0)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <RefreshCcw className="w-4 h-4" />
-                <span>Replay Module 8 from Start</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSelectStage(6)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                <span>Review Category 1 Finale (Quarantine &amp; Disposition)</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  if (allStages.length > 8) {
-                    handleSelectStage(8);
-                  }
-                }}
-                disabled={allStages.length <= 8}
-                className={`w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs transition-all flex items-center justify-center gap-2 ${
-                  allStages.length > 8
-                    ? 'bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-700 hover:to-cyan-700 text-white shadow-lg shadow-sky-600/25 cursor-pointer'
-                    : 'bg-slate-200 text-slate-400 cursor-not-allowed'
-                }`}
-              >
-                <span>Proceed to Module 9: Decanting &amp; Paint Shop Issuance</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-        ) : currentStageIndex === 8 ? (
-          /* Module 9 Graduation Screen (Paint Decanting Mastery) */
-          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
-            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-amber-600 via-orange-500 to-emerald-500 text-white flex items-center justify-center mx-auto shadow-xl shadow-amber-600/25">
-              <Trophy className="w-10 h-10" />
-            </div>
-
-            <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-amber-800 bg-amber-50 px-3.5 py-1.5 rounded-full border border-amber-300 shadow-xs">
-                <Award className="w-4 h-4 text-amber-600" />
-                <span>BADGE UNLOCKED: PAINT &amp; DECANTING VIRTUOSO</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Module 9 Completed · Paint Shop Line Issuance &amp; Decanting Mastered!
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Paint Shop Line Issuance &amp; Decanting under SOPs <code>02_C2_S1</code> and <code>03_C2_S2</code> at Ather AURIC Plant M002. From the 28 unique feeder distribution matrix to 2-pallet e-Kanban RFID replenishment, 100% full trolley capacity discipline, and closed-loop MHE reverse recovery!
-              </p>
-            </div>
-
-            {/* Performance Metric Strip */}
-            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
-                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
-              </div>
-              <div className="space-y-0.5 border-x border-slate-200">
-                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
-                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
-              </div>
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
-                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
-              </div>
-            </div>
-
-            {/* Milestone Tracker */}
-            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
-              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 9 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
-                <span className="text-amber-600 font-extrabold">100% SOP COMPLIANT</span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                {stageData.scenes.map((s, i) => (
-                  <button
-                    key={s.id}
-                    type="button"
-                    onClick={() => handleSelectScene(i)}
-                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-amber-400 text-slate-700 hover:text-amber-700 transition-colors text-left cursor-pointer"
-                  >
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
-                      ✓
-                    </span>
-                    <span className="truncate font-medium">
-                      Sc {i + 1}: {getSceneTitle(s, lang)}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Next Chapter & Replay Actions */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <button
-                type="button"
-                onClick={() => handleSelectScene(0)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <RefreshCcw className="w-4 h-4" />
-                <span>Replay Module 9 from Start</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSelectStage(7)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                <span>Review Module 8 (Vehicle Order Picking)</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  if (allStages.length > 9) {
-                    handleSelectStage(9);
-                  }
-                }}
-                disabled={allStages.length <= 9}
-                className={`w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs transition-all flex items-center justify-center gap-2 ${
-                  allStages.length > 9
-                    ? 'bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white shadow-lg shadow-amber-600/25 cursor-pointer'
-                    : 'bg-slate-200 text-slate-400 cursor-not-allowed'
-                }`}
-              >
-                <span>Proceed to Module 10: Indirect Material Handling (CM01 to MN01)</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-        ) : currentStageIndex === 9 ? (
-          /* Module 10 Graduation Screen (Indirect Stores Mastery) */
-          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
-            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-amber-600 via-orange-500 to-yellow-500 text-white flex items-center justify-center mx-auto shadow-xl shadow-amber-600/25">
-              <Trophy className="w-10 h-10" />
-            </div>
-
-            <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-amber-800 bg-amber-50 px-3.5 py-1.5 rounded-full border border-amber-300 shadow-xs">
-                <Award className="w-4 h-4 text-amber-600" />
-                <span>BADGE UNLOCKED: INDIRECT STORES &amp; SPARES CUSTODIAN</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Module 10 Completed · Indirect Material Handling Mastered!
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Indirect Material Handling under SOP <code>10_C2_S1</code> at Ather AURIC Plant M002. From the strict 'No Reservation, No Material' security rule to SAP YMB21 transfer postings (CM01 to MN01), MRS Cost Center error spotting, and the 4-step physical register handover protocol!
-              </p>
-            </div>
-
-            {/* Performance Metric Strip */}
-            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
-                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
-              </div>
-              <div className="space-y-0.5 border-x border-slate-200">
-                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
-                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
-              </div>
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
-                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
-              </div>
-            </div>
-
-            {/* Milestone Tracker */}
-            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
-              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 10 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
-                <span className="text-purple-600 font-extrabold">100% SOP COMPLIANT</span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                {stageData.scenes.map((s, i) => (
-                  <button
-                    key={s.id}
-                    type="button"
-                    onClick={() => handleSelectScene(i)}
-                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-purple-400 text-slate-700 hover:text-purple-700 transition-colors text-left cursor-pointer"
-                  >
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
-                      ✓
-                    </span>
-                    <span className="truncate font-medium">
-                      Sc {i + 1}: {getSceneTitle(s, lang)}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Next Chapter & Replay Actions */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <button
-                type="button"
-                onClick={() => handleSelectScene(0)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <RefreshCcw className="w-4 h-4" />
-                <span>Replay Module 10 from Start</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSelectStage(8)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                <span>Review Module 9 (Paint Shop Line Issuance)</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  if (allStages.length > 10) {
-                    handleSelectStage(10);
-                  }
-                }}
-                disabled={allStages.length <= 10}
-                className={`w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs transition-all flex items-center justify-center gap-2 ${
-                  allStages.length > 10
-                    ? 'bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white shadow-lg shadow-purple-600/25 cursor-pointer'
-                    : 'bg-slate-200 text-slate-400 cursor-not-allowed'
-                }`}
-              >
-                <span>Proceed to Module 11: Production Inspection &amp; PIR</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-        ) : currentStageIndex === 10 ? (
-          /* Module 11 Graduation Screen (PIR & STO Mastery) */
-          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
-            <div className="w-20 h-20 rounded-3xl bg-gradient-to-tr from-sky-600 via-indigo-500 to-teal-500 text-white flex items-center justify-center mx-auto shadow-xl shadow-sky-600/25">
-              <Trophy className="w-10 h-10" />
-            </div>
-
-            <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-sky-800 bg-sky-50 px-3.5 py-1.5 rounded-full border border-sky-300 shadow-xs">
-                <Award className="w-4 h-4 text-sky-600" />
-                <span>BADGE UNLOCKED: PIR &amp; STO DISPATCH SPECIALIST</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Module 11 Completed · Production Inspection &amp; PIR Mastered!
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                You have mastered all <strong>{stageData.scenes.length} Standard Operating Procedure steps</strong> of Production Inspection &amp; Quality PIR under SOP <code>05_C2_S3</code> at Ather AURIC Plant M002. From the JIRA Budget ID mandate to dual approval thresholds (&gt; ₹25k / &gt; 25 Nos), 4:00 PM daily dispatch cutoff clock, and SAP STO E-Way Bill gate compliance!
-              </p>
-            </div>
-
-            {/* Performance Metric Strip */}
-            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
-                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
-              </div>
-              <div className="space-y-0.5 border-x border-slate-200">
-                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
-                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
-              </div>
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
-                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
-              </div>
-            </div>
-
-            {/* Milestone Tracker */}
-            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
-              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Completed Module 11 Milestones ({stageData.scenes.length}/{stageData.scenes.length}):</span>
-                <span className="text-sky-600 font-extrabold">100% SOP COMPLIANT</span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                {stageData.scenes.map((s, i) => (
-                  <button
-                    key={s.id}
-                    type="button"
-                    onClick={() => handleSelectScene(i)}
-                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-sky-400 text-slate-700 hover:text-sky-700 transition-colors text-left cursor-pointer"
-                  >
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
-                      ✓
-                    </span>
-                    <span className="truncate font-medium">
-                      Sc {i + 1}: {getSceneTitle(s, lang)}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Next Chapter & Replay Actions */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <button
-                type="button"
-                onClick={() => handleSelectScene(0)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <RefreshCcw className="w-4 h-4" />
-                <span>Replay Module 11 from Start</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSelectStage(9)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                <span>Review Module 10 (Indirect Material Handling)</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  if (allStages.length > 11) {
-                    handleSelectStage(11);
-                  }
-                }}
-                disabled={allStages.length <= 11}
-                className={`w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs transition-all flex items-center justify-center gap-2 ${
-                  allStages.length > 11
-                    ? 'bg-gradient-to-r from-sky-600 to-teal-600 hover:from-sky-700 hover:to-teal-700 text-white shadow-lg shadow-sky-600/25 cursor-pointer'
-                    : 'bg-slate-200 text-slate-400 cursor-not-allowed'
-                }`}
-              >
-                <span>Proceed to Module 12: Reverse Logistics &amp; Empty Bins</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-        ) : currentStageIndex === 11 ? (
-          /* Module 12 Grand Finale Graduation Screen (Full 12 Modules Completed) */
-          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
-            <div className="w-24 h-24 rounded-3xl bg-gradient-to-tr from-amber-500 via-emerald-500 to-indigo-600 text-white flex items-center justify-center mx-auto shadow-2xl shadow-emerald-500/30 animate-pulse">
-              <Trophy className="w-12 h-12 text-amber-200" />
-            </div>
-
-            <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-amber-900 bg-amber-50 px-4 py-1.5 rounded-full border border-amber-300 shadow-sm">
-                <Award className="w-4 h-4 text-amber-600" />
-                <span>GRAND TROPHY UNLOCKED: WAREHOUSE OPERATIONS GRANDMASTER</span>
-              </div>
-              <h2 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
-                All 12 Modules Completed · Certified Warehouse Specialist!
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
-                Phenomenal achievement! You have mastered all <strong>12 Standard Operating Procedure modules</strong> and completed all <strong>{allStages.reduce((acc, s) => acc + s.scenes.length, 0)} factory floor interactive challenges</strong> at Ather Energy AURIC Plant M002.
-              </p>
-            </div>
-
-            {/* Program Mastery Summary Strip */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left font-mono text-xs">
-              <div className="p-3.5 bg-emerald-50/70 border border-emerald-200 rounded-2xl space-y-1">
-                <span className="font-bold text-emerald-800 flex items-center gap-1.5">
-                  <CheckCheck className="w-4 h-4 text-emerald-600" /> Category 1: Receiving &amp; Storage (100%)
-                </span>
-                <p className="text-[11px] text-slate-600 leading-normal font-sans">
-                  Gate inwarding, 10% IQC statistical sampling, High-Rise rack put-away, Battery cleanrooms, Hazmat annex, Supermarket FIFO, and Quarantine disposition.
-                </p>
-              </div>
-
-              <div className="p-3.5 bg-sky-50/70 border border-sky-200 rounded-2xl space-y-1">
-                <span className="font-bold text-sky-800 flex items-center gap-1.5">
-                  <CheckCheck className="w-4 h-4 text-sky-600" /> Category 2: Line Feeding &amp; Logistics (100%)
-                </span>
-                <p className="text-[11px] text-slate-600 leading-normal font-sans">
-                  MES line issuance, Paint shop decanting, Indirect material handling (CM01 to MN01), Quality PIR STO dispatches, and Reverse logistics &amp; empty bins.
-                </p>
-              </div>
-            </div>
-
-            {/* Performance Metric Strip */}
-            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">Total XP Earned</div>
-                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
-              </div>
-              <div className="space-y-0.5 border-x border-slate-200">
-                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
-                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
-              </div>
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
-                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
-              </div>
-            </div>
-
-            {/* Completed Scenes Tracker */}
-            <div className="text-left bg-slate-50/80 rounded-2xl p-4 border border-slate-200 space-y-2">
-              <div className="text-xs font-mono font-bold text-slate-500 uppercase flex items-center justify-between">
-                <span>Module 12 Milestones ({stageData.scenes.length}/{stageData.scenes.length} Completed):</span>
-                <span className="text-emerald-600 font-extrabold">ALL 12 MODULES 100% COMPLETE</span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                {stageData.scenes.map((s, i) => (
-                  <button
-                    key={s.id}
-                    type="button"
-                    onClick={() => handleSelectScene(i)}
-                    className="flex items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 hover:border-emerald-400 text-slate-700 hover:text-emerald-700 transition-colors text-left cursor-pointer"
-                  >
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-mono font-bold text-[10px] flex items-center justify-center shrink-0">
-                      ✓
-                    </span>
-                    <span className="truncate font-medium">
-                      Sc {i + 1}: {getSceneTitle(s, lang)}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Replay & Review Actions */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <button
-                type="button"
-                onClick={() => handleSelectScene(0)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <RefreshCcw className="w-4 h-4" />
-                <span>Replay Module 12 from Start</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSelectStage(10)}
-                className="w-full sm:w-auto px-5 py-3 rounded-2xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                <span>Review Module 11 (PIR &amp; Quality)</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setShowCertificate(true)}
-                className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-600 hover:to-orange-600 text-white shadow-xl shadow-amber-500/25 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <Award className="w-4 h-4" />
-                <span>🏆 View &amp; Print Grandmaster Certificate</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSelectStage(0)}
-                className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-600 hover:from-emerald-700 hover:to-indigo-700 text-white shadow-xl shadow-emerald-600/25 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <Trophy className="w-4 h-4" />
-                <span>Restart Full 12-Module Journey</span>
-              </button>
-            </div>
-          </div>
         ) : (
-          /* Intermediate Milestone Screen (Stages 2, 3 & 4) */
-          <div className="my-auto bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-2xl max-w-3xl mx-auto text-center space-y-6">
-            <div className="w-16 h-16 rounded-2xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center mx-auto shadow-sm">
-              <Layers className="w-8 h-8" />
-            </div>
-
-            <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-extrabold text-blue-700 bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-300 shadow-xs">
-                <span>MODULE {currentStageIndex + 1} · MILESTONE {currentSceneIndex + 1} COMPLETED</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                {currentStageIndex === 11
-                  ? currentSceneIndex === 2
-                    ? 'Scene 3: Empty Bin Collection & 5-Foot Max Stacking Height Mastered!'
-                    : currentSceneIndex === 1
-                    ? 'Scene 2: 3-Day Supplier SLA & "Use As It Is" Deviation Route Mastered!'
-                    : 'Scene 1: Defect Validation & Causer Identification Gate Mastered!'
-                  : currentStageIndex === 10
-                  ? currentSceneIndex === 2
-                    ? 'Scene 3: The 4:00 PM Dispatch SLA Cutoff Clock Mastered!'
-                    : currentSceneIndex === 1
-                    ? 'Scene 2: Dual Approval Thresholds: Value & Quantity Mastered!'
-                    : 'Scene 1: JIRA PIR Initiation & Budget ID Mandate Mastered!'
-                  : currentStageIndex === 9
-                  ? currentSceneIndex === 2
-                    ? 'Scene 3: Requisition Slip Audit & Cost Center Verification Mastered!'
-                    : currentSceneIndex === 1
-                    ? 'Scene 2: SAP Stock Movement CM01 to MN01 via YMB21 Mastered!'
-                    : 'Scene 1: The "No Reservation, No Material" Security Rule Mastered!'
-                  : currentStageIndex === 8
-                  ? currentSceneIndex === 2
-                    ? 'Scene 3: The 100% Full Trolley Capacity Mandate Mastered!'
-                    : currentSceneIndex === 1
-                    ? 'Scene 2: 2-Pallet Decanting Buffer & e-Kanban RFID Trigger Mastered!'
-                    : 'Scene 1: ACED Metal Parts Trolley Issuance & Feeder Matrix Mastered!'
-                  : currentStageIndex === 7
-                  ? currentSceneIndex === 2
-                    ? 'Scene 3: Trolley QR Marriage & Supermarket Lane Verification Mastered!'
-                    : currentSceneIndex === 1
-                    ? 'Scene 2: Source Location QR Scan & Blind Quantity Reveal Mastered!'
-                    : 'Scene 1: MES Trigger & Digital WH Task Activation Mastered!'
-                  : currentStageIndex === 6
-                  ? currentSceneIndex === 3
-                    ? 'Scene 4: The 4-Way Material Disposition Filter Mastered!'
-                    : currentSceneIndex === 2
-                    ? 'Scene 3: Quarantine Cage Storage SC01 BL & Root Cause Segregation Mastered!'
-                    : currentSceneIndex === 1
-                    ? 'Scene 2: Red Tagging, QC Stickers & JIRA Defect Logging Mastered!'
-                    : 'Scene 1: Defective Sample Detection & Entire Lot Quarantine Mastered!'
-                  : currentStageIndex === 5
-                  ? currentSceneIndex === 2
-                    ? 'Scene 3: Gravity Flow FIFO Roller Rack Put-Away Mastered!'
-                    : currentSceneIndex === 1
-                    ? 'Scene 2: Physical Count vs SAP Discrepancy Mastered!'
-                    : 'Scene 1: QC Pass Seal Verification Mastered!'
-                  : currentStageIndex === 4
-                  ? currentSceneIndex === 2
-                    ? 'Scene 3: Flammability Segregation & 2-Hour SLA Mastered!'
-                    : currentSceneIndex === 1
-                    ? 'Scene 2: Spill-Containment & Earthing Mastered!'
-                    : 'Scene 1: Chemical Bypass Routing Mastered!'
-                  : currentStageIndex === 3
-                  ? currentSceneIndex === 2
-                    ? 'Scene 3: 2-Hour Put-Away SLA Mastered!'
-                    : currentSceneIndex === 1
-                    ? 'Scene 2: Cleanroom Thresholds Mastered!'
-                    : 'Scene 1: MHE Authorization Mastered!'
-                  : currentStageIndex === 2
-                  ? currentSceneIndex === 2
-                    ? 'Scene 3: Destination Bin Marriage Mastered!'
-                    : currentSceneIndex === 1
-                    ? 'Scene 2: Route Segregation Mastered!'
-                    : 'Scene 1: HU Barcode Scan & WH Task Mastered!'
-                  : currentSceneIndex === 3
-                  ? 'Scene 4: 30-Minute Handover SLA Mastered!'
-                  : currentSceneIndex === 2
-                  ? 'Scene 3: Quarantine Demarcation Mastered!'
-                  : currentSceneIndex === 1
-                  ? 'Scene 2: 10% Sampling Rule Mastered!'
-                  : "Scene 1: GRN Sticker '?' Audit Mastered!"}
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-                {currentStageIndex === 11
-                  ? currentSceneIndex === 2
-                    ? 'You correctly enforced the strict 5-foot maximum empty bin stacking limit and 30-minute collection frequency to keep gangways clear. Next in Stage 12: Scene 4 (Reverse Logistics Truck Loading, DC Gate Pass & Grand Finale).'
-                    : currentSceneIndex === 1
-                    ? 'You correctly processed the 3-day supplier SLA and enforced Product Owner deviation sign-off before converting QI stock to Unrestricted. Next in Stage 12: Scene 3 (Empty Bin Collection & 5-Foot Max Stacking Height).'
-                    : 'You correctly halted collection and declined rejected parts with an "Unknown" causer and missing Bug ID in JIRA until SQA/MQA investigation. Next in Stage 12: Scene 2 (Clause 4.2 & 4.3: 3-Day Supplier SLA & "Use As It Is" Deviation Route).'
-                  : currentStageIndex === 10
-                  ? currentSceneIndex === 2
-                    ? 'You correctly verified that PIR dispatches must strictly occur before the 4:00 PM cutoff window to ensure same-day logistics handoff. Next in Stage 11: Scene 4 (Clause 4.4: SAP STO Processing & E-Way Bill Gate Compliance).'
-                    : currentSceneIndex === 1
-                    ? 'You correctly identified dual approval thresholds (> ₹25,000 value requiring Operations Head & > 25 units requiring Quality Head). Next in Stage 11: Scene 3 (Clause 4.3: The 4:00 PM Dispatch SLA Cutoff Clock).'
-                    : 'You correctly enforced the mandatory JIRA Budget ID requirement before authorizing any PIR scrap or rework disposal. Next in Stage 11: Scene 2 (Clause 4.2: Dual Approval Thresholds: Value & Quantity).'
-                  : currentStageIndex === 9
-                  ? currentSceneIndex === 2
-                    ? 'You correctly audited the Material Requisition Slip and spotted the missing Cost Center, preventing unallocated inventory shrink and cross-department billing errors. Next in Stage 10: Scene 4 (Clauses 4.2 & 4.4: Physical Tracking Sheet & Handover Protocol).'
-                    : currentSceneIndex === 1
-                    ? 'You correctly executed the stock transfer posting from Central Stores (CM01) to Maintenance Location (MN01) in SAP using transaction YMB21 before releasing physical parts. Next in Stage 10: Scene 3 (Failure Mode 5.1: Requisition Slip Audit & Cost Center Verification).'
-                    : 'You correctly halted unauthorized issuance and enforced the strict "No Reservation, No Material" rule under SOP 10_C2_S1. Next in Stage 10: Scene 2 (Clause 4.2: SAP Stock Movement CM01 to MN01 via Transaction YMB21).'
-                  : currentStageIndex === 8
-                  ? currentSceneIndex === 2
-                    ? 'You correctly verified that trolleys must be 100% full before moving to paint shop staging. Next in Stage 9: Scene 4 (Clause 4.4: Closed-Loop Order Closure & Wrong Part Return).'
-                    : currentSceneIndex === 1
-                    ? 'You correctly scanned the 2-bin decanting buffer e-Kanban RFID tag, triggering automatic replenishment. Next in Stage 9: Scene 3 (Clause 4.3: The 100% Full Trolley Capacity Mandate).'
-                    : 'You correctly issued ACED metal parts via dedicated kitting trolleys to the Paint Shop feeding lanes. Next in Stage 9: Scene 2 (Clause 4.2: 2-Pallet Decanting Buffer & e-Kanban RFID Trigger).'
-                  : currentStageIndex === 7
-                  ? currentSceneIndex === 1
-                    ? 'You correctly scanned the rack beam location QR at HRR-A-03-08 before revealing the authorized picking quantity, strictly enforcing Ather mistake-proofing (poka-yoke) standards. Next in Stage 8: Scene 3 (Failure Modes 5.1 & 5.2: Trolley QR Marriage & Supermarket Lane Verification).'
-                    : 'You correctly verified that line feeders receive automated WH picking tasks via MES on their HHT, containing exact part description, source location, and replenishment quantity based on real-time VIN consumption. Next in Stage 8: Scene 2 (Clause 4.1: Source Location QR Scan & Blind Quantity Reveal).'
-                  : currentStageIndex === 6
-                  ? currentSceneIndex === 3
-                    ? 'You correctly routed quarantined components through the 4-way filter: Auto-RTV for supplier errors, Rework with 100% re-QC, Use As-Is with signed deviation notes, and Scrap with Finance sign-off. Next in Stage 7: Scene 5 (Clause 4.5: Industrial Scrap Shredding & Weighbridge Dispatch).'
-                    : currentSceneIndex === 2
-                    ? 'You correctly stowed rejected stock into blocked storage SC01 BL and segregated materials into dedicated bays based on defect root cause (Vendor Defect, Transit Damage, In-House Handling). Next in Stage 7: Scene 4 (Clause 4.4: The 4-Way Disposition Filter - Auto-RTV, Rework, Use As-Is, Scrap).'
-                    : currentSceneIndex === 1
-                    ? 'You correctly enforced the dual physical tagging rule (Red Tag + QC Sticker) and verified that JIRA tickets must have a valid Bug ID before NG logistics collection. Next in Stage 7: Scene 3 (Clause 4.3: Transfer to Caged Store SC01 BL & Root Cause Segregation).'
-                    : 'You correctly quarantined the entire 1,000-piece batch along with the 2 defective burnt samples into the NG Quarantine area, preventing fire hazards in assembly. Next in Stage 7: Scene 2 (Clause 4.2: Red Tagging, QC Stickers & JIRA Defect Ticket Creation).'
-                  : currentStageIndex === 5
-                  ? currentSceneIndex === 2
-                    ? 'You correctly sequenced the 4 gravity flow rack put-away steps, ensuring loading occurs strictly from the REAR lane to mechanically enforce 100% First-In, First-Out (FIFO) stock rotation. Next in Stage 6: Scene 4 (Clause 4.4 & 4.5: Physical Bin Card & e-Kanban Replenishment Trigger).'
-                    : currentSceneIndex === 1
-                    ? 'You correctly halted put-away and escalated the 8-piece count shortage to the Zone Leader instead of altering paperwork or stocking short lots. Next in Stage 6: Scene 3 (Clause 4.3: Supermarket SAP Putaway & Gravity Flow Racks FIFO Stowage).'
-                    : 'You correctly audited the Non-DOL lot at MH1 and halted putaway due to the missing green QC Pass seal on the GRN sticker. Next in Stage 6: Scene 2 (Clause 4.2: Physical Sampling vs SAP LX02 Discrepancy Escalation).'
-                  : currentStageIndex === 4
-                  ? currentSceneIndex === 2
-                    ? 'You correctly sorted all flammable, oxidizing, and corrosive chemicals into isolated containment bays within the mandatory 2-hour SLA. Next in Stage 5: Scene 4 (Clause 4.4: DEO Manual GRN & ERP Stock Posting).'
-                    : currentSceneIndex === 1
-                    ? 'You correctly audited the Annex C-04 dock and spotted the missing secondary spill bund and detached static grounding clamp. Next in Stage 5: Scene 3 (Clause 4.3: Flammability Segregation & 2-Hour SLA).'
-                    : 'You correctly routed the flammable chemical tanker directly to the detached Chemical Storage Annex, bypassing the main assembly plant. Next in Stage 5: Scene 2 (Clause 4.2: Chemical PPE & Secondary Spill-Containment Inspection).'
-                  : currentStageIndex === 3
-                  ? currentSceneIndex === 2
-                    ? 'You correctly verified the 2-Hour strict put-away SLA window for battery cells from dock arrival to cell vault stowing. Next in Stage 4: Scene 4 (Clause 5.2: Environmental Breach Alarm & Containment Protocol).'
-                    : currentSceneIndex === 1
-                    ? 'You correctly verified the 20°C–25°C and 60%–65% RH climate parameters for the sealed Battery Standard Room. Next in Stage 4: Scene 3 (Clause 4.3: 2-Hour Strict Put-Away Countdown SLA).'
-                    : 'You correctly halted the uncertified helper and verified that lithium-ion battery cells must be transported exclusively by certified MHE operators. Next in Stage 4: Scene 2 (Clause 4.2: Climate-Controlled Cleanroom Parameters - 20°C–25°C & 60%–65% RH).'
-                  : currentStageIndex === 2
-                  ? currentSceneIndex === 2
-                    ? 'You correctly scanned the rack location QR code on beam HRR-B-04-12, completing the SAP EWM bin marriage and updating G-stock. Next in Stage 3: Scene 4 (Clause 5.1: Failure Mode - Omitted Location Scan Consequences).'
-                    : currentSceneIndex === 1
-                    ? 'You correctly segregated FLC bins to High-Rise Racks (HRR) and wheeled vehicle trolleys to the Trolley Staging Area. Next in Stage 3: Scene 3 (Clause 4.3: Destination Bin Marriage & Task Closure via Location QR Scan).'
-                    : 'You correctly scanned the pallet-level Handling Unit barcode on the GRN sticker to generate the active SAP EWM Warehouse Task. Next in Stage 3: Scene 2 (Clause 4.2: Route Segregation - FLC to High Rise Racks vs Trolley Staging).'
-                  : currentSceneIndex === 3
-                  ? 'You verified the strict 30-minute handover SLA cutoff from GRN application. Next in Stage 2: Scene 5 (Clause 4.5: The 3-Way IQC Outcome & Sealing - Pass, Hold, NG).'
-                  : currentSceneIndex === 2
-                  ? 'You correctly positioned yellow UNDER IQC cones around the staging buffer. Next in Stage 2: Scene 4 (Clause 4.4: 30-Minute Sample Handover SLA & Countdown).'
-                  : currentSceneIndex === 1
-                  ? 'You correctly applied the 10% statistical sampling calculation (1 FLC crate transferred to IQC, 9 FLC crates waiting in staging). Next in Stage 2: Scene 3 (Clause 4.3: Staging Area Visual Demarcation & UNDER IQC Cones).'
-                  : "You correctly audited the Non-DOL identifier on the GRN label. Next in Stage 2: Clause 4.2: 10% Lot Statistical Sampling Rule (Count Stepper)."}
-              </p>
-            </div>
-
-            {/* Performance Metric Strip */}
-            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200/90 text-center font-mono">
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">XP Earned</div>
-                <div className="text-lg sm:text-2xl font-black text-emerald-600">+{xp}</div>
-              </div>
-              <div className="space-y-0.5 border-x border-slate-200">
-                <div className="text-[11px] text-slate-400 uppercase">Total Decisions</div>
-                <div className="text-lg sm:text-2xl font-black text-slate-800">{attempts}</div>
-              </div>
-              <div className="space-y-0.5">
-                <div className="text-[11px] text-slate-400 uppercase">Hearts Left</div>
-                <div className="text-base sm:text-xl font-black text-rose-500">{'❤️'.repeat(hearts)}</div>
-              </div>
-            </div>
-
-            {/* Actions */}
-            <div className="flex flex-wrap items-center justify-center gap-2.5 pt-2">
-              {currentSceneIndex < stageData.scenes.length - 1 && (
-                <button
-                  type="button"
-                  onClick={() => handleSelectScene(currentSceneIndex + 1)}
-                  className="w-full sm:w-auto px-6 py-3 rounded-2xl font-extrabold text-xs bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  <span>Proceed to Scene {currentSceneIndex + 2}</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              )}
-
-              <button
-                type="button"
-                onClick={() => handleSelectScene(currentSceneIndex)}
-                className="px-4 py-2.5 rounded-xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
-              >
-                <RefreshCcw className="w-3.5 h-3.5" />
-                <span>Replay Current Scene</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSelectStage(Math.max(0, currentStageIndex - 1))}
-                className="px-4 py-2.5 rounded-xl font-bold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
-              >
-                <ArrowLeft className="w-3.5 h-3.5" />
-                <span>Return to Module {currentStageIndex}</span>
-              </button>
-            </div>
-          </div>
+          <MilestoneGateway
+            stage={stageData}
+            stageIndex={currentStageIndex}
+            totalStages={allStages.length}
+            lang={lang}
+            xp={xp}
+            hearts={hearts}
+            attempts={attempts}
+            onSelectScene={handleSelectScene}
+            onSelectStage={handleSelectStage}
+            onViewScorecard={onViewScorecard ? () => onViewScorecard(getRunSummary()) : undefined}
+            onViewCertificate={() => setShowCertificate(true)}
+            onRestartFull={() => {
+              handleSelectScene(0);
+            }}
+          />
         )}
       </main>
 

@@ -18,8 +18,8 @@
         "mr": "ट्रक आगमन आणि वेटिंग यार्ड"
       },
       "media": {
-        "videoSrc": "/Assets/8%20Sequential%20Scenes/1%20Inbound%20Truck%20Gate%20Arrival/scene_01_gate_arrival.mp4",
-        "posterSrc": "/Assets/8%20Sequential%20Scenes/1%20Inbound%20Truck%20Gate%20Arrival/scene_01_gate_arrival_poster.jpg",
+        "videoSrc": "/Assets/videos/scene_01_gate_arrival.mp4",
+        "posterSrc": "/Assets/videos/scene_01_gate_arrival_poster.jpg",
         "fallbackAnimation": "truck_arrival_gate",
         "durationSeconds": 15,
         "pauseAtSecond": 4.5
@@ -118,8 +118,6 @@
         "mr": "कागदपत्र पडताळणी आणि डेस्क वर्गीकरण"
       },
       "media": {
-        "videoSrc": "/videos/scenes/scene_02_doc_cabin.mp4",
-        "posterSrc": "/images/scenes/scene_02_poster.jpg",
         "fallbackAnimation": "gatehouse_cabin_desk",
         "durationSeconds": 18,
         "pauseAtSecond": 3
@@ -265,8 +263,6 @@
         "mr": "SAP गेट एंट्री आणि ASN आपोआप भरणे"
       },
       "media": {
-        "videoSrc": "/videos/scenes/scene_03_sap_entry.mp4",
-        "posterSrc": "/images/scenes/scene_03_poster.jpg",
         "fallbackAnimation": "sap_terminal_screen",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -278,8 +274,7 @@
             "en": "Look at the DEO's screen! They have opened SAP GUI. By entering the vendor invoice, SAP checks if the physical delivery matches the digital ASN.",
             "hi": "DEO की स्क्रीन देखें! उन्होंने SAP GUI खोला है। विक्रेता इनवॉइस दर्ज करके, SAP जांचता है कि क्या भौतिक डिलीवरी डिजिटल ASN से मेल खाती है।",
             "mr": "DEO ची स्क्रीन पहा! त्यांनी SAP GUI उघडले आहे. व्हेंडर इन्व्हॉइस टाकून, SAP तपासते की प्रत्यक्ष डिलिव्हरी डिजिटल ASN शी जुळते का."
-          },
-          "audioSrc": "/audio/mascot/c1_s1_sc03_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "success",
@@ -287,8 +282,7 @@
             "en": "Spot on! YMM_GATE_ENTRY auto-fills shipment data from the ASN. If the ASN doesn't match, gate entry is halted — zero manual overrides for bad data!",
             "hi": "बिल्कुल सही! YMM_GATE_ENTRY ASN से शिपमेंट डेटा स्वतः भरता है। यदि ASN मेल नहीं खाता है, तो गेट एंट्री रोक दी जाती है — गलत डेटा के लिए कोई मैन्युअल ओवरराइड नहीं!",
             "mr": "अगदी बरोबर! YMM_GATE_ENTRY ASN मधून शिपमेंट माहिती आपोआप भरते. ASN जुळले नाही तर गेट एंट्री थांबवली जाते — चुकीच्या डेटासाठी कोणतीही मॅन्युअल सवलत नाही!"
-          },
-          "audioSrc": "/audio/mascot/c1_s1_sc03_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -296,8 +290,7 @@
             "en": "Careful! In AURIC, there is zero manual override for mismatched paperwork. If the ASN is wrong, gate entry cannot proceed.",
             "hi": "सावधान! AURIC में बेमेल कागजी कार्रवाई के लिए कोई मैन्युअल ओवरराइड नहीं है। यदि ASN गलत है, तो गेट एंट्री आगे नहीं बढ़ सकती।",
             "mr": "लक्ष द्या! AURIC मध्ये कागदपत्रांमध्ये तफावत असल्यास कोणतीही मॅन्युअल सवलत दिली जात नाही. ASN चुकीचे असल्यास गेट एंट्री पुढे जाऊ शकत नाही."
-          },
-          "audioSrc": "/audio/mascot/c1_s1_sc03_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -364,8 +357,6 @@
         "mr": "बारकोड पास प्रिंटिंग आणि चालक क्रम"
       },
       "media": {
-        "videoSrc": "/videos/scenes/scene_04_barcode_printer.mp4",
-        "posterSrc": "/images/scenes/scene_04_poster.jpg",
         "fallbackAnimation": "thermal_printer_tv",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -493,8 +484,6 @@
         "mr": "इनबाउंड बे आणि डॉक वाटप"
       },
       "media": {
-        "videoSrc": "/videos/scenes/scene_05_dock_allocation.mp4",
-        "posterSrc": "/images/scenes/scene_05_poster.jpg",
         "fallbackAnimation": "dock_blueprint_map",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -506,8 +495,7 @@
             "en": "The DEO executes YMM_DOCK_ALLOCATE! Based on our shipment of vehicle mechanical parts, which warehouse dock on the AURIC plant layout must be allocated?",
             "hi": "DEO YMM_DOCK_ALLOCATE चलाता है! हमारे वाहन मैकेनिकल पार्ट्स के शिपमेंट के आधार पर, AURIC प्लांट लेआउट पर कौन सा वेयरहाउस डॉक आवंटित किया जाना चाहिए?",
             "mr": "DEO YMM_DOCK_ALLOCATE चालवतो! आपल्या वाहनाच्या मेकॅनिकल पार्ट्सच्या डिलिव्हरीनुसार, AURIC प्लांट लेआउटवर कोणता वेअरहाऊस डॉक वाटप केला पाहिजे?"
-          },
-          "audioSrc": "/audio/mascot/c1_s1_sc05_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "success",
@@ -515,8 +503,7 @@
             "en": "Spot on! Dock 04 in Inbound Bay B is designated for vehicle assembly components. Dock 01 is reserved for battery cells and Dock 06 for hazardous chemicals.",
             "hi": "बिल्कुल सही! इनबाउंड बे B में डॉक 04 वाहन असेंबली घटकों के लिए निर्धारित है। डॉक 01 बैटरी सेल और डॉक 06 खतरनाक रसायनों के लिए आरक्षित है।",
             "mr": "अगदी बरोबर! इनबाउंड बे B मधील डॉक 04 वाहन असेंब्ली सुट्या भागांसाठी नियुक्त केला आहे. डॉक 01 बॅटरी सेलसाठी आणि डॉक 06 घातक रसायनांसाठी राखीव आहे."
-          },
-          "audioSrc": "/audio/mascot/c1_s1_sc05_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -524,8 +511,7 @@
             "en": "Careful! Dock 01 is an environmentally controlled vault for battery cells only, and Dock 06 is for chemicals. Vehicle parts belong at Dock 04 (Bay B).",
             "hi": "सावधान! डॉक 01 केवल बैटरी सेल के लिए नियंत्रित वॉल्ट है, और डॉक 06 रसायनों के लिए है। वाहन के पार्ट्स डॉक 04 (बे B) में जाने चाहिए।",
             "mr": "लक्ष द्या! डॉक 01 फक्त बॅटरी सेलसाठी नियंत्रित वॉल्ट आहे, आणि डॉक 06 रसायनांसाठी आहे. वाहनाचे पार्ट्स डॉक 04 (बे B) वर गेले पाहिजेत."
-          },
-          "audioSrc": "/audio/mascot/c1_s1_sc05_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -612,8 +598,8 @@
         "mr": "डॉक आगमन आणि गंभीर सुरक्षा ऑडिट"
       },
       "media": {
-        "videoSrc": "/Assets/8%20Sequential%20Scenes/2%20Loading%20Dock%20%26%20Wheel%20Chock%20Safety/scene_02_wheel_chock_safety.mp4",
-        "posterSrc": "/Assets/8%20Sequential%20Scenes/2%20Loading%20Dock%20%26%20Wheel%20Chock%20Safety/scene_02_wheel_chock_safety_poster.jpg",
+        "videoSrc": "/Assets/videos/scene_02_wheel_chock_safety.mp4",
+        "posterSrc": "/Assets/videos/scene_02_wheel_chock_safety_poster.jpg",
         "fallbackAnimation": "dock_safety_chocks",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -731,8 +717,6 @@
         "mr": "रिकामे डबे रीलोडिंग आणि प्रस्थान गेट एक्झिट"
       },
       "media": {
-        "videoSrc": "/videos/scenes/scene_07_gate_exit.mp4",
-        "posterSrc": "/images/scenes/scene_07_poster.jpg",
         "fallbackAnimation": "exit_gatehouse_barrier",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -744,8 +728,7 @@
             "en": "Unloading is done! The truck has loaded 20 empty blue FLC bins to return to the vendor. At the exit gate, the driver demands: 'Open the boom barrier, these are just Ather's empty bins!' What must you do?",
             "hi": "अनलोडिंग पूरी हो गई! ट्रक ने वेंडर को वापस करने के लिए 20 खाली नीले FLC डिब्बे लोड किए हैं। एग्जिट गेट पर चालक कहता है: 'बूम बैरियर खोलिए, ये सिर्फ एथर के खाली डिब्बे हैं!' आपको क्या करना चाहिए?",
             "mr": "अनलोडिंग पूर्ण झाले! ट्रकने व्हेंडरला परत करण्यासाठी 20 रिकामे निळे FLC डबे लोड केले आहेत. एक्झिट गेटवर चालक म्हणतो: 'बूम बॅरियर उघडा, हे फक्त अथरचे रिकामे डबे आहेत!' तुम्ही काय केले पाहिजे?"
-          },
-          "audioSrc": "/audio/mascot/c1_s1_sc07_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "success",
@@ -753,8 +736,7 @@
             "en": "Brilliant vigilance! SOP Clause 4.1.6.2 & 4.2.4 strictly enforce that returnable bins/FLCs require an authorized manual Delivery Challan (DC) and SAP YMM_GATE_EXIT clearance before the exit gate barrier opens!",
             "hi": "शानदार सतर्कता! SOP क्लॉज 4.1.6.2 और 4.2.4 का सख्त नियम: एग्जिट गेट बैरियर खोलने से पहले रिटर्नेबल डिब्बे/FLC के लिए अधिकृत मैनुअल डिलीवरी चालान (DC) और SAP YMM_GATE_EXIT क्लीयरेंस अनिवार्य है!",
             "mr": "उत्कृष्ट सतर्कता! SOP कलम 4.1.6.2 आणि 4.2.4 नुसार एक्झिट गेट बॅरियर उघडण्यापूर्वी रिटर्नेबल डबे/FLC साठी अधिकृत मॅन्युअल डिलिव्हरी चलन (DC) आणि SAP YMM_GATE_EXIT क्लिअरन्स अनिवार्य आहे!"
-          },
-          "audioSrc": "/audio/mascot/c1_s1_sc07_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -762,8 +744,7 @@
             "en": "Stop! Never raise the barrier without a manual Delivery Challan (DC). Empty FLC bins are valuable Ather company assets. Without a DC, thousands of rupees of packaging exit untracked!",
             "hi": "रुकिए! मैनुअल डिलीवरी चालान (DC) के बिना कभी बैरियर न उठाएं। खाली FLC डिब्बे एथर कंपनी की मूल्यवान संपत्ति हैं। बिना DC के, हजारों रुपये की पैकेजिंग बिना रिकॉर्ड के बाहर चली जाएगी!",
             "mr": "थांबा! मॅन्युअल डिलिव्हरी चलन (DC) शिवाय बॅरियर कधीही उघडू नका. रिकामे FLC डबे ही अथर कंपनीची मौल्यवान मालमत्ता आहे. DC शिवाय हजारो रुपयांचे पॅकेजिंग नोंदीविना बाहेर जाईल!"
-          },
-          "audioSrc": "/audio/mascot/c1_s1_sc07_wrong.mp3"
+          }
         }
       },
       "interaction": {

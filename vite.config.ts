@@ -6,6 +6,31 @@ import { VitePWA } from 'vite-plugin-pwa'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
+    {
+      name: 'assets-case-middleware',
+      configureServer(server) {
+        server.middlewares.use((req, _res, next) => {
+          if (req.url) {
+            req.url = req.url
+              .replace(/^\/assets\//i, '/Assets/')
+              .replace(/\/mascot\//i, '/Mascot/')
+              .replace(/\/props\//i, '/Props/');
+          }
+          next();
+        });
+      },
+      configurePreviewServer(server) {
+        server.middlewares.use((req, _res, next) => {
+          if (req.url) {
+            req.url = req.url
+              .replace(/^\/assets\//i, '/Assets/')
+              .replace(/\/mascot\//i, '/Mascot/')
+              .replace(/\/props\//i, '/Props/');
+          }
+          next();
+        });
+      }
+    },
     tailwindcss(),
     react(),
     VitePWA({
@@ -39,7 +64,7 @@ export default defineConfig({
         ]
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2,json,mp3}']
+        globPatterns: ['**/*.{js,css,html,ico,png,jpg,jpeg,webp,svg,woff2,json,mp3}']
       }
     })
   ]

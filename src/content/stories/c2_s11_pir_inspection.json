@@ -429,8 +429,6 @@
         "mr": "PIR गंतव्य मार्ग कृती (समान स्थान विरूद्ध IBC विरूद्ध सप्लायर)"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s11_sc05_dest_routing.mp4",
-        "posterSrc": "/images/scenes/c2_s11_sc05_poster.jpg",
         "fallbackAnimation": "pir_destination_routing_matrix",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -442,8 +440,7 @@
             "en": "Dispatch routing masterclass! Under Question Bank Q8, PIR requests travel to 3 completely different destinations: (1) Same Location inside AURIC plant, (2) Inter-Branch Transfer (IBC) to another Ather factory, or (3) Outside Supplier/Vendor. Match each destination to its legally mandated operational action!",
             "hi": "प्रेषण रूटिंग मास्टरक्लास! प्रश्न बैंक Q8 के तहत, पीआईआर अनुरोध 3 पूरी तरह से अलग गंतव्यों की यात्रा करते हैं: (1) औरिक संयंत्र के अंदर समान स्थान, (2) दूसरे एथर कारखाने में इंटर-ब्रांच ट्रांसफर (IBC), या (3) बाहरी आपूर्तिकर्ता/विक्रेता। प्रत्येक गंतव्य को उसकी कानूनी रूप से अनिवार्य परिचालन कार्रवाई से मिलाएं!",
             "mr": "डिस्पॅच मार्ग नियोजन मास्टरक्लास! प्रश्न बँक Q8 नुसार, PIR विनंत्या 3 वेगवेगळ्या ठिकाणी जातात: (1) औरिक प्लांटमधील समान जागा, (2) दुसऱ्या फॅक्टरीत इंटर-ब्रांच ट्रान्सफर (IBC), किंवा (3) बाहेरील सप्लायर/व्हेंडर. प्रत्येक ठिकाणाला त्याच्या कायदेशीर अनिवार्य कृतीशी जोडा!"
-          },
-          "audioSrc": "/audio/mascot/c2_s11_sc05_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "success",
@@ -451,8 +448,7 @@
             "en": "PERFECT ROUTING MATCH! Question Bank Q8: (1) Same Location: Pick, pack, and consume directly against Budget ID. (2) IBC (Another Plant): Raise Stock Transport Order (STO PO) alongside picking. (3) Vendor: Consume against Budget ID, generate manual Delivery Challan (DC), and dispatch! Zero compliance errors!",
             "hi": "सटीक रूटिंग मिलान! प्रश्न बैंक Q8: (1) समान स्थान: बजट आईडी के विरुद्ध सीधे उठाएं, पैक करें और उपभोग करें। (2) IBC (दूसरा संयंत्र): पिकिंग के साथ स्टॉक ट्रांसपोर्ट ऑर्डर (STO PO) बनाएं। (3) विक्रेता: बजट आईडी के विरुद्ध उपभोग करें, मैनुअल डिलीवरी चालान (DC) बनाएं, और भेजें!",
             "mr": "अचूक मार्ग जुळवणी! प्रश्न बँक Q8: (1) समान जागा: माल उचला, पॅक करा आणि बजेट आयडीवर नोंद करा. (2) IBC (दुसरा प्लांट): उचलण्यासोबतच STO PO तयार करा. (3) सप्लायर: बजेट आयडीवर नोंद, मॅन्युअल DC तयार करा आणि डिस्पॅच करा!"
-          },
-          "audioSrc": "/audio/mascot/c2_s11_sc05_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -460,8 +456,7 @@
             "en": "ROUTING MISMATCH! Inter-branch transfers strictly require an SAP STO Purchase Order, whereas outside vendor dispatches require a Delivery Challan. Review Question Bank Q8 and try again!",
             "hi": "रूटिंग बेमेल! इंटर-ब्रांच ट्रांसफर के लिए सख्ती से SAP STO खरीद आदेश की आवश्यकता होती है, जबकि बाहरी विक्रेता प्रेषण के लिए डिलीवरी चालान की आवश्यकता होती है। प्रश्न बैंक Q8 की समीक्षा करें और पुनः प्रयास करें!",
             "mr": "मार्गात चूक! दुसऱ्या शाखेत माल पाठवताना SAP STO PO लागतो, तर बाहेरील सप्लायरकडे पाठवताना डिलिव्हरी चलन (DC) लागते. प्रश्न संच Q8 पुन्हा तपासा!"
-          },
-          "audioSrc": "/audio/mascot/c2_s11_sc05_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -562,8 +557,6 @@
         "mr": "SAP बिलिंग दस्तऐवज प्रकार (ZSTO राज्यांतर्गत विरूद्ध ZGST आंतरराज्यीय)"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s11_sc06_billing_types.mp4",
-        "posterSrc": "/images/scenes/c2_s11_sc06_poster.jpg",
         "fallbackAnimation": "sap_billing_types_matrix",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -575,8 +568,7 @@
             "en": "DEO & Logistics Specialist Challenge! In SAP Billing transaction VF01, creating the wrong document type for an outbound STO truck can trigger immediate GST seizure fines exceeding ₹5,00,000! Under Question Bank Q31, match billing document types ZSTO and ZGST to their mandatory tax applications!",
             "hi": "DEO और लॉजिस्टिक्स विशेषज्ञ चुनौती! SAP बिलिंग लेनदेन VF01 में, आउटबाउंड STO ट्रक के लिए गलत दस्तावेज़ प्रकार बनाने से ₹5,00,000 से अधिक का तत्काल GST जब्ती जुर्माना लग सकता है! प्रश्न बैंक Q31 के तहत, बिलिंग दस्तावेज़ प्रकार ZSTO और ZGST को उनके अनिवार्य कर अनुप्रयोगों से मिलाएं!",
             "mr": "DEO आणि लॉजिस्टिक्स आव्हान! SAP बिलिंग ट्रान्झॅक्शन VF01 मध्ये चुकीचा दस्तऐवज प्रकार निवडल्यास GST कायद्यानुसार गाडी जप्त होऊन ₹5,00,000 चा दंड होऊ शकतो! प्रश्न बँक Q31 नुसार, ZSTO आणि ZGST या दोन बिलिंग प्रकारांचा अचूक वापर ओळखा!"
-          },
-          "audioSrc": "/audio/mascot/c2_s11_sc06_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "trophy",
@@ -584,8 +576,7 @@
             "en": "EXPERT TAX COMPLIANCE! Question Bank Q31: ZSTO is strictly for intra-state tax-free stock transfers inside the same state (e.g. Maharashtra to Maharashtra); ZGST is strictly for taxable inter-state transfers to another state requiring an official Government e-Invoice with QR code!",
             "hi": "विशेषज्ञ कर अनुपालन! प्रश्न बैंक Q31: ZSTO उसी राज्य के अंदर कर-मुक्त स्टॉक ट्रांसफर के लिए है; ZGST दूसरे राज्य में कर योग्य ट्रांसफर के लिए है जिसके लिए QR कोड के साथ एक आधिकारिक सरकारी ई-चालान की आवश्यकता होती है!",
             "mr": "अचूक कर नियम प्रावीण्य! प्रश्न बँक Q31: ZSTO हे एकाच राज्यातील (उदा. महाराष्ट्र ते महाराष्ट्र) करमुक्त साठ्यासाठी वापरले जाते; तर ZGST हे दुसऱ्या राज्यात (उदा. महाराष्ट्र ते कर्नाटक) पाठवताना सरकारी ई-इनव्हॉइससह वापरले जाते!"
-          },
-          "audioSrc": "/audio/mascot/c2_s11_sc06_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -593,8 +584,7 @@
             "en": "TAX REGULATORY BREACH! Generating ZSTO for inter-state shipments bypasses integrated IGST reporting, leading to immediate truck detention at state borders. ZGST must be used for inter-state transfers!",
             "hi": "कर विनियामक उल्लंघन! अंतर-राज्यीय लदान के लिए ZSTO उत्पन्न करना IGST रिपोर्टिंग को रोकता है, जिससे राज्य सीमाओं पर तत्काल ट्रक हिरासत में लिया जाता है। अंतर-राज्यीय हस्तांतरण के लिए ZGST का उपयोग किया जाना चाहिए!",
             "mr": "कर नियमांचे गंभीर उल्लंघन! दुसऱ्या राज्यात माल पाठवताना ZSTO वापरल्यास सीमेवर गाडी पकडली जाईल. आंतरराज्यीय वाहतुकीसाठी ZGST चाच वापर केला पाहिजे!"
-          },
-          "audioSrc": "/audio/mascot/c2_s11_sc06_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -670,8 +660,6 @@
         "mr": "JIRA PIR जीवनचक्र तिकीट बंद करणे आणि पुरावा जोडणे"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s11_sc07_ticket_closure.mp4",
-        "posterSrc": "/images/scenes/c2_s11_sc07_poster.jpg",
         "fallbackAnimation": "pir_ticket_closure_handover",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -683,8 +671,7 @@
             "en": "Final milestone of Module 11! The PIR shipment has been loaded into the transport carrier truck, inspected by Security, and departed through the plant gates. What final mandatory action closes the PIR lifecycle under Question Bank Q32?",
             "hi": "मॉड्यूल 11 का अंतिम मील का पत्थर! पीआईआर शिपमेंट को ट्रांसपोर्ट कैरियर ट्रक में लोड किया गया है, सुरक्षा द्वारा निरीक्षण किया गया है, और प्लांट के गेट से रवाना किया गया है। प्रश्न बैंक Q32 के तहत पीआईआर जीवनचक्र को कौन सी अंतिम अनिवार्य कार्रवाई बंद करती है?",
             "mr": "मॉड्यूल 11 चा अंतिम टप्पा! PIR चे साहित्य ट्रकमध्ये लोड झाले, सिक्युरिटीने तपासले आणि गाडी कंपनीच्या गेटबाहेर पडली. प्रश्न संच Q32 नुसार संपूर्ण PIR प्रक्रिया अधिकृतपणे बंद करण्यासाठी शेवटची कोणती कृती केली पाहिजे?"
-          },
-          "audioSrc": "/audio/mascot/c2_s11_sc07_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "trophy",
@@ -692,8 +679,7 @@
             "en": "EXEMPLARY AUDIT CLOSURE! Question Bank Q32: Update transit details in JIRA, attach the signed receipt (Proof of Handover / Lorry Receipt), and set ticket status to 'Closed'! Leaving tickets open creates phantom stock discrepancies and financial reconciliation backlogs. Module 11: Production Inspection & Quality PIR is 100% complete!",
             "hi": "अनुकरणीय ऑडिट समापन! प्रश्न बैंक Q32: JIRA में पारगमन विवरण अपडेट करें, हस्ताक्षरित रसीद (हैंडओवर का प्रमाण / लॉरी रसीद) संलग्न करें, और टिकट की स्थिति को 'Closed' पर सेट करें! टिकट खुले छोड़ने से इन्वेंट्री विसंगतियां पैदा होती हैं। मॉड्यूल 11 अब 100% पूरा हुआ!",
             "mr": "आदर्श ऑडिट पूर्तता! प्रश्न बँक Q32: JIRA मध्ये वाहतुकीचा तपशील अपडेट करणे, स्वाक्षरी केलेली पोचपावती (Proof of Handover / LR) जोडणे आणि तिकीट स्टेटस 'Closed' करणे! तिकीट उघडे राहिल्यास सिस्टीममध्ये स्टॉक तफावत राहते. मॉड्यूल 11 आता 100% पूर्ण झाले आहे!"
-          },
-          "audioSrc": "/audio/mascot/c2_s11_sc07_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -701,8 +687,7 @@
             "en": "AUDIT RISK! Never leave a JIRA ticket open after material departs, and never delete tickets! You MUST attach the signed Lorry Receipt / Proof of Handover and transition status to 'Closed'!",
             "hi": "ऑडिट जोखिम! सामग्री रवाना होने के बाद JIRA टिकट को कभी भी खुला न छोड़ें, और कभी भी टिकट न हटाएं! आपको हस्ताक्षरित लॉरी रसीद / हैंडओवर का प्रमाण संलग्न करना होगा और स्थिति को 'Closed' में बदलना होगा!",
             "mr": "ऑडिट धोका! माल गेल्यानंतर JIRA तिकीट उघडे ठेवू नका किंवा नष्ट करू नका! स्वाक्षरी केलेली पोचपावती जोडून तिकीट 'Closed' करणे सक्तीचे आहे!"
-          },
-          "audioSrc": "/audio/mascot/c2_s11_sc07_wrong.mp3"
+          }
         }
       },
       "interaction": {

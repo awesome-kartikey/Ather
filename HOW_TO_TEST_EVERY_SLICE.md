@@ -25,7 +25,7 @@
 
 ```bash
 # 1. Start local Vite development server
-npm run dev
+pnpm dev
 ```
 
 Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
@@ -62,7 +62,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 1 (Gate & Dock Operations) | **Step in Stage:** Scene 2 of 9
 - **Interaction Type:** `DRAG_DROP` | **XP Reward:** `+100 XP`
 - **SOP Mandate:** SOP XXXX_PRO_001 Clause 4.1.1 & 4.1.2
-- **Visual Canvas:** `gatehouse_cabin_desk` | **Video Source:** `/videos/scenes/scene_02_doc_cabin.mp4`
+- **Visual Canvas:** `gatehouse_cabin_desk` 
 
 #### 1. Scenario & Visual Context
 > "Sort each incoming document to the correct reception desk:"
@@ -87,7 +87,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 1 (Gate & Dock Operations) | **Step in Stage:** Scene 3 of 9
 - **Interaction Type:** `MCQ` | **XP Reward:** `+100 XP`
 - **SOP Mandate:** SOP XXXX_PRO_001 Clause 4.2.1 & 5.1
-- **Visual Canvas:** `sap_terminal_screen` | **Video Source:** `/videos/scenes/scene_03_sap_entry.mp4`
+- **Visual Canvas:** `sap_terminal_screen` 
 
 #### 1. Scenario & Visual Context
 > "The DEO enters the vendor invoice in YMM_GATE_ENTRY. What is the role of this transaction, and what happens if the ASN is wrong?"
@@ -108,7 +108,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 1 (Gate & Dock Operations) | **Step in Stage:** Scene 4 of 9
 - **Interaction Type:** `SEQUENCE` | **XP Reward:** `+100 XP`
 - **SOP Mandate:** SOP XXXX_PRO_001 Clause 4.1.1–4.1.4 & 4.2.2
-- **Visual Canvas:** `thermal_printer_tv` | **Video Source:** `/videos/scenes/scene_04_barcode_printer.mp4`
+- **Visual Canvas:** `thermal_printer_tv` 
 
 #### 1. Scenario & Visual Context
 > "Arrange the driver's gate entry journey in the correct chronological order:"
@@ -133,7 +133,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 1 (Gate & Dock Operations) | **Step in Stage:** Scene 5 of 9
 - **Interaction Type:** `HOTSPOT` | **XP Reward:** `+100 XP`
 - **SOP Mandate:** SOP XXXX_PRO_001 Clause 4.2.3
-- **Visual Canvas:** `dock_blueprint_map` | **Video Source:** `/videos/scenes/scene_05_dock_allocation.mp4`
+- **Visual Canvas:** `dock_blueprint_map` 
 
 #### 1. Scenario & Visual Context
 > "The DEO executes YMM_DOCK_ALLOCATE for vehicle assembly parts. Tap the correct allocated bay & dock on the AURIC plant layout:"
@@ -173,7 +173,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 1 (Gate & Dock Operations) | **Step in Stage:** Scene 7 of 9
 - **Interaction Type:** `STOP_GO` | **XP Reward:** `+100 XP`
 - **SOP Mandate:** SOP XXXX_PRO_001 Clause 4.1.6.2 & 4.2.4
-- **Visual Canvas:** `exit_gatehouse_barrier` | **Video Source:** `/videos/scenes/scene_07_gate_exit.mp4`
+- **Visual Canvas:** `exit_gatehouse_barrier` 
 
 #### 1. Scenario & Visual Context
 > "DECISION GATE: The driver wants to leave with 20 empty FLC bins without a manual Delivery Challan (DC):"
@@ -241,7 +241,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 2 (Stage 2: Receiving & IQC Clearance) | **Step in Stage:** Scene 1 of 9
 - **Interaction Type:** `MCQ` | **XP Reward:** `+100 XP`
 - **SOP Mandate:** SOP for IQC Issuance for AURIC Clause 4.1 & Clause 5.1
-- **Visual Canvas:** `grn_sticker_staging` | **Video Source:** `/videos/scenes/c1_s2_sc01_grn_sticker.mp4`
+- **Visual Canvas:** `grn_sticker_staging` 
 
 #### 1. Scenario & Visual Context
 > "Forklifts have offloaded the pallet into Inbound Staging. You inspect the freshly pasted GRN sticker and spot a large '?' printed on it. What does this symbol mean?"
@@ -283,7 +283,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 2 (Stage 2: Receiving & IQC Clearance) | **Step in Stage:** Scene 3 of 9
 - **Interaction Type:** `MCQ` | **XP Reward:** `+100 XP`
 - **SOP Mandate:** SOP for IQC Issuance for AURIC Clause 4.3 & Flowchart
-- **Visual Canvas:** `iqc_cones_staging` | **Video Source:** `/videos/scenes/c1_s2_sc03_iqc_cones.mp4`
+- **Visual Canvas:** `iqc_cones_staging` 
 
 #### 1. Scenario & Visual Context
 > "The 9 remaining FLC crates are waiting in staging during the 2-hour IQC testing window. What mandatory visual containment must be placed around them?"
@@ -304,7 +304,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 2 (Stage 2: Receiving & IQC Clearance) | **Step in Stage:** Scene 4 of 9
 - **Interaction Type:** `MCQ` | **XP Reward:** `+100 XP`
 - **SOP Mandate:** SOP for IQC Issuance for AURIC Clause 4.1 & Failure Mode 2
-- **Visual Canvas:** `iqc_handover_sla_clock` | **Video Source:** `/videos/scenes/c1_s2_sc04_handover_sla.mp4`
+- **Visual Canvas:** `iqc_handover_sla_clock` 
 
 #### 1. Scenario & Visual Context
 > "Following GRN label application, what is the strict SLA cutoff time for inbound manpower to hand over Non-DOL samples to the IQC testing room?"
@@ -325,7 +325,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 2 (Stage 2: Receiving & IQC Clearance) | **Step in Stage:** Scene 5 of 9
 - **Interaction Type:** `DRAG_DROP` | **XP Reward:** `+120 XP`
 - **SOP Mandate:** SOP for IQC Issuance for AURIC Clause 4.5 & Question Bank Q15
-- **Visual Canvas:** `iqc_disposition_workbench` | **Video Source:** `/videos/scenes/c1_s2_sc05_iqc_outcomes.mp4`
+- **Visual Canvas:** `iqc_disposition_workbench` 
 
 #### 1. Scenario & Visual Context
 > "Match the Incoming Quality Control (IQC) outcome to the mandatory physical warehouse action:"
@@ -441,7 +441,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 3 (Stage 3: Vehicle & Battery Parts Put-Away) | **Step in Stage:** Scene 1 of 6
 - **Interaction Type:** `MCQ` | **XP Reward:** `+100 XP`
 - **SOP Mandate:** SOP for Plant Operations Putaway for Vehicle and Battery Parts Clause 4.1
-- **Visual Canvas:** `hu_scan_initiation` | **Video Source:** `/videos/scenes/c1_s3_sc01_hu_scan.mp4`
+- **Visual Canvas:** `hu_scan_initiation` 
 
 #### 1. Scenario & Visual Context
 > "In GRN staging, what must the MHE operator scan first with the rugged handheld terminal to generate the Put-Away Warehouse Task?"
@@ -462,7 +462,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 3 (Stage 3: Vehicle & Battery Parts Put-Away) | **Step in Stage:** Scene 2 of 6
 - **Interaction Type:** `DRAG_DROP` | **XP Reward:** `+110 XP`
 - **SOP Mandate:** SOP for Plant Operations Putaway for Vehicle and Battery Parts Clause 4.2 & Question Bank Q24
-- **Visual Canvas:** `route_segregation_junction` | **Video Source:** `/videos/scenes/c1_s3_sc02_route_segregation.mp4`
+- **Visual Canvas:** `route_segregation_junction` 
 
 #### 1. Scenario & Visual Context
 > "Where must each incoming container type be routed at the warehouse junction?"
@@ -507,7 +507,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 3 (Stage 3: Vehicle & Battery Parts Put-Away) | **Step in Stage:** Scene 4 of 6
 - **Interaction Type:** `MCQ` | **XP Reward:** `+120 XP`
 - **SOP Mandate:** SOP for Plant Operations Putaway for Vehicle and Battery Parts Clause 5.1 & Failure Mode 2 & Question Bank Q22
-- **Visual Canvas:** `omitted_scan_hazard` | **Video Source:** `/videos/scenes/c1_s3_sc04_omitted_scan.mp4`
+- **Visual Canvas:** `omitted_scan_hazard` 
 
 #### 1. Scenario & Visual Context
 > "An MHE operator placed an FLC pallet into the rack but forgot to scan the destination location QR code before driving away. What happens?"
@@ -528,7 +528,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 3 (Stage 3: Vehicle & Battery Parts Put-Away) | **Step in Stage:** Scene 5 of 6
 - **Interaction Type:** `STOP_GO` | **XP Reward:** `+120 XP`
 - **SOP Mandate:** SOP for Plant Operations Putaway for Vehicle and Battery Parts Clause 4.4 & Question Bank Q23
-- **Visual Canvas:** `bin_slotting_violation` | **Video Source:** `/videos/scenes/c1_s3_sc05_bin_slotting.mp4`
+- **Visual Canvas:** `bin_slotting_violation` 
 
 #### 1. Scenario & Visual Context
 > "The SAP handheld displays assigned Bin A, but the operator places the pallet into Bin B to save time. What must be done?"
@@ -549,7 +549,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 3 (Stage 3: Vehicle & Battery Parts Put-Away) | **Step in Stage:** Scene 6 of 6
 - **Interaction Type:** `SEQUENCE` | **XP Reward:** `+130 XP`
 - **SOP Mandate:** SOP for Plant Operations Putaway Clause 4.1 & Question Bank Q21
-- **Visual Canvas:** `putaway_sequence_lifecycle` | **Video Source:** `/videos/scenes/c1_s3_sc06_putaway_sequence.mp4`
+- **Visual Canvas:** `putaway_sequence_lifecycle` 
 
 #### 1. Scenario & Visual Context
 > "Arrange the 5 mandatory put-away steps in the exact operational sequence mandated by SOP Clause 4.1 & Question Bank Q21:"
@@ -600,7 +600,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 4 (Stage 4: Specialized Battery Cell Put-Away) | **Step in Stage:** Scene 2 of 5
 - **Interaction Type:** `MCQ` | **XP Reward:** `+110 XP`
 - **SOP Mandate:** SOP for Plant Operations Putaway for Battery Cell Clause 4.2 & Question Bank Q20
-- **Visual Canvas:** `cleanroom_vault_env` | **Video Source:** `/videos/scenes/c1_s4_sc02_cleanroom_params.mp4`
+- **Visual Canvas:** `cleanroom_vault_env` 
 
 #### 1. Scenario & Visual Context
 > "Under Ather AURIC SOP Clause 4.2, what are the mandatory environmental thresholds for the Battery Cell Standard Room?"
@@ -621,7 +621,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 4 (Stage 4: Specialized Battery Cell Put-Away) | **Step in Stage:** Scene 3 of 5
 - **Interaction Type:** `MCQ` | **XP Reward:** `+115 XP`
 - **SOP Mandate:** SOP for Plant Operations Putaway for Battery Cell Clause 4.3 & SLA Standard
-- **Visual Canvas:** `battery_sla_countdown` | **Video Source:** `/videos/scenes/c1_s4_sc03_sla_countdown.mp4`
+- **Visual Canvas:** `battery_sla_countdown` 
 
 #### 1. Scenario & Visual Context
 > "Under Ather AURIC SOP Clause 4.3, what is the mandatory maximum SLA window for completing battery cell put-away from GRN staging into the standard room?"
@@ -642,7 +642,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 4 (Stage 4: Specialized Battery Cell Put-Away) | **Step in Stage:** Scene 4 of 5
 - **Interaction Type:** `MCQ` | **XP Reward:** `+120 XP`
 - **SOP Mandate:** SOP for Plant Operations Putaway for Battery Cell Clause 5.2 & Failure Mode Control
-- **Visual Canvas:** `environmental_breach_alarm` | **Video Source:** `/videos/scenes/c1_s4_sc04_environmental_breach.mp4`
+- **Visual Canvas:** `environmental_breach_alarm` 
 
 #### 1. Scenario & Visual Context
 > "While transporting lithium-ion cells into the Standard Room, the wall telemetry flashes an amber alert: Relative Humidity has spiked to 75% (Limit: 60%–65%). What is your mandatory SOP action?"
@@ -663,7 +663,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 4 (Stage 4: Specialized Battery Cell Put-Away) | **Step in Stage:** Scene 5 of 5
 - **Interaction Type:** `STOP_GO` | **XP Reward:** `+120 XP`
 - **SOP Mandate:** SOP for Plant Operations Putaway for Battery Cell Clause 4.4 & Quality Handling Standard
-- **Visual Canvas:** `battery_stacking_seal` | **Video Source:** `/videos/scenes/c1_s4_sc05_stacking_limit.mp4`
+- **Visual Canvas:** `battery_stacking_seal` 
 
 #### 1. Scenario & Visual Context
 > "An operator attempts to stack battery cell crates 3-high on a storage pallet despite a triggered red ShockWatch impact indicator on the carton. Allow or halt?"
@@ -689,7 +689,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 5 (Stage 5: Hazardous Chemicals & Thinners Put-Away) | **Step in Stage:** Scene 1 of 5
 - **Interaction Type:** `MCQ` | **XP Reward:** `+110 XP`
 - **SOP Mandate:** SOP for Plant Operations Putaway for Chemicals and Thinners Clause 4.1 & Question Bank
-- **Visual Canvas:** `chemical_bypass_routing` | **Video Source:** `/videos/scenes/c1_s5_sc01_facility_bypass.mp4`
+- **Visual Canvas:** `chemical_bypass_routing` 
 
 #### 1. Scenario & Visual Context
 > "A delivery truck arrives with drums of combustible thinners and industrial paints. The driver asks to unload at Dock 01 next to vehicle body panels. Where does Ather SOP Clause 4.1 mandate this vehicle proceed?"
@@ -710,7 +710,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 5 (Stage 5: Hazardous Chemicals & Thinners Put-Away) | **Step in Stage:** Scene 2 of 5
 - **Interaction Type:** `SPOT_ERROR` | **XP Reward:** `+115 XP`
 - **SOP Mandate:** SOP for Plant Operations Putaway for Chemicals and Thinners Clause 4.2 & Safety Guidelines
-- **Visual Canvas:** `chemical_unloading_spill` | **Video Source:** `/videos/scenes/c1_s5_sc02_ppe_spill_berm.mp4`
+- **Visual Canvas:** `chemical_unloading_spill` 
 
 #### 1. Scenario & Visual Context
 > "Spot the Safety Violation: An operator is unloading 200L flammable thinner drums at Chemical Annex C-04. Which condition violates Ather safety protocols?"
@@ -730,7 +730,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 5 (Stage 5: Hazardous Chemicals & Thinners Put-Away) | **Step in Stage:** Scene 3 of 5
 - **Interaction Type:** `DRAG_DROP` | **XP Reward:** `+120 XP`
 - **SOP Mandate:** SOP for Plant Operations Putaway for Chemicals and Thinners Clause 4.3 & 2-Hour SLA Standard
-- **Visual Canvas:** `chemical_segregation_matrix` | **Video Source:** `/videos/scenes/c1_s5_sc03_segregation_sla.mp4`
+- **Visual Canvas:** `chemical_segregation_matrix` 
 
 #### 1. Scenario & Visual Context
 > "Segregate incoming chemicals into their designated storage bays according to Ather SOP Clause 4.3 and the 2-Hour SLA limit:"
@@ -754,7 +754,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 5 (Stage 5: Hazardous Chemicals & Thinners Put-Away) | **Step in Stage:** Scene 4 of 5
 - **Interaction Type:** `MCQ` | **XP Reward:** `+110 XP`
 - **SOP Mandate:** SOP for Plant Operations Putaway for Chemicals and Thinners Clause 4.4 & Question Bank Q25
-- **Visual Canvas:** `chemical_deo_posting` | **Video Source:** `/videos/scenes/c1_s5_sc04_deo_grn_posting.mp4`
+- **Visual Canvas:** `chemical_deo_posting` 
 
 #### 1. Scenario & Visual Context
 > "After a chemical delivery truck is unloaded and physically verified at Annex C-04, who is responsible for creating the Goods Receipt Note (GRN) in SAP?"
@@ -775,7 +775,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 5 (Stage 5: Hazardous Chemicals & Thinners Put-Away) | **Step in Stage:** Scene 5 of 5
 - **Interaction Type:** `STOP_GO` | **XP Reward:** `+125 XP`
 - **SOP Mandate:** SOP for Plant Operations Putaway for Chemicals and Thinners Clause 4.5 & Static Electricity Protocol
-- **Visual Canvas:** `static_bonding_clamp` | **Video Source:** `/videos/scenes/c1_s5_sc05_grounding_clamp.mp4`
+- **Visual Canvas:** `static_bonding_clamp` 
 
 #### 1. Scenario & Visual Context
 > "An associate prepares to loosen a 200L solvent drum bung for QC sampling without attaching the static bonding grounding clamp. Allow or halt?"
@@ -801,7 +801,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 6 (Stage 6: Supermarket C-Class Parts Put-Away (MH1)) | **Step in Stage:** Scene 1 of 6
 - **Interaction Type:** `STOP_GO` | **XP Reward:** `+110 XP`
 - **SOP Mandate:** SOP for Supermarket Put-Away (SM) Clause 4.1 & Question Bank Q26
-- **Visual Canvas:** `supermarket_mh1_seal` | **Video Source:** `/videos/scenes/c1_s6_sc01_qc_pass_seal.mp4`
+- **Visual Canvas:** `supermarket_mh1_seal` 
 
 #### 1. Scenario & Visual Context
 > "A Non-DOL lot of small fasteners arrives at the MH1 Supermarket desk. The GRN sticker has no green 'QC Pass' seal attached. Allow or halt put-away into supermarket racks?"
@@ -822,7 +822,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 6 (Stage 6: Supermarket C-Class Parts Put-Away (MH1)) | **Step in Stage:** Scene 2 of 6
 - **Interaction Type:** `MCQ` | **XP Reward:** `+115 XP`
 - **SOP Mandate:** SOP for Supermarket Put-Away (SM) Clause 4.2 & Question Bank Q27
-- **Visual Canvas:** `supermarket_count_audit` | **Video Source:** `/videos/scenes/c1_s6_sc02_count_discrepancy.mp4`
+- **Visual Canvas:** `supermarket_count_audit` 
 
 #### 1. Scenario & Visual Context
 > "The SAP LX02 dump indicates 100 pieces for an inward C-class lot, but physical sampling at MH1 reveals only 92 pieces. What must the operator do?"
@@ -888,7 +888,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 6 (Stage 6: Supermarket C-Class Parts Put-Away (MH1)) | **Step in Stage:** Scene 5 of 6
 - **Interaction Type:** `STOP_GO` | **XP Reward:** `+120 XP`
 - **SOP Mandate:** SOP for Supermarket Put-Away (SM) Clause 4.2 & Discrepancy Integrity Standard
-- **Visual Canvas:** `line_pressure_discrepancy` | **Video Source:** `/videos/scenes/c1_s6_sc05_line_pressure.mp4`
+- **Visual Canvas:** `line_pressure_discrepancy` 
 
 #### 1. Scenario & Visual Context
 > "MH1 count is 92 pcs (SAP expected: 100 pcs). Under urgent line-stoppage pressure, the line feeder demands you sign off 100 pcs immediately. Allow or Halt?"
@@ -909,7 +909,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 6 (Stage 6: Supermarket C-Class Parts Put-Away (MH1)) | **Step in Stage:** Scene 6 of 6
 - **Interaction Type:** `MCQ` | **XP Reward:** `+110 XP`
 - **SOP Mandate:** SOP for Supermarket Put-Away (SM) Clause 1.1 & Question Bank Q28
-- **Visual Canvas:** `supermarket_classification_bins` | **Video Source:** `/videos/scenes/c1_s6_sc06_classification.mp4`
+- **Visual Canvas:** `supermarket_classification_bins` 
 
 #### 1. Scenario & Visual Context
 > "Which categories of parts are stored in Supermarket racks at the Ather AURIC Plant?"
@@ -1181,7 +1181,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 8 (Vehicle Line Issuance & Order Picking) | **Step in Stage:** Scene 5 of 9
 - **Interaction Type:** `STOP_GO` | **XP Reward:** `+120 XP`
 - **SOP Mandate:** SOP for Line Issuance Vehicle Plant Clause 4.1 & Question Bank Q29
-- **Visual Canvas:** `overpicking_prohibition_gate` | **Video Source:** `/videos/scenes/c2_s8_sc05_overpicking.mp4`
+- **Visual Canvas:** `overpicking_prohibition_gate` 
 
 #### 1. Scenario & Visual Context
 > "The HHT screen says 'Pick 12 pieces'. You see 15 on the rack bin. Take 15 to save a return trip?"
@@ -1202,7 +1202,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 8 (Vehicle Line Issuance & Order Picking) | **Step in Stage:** Scene 6 of 9
 - **Interaction Type:** `MCQ` | **XP Reward:** `+115 XP`
 - **SOP Mandate:** SOP for Line Issuance Vehicle Plant Clause 4.1 & Question Bank Q22
-- **Visual Canvas:** `feeder_anti_duplication` | **Video Source:** `/videos/scenes/c2_s8_sc06_feeder_ownership.mp4`
+- **Visual Canvas:** `feeder_anti_duplication` 
 
 #### 1. Scenario & Visual Context
 > "Under Ather Plant SOP Clause 4.1 & Question Bank Q22, can two line feeders carry the same part to the assembly line?"
@@ -1223,7 +1223,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 8 (Vehicle Line Issuance & Order Picking) | **Step in Stage:** Scene 7 of 9
 - **Interaction Type:** `MCQ` | **XP Reward:** `+110 XP`
 - **SOP Mandate:** SOP for Line Issuance Vehicle Plant Clause 4.1 & Question Bank Q21
-- **Visual Canvas:** `handheld_blind_quantity_unlock` | **Video Source:** `/videos/scenes/c2_s8_sc07_blind_quantity.mp4`
+- **Visual Canvas:** `handheld_blind_quantity_unlock` 
 
 #### 1. Scenario & Visual Context
 > "You cannot see the picking quantity on the handheld terminal screen. Why? (Question Bank Q21)"
@@ -1244,7 +1244,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 8 (Vehicle Line Issuance & Order Picking) | **Step in Stage:** Scene 8 of 9
 - **Interaction Type:** `MCQ` | **XP Reward:** `+120 XP`
 - **SOP Mandate:** SOP for Line Issuance Vehicle Plant Failure Mode 5.2 & Question Bank Q23
-- **Visual Canvas:** `wrong_supermarket_lane_violation` | **Video Source:** `/videos/scenes/c2_s8_sc08_wrong_lane.mp4`
+- **Visual Canvas:** `wrong_supermarket_lane_violation` 
 
 #### 1. Scenario & Visual Context
 > "You pick from the wrong supermarket lane without scanning the lane QR code. What happens? (Question Bank Q23)"
@@ -1265,7 +1265,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 8 (Vehicle Line Issuance & Order Picking) | **Step in Stage:** Scene 9 of 9
 - **Interaction Type:** `SEQUENCE` | **XP Reward:** `+135 XP`
 - **SOP Mandate:** SOP for Line Issuance Vehicle Plant Clause 4.1 & Question Bank Q20
-- **Visual Canvas:** `five_step_picking_lifecycle` | **Video Source:** `/videos/scenes/c2_s8_sc09_lifecycle.mp4`
+- **Visual Canvas:** `five_step_picking_lifecycle` 
 
 #### 1. Scenario & Visual Context
 > "Arrange the 5 feeder steps in the strictly mandated order under SOP Clause 4.1 & Question Bank Q20:"
@@ -1382,7 +1382,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 9 (Paint Shop Line Issuance & Decanting) | **Step in Stage:** Scene 5 of 10
 - **Interaction Type:** `MCQ` | **XP Reward:** `+115 XP`
 - **SOP Mandate:** SOP for Decanting Processes Paint-Shop Clause 4.1 & Question Bank Q10
-- **Visual Canvas:** `decanting_definition_hu` | **Video Source:** `/videos/scenes/c2_s9_sc05_decanting_definition.mp4`
+- **Visual Canvas:** `decanting_definition_hu` 
 
 #### 1. Scenario & Visual Context
 > "Under SOP 03_C2_S2 & Question Bank Q10, what is 'Decanting'?"
@@ -1403,7 +1403,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 9 (Paint Shop Line Issuance & Decanting) | **Step in Stage:** Scene 6 of 10
 - **Interaction Type:** `COUNT_STEPPER` | **XP Reward:** `+115 XP`
 - **SOP Mandate:** SOP for Decanting Processes Paint-Shop Clause 4.2 & Question Bank Q12
-- **Visual Canvas:** `flc_trolley_batch_calculation` | **Video Source:** `/videos/scenes/c2_s9_sc06_batch_calc.mp4`
+- **Visual Canvas:** `flc_trolley_batch_calculation` 
 
 #### 1. Scenario & Visual Context
 > "A brake FLC contains 90 brakes. The trolley holds 30. How many full trolleys from one FLC? (Question Bank Q12)"
@@ -1424,7 +1424,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 9 (Paint Shop Line Issuance & Decanting) | **Step in Stage:** Scene 7 of 10
 - **Interaction Type:** `MCQ` | **XP Reward:** `+120 XP`
 - **SOP Mandate:** SOP for Line Issuance Paint-Shop Clause 4.2 & Question Bank Q13
-- **Visual Canvas:** `variant_wave_task_splitting` | **Video Source:** `/videos/scenes/c2_s9_sc07_wave_splitting.mp4`
+- **Visual Canvas:** `variant_wave_task_splitting` 
 
 #### 1. Scenario & Visual Context
 > "The production plan is 20 black + 10 red vehicles. How many WH tasks are generated in the WH order? (Question Bank Q13)"
@@ -1445,7 +1445,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 9 (Paint Shop Line Issuance & Decanting) | **Step in Stage:** Scene 8 of 10
 - **Interaction Type:** `MCQ` | **XP Reward:** `+110 XP`
 - **SOP Mandate:** SOP for Line Issuance Paint-Shop Clause 4.1 & Question Bank Q19
-- **Visual Canvas:** `supermarket_rack_replenishment_zl` | **Video Source:** `/videos/scenes/c2_s9_sc08_rack_ownership.mp4`
+- **Visual Canvas:** `supermarket_rack_replenishment_zl` 
 
 #### 1. Scenario & Visual Context
 > "Who keeps the paint-shop supermarket rack for body parts filled? (Question Bank Q19)"
@@ -1466,7 +1466,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 9 (Paint Shop Line Issuance & Decanting) | **Step in Stage:** Scene 9 of 10
 - **Interaction Type:** `MCQ` | **XP Reward:** `+115 XP`
 - **SOP Mandate:** SOP for Line Issuance Paint-Shop Clause 4.3 & Question Bank Q25
-- **Visual Canvas:** `empty_trolley_reverse_loop` | **Video Source:** `/videos/scenes/c2_s9_sc09_empty_trolley.mp4`
+- **Visual Canvas:** `empty_trolley_reverse_loop` 
 
 #### 1. Scenario & Visual Context
 > "After feeding a body-part trolley in the paint shop, where does the empty trolley go? (Question Bank Q25)"
@@ -1487,7 +1487,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 9 (Paint Shop Line Issuance & Decanting) | **Step in Stage:** Scene 10 of 10
 - **Interaction Type:** `MCQ` | **XP Reward:** `+130 XP`
 - **SOP Mandate:** SOP for Line Issuance Paint-Shop Clause 4.2 & Question Bank Q27
-- **Visual Canvas:** `whole_trolley_movement_gate` | **Video Source:** `/videos/scenes/c2_s9_sc10_whole_trolley.mp4`
+- **Visual Canvas:** `whole_trolley_movement_gate` 
 
 #### 1. Scenario & Visual Context
 > "A paint-shop WH task asks for a body part. What do you move to the paint-work line? (Question Bank Q27)"
@@ -1599,7 +1599,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 10 (Indirect Material Handling (CM01 to MN01)) | **Step in Stage:** Scene 5 of 6
 - **Interaction Type:** `STOP_GO` | **XP Reward:** `+125 XP`
 - **SOP Mandate:** SOP for Indirect Material Handling Auric Clause 4.1 & Question Bank Q29
-- **Visual Canvas:** `ppe_jira_ticket_mandate` | **Video Source:** `/videos/scenes/c2_s10_sc05_ppe_ticket.mp4`
+- **Visual Canvas:** `ppe_jira_ticket_mandate` 
 
 #### 1. Scenario & Visual Context
 > "An associate requests safety shoes and a jacket presenting only an informal handwritten note without a JIRA ticket. Allow or halt? (Question Bank Q29)"
@@ -1620,7 +1620,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 10 (Indirect Material Handling (CM01 to MN01)) | **Step in Stage:** Scene 6 of 6
 - **Interaction Type:** `MCQ` | **XP Reward:** `+120 XP`
 - **SOP Mandate:** SOP for Indirect Material Handling Auric Clause 4.5 & Procurement Governance
-- **Visual Canvas:** `reorder_point_pr_generation` | **Video Source:** `/videos/scenes/c2_s10_sc06_rop_pr.mp4`
+- **Visual Canvas:** `reorder_point_pr_generation` 
 
 #### 1. Scenario & Visual Context
 > "When indirect consumables drop below Reorder Point (ROP) in CM01, what is the mandatory SAP workflow to replenish stock?"
@@ -1732,7 +1732,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 11 (Production Inspection & Quality PIR) | **Step in Stage:** Scene 5 of 7
 - **Interaction Type:** `DRAG_DROP` | **XP Reward:** `+135 XP`
 - **SOP Mandate:** SOP for PIR AURIC Clause 4.3 & Question Bank Q8
-- **Visual Canvas:** `pir_destination_routing_matrix` | **Video Source:** `/videos/scenes/c2_s11_sc05_dest_routing.mp4`
+- **Visual Canvas:** `pir_destination_routing_matrix` 
 
 #### 1. Scenario & Visual Context
 > "Match each PIR destination to its mandatory operational action under Question Bank Q8:"
@@ -1755,7 +1755,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 11 (Production Inspection & Quality PIR) | **Step in Stage:** Scene 6 of 7
 - **Interaction Type:** `MCQ` | **XP Reward:** `+140 XP`
 - **SOP Mandate:** SOP for PIR AURIC Clause 4.3 & Question Bank Q31
-- **Visual Canvas:** `sap_billing_types_matrix` | **Video Source:** `/videos/scenes/c2_s11_sc06_billing_types.mp4`
+- **Visual Canvas:** `sap_billing_types_matrix` 
 
 #### 1. Scenario & Visual Context
 > "In SAP billing transaction VF01, how are document types ZSTO and ZGST applied under Question Bank Q31?"
@@ -1776,7 +1776,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 11 (Production Inspection & Quality PIR) | **Step in Stage:** Scene 7 of 7
 - **Interaction Type:** `MCQ` | **XP Reward:** `+140 XP`
 - **SOP Mandate:** SOP for PIR AURIC Clause 4.4 & Question Bank Q32
-- **Visual Canvas:** `pir_ticket_closure_handover` | **Video Source:** `/videos/scenes/c2_s11_sc07_ticket_closure.mp4`
+- **Visual Canvas:** `pir_ticket_closure_handover` 
 
 #### 1. Scenario & Visual Context
 > "The PIR parts have been dispatched. What officially closes the PIR process? (Question Bank Q32)"
@@ -1888,7 +1888,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 12 (Reverse Logistics, Scrap & Empty Bin Loading) | **Step in Stage:** Scene 5 of 12
 - **Interaction Type:** `STOP_GO` | **XP Reward:** `+125 XP`
 - **SOP Mandate:** SOP-EMPTYBIN COLLECTION AND LOADING Clause 4.1 & Question Bank Q26
-- **Visual Canvas:** `line_side_gangway_choke` | **Video Source:** `/videos/scenes/c2_s12_sc05_gangway_choke.mp4`
+- **Visual Canvas:** `line_side_gangway_choke` 
 
 #### 1. Scenario & Visual Context
 > "Empty trolleys and bins are left abandoned at the line side walkway. Allow or halt? (Question Bank Q26)"
@@ -1909,7 +1909,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 12 (Reverse Logistics, Scrap & Empty Bin Loading) | **Step in Stage:** Scene 6 of 12
 - **Interaction Type:** `MCQ` | **XP Reward:** `+135 XP`
 - **SOP Mandate:** SOP for NG - RTV Clause 4.3 & Question Bank Q34
-- **Visual Canvas:** `supplier_sla_courier_debit` | **Video Source:** `/videos/scenes/c2_s12_sc06_courier_debit.mp4`
+- **Visual Canvas:** `supplier_sla_courier_debit` 
 
 #### 1. Scenario & Visual Context
 > "The supplier does not arrange pick-up of rejected RTV parts within 3 working days. What does the warehouse do? (Question Bank Q34)"
@@ -1930,7 +1930,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 12 (Reverse Logistics, Scrap & Empty Bin Loading) | **Step in Stage:** Scene 7 of 12
 - **Interaction Type:** `SEQUENCE` | **XP Reward:** `+140 XP`
 - **SOP Mandate:** SOP for NG - RTV Clause 4.5 & Question Bank Q36
-- **Visual Canvas:** `use_as_is_sequence_lifecycle` | **Video Source:** `/videos/scenes/c2_s12_sc07_use_as_is.mp4`
+- **Visual Canvas:** `use_as_is_sequence_lifecycle` 
 
 #### 1. Scenario & Visual Context
 > "Put the 4 steps of the “Use As Is” deviation lifecycle into the exact SOP sequence (Question Bank Q36):"
@@ -1954,7 +1954,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 12 (Reverse Logistics, Scrap & Empty Bin Loading) | **Step in Stage:** Scene 8 of 12
 - **Interaction Type:** `STOP_GO` | **XP Reward:** `+135 XP`
 - **SOP Mandate:** SOP for NG - RTV Clause 4.6 & Question Bank Q37
-- **Visual Canvas:** `reworked_parts_tightened_inspection` | **Video Source:** `/videos/scenes/c2_s12_sc08_rework_gate.mp4`
+- **Visual Canvas:** `reworked_parts_tightened_inspection` 
 
 #### 1. Scenario & Visual Context
 > "Reworked parts come back from repair. Can they go straight to the assembly line? (Question Bank Q37)"
@@ -1975,7 +1975,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 12 (Reverse Logistics, Scrap & Empty Bin Loading) | **Step in Stage:** Scene 9 of 12
 - **Interaction Type:** `MCQ` | **XP Reward:** `+135 XP`
 - **SOP Mandate:** SOP for NG - Scrap Clause 4.1 & Question Bank Q38
-- **Visual Canvas:** `scrap_approval_signoff_gate` | **Video Source:** `/videos/scenes/c2_s12_sc09_scrap_signoff.mp4`
+- **Visual Canvas:** `scrap_approval_signoff_gate` 
 
 #### 1. Scenario & Visual Context
 > "What is mandatory before non-supplier rejected parts are scrapped? (Question Bank Q38)"
@@ -1996,7 +1996,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 12 (Reverse Logistics, Scrap & Empty Bin Loading) | **Step in Stage:** Scene 10 of 12
 - **Interaction Type:** `DRAG_DROP` | **XP Reward:** `+130 XP`
 - **SOP Mandate:** SOP-EMPTYBIN COLLECTION AND LOADING Clause 4.2 & Question Bank Q40
-- **Visual Canvas:** `empty_bin_truck_dashboard` | **Video Source:** `/videos/scenes/c2_s12_sc10_bin_dashboard.mp4`
+- **Visual Canvas:** `empty_bin_truck_dashboard` 
 
 #### 1. Scenario & Visual Context
 > "How do you sort empty bins in the segregation area, and route them to docked trucks? (Question Bank Q40)"
@@ -2018,7 +2018,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 12 (Reverse Logistics, Scrap & Empty Bin Loading) | **Step in Stage:** Scene 11 of 12
 - **Interaction Type:** `MCQ` | **XP Reward:** `+140 XP`
 - **SOP Mandate:** SOP for Plant Quality Containment Clause 5.1 & Question Bank Q41
-- **Visual Canvas:** `recalled_material_reinspection` | **Video Source:** `/videos/scenes/c2_s12_sc11_recalled_lot.mp4`
+- **Visual Canvas:** `recalled_material_reinspection` 
 
 #### 1. Scenario & Visual Context
 > "A recalled lot of parts fails quality re-inspection. What happens under Ather SOP? (Question Bank Q41)"
@@ -2039,7 +2039,7 @@ Open `http://localhost:5173` (or the active terminal port) in Chrome or Edge.
 - **Module:** 12 (Reverse Logistics, Scrap & Empty Bin Loading) | **Step in Stage:** Scene 12 of 12
 - **Interaction Type:** `MCQ` | **XP Reward:** `+200 XP`
 - **SOP Mandate:** Ather AURIC Plant M002 Master Warehouse Operating Doctrine & Zero-Defect Quality Policy
-- **Visual Canvas:** `grandmaster_celebration_fireworks` | **Video Source:** `/videos/scenes/c2_s12_sc12_grandmaster.mp4`
+- **Visual Canvas:** `grandmaster_celebration_fireworks` 
 
 #### 1. Scenario & Visual Context
 > "What core operational principle unites all 12 modules of the Ather AURIC Plant M002 Warehouse System?"

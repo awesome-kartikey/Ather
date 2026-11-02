@@ -10,26 +10,37 @@ interface Props {
   profile: UserProfile;
   onBack: () => void;
   onNavigateHome: () => void;
+  sopDoc?: string;
 }
 
 export const CertificateView: React.FC<Props> = ({
   summary,
-  lang: _lang,
+  lang,
   profile,
   onBack,
-  onNavigateHome
+  onNavigateHome,
+  sopDoc
 }) => {
-  const currentDate = new Date().toLocaleDateString('en-IN', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric'
-  });
+  const currentDate = React.useMemo(() => {
+    return new Date().toLocaleDateString('en-IN', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    });
+  }, []);
 
-  const certNumber = `ATH-AURIC-M002-${profile.operatorId || 'OP'}-${Math.floor(1000 + Math.random() * 9000)}`;
+  const certNumber = React.useMemo(() => {
+    const idSeed = profile.operatorId ? profile.operatorId.replace(/[^0-9]/g, '') : '104';
+    return `ATH-AURIC-M002-${profile.operatorId || 'OP'}-${idSeed || '7429'}`;
+  }, [profile.operatorId]);
 
   const handlePrint = () => {
     window.print();
   };
+
+  const isGrandmaster = summary.packId === 'ather-all-modules';
+  const packTitleText = summary.packTitle?.[lang] || summary.packTitle?.en || 'Warehouse Floor Operations Certification';
+  const resolvedSop = sopDoc || (isGrandmaster ? 'AURIC-PRO-ALL-012 (Master Operations Suite)' : 'AURIC-PRO-001 (Floor Standard Operating Procedure)');
 
   return (
     <div className="min-h-screen bg-slate-100/90 text-slate-900 flex flex-col font-sans select-none print:bg-white print:p-0">
@@ -65,6 +76,7 @@ export const CertificateView: React.FC<Props> = ({
       {/* Main Certificate Canvas */}
       <main className="flex-1 flex items-center justify-center p-4 sm:p-8 print:p-0">
         <motion.div
+          id="certificate-print-area"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35 }}
@@ -116,7 +128,7 @@ export const CertificateView: React.FC<Props> = ({
               Ather Floor Operator SOP Certification
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 font-medium">
-              This officially certifies that the operator named below has successfully undergone interactive training and rigorous digital assessment for standard operating procedure
+              This officially certifies that the operator named below has successfully undergone interactive training and rigorous digital assessment for standard operating procedures at Ather Energy AURIC Mega-Plant.
             </p>
           </div>
 
@@ -131,7 +143,7 @@ export const CertificateView: React.FC<Props> = ({
             <div className="flex items-center justify-center gap-4 mt-2 text-xs font-mono text-slate-600">
               <span className="flex items-center gap-1">
                 <UserCheck className="w-3.5 h-3.5 text-blue-600" />
-                Emp ID: <strong className="text-slate-800">{profile.operatorId || 'AUR-9901'}</strong>
+                Emp ID: <strong className="text-slate-800">{profile.operatorId || 'AUR-104'}</strong>
               </span>
               <span>·</span>
               <span className="flex items-center gap-1">
@@ -149,10 +161,10 @@ export const CertificateView: React.FC<Props> = ({
                   Certified Operational Module
                 </span>
                 <span className="text-xs font-bold text-slate-900 block mt-0.5">
-                  Module 1: Inbound Receiving & Put-Away
+                  {packTitleText}
                 </span>
                 <span className="text-[11px] text-slate-600">
-                  Stage 1: Gate & Dock Operations
+                  {isGrandmaster ? '12 Modules · 91 Operational Slices' : 'Standard Factory Simulation DOJO'}
                 </span>
               </div>
 
@@ -161,10 +173,10 @@ export const CertificateView: React.FC<Props> = ({
                   Governing SOP Standard
                 </span>
                 <span className="text-xs font-bold text-blue-700 font-mono block mt-0.5">
-                  XXXX_PRO_001
+                  {resolvedSop}
                 </span>
                 <span className="text-[11px] text-slate-600">
-                  AURIC Gate Entry, Barcoding & Dock Safety
+                  Ather AURIC Standard Operating Procedures
                 </span>
               </div>
 

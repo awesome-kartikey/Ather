@@ -17,6 +17,7 @@
 
   --font-heading: 'Barlow Condensed', 'Noto Sans Devanagari', sans-serif;
   --font-body: 'Noto Sans', 'Noto Sans Devanagari', sans-serif;
+  --font-sans: 'Noto Sans', 'Noto Sans Devanagari', sans-serif;
 }
 
 :root {
@@ -77,57 +78,146 @@ body {
   min-height: 100vh;
 }
 
-h1, h2, h3, .font-heading {
+h1,
+h2,
+h3,
+.font-heading {
   font-family: var(--font-heading);
   letter-spacing: 0.02em;
 }
 
 /* SVG Demo Scene Colors and Keyframes */
-.fi { fill: var(--ink); }
-.fc { fill: var(--card); }
-.fw { fill: var(--wood); }
-.fo { fill: var(--ok); }
-.fn { fill: var(--no); }
-.fa { fill: var(--act); }
-.si { stroke: var(--ink); stroke-width: 3; }
+.fi {
+  fill: var(--ink);
+}
+
+.fc {
+  fill: var(--card);
+}
+
+.fw {
+  fill: var(--wood);
+}
+
+.fo {
+  fill: var(--ok);
+}
+
+.fn {
+  fill: var(--no);
+}
+
+.fa {
+  fill: var(--act);
+}
+
+.si {
+  stroke: var(--ink);
+  stroke-width: 3;
+}
 
 @keyframes sIn {
-  from { transform: translateX(-420px); }
-  to { transform: none; }
+  from {
+    transform: translateX(-420px);
+  }
+
+  to {
+    transform: none;
+  }
 }
 
 @keyframes dr {
-  from { transform: translateY(-120px); opacity: 0; }
-  to { transform: none; opacity: 1; }
+  from {
+    transform: translateY(-120px);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
 }
 
 @keyframes pp {
-  from { opacity: 0; transform: scale(0.4); }
-  to { opacity: 1; transform: none; }
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @keyframes go {
-  from { transform: none; }
-  to { transform: var(--m); }
+  from {
+    transform: none;
+  }
+
+  to {
+    transform: var(--m);
+  }
 }
 
 @keyframes fl {
-  0%, 100% { opacity: 0.25; }
-  50% { opacity: 1; }
+
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
-.sIn { animation: sIn 1.6s ease-out both; }
-.dr { animation: dr 0.8s ease-out both; }
-.pp { animation: pp 0.5s ease-out both; transform-box: fill-box; transform-origin: center; }
-.mv { animation: go 2s ease-in-out both; }
-.fl { animation: fl 1s infinite; }
-.d1 { animation-delay: 0.6s; }
-.d2 { animation-delay: 1.4s; }
-.d3 { animation-delay: 2.2s; }
-.d4 { animation-delay: 3.0s; }
+.sIn {
+  animation: sIn 1.6s ease-out both;
+}
+
+.dr {
+  animation: dr 0.8s ease-out both;
+}
+
+.pp {
+  animation: pp 0.5s ease-out both;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.mv {
+  animation: go 2s ease-in-out both;
+}
+
+.fl {
+  animation: fl 1s infinite;
+}
+
+.d1 {
+  animation-delay: 0.6s;
+}
+
+.d2 {
+  animation-delay: 1.4s;
+}
+
+.d3 {
+  animation-delay: 2.2s;
+}
+
+.d4 {
+  animation-delay: 3.0s;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .demo *, .sIn, .dr, .pp, .mv, .fl {
+
+  .demo *,
+  .sIn,
+  .dr,
+  .pp,
+  .mv,
+  .fl {
     animation-duration: 0.01s !important;
     animation-delay: 0s !important;
   }
@@ -135,31 +225,52 @@ h1, h2, h3, .font-heading {
 
 /* Barcode visual generator */
 .barcode-pattern {
-  background: repeating-linear-gradient(
-    90deg,
-    var(--ink) 0 3px,
-    transparent 3px 6px,
-    var(--ink) 6px 7px,
-    transparent 7px 11px
-  );
+  background: repeating-linear-gradient(90deg,
+      var(--ink) 0 3px,
+      transparent 3px 6px,
+      var(--ink) 6px 7px,
+      transparent 7px 11px);
 }
 
-/* Printable certificate styling */
+/* Printable certificate styling: A4 Landscape with Zero Margin Clipping */
+@page {
+  size: A4 landscape;
+  margin: 6mm;
+}
+
 @media print {
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
   body * {
     visibility: hidden;
   }
-  #certificate-print-area, #certificate-print-area * {
+
+  #certificate-print-area,
+  #certificate-print-area * {
     visibility: visible;
   }
+
   #certificate-print-area {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    margin: 0;
-    padding: 20px;
-    background: #fff !important;
-    color: #14232b !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 16px !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+    border: 2px solid #334155 !important;
+    border-radius: 0 !important;
   }
 }

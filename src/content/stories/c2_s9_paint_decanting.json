@@ -53,8 +53,8 @@
           "hi": "ACED धातु पुर्जे प्रेषण: 7-9 धातु के हिस्से विशेष ट्रॉली प्रारूप में संग्रहीत और 28 अद्वितीय फीडरों में वितरित किए गए",
           "mr": "ACED धातू पार्ट वाटप: 7-9 धातूचे पार्ट खास ट्रॉली स्वरूपात साठवून 28 स्वतंत्र लाईन फीडरमध्ये वाटले जातात"
         },
-        "videoSrc": "/Assets/8%20Sequential%20Scenes/6%20Bulk%20Decanting%20(FLC%20to%20Assembly%20Trolley)/scene_06_bulk_decanting_trolley.mp4",
-        "posterSrc": "/Assets/8%20Sequential%20Scenes/6%20Bulk%20Decanting%20(FLC%20to%20Assembly%20Trolley)/scene_06_bulk_decanting_trolley_poster.jpg"
+        "videoSrc": "/Assets/videos/scene_06_bulk_decanting_trolley.mp4",
+        "posterSrc": "/Assets/videos/scene_06_bulk_decanting_trolley_poster.jpg"
       },
       "interaction": {
         "type": "mcq",
@@ -377,8 +377,6 @@
         "mr": "डिकॅन्टिंग व्याख्या आणि हँडलिंग युनिट (HU) रूपांतरण"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s9_sc05_decanting_definition.mp4",
-        "posterSrc": "/images/scenes/c2_s9_sc05_poster.jpg",
         "fallbackAnimation": "decanting_definition_hu",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -390,8 +388,7 @@
             "en": "Let's explore the core foundation of Stage 9! At Ather AURIC Plant, why do we have a dedicated Decanting Area between receiving racks and the paint shop? Under SOP Clause 4.1 & Question Bank Q10, what exactly is the definition and operational purpose of 'Decanting'?",
             "hi": "आइए स्टेज 9 की मुख्य नींव का पता लगाएं! एथर औरिक प्लांट में, हमारे पास रिसीविंग रैक और पेंट शॉप के बीच एक समर्पित डिकैन्टिंग क्षेत्र क्यों है? SOP क्लॉज 4.1 और प्रश्न बैंक Q10 के तहत, 'डिकैन्टिंग' की सटीक परिभाषा और परिचालन उद्देश्य क्या है?",
             "mr": "स्टेज 9 च्या मूळ संकल्पनेकडे वळूया! एथर औरिक प्लांटमध्ये, स्टोअरेज रॅक्स आणि पेंट शॉप यांच्यामध्ये स्वतंत्र डिकॅन्टिंग एरिया का असतो? SOP कलम 4.1 आणि प्रश्न बँक Q10 नुसार, 'डिकॅन्टिंग' ची नेमकी व्याख्या आणि कामाचा उद्देश काय आहे?"
-          },
-          "audioSrc": "/audio/mascot/c2_s9_sc05_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "success",
@@ -399,8 +396,7 @@
             "en": "EXACT INDUSTRIAL DEFINITION! SOP Clause 4.1 & Question Bank Q10: Decanting is the controlled transfer of parts from large supplier shipping containers (FLCs) into standardized internal mobile trolleys! The supplier Handling Unit (HU) is closed, and an internal plant HU barcode is generated for shopfloor line feeding!",
             "hi": "सटीक औद्योगिक परिभाषा! SOP क्लॉज 4.1 और प्रश्न बैंक Q10: डिकैन्टिंग बड़े आपूर्तिकर्ता शिपिंग कंटेनरों (FLCs) से मानकीकृत आंतरिक मोबाइल ट्रॉलियों में भागों का नियंत्रित स्थानांतरण है! आपूर्तिकर्ता हैंडलिंग यूनिट (HU) बंद हो जाती है, और शॉपफ्लोर लाइन फीडिंग के लिए एक आंतरिक प्लांट HU बारकोड उत्पन्न होता है!",
             "mr": "अचूक औद्योगिक व्याख्या! SOP कलम 4.1 आणि प्रश्न बँक Q10: डिकॅन्टिंग म्हणजे सप्लायरच्या मोठ्या कंटेनर्समधून (FLC) सुटे भाग काढून फॅक्टरीच्या प्रमाणित अंतर्गत मोबाईल ट्रॉलीमध्ये व्यवस्थित भरणे! यामुळे सप्लायरचे हँडलिंग युनिट (HU) बंद होते आणि कारखान्यातील अंतर्गत HU बारकोड तयार होतो!"
-          },
-          "audioSrc": "/audio/mascot/c2_s9_sc05_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -408,8 +404,7 @@
             "en": "MISCONCEPTION! Decanting is not painting parts or discarding packaging into trash. It is the vital physical and digital transformation of supplier bulk crates into ergonomic line-side feeding trolleys!",
             "hi": "गलतफहमी! डिकैन्टिंग पुर्जों को पेंट करना या पैकेजिंग को कचरे में फेंकना नहीं है। यह आपूर्तिकर्ता बल्क क्रेट्स का एर्गोनोमिक लाइन-साइड फीडिंग ट्रॉलियों में महत्वपूर्ण भौतिक और डिजिटल परिवर्तन है!",
             "mr": "गैरसमज! डिकॅन्टिंग म्हणजे रंगकाम करणे किंवा कचरा फेकणे नव्हे. सप्लायरच्या मोठ्या पेट्यांमधून माल काढून लाईनवर नेण्यासाठीच्या अंतर्गत ट्रॉलीमध्ये भरणे म्हणजेच डिकॅन्टिंग होय!"
-          },
-          "audioSrc": "/audio/mascot/c2_s9_sc05_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -485,8 +480,6 @@
         "mr": "FLC-टू-ट्रॉली बॅच हिशोब (90 ब्रेक्स, ट्रॉली क्षमता 30)"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s9_sc06_batch_calc.mp4",
-        "posterSrc": "/images/scenes/c2_s9_sc06_poster.jpg",
         "fallbackAnimation": "flc_trolley_batch_calculation",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -498,8 +491,7 @@
             "en": "Ather Shopfloor Math Challenge! A newly arrived supplier FLC contains exactly 90 disc brake caliper assemblies. Each specialized paint-shop mobile trolley has a rated capacity of 30 calipers. Under Question Bank Q12, how many 100% full trolleys can the decanting team prepare from this single FLC?",
             "hi": "एथर शॉपफ्लोर गणित चुनौती! एक नए आपूर्तिकर्ता FLC में ठीक 90 डिस्क ब्रेक कैलिपर असेंबली शामिल हैं। प्रत्येक विशेष पेंट-शॉप मोबाइल ट्रॉली की रेटेड क्षमता 30 कैलीपर्स है। प्रश्न बैंक Q12 के तहत, डिकैन्टिंग टीम इस एकल FLC से कितने 100% पूर्ण ट्रॉली तैयार कर सकती है?",
             "mr": "एथर शॉपफ्लोर गणित आव्हान! सप्लायरकडून आलेल्या एका FLC मध्ये बरोबर 90 डिस्क ब्रेक कॅलिपर्स आहेत. पेंट-शॉपच्या प्रत्येक मोबाईल ट्रॉलीची अधिकृत क्षमता 30 कॅलिपर्सची आहे. प्रश्न संच Q12 नुसार, डिकॅन्टिंग टीम या एकाच FLC मधून 100% भरलेल्या किती ट्रॉली तयार करू शकते?"
-          },
-          "audioSrc": "/audio/mascot/c2_s9_sc06_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "trophy",
@@ -507,8 +499,7 @@
             "en": "EXACT BATCH ARITHMETIC! 90 total units divided by 30 units per trolley = exactly 3 full trolleys! Remember SOP Clause 4.2: Decanting operators must always load exactly to 100% capacity — partial trolleys disrupt conveyor rhythm and are rejected by the Zone Leader!",
             "hi": "सटीक बैच अंकगणित! कुल 90 इकाइयां प्रति ट्रॉली 30 इकाइयों से विभाजित = ठीक 3 पूर्ण ट्रॉलियां! SOP क्लॉज 4.2 याद रखें: डिकैन्टिंग ऑपरेटरों को हमेशा 100% क्षमता तक लोड करना चाहिए — आंशिक ट्रॉलियों को ज़ोन लीडर द्वारा अस्वीकार कर दिया जाता है!",
             "mr": "अचूक हिशोब! एकूण 90 भाग भागिले प्रति ट्रॉली 30 भाग = बरोबर 3 पूर्ण ट्रॉली! SOP कलम 4.2 लक्षात ठेवा: ऑपरेटरने नेहमी 100% क्षमतेनेच ट्रॉली भरली पाहिजे — अर्धवट ट्रॉली लाईनवर पाठवण्यास सक्त मनाई आहे!"
-          },
-          "audioSrc": "/audio/mascot/c2_s9_sc06_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -516,8 +507,7 @@
             "en": "CALCULATION ERROR! 90 units divided by 30 units per trolley equals exactly 3 trolleys. Standardized batch multiples prevent line starvation and simplify inventory tracking!",
             "hi": "गणना त्रुटि! 90 इकाइयों को प्रति ट्रॉली 30 इकाइयों से विभाजित करने पर ठीक 3 ट्रॉलियां बनती हैं। मानकीकृत बैच गुणक इन्वेंट्री ट्रैकिंग को सरल बनाते हैं!",
             "mr": "हिशोबात चूक! 90 भागिले 30 म्हणजे बरोबर 3 ट्रॉली होतात. ठरवून दिलेल्या संख्येनुसार काम केल्याने हिशोब अचूक राहतो!"
-          },
-          "audioSrc": "/audio/mascot/c2_s9_sc06_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -576,8 +566,6 @@
         "mr": "मल्टी-कलर उत्पादन वेव्ह टास्क विभाजन (20 काळे + 10 लाल)"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s9_sc07_wave_splitting.mp4",
-        "posterSrc": "/images/scenes/c2_s9_sc07_poster.jpg",
         "fallbackAnimation": "variant_wave_task_splitting",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -684,8 +672,6 @@
         "mr": "सुपरमार्केट रॅक भरण्याची जबाबदारी"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s9_sc08_rack_ownership.mp4",
-        "posterSrc": "/images/scenes/c2_s9_sc08_poster.jpg",
         "fallbackAnimation": "supermarket_rack_replenishment_zl",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -697,8 +683,7 @@
             "en": "Crucial responsibility question! The paint-shop supermarket rack serves as the primary source buffer for all vehicle body parts feeding the line. Under Question Bank Q19, who holds direct operational accountability for ensuring this supermarket rack remains continuously filled and replenished?",
             "hi": "महत्वपूर्ण जिम्मेदारी का प्रश्न! पेंट-शॉप सुपरमार्केट रैक लाइन को खिलाने वाले सभी वाहन बॉडी पार्ट्स के लिए प्राथमिक स्रोत बफर के रूप में कार्य करता है। प्रश्न बैंक Q19 के तहत, यह सुनिश्चित करने के लिए प्रत्यक्ष परिचालन जवाबदेही किसके पास है कि यह सुपरमार्केट रैक लगातार भरा और पुनः भरा रहे?",
             "mr": "महत्त्वाचा जबाबदारीचा प्रश्न! पेंट-शॉप सुपरमार्केट रॅक हा लाईनवर जाणाऱ्या सर्व बॉडी पार्ट्ससाठी मुख्य बफर म्हणून काम करतो. प्रश्न संच Q19 नुसार, हा सुपरमार्केट रॅक नेहमी मालाने भरलेला ठेवण्याची प्रत्यक्ष जबाबदारी कोणाची असते?"
-          },
-          "audioSrc": "/audio/mascot/c2_s9_sc08_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "success",
@@ -706,8 +691,7 @@
             "en": "ZONE LEADER ACCOUNTABILITY! Question Bank Q19: The Decanting Zone Leader (ZL)! The supermarket rack is the official source location for the paint line. The Decanting ZL monitors buffer stock, audits e-Kanban triggers, and coordinates MHE replenishment to prevent line starvation!",
             "hi": "ज़ोन लीडर की जवाबदेही! प्रश्न बैंक Q19: डिकैन्टिंग ज़ोन लीडर (ZL)! सुपरमार्केट रैक पेंट लाइन के लिए आधिकारिक स्रोत स्थान है। डिकैन्टिंग ZL बफर स्टॉक की निगरानी करता है, ई-कनबन ट्रिगर्स का ऑडिट करता है, और लाइन को रुकने से रोकने के लिए MHE पुनःपूर्ति का समन्वय करता है!",
             "mr": "झोन लीडरची थेट जबाबदारी! प्रश्न बँक Q19: डिकॅन्टिंग झोन लीडर (ZL)! सुपरमार्केट रॅक हे पेंट लाईनसाठीचे अधिकृत सोर्स लोकेशन आहे. डिकॅन्टिंग ZL बफर साठ्यावर लक्ष ठेवतो, ई-कनबन ट्रिगर्स तपासतो आणि लाईन थांबू नये म्हणून वेळेत माल मागवतो!"
-          },
-          "audioSrc": "/audio/mascot/c2_s9_sc08_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -715,8 +699,7 @@
             "en": "INCORRECT ROLE ASSIGNMENT! Security guards and outside delivery drivers do not manage internal factory supermarket racks. This critical replenishment duty belongs strictly to the Decanting Zone Leader!",
             "hi": "गलत भूमिका आवंटन! सुरक्षा गार्ड और बाहरी डिलीवरी ड्राइवर आंतरिक फैक्ट्री सुपरमार्केट रैक का प्रबंधन नहीं करते हैं। यह महत्वपूर्ण पुनःपूर्ति कर्तव्य सख्ती से डिकैन्टिंग ज़ोन लीडर का है!",
             "mr": "चुकीची व्यक्ती निवडली! सिक्युरिटी गार्ड किंवा बाहेरील ट्रक ड्रायव्हर कारखान्यातील रॅक भरत नाहीत. ही अत्यंत महत्त्वाची जबाबदारी डिकॅन्टिंग झोन लीडरची (ZL) असते!"
-          },
-          "audioSrc": "/audio/mascot/c2_s9_sc08_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -792,8 +775,6 @@
         "mr": "रिकाम्या बॉडी-पार्ट ट्रॉलीचा रिव्हर्स लॉजिस्टिक लूप"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s9_sc09_empty_trolley.mp4",
-        "posterSrc": "/images/scenes/c2_s9_sc09_poster.jpg",
         "fallbackAnimation": "empty_trolley_reverse_loop",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -805,8 +786,7 @@
             "en": "A line feeder has just delivered a specialized mobile trolley of scooter side panels to the paint shop loading booth. The trolley is now completely empty. Under Ather SOP and Question Bank Q25, where must this empty trolley immediately be moved?",
             "hi": "एक लाइन फीडर ने अभी-अभी पेंट शॉप लोडिंग बूथ पर स्कूटर साइड पैनल की एक विशेष मोबाइल ट्रॉली पहुंचाई है। ट्रॉली अब पूरी तरह से खाली है। एथर SOP और प्रश्न बैंक Q25 के तहत, इस खाली ट्रॉली को तुरंत कहां ले जाना चाहिए?",
             "mr": "एका लाईन फीडरने पेंट शॉप लोडिंग बूथवर स्कूटर साईड पॅनेल्सची ट्रॉली रिकामी केली आहे. ट्रॉली आता पूर्णपणे रिकामी झाली आहे. एथर SOP आणि प्रश्न संच Q25 नुसार, ही रिकामी ट्रॉली ताबडतोब कुठे पाठवली पाहिजे?"
-          },
-          "audioSrc": "/audio/mascot/c2_s9_sc09_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "success",
@@ -814,8 +794,7 @@
             "en": "CORRECT REVERSE FLOW! Question Bank Q25: To the Decant Area! Empty trolleys must be returned immediately to the decant area so they can be cleaned, inspected, and reloaded with the next production wave. Never leave empty trolleys blocking aisles or under stairways!",
             "hi": "सही रिवर्स फ्लो! प्रश्न बैंक Q25: डिकैन्ट क्षेत्र में! खाली ट्रॉलियों को तुरंत डिकैन्ट क्षेत्र में वापस किया जाना चाहिए ताकि उन्हें साफ किया जा सके, निरीक्षण किया जा सके और अगली उत्पादन लहर के साथ फिर से लोड किया जा सके। गलियारों को अवरुद्ध करते हुए खाली ट्रॉलियों को कभी न छोड़ें!",
             "mr": "अचूक रिव्हर्स लॉजिस्टिक! प्रश्न बँक Q25: डिकॅन्ट एरियामध्ये! रिकाम्या झालेल्या ट्रॉली त्वरित डिकॅन्ट भागात परत पाठवल्या पाहिजेत जेणेकरून त्या स्वच्छ करून पुढील उत्पादनासाठी पुन्हा भरता येतील. रिकाम्या ट्रॉली रस्त्यामध्ये किंवा पायऱ्यांखाली सोडून देण्यास सक्त मनाई आहे!"
-          },
-          "audioSrc": "/audio/mascot/c2_s9_sc09_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -823,8 +802,7 @@
             "en": "HAZARDOUS MISPLACEMENT! Leaving empty trolleys under stairways or pushing them out to the supplier gate causes asset starvation in decanting and severe fire code violations on factory gangways!",
             "hi": "खतरनाक गलत प्लेसमेंट! सीढ़ियों के नीचे खाली ट्रॉलियों को छोड़ना या उन्हें आपूर्तिकर्ता गेट पर बाहर धकेलना डिकैन्टिंग में संपत्ति की कमी और फैक्ट्री के गलियारों पर गंभीर अग्नि संहिता उल्लंघन का कारण बनता है!",
             "mr": "धोकादायक वर्तन! रिकाम्या ट्रॉली पायऱ्यांखाली टाकून दिल्यास डिकॅन्टिंग भागात ट्रॉलींचा तुटवडा भासतो आणि आगीच्या वेळी आपत्कालीन रस्ता अडकल्याने मोठा धोका निर्माण होतो!"
-          },
-          "audioSrc": "/audio/mascot/c2_s9_sc09_wrong.mp3"
+          }
         }
       },
       "interaction": {
@@ -900,8 +878,6 @@
         "mr": "पेंट-शॉप वाहतूक युनिट (संपूर्ण ट्रॉली विरूद्ध एकच पार्ट)"
       },
       "media": {
-        "videoSrc": "/videos/scenes/c2_s9_sc10_whole_trolley.mp4",
-        "posterSrc": "/images/scenes/c2_s9_sc10_poster.jpg",
         "fallbackAnimation": "whole_trolley_movement_gate",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5
@@ -913,8 +889,7 @@
             "en": "Final milestone of Module 9! A paint-shop WH task asks for a body part (e.g., Tail Side Panel) from the supermarket rack. What physical unit of material do you move to the paint-work line under Question Bank Q27?",
             "hi": "मॉड्यूल 9 का अंतिम मील का पत्थर! एक पेंट-शॉप WH कार्य सुपरमार्केट रैक से एक बॉडी पार्ट (जैसे, टेल साइड पैनल) की मांग करता है। प्रश्न बैंक Q27 के तहत आप पेंट-वर्क लाइन में सामग्री की किस भौतिक इकाई को ले जाते हैं?",
             "mr": "मॉड्यूल 9 चा अंतिम टप्पा! एका पेंट-शॉप WH टास्कमध्ये सुपरमार्केट रॅकमधून बॉडी पार्टची (उदा. टेल साइड पॅनेल) मागणी केली आहे. प्रश्न संच Q27 नुसार तुम्ही पेंट लाईनवर नेमके काय घेऊन जाता?"
-          },
-          "audioSrc": "/audio/mascot/c2_s9_sc10_intro.mp3"
+          }
         },
         "onCorrect": {
           "pose": "trophy",
@@ -922,8 +897,7 @@
             "en": "PERFECT OPERATIONAL MASTERY! Question Bank Q27: The WHOLE TROLLEY of that body part from the supermarket rack! You scan the rack QR to initiate, move the entire loaded trolley to the station, and scan the destination QR to close the task. Stage 9: Paint Shop Line Issuance & Decanting is now 100% complete!",
             "hi": "उत्कृष्ट परिचालन महारत! प्रश्न बैंक Q27: सुपरमार्केट रैक से उस बॉडी पार्ट की पूरी ट्रॉली! आप शुरू करने के लिए रैक QR को स्कैन करते हैं, पूरी भरी हुई ट्रॉली को स्टेशन पर ले जाते हैं, और कार्य को बंद करने के लिए गंतव्य QR को स्कैन करते हैं। स्टेज 9 अब 100% पूरा हुआ!",
             "mr": "अतिशय उत्कृष्ट प्रावीण्य! प्रश्न बँक Q27: सुपरमार्केट रॅकमधून त्या बॉडी पार्टची संपूर्ण भरलेली ट्रॉली! काम सुरू करण्यासाठी रॅकचा QR स्कॅन करायचा, पूर्ण ट्रॉली वर्कस्टेशनवर न्यायची आणि काम पूर्ण करण्यासाठी डेस्टिनेशन QR स्कॅन करायचा. स्टेज 9 आता 100% पूर्ण झाले आहे!"
-          },
-          "audioSrc": "/audio/mascot/c2_s9_sc10_correct.mp3"
+          }
         },
         "onIncorrect": {
           "pose": "warning",
@@ -931,8 +905,7 @@
             "en": "INCORRECT UNIT OF MOVEMENT! Feeders never carry loose, single plastic body panels by hand — this causes scratches, surface defects, and massive line starvation. Feeders strictly transport the entire mobile trolley!",
             "hi": "गलत संचालन इकाई! फीडर कभी भी खुले, अकेले प्लास्टिक बॉडी पैनल को हाथ से नहीं ले जाते हैं - इससे खरोंच, सतह के दोष होते हैं। फीडर सख्ती से पूरी मोबाइल ट्रॉली का परिवहन करते हैं!",
             "mr": "चुकीची पद्धत! ऑपरेटर कधीही एक-एक पार्ट हाताने उचलून नेत नाहीत — यामुळे पार्टवर ओरखडे पडतात आणि लाईनचा वेळ वाया जातो. ऑपरेटर संपूर्ण भरलेली ट्रॉलीच घेऊन जातात!"
-          },
-          "audioSrc": "/audio/mascot/c2_s9_sc10_wrong.mp3"
+          }
         }
       },
       "interaction": {
