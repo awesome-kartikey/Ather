@@ -24,3 +24,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Android / Gradle build outputs
+.gradle/
+android/app/build/
+android/build/
+android/.gradle/
+build-apks/
+*.apk
+*.aab

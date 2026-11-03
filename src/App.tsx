@@ -38,6 +38,8 @@ const MODULE_SOPS: Record<number, string> = {
 
 const getInitialAppMode = (): AppMode => {
   try {
+    const envMode = import.meta.env.VITE_APP_MODE;
+    if (envMode === 'picking' || envMode === 'receiving') return envMode;
     const hash = window.location.hash.toLowerCase();
     const search = window.location.search.toLowerCase();
     if (hash.includes('picking') || search.includes('picking')) return 'picking';

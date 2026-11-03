@@ -1,0 +1,112 @@
+name: Build Ather Warehouse Android APKs
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - 'README.md'
+      - '.gitignore'
+  workflow_dispatch:
+
+jobs:
+  build-apks:
+    name: Build Receiving & Picking APKs
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Java 21 (Temurin)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Setup Gradle Cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Make Gradlew Executable
+        run: chmod +x android/gradlew
+
+      - name: Create APK Output Directory
+        run: mkdir -p build-apks
+
+      # ========================================================
+      # 1. Build APK 1: Warehouse Receiving & Put-Away
+      # ========================================================
+      - name: Compile Web Assets for Receiving
+        run: pnpm run build:receiving
+
+      - name: Sync Capacitor Android (Receiving)
+        run: |
+          CAPACITOR_APP_MODE=receiving pnpm exec cap sync android
+
+      - name: Build Android APK (Receiving)
+        run: |
+          cd android
+          ./gradlew clean assembleDebug --stacktrace
+          cd ..
+          cp android/app/build/outputs/apk/debug/app-debug.apk build-apks/Ather_Warehouse_Receiving_PutAway.apk
+
+      # ========================================================
+      # 2. Build APK 2: Order Picking & Packaging
+      # ========================================================
+      - name: Compile Web Assets for Picking
+        run: pnpm run build:picking
+
+      - name: Sync Capacitor Android (Picking)
+        run: |
+          CAPACITOR_APP_MODE=picking pnpm exec cap sync android
+
+      - name: Build Android APK (Picking)
+        run: |
+          cd android
+          ./gradlew clean assembleDebug --stacktrace
+          cd ..
+          cp android/app/build/outputs/apk/debug/app-debug.apk build-apks/Ather_Order_Picking_Packaging.apk
+
+      # ========================================================
+      # 3. Publish Downloadable APK Artifacts
+      # ========================================================
+      - name: Upload Both APKs as Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Ather-Warehouse-APKs
+          path: build-apks/*.apk
+          if-no-files-found: error
+          retention-days: 30
