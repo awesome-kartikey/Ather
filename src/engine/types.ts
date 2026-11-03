@@ -61,6 +61,7 @@ export interface LeaderboardRecord {
 export interface UserProfile {
   name: string;
   operatorId?: string;
+  photoUrl?: string;
   xp: number;
   streak: number;
   lastActiveDate: string; // YYYY-MM-DD

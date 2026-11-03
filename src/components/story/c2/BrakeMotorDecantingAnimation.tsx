@@ -39,7 +39,7 @@ export const BrakeMotorDecantingAnimation: React.FC<Props> = ({
   }, []);
 
   return (
-    <div className="relative w-full h-[320px] sm:h-[390px] md:h-[430px] bg-slate-950 rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-slate-800 shadow-2xl select-none flex flex-col justify-between p-3 sm:p-5">
+    <div className="relative w-full h-full min-h-0 bg-slate-950 rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-slate-800 shadow-2xl select-none flex flex-col justify-between p-3 sm:p-5">
       {/* Optional Real Video Player with Auto Fallback */}
       {videoSrc && videoAvailable && (
         <video

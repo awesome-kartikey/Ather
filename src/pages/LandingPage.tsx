@@ -1,16 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import {
-  PackageOpen,
   ChevronRight,
   Layers,
-  ShieldCheck,
-  ArrowRight,
-  Play,
-  RotateCcw,
-  Clock
+  ShieldCheck
 } from 'lucide-react';
-import { AtherLogo } from '../components/common/AtherLogo';
+import { AtherCapsuleLogo } from '../components/common/AtherCapsuleLogo';
 import { LanguageSwitcher } from '../components/common/LanguageSwitcher';
 import type { LanguageCode } from '../engine/types';
 
@@ -19,7 +14,6 @@ interface LandingPageProps {
   onSelectLang: (lang: LanguageCode) => void;
   onStartTraining: () => void;
   onLaunchModule: (stageIndex: number) => void;
-  onResumeShift: () => void;
 }
 
 interface ModuleInfo {
@@ -31,6 +25,7 @@ interface ModuleInfo {
   sopDoc: string;
   badge: string;
   color: string;
+  imageSrc: string;
 }
 
 const MODULES_DATA: ModuleInfo[] = [
@@ -47,7 +42,8 @@ const MODULES_DATA: ModuleInfo[] = [
     scenesCount: 9,
     sopDoc: 'XXXX_PRO_001',
     badge: 'GATE KEEPER',
-    color: 'from-blue-600 to-indigo-600'
+    color: 'from-blue-600 to-indigo-600',
+    imageSrc: '/Assets/videos/scene_01_gate_arrival_poster.jpg'
   },
   {
     index: 1,
@@ -61,7 +57,8 @@ const MODULES_DATA: ModuleInfo[] = [
     scenesCount: 9,
     sopDoc: '02_C1_S2',
     badge: 'QUALITY SENTINEL',
-    color: 'from-emerald-600 to-teal-600'
+    color: 'from-emerald-600 to-teal-600',
+    imageSrc: '/Assets/videos/scene_03_iqc_inspection_split_poster.jpg'
   },
   {
     index: 2,
@@ -75,7 +72,8 @@ const MODULES_DATA: ModuleInfo[] = [
     scenesCount: 6,
     sopDoc: '03_C1_S3',
     badge: 'HIGH-RISE STOWAGE MASTER',
-    color: 'from-amber-600 to-orange-600'
+    color: 'from-amber-600 to-orange-600',
+    imageSrc: '/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg'
   },
   {
     index: 3,
@@ -89,7 +87,8 @@ const MODULES_DATA: ModuleInfo[] = [
     scenesCount: 5,
     sopDoc: '04_C1_S4',
     badge: 'CELL VAULT GUARDIAN',
-    color: 'from-rose-600 to-red-600'
+    color: 'from-rose-600 to-red-600',
+    imageSrc: '/Assets/videos/scene_05_battery_vault_climate_poster.jpg'
   },
   {
     index: 4,
@@ -103,7 +102,8 @@ const MODULES_DATA: ModuleInfo[] = [
     scenesCount: 5,
     sopDoc: '05_C1_S5',
     badge: 'HAZMAT CUSTODIAN',
-    color: 'from-purple-600 to-indigo-700'
+    color: 'from-purple-600 to-indigo-700',
+    imageSrc: '/Assets/environments/bg_chemical_building.jpg'
   },
   {
     index: 5,
@@ -117,7 +117,8 @@ const MODULES_DATA: ModuleInfo[] = [
     scenesCount: 6,
     sopDoc: '06_C1_S6',
     badge: 'SUPERMARKET KANBAN SPECIALIST',
-    color: 'from-teal-600 to-cyan-600'
+    color: 'from-teal-600 to-cyan-600',
+    imageSrc: '/Assets/environments/bg_supermarket_sm.jpg'
   },
   {
     index: 6,
@@ -131,7 +132,8 @@ const MODULES_DATA: ModuleInfo[] = [
     scenesCount: 7,
     sopDoc: '07_C1_S7',
     badge: 'QUARANTINE DISPOSITION AUTHORITY',
-    color: 'from-red-600 to-rose-700'
+    color: 'from-red-600 to-rose-700',
+    imageSrc: '/Assets/environments/bg_ng_quarantine_area.jpg'
   },
 
   // Category 2: Line Feeding & Reverse Logistics (Modules 8 - 12)
@@ -147,7 +149,8 @@ const MODULES_DATA: ModuleInfo[] = [
     scenesCount: 9,
     sopDoc: '08_C2_S8',
     badge: 'LINE FEEDER CHAMPION',
-    color: 'from-blue-600 to-cyan-700'
+    color: 'from-blue-600 to-cyan-700',
+    imageSrc: '/Assets/videos/scene_07_milk_run_delivery_poster.jpg'
   },
   {
     index: 8,
@@ -161,7 +164,8 @@ const MODULES_DATA: ModuleInfo[] = [
     scenesCount: 10,
     sopDoc: '09_C2_S9',
     badge: 'PAINT & DECANTING VIRTUOSO',
-    color: 'from-indigo-600 to-violet-700'
+    color: 'from-indigo-600 to-violet-700',
+    imageSrc: '/Assets/videos/scene_06_bulk_decanting_trolley_poster.jpg'
   },
   {
     index: 9,
@@ -175,7 +179,8 @@ const MODULES_DATA: ModuleInfo[] = [
     scenesCount: 6,
     sopDoc: '10_C2_S10',
     badge: 'INDIRECT STORES CUSTODIAN',
-    color: 'from-amber-600 to-yellow-600'
+    color: 'from-amber-600 to-yellow-600',
+    imageSrc: '/Assets/environments/bg_indirect_material_store.jpg'
   },
   {
     index: 10,
@@ -189,7 +194,8 @@ const MODULES_DATA: ModuleInfo[] = [
     scenesCount: 7,
     sopDoc: '11_C2_S11',
     badge: 'PIR & STO DISPATCH SPECIALIST',
-    color: 'from-emerald-600 to-green-700'
+    color: 'from-emerald-600 to-green-700',
+    imageSrc: '/Assets/environments/bg_deo_gate_office.jpg'
   },
   {
     index: 11,
@@ -203,7 +209,8 @@ const MODULES_DATA: ModuleInfo[] = [
     scenesCount: 12,
     sopDoc: '12_C2_S12',
     badge: 'WAREHOUSE GRANDMASTER',
-    color: 'from-blue-700 to-slate-900'
+    color: 'from-blue-700 to-slate-900',
+    imageSrc: '/Assets/videos/scene_08_empty_bin_strapping_poster.jpg'
   }
 ];
 
@@ -211,34 +218,9 @@ export const LandingPage: React.FC<LandingPageProps> = ({
   lang,
   onSelectLang,
   onStartTraining,
-  onLaunchModule,
-  onResumeShift
+  onLaunchModule
 }) => {
   const [activeCategoryTab, setActiveCategoryTab] = useState<1 | 2>(1);
-  const [resumeData, setResumeData] = useState<{
-    stageIdx: number;
-    sceneIdx: number;
-    xp: number;
-    hasProgress: boolean;
-  }>({ stageIdx: 0, sceneIdx: 0, xp: 0, hasProgress: false });
-
-  useEffect(() => {
-    try {
-      const sStage = localStorage.getItem('ather_stage_idx');
-      const sScene = localStorage.getItem('ather_scene_idx');
-      const sXp = localStorage.getItem('ather_xp');
-      if (sStage !== null) {
-        const stage = parseInt(sStage, 10);
-        const scene = parseInt(sScene || '0', 10);
-        const xp = parseInt(sXp || '0', 10);
-        if (stage > 0 || scene > 0 || xp > 0) {
-          setResumeData({ stageIdx: stage, sceneIdx: scene, xp, hasProgress: true });
-        }
-      }
-    } catch {
-      // Storage unavailable
-    }
-  }, []);
 
   const filteredModules = MODULES_DATA.filter((m) => m.category === activeCategoryTab);
 
@@ -249,108 +231,62 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       <div className="fixed bottom-[-20%] right-[-10%] w-[800px] h-[800px] bg-emerald-400/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="fixed inset-0 bg-[url('/noise.svg')] opacity-[0.025] pointer-events-none" />
 
-      {/* ── Top Bar: Dual Branding & Language Switcher ────────────────── */}
-      <header className="shrink-0 w-full px-4 sm:px-8 pt-4 pb-2 flex items-center justify-between relative z-20">
-        <a
-          href="https://tetrahedron.in"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/90 shadow-2xs hover:shadow-xs transition-all group"
-        >
-          <img
-            src="/logo/Tetrahedron-logo-transparent.svg"
-            alt="Tetrahedron Logo"
-            className="h-5 w-auto object-contain group-hover:scale-105 transition-transform"
-          />
-          <span className="text-[11px] text-slate-400 font-medium">Developed by</span>
-          <span className="text-xs font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
-            Tetrahedron
-          </span>
-        </a>
+      {/* ── Top Bar: Dual Branding & Language Switcher (Clean 48px Header) ── */}
+      <header className="shrink-0 w-full px-4 sm:px-8 py-3 flex items-center justify-between border-b border-slate-200/80 bg-white/80 backdrop-blur-md relative z-20">
+        <div className="flex items-center gap-2">
+          <AtherCapsuleLogo />
+          <div className="h-4 w-px bg-slate-300" />
+          <a
+            href="https://tetrahedron.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 group"
+          >
+            <img
+              src="/logo/Tetrahedron-logo-transparent.svg"
+              alt="Tetrahedron Logo"
+              className="h-4 w-auto object-contain group-hover:scale-105 transition-transform"
+            />
+            <span className="text-xs font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
+              Tetrahedron
+            </span>
+          </a>
+        </div>
 
         <div className="flex items-center gap-3">
           <LanguageSwitcher currentLang={lang} onSelectLang={onSelectLang} />
         </div>
       </header>
 
-      {/* ── Trainee Shift Resume Strip (If Previous Progress Exists) ── */}
-      {resumeData.hasProgress && (
-        <section className="w-full max-w-5xl mx-auto px-4 mt-2 mb-2 relative z-20">
-          <div className="p-4 rounded-2xl bg-gradient-to-r from-blue-900 to-indigo-900 text-white shadow-lg border border-blue-700/50 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3 text-left">
-              <div className="w-12 h-12 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center shrink-0">
-                <RotateCcw className="w-6 h-6 text-amber-300 animate-spin-slow" />
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <span className="text-[10px] font-mono font-extrabold uppercase bg-amber-400 text-slate-900 px-2 py-0.5 rounded-full">
-                    Active Shift Detected
-                  </span>
-                  <span className="text-xs text-blue-200 font-medium">Plant M002 Trainee Station</span>
-                </div>
-                <h4 className="text-sm sm:text-base font-bold text-white mt-0.5">
-                  Resume at Module {resumeData.stageIdx + 1}: {MODULES_DATA[resumeData.stageIdx]?.title[lang] || 'Current Module'} · Scene {resumeData.sceneIdx + 1}
-                </h4>
-                <p className="text-xs text-blue-200">
-                  Current Floor Balance: <strong>+{resumeData.xp} XP</strong>
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-2.5 w-full sm:w-auto">
-              <button
-                type="button"
-                onClick={onResumeShift}
-                className="w-full sm:w-auto min-h-[48px] px-6 py-2.5 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-extrabold text-sm rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98"
-              >
-                <Play className="w-4 h-4 fill-current" />
-                <span>Resume Shift</span>
-              </button>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* ── Hero Section ─────────────────────────────────────────────── */}
-      <main className="flex-1 max-w-6xl mx-auto px-4 sm:px-6 pt-4 pb-12 relative z-10 flex flex-col items-center justify-center text-center">
+      {/* ── Hero Section (Concise, Modern & Uncluttered) ─────────── */}
+      <main className="flex-1 max-w-6xl mx-auto px-4 sm:px-6 pt-6 sm:pt-10 pb-12 relative z-10 flex flex-col items-center justify-center text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="flex flex-col items-center space-y-4 max-w-3xl mx-auto"
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+          className="flex flex-col items-center space-y-3 max-w-2xl mx-auto"
         >
-          {/* Ather Plant Logo */}
-          <div className="mb-0.5">
-            <AtherLogo size="lg" />
-          </div>
-
-          {/* DOJO Pill Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/90 text-xs sm:text-sm font-bold text-blue-700 shadow-2xs">
-            <PackageOpen className="w-4 h-4 text-blue-600" />
-            <span>Ather AURIC Plant M002 · Warehouse Floor DOJO</span>
-          </div>
-
-          {/* Main Title */}
+          {/* Main Title - Single punchy statement */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-tight">
-            Warehouse Standard Operating Procedures <br className="hidden sm:inline" />
+            Warehouse SOP{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700">
-              Interactive Training DOJO
+              Training DOJO
             </span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-            Industrial digital training station for floor operators at Ather Energy AURIC Plant M002. 12 operational modules, 91 verified SOP scenes, high-contrast glove ergonomics, and trilingual voice guidance.
+          {/* Subtitle - Single clear line */}
+          <p className="text-sm sm:text-base text-slate-600 font-medium max-w-xl">
+            Interactive digital SOP simulation station for floor operators at Ather AURIC plant.
           </p>
 
-          {/* Primary Quick Start CTA */}
-          <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
+          {/* Primary Action Button - Cleanly anchored directly beneath */}
+          <div className="pt-2">
             <button
               type="button"
               onClick={onStartTraining}
-              className="min-h-[56px] px-8 py-3.5 text-base sm:text-lg font-extrabold text-white transition-all duration-300 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 rounded-2xl shadow-lg shadow-blue-500/25 active:scale-98 cursor-pointer flex items-center gap-2.5"
+              className="min-h-[50px] px-8 py-3 text-base sm:text-lg font-extrabold text-white transition-all duration-300 bg-blue-600 hover:bg-blue-700 rounded-xl shadow-md shadow-blue-500/20 active:scale-98 cursor-pointer flex items-center gap-2"
             >
-              <span>Start Training from Module 1</span>
+              <span>Enter DOJO Station</span>
               <ChevronRight className="w-5 h-5" />
             </button>
           </div>
@@ -369,15 +305,16 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               </p>
             </div>
 
-            {/* Category 1 vs Category 2 Pills */}
+            {/* Category Tabs */}
             <div className="flex items-center gap-2 p-1 bg-white rounded-2xl border border-slate-200/90 shadow-2xs">
               <button
                 type="button"
                 onClick={() => setActiveCategoryTab(1)}
-                className={`min-h-[44px] px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer flex items-center gap-2 ${activeCategoryTab === 1
-                  ? 'bg-blue-600 text-white shadow-sm'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-                  }`}
+                className={`min-h-[44px] px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer flex items-center gap-2 ${
+                  activeCategoryTab === 1
+                    ? 'bg-blue-600 text-white shadow-sm'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                }`}
               >
                 <Layers className="w-4 h-4" />
                 <span>Cat 1: Inbound &amp; Stowage (M1–M7)</span>
@@ -386,10 +323,11 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               <button
                 type="button"
                 onClick={() => setActiveCategoryTab(2)}
-                className={`min-h-[44px] px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer flex items-center gap-2 ${activeCategoryTab === 2
-                  ? 'bg-blue-600 text-white shadow-sm'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-                  }`}
+                className={`min-h-[44px] px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer flex items-center gap-2 ${
+                  activeCategoryTab === 2
+                    ? 'bg-blue-600 text-white shadow-sm'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                }`}
               >
                 <ShieldCheck className="w-4 h-4" />
                 <span>Cat 2: Line Feed &amp; Reverse (M8–M12)</span>
@@ -397,48 +335,45 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             </div>
           </div>
 
-          {/* Module Grid */}
+          {/* Module Grid - 100% Clean Image, Metadata below image, Clickable card */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredModules.map((m) => (
               <motion.div
                 key={m.index}
                 whileHover={{ y: -3, transition: { duration: 0.15 } }}
-                className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
+                onClick={() => onLaunchModule(m.index)}
+                className="p-3.5 sm:p-4 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-blue-400 transition-all flex flex-col justify-between group cursor-pointer active:scale-[0.99] select-none"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[11px] font-mono font-black px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
-                      MODULE {m.number}
+                  {/* Clean image with ZERO gradient overlays or clutter */}
+                  <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden mb-3 border border-slate-200/90 shadow-2xs bg-slate-100">
+                    <img
+                      src={m.imageSrc}
+                      alt={m.title[lang]}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  {/* Metadata Row BELOW the image: Module Number on Left, Scenes Count on Right */}
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[11px] font-mono font-extrabold px-2.5 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-200/70">
+                      MODULE {String(m.number).padStart(2, '0')}
                     </span>
-                    <span className="text-[10px] font-mono font-extrabold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-200/60">
-                      {m.sopDoc}
+                    <span className="text-[11px] font-mono font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200/60">
+                      {m.scenesCount} Scenes
                     </span>
                   </div>
 
+                  {/* Module Title */}
                   <h4 className="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-1">
                     {m.title[lang]}
                   </h4>
 
-                  <div className="flex items-center gap-3 mt-2 text-xs text-slate-500 font-medium">
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5 text-slate-400" />
-                      {m.scenesCount} SOP Slices
-                    </span>
-                    <span>·</span>
+                  {/* Role Badge */}
+                  <div className="flex items-center gap-2 mt-1 text-xs text-slate-500 font-medium">
                     <span className="text-emerald-700 font-bold">{m.badge}</span>
                   </div>
-                </div>
-
-                <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-[11px] text-slate-400 font-mono">AURIC Plant M002</span>
-                  <button
-                    type="button"
-                    onClick={() => onLaunchModule(m.index)}
-                    className="min-h-[40px] px-3.5 py-1.5 rounded-xl text-xs font-extrabold bg-blue-50 hover:bg-blue-600 text-blue-700 hover:text-white transition-all flex items-center gap-1.5 cursor-pointer shadow-2xs"
-                  >
-                    <span>Launch</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
                 </div>
               </motion.div>
             ))}
@@ -447,31 +382,27 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       </main>
 
       {/* ── Bottom: Unified Dual Branding Footer ─────────────────────── */}
-      <footer className="shrink-0 w-full py-4 sm:py-5 flex justify-center items-center relative z-20">
-        <div className="inline-flex items-center gap-4 sm:gap-6 px-6 sm:px-8 py-2.5 sm:py-3 rounded-2xl sm:rounded-full bg-white/90 backdrop-blur-md border border-slate-200/90 shadow-sm">
-          {/* Ather Logo */}
-          <AtherLogo size="sm" />
+      <footer className="shrink-0 w-full py-4 sm:py-5 flex justify-center items-center relative z-20 border-t border-slate-200/80 bg-white/70 backdrop-blur-md">
+        <div className="inline-flex items-center gap-2.5 sm:gap-3 px-4 sm:px-5 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-2xs">
+          <AtherCapsuleLogo />
 
-          <div className="h-6 sm:h-7 w-px bg-slate-300" />
+          <div className="h-4 w-px bg-slate-300" />
 
           {/* Tetrahedron Branding */}
           <a
             href="https://tetrahedron.in"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 sm:gap-2.5 group"
+            className="flex items-center gap-1.5 group"
           >
             <img
               src="/logo/Tetrahedron-logo-transparent.svg"
               alt="Tetrahedron Logo"
-              className="h-6 sm:h-7 w-auto object-contain group-hover:scale-105 transition-transform"
+              className="h-4 w-auto object-contain group-hover:scale-105 transition-transform"
             />
-            <div className="flex flex-col text-left leading-tight">
-              <span className="text-[9px] sm:text-[10px] text-slate-400 font-medium">Developed by</span>
-              <span className="text-xs sm:text-sm font-extrabold text-slate-800 group-hover:text-blue-600 transition-colors">
-                Tetrahedron
-              </span>
-            </div>
+            <span className="text-xs font-extrabold text-slate-800 group-hover:text-blue-600 transition-colors">
+              Tetrahedron
+            </span>
           </a>
         </div>
       </footer>

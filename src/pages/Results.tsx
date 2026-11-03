@@ -76,13 +76,26 @@ export const Results: React.FC<Props> = ({
         <div className="w-full max-w-2xl bg-white border border-slate-200/90 rounded-3xl shadow-xl overflow-hidden">
           {/* Top Result Banner */}
           <div
-            className={`px-6 sm:px-8 py-7 text-white text-center flex flex-col items-center ${
+            className={`relative px-6 sm:px-8 py-7 text-white text-center flex flex-col items-center overflow-hidden ${
               passed
                 ? 'bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-800'
                 : 'bg-gradient-to-br from-blue-600 via-indigo-700 to-slate-800'
             }`}
           >
-            <div className="w-16 h-16 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center mb-3 shadow-md">
+            <img
+              src="/Assets/environments/bg_supermarket_sm.jpg"
+              alt=""
+              className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay pointer-events-none"
+            />
+            {passed && (
+              <img
+                src="/Assets/Props/prop_qc_pass_stamp.png"
+                alt="QC Pass Stamp"
+                className="absolute -right-4 -bottom-4 w-28 h-28 object-contain opacity-25 rotate-12 pointer-events-none"
+              />
+            )}
+
+            <div className="relative z-10 w-16 h-16 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center mb-3 shadow-md backdrop-blur-xs">
               {passed ? (
                 <Trophy className="w-8 h-8 text-amber-300 animate-bounce" />
               ) : (
@@ -90,10 +103,10 @@ export const Results: React.FC<Props> = ({
               )}
             </div>
 
-            <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-1">
+            <h2 className="relative z-10 text-2xl sm:text-3xl font-black tracking-tight mb-1">
               {passed ? 'SOP Floor Competency Certified!' : 'Floor Training Practice Completed'}
             </h2>
-            <p className="text-xs sm:text-sm text-white/90 font-medium">
+            <p className="relative z-10 text-xs sm:text-sm text-white/90 font-medium">
               Operator: <strong className="text-white">{profile.name || 'Floor Operator'}</strong> ({profile.operatorId || 'OP-AURIC-104'}) · Ather Plant M002
             </p>
           </div>

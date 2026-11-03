@@ -52,7 +52,9 @@
           "en": "Vehicle Assembly Line MES Feed: Real-time VIN chassis consumption auto-dispatches digital WH Picking Tasks to operator HHT",
           "hi": "वाहन असेंबली लाइन MES फ़ीड: वास्तविक समय VIN चेसिस खपत ऑपरेटर HHT पर डिजिटल WH पिकिंग कार्यों को ऑटो-प्रेषित करती है",
           "mr": "वाहन असेंब्ली लाईन MES फीड: रिअल-टाइम VIN चेसिस खपानुसार ऑपरेटरच्या HHT वर डिजिटल WH पिकिंग टास्क पाठवले जाते"
-        }
+        },
+        "imageSrc": "/Assets/videos/scene_07_milk_run_delivery_alt.jpg",
+        "propSrc": "/Assets/Props/prop_hht_scanner.png"
       },
       "interaction": {
         "type": "mcq",
@@ -140,7 +142,8 @@
           "en": "Blind Quantity Reveal: Scanning rack beam QR code physically confirms operator arrival before quantity unlocks",
           "hi": "ब्लाइंड क्वांटिटी रिवील: रैक बीम क्यूआर कोड को स्कैन करना मात्रा अनलॉक होने से पहले ऑपरेटर के आगमन की पुष्टि करता है",
           "mr": "ब्लाइंड क्वांटिटी रिव्हिल: रॅक बीमवरील QR कोड स्कॅन केल्यावरच ऑपरेटर प्रत्यक्ष जागेवर असल्याची खात्री होते व संख्या अनलॉक होते"
-        }
+        },
+        "imageSrc": "/Assets/videos/scene_07_milk_run_delivery_alt.jpg"
       },
       "interaction": {
         "type": "sequence",
@@ -240,7 +243,8 @@
           "en": "Trolley-to-Picklist Pairing: Feeder must scan Trolley QR to establish digital marriage before picking parts",
           "hi": "ट्रॉली-टू-पिकलिस्ट पेयरिंग: पुर्जे चुनने से पहले डिजिटल युग्मन स्थापित करने के लिए फीडर को ट्रॉली क्यूआर स्कैन करना होगा",
           "mr": "ट्रॉली-टू-पिकलिस्ट जोडणी: माल भरण्यापूर्वी डिजिटल जोडणी तयार करण्यासाठी लाईन फीडरने ट्रॉली QR स्कॅन करणे बंधनकारक आहे"
-        }
+        },
+        "imageSrc": "/Assets/videos/scene_07_milk_run_delivery_alt.jpg"
       },
       "interaction": {
         "type": "stop_go",
@@ -340,7 +344,8 @@
           "mr": "वर्कस्टेशन हँडशेक: डेस्टिनेशन QR स्कॅन केल्याने डिजिटल MES टास्क बंद होतो आणि रिकाम्या ट्रॉली/बिन्स रिव्हर्स लॉजिस्टिकसाठी परत पाठवले जातात"
         },
         "videoSrc": "/Assets/videos/scene_07_milk_run_delivery.mp4",
-        "posterSrc": "/Assets/videos/scene_07_milk_run_delivery_poster.jpg"
+        "posterSrc": "/Assets/videos/scene_07_milk_run_delivery_poster.jpg",
+        "altPosterSrc": "/Assets/videos/scene_07_milk_run_delivery_alt.jpg"
       },
       "interaction": {
         "type": "spot_error",
@@ -442,7 +447,8 @@
       "media": {
         "fallbackAnimation": "overpicking_prohibition_gate",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_07_milk_run_delivery_alt.jpg"
       },
       "mascot": {
         "intro": {
@@ -533,7 +539,8 @@
       "media": {
         "fallbackAnimation": "feeder_anti_duplication",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_07_milk_run_delivery_alt.jpg"
       },
       "mascot": {
         "intro": {
@@ -636,7 +643,9 @@
       "media": {
         "fallbackAnimation": "handheld_blind_quantity_unlock",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_07_milk_run_delivery_alt.jpg",
+        "propSrc": "/Assets/Props/prop_hht_scanner.png"
       },
       "mascot": {
         "intro": {
@@ -739,7 +748,8 @@
       "media": {
         "fallbackAnimation": "wrong_supermarket_lane_violation",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_07_milk_run_delivery_alt.jpg"
       },
       "mascot": {
         "intro": {
@@ -842,7 +852,8 @@
       "media": {
         "fallbackAnimation": "five_step_picking_lifecycle",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_07_milk_run_delivery_alt.jpg"
       },
       "mascot": {
         "intro": {

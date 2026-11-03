@@ -84,6 +84,11 @@ export const CertificateView: React.FC<Props> = ({
         >
           {/* Subtle Watermark & Guilloche Border */}
           <div className="absolute inset-3 border-2 border-dashed border-blue-200/60 rounded-2xl pointer-events-none print:border-slate-400" />
+          <img
+            src="/Assets/environments/bg_supermarket_sm.jpg"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover opacity-5 mix-blend-multiply pointer-events-none"
+          />
           <div className="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-blue-50/50 pointer-events-none -z-0 blur-3xl print:hidden" />
 
           {/* Header Row */}
@@ -132,24 +137,47 @@ export const CertificateView: React.FC<Props> = ({
             </p>
           </div>
 
-          {/* Operator Nameplate */}
-          <div className="relative z-10 text-center my-6 py-4 bg-slate-50/80 rounded-2xl border border-slate-200/80">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-1">
-              Operator / Trainee Name
-            </span>
-            <div className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-              {profile.name || 'AURIC Warehouse Operator'}
+          {/* Operator Nameplate with Photo */}
+          <div className="relative z-10 my-6 p-4 sm:p-5 bg-slate-50/80 rounded-2xl border border-slate-200/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-4 text-center sm:text-left">
+              {profile.photoUrl ? (
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 border-slate-300 shadow-sm shrink-0 bg-white">
+                  <img src={profile.photoUrl} alt={profile.name} className="w-full h-full object-cover" />
+                </div>
+              ) : (
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-2xl font-black shadow-sm shrink-0">
+                  {(profile.name || 'O').charAt(0).toUpperCase()}
+                </div>
+              )}
+              <div>
+                <span className="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-0.5">
+                  Certified Operator / Trainee
+                </span>
+                <div className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+                  {profile.name || 'AURIC Warehouse Operator'}
+                </div>
+                <div className="flex items-center gap-3 mt-1 text-xs font-mono text-slate-600">
+                  <span className="flex items-center gap-1">
+                    <UserCheck className="w-3.5 h-3.5 text-blue-600" />
+                    Emp ID: <strong className="text-slate-800">{profile.operatorId || 'AUR-104'}</strong>
+                  </span>
+                  <span>·</span>
+                  <span className="flex items-center gap-1">
+                    <Factory className="w-3.5 h-3.5 text-blue-600" />
+                    Facility: <strong className="text-slate-800">AURIC Mega-Plant</strong>
+                  </span>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center justify-center gap-4 mt-2 text-xs font-mono text-slate-600">
-              <span className="flex items-center gap-1">
-                <UserCheck className="w-3.5 h-3.5 text-blue-600" />
-                Emp ID: <strong className="text-slate-800">{profile.operatorId || 'AUR-104'}</strong>
-              </span>
-              <span>·</span>
-              <span className="flex items-center gap-1">
-                <Factory className="w-3.5 h-3.5 text-blue-600" />
-                Facility: <strong className="text-slate-800">AURIC Plant M002</strong>
-              </span>
+
+            {/* Verified QC Badge */}
+            <div className="shrink-0 p-3 bg-emerald-50 rounded-xl border border-emerald-300 text-center">
+              <div className="text-[10px] font-mono font-black text-emerald-800 uppercase tracking-widest">
+                VERIFIED QC PASS
+              </div>
+              <div className="text-xs font-bold text-emerald-700 mt-0.5">
+                Standard Compliant
+              </div>
             </div>
           </div>
 
@@ -210,17 +238,24 @@ export const CertificateView: React.FC<Props> = ({
               </div>
             </div>
 
-            {/* Official Digital Stamp */}
-            <div className="border-2 border-emerald-600/70 rounded-xl px-4 py-2 text-center text-emerald-700 bg-emerald-50/50 rotate-[-2deg]">
-              <div className="text-[9px] font-mono font-bold tracking-widest uppercase">
-                Ather AURIC Training Dojo
-              </div>
-              <div className="text-xs font-black tracking-wider uppercase flex items-center justify-center gap-1">
-                <CheckCircle2 className="w-3.5 h-3.5" />
-                DIGITALLY CERTIFIED
-              </div>
-              <div className="text-[8px] font-mono text-emerald-600">
-                M002 QA & Safety Cell
+            {/* Official Digital Stamp with Authentic QC Pass Prop */}
+            <div className="relative flex items-center gap-2 border-2 border-emerald-600/70 rounded-xl px-3 py-1.5 text-center text-emerald-800 bg-emerald-50/70 rotate-[-2deg] shadow-xs">
+              <img
+                src="/Assets/Props/prop_qc_pass_stamp.png"
+                alt="Ather QC Pass"
+                className="w-10 h-10 object-contain drop-shadow-xs"
+              />
+              <div className="text-left">
+                <div className="text-[9px] font-mono font-bold tracking-widest uppercase text-emerald-900">
+                  Ather AURIC Training Dojo
+                </div>
+                <div className="text-xs font-black tracking-wider uppercase flex items-center gap-1 text-emerald-700">
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  QC PASS &amp; CERTIFIED
+                </div>
+                <div className="text-[8px] font-mono text-emerald-600">
+                  M002 QA &amp; Safety Cell Verified
+                </div>
               </div>
             </div>
 

@@ -20,7 +20,9 @@
       "media": {
         "fallbackAnimation": "hu_scan_initiation",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg",
+        "propSrc": "/Assets/Props/prop_hht_scanner.png"
       },
       "mascot": {
         "intro": {
@@ -123,7 +125,8 @@
       "media": {
         "fallbackAnimation": "route_segregation_junction",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg"
       },
       "mascot": {
         "intro": {
@@ -257,7 +260,8 @@
         "posterSrc": "/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg",
         "fallbackAnimation": "bin_marriage_lift",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "altPosterSrc": "/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg"
       },
       "mascot": {
         "intro": {
@@ -363,7 +367,9 @@
       "media": {
         "fallbackAnimation": "omitted_scan_hazard",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg",
+        "propSrc": "/Assets/Props/prop_hht_scanner.png"
       },
       "mascot": {
         "intro": {
@@ -466,7 +472,8 @@
       "media": {
         "fallbackAnimation": "bin_slotting_violation",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg"
       },
       "mascot": {
         "intro": {
@@ -557,7 +564,8 @@
       "media": {
         "fallbackAnimation": "putaway_sequence_lifecycle",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg"
       },
       "mascot": {
         "intro": {

@@ -120,7 +120,9 @@
       "media": {
         "fallbackAnimation": "gatehouse_cabin_desk",
         "durationSeconds": 18,
-        "pauseAtSecond": 3
+        "pauseAtSecond": 3,
+        "imageSrc": "/Assets/environments/bg_deo_gate_office.jpg",
+        "propSrc": "/Assets/Props/prop_eway_bill_tablet.png"
       },
       "mascot": {
         "intro": {
@@ -265,7 +267,8 @@
       "media": {
         "fallbackAnimation": "sap_terminal_screen",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/environments/bg_deo_gate_office.jpg"
       },
       "mascot": {
         "intro": {
@@ -359,7 +362,9 @@
       "media": {
         "fallbackAnimation": "thermal_printer_tv",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/environments/bg_deo_gate_office.jpg",
+        "propSrc": "/Assets/Props/prop_windshield_barcode_pass.png"
       },
       "mascot": {
         "intro": {
@@ -486,7 +491,8 @@
       "media": {
         "fallbackAnimation": "dock_blueprint_map",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/environments/bg_plant_map_hotspot.jpg"
       },
       "mascot": {
         "intro": {
@@ -602,7 +608,9 @@
         "posterSrc": "/Assets/videos/scene_02_wheel_chock_safety_poster.jpg",
         "fallbackAnimation": "dock_safety_chocks",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "propSrc": "/Assets/Props/prop_rubber_wheel_chock.png",
+        "altPosterSrc": "/Assets/videos/scene_02_wheel_chock_safety_alt.jpg"
       },
       "mascot": {
         "intro": {
@@ -810,7 +818,9 @@
       "media": {
         "fallbackAnimation": "gatehouse_cabin_desk",
         "durationSeconds": 15,
-        "pauseAtSecond": 4.5
+        "pauseAtSecond": 4.5,
+        "imageSrc": "/Assets/environments/bg_deo_gate_office.jpg",
+        "propSrc": "/Assets/Props/prop_eway_bill_tablet.png"
       },
       "mascot": {
         "intro": {
@@ -901,7 +911,8 @@
       "media": {
         "fallbackAnimation": "truck_arrival_gate",
         "durationSeconds": 15,
-        "pauseAtSecond": 4.5
+        "pauseAtSecond": 4.5,
+        "imageSrc": "/Assets/environments/bg_plant_map_hotspot.jpg"
       },
       "mascot": {
         "intro": {

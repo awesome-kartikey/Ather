@@ -20,7 +20,8 @@
       "media": {
         "fallbackAnimation": "chemical_bypass_routing",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/environments/bg_chemical_building.jpg"
       },
       "mascot": {
         "intro": {
@@ -126,7 +127,8 @@
       "media": {
         "fallbackAnimation": "chemical_unloading_spill",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/environments/bg_chemical_building.jpg"
       },
       "mascot": {
         "intro": {
@@ -254,7 +256,8 @@
       "media": {
         "fallbackAnimation": "chemical_segregation_matrix",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/environments/bg_chemical_building.jpg"
       },
       "mascot": {
         "intro": {
@@ -395,7 +398,9 @@
       "media": {
         "fallbackAnimation": "chemical_deo_posting",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/environments/bg_deo_gate_office.jpg",
+        "propSrc": "/Assets/Props/prop_eway_bill_tablet.png"
       },
       "mascot": {
         "intro": {
@@ -498,7 +503,8 @@
       "media": {
         "fallbackAnimation": "static_bonding_clamp",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/environments/bg_chemical_building.jpg"
       },
       "mascot": {
         "intro": {

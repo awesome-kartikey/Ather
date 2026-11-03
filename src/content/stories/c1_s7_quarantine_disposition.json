@@ -31,7 +31,9 @@
           "en": "IQC Inspection Bench: 2 defective burnt connector samples trigger an immediate quarantine lockdown of all 1,000 units",
           "hi": "IQC निरीक्षण बेंच: 2 दोषपूर्ण जले हुए कनेक्टर नमूने सभी 1,000 इकाइयों के तत्काल क्वारंटाइन लॉकडाउन को ट्रिगर करते हैं",
           "mr": "IQC तपासणी बेंच: 2 जळालेले सदोष नमुने संपूर्ण 1,000 युनिट्सच्या तात्काळ क्वारंटाइन लॉकडाऊनला कारणीभूत ठरतात"
-        }
+        },
+        "imageSrc": "/Assets/environments/bg_ng_quarantine_area.jpg",
+        "propSrc": "/Assets/Props/prop_warning_cones_iqc.png"
       },
       "interaction": {
         "type": "mcq",
@@ -146,7 +148,9 @@
           "en": "Physical Dual Marking (Red Tag + QC Sticker) and Digital JIRA Validation with mandatory Bug ID",
           "hi": "भौतिक दोहरा अंकन (रेड टैग + क्यूसी स्टिकर) और अनिवार्य बग आईडी के साथ डिजिटल JIRA सत्यापन",
           "mr": "प्रत्यक्ष दुहेरी मार्किंग (रेड टॅग + QC स्टिकर) आणि अनिवार्य Bug ID सह डिजिटल JIRA पडताळणी"
-        }
+        },
+        "imageSrc": "/Assets/environments/bg_ng_quarantine_area.jpg",
+        "propSrc": "/Assets/Props/prop_ng_rejected_tag.png"
       },
       "interaction": {
         "type": "stop_go",
@@ -238,7 +242,8 @@
           "en": "Caged Store SC01 BL: Segregating rejected stock by root cause across Vendor, Transit, and In-House bays",
           "hi": "केज्ड स्टोर SC01 BL: वेंडर, ट्रांजिट और इन-हाउस बे में मूल कारण द्वारा खारिज स्टॉक को अलग करना",
           "mr": "केज्ड स्टोअर SC01 BL: व्हेंडर, ट्रान्झिट आणि इन-हाऊस बे मध्ये कारणांनुसार नाकारलेल्या साहित्याचे वर्गीकरण"
-        }
+        },
+        "imageSrc": "/Assets/environments/bg_ng_quarantine_area.jpg"
       },
       "interaction": {
         "type": "drag_drop",
@@ -364,7 +369,8 @@
           "en": "Material Review Board (MRB): 4-Way Disposition Gateways (Auto-RTV, Rework, Use As-Is, Scrap)",
           "hi": "सामग्री समीक्षा बोर्ड (MRB): 4-तरफा निस्तारण द्वार (Auto-RTV, Rework, Use As-Is, Scrap)",
           "mr": "मटेरियल रिव्ह्यू बोर्ड (MRB): 4-मार्ग विल्हेवाट दालने (Auto-RTV, Rework, Use As-Is, Scrap)"
-        }
+        },
+        "imageSrc": "/Assets/environments/bg_ng_quarantine_area.jpg"
       },
       "interaction": {
         "type": "drag_drop",
@@ -507,7 +513,8 @@
           "en": "Ather Scrapyard & Weighbridge: Industrial twin-shaft shredding and net tare/gross weight verification for Delivery Challan",
           "hi": "एथर स्क्रैपयार्ड और वेईब्रिज: डिलीवरी चालान के लिए औद्योगिक ट्विन-शाफ्ट श्रेडिंग और शुद्ध वजन सत्यापन",
           "mr": "एथर स्क्रॅप यार्ड आणि वेईब्रिज: डिलिव्हरी चलनासाठी औद्योगिक श्रेडिंग आणि प्रत्यक्ष नेट वजनाची खात्री"
-        }
+        },
+        "imageSrc": "/Assets/environments/bg_final_scrapyard.jpg"
       },
       "interaction": {
         "type": "sequence",
@@ -669,7 +676,9 @@
           "en": "Visual Floor Management: Yellow/Amber 'IQC Hold' Cone for lots awaiting inspection decision vs Red 'NG' Cone",
           "hi": "विजुअल फ्लोर मैनेजमेंट: निरीक्षण निर्णय की प्रतीक्षा कर रहे लॉट के लिए पीला/एम्बर 'IQC Hold' कोन बनाम लाल 'NG' कोन",
           "mr": "व्हिज्युअल फ्लोअर मॅनेजमेंट: तपासणी निकालाच्या प्रतीक्षेत असलेल्या लॉटसाठी पिवळा 'IQC Hold' शंकू विरूद्ध लाल 'NG' शंकू"
-        }
+        },
+        "imageSrc": "/Assets/environments/bg_ng_quarantine_area.jpg",
+        "propSrc": "/Assets/Props/prop_warning_cones_iqc.png"
       },
       "interaction": {
         "type": "mcq",
@@ -787,7 +796,8 @@
           "en": "JIRA Ticket Lifecycle: Transitioning from 'QC Done: Fail' to 'Quality Failed' in Caged Quarantine Store SC01 BL",
           "hi": "JIRA टिकट जीवनचक्र: केज्ड क्वारंटाइन स्टोर SC01 BL में 'QC Done: Fail' से 'Quality Failed' में संक्रमण",
           "mr": "JIRA तिकीट जीवनचक्र: केज्ड क्वारंटाइन स्टोअर SC01 BL मध्ये 'QC Done: Fail' ते 'Quality Failed' स्टेटस बदल"
-        }
+        },
+        "imageSrc": "/Assets/environments/bg_ng_quarantine_area.jpg"
       },
       "interaction": {
         "type": "mcq",

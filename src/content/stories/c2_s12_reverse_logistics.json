@@ -36,7 +36,8 @@
           "en": "Empty Container Visual Audit: Identify defective, cracked, or foreign-contaminated totes before stacking onto pallets",
           "hi": "खाली कंटेनर दृश्य ऑडिट: पैलेट पर स्टैक करने से पहले दोषपूर्ण, टूटे हुए या विदेशी-दूषित टोट्स की पहचान करें",
           "mr": "रिकाम्या पेट्यांची तपासणी: पॅलेटवर रचण्यापूर्वी तुटलेली किंवा दूषित झालेली पेटी ओळखा"
-        }
+        },
+        "imageSrc": "/Assets/videos/scene_08_empty_bin_strapping_alt1.jpg"
       },
       "interaction": {
         "type": "spot_error",
@@ -176,7 +177,9 @@
           "en": "Deviation Routing: Supplier rejections default to Auto RTV (3-Day SLA); 'Use As It Is' deviation requires Product Owner approval in JIRA before SAP transfer to QI then UR",
           "hi": "विचलन रूटिंग: सप्लायर अस्वीकृतियां ऑटो RTV (3-दिन SLA) पर डिफॉल्ट होती हैं; 'Use As It Is' विचलन के लिए SAP में QI फिर UR में ट्रांसफर से पहले JIRA में प्रोडक्ट ओनर की मंजूरी आवश्यक है",
           "mr": "विचलन मार्ग: सप्लायरचा नाकारलेला माल ऑटो RTV (3-दिवसांची मुदत) वर जातो; 'Use As It Is' विचलनासाठी SAP मध्ये QI व नंतर UR मध्ये वर्ग करण्यापूर्वी JIRA मध्ये प्रॉडक्ट ओनरची मंजुरी अनिवार्य आहे"
-        }
+        },
+        "imageSrc": "/Assets/videos/scene_08_empty_bin_strapping_alt1.jpg",
+        "propSrc": "/Assets/Props/prop_ng_rejected_tag.png"
       },
       "interaction": {
         "type": "mcq",
@@ -269,7 +272,8 @@
           "en": "Empty Bin Safety Protocol: Maximum stacking height must never exceed 5 feet (operator height) with mandatory ratchet strapping; sweeps occur every 30 minutes",
           "hi": "खाली बिन सुरक्षा प्रोटोकॉल: अनिवार्य शाफ़्ट स्ट्रैपिंग के साथ अधिकतम स्टैकिंग ऊंचाई कभी भी 5 फीट (ऑपरेटर ऊंचाई) से अधिक नहीं होनी चाहिए; सफाई हर 30 मिनट में होती है",
           "mr": "रिकाम्या पेट्यांचा सुरक्षा नियम: थप्पीची उंची ऑपरेटरच्या उंचीपेक्षा (5 फूट) जास्त असता कामा नये आणि पट्टा बांधणे अनिवार्य आहे; दर 30 मिनिटांनी फेऱ्या मारल्या जातात"
-        }
+        },
+        "imageSrc": "/Assets/videos/scene_08_empty_bin_strapping_alt1.jpg"
       },
       "interaction": {
         "type": "stop_go",
@@ -374,7 +378,9 @@
           "mr": "रिव्हर्स डिस्पॅच पूर्तता: प्रत्यक्ष मालाची तपासणी → SAP डिलिव्हरी चलन व ई-वे बिल → ट्रान्सपोर्टरची स्वाक्षरी असलेली LR पावती → JIRA मध्ये 'Returned to vendor' नोंद"
         },
         "videoSrc": "/Assets/videos/scene_08_empty_bin_strapping.mp4",
-        "posterSrc": "/Assets/videos/scene_08_empty_bin_strapping_poster.jpg"
+        "posterSrc": "/Assets/videos/scene_08_empty_bin_strapping_poster.jpg",
+        "propSrc": "/Assets/Props/prop_ratchet_strapping_belt.png",
+        "altPosterSrc": "/Assets/videos/scene_08_empty_bin_strapping_alt1.jpg"
       },
       "interaction": {
         "type": "sequence",
@@ -462,7 +468,8 @@
       "media": {
         "fallbackAnimation": "line_side_gangway_choke",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_08_empty_bin_strapping_alt2.jpg"
       },
       "mascot": {
         "intro": {
@@ -553,7 +560,8 @@
       "media": {
         "fallbackAnimation": "supplier_sla_courier_debit",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_08_empty_bin_strapping_alt2.jpg"
       },
       "mascot": {
         "intro": {
@@ -656,7 +664,8 @@
       "media": {
         "fallbackAnimation": "use_as_is_sequence_lifecycle",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_08_empty_bin_strapping_alt2.jpg"
       },
       "mascot": {
         "intro": {
@@ -766,7 +775,8 @@
       "media": {
         "fallbackAnimation": "reworked_parts_tightened_inspection",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_08_empty_bin_strapping_alt2.jpg"
       },
       "mascot": {
         "intro": {
@@ -857,7 +867,8 @@
       "media": {
         "fallbackAnimation": "scrap_approval_signoff_gate",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/environments/bg_final_scrapyard.jpg"
       },
       "mascot": {
         "intro": {
@@ -960,7 +971,8 @@
       "media": {
         "fallbackAnimation": "empty_bin_truck_dashboard",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_08_empty_bin_strapping_alt2.jpg"
       },
       "mascot": {
         "intro": {
@@ -1070,7 +1082,8 @@
       "media": {
         "fallbackAnimation": "recalled_material_reinspection",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/environments/bg_final_scrapyard.jpg"
       },
       "mascot": {
         "intro": {
@@ -1173,7 +1186,8 @@
       "media": {
         "fallbackAnimation": "grandmaster_celebration_fireworks",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/environments/bg_final_scrapyard.jpg"
       },
       "mascot": {
         "intro": {

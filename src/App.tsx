@@ -84,7 +84,14 @@ export function App() {
     } catch {}
     return 0;
   });
-  const [initialSceneIndex, setInitialSceneIndex] = useState<number>(0);
+  const [initialSceneIndex, setInitialSceneIndex] = useState<number>(() => {
+    try {
+      const hash = window.location.hash;
+      const match = hash.match(/scene=(\d+)/);
+      if (match) return Math.max(0, parseInt(match[1], 10) - 1);
+    } catch {}
+    return 0;
+  });
 
   // Hash route listener
   useEffect(() => {
@@ -95,6 +102,8 @@ export function App() {
           setScreenState('story');
           const match = hash.match(/stage=(\d+)/);
           if (match) setTargetStageIndex(Math.max(0, parseInt(match[1], 10) - 1));
+          const sceneMatch = hash.match(/scene=(\d+)/);
+          if (sceneMatch) setInitialSceneIndex(Math.max(0, parseInt(sceneMatch[1], 10) - 1));
         } else if (hash.startsWith('#signin') || hash.startsWith('#register')) {
           setScreenState('register');
         } else if (hash.startsWith('#results')) {
@@ -149,28 +158,32 @@ export function App() {
     setScreen('register');
   };
 
-  const handleResumeShift = () => {
-    try {
-      const sStage = localStorage.getItem('ather_stage_idx');
-      const sScene = localStorage.getItem('ather_scene_idx');
-      const stage = sStage ? parseInt(sStage, 10) : 0;
-      const scene = sScene ? parseInt(sScene, 10) : 0;
-      setTargetStageIndex(stage);
-      setInitialSceneIndex(scene);
-    } catch { }
-    setScreen('story');
-  };
-
-  const handleRegister = (name: string, employeeId: string, _shift: string) => {
+  const handleRegister = (name: string, employeeId: string, photoUrl?: string, resumeSession?: boolean) => {
     const updatedProfile: UserProfile = {
       ...profile,
       name,
-      operatorId: employeeId
+      operatorId: employeeId,
+      photoUrl: photoUrl || profile.photoUrl
     };
     setProfile(updatedProfile);
     try {
       localStorage.setItem('ather_user_profile', JSON.stringify(updatedProfile));
     } catch { }
+
+    if (resumeSession) {
+      try {
+        const sStage = localStorage.getItem('ather_stage_idx');
+        const sScene = localStorage.getItem('ather_scene_idx');
+        const stage = sStage ? parseInt(sStage, 10) : 0;
+        const scene = sScene ? parseInt(sScene, 10) : 0;
+        setTargetStageIndex(stage);
+        setInitialSceneIndex(scene);
+        setScreen('story', `#player?stage=${stage + 1}`);
+        return;
+      } catch { }
+    }
+
+    setInitialSceneIndex(0);
     setScreen('story', `#player?stage=${targetStageIndex + 1}`);
   };
 
@@ -207,7 +220,6 @@ export function App() {
           onSelectLang={handleSelectLang}
           onStartTraining={handleStartTraining}
           onLaunchModule={handleLaunchModule}
-          onResumeShift={handleResumeShift}
         />
       )}
 

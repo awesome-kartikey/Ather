@@ -31,16 +31,18 @@ export const DockSafetyAnimation: React.FC<Props> = ({
 
   useEffect(() => {
     if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
       if (isPaused) {
         videoRef.current.pause();
       } else {
         videoRef.current.play().catch(() => {});
       }
     }
-  }, [isPaused]);
+  }, [isPaused, videoSrc]);
 
   return (
-    <div className="relative w-full h-[280px] sm:h-[360px] md:h-[400px] bg-slate-950 rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-slate-800 shadow-2xl select-none flex flex-col justify-between">
+    <div className="relative w-full h-full min-h-0 bg-slate-950 rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-slate-800 shadow-2xl select-none flex flex-col justify-between">
       {/* 3D MP4 Real Simulation Video */}
       {videoSrc && viewMode === 'video' && !videoError && (
         <video
@@ -53,11 +55,18 @@ export const DockSafetyAnimation: React.FC<Props> = ({
           muted
           playsInline
           preload="auto"
+          onLoadedData={() => {
+            if (videoRef.current && !isPaused) {
+              videoRef.current.defaultMuted = true;
+              videoRef.current.muted = true;
+              videoRef.current.play().catch(() => {});
+            }
+          }}
           onError={(e) => {
             console.warn('[Ather DOJO] Video stream loading error:', videoSrc, e);
             setVideoError(true);
           }}
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          className="absolute inset-0 w-full h-full object-contain z-0"
         />
       )}
 
@@ -68,7 +77,7 @@ export const DockSafetyAnimation: React.FC<Props> = ({
 
         <svg
           viewBox="0 0 1000 400"
-          preserveAspectRatio="xMidYMid slice"
+          preserveAspectRatio="xMidYMid meet"
           className="w-full h-full absolute inset-0 pointer-events-none"
         >
           {/* Warehouse Exterior Concrete Wall & Bay Door */}

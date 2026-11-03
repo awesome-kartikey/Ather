@@ -22,7 +22,8 @@
         "posterSrc": "/Assets/videos/scene_05_battery_vault_climate_poster.jpg",
         "fallbackAnimation": "battery_dock_auth",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "altPosterSrc": "/Assets/videos/scene_05_battery_vault_climate_alt.jpg"
       },
       "mascot": {
         "intro": {
@@ -113,7 +114,8 @@
       "media": {
         "fallbackAnimation": "cleanroom_vault_env",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_05_battery_vault_climate_alt.jpg"
       },
       "mascot": {
         "intro": {
@@ -216,7 +218,8 @@
       "media": {
         "fallbackAnimation": "battery_sla_countdown",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_05_battery_vault_climate_alt.jpg"
       },
       "mascot": {
         "intro": {
@@ -322,7 +325,8 @@
       "media": {
         "fallbackAnimation": "environmental_breach_alarm",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_05_battery_vault_climate_alt.jpg"
       },
       "mascot": {
         "intro": {
@@ -425,7 +429,8 @@
       "media": {
         "fallbackAnimation": "battery_stacking_seal",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/videos/scene_05_battery_vault_climate_alt.jpg"
       },
       "mascot": {
         "intro": {

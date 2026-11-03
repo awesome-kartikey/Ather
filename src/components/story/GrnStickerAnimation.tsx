@@ -30,7 +30,7 @@ export const GrnStickerAnimation: React.FC<Props> = ({
   }, [hasTriggeredPause, isPaused, onPauseReached]);
 
   return (
-    <div className="relative w-full h-[280px] sm:h-[360px] md:h-[400px] bg-slate-950 rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-slate-800 shadow-2xl select-none flex flex-col justify-between">
+    <div className="relative w-full h-full min-h-0 bg-slate-950 rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-slate-800 shadow-2xl select-none flex flex-col justify-between">
       {/* Optional Real Video Player with Auto Fallback */}
       {videoSrc && videoAvailable && (
         <video

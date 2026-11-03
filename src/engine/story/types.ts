@@ -139,6 +139,10 @@ export type SceneInteraction =
 export interface SceneMedia {
   videoSrc?: string;
   posterSrc?: string;
+  imageSrc?: string;
+  propSrc?: string;
+  altPosterSrc?: string;
+  preferredViewMode?: 'photo' | 'blueprint';
   fallbackAnimation: string;
   durationSeconds: number;
   pauseAtSecond: number;

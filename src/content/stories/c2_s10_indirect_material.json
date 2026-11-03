@@ -57,7 +57,8 @@
           "en": "Indirect Stores Gate: No material leaves CM01 without a verified SAP YMB21 reservation hard copy or validated JIRA PPE ticket",
           "hi": "अप्रत्यक्ष स्टोर गेट: सत्यापित SAP YMB21 आरक्षण हार्ड कॉपी या सत्यापित JIRA PPE टिकट के बिना कोई भी सामग्री CM01 से बाहर नहीं निकलती",
           "mr": "अप्रत्यक्ष स्टोअर सुरक्षा गेट: वैध SAP YMB21 आरक्षण स्लिप किंवा JIRA PPE तिकिटाशिवाय CM01 मधून कोणतीही वस्तू बाहेर देण्यास सक्त मनाई आहे"
-        }
+        },
+        "imageSrc": "/Assets/environments/bg_indirect_material_store.jpg"
       },
       "interaction": {
         "type": "stop_go",
@@ -139,7 +140,8 @@
           "en": "SAP YMB21 Transfer: Systematic movement from Central Stores (CM01) to Maintenance Location (MN01) must be posted in SAP prior to physical handover",
           "hi": "SAP YMB21 स्थानांतरण: भौतिक हैंडओवर से पहले केंद्रीय स्टोर (CM01) से रखरखाव स्थान (MN01) में व्यवस्थित आंदोलन SAP में पोस्ट किया जाना चाहिए",
           "mr": "SAP YMB21 ट्रान्झॅक्शन: प्रत्यक्ष माल देण्यापूर्वी सेंट्रल स्टोअर्स (CM01) मधून मेंटेनन्स (MN01) मध्ये SAP सिस्टीम ट्रान्स्फर पूर्ण करणे बंधनकारक आहे"
-        }
+        },
+        "imageSrc": "/Assets/environments/bg_indirect_material_store.jpg"
       },
       "interaction": {
         "type": "mcq",
@@ -232,7 +234,8 @@
           "en": "Spot the Discrepancy: Audit the Material Requisition Slip for missing Cost Center or invalid target storage location",
           "hi": "विसंगति पहचानें: छूटे हुए लागत केंद्र या अमान्य लक्ष्य भंडारण स्थान के लिए सामग्री मांग पर्ची का ऑडिट करें",
           "mr": "चूक ओळखा: मागणी पत्रकात कॉस्ट सेंटरची जागा रिकामी आहे की स्टोअर लोकेशन चुकीचे आहे हे तपासा"
-        }
+        },
+        "imageSrc": "/Assets/environments/bg_indirect_material_store.jpg"
       },
       "interaction": {
         "type": "spot_error",
@@ -351,7 +354,8 @@
           "en": "Indirect Handover Chain: 1. Audit Reservation → 2. Execute SAP CM01 to MN01 Transfer → 3. Physical Handover → 4. Sign Physical Tracking Log",
           "hi": "अप्रत्यक्ष हैंडओवर श्रृंखला: 1. आरक्षण का ऑडिट करें → 2. SAP CM01 से MN01 स्थानांतरण निष्पादित करें → 3. भौतिक हैंडओवर → 4. भौतिक ट्रैकिंग लॉग पर हस्ताक्षर करें",
           "mr": "माल वाटप क्रम: 1. स्लिप तपासणी → 2. SAP मध्ये CM01 ते MN01 ट्रान्स्फर नोंद → 3. प्रत्यक्ष माल देणे → 4. ट्रॅकिंग नोंदवहीत स्वाक्षरी घेणे"
-        }
+        },
+        "imageSrc": "/Assets/environments/bg_indirect_material_store.jpg"
       },
       "interaction": {
         "type": "sequence",
@@ -439,7 +443,8 @@
       "media": {
         "fallbackAnimation": "ppe_jira_ticket_mandate",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/environments/bg_indirect_material_store.jpg"
       },
       "mascot": {
         "intro": {
@@ -530,7 +535,8 @@
       "media": {
         "fallbackAnimation": "reorder_point_pr_generation",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/environments/bg_indirect_material_store.jpg"
       },
       "mascot": {
         "intro": {

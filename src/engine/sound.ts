@@ -114,26 +114,52 @@ const LANG_VOICE_CODES: Record<LanguageCode, string> = {
   mr: 'mr-IN'
 };
 
+let currentPlaybackSessionId = 0;
+const activeSourceNodes = new Set<AudioBufferSourceNode>();
+const activeAudioElements = new Set<HTMLAudioElement>();
+
 /**
  * Halts any active audio playback: Web Audio buffers, HTMLAudio elements, and SpeechSynthesis.
+ * Increments currentPlaybackSessionId to immediately invalidate any pending asynchronous fetch/decode operations.
  */
 export function stopVoice() {
-  if (currentSourceNode) {
+  currentPlaybackSessionId++;
+
+  // 1. Immediately halt all active AudioBufferSourceNodes
+  for (const source of activeSourceNodes) {
     try {
-      currentSourceNode.stop();
-      currentSourceNode.disconnect();
+      source.onended = null;
+      source.stop(0);
+      source.disconnect();
     } catch {}
-    currentSourceNode = null;
   }
+  activeSourceNodes.clear();
+  currentSourceNode = null;
+
+  // 2. Immediately pause, mute, and clear all active HTMLAudioElements
+  for (const el of activeAudioElements) {
+    try {
+      el.onended = null;
+      el.onerror = null;
+      el.pause();
+      el.currentTime = 0;
+      el.src = '';
+    } catch {}
+  }
+  activeAudioElements.clear();
 
   if (currentAudioEl) {
     try {
+      currentAudioEl.onended = null;
+      currentAudioEl.onerror = null;
       currentAudioEl.pause();
       currentAudioEl.currentTime = 0;
+      currentAudioEl.src = '';
     } catch {}
     currentAudioEl = null;
   }
 
+  // 3. Halt SpeechSynthesis immediately
   if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
     try {
       window.speechSynthesis.cancel();
@@ -154,7 +180,7 @@ export interface VoiceoverOptions {
  * Plays voiceover audio through the volume normalization pipeline (DynamicsCompressorNode + GainNode).
  * Features:
  * - Decoded AudioBuffer caching for zero-latency replays
- * - RMS peak pre-gain leveling
+ * - Monotonic session ID tracking to strictly prevent overlapping playback across screen transitions
  * - Dynamic range compression to eliminate clipping and quiet murmurs
  * - Resilient fallback to HTML5 Audio and Web SpeechSynthesis API
  */
@@ -166,7 +192,10 @@ export async function playNormalizedVoiceover({
   onEnd,
   onError
 }: VoiceoverOptions): Promise<() => void> {
+  // Immediately halt any previous voiceover and lock into a new session
   stopVoice();
+  const sessionId = currentPlaybackSessionId;
+  const isStale = () => sessionId !== currentPlaybackSessionId;
 
   if (!audioSrc && !text) {
     onEnd?.();
@@ -183,13 +212,28 @@ export async function playNormalizedVoiceover({
         let buffer = bufferCache.get(audioSrc);
         if (!buffer) {
           const response = await fetch(audioSrc);
+          if (isStale()) return () => {};
           if (!response.ok) {
             throw new Error(`Failed to fetch audio: ${response.status}`);
           }
           const arrayBuffer = await response.arrayBuffer();
+          if (isStale()) return () => {};
           buffer = await ctx.decodeAudioData(arrayBuffer);
+          if (isStale()) return () => {};
           bufferCache.set(audioSrc, buffer);
         }
+
+        if (isStale()) return () => {};
+
+        // Stop any residual nodes before attaching new one
+        for (const s of activeSourceNodes) {
+          try {
+            s.onended = null;
+            s.stop(0);
+            s.disconnect();
+          } catch {}
+        }
+        activeSourceNodes.clear();
 
         const source = ctx.createBufferSource();
         source.buffer = buffer;
@@ -202,71 +246,105 @@ export async function playNormalizedVoiceover({
         source.connect(preGain);
         preGain.connect(compressor);
 
+        activeSourceNodes.add(source);
         currentSourceNode = source;
 
         source.onended = () => {
+          activeSourceNodes.delete(source);
           if (currentSourceNode === source) {
             currentSourceNode = null;
           }
-          onEnd?.();
+          if (!isStale()) {
+            onEnd?.();
+          }
         };
 
         source.start(0);
-        onStart?.();
+        if (!isStale()) {
+          onStart?.();
+        }
 
         return () => {
           try {
-            source.stop();
+            source.onended = null;
+            source.stop(0);
             source.disconnect();
           } catch {}
+          activeSourceNodes.delete(source);
           if (currentSourceNode === source) {
             currentSourceNode = null;
           }
         };
       }
     } catch (err) {
+      if (isStale()) return () => {};
       console.warn('Web Audio normalized playback failed, attempting HTML5 Audio fallback:', err);
       // Fall through to HTML5 Audio fallback
     }
+
+    if (isStale()) return () => {};
 
     // 2. Fallback to HTML5 Audio element with software volume leveling
     try {
       const audio = new Audio(audioSrc);
       audio.volume = 1.0;
+      activeAudioElements.add(audio);
       currentAudioEl = audio;
 
       let ended = false;
       audio.onended = () => {
-        if (!ended) {
+        activeAudioElements.delete(audio);
+        if (currentAudioEl === audio) currentAudioEl = null;
+        if (!ended && !isStale()) {
           ended = true;
-          currentAudioEl = null;
           onEnd?.();
         }
       };
 
       audio.onerror = () => {
-        if (!ended) {
+        activeAudioElements.delete(audio);
+        if (currentAudioEl === audio) currentAudioEl = null;
+        if (!ended && !isStale()) {
           ended = true;
-          currentAudioEl = null;
           triggerSpeechSynthesis(text, lang, onEnd, onError);
         }
       };
 
       await audio.play();
+      if (isStale()) {
+        try {
+          audio.pause();
+          audio.src = '';
+        } catch {}
+        activeAudioElements.delete(audio);
+        return () => {};
+      }
+
       onStart?.();
 
       return () => {
-        stopVoice();
+        try {
+          audio.pause();
+          audio.src = '';
+        } catch {}
+        activeAudioElements.delete(audio);
       };
     } catch (err) {
+      if (isStale()) return () => {};
       console.warn('HTML5 Audio playback failed, falling back to TTS:', err);
       onError?.();
     }
   }
 
+  if (isStale()) return () => {};
+
   // 3. Fallback to Web SpeechSynthesis API
-  triggerSpeechSynthesis(text, lang, onEnd, onError);
-  onStart?.();
+  triggerSpeechSynthesis(text, lang, () => {
+    if (!isStale()) onEnd?.();
+  }, () => {
+    if (!isStale()) onError?.();
+  });
+  if (!isStale()) onStart?.();
 
   return () => {
     stopVoice();

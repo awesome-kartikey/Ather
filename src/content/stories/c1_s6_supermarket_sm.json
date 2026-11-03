@@ -20,7 +20,9 @@
       "media": {
         "fallbackAnimation": "supermarket_mh1_seal",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/environments/bg_supermarket_sm.jpg",
+        "propSrc": "/Assets/Props/prop_qc_pass_stamp.png"
       },
       "mascot": {
         "intro": {
@@ -111,7 +113,8 @@
       "media": {
         "fallbackAnimation": "supermarket_count_audit",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/environments/bg_supermarket_sm.jpg"
       },
       "mascot": {
         "intro": {
@@ -247,7 +250,8 @@
           "en": "Dual-Access Gravity Flow Rack (3.5° Incline): Rear Loading Lane ensures First-In, First-Out (FIFO) at Front Picking Face",
           "hi": "दोहरे-पहुंच ग्रैविटी फ्लो रैक (3.5° झुकाव): रियर लोडिंग लेन फ्रंट पिकिंग फेस पर पहले आना, पहले जाना (FIFO) सुनिश्चित करता है",
           "mr": "ड्युअल-अ‍ॅक्सेस ग्रॅव्हिटी फ्लो रॅक (3.5° उतार): मागील लोडिंग लेन समोरील पिकिंग फेसवर FIFO स्टॉक रोटेशन सुनिश्चित करते"
-        }
+        },
+        "imageSrc": "/Assets/environments/bg_supermarket_sm.jpg"
       },
       "interaction": {
         "type": "sequence",
@@ -379,7 +383,8 @@
           "en": "Supermarket Front Face: Physical Bin Card ledger and e-Kanban RF barcode replenishment trigger",
           "hi": "सुपरमार्केट फ्रंट फेस: भौतिक बिन कार्ड लेज़र और ई-कानबान आरएफ बारकोड पुनःपूर्ति ट्रिगर",
           "mr": "सुपरमार्केट फ्रंट फेस: प्रत्यक्ष बिन कार्ड नोंदवही आणि ई-कानबान आरएफ बारकोड रिप्लेनिशमेंट ट्रिगर"
-        }
+        },
+        "imageSrc": "/Assets/environments/bg_supermarket_sm.jpg"
       },
       "interaction": {
         "type": "mcq",
@@ -455,7 +460,8 @@
       "media": {
         "fallbackAnimation": "line_pressure_discrepancy",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/environments/bg_supermarket_sm.jpg"
       },
       "mascot": {
         "intro": {
@@ -546,7 +552,8 @@
       "media": {
         "fallbackAnimation": "supermarket_classification_bins",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/environments/bg_supermarket_sm.jpg"
       },
       "mascot": {
         "intro": {

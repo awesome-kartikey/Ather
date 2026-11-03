@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Volume2, VolumeX, Sparkles } from 'lucide-react';
+import { motion } from 'motion/react';
+import { Volume2 } from 'lucide-react';
 import type { MascotPose, LocalizedText, LanguageCode } from '../../engine/story/types';
 import { MASCOT_IMAGE_MAP } from '../../engine/story/assetRegistry';
 import {
   playNormalizedVoiceover,
   stopVoice,
   getAutoVoiceover,
-  setAutoVoiceover,
   subscribeAutoVoiceover
 } from '../../engine/sound';
 
@@ -15,31 +15,38 @@ interface MascotAuraProps {
   dialogue: LocalizedText;
   lang: LanguageCode;
   audioSrc?: string;
+  variant?: 'docked' | 'floating_overlay' | 'compact';
+  onActionClick?: () => void;
+  actionText?: string;
 }
 
 export const MascotAura: React.FC<MascotAuraProps> = ({
   pose,
   dialogue,
   lang,
-  audioSrc
+  audioSrc,
+  variant = 'docked',
+  onActionClick,
+  actionText
 }) => {
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
   const [imgError, setImgError] = useState(false);
-  const [autoVoice, setAutoVoice] = useState<boolean>(getAutoVoiceover());
+  const [autoVoice] = useState<boolean>(getAutoVoiceover());
 
   useEffect(() => {
-    return subscribeAutoVoiceover((enabled) => setAutoVoice(enabled));
+    return subscribeAutoVoiceover(() => {});
   }, []);
 
   const textToSpeak = dialogue?.[lang] || dialogue?.en || '';
   const mascotImgUrl = MASCOT_IMAGE_MAP[pose];
 
-  // Auto-play voiceover with volume normalization whenever dialogue or audioSrc updates
+  // Auto-play voiceover whenever dialogue or audioSrc updates
   useEffect(() => {
     if (!autoVoice) return;
     if (!textToSpeak && !audioSrc) return;
 
     let isCancelled = false;
+    let cancelCallback: (() => void) | null = null;
 
     playNormalizedVoiceover({
       audioSrc,
@@ -54,13 +61,23 @@ export const MascotAura: React.FC<MascotAuraProps> = ({
       onError: () => {
         if (!isCancelled) setIsPlayingAudio(false);
       }
-    }).catch(() => {
-      // Browser autoplay policy might require manual gesture first
-      if (!isCancelled) setIsPlayingAudio(false);
-    });
+    })
+      .then((cleanup) => {
+        if (isCancelled) {
+          cleanup();
+        } else {
+          cancelCallback = cleanup;
+        }
+      })
+      .catch(() => {
+        if (!isCancelled) setIsPlayingAudio(false);
+      });
 
     return () => {
       isCancelled = true;
+      if (cancelCallback) {
+        cancelCallback();
+      }
       stopVoice();
       setIsPlayingAudio(false);
     };
@@ -85,162 +102,191 @@ export const MascotAura: React.FC<MascotAuraProps> = ({
     });
   };
 
-  return (
-    <div className="flex items-end gap-3 sm:gap-4 max-w-3xl w-full z-20">
-      {/* 3D Character Mascot AURA */}
-      <div className="relative shrink-0 flex flex-col items-center">
-        {/* Ambient Halo Glow */}
-        <div
-          className={`absolute -inset-2 rounded-full blur-xl pointer-events-none transition-all duration-500 ${
-            pose === 'warning'
-              ? 'bg-rose-500/30 animate-ping'
-              : pose === 'success' || pose === 'trophy'
-              ? 'bg-emerald-400/35 animate-pulse'
-              : 'bg-teal-400/20'
-          }`}
-        />
+  const isFloating = variant === 'floating_overlay';
+  const isCompact = variant === 'compact';
 
-        {/* Mascot Avatar Canvas */}
-        <div className="w-20 h-20 sm:w-24 sm:h-24 relative rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950 p-1.5 border-2 border-emerald-400/60 shadow-xl shadow-emerald-950/40 flex items-center justify-center overflow-hidden">
+  // Distinct living animation profiles for each pose
+  const poseAnimation = (() => {
+    switch (pose) {
+      case 'warning':
+        return {
+          animate: {
+            y: [0, -5, 0],
+            rotate: [0, -3.5, 3.5, -2, 2, 0],
+            scale: [1, 1.05, 1]
+          },
+          transition: { duration: 1.8, repeat: Infinity, ease: 'easeInOut' as const }
+        };
+      case 'success':
+      case 'trophy':
+        return {
+          animate: {
+            y: [0, -12, -2, -8, 0],
+            rotate: [0, -4, 4, -2, 2, 0],
+            scale: [1, 1.08, 1]
+          },
+          transition: { duration: 2.2, repeat: Infinity, ease: 'easeInOut' as const }
+        };
+      case 'thinking':
+        return {
+          animate: {
+            y: [0, -6, 0],
+            rotate: [-3, 3, -3],
+            scale: [1, 1.02, 1]
+          },
+          transition: { duration: 3.0, repeat: Infinity, ease: 'easeInOut' as const }
+        };
+      case 'explaining':
+        return {
+          animate: {
+            y: [0, -7, 0],
+            rotate: [0, 2, -1.5, 0],
+            scale: isPlayingAudio ? [1, 1.05, 1] : [1, 1.02, 1]
+          },
+          transition: { duration: isPlayingAudio ? 1.6 : 2.8, repeat: Infinity, ease: 'easeInOut' as const }
+        };
+      default:
+        return {
+          animate: {
+            y: [0, -8, 0],
+            rotate: [0, 1.5, -1.5, 0]
+          },
+          transition: { duration: 3.2, repeat: Infinity, ease: 'easeInOut' as const }
+        };
+    }
+  })();
+
+  return (
+    <div
+      className={`flex w-full select-none transition-all duration-300 ${
+        isFloating
+          ? 'items-end gap-3 p-1.5 sm:p-2'
+          : 'items-center gap-2.5 sm:gap-3.5 p-0'
+      }`}
+    >
+      {/* Aura Character Avatar */}
+      <motion.div
+        animate={poseAnimation.animate}
+        transition={poseAnimation.transition}
+        className="relative shrink-0 flex flex-col items-center z-10"
+      >
+        {/* Ambient Halo on Warning/Success only - Blue halo removed */}
+        {(pose === 'warning' || pose === 'success' || pose === 'trophy') && (
+          <div
+            className={`absolute -inset-2 rounded-full blur-xl pointer-events-none transition-all duration-500 opacity-60 ${
+              pose === 'warning'
+                ? 'bg-rose-500/40'
+                : 'bg-emerald-400/40'
+            }`}
+          />
+        )}
+
+        <div
+          className={`relative flex items-center justify-center transition-all bg-transparent ${
+            isCompact
+              ? 'w-16 h-16'
+              : isFloating
+              ? 'w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40'
+              : 'w-20 h-20 sm:w-24 sm:h-24 md:w-26 md:h-26'
+          }`}
+        >
           {!imgError && mascotImgUrl ? (
             <img
               src={mascotImgUrl}
               alt={`AURA (${pose})`}
               onError={() => setImgError(true)}
-              className="w-full h-full object-contain drop-shadow-md transition-transform duration-300 hover:scale-105"
+              className="w-full h-full object-contain filter drop-shadow-xl hover:scale-105 transition-transform"
             />
           ) : (
-            /* Procedural SVG Fallback */
-            <svg
-              viewBox="0 0 100 100"
-              className="w-full h-full drop-shadow-md"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {/* Hover Floating Shadow */}
-              <ellipse cx="50" cy="92" rx="28" ry="4" fill="#022c22" opacity="0.6" />
-
-              {/* Ather Bot Head Chassis */}
-              <rect
-                x="20"
-                y="18"
-                width="60"
-                height="52"
-                rx="16"
-                fill="url(#auraBodyGradient)"
-                stroke="#059669"
-                strokeWidth="2"
-              />
-
-              {/* Emerald Ear Nodes */}
-              <rect x="14" y="32" width="6" height="24" rx="3" fill="#10b981" />
-              <rect x="80" y="32" width="6" height="24" rx="3" fill="#10b981" />
-
-              {/* Glowing Digital Visor Frame */}
-              <rect
-                x="26"
-                y="26"
-                width="48"
-                height="32"
-                rx="10"
-                fill="#0f172a"
-                stroke="#10b981"
-                strokeWidth="1.5"
-              />
-
-              {/* Expressive Eye Visor Render */}
-              {pose === 'warning' ? (
-                <g stroke="#f43f5e" strokeWidth="4" strokeLinecap="round">
-                  <line x1="36" y1="36" x2="44" y2="44" />
-                  <line x1="44" y1="36" x2="36" y2="44" />
-                  <line x1="56" y1="36" x2="64" y2="44" />
-                  <line x1="64" y1="36" x2="56" y2="44" />
-                </g>
-              ) : pose === 'success' || pose === 'trophy' ? (
-                <g stroke="#34d399" strokeWidth="3.5" strokeLinecap="round">
-                  <path d="M34 44 Q40 36 46 44" fill="none" />
-                  <path d="M54 44 Q60 36 66 44" fill="none" />
-                  <circle cx="50" cy="48" r="2" fill="#34d399" />
-                </g>
-              ) : pose === 'thinking' ? (
-                <g stroke="#38bdf8" strokeWidth="3" strokeLinecap="round">
-                  <circle cx="40" cy="40" r="4" fill="#38bdf8" />
-                  <path d="M56 38 Q60 34 64 38" fill="none" />
-                </g>
-              ) : (
-                <g stroke="#10b981" strokeWidth="3.5" strokeLinecap="round">
-                  <path d="M34 43 Q40 37 46 43" fill="none" />
-                  <path d="M54 43 Q60 37 66 43" fill="none" />
-                </g>
-              )}
-
-              {/* Bot Neck */}
-              <path d="M42 70 L58 70 L54 78 L46 78 Z" fill="#047857" />
-              <circle cx="50" cy="84" r="5" fill="#10b981" />
-
-              <defs>
-                <linearGradient id="auraBodyGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#ffffff" />
-                  <stop offset="70%" stopColor="#f1f5f9" />
-                  <stop offset="100%" stopColor="#cbd5e1" />
-                </linearGradient>
-              </defs>
-            </svg>
+            <div className="w-full h-full rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white font-bold text-2xl">
+              🤖
+            </div>
           )}
         </div>
 
-        {/* Mascot Name Badge */}
-        <div className="mt-1 px-2.5 py-0.5 rounded-full bg-slate-900 border border-emerald-500/50 text-[10px] font-mono font-bold tracking-wider text-emerald-400 uppercase shadow-xs">
-          AURA · BOT
-        </div>
-      </div>
+        {/* Dynamic breathing shadow beneath Aura in docked mode */}
+        {!isFloating && (
+          <motion.div
+            animate={{
+              scale: [1, 0.82, 1],
+              opacity: [0.35, 0.18, 0.35]
+            }}
+            transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
+            className="w-14 h-2 rounded-full bg-slate-900/30 blur-2xs -mt-1"
+          />
+        )}
+      </motion.div>
 
-      {/* Speech Bubble */}
-      <div className="flex-1 bg-white border-2 border-slate-200/90 rounded-2xl sm:rounded-3xl p-3.5 sm:p-5 shadow-lg relative min-h-[76px] flex flex-col justify-between">
-        {/* Speech bubble pointer arrow */}
-        <div className="absolute left-[-8px] bottom-6 w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-r-[8px] border-r-white" />
+      {/* Rectangular Dialogue Box (Given full remaining width with speech pointer) */}
+      <div
+        className={`flex-1 relative rounded-2xl transition-all p-3 sm:p-4 shadow-sm flex items-center justify-between gap-3 ${
+          isFloating
+            ? 'bg-black/30 backdrop-blur-md border border-white/25 text-white shadow-xl'
+            : 'bg-slate-50 border border-slate-200/90 text-slate-900 shadow-2xs min-h-[82px] sm:min-h-[92px]'
+        }`}
+      >
+        {/* Subtle speech pointer triangle connecting to Aura */}
+        {!isFloating && (
+          <div className="absolute -left-2 top-1/2 -translate-y-1/2 w-0 h-0 border-y-[6px] border-y-transparent border-r-[8px] border-r-slate-200" />
+        )}
 
-        <div className="flex items-start justify-between gap-3">
-          <div className="space-y-1">
-            <div className="flex items-center gap-1.5 text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-700">
-              <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-              <span>AURA Operations Guide</span>
+        <div className="flex-1 min-w-0 pr-1 space-y-1">
+          {/* Contextual Header Tag */}
+          {!isFloating && (
+            <div className="flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+              <span className="text-[10px] font-mono font-extrabold uppercase tracking-wider text-blue-700">
+                AURA · SOP Operations Guide
+              </span>
             </div>
-            <p className="text-slate-800 text-sm sm:text-base font-semibold leading-relaxed">
-              {textToSpeak}
-            </p>
-          </div>
+          )}
 
-          {/* Voice Controls: Auto-read toggle + Manual Play/Stop */}
-          <div className="shrink-0 flex items-center gap-1.5 self-start">
-            <button
-              type="button"
-              onClick={() => setAutoVoiceover(!autoVoice)}
-              title={autoVoice ? "Auto-Voice: Active (Click to Disable)" : "Auto-Voice: Off (Click to Enable)"}
-              className={`px-2 py-1.5 rounded-xl border text-[10px] font-mono font-bold flex items-center gap-1 transition-all cursor-pointer ${
-                autoVoice
-                  ? 'bg-emerald-50 text-emerald-800 border-emerald-300'
-                  : 'bg-slate-50 text-slate-500 border-slate-200 hover:bg-slate-100'
-              }`}
-            >
-              <span className="hidden sm:inline">Auto</span>
-              <span className={`w-1.5 h-1.5 rounded-full ${autoVoice ? 'bg-emerald-500 animate-pulse' : 'bg-slate-400'}`} />
-            </button>
-
-            <button
-              type="button"
-              onClick={handlePlayVoice}
-              title={isPlayingAudio ? 'Stop Voiceover' : 'Play Voiceover (Normalized Audio)'}
-              className={`p-2.5 rounded-xl border transition-all cursor-pointer ${
-                isPlayingAudio
-                  ? 'bg-emerald-600 text-white border-emerald-700 shadow-md animate-pulse'
-                  : 'bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200'
-              }`}
-            >
-              {isPlayingAudio ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-            </button>
-          </div>
+          <p
+            className={`text-xs sm:text-sm md:text-[15px] font-bold leading-relaxed ${
+              isFloating
+                ? 'text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]'
+                : 'text-slate-900'
+            }`}
+          >
+            {textToSpeak}
+          </p>
+          {actionText && onActionClick && (
+            <div className="mt-2.5 flex items-center gap-2">
+              <button
+                type="button"
+                onClick={onActionClick}
+                className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 shadow-md transition-all cursor-pointer active:scale-95"
+              >
+                <span>{actionText}</span>
+              </button>
+            </div>
+          )}
         </div>
+
+        {/* Interactive Audio Voiceover Button with Animated Waves */}
+        <button
+          type="button"
+          onClick={handlePlayVoice}
+          title={isPlayingAudio ? 'Mute Voiceover' : 'Play Audio Voiceover'}
+          className={`p-2.5 sm:p-3 rounded-xl border shrink-0 transition-all cursor-pointer ${
+            isPlayingAudio
+              ? 'bg-emerald-600 text-white border-emerald-500 shadow-md animate-pulse'
+              : isFloating
+              ? 'bg-white/20 hover:bg-white/30 text-white border-white/30 shadow-xs'
+              : 'bg-white hover:bg-slate-100 text-slate-700 hover:text-blue-600 border-slate-200 shadow-xs'
+          }`}
+        >
+          {isPlayingAudio ? (
+            <div className="flex items-center gap-0.5 h-4 px-0.5">
+              <span className="w-1 bg-white rounded-full h-3 animate-[pulse_0.4s_ease-in-out_infinite]" />
+              <span className="w-1 bg-white rounded-full h-4 animate-[pulse_0.6s_ease-in-out_infinite]" />
+              <span className="w-1 bg-white rounded-full h-2 animate-[pulse_0.3s_ease-in-out_infinite]" />
+              <span className="w-1 bg-white rounded-full h-3.5 animate-[pulse_0.5s_ease-in-out_infinite]" />
+            </div>
+          ) : (
+            <Volume2 className="w-4 h-4" />
+          )}
+        </button>
       </div>
     </div>
   );
