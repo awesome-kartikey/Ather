@@ -260,7 +260,8 @@ export const DragDropRenderer: React.FC<Props> = ({ step, lang, onComplete }) =>
                   key={item.id}
                   drag
                   dragSnapToOrigin={true}
-                  dragElastic={0.15}
+                  dragElastic={0.06}
+                  dragMomentum={false}
                   whileDrag={{
                     scale: 1.05,
                     zIndex: 100,
@@ -272,7 +273,7 @@ export const DragDropRenderer: React.FC<Props> = ({ step, lang, onComplete }) =>
                   onDrag={handleDrag}
                   onDragEnd={(e, info) => handleDragEnd(e, info, item.id)}
                   onClick={() => handleSelectItem(item)}
-                  className={`touch-none select-none p-3 rounded-xl border text-left flex items-center gap-2.5 transition-all cursor-grab active:cursor-grabbing ${
+                  className={`touch-none select-none p-3 rounded-xl border text-left flex items-center gap-2.5 transition-[border-color,background-color,box-shadow] duration-150 cursor-grab active:cursor-grabbing ${
                     isSelected
                       ? 'border-blue-600 bg-blue-600 text-white shadow-md shadow-blue-600/20 scale-[1.02]'
                       : isCurrentlyDragging

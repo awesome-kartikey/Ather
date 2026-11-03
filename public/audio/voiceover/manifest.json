@@ -1,854 +1,3287 @@
 [
   {
-    "id": "ACT-01-AURA-WELCOME",
-    "filename": "ACT-01-AURA-WELCOME.mp3",
-    "url": "/audio/voiceover/ACT-01-AURA-WELCOME.mp3",
-    "act": "Act I: Inbound Gate Entry & Security Control",
-    "audioNumber": "Audio 01",
-    "type": "opener",
-    "trigger": "Plays during Video 1 when the supplier truck pulls up to the boom barrier.",
-    "vocalDirection": "Bright, professional, warm, welcoming.",
-    "cleanScript": "Welcome to the Ather AURIC Mega-Plant! I'm AURA, your operations assistant. We are ramping up production for the Ather 450X and the Rizta today, which means dozens of supplier trucks will be arriving at our gates. Every single bolt, battery, and body panel must be accounted for with zero errors. Let's make sure nothing unauthorized slips through. Ready for your shift? Let's get to work!",
-    "rawScript": "[warm, enthusiastic] \"Welcome to the Ather AURIC Mega-Plant! I'm AURA, your operations assistant. We are ramping up production for the Ather 450X and the Rizta today, which means dozens of supplier trucks will be arriving at our gates. Every single bolt, battery, and body panel must be accounted for with zero errors. Let's make sure nothing unauthorized slips through. Ready for your shift? Let's get to work!\""
+    "id": "s01_sc01_intro",
+    "filename": "s01_sc01_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 1,
+    "sceneId": "c1_s1_sc01_arrival",
+    "type": "intro",
+    "script": "Namaste! An inbound logistics truck has just reported outside the Auric main gate. Before the boom barrier opens, where must the driver wait?"
   },
   {
-    "id": "ACT-01-Q01-PROMPT",
-    "filename": "ACT-01-Q01-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-01-Q01-PROMPT.mp3",
-    "act": "Act I: Inbound Gate Entry & Security Control",
-    "audioNumber": "Audio 02",
+    "id": "s01_sc01_prompt",
+    "filename": "s01_sc01_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 1,
+    "sceneId": "c1_s1_sc01_arrival",
     "type": "prompt",
-    "trigger": "Video 1 pauses as the driver steps down holding a folder.",
-    "vocalDirection": "Curious, focused, instructive.",
-    "cleanScript": "A supplier truck has reported to the entrance. Before the driver is allowed to walk over to the Data Entry window, security must inspect their personal and vehicle credentials. Which three physical documents must security verify right now?",
-    "rawScript": "[instructive] \"A supplier truck has reported to the entrance. Before the driver is allowed to walk over to the Data Entry window, security must inspect their personal and vehicle credentials. Which three physical documents must security verify right now?\""
+    "script": "The supplier truck reaches the gate. Where does the driver park first?"
   },
   {
-    "id": "ACT-01-Q01-CORRECT",
-    "filename": "ACT-01-Q01-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-01-Q01-CORRECT.mp3",
-    "act": "Act I: Inbound Gate Entry & Security Control",
-    "audioNumber": "Audio 02-A",
+    "id": "s01_sc01_correct",
+    "filename": "s01_sc01_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 1,
+    "sceneId": "c1_s1_sc01_arrival",
     "type": "correct",
-    "trigger": "Feedback after answering Question 1 correctly.",
-    "vocalDirection": "Spot on, cheerful.",
-    "cleanScript": "Spot on! Security must verify the driver's License, vehicle RC book, and vehicle insurance. Once verified, the driver can turn off the engine, park in the waiting yard, and head to the gate-entry desk on foot.",
-    "rawScript": "[cheerful] \"Spot on! Security must verify the driver's License, vehicle RC book, and vehicle insurance. Once verified, the driver can turn off the engine, park in the waiting yard, and head to the gate-entry desk on foot.\""
+    "script": "Spot on! S-O-P Clause 4.1.1 mandates that the driver park in the designated waiting area with engine off, and approach Security on foot."
   },
   {
-    "id": "ACT-01-Q01-WRONG",
-    "filename": "ACT-01-Q01-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-01-Q01-WRONG.mp3",
-    "act": "Act I: Inbound Gate Entry & Security Control",
-    "audioNumber": "Audio 02-B",
+    "id": "s01_sc01_wrong",
+    "filename": "s01_sc01_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 1,
+    "sceneId": "c1_s1_sc01_arrival",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 1 incorrectly.",
-    "vocalDirection": "Concerned, corrective.",
-    "cleanScript": "Hold on! Cargo papers like the Purchase Order and ASN go to the Data Entry Operator, not the gate security guard. Security only verifies the driver's license, vehicle RC, and insurance to ensure legal road compliance.",
-    "rawScript": "[concerned] \"Hold on! Cargo papers like the Purchase Order and ASN go to the Data Entry Operator, not the gate security guard. Security only verifies the driver's license, vehicle RC, and insurance to ensure legal road compliance.\""
+    "script": "Careful! A truck must never drive straight inside or idle its engine. Vehicles must park in the designated waiting yard with engine off."
   },
   {
-    "id": "ACT-01-Q02-PROMPT",
-    "filename": "ACT-01-Q02-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-01-Q02-PROMPT.mp3",
-    "act": "Act I: Inbound Gate Entry & Security Control",
-    "audioNumber": "Audio 03",
+    "id": "s01_sc02_intro",
+    "filename": "s01_sc02_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 2,
+    "sceneId": "c1_s1_sc02_doc_sorting",
+    "type": "intro",
+    "script": "The driver has walked into the gatehouse holding 5 physical documents. Let's make sure each document is submitted to the correct desk!"
+  },
+  {
+    "id": "s01_sc02_prompt",
+    "filename": "s01_sc02_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 2,
+    "sceneId": "c1_s1_sc02_doc_sorting",
     "type": "prompt",
-    "trigger": "A line of trucks starts backing up outside the gate.",
-    "vocalDirection": "Fast-paced, urgent.",
-    "cleanScript": "Attention! Incoming trucks are backing up past the waiting parking zone and spilling out onto the main access road. Our 15-minute Gate Entry clearance KPI is about to be breached! What does the standard operating procedure require the operator to do?",
-    "rawScript": "[urgent] \"Attention! Incoming trucks are backing up past the waiting parking zone and spilling out onto the main access road. Our 15-minute Gate Entry clearance KPI is about to be breached! What does the standard operating procedure require the operator to do?\""
+    "script": "Sort each incoming document to the correct reception desk."
   },
   {
-    "id": "ACT-01-Q02-CORRECT",
-    "filename": "ACT-01-Q02-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-01-Q02-CORRECT.mp3",
-    "act": "Act I: Inbound Gate Entry & Security Control",
-    "audioNumber": "Audio 03-A",
+    "id": "s01_sc02_correct",
+    "filename": "s01_sc02_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 2,
+    "sceneId": "c1_s1_sc02_doc_sorting",
     "type": "correct",
-    "trigger": "Feedback after answering Question 2 correctly.",
-    "vocalDirection": "Approving.",
-    "cleanScript": "Correct! Under clearance pressure, we accelerate data entry and switch from strict First-In-First-Out to prioritize urgent production materials needed immediately on the line.",
-    "rawScript": "[approving] \"Correct! Under clearance pressure, we accelerate data entry and switch from strict First-In-First-Out to prioritize urgent production materials needed immediately on the line.\""
+    "script": "Excellent separation! Security handles personal driver & vehicle credentials, while the DEO processes shipping papers to generate the gate pass."
   },
   {
-    "id": "ACT-01-Q02-WRONG",
-    "filename": "ACT-01-Q02-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-01-Q02-WRONG.mp3",
-    "act": "Act I: Inbound Gate Entry & Security Control",
-    "audioNumber": "Audio 03-B",
+    "id": "s01_sc02_wrong",
+    "filename": "s01_sc02_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 2,
+    "sceneId": "c1_s1_sc02_doc_sorting",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 2 incorrectly.",
-    "vocalDirection": "Stern, corrective.",
-    "cleanScript": "Negative. We can never wave trucks through without logging them into SAP, nor do we turn drivers away. We accelerate entry and prioritize critical production parts to prevent line starvation.",
-    "rawScript": "[stern] \"Negative. We can never wave trucks through without logging them into SAP, nor do we turn drivers away. We accelerate entry and prioritize critical production parts to prevent line starvation.\""
+    "script": "Watch out! Shipping documents (PO, A-S-N, Tax Invoice) must go to the DEO for S-A-P processing, while DL and RC go to Security."
   },
   {
-    "id": "ACT-01-Q04-PROMPT",
-    "filename": "ACT-01-Q04-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-01-Q04-PROMPT.mp3",
-    "act": "Act I: Inbound Gate Entry & Security Control",
-    "audioNumber": "Audio 04",
+    "id": "s01_sc03_intro",
+    "filename": "s01_sc03_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 3,
+    "sceneId": "c1_s1_sc03_sap_entry",
+    "type": "intro",
+    "script": "Look at the DEO's screen! They have opened S-A-P GUI. By entering the vendor invoice, S-A-P checks if the physical delivery matches the digital A-S-N."
+  },
+  {
+    "id": "s01_sc03_prompt",
+    "filename": "s01_sc03_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 3,
+    "sceneId": "c1_s1_sc03_sap_entry",
     "type": "prompt",
-    "trigger": "DEO scans paperwork; red alert flashes on the terminal.",
-    "vocalDirection": "Serious, inquisitive.",
-    "cleanScript": "Alert! The vendor invoice lists one hundred brake levers, but the Advance Shipment Notice in SAP only accounts for eighty. The numbers don't match. What is our mandatory SOP action?",
-    "rawScript": "[serious] \"Alert! The vendor invoice lists one hundred brake levers, but the Advance Shipment Notice in SAP only accounts for eighty. The numbers don't match. What is our mandatory SOP action?\""
+    "script": "The DEO enters the vendor invoice in YMM_GATE_ENTRY. What is the role of this transaction, and what happens if the A-S-N is wrong?"
   },
   {
-    "id": "ACT-01-Q04-CORRECT",
-    "filename": "ACT-01-Q04-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-01-Q04-CORRECT.mp3",
-    "act": "Act I: Inbound Gate Entry & Security Control",
-    "audioNumber": "Audio 04-A",
+    "id": "s01_sc03_correct",
+    "filename": "s01_sc03_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 3,
+    "sceneId": "c1_s1_sc03_sap_entry",
     "type": "correct",
-    "trigger": "Feedback after answering Question 4 correctly.",
-    "vocalDirection": "Cheerful, appreciative.",
-    "cleanScript": "Excellent call! We change the status to 'Hold due to ASN', stop the dock allocation immediately, and log it in the WHVE Inbound Alert tool. That sends an automated notification to the supplier to issue a corrected ASN while the truck remains safely parked in the yard.",
-    "rawScript": "[cheerful] \"Excellent call! We change the status to 'Hold due to ASN', stop the dock allocation immediately, and log it in the WHVE Inbound Alert tool. That sends an automated notification to the supplier to issue a corrected ASN while the truck remains safely parked in the yard.\""
+    "script": "Spot on! YMM_GATE_ENTRY auto-fills shipment data from the A-S-N. If the A-S-N doesn't match, gate entry is halted — zero manual overrides for bad data!"
   },
   {
-    "id": "ACT-01-Q04-WRONG",
-    "filename": "ACT-01-Q04-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-01-Q04-WRONG.mp3",
-    "act": "Act I: Inbound Gate Entry & Security Control",
-    "audioNumber": "Audio 04-B",
+    "id": "s01_sc03_wrong",
+    "filename": "s01_sc03_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 3,
+    "sceneId": "c1_s1_sc03_sap_entry",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 4 incorrectly.",
-    "vocalDirection": "Firm, corrective.",
-    "cleanScript": "Never do that! You must never alter invoices manually or allow unverified cargo to dock. If the paperwork doesn't match the ASN, the truck stays on hold in the waiting yard until the supplier issues a corrected notice.",
-    "rawScript": "[firm] \"Never do that! You must never alter invoices manually or allow unverified cargo to dock. If the paperwork doesn't match the ASN, the truck stays on hold in the waiting yard until the supplier issues a corrected notice.\""
+    "script": "Careful! In Auric, there is zero manual override for mismatched paperwork. If the A-S-N is wrong, gate entry cannot proceed."
   },
   {
-    "id": "ACT-01-Q05-PROMPT",
-    "filename": "ACT-01-Q05-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-01-Q05-PROMPT.mp3",
-    "act": "Act I: Inbound Gate Entry & Security Control",
-    "audioNumber": "Audio 05",
+    "id": "s01_sc04_intro",
+    "filename": "s01_sc04_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 4,
+    "sceneId": "c1_s1_sc04_barcode_sequence",
+    "type": "intro",
+    "script": "The DEO runs YPR_GATEENTRY! The printer outputs the windshield barcode pass while the driver watches the status TV. Can you place the driver's gate journey in exact chronological order?"
+  },
+  {
+    "id": "s01_sc04_prompt",
+    "filename": "s01_sc04_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 4,
+    "sceneId": "c1_s1_sc04_barcode_sequence",
     "type": "prompt",
-    "trigger": "Video 2 pauses as the truck backs into Dock Bay 4.",
-    "vocalDirection": "Safety-conscious, authoritative.",
-    "cleanScript": "The delivery truck is backed into Dock Bay 4 and the engine is off. Before the driver hands over the keys and before anyone steps inside that trailer, what physical safety device must be deployed?",
-    "rawScript": "[authoritative] \"The delivery truck is backed into Dock Bay 4 and the engine is off. Before the driver hands over the keys and before anyone steps inside that trailer, what physical safety device must be deployed?\""
+    "script": "Arrange the driver's gate entry journey in the correct chronological order."
   },
   {
-    "id": "ACT-01-Q05-CORRECT",
-    "filename": "ACT-01-Q05-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-01-Q05-CORRECT.mp3",
-    "act": "Act I: Inbound Gate Entry & Security Control",
-    "audioNumber": "Audio 05-A",
+    "id": "s01_sc04_correct",
+    "filename": "s01_sc04_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 4,
+    "sceneId": "c1_s1_sc04_barcode_sequence",
     "type": "correct",
-    "trigger": "Feedback after answering Question 5 correctly.",
-    "vocalDirection": "Approving, safety first.",
-    "cleanScript": "Safety first, always! Wheel chocks must be firmly wedged against the rear tires immediately. That prevents dock walk—where the trailer creeps away from the dock platform during unloading.",
-    "rawScript": "[approving] \"Safety first, always! Wheel chocks must be firmly wedged against the rear tires immediately. That prevents dock walk—where the trailer creeps away from the dock platform during unloading.\""
+    "script": "Flawless sequence! Following the exact order (Park then Credentials then ERP validation then Barcode pass then Dock move) prevents gate congestion and ensures 100 percent material traceability."
   },
   {
-    "id": "ACT-01-Q05-WRONG",
-    "filename": "ACT-01-Q05-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-01-Q05-WRONG.mp3",
-    "act": "Act I: Inbound Gate Entry & Security Control",
-    "audioNumber": "Audio 05-B",
+    "id": "s01_sc04_wrong",
+    "filename": "s01_sc04_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 4,
+    "sceneId": "c1_s1_sc04_barcode_sequence",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 5 incorrectly.",
-    "vocalDirection": "Alarmed, safety critical.",
-    "cleanScript": "Stop! Never begin unloading without placing wheel chocks under the tires! A shifting truck can cause severe crush injuries or drop a forklift between the dock plate and the trailer bed.",
-    "rawScript": "[alarmed] \"Stop! Never begin unloading without placing wheel chocks under the tires! A shifting truck can cause severe crush injuries or drop a forklift between the dock plate and the trailer bed.\""
+    "script": "Hold on! The driver cannot move to the dock before collecting the printed barcode pass. Let's arrange the steps in the exact S-O-P order."
   },
   {
-    "id": "ACT-02-Q06-PROMPT",
-    "filename": "ACT-02-Q06-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-02-Q06-PROMPT.mp3",
-    "act": "Act II: Receiving, GRN & Inbound Quality Control (IQC)",
-    "audioNumber": "Audio 06",
+    "id": "s01_sc05_intro",
+    "filename": "s01_sc05_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 5,
+    "sceneId": "c1_s1_sc05_dock_alloc",
+    "type": "intro",
+    "script": "The DEO executes YMM_DOCK_ALLOCATE! Based on our shipment of vehicle mechanical parts, which warehouse dock on the Auric plant layout must be allocated?"
+  },
+  {
+    "id": "s01_sc05_prompt",
+    "filename": "s01_sc05_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 5,
+    "sceneId": "c1_s1_sc05_dock_alloc",
     "type": "prompt",
-    "trigger": "Video 3 pauses as crates are unloaded onto the receiving dock.",
-    "vocalDirection": "Calculative, engaging.",
-    "cleanScript": "Ten Foldable Large Containers of non-DOL components have just been unloaded at the staging dock. According to receiving guidelines, how many containers must the inbound team move into the IQC testing bay?",
-    "rawScript": "[instructive] \"Ten Foldable Large Containers of non-DOL components have just been unloaded at the staging dock. According to receiving guidelines, how many containers must the inbound team move into the IQC testing bay?\""
+    "script": "The DEO executes YMM_DOCK_ALLOCATE for vehicle assembly parts. Tap the correct allocated bay & dock on the Auric plant layout."
   },
   {
-    "id": "ACT-02-Q06-CORRECT",
-    "filename": "ACT-02-Q06-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-02-Q06-CORRECT.mp3",
-    "act": "Act II: Receiving, GRN & Inbound Quality Control (IQC)",
-    "audioNumber": "Audio 06-A",
+    "id": "s01_sc05_correct",
+    "filename": "s01_sc05_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 5,
+    "sceneId": "c1_s1_sc05_dock_alloc",
     "type": "correct",
-    "trigger": "Feedback after answering Question 6 correctly.",
-    "vocalDirection": "Cheerful.",
-    "cleanScript": "Math checks out! Exactly one container—ten percent of the inward lot volume—goes to the IQC inspection area. The remaining nine containers stay staged in receiving with 'Under IQC' visual cones attached.",
-    "rawScript": "[cheerful] \"Math checks out! Exactly one container—ten percent of the inward lot volume—goes to the IQC inspection area. The remaining nine containers stay staged in receiving with 'Under IQC' visual cones attached.\""
+    "script": "Spot on! Dock 04 in Inbound Bay B is designated for vehicle assembly components. Dock 01 is reserved for battery cells and Dock 06 for hazardous chemicals."
   },
   {
-    "id": "ACT-02-Q06-WRONG",
-    "filename": "ACT-02-Q06-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-02-Q06-WRONG.mp3",
-    "act": "Act II: Receiving, GRN & Inbound Quality Control (IQC)",
-    "audioNumber": "Audio 06-B",
+    "id": "s01_sc05_wrong",
+    "filename": "s01_sc05_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 5,
+    "sceneId": "c1_s1_sc05_dock_alloc",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 6 incorrectly.",
-    "vocalDirection": "Instructive.",
-    "cleanScript": "Not quite. The SOP mandates a strict ten percent sampling ratio for incoming non-DOL lots. For ten containers, exactly one container is brought to IQC.",
-    "rawScript": "[instructive] \"Not quite. The SOP mandates a strict ten percent sampling ratio for incoming non-DOL lots. For ten containers, exactly one container is brought to IQC.\""
+    "script": "Careful! Dock 01 is an environmentally controlled vault for battery cells only, and Dock 06 is for chemicals. Vehicle parts belong at Dock 04 (Bay B)."
   },
   {
-    "id": "ACT-02-Q07-PROMPT",
-    "filename": "ACT-02-Q07-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-02-Q07-PROMPT.mp3",
-    "act": "Act II: Receiving, GRN & Inbound Quality Control (IQC)",
-    "audioNumber": "Audio 07",
+    "id": "s01_sc06_intro",
+    "filename": "s01_sc06_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 6,
+    "sceneId": "c1_s1_sc06_dock_safety",
+    "type": "intro",
+    "script": "The truck is docked at Bay B, Dock 04! Before keys and invoices are handed over and unloading begins, inspect the vehicle for a critical safety violation."
+  },
+  {
+    "id": "s01_sc06_prompt",
+    "filename": "s01_sc06_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 6,
+    "sceneId": "c1_s1_sc06_dock_safety",
     "type": "prompt",
-    "trigger": "Trainee associate suggests sending parts directly to the assembly line.",
-    "vocalDirection": "Thoughtful, quizzical.",
-    "cleanScript": "A coworker wants to flag this new batch as 'Direct-On-Line' to save time and bypass inspection. But remember: this is a new factory ramp-up. Are any incoming parts permitted to bypass IQC during the first six months?",
-    "rawScript": "[quizzical] \"A coworker wants to flag this new batch as 'Direct-On-Line' to save time and bypass inspection. But remember: this is a new factory ramp-up. Are any incoming parts permitted to bypass IQC during the first six months?\""
+    "script": "Spot the immediate safety violation before keys are accepted and unloading starts."
   },
   {
-    "id": "ACT-02-Q07-CORRECT",
-    "filename": "ACT-02-Q07-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-02-Q07-CORRECT.mp3",
-    "act": "Act II: Receiving, GRN & Inbound Quality Control (IQC)",
-    "audioNumber": "Audio 07-A",
+    "id": "s01_sc06_correct",
+    "filename": "s01_sc06_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 6,
+    "sceneId": "c1_s1_sc06_dock_safety",
     "type": "correct",
-    "trigger": "Feedback after answering Question 7 correctly.",
-    "vocalDirection": "Authoritative.",
-    "cleanScript": "That's right! False. In a new factory setting, one hundred percent of incoming parts are classified as Non-DOL for the first six months. Every single lot requires verified quality inspection.",
-    "rawScript": "[authoritative] \"That's right! False. In a new factory setting, one hundred percent of incoming parts are classified as Non-DOL for the first six months. Every single lot requires verified quality inspection.\""
+    "script": "Lifesaving catch! S-O-P Clause 4.1.5 mandates that heavy rubber wheel chocks be placed under rear tires to prevent trailer roll-away when forklifts enter."
   },
   {
-    "id": "ACT-02-Q07-WRONG",
-    "filename": "ACT-02-Q07-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-02-Q07-WRONG.mp3",
-    "act": "Act II: Receiving, GRN & Inbound Quality Control (IQC)",
-    "audioNumber": "Audio 07-B",
+    "id": "s01_sc06_wrong",
+    "filename": "s01_sc06_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 6,
+    "sceneId": "c1_s1_sc06_dock_safety",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 7 incorrectly.",
-    "vocalDirection": "Firm.",
-    "cleanScript": "Incorrect. During the initial six-month factory ramp-up, no parts are allowed Direct-On-Line status. Zero exceptions! Everything must be verified by IQC.",
-    "rawScript": "[firm] \"Incorrect. During the initial six-month factory ramp-up, no parts are allowed Direct-On-Line status. Zero exceptions! Everything must be verified by IQC.\""
+    "script": "High danger alert! If a 3-ton forklift drives inside an unchocked trailer, trailer creep will cause the forklift to plunge into the dock gap!"
   },
   {
-    "id": "ACT-02-Q10-PROMPT",
-    "filename": "ACT-02-Q10-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-02-Q10-PROMPT.mp3",
-    "act": "Act II: Receiving, GRN & Inbound Quality Control (IQC)",
-    "audioNumber": "Audio 08",
+    "id": "s01_sc07_intro",
+    "filename": "s01_sc07_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 7,
+    "sceneId": "c1_s1_sc07_gate_exit",
+    "type": "intro",
+    "script": "Unloading is done! The truck has loaded 20 empty blue F-L-C bins to return to the vendor. At the exit gate, the driver demands: 'Open the boom barrier, these are just Ather's empty bins!' What..."
+  },
+  {
+    "id": "s01_sc07_prompt",
+    "filename": "s01_sc07_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 7,
+    "sceneId": "c1_s1_sc07_gate_exit",
     "type": "prompt",
-    "trigger": "Forklift operator attempts to move untested crates into warehouse high racks.",
-    "vocalDirection": "Sharp warning, high stakes.",
-    "cleanScript": "Wait! That forklift driver is about to lift crates into the high-rise racks while their quality sample is still inside the IQC lab! What will happen if they try to complete this move in SAP EWM?",
-    "rawScript": "[urgent] \"Wait! That forklift driver is about to lift crates into the high-rise racks while their quality sample is still inside the IQC lab! What will happen if they try to complete this move in SAP EWM?\""
+    "script": "The driver wants to leave with 20 empty F-L-C bins without a manual Delivery Challan."
   },
   {
-    "id": "ACT-02-Q10-CORRECT",
-    "filename": "ACT-02-Q10-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-02-Q10-CORRECT.mp3",
-    "act": "Act II: Receiving, GRN & Inbound Quality Control (IQC)",
-    "audioNumber": "Audio 08-A",
+    "id": "s01_sc07_correct",
+    "filename": "s01_sc07_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 7,
+    "sceneId": "c1_s1_sc07_gate_exit",
     "type": "correct",
-    "trigger": "Feedback after answering Question 10 correctly.",
-    "vocalDirection": "Relieved.",
-    "cleanScript": "Exactly right. SAP EWM logically locks the stock under the 'Quality' storage type. The system will reject the putaway scan until IQC posts a QC Pass clearance. Trying to bypass this creates phantom warehouse tasks!",
-    "rawScript": "[relieved] \"Exactly right. SAP EWM logically locks the stock under the 'Quality' storage type. The system will reject the putaway scan until IQC posts a QC Pass clearance. Trying to bypass this creates phantom warehouse tasks!\""
+    "script": "Brilliant vigilance! S-O-P Clause 4.1.6.2 & 4.2.4 strictly enforce that returnable bins/F-L-Cs require an authorized manual Delivery Challan and S-A-P YMM_GATE_EXIT clearance before the exit gate barrier opens!"
   },
   {
-    "id": "ACT-02-Q10-WRONG",
-    "filename": "ACT-02-Q10-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-02-Q10-WRONG.mp3",
-    "act": "Act II: Receiving, GRN & Inbound Quality Control (IQC)",
-    "audioNumber": "Audio 08-B",
+    "id": "s01_sc07_wrong",
+    "filename": "s01_sc07_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 7,
+    "sceneId": "c1_s1_sc07_gate_exit",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 10 incorrectly.",
-    "vocalDirection": "Stern.",
-    "cleanScript": "Careful! The system will block you. Uninspected inventory cannot be put away into active storage bins. It must stay physically and systematically held in receiving until cleared.",
-    "rawScript": "[stern] \"Careful! The system will block you. Uninspected inventory cannot be put away into active storage bins. It must stay physically and systematically held in receiving until cleared.\""
+    "script": "Stop! Never raise the barrier without a manual Delivery Challan . Empty F-L-C bins are valuable Ather company assets. Without a DC, thousands of rupees of packaging exit untracked!"
   },
   {
-    "id": "ACT-03-Q12-PROMPT",
-    "filename": "ACT-03-Q12-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-03-Q12-PROMPT.mp3",
-    "act": "Act III: Systematic Putaway Workflows",
-    "audioNumber": "Audio 09",
+    "id": "s01_sc08_intro",
+    "filename": "s01_sc08_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 8,
+    "sceneId": "c1_s1_sc08_asn_discrepancy",
+    "type": "intro",
+    "script": "Attention DEO! The driver presents an invoice for 50 battery harnesses, but the digital Advanced Shipping Notice (A-S-N) in S-A-P lists 40 pieces under PO 4500018920. Can gate entry proceed under S-O-P Clause 4.2.1?"
+  },
+  {
+    "id": "s01_sc08_prompt",
+    "filename": "s01_sc08_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 8,
+    "sceneId": "c1_s1_sc08_asn_discrepancy",
     "type": "prompt",
-    "trigger": "Video 4 pauses as the forklift places a pallet on shelf beam B-04.",
-    "vocalDirection": "Focused, precise.",
-    "cleanScript": "The pallet is safely placed on rack shelf B-04. The operator is about to drive away to grab the next load. What mandatory step must be completed right now before leaving this aisle?",
-    "rawScript": "[focused] \"The pallet is safely placed on rack shelf B-04. The operator is about to drive away to grab the next load. What mandatory step must be completed right now before leaving this aisle?\""
+    "script": "The physical invoice quantity differs from the digital A-S-N in S-A-P."
   },
   {
-    "id": "ACT-03-Q12-CORRECT",
-    "filename": "ACT-03-Q12-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-03-Q12-CORRECT.mp3",
-    "act": "Act III: Systematic Putaway Workflows",
-    "audioNumber": "Audio 09-A",
+    "id": "s01_sc08_correct",
+    "filename": "s01_sc08_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 8,
+    "sceneId": "c1_s1_sc08_asn_discrepancy",
     "type": "correct",
-    "trigger": "Feedback after answering Question 12 correctly.",
-    "vocalDirection": "Cheerful.",
-    "cleanScript": "Bingo! The operator must scan the physical shelf QR code. This executes the 'location marriage' in SAP EWM, confirms the stock is in its exact physical bin, and closes the active Warehouse Task.",
-    "rawScript": "[cheerful] \"Bingo! The operator must scan the physical shelf QR code. This executes the 'location marriage' in SAP EWM, confirms the stock is in its exact physical bin, and closes the active Warehouse Task.\""
+    "script": "Correct decision! Never generate a gate pass for a mismatched A-S-N. The DEO halts the transaction and alerts the Inbound Gate Incharge (1-Hour SLA) to resolve the vendor A-S-N discrepancy."
   },
   {
-    "id": "ACT-03-Q12-WRONG",
-    "filename": "ACT-03-Q12-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-03-Q12-WRONG.mp3",
-    "act": "Act III: Systematic Putaway Workflows",
-    "audioNumber": "Audio 09-B",
+    "id": "s01_sc08_wrong",
+    "filename": "s01_sc08_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 8,
+    "sceneId": "c1_s1_sc08_asn_discrepancy",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 12 incorrectly.",
-    "vocalDirection": "Concerned.",
-    "cleanScript": "Wait! If you don't scan the shelf QR code, SAP thinks the parts are still sitting on the receiving floor. That open task will flag an inventory mismatch on your shift KPI!",
-    "rawScript": "[concerned] \"Wait! If you don't scan the shelf QR code, SAP thinks the parts are still sitting on the receiving floor. That open task will flag an inventory mismatch on your shift KPI!\""
+    "script": "Violation! Generating a gate pass with an incorrect A-S-N creates major inventory mismatches in S-A-P ERP that block I-Q-C receiving and vendor payment clearance."
   },
   {
-    "id": "ACT-03-Q14-PROMPT",
-    "filename": "ACT-03-Q14-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-03-Q14-PROMPT.mp3",
-    "act": "Act III: Systematic Putaway Workflows",
-    "audioNumber": "Audio 10",
+    "id": "s01_sc09_intro",
+    "filename": "s01_sc09_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 9,
+    "sceneId": "c1_s1_sc09_max_stock_full",
+    "type": "intro",
+    "script": "A scheduled chassis frame truck reports at Gate 01. However, the S-A-P inventory screen indicates that High-Rise Rack storage for frames is already at 100 percent maximum capacity! What is the mandatory DEO action under..."
+  },
+  {
+    "id": "s01_sc09_prompt",
+    "filename": "s01_sc09_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 9,
+    "sceneId": "c1_s1_sc09_max_stock_full",
     "type": "prompt",
-    "trigger": "Video 5 pauses at the airlock doors of the Battery Storage Room.",
-    "vocalDirection": "Sterile, serious, high-tech.",
-    "cleanScript": "We are entering the battery cell storage vault. Lithium-ion cells are extremely sensitive to heat and moisture. What are the strict temperature and relative humidity thresholds required inside this room?",
-    "rawScript": "[serious] \"We are entering the battery cell storage vault. Lithium-ion cells are extremely sensitive to heat and moisture. What are the strict temperature and relative humidity thresholds required inside this room?\""
+    "script": "The maximum stock capacity for this material is full in the warehouse. What must the DEO do?"
   },
   {
-    "id": "ACT-03-Q14-CORRECT",
-    "filename": "ACT-03-Q14-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-03-Q14-CORRECT.mp3",
-    "act": "Act III: Systematic Putaway Workflows",
-    "audioNumber": "Audio 10-A",
+    "id": "s01_sc09_correct",
+    "filename": "s01_sc09_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 9,
+    "sceneId": "c1_s1_sc09_max_stock_full",
     "type": "correct",
-    "trigger": "Feedback after answering Question 14 correctly.",
-    "vocalDirection": "Approving.",
-    "cleanScript": "Spot on! Temperature must stay between twenty to twenty-five degrees Celsius, and relative humidity must be strictly maintained between sixty to sixty-five percent. Any breach can degrade cell chemistry before assembly.",
-    "rawScript": "[approving] \"Spot on! Temperature must stay between twenty to twenty-five degrees Celsius, and relative humidity must be strictly maintained between sixty to sixty-five percent. Any breach can degrade cell chemistry before assembly.\""
+    "script": "Spot-on! The truck remains in the designated waiting parking area until line assembly consumes existing stock and clears warehouse pallet positions. Dumping material on dock gangways is strictly forbidden."
   },
   {
-    "id": "ACT-03-Q14-WRONG",
-    "filename": "ACT-03-Q14-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-03-Q14-WRONG.mp3",
-    "act": "Act III: Systematic Putaway Workflows",
-    "audioNumber": "Audio 10-B",
+    "id": "s01_sc09_wrong",
+    "filename": "s01_sc09_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 9,
+    "sceneId": "c1_s1_sc09_max_stock_full",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 14 incorrectly.",
-    "vocalDirection": "Alarmed.",
-    "cleanScript": "Hazard alert! Battery cells cannot be stored in uncontrolled environments. The room must be strictly twenty to twenty-five degrees Celsius and sixty to sixty-five percent humidity. Check the wall monitor before opening those pallets!",
-    "rawScript": "[alarmed] \"Hazard alert! Battery cells cannot be stored in uncontrolled environments. The room must be strictly twenty to twenty-five degrees Celsius and sixty to sixty-five percent humidity. Check the wall monitor before opening those pallets!\""
+    "script": "Incorrect! Never dump material in active dock corridors or send the supplier away. Truck must wait in parking bay until pallet locations clear."
   },
   {
-    "id": "ACT-03-Q17-PROMPT",
-    "filename": "ACT-03-Q17-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-03-Q17-PROMPT.mp3",
-    "act": "Act III: Systematic Putaway Workflows",
-    "audioNumber": "Audio 11",
+    "id": "s02_sc01_intro",
+    "filename": "s02_sc01_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 1,
+    "sceneId": "c1_s2_sc01_grn_sticker",
+    "type": "intro",
+    "script": "Welcome to Stage 2: Receiving & I-Q-C Clearance! The forklift has offloaded a pallet of brake calipers at Dock 04 Inbound Staging. Look closely at the freshly pasted G-R-N sticker on the pallet. What does..."
+  },
+  {
+    "id": "s02_sc01_prompt",
+    "filename": "s02_sc01_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 1,
+    "sceneId": "c1_s2_sc01_grn_sticker",
     "type": "prompt",
-    "trigger": "Chemical delivery truck docks near the main assembly building.",
-    "vocalDirection": "Urgent, decisive.",
-    "cleanScript": "A transporter is attempting to unload drums of paint thinner at the general assembly building dock because it's raining outside. Can we accept this delivery at this dock?",
-    "rawScript": "[urgent] \"A transporter is attempting to unload drums of paint thinner at the general assembly building dock because it's raining outside. Can we accept this delivery at this dock?\""
+    "script": "Forklifts have offloaded the pallet into Inbound Staging. You inspect the freshly pasted G-R-N sticker and spot a large '?' printed on it. What does this symbol mean?"
   },
   {
-    "id": "ACT-03-Q17-CORRECT",
-    "filename": "ACT-03-Q17-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-03-Q17-CORRECT.mp3",
-    "act": "Act III: Systematic Putaway Workflows",
-    "audioNumber": "Audio 11-A",
+    "id": "s02_sc01_correct",
+    "filename": "s02_sc01_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 1,
+    "sceneId": "c1_s2_sc01_grn_sticker",
     "type": "correct",
-    "trigger": "Feedback after answering Question 17 correctly.",
-    "vocalDirection": "Authoritative.",
-    "cleanScript": "Absolutely not! Flammable chemicals, paints, and thinners must always be transported directly to the dedicated, isolated Chemical Storage Building. Never mix hazardous chemicals with standard vehicle parts!",
-    "rawScript": "[authoritative] \"Absolutely not! Flammable chemicals, paints, and thinners must always be transported directly to the dedicated, isolated Chemical Storage Building. Never mix hazardous chemicals with standard vehicle parts!\""
+    "script": "Spot on! Under the S-O-P for I-Q-C Issuance (Clause 4.1), a '?' on the G-R-N sticker designates Non D-O-L (Non-Direct-on-Line) material. It requires mandatory 10 percent sampling and testing by I-Q-C before..."
   },
   {
-    "id": "ACT-03-Q17-WRONG",
-    "filename": "ACT-03-Q17-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-03-Q17-WRONG.mp3",
-    "act": "Act III: Systematic Putaway Workflows",
-    "audioNumber": "Audio 11-B",
+    "id": "s02_sc01_wrong",
+    "filename": "s02_sc01_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 1,
+    "sceneId": "c1_s2_sc01_grn_sticker",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 17 incorrectly.",
-    "vocalDirection": "Alarmed.",
-    "cleanScript": "Major safety violation! Liquid thinners and paints pose severe fire and vapor hazards. They must proceed immediately to the dedicated chemical warehouse building, equipped with spill basins and spark-proof fittings.",
-    "rawScript": "[alarmed] \"Major safety violation! Liquid thinners and paints pose severe fire and vapor hazards. They must proceed immediately to the dedicated chemical warehouse building, equipped with spill basins and spark-proof fittings.\""
+    "script": "Hold on! A '?' symbol does not mean scrap or direct-to-line. It means Non D-O-L—the material must undergo mandatory I-Q-C sampling. Premature put-away of uninspected stock will be blocked by S-A-P E-W-M!"
   },
   {
-    "id": "ACT-03-Q21-PROMPT",
-    "filename": "ACT-03-Q21-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-03-Q21-PROMPT.mp3",
-    "act": "Act III: Systematic Putaway Workflows",
-    "audioNumber": "Audio 12",
+    "id": "s02_sc02_intro",
+    "filename": "s02_sc02_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 2,
+    "sceneId": "c1_s2_sc02_sampling_calc",
+    "type": "intro",
+    "script": "Now that we know the shipment is Non D-O-L, we must apply the 10 percent statistical sampling rule! The Purchase Order contains 10 F-L-C crates (100 total brake calipers). Exactly how many F-L-C crates must..."
+  },
+  {
+    "id": "s02_sc02_prompt",
+    "filename": "s02_sc02_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 2,
+    "sceneId": "c1_s2_sc02_sampling_calc",
     "type": "prompt",
-    "trigger": "Operator loading small fastener bins into gravity flow racks with an HOPT.",
-    "vocalDirection": "Instructive, organized.",
-    "cleanScript": "We're restocking bolt bins in the C-class supermarket aisle. How should the operator place newly received boxes into the gravity flow racks to adhere to 5S and lean standards?",
-    "rawScript": "[instructive] \"We're restocking bolt bins in the C-class supermarket aisle. How should the operator place newly received boxes into the gravity flow racks to adhere to 5S and lean standards?\""
+    "script": "A Non D-O-L lot of 10 F-L-Cs has arrived. Under the S-O-P 10 percent statistical sampling rule, how many F-L-C crates must go to I-Q-C?"
   },
   {
-    "id": "ACT-03-Q21-CORRECT",
-    "filename": "ACT-03-Q21-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-03-Q21-CORRECT.mp3",
-    "act": "Act III: Systematic Putaway Workflows",
-    "audioNumber": "Audio 12-A",
+    "id": "s02_sc02_correct",
+    "filename": "s02_sc02_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 2,
+    "sceneId": "c1_s2_sc02_sampling_calc",
     "type": "correct",
-    "trigger": "Feedback after answering Question 21 correctly.",
-    "vocalDirection": "First-In, First-Out perfection, cheerful.",
-    "cleanScript": "First-In, First-Out perfection! Always place new boxes behind older inventory, with all part labels facing outwards toward the picker. That guarantees older hardware is consumed before new stock!",
-    "rawScript": "[cheerful] \"First-In, First-Out perfection! Always place new boxes behind older inventory, with all part labels facing outwards toward the picker. That guarantees older hardware is consumed before new stock!\""
+    "script": "Spot on! S-O-P for I-Q-C Issuance (Clause 4.2): Exactly 10 percent of the lot volume (1 out of 10 F-L-Cs) is transferred to I-Q-C staging. The remaining 9 F-L-Cs must stay safely..."
   },
   {
-    "id": "ACT-03-Q21-WRONG",
-    "filename": "ACT-03-Q21-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-03-Q21-WRONG.mp3",
-    "act": "Act III: Systematic Putaway Workflows",
-    "audioNumber": "Audio 12-B",
+    "id": "s02_sc02_wrong",
+    "filename": "s02_sc02_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 2,
+    "sceneId": "c1_s2_sc02_sampling_calc",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 21 incorrectly.",
-    "vocalDirection": "Concerned.",
-    "cleanScript": "Watch your FIFO! Stacking new boxes in front traps older fasteners in the back, causing surface oxidation and inventory aging. Always stock new items behind existing stock.",
-    "rawScript": "[concerned] \"Watch your FIFO! Stacking new boxes in front traps older fasteners in the back, causing surface oxidation and inventory aging. Always stock new items behind existing stock.\""
+    "script": "Calculation error! Under S-O-P Clause 4.2, exactly 10 percent of the inward volume must be sampled. For a 10-F-L-C lot, sending more than 1 F-L-C clutters the test lab, while sending less..."
   },
   {
-    "id": "ACT-04-Q22-PROMPT",
-    "filename": "ACT-04-Q22-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-04-Q22-PROMPT.mp3",
-    "act": "Act IV: Non-Conforming Material Disposition",
-    "audioNumber": "Audio 13",
+    "id": "s02_sc03_intro",
+    "filename": "s02_sc03_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 3,
+    "sceneId": "c1_s2_sc03_iqc_cones",
+    "type": "intro",
+    "script": "The 1 sample crate has gone to the testing lab, but 9 crates of brake calipers are waiting in Inbound Staging! While I-Q-C inspects the sample for up to 2 hours, what mandatory visual identifier..."
+  },
+  {
+    "id": "s02_sc03_prompt",
+    "filename": "s02_sc03_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 3,
+    "sceneId": "c1_s2_sc03_iqc_cones",
     "type": "prompt",
-    "trigger": "Defective part arrived at the quarantine desk without a name on the tag.",
-    "vocalDirection": "Cautious, analytical.",
-    "cleanScript": "A crate of rejected parts arrives at the quarantine desk with a physical Red Tag, but the JIRA ticket lists the Causer as 'Unknown' and has no Bug ID. Can the warehouse accept this material?",
-    "rawScript": "[cautious] \"A crate of rejected parts arrives at the quarantine desk with a physical Red Tag, but the JIRA ticket lists the Causer as 'Unknown' and has no Bug ID. Can the warehouse accept this material?\""
+    "script": "The 9 remaining F-L-C crates are waiting in staging during the 2-hour I-Q-C testing window. What mandatory visual containment must be placed around them?"
   },
   {
-    "id": "ACT-04-Q22-CORRECT",
-    "filename": "ACT-04-Q22-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-04-Q22-CORRECT.mp3",
-    "act": "Act IV: Non-Conforming Material Disposition",
-    "audioNumber": "Audio 13-A",
+    "id": "s02_sc03_correct",
+    "filename": "s02_sc03_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 3,
+    "sceneId": "c1_s2_sc03_iqc_cones",
     "type": "correct",
-    "trigger": "Feedback after answering Question 22 correctly.",
-    "vocalDirection": "Approving.",
-    "cleanScript": "Strict adherence! Do not accept it. The warehouse must decline collection until the SQA or MQA team updates the ticket with a valid Bug ID and identifies the causer within their two-day SLA.",
-    "rawScript": "[approving] \"Strict adherence! Do not accept it. The warehouse must decline collection until the SQA or MQA team updates the ticket with a valid Bug ID and identifies the causer within their two-day SLA.\""
+    "script": "Spot on! S-O-P for I-Q-C Issuance (Clause 4.3): Bright yellow 'UNDER I-Q-C' cones must be placed at the staging perimeter. This visual quarantine stops forklift drivers from mistakenly picking or putting away..."
   },
   {
-    "id": "ACT-04-Q22-WRONG",
-    "filename": "ACT-04-Q22-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-04-Q22-WRONG.mp3",
-    "act": "Act IV: Non-Conforming Material Disposition",
-    "audioNumber": "Audio 13-B",
+    "id": "s02_sc03_wrong",
+    "filename": "s02_sc03_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 3,
+    "sceneId": "c1_s2_sc03_iqc_cones",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 22 incorrectly.",
-    "vocalDirection": "Firm.",
-    "cleanScript": "No! Accepting parts with an 'Unknown' causer creates untraceable ghost inventory and prevents supplier accountability. Reject the transfer until the quality team properly logs the Bug ID.",
-    "rawScript": "[firm] \"No! Accepting parts with an 'Unknown' causer creates untraceable ghost inventory and prevents supplier accountability. Reject the transfer until the quality team properly logs the Bug ID.\""
+    "script": "Quality risk! Never leave uninspected staging unmarked. Yellow 'UNDER I-Q-C' cones are mandatory. Red tags are only for confirmed scrap, and green seals require a passed inspection report."
   },
   {
-    "id": "ACT-04-Q24-PROMPT",
-    "filename": "ACT-04-Q24-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-04-Q24-PROMPT.mp3",
-    "act": "Act IV: Non-Conforming Material Disposition",
-    "audioNumber": "Audio 14",
+    "id": "s02_sc04_intro",
+    "filename": "s02_sc04_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 4,
+    "sceneId": "c1_s2_sc04_handover_sla",
+    "type": "intro",
+    "script": "The G-R-N sticker is pasted and the 10 percent sample is loaded onto the pallet truck! The factory clock is ticking. What is the maximum permissible SLA time window for inbound manpower to physically hand..."
+  },
+  {
+    "id": "s02_sc04_prompt",
+    "filename": "s02_sc04_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 4,
+    "sceneId": "c1_s2_sc04_handover_sla",
     "type": "prompt",
-    "trigger": "Slight paint blemishes discovered on plastic panels; line is starving.",
-    "vocalDirection": "High stakes, decisive.",
-    "cleanScript": "Five hundred side covers have minor cosmetic blemishes. Engineering confirms they are structurally perfect, and the assembly line needs them immediately to avoid a plant shutdown. Who has the sole authority to approve this 'Use As-Is' deviation?",
-    "rawScript": "[serious] \"Five hundred side covers have minor cosmetic blemishes. Engineering confirms they are structurally perfect, and the assembly line needs them immediately to avoid a plant shutdown. Who has the sole authority to approve this 'Use As-Is' deviation?\""
+    "script": "Following G-R-N label application, what is the strict SLA cutoff time for inbound manpower to hand over Non D-O-L samples to the I-Q-C testing room?"
   },
   {
-    "id": "ACT-04-Q24-CORRECT",
-    "filename": "ACT-04-Q24-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-04-Q24-CORRECT.mp3",
-    "act": "Act IV: Non-Conforming Material Disposition",
-    "audioNumber": "Audio 14-A",
+    "id": "s02_sc04_correct",
+    "filename": "s02_sc04_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 4,
+    "sceneId": "c1_s2_sc04_handover_sla",
     "type": "correct",
-    "trigger": "Feedback after answering Question 24 correctly.",
-    "vocalDirection": "Cheerful.",
-    "cleanScript": "Correct! Only the Product Owner can authorize a deviation to consume non-conforming stock. Neither warehouse supervisors nor line leaders can sign off on out-of-spec materials.",
-    "rawScript": "[cheerful] \"Correct! Only the Product Owner can authorize a deviation to consume non-conforming stock. Neither warehouse supervisors nor line leaders can sign off on out-of-spec materials.\""
+    "script": "Precision timing! S-O-P for I-Q-C Issuance (Clause 4.1): Inbound manpower must hand over the Non D-O-L sample to I-Q-C within exactly 30 minutes of G-R-N pasting. Meeting this SLA ensures the 2-hour..."
   },
   {
-    "id": "ACT-04-Q24-WRONG",
-    "filename": "ACT-04-Q24-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-04-Q24-WRONG.mp3",
-    "act": "Act IV: Non-Conforming Material Disposition",
-    "audioNumber": "Audio 14-B",
+    "id": "s02_sc04_wrong",
+    "filename": "s02_sc04_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 4,
+    "sceneId": "c1_s2_sc04_handover_sla",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 24 incorrectly.",
-    "vocalDirection": "Stern.",
-    "cleanScript": "Unauthorized! Shop-floor supervisors and warehouse operators cannot approve deviations. Only the designated Product Owner can legally sign off on a 'Use As-Is' JIRA ticket.",
-    "rawScript": "[stern] \"Unauthorized! Shop-floor supervisors and warehouse operators cannot approve deviations. Only the designated Product Owner can legally sign off on a 'Use As-Is' JIRA ticket.\""
+    "script": "SLA breach warning! Under S-O-P Failure Mode 2, delaying sample handover beyond 30 minutes leaves the Warehouse Order open in S-A-P E-W-M. This blocks subsequent picking orders and delays vehicle assembly line..."
   },
   {
-    "id": "ACT-04-Q28-PROMPT",
-    "filename": "ACT-04-Q28-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-04-Q28-PROMPT.mp3",
-    "act": "Act IV: Non-Conforming Material Disposition",
-    "audioNumber": "Audio 15",
+    "id": "s02_sc05_intro",
+    "filename": "s02_sc05_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 5,
+    "sceneId": "c1_s2_sc05_iqc_outcomes",
+    "type": "intro",
+    "script": "The I-Q-C inspector has finished testing the sample! The incoming lot will receive one of 3 distinct outcomes: Pass, Hold, or NG (Rejected). Warehouse operators must execute the exact physical S-O-P disposition protocol for each..."
+  },
+  {
+    "id": "s02_sc05_prompt",
+    "filename": "s02_sc05_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 5,
+    "sceneId": "c1_s2_sc05_iqc_outcomes",
     "type": "prompt",
-    "trigger": "Defective parts sitting in the RTV quarantine cage for 72 hours.",
-    "vocalDirection": "Direct, business-focused.",
-    "cleanScript": "A supplier was notified of rejected parts three working days ago, but hasn't dispatched a vehicle to collect them. Our quarantine storage is filling up. What is the warehouse authorized to do?",
-    "rawScript": "[business-like] \"A supplier was notified of rejected parts three working days ago, but hasn't dispatched a vehicle to collect them. Our quarantine storage is filling up. What is the warehouse authorized to do?\""
+    "script": "Match the Incoming Quality Control (I-Q-C) outcome to the mandatory physical warehouse action."
   },
   {
-    "id": "ACT-04-Q28-CORRECT",
-    "filename": "ACT-04-Q28-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-04-Q28-CORRECT.mp3",
-    "act": "Act IV: Non-Conforming Material Disposition",
-    "audioNumber": "Audio 15-A",
+    "id": "s02_sc05_correct",
+    "filename": "s02_sc05_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 5,
+    "sceneId": "c1_s2_sc05_iqc_outcomes",
     "type": "correct",
-    "trigger": "Feedback after answering Question 28 correctly.",
-    "vocalDirection": "Approving.",
-    "cleanScript": "Action taken! If the supplier fails to collect within three working days, the warehouse ships the parts back via commercial courier and auto-debits the freight charges directly to the supplier's account!",
-    "rawScript": "[approving] \"Action taken! If the supplier fails to collect within three working days, the warehouse ships the parts back via commercial courier and auto-debits the freight charges directly to the supplier's account!\""
+    "script": "Flawless quality compliance! Under S-O-P Clause 4.5: For PASS, seal the green 'QC Pass' on the G-R-N sticker to release put-away. For HOLD, place the yellow 'I-Q-C Hold' cone. For NG, attach..."
   },
   {
-    "id": "ACT-04-Q28-WRONG",
-    "filename": "ACT-04-Q28-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-04-Q28-WRONG.mp3",
-    "act": "Act IV: Non-Conforming Material Disposition",
-    "audioNumber": "Audio 15-B",
+    "id": "s02_sc05_wrong",
+    "filename": "s02_sc05_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 5,
+    "sceneId": "c1_s2_sc05_iqc_outcomes",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 28 incorrectly.",
-    "vocalDirection": "Instructive.",
-    "cleanScript": "Don't let scrap sit idle! After three working days, the SOP authorizes the warehouse to courier the rejected parts back to the supplier and debit the freight invoice to their account.",
-    "rawScript": "[instructive] \"Don't let scrap sit idle! After three working days, the SOP authorizes the warehouse to courier the rejected parts back to the supplier and debit the freight invoice to their account.\""
+    "script": "Disposition protocol error! Under S-O-P Clause 4.5, never move unsealed parts to High-Rise Racks. When a lot fails, the ENTIRE lot volume must be quarantined with an active Jira defect ticket, not..."
   },
   {
-    "id": "ACT-04-Q29-PROMPT",
-    "filename": "ACT-04-Q29-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-04-Q29-PROMPT.mp3",
-    "act": "Act IV: Non-Conforming Material Disposition",
-    "audioNumber": "Audio 16",
+    "id": "s02_sc06_intro",
+    "filename": "s02_sc06_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 6,
+    "sceneId": "c1_s2_sc06_iqc_definition",
+    "type": "intro",
+    "script": "Welcome to the I-Q-C quality gate! Every pallet offloaded at Dock 04 undergoes strict verification. What does I-Q-C stand for, and what is its primary operational role in Ather Auric Plant M002?"
+  },
+  {
+    "id": "s02_sc06_prompt",
+    "filename": "s02_sc06_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 6,
+    "sceneId": "c1_s2_sc06_iqc_definition",
     "type": "prompt",
-    "trigger": "Damaged frame parts cannot be returned or reworked.",
-    "vocalDirection": "Strict, compliant.",
-    "cleanScript": "These damaged frame brackets were damaged internally and cannot be reworked. Before they are moved to location SC01-BL and tossed into the Scrapyard shredder, whose formal authorization is required?",
-    "rawScript": "[serious] \"These damaged frame brackets were damaged internally and cannot be reworked. Before they are moved to location SC01-BL and tossed into the Scrapyard shredder, whose formal authorization is required?\""
+    "script": "What does I-Q-C stand for, and what is its primary purpose at Ather Auric?"
   },
   {
-    "id": "ACT-04-Q29-CORRECT",
-    "filename": "ACT-04-Q29-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-04-Q29-CORRECT.mp3",
-    "act": "Act IV: Non-Conforming Material Disposition",
-    "audioNumber": "Audio 16-A",
+    "id": "s02_sc06_correct",
+    "filename": "s02_sc06_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 6,
+    "sceneId": "c1_s2_sc06_iqc_definition",
     "type": "correct",
-    "trigger": "Feedback after answering Question 29 correctly.",
-    "vocalDirection": "Authoritative.",
-    "cleanScript": "Spot on! Internal scrappage destroys company assets and requires formal authorization from the Factory or Production Head. Once approved, the parts can be moved to the shredder.",
-    "rawScript": "[authoritative] \"Spot on! Internal scrappage destroys company assets and requires formal authorization from the Factory or Production Head. Once approved, the parts can be moved to the shredder.\""
+    "script": "Correct! I-Q-C stands for Incoming Quality Control. Their team tests incoming supplier components against technical blueprints before parts enter production storage."
   },
   {
-    "id": "ACT-04-Q29-WRONG",
-    "filename": "ACT-04-Q29-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-04-Q29-WRONG.mp3",
-    "act": "Act IV: Non-Conforming Material Disposition",
-    "audioNumber": "Audio 16-B",
+    "id": "s02_sc06_wrong",
+    "filename": "s02_sc06_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 6,
+    "sceneId": "c1_s2_sc06_iqc_definition",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 29 incorrectly.",
-    "vocalDirection": "Alarmed.",
-    "cleanScript": "Stop! Scrapping parts without Production Head authorization leads to severe audit write-off penalties. You must have formal approval on file before shredding anything.",
-    "rawScript": "[alarmed] \"Stop! Scrapping parts without Production Head authorization leads to severe audit write-off penalties. You must have formal approval on file before shredding anything.\""
+    "script": "Incorrect. I-Q-C stands for Incoming Quality Control, ensuring zero defect parts reach vehicle assembly lines."
   },
   {
-    "id": "ACT-05-Q32-PROMPT",
-    "filename": "ACT-05-Q32-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-05-Q32-PROMPT.mp3",
-    "act": "Act V: Bulk Decanting & Preparation",
-    "audioNumber": "Audio 17",
+    "id": "s02_sc07_intro",
+    "filename": "s02_sc07_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 7,
+    "sceneId": "c1_s2_sc07_six_month_rampup",
+    "type": "intro",
+    "script": "Under Ather Quality Policy, during the first 6 months of a new factory launch (Auric Plant ramp-up), which inward supplier materials must be routed to I-Q-C before put-away?"
+  },
+  {
+    "id": "s02_sc07_prompt",
+    "filename": "s02_sc07_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 7,
+    "sceneId": "c1_s2_sc07_six_month_rampup",
     "type": "prompt",
-    "trigger": "Video 6 pauses as a worker finishes decanting 24 panels.",
-    "vocalDirection": "Alert, thoughtful.",
-    "cleanScript": "The internal trolley has capacity for thirty tail panels, but the bulk shipping crate only had twenty-four panels inside. Can the operator push this partially filled trolley out to the paint-line now?",
-    "rawScript": "[quizzical] \"The internal trolley has capacity for thirty tail panels, but the bulk shipping crate only had twenty-four panels inside. Can the operator push this partially filled trolley out to the paint-line now?\""
+    "script": "In a new factory, during the first 6 months, which inward parts must go to I-Q-C?"
   },
   {
-    "id": "ACT-05-Q32-CORRECT",
-    "filename": "ACT-05-Q32-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-05-Q32-CORRECT.mp3",
-    "act": "Act V: Bulk Decanting & Preparation",
-    "audioNumber": "Audio 17-A",
+    "id": "s02_sc07_correct",
+    "filename": "s02_sc07_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 7,
+    "sceneId": "c1_s2_sc07_six_month_rampup",
     "type": "correct",
-    "trigger": "Feedback after answering Question 32 correctly.",
-    "vocalDirection": "Approving.",
-    "cleanScript": "Correct! Never release a partial trolley. The operator must open another container, top the trolley up to its full thirty-unit capacity, and have the Zone Leader inspect it before moving it to the line.",
-    "rawScript": "[approving] \"Correct! Never release a partial trolley. The operator must open another container, top the trolley up to its full thirty-unit capacity, and have the Zone Leader inspect it before moving it to the line.\""
+    "script": "Exactly right! During the initial 6-month ramp-up phase, Direct-on-Line (D-O-L) privileges are suspended. 100 percent of all inward parts are treated as Non D-O-L to validate supplier consistency."
   },
   {
-    "id": "ACT-05-Q32-WRONG",
-    "filename": "ACT-05-Q32-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-05-Q32-WRONG.mp3",
-    "act": "Act V: Bulk Decanting & Preparation",
-    "audioNumber": "Audio 17-B",
+    "id": "s02_sc07_wrong",
+    "filename": "s02_sc07_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 7,
+    "sceneId": "c1_s2_sc07_six_month_rampup",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 32 incorrectly.",
-    "vocalDirection": "Firm.",
-    "cleanScript": "Negative. Partially filled trolleys disrupt the kanban rhythm and risk line starvation mid-shift. The trolley must be filled to one hundred percent capacity before it leaves decanting.",
-    "rawScript": "[firm] \"Negative. Partially filled trolleys disrupt the kanban rhythm and risk line starvation mid-shift. The trolley must be filled to one hundred percent capacity before it leaves decanting.\""
+    "script": "Careful! For the first 6 months of plant launch, ALL incoming supplier parts must undergo I-Q-C inspection to establish baseline quality."
   },
   {
-    "id": "ACT-05-Q35-PROMPT",
-    "filename": "ACT-05-Q35-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-05-Q35-PROMPT.mp3",
-    "act": "Act V: Bulk Decanting & Preparation",
-    "audioNumber": "Audio 18",
+    "id": "s02_sc08_intro",
+    "filename": "s02_sc08_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 8,
+    "sceneId": "c1_s2_sc08_receiving_sequence",
+    "type": "intro",
+    "script": "Mastering the chronological rhythm of receiving is essential! Arrange the 4 mandatory operational stages of Non D-O-L material receiving under S-O-P Clauses 4.1 through 4.5."
+  },
+  {
+    "id": "s02_sc08_prompt",
+    "filename": "s02_sc08_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 8,
+    "sceneId": "c1_s2_sc08_receiving_sequence",
     "type": "prompt",
-    "trigger": "Production schedule shows 20 Black and 10 Red scooters queued.",
-    "vocalDirection": "Instructive, structured.",
-    "cleanScript": "The MES production plan calls for twenty Black scooters followed by ten Red scooters. How does the decanting operator handle replenishment tasks for this mixed production run?",
-    "rawScript": "[instructive] \"The MES production plan calls for twenty Black scooters followed by ten Red scooters. How does the decanting operator handle replenishment tasks for this mixed production run?\""
+    "script": "Put the Non D-O-L Receiving and I-Q-C steps in correct chronological order."
   },
   {
-    "id": "ACT-05-Q35-CORRECT",
-    "filename": "ACT-05-Q35-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-05-Q35-CORRECT.mp3",
-    "act": "Act V: Bulk Decanting & Preparation",
-    "audioNumber": "Audio 18-A",
+    "id": "s02_sc08_correct",
+    "filename": "s02_sc08_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 8,
+    "sceneId": "c1_s2_sc08_receiving_sequence",
     "type": "correct",
-    "trigger": "Feedback after answering Question 35 correctly.",
-    "vocalDirection": "Cheerful.",
-    "cleanScript": "Precision kitting! The operator receives two linked Warehouse Tasks on their terminal: first picking twenty black panels, then ten red panels into the designated trolley slots to match the exact chassis sequence.",
-    "rawScript": "[cheerful] \"Precision kitting! The operator receives two linked Warehouse Tasks on their terminal: first picking twenty black panels, then ten red panels into the designated trolley slots to match the exact chassis sequence.\""
+    "script": "Outstanding! Unload & paste G-R-N label $\\to$ Collect 10 percent sample & place Under I-Q-C cones $\\to$ Physical handover to lab within 30-min SLA $\\to$ Issue Pass, Hold, or NG disposition."
   },
   {
-    "id": "ACT-05-Q35-WRONG",
-    "filename": "ACT-05-Q35-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-05-Q35-WRONG.mp3",
-    "act": "Act V: Bulk Decanting & Preparation",
-    "audioNumber": "Audio 18-B",
+    "id": "s02_sc08_wrong",
+    "filename": "s02_sc08_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 8,
+    "sceneId": "c1_s2_sc08_receiving_sequence",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 35 incorrectly.",
-    "vocalDirection": "Instructive.",
-    "cleanScript": "Not quite. Decanting follows the live MES chassis sequence. The operator must execute separate picking tasks for the exact quantities of each color specified in the build schedule.",
-    "rawScript": "[instructive] \"Not quite. Decanting follows the live MES chassis sequence. The operator must execute separate picking tasks for the exact quantities of each color specified in the build schedule.\""
+    "script": "Out of sequence! The G-R-N label must be pasted before sampling, and the 10 percent sample must be demarcated with cones before lab handover."
   },
   {
-    "id": "ACT-06-Q38-PROMPT",
-    "filename": "ACT-06-Q38-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-06-Q38-PROMPT.mp3",
-    "act": "Act VI: Line Issuance & Synchronized Milk Runs",
-    "audioNumber": "Audio 19",
+    "id": "s02_sc09_intro",
+    "filename": "s02_sc09_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 9,
+    "sceneId": "c1_s2_sc09_sla_overrun_risk",
+    "type": "intro",
+    "script": "Non D-O-L sample crates have been sitting in receiving staging for 75 minutes because the team was busy offloading another truck! Under S-O-P Failure Mode 5.1, what is the critical systemic risk of exceeding the..."
+  },
+  {
+    "id": "s02_sc09_prompt",
+    "filename": "s02_sc09_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 9,
+    "sceneId": "c1_s2_sc09_sla_overrun_risk",
     "type": "prompt",
-    "trigger": "Milk runner loads cart and prepares to drive down the green path.",
-    "vocalDirection": "Dynamic, focused.",
-    "cleanScript": "Our milk runner is picking components from the supermarket to feed the vehicle line. Walk me through the mandatory double-scan procedure required for full system traceability.",
-    "rawScript": "[focused] \"Our milk runner is picking components from the supermarket to feed the vehicle line. Walk me through the mandatory double-scan procedure required for full system traceability.\""
+    "script": "Non D-O-L samples are not issued to I-Q-C within the 30-minute SLA. What is the operational risk?"
   },
   {
-    "id": "ACT-06-Q38-CORRECT",
-    "filename": "ACT-06-Q38-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-06-Q38-CORRECT.mp3",
-    "act": "Act VI: Line Issuance & Synchronized Milk Runs",
-    "audioNumber": "Audio 19-A",
+    "id": "s02_sc09_correct",
+    "filename": "s02_sc09_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 9,
+    "sceneId": "c1_s2_sc09_sla_overrun_risk",
     "type": "correct",
-    "trigger": "Feedback after answering Question 38 correctly.",
-    "vocalDirection": "Cheerful.",
-    "cleanScript": "Spot on! Step one: scan the source rack QR code to confirm part type and unlock the displayed quantity. Step two: deliver to the line and scan the workstation destination QR code to close the warehouse task!",
-    "rawScript": "[cheerful] \"Spot on! Step one: scan the source rack QR code to confirm part type and unlock the displayed quantity. Step two: deliver to the line and scan the workstation destination QR code to close the warehouse task!\""
+    "script": "Spot-on! If samples are not issued within 30 minutes, the open S-A-P WH order stays locked, blocking put-away tasks for all subsequent shipments and starving the vehicle assembly line."
   },
   {
-    "id": "ACT-06-Q38-WRONG",
-    "filename": "ACT-06-Q38-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-06-Q38-WRONG.mp3",
-    "act": "Act VI: Line Issuance & Synchronized Milk Runs",
-    "audioNumber": "Audio 19-B",
+    "id": "s02_sc09_wrong",
+    "filename": "s02_sc09_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 9,
+    "sceneId": "c1_s2_sc09_sla_overrun_risk",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 38 incorrectly.",
-    "vocalDirection": "Concerned.",
-    "cleanScript": "Missing a scan breaks the chain! You must scan both ends: first the source rack to confirm the pick, then the workstation QR code to verify physical delivery.",
-    "rawScript": "[concerned] \"Missing a scan breaks the chain! You must scan both ends: first the source rack to confirm the pick, then the workstation QR code to verify physical delivery.\""
+    "script": "Violation! Delayed I-Q-C handover deadlocks the S-A-P E-W-M queue. Inbound Zone Leader must immediately prioritize sample delivery to clear the system block."
   },
   {
-    "id": "ACT-06-Q39-PROMPT",
-    "filename": "ACT-06-Q39-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-06-Q39-PROMPT.mp3",
-    "act": "Act VI: Line Issuance & Synchronized Milk Runs",
-    "audioNumber": "Audio 20",
+    "id": "s03_sc01_intro",
+    "filename": "s03_sc01_intro.mp3",
+    "stage": 3,
+    "sceneIndex": 1,
+    "sceneId": "c1_s3_sc01_hu_scan",
+    "type": "intro",
+    "script": "Welcome to Stage 3: Vehicle & Battery Parts Put-Away! The incoming brake caliper lot has passed inspection and carries the green 'QC Pass' seal. An M-H-E reach-truck operator arrives with a rugged handheld terminal. Before..."
+  },
+  {
+    "id": "s03_sc01_prompt",
+    "filename": "s03_sc01_prompt.mp3",
+    "stage": 3,
+    "sceneIndex": 1,
+    "sceneId": "c1_s3_sc01_hu_scan",
     "type": "prompt",
-    "trigger": "Video 7 pauses as the runner drops a trolley at Station 4.",
-    "vocalDirection": "Urgent, investigative.",
-    "cleanScript": "Look! The runner dropped the trolley at Station 4 and is walking away without scanning the station pillar QR code! What immediate problem does this cause?",
-    "rawScript": "[urgent] \"Look! The runner dropped the trolley at Station 4 and is walking away without scanning the station pillar QR code! What immediate problem does this cause?\""
+    "script": "In G-R-N staging, what must the M-H-E operator scan first with the rugged handheld terminal to generate the Put-Away Warehouse Task?"
   },
   {
-    "id": "ACT-06-Q39-CORRECT",
-    "filename": "ACT-06-Q39-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-06-Q39-CORRECT.mp3",
-    "act": "Act VI: Line Issuance & Synchronized Milk Runs",
-    "audioNumber": "Audio 20-A",
+    "id": "s03_sc01_correct",
+    "filename": "s03_sc01_correct.mp3",
+    "stage": 3,
+    "sceneIndex": 1,
+    "sceneId": "c1_s3_sc01_hu_scan",
     "type": "correct",
-    "trigger": "Feedback after answering Question 39 correctly.",
-    "vocalDirection": "Approving.",
-    "cleanScript": "Exactly! The Warehouse Task stays open in SAP, the line dashboard triggers a false material shortage alert, and the runner's terminal is locked from receiving the next delivery task!",
-    "rawScript": "[approving] \"Exactly! The Warehouse Task stays open in SAP, the line dashboard triggers a false material shortage alert, and the runner's terminal is locked from receiving the next delivery task!\""
+    "script": "Standard procedure verified! S-O-P Clause 4.1: The operator must scan the pallet-level Handling Unit (HU) barcode on the G-R-N sticker first. Scanning the HU instructs S-A-P E-W-M to generate the Warehouse Task,..."
   },
   {
-    "id": "ACT-06-Q39-WRONG",
-    "filename": "ACT-06-Q39-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-06-Q39-WRONG.mp3",
-    "act": "Act VI: Line Issuance & Synchronized Milk Runs",
-    "audioNumber": "Audio 20-B",
+    "id": "s03_sc01_wrong",
+    "filename": "s03_sc01_wrong.mp3",
+    "stage": 3,
+    "sceneIndex": 1,
+    "sceneId": "c1_s3_sc01_hu_scan",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 39 incorrectly.",
-    "vocalDirection": "Concerned.",
-    "cleanScript": "Physical delivery isn't enough! Without scanning the station QR code, the system cannot verify stock transfer. It shows an active shortage and flags an operational breach.",
-    "rawScript": "[concerned] \"Physical delivery isn't enough! Without scanning the station QR code, the system cannot verify stock transfer. It shows an active shortage and flags an operational breach.\""
+    "script": "Incorrect scan sequence! Under S-O-P Clause 4.1, you cannot begin put-away without scanning the Handling Unit (HU) label first. Moving material before the HU scan leaves S-A-P E-W-M blind to pallet movement,..."
   },
   {
-    "id": "ACT-07-Q43-PROMPT",
-    "filename": "ACT-07-Q43-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-07-Q43-PROMPT.mp3",
-    "act": "Act VII: Indirect Materials & Part Issuance Reports (PIR)",
-    "audioNumber": "Audio 21",
+    "id": "s03_sc02_intro",
+    "filename": "s03_sc02_intro.mp3",
+    "stage": 3,
+    "sceneIndex": 2,
+    "sceneId": "c1_s3_sc02_route_segregation",
+    "type": "intro",
+    "script": "The Handling Unit has been scanned and the warehouse task is active! The forklift reaches a major internal warehouse junction with two diverging paths. Inbound materials arrive in two different packaging forms: standard blue F-L-C..."
+  },
+  {
+    "id": "s03_sc02_prompt",
+    "filename": "s03_sc02_prompt.mp3",
+    "stage": 3,
+    "sceneIndex": 2,
+    "sceneId": "c1_s3_sc02_route_segregation",
     "type": "prompt",
-    "trigger": "Maintenance technician runs up to the tool crib demanding a motor.",
-    "vocalDirection": "Dramatic, high pressure.",
-    "cleanScript": "A maintenance technician rushes up to the crib shouting: 'Conveyor motor three just burned out! Give me that replacement motor right now, I'll log the paperwork tonight!' Do you hand over the motor?",
-    "rawScript": "[dramatic] \"A maintenance technician rushes up to the crib shouting: 'Conveyor motor three just burned out! Give me that replacement motor right now, I'll log the paperwork tonight!' Do you hand over the motor?\""
+    "script": "Where must each incoming container type be routed at the warehouse junction?"
   },
   {
-    "id": "ACT-07-Q43-CORRECT",
-    "filename": "ACT-07-Q43-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-07-Q43-CORRECT.mp3",
-    "act": "Act VII: Indirect Materials & Part Issuance Reports (PIR)",
-    "audioNumber": "Audio 21-A",
+    "id": "s03_sc02_correct",
+    "filename": "s03_sc02_correct.mp3",
+    "stage": 3,
+    "sceneIndex": 2,
+    "sceneId": "c1_s3_sc02_route_segregation",
     "type": "correct",
-    "trigger": "Feedback after answering Question 43 correctly.",
-    "vocalDirection": "Authoritative.",
-    "cleanScript": "Strict compliance holds! No reservation, no issuance. The technician must generate an emergency reservation in SAP using transaction YMB21 charged to their Cost Center. Physical handover happens only after system confirmation!",
-    "rawScript": "[authoritative] \"Strict compliance holds! No reservation, no issuance. The technician must generate an emergency reservation in SAP using transaction YMB21 charged to their Cost Center. Physical handover happens only after system confirmation!\""
+    "script": "Spot on! S-O-P Clause 4.2: Standard F-L-C crates and bins are routed to High-Rise Racks (H-R-R) for vertical stowing via reach-trucks, while large body frames and battery modules on heavy trolleys are..."
   },
   {
-    "id": "ACT-07-Q43-WRONG",
-    "filename": "ACT-07-Q43-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-07-Q43-WRONG.mp3",
-    "act": "Act VII: Indirect Materials & Part Issuance Reports (PIR)",
-    "audioNumber": "Audio 21-B",
+    "id": "s03_sc02_wrong",
+    "filename": "s03_sc02_wrong.mp3",
+    "stage": 3,
+    "sceneIndex": 2,
+    "sceneId": "c1_s3_sc02_route_segregation",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 43 incorrectly.",
-    "vocalDirection": "Firm.",
-    "cleanScript": "Never bypass the system! Handing over expensive machine spares without an SAP reservation causes inventory shrink and leaves maintenance costs unbilled. Always require a verified system reservation.",
-    "rawScript": "[firm] \"Never bypass the system! Handing over expensive machine spares without an SAP reservation causes inventory shrink and leaves maintenance costs unbilled. Always require a verified system reservation.\""
+    "script": "Route routing error! Under S-O-P Clause 4.2, wheeled trolleys cannot be placed on High-Rise Racks due to beam clearance and weight distribution hazards, and F-L-C pallets cannot block the floor-level trolley feeding..."
   },
   {
-    "id": "ACT-07-Q45-PROMPT",
-    "filename": "ACT-07-Q45-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-07-Q45-PROMPT.mp3",
-    "act": "Act VII: Indirect Materials & Part Issuance Reports (PIR)",
-    "audioNumber": "Audio 22",
+    "id": "s03_sc03_intro",
+    "filename": "s03_sc03_intro.mp3",
+    "stage": 3,
+    "sceneIndex": 3,
+    "sceneId": "c1_s3_sc03_bin_marriage",
+    "type": "intro",
+    "script": "The reach-truck has safely transported the F-L-C pallet down Aisle B of the High-Rise Racks. The hydraulic forks elevate the pallet onto shelf level 4 at bin location 'H-R-R-B-04-12'. The pallet is physically resting on..."
+  },
+  {
+    "id": "s03_sc03_prompt",
+    "filename": "s03_sc03_prompt.mp3",
+    "stage": 3,
+    "sceneIndex": 3,
+    "sceneId": "c1_s3_sc03_bin_marriage",
     "type": "prompt",
-    "trigger": "R&D requests 30 prototype battery packs valued at ₹3,00,000.",
-    "vocalDirection": "Analytical, regulatory.",
-    "cleanScript": "A Part Issuance Request has been submitted in JIRA for thirty battery packs worth three lakh rupees for testing. What mandatory leadership approvals are triggered by this request?",
-    "rawScript": "[instructive] \"A Part Issuance Request has been submitted in JIRA for thirty battery packs worth three lakh rupees for testing. What mandatory leadership approvals are triggered by this request?\""
+    "script": "The F-L-C pallet is resting on shelf beam H-R-R-B-04-12. What mandatory action must the operator execute to formally conclude the put-away?"
   },
   {
-    "id": "ACT-07-Q45-CORRECT",
-    "filename": "ACT-07-Q45-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-07-Q45-CORRECT.mp3",
-    "act": "Act VII: Indirect Materials & Part Issuance Reports (PIR)",
-    "audioNumber": "Audio 22-A",
+    "id": "s03_sc03_correct",
+    "filename": "s03_sc03_correct.mp3",
+    "stage": 3,
+    "sceneIndex": 3,
+    "sceneId": "c1_s3_sc03_bin_marriage",
     "type": "correct",
-    "trigger": "Feedback after answering Question 45 correctly.",
-    "vocalDirection": "Approving.",
-    "cleanScript": "Dual-approval unlocked! Because the valuation exceeds twenty-five thousand rupees, the Product Owner must approve. And because the quantity exceeds twenty-five units, the Material Planning team must also sign off!",
-    "rawScript": "[approving] \"Dual-approval unlocked! Because the valuation exceeds twenty-five thousand rupees, the Product Owner must approve. And because the quantity exceeds twenty-five units, the Material Planning team must also sign off!\""
+    "script": "Masterful execution! S-O-P Clause 4.3: The operator must scan the location QR code on rack beam 'H-R-R-B-04-12'. This marries the pallet Handling Unit (HU) to the specific storage bin in S-A-P E-W-M,..."
   },
   {
-    "id": "ACT-07-Q45-WRONG",
-    "filename": "ACT-07-Q45-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-07-Q45-WRONG.mp3",
-    "act": "Act VII: Indirect Materials & Part Issuance Reports (PIR)",
-    "audioNumber": "Audio 22-B",
+    "id": "s03_sc03_wrong",
+    "filename": "s03_sc03_wrong.mp3",
+    "stage": 3,
+    "sceneIndex": 3,
+    "sceneId": "c1_s3_sc03_bin_marriage",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 45 incorrectly.",
-    "vocalDirection": "Instructive.",
-    "cleanScript": "Remember the thresholds: any PIR over twenty-five thousand rupees requires Product Owner sign-off, and any single part quantity over twenty-five units requires Planning team approval.",
-    "rawScript": "[instructive] \"Remember the thresholds: any PIR over twenty-five thousand rupees requires Product Owner sign-off, and any single part quantity over twenty-five units requires Planning team approval.\""
+    "script": "Critical omission! Under S-O-P Clause 4.3 and Failure Mode 2, leaving the rack without scanning the location QR code leaves the Warehouse Task open in S-A-P E-W-M. The inventory remains invisible to..."
   },
   {
-    "id": "ACT-07-Q46-PROMPT",
-    "filename": "ACT-07-Q46-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-07-Q46-PROMPT.mp3",
-    "act": "Act VII: Indirect Materials & Part Issuance Reports (PIR)",
-    "audioNumber": "Audio 23",
+    "id": "s03_sc04_intro",
+    "filename": "s03_sc04_intro.mp3",
+    "stage": 3,
+    "sceneIndex": 4,
+    "sceneId": "c1_s3_sc04_omitted_scan_risk",
+    "type": "intro",
+    "script": "Alert! A trainee operator lifted a pallet of 100 brake calipers onto beam H-R-R-B-04-12, lowered the forks, and immediately drove away toward the breakroom without scanning the rack QR code. What is the immediate operational..."
+  },
+  {
+    "id": "s03_sc04_prompt",
+    "filename": "s03_sc04_prompt.mp3",
+    "stage": 3,
+    "sceneIndex": 4,
+    "sceneId": "c1_s3_sc04_omitted_scan_risk",
     "type": "prompt",
-    "trigger": "Clock on screen reads 3:52 PM; a PIR ticket is pending.",
-    "vocalDirection": "Tense, urgent.",
-    "cleanScript": "Tick-tock! It's three fifty-two in the afternoon. A critical PIR shipment needs to leave the factory today. What is the daily cutoff time for approvals to guarantee same-day pick, pack, and dispatch?",
-    "rawScript": "[urgent] \"Tick-tock! It's three fifty-two in the afternoon. A critical PIR shipment needs to leave the factory today. What is the daily cutoff time for approvals to guarantee same-day pick, pack, and dispatch?\""
+    "script": "An M-H-E operator placed an F-L-C pallet into the rack but forgot to scan the destination location QR code before driving away. What happens?"
   },
   {
-    "id": "ACT-07-Q46-CORRECT",
-    "filename": "ACT-07-Q46-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-07-Q46-CORRECT.mp3",
-    "act": "Act VII: Indirect Materials & Part Issuance Reports (PIR)",
-    "audioNumber": "Audio 23-A",
+    "id": "s03_sc04_correct",
+    "filename": "s03_sc04_correct.mp3",
+    "stage": 3,
+    "sceneIndex": 4,
+    "sceneId": "c1_s3_sc04_omitted_scan_risk",
     "type": "correct",
-    "trigger": "Feedback after answering Question 46 correctly.",
-    "vocalDirection": "Cheerful.",
-    "cleanScript": "Beating the clock! Four PM sharp is the daily cutoff. All tickets approved before four PM are dispatched today; anything cleared after four rolls over to the next working day.",
-    "rawScript": "[cheerful] \"Beating the clock! Four PM sharp is the daily cutoff. All tickets approved before four PM are dispatched today; anything cleared after four rolls over to the next working day.\""
+    "script": "Critical S-O-P insight! S-O-P Clause 5.1 & Failure Mode 2: Because the destination scan was skipped, S-A-P E-W-M leaves the Warehouse Task in an 'OPEN' state. The stock is never posted to..."
   },
   {
-    "id": "ACT-07-Q46-WRONG",
-    "filename": "ACT-07-Q46-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-07-Q46-WRONG.mp3",
-    "act": "Act VII: Indirect Materials & Part Issuance Reports (PIR)",
-    "audioNumber": "Audio 23-B",
+    "id": "s03_sc04_wrong",
+    "filename": "s03_sc04_wrong.mp3",
+    "stage": 3,
+    "sceneIndex": 4,
+    "sceneId": "c1_s3_sc04_omitted_scan_risk",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 46 incorrectly.",
-    "vocalDirection": "Concerned.",
-    "cleanScript": "Missed the deadline! The daily SLA cutoff is four PM. Clearances submitted after four PM cannot meet dispatch schedules and are automatically moved to tomorrow.",
-    "rawScript": "[concerned] \"Missed the deadline! The daily SLA cutoff is four PM. Clearances submitted after four PM cannot meet dispatch schedules and are automatically moved to tomorrow.\""
+    "script": "Misconception! ERP systems cannot detect physical placement without a confirmation barcode scan. Skipping the scan does NOT automatically complete; instead, it creates ghost inventory, keeps the Warehouse Task open, and breaches your..."
   },
   {
-    "id": "ACT-08-Q51-PROMPT",
-    "filename": "ACT-08-Q51-PROMPT.mp3",
-    "url": "/audio/voiceover/ACT-08-Q51-PROMPT.mp3",
-    "act": "Act VIII: Empty Container Management & Reverse Logistics",
-    "audioNumber": "Audio 24",
+    "id": "s03_sc05_intro",
+    "filename": "s03_sc05_intro.mp3",
+    "stage": 3,
+    "sceneIndex": 5,
+    "sceneId": "c1_s3_sc05_bin_slotting_violation",
+    "type": "intro",
+    "script": "Critical situation on Aisle 04! Your handheld terminal screen clearly displays assigned destination bin 'H-R-R-A-02-04'. However, that bin is high on level 2. The operator notices an empty lower rack 'H-R-R-B-03-08' nearby and decides to..."
+  },
+  {
+    "id": "s03_sc05_prompt",
+    "filename": "s03_sc05_prompt.mp3",
+    "stage": 3,
+    "sceneIndex": 5,
+    "sceneId": "c1_s3_sc05_bin_slotting_violation",
     "type": "prompt",
-    "trigger": "Video 8 pauses as black crates reach operator chin level.",
-    "vocalDirection": "Direct, safety-focused.",
-    "cleanScript": "We're stacking empty returnable totes onto a pallet at the end of the line. The stack is getting high. What is the maximum permitted stacking height, and how must the stack be secured?",
-    "rawScript": "[safety-focused] \"We're stacking empty returnable totes onto a pallet at the end of the line. The stack is getting high. What is the maximum permitted stacking height, and how must the stack be secured?\""
+    "script": "The S-A-P handheld displays assigned Bin A, but the operator places the pallet into Bin B to save time. What must be done?"
   },
   {
-    "id": "ACT-08-Q51-CORRECT",
-    "filename": "ACT-08-Q51-CORRECT.mp3",
-    "url": "/audio/voiceover/ACT-08-Q51-CORRECT.mp3",
-    "act": "Act VIII: Empty Container Management & Reverse Logistics",
-    "audioNumber": "Audio 24-A",
+    "id": "s03_sc05_correct",
+    "filename": "s03_sc05_correct.mp3",
+    "stage": 3,
+    "sceneIndex": 5,
+    "sceneId": "c1_s3_sc05_bin_slotting_violation",
     "type": "correct",
-    "trigger": "Feedback after answering Question 51/52 correctly.",
-    "vocalDirection": "Approving.",
-    "cleanScript": "Safety standard met! The stack must never exceed five feet—operator eye-level—to prevent blind spots and tipping hazards. And it must be tightly secured with an industrial ratchet strap before transport.",
-    "rawScript": "[approving] \"Safety standard met! The stack must never exceed five feet—operator eye-level—to prevent blind spots and tipping hazards. And it must be tightly secured with an industrial ratchet strap before transport.\""
+    "script": "STOP IS THE ONLY CORRECT ACTION! S-O-P Clause 4.4 & Question Bank Q23: The system strictly dictates storage bins based on First-In First-Out, part weight, and pick frequency algorithms. Putting stock in..."
   },
   {
-    "id": "ACT-08-Q51-WRONG",
-    "filename": "ACT-08-Q51-WRONG.mp3",
-    "url": "/audio/voiceover/ACT-08-Q51-WRONG.mp3",
-    "act": "Act VIII: Empty Container Management & Reverse Logistics",
-    "audioNumber": "Audio 24-B",
+    "id": "s03_sc05_wrong",
+    "filename": "s03_sc05_wrong.mp3",
+    "stage": 3,
+    "sceneIndex": 5,
+    "sceneId": "c1_s3_sc05_bin_slotting_violation",
     "type": "wrong",
-    "trigger": "Feedback after answering Question 51/52 incorrectly.",
-    "vocalDirection": "Alarmed.",
-    "cleanScript": "Hazard warning! Stacking empty plastic bins higher than five feet creates a serious tip hazard in busy warehouse gangways. Keep it at five feet and always strap it securely.",
-    "rawScript": "[alarmed] \"Hazard warning! Stacking empty plastic bins higher than five feet creates a serious tip hazard in busy warehouse gangways. Keep it at five feet and always strap it securely.\""
+    "script": "CRITICAL STORAGE MISMATCH! Placing pallets in unassigned bins causes 'ghost stockouts' during assembly line picking. The system will flag an open task against your ID and picking operators will find an empty..."
   },
   {
-    "id": "ACT-08-VICTORY",
-    "filename": "ACT-08-VICTORY.mp3",
-    "url": "/audio/voiceover/ACT-08-VICTORY.mp3",
-    "act": "Act VIII: Empty Container Management & Reverse Logistics",
-    "audioNumber": "Audio 25",
+    "id": "s03_sc06_intro",
+    "filename": "s03_sc06_intro.mp3",
+    "stage": 3,
+    "sceneIndex": 6,
+    "sceneId": "c1_s3_sc06_putaway_sequence",
+    "type": "intro",
+    "script": "Final Put-Away certification milestone! You have mastered the rules of handling units, high-rise racks, bin marriage, and error recovery. Now prove your operational mastery by arranging the complete put-away lifecycle in its exact chronological order..."
+  },
+  {
+    "id": "s03_sc06_prompt",
+    "filename": "s03_sc06_prompt.mp3",
+    "stage": 3,
+    "sceneIndex": 6,
+    "sceneId": "c1_s3_sc06_putaway_sequence",
+    "type": "prompt",
+    "script": "Arrange the 5 mandatory put-away steps in the exact operational sequence mandated by S-O-P Clause 4.1 & Question Bank Q21."
+  },
+  {
+    "id": "s03_sc06_correct",
+    "filename": "s03_sc06_correct.mp3",
+    "stage": 3,
+    "sceneIndex": 6,
+    "sceneId": "c1_s3_sc06_putaway_sequence",
+    "type": "correct",
+    "script": "OUTSTANDING ACCURACY! You have successfully mastered the official sequence: (1) Paste G-R-N label, (2) Scan HU label, (3) Carry pallet to the location, (4) Scan location QR code, (5) Task closes and..."
+  },
+  {
+    "id": "s03_sc06_wrong",
+    "filename": "s03_sc06_wrong.mp3",
+    "stage": 3,
+    "sceneIndex": 6,
+    "sceneId": "c1_s3_sc06_putaway_sequence",
+    "type": "wrong",
+    "script": "Incorrect sequence! Remember S-O-P Clause 4.1: The G-R-N label must be pasted first, followed by scanning the HU to initiate the task, transporting to the bin, scanning the rack QR, and finally..."
+  },
+  {
+    "id": "s04_sc01_intro",
+    "filename": "s04_sc01_intro.mp3",
+    "stage": 4,
+    "sceneIndex": 1,
+    "sceneId": "c1_s4_sc01_mhe_auth",
+    "type": "intro",
+    "script": "Welcome to Stage 4: Specialized Battery Cell Put-Away! High-value lithium-ion battery cell crates have arrived at Dock 01. These sensitive cells power the Ather 450-X and are hazardous if mishandled. A general warehouse helper grabs..."
+  },
+  {
+    "id": "s04_sc01_prompt",
+    "filename": "s04_sc01_prompt.mp3",
+    "stage": 4,
+    "sceneIndex": 1,
+    "sceneId": "c1_s4_sc01_mhe_auth",
+    "type": "prompt",
+    "script": "A general warehouse helper attempts to move an unloaded lithium-ion battery cell pallet using a manual hand pallet truck (H-P-T) to clear the dock floor. Allow or halt this transfer?"
+  },
+  {
+    "id": "s04_sc01_correct",
+    "filename": "s04_sc01_correct.mp3",
+    "stage": 4,
+    "sceneIndex": 1,
+    "sceneId": "c1_s4_sc01_mhe_auth",
+    "type": "correct",
+    "script": "STOP IS CORRECT! S-O-P for Battery Cell Put-Away (Clause 4.1): Battery cells must be handled and transported EXCLUSIVELY by certified M-H-E operators using designated electric reach-trucks or powered pallet trucks. Uncertified handling..."
+  },
+  {
+    "id": "s04_sc01_wrong",
+    "filename": "s04_sc01_wrong.mp3",
+    "stage": 4,
+    "sceneIndex": 1,
+    "sceneId": "c1_s4_sc01_mhe_auth",
+    "type": "wrong",
+    "script": "CRITICAL SAFETY VIOLATION! Under S-O-P Clause 4.1, general warehouse associates and manual helpers are strictly prohibited from moving lithium-ion cell shipments. Mishandling fragile battery cells can cause internal short circuits, fire hazards,..."
+  },
+  {
+    "id": "s04_sc02_intro",
+    "filename": "s04_sc02_intro.mp3",
+    "stage": 4,
+    "sceneIndex": 2,
+    "sceneId": "c1_s4_sc02_cleanroom_params",
+    "type": "intro",
+    "script": "The certified M-H-E operator has transported the lithium-ion cell pallet through the airlock into the sealed Battery Standard Room. Before stowing the pallet into the cell vault, the environmental telemetry monitors must be verified. What..."
+  },
+  {
+    "id": "s04_sc02_prompt",
+    "filename": "s04_sc02_prompt.mp3",
+    "stage": 4,
+    "sceneIndex": 2,
+    "sceneId": "c1_s4_sc02_cleanroom_params",
+    "type": "prompt",
+    "script": "Under Ather Auric S-O-P Clause 4.2, what are the mandatory environmental thresholds for the Battery Cell Standard Room?"
+  },
+  {
+    "id": "s04_sc02_correct",
+    "filename": "s04_sc02_correct.mp3",
+    "stage": 4,
+    "sceneIndex": 2,
+    "sceneId": "c1_s4_sc02_cleanroom_params",
+    "type": "correct",
+    "script": "Exact environmental calibration! S-O-P Clause 4.2: The Battery Standard Room must maintain 20 degrees Celsius–25 degrees Celsius temperature and 60 percent–65 percent Relative Humidity (RH) 24/7. This prevents thermal runaway, electrolyte crystallization,..."
+  },
+  {
+    "id": "s04_sc02_wrong",
+    "filename": "s04_sc02_wrong.mp3",
+    "stage": 4,
+    "sceneIndex": 2,
+    "sceneId": "c1_s4_sc02_cleanroom_params",
+    "type": "wrong",
+    "script": "Environmental non-compliance! Under S-O-P Clause 4.2, exceeding 25 degrees Celsius accelerates internal cell degradation, while dropping below 60 percent or exceeding 65 percent humidity creates condensation and static discharge hazards around sensitive..."
+  },
+  {
+    "id": "s04_sc03_intro",
+    "filename": "s04_sc03_intro.mp3",
+    "stage": 4,
+    "sceneIndex": 3,
+    "sceneId": "c1_s4_sc03_sla_countdown",
+    "type": "intro",
+    "script": "Pay close attention to the warehouse clock! Lithium-ion battery cell pallets cannot sit idling on the open receiving dock. Uncontrolled ambient temperature and humidity accelerate electrochemical degradation. Under Ather S-O-P Clause 4.3, what is the..."
+  },
+  {
+    "id": "s04_sc03_prompt",
+    "filename": "s04_sc03_prompt.mp3",
+    "stage": 4,
+    "sceneIndex": 3,
+    "sceneId": "c1_s4_sc03_sla_countdown",
+    "type": "prompt",
+    "script": "Under Ather Auric S-O-P Clause 4.3, what is the mandatory maximum SLA window for completing battery cell put-away from G-R-N staging into the standard room?"
+  },
+  {
+    "id": "s04_sc03_correct",
+    "filename": "s04_sc03_correct.mp3",
+    "stage": 4,
+    "sceneIndex": 3,
+    "sceneId": "c1_s4_sc03_sla_countdown",
+    "type": "correct",
+    "script": "SLA compliance verified! S-O-P Clause 4.3: Put-away from G-R-N staging into the Battery Standard Room has a strict 2-hour SLA. This guarantees that sensitive lithium-ion cells are protected inside the 20 degrees..."
+  },
+  {
+    "id": "s04_sc03_wrong",
+    "filename": "s04_sc03_wrong.mp3",
+    "stage": 4,
+    "sceneIndex": 3,
+    "sceneId": "c1_s4_sc03_sla_countdown",
+    "type": "wrong",
+    "script": "SLA BREACH HAZARD! Under S-O-P Clause 4.3, leaving battery cells on the open dock beyond 2 hours violates Ather quality protocols. Ambient dock heat and humidity accelerate cell self-discharge and pose severe..."
+  },
+  {
+    "id": "s04_sc04_intro",
+    "filename": "s04_sc04_intro.mp3",
+    "stage": 4,
+    "sceneIndex": 4,
+    "sceneId": "c1_s4_sc04_environmental_breach",
+    "type": "intro",
+    "script": "ALARM TRIPPED! As you prepare to complete cell vault put-away, the wall telemetry strobe begins flashing amber: Relative Humidity has spiked to 75.2 percent and temperature is rising to 27.4 degrees Celsius. Moisture is dangerous..."
+  },
+  {
+    "id": "s04_sc04_prompt",
+    "filename": "s04_sc04_prompt.mp3",
+    "stage": 4,
+    "sceneIndex": 4,
+    "sceneId": "c1_s4_sc04_environmental_breach",
+    "type": "prompt",
+    "script": "While transporting lithium-ion cells into the Standard Room, the wall telemetry flashes an amber alert: Relative Humidity has spiked to 75 percent (Limit: 60 percent–65 percent). What is your mandatory..."
+  },
+  {
+    "id": "s04_sc04_correct",
+    "filename": "s04_sc04_correct.mp3",
+    "stage": 4,
+    "sceneIndex": 4,
+    "sceneId": "c1_s4_sc04_environmental_breach",
+    "type": "correct",
+    "script": "PERFECT CRISIS CONTAINMENT! S-O-P Clause 5.2: In the event of an environmental parameter breach, you must immediately halt pallet transit, seal airlock doors to isolate the chamber, and notify the Putaway Zone..."
+  },
+  {
+    "id": "s04_sc04_wrong",
+    "filename": "s04_sc04_wrong.mp3",
+    "stage": 4,
+    "sceneIndex": 4,
+    "sceneId": "c1_s4_sc04_environmental_breach",
+    "type": "wrong",
+    "script": "CATASTROPHIC CONTAMINATION RISK! Never ignore an active environmental breach or attempt to bypass humidity trips. 75 percent RH triggers moisture condensation on lithium-ion terminals, creating hazardous internal micro-shorts and battery fires. Halt,..."
+  },
+  {
+    "id": "s04_sc05_intro",
+    "filename": "s04_sc05_intro.mp3",
+    "stage": 4,
+    "sceneIndex": 5,
+    "sceneId": "c1_s4_sc05_pallet_stacking_integrity",
+    "type": "intro",
+    "script": "Final Stage 4 Battery Cell Challenge! Inside the battery standard room, floor space is tight. An operator notices two lithium-ion cell crates already stacked on a pallet position and attempts to hoist a third crate..."
+  },
+  {
+    "id": "s04_sc05_prompt",
+    "filename": "s04_sc05_prompt.mp3",
+    "stage": 4,
+    "sceneIndex": 5,
+    "sceneId": "c1_s4_sc05_pallet_stacking_integrity",
+    "type": "prompt",
+    "script": "An operator attempts to stack battery cell crates 3-high on a storage pallet despite a triggered red ShockWatch impact indicator on the carton. Allow or halt?"
+  },
+  {
+    "id": "s04_sc05_correct",
+    "filename": "s04_sc05_correct.mp3",
+    "stage": 4,
+    "sceneIndex": 5,
+    "sceneId": "c1_s4_sc05_pallet_stacking_integrity",
+    "type": "correct",
+    "script": "STOP IS ABSOLUTELY MANDATORY! S-O-P Clause 4.4: Lithium-ion battery cell crates have a strict maximum stacking limit of 2 crates high to prevent bottom pouch crushing and internal dielectric puncture. Furthermore, any..."
+  },
+  {
+    "id": "s04_sc05_wrong",
+    "filename": "s04_sc05_wrong.mp3",
+    "stage": 4,
+    "sceneIndex": 5,
+    "sceneId": "c1_s4_sc05_pallet_stacking_integrity",
+    "type": "wrong",
+    "script": "CRITICAL SAFETY HAZARD! Stacking 3 crates high crushes fragile lithium-ion pouches, risking electrolyte leakage and internal short-circuit fire. A red shock indicator means the shipment suffered severe impact during transit and cannot..."
+  },
+  {
+    "id": "s05_sc01_intro",
+    "filename": "s05_sc01_intro.mp3",
+    "stage": 5,
+    "sceneIndex": 1,
+    "sceneId": "c1_s5_sc01_facility_bypass",
+    "type": "intro",
+    "script": "Welcome to Stage 5: Hazardous Chemicals & Thinners Put-Away! A supplier truck carrying drums of flammable thinners, paints, and hazardous solvents arrives at the Auric Main Gate. The driver asks if they should dock at..."
+  },
+  {
+    "id": "s05_sc01_prompt",
+    "filename": "s05_sc01_prompt.mp3",
+    "stage": 5,
+    "sceneIndex": 1,
+    "sceneId": "c1_s5_sc01_facility_bypass",
+    "type": "prompt",
+    "script": "A delivery truck arrives with drums of combustible thinners and industrial paints. The driver asks to unload at Dock 01 next to vehicle body panels. Where does Ather S-O-P Clause..."
+  },
+  {
+    "id": "s05_sc01_correct",
+    "filename": "s05_sc01_correct.mp3",
+    "stage": 5,
+    "sceneIndex": 1,
+    "sceneId": "c1_s5_sc01_facility_bypass",
+    "type": "correct",
+    "script": "PERFECT FACILITY BYPASS ROUTING! S-O-P Clause 4.1: Hazardous chemicals, thinners, and paints are stored in separate, designated buildings. The gate pass specifies the exact isolated building. Trucks must bypass the main assembly..."
+  },
+  {
+    "id": "s05_sc01_wrong",
+    "filename": "s05_sc01_wrong.mp3",
+    "stage": 5,
+    "sceneIndex": 1,
+    "sceneId": "c1_s5_sc01_facility_bypass",
+    "type": "wrong",
+    "script": "CRITICAL INDUSTRIAL FIRE HAZARD! Under S-O-P Clause 4.1, hazardous solvents, combustible paints, and thinners must NEVER enter the main manufacturing plant or general Dock 01. Vapors or accidental leaks near high-voltage assembly..."
+  },
+  {
+    "id": "s05_sc02_intro",
+    "filename": "s05_sc02_intro.mp3",
+    "stage": 5,
+    "sceneIndex": 2,
+    "sceneId": "c1_s5_sc02_ppe_spill_berm",
+    "type": "intro",
+    "script": "At Chemical Annex C-04, the truck has docked and an operator begins unloading 200-liter steel drums of industrial thinner. Take a close look at the unloading setup. Under Ather S-O-P Clause 4.2, which critical safety..."
+  },
+  {
+    "id": "s05_sc02_prompt",
+    "filename": "s05_sc02_prompt.mp3",
+    "stage": 5,
+    "sceneIndex": 2,
+    "sceneId": "c1_s5_sc02_ppe_spill_berm",
+    "type": "prompt",
+    "script": "Spot the Safety Violation: An operator is unloading 200L flammable thinner drums at Chemical Annex C-04. Which condition violates Ather safety protocols?"
+  },
+  {
+    "id": "s05_sc02_correct",
+    "filename": "s05_sc02_correct.mp3",
+    "stage": 5,
+    "sceneIndex": 2,
+    "sceneId": "c1_s5_sc02_ppe_spill_berm",
+    "type": "correct",
+    "script": "HAZARD SPOTTED! S-O-P Clause 4.2: Flammable liquids must NEVER be staged on bare concrete without secondary spill containment, and steel drums must be clamped to an earthing reel before handling. Electrostatic discharge..."
+  },
+  {
+    "id": "s05_sc02_wrong",
+    "filename": "s05_sc02_wrong.mp3",
+    "stage": 5,
+    "sceneIndex": 2,
+    "sceneId": "c1_s5_sc02_ppe_spill_berm",
+    "type": "wrong",
+    "script": "CRITICAL SAFETY RISK OVERLOOKED! Staging flammable solvent drums directly on bare concrete with disconnected grounding earthing wires is an extreme industrial hazard. A single static discharge spark can ignite the entire chemical..."
+  },
+  {
+    "id": "s05_sc03_intro",
+    "filename": "s05_sc03_intro.mp3",
+    "stage": 5,
+    "sceneIndex": 3,
+    "sceneId": "c1_s5_sc03_segregation_sla",
+    "type": "intro",
+    "script": "Inside Chemical Annex C-04, 4 different hazardous drums need to be slotted into storage. Chemical safety rules strictly prohibit storing incompatible classes in the same containment bay: mixing flammable solvents with oxidizers causes spontaneous explosion!..."
+  },
+  {
+    "id": "s05_sc03_prompt",
+    "filename": "s05_sc03_prompt.mp3",
+    "stage": 5,
+    "sceneIndex": 3,
+    "sceneId": "c1_s5_sc03_segregation_sla",
+    "type": "prompt",
+    "script": "Segregate incoming chemicals into their designated storage bays according to Ather S-O-P Clause 4.3 and the 2-Hour SLA limit."
+  },
+  {
+    "id": "s05_sc03_correct",
+    "filename": "s05_sc03_correct.mp3",
+    "stage": 5,
+    "sceneIndex": 3,
+    "sceneId": "c1_s5_sc03_segregation_sla",
+    "type": "correct",
+    "script": "CHEMICAL MATRIX COMPLIANCE ACHIEVED! S-O-P Clause 4.3: Class 3 Flammables (Thinners & Paints), Class 5.1 Oxidizers (Peroxides), and Class 8 Corrosives (Pre-Treatment Acids) are fully segregated into isolated bund bays, and all..."
+  },
+  {
+    "id": "s05_sc03_wrong",
+    "filename": "s05_sc03_wrong.mp3",
+    "stage": 5,
+    "sceneIndex": 3,
+    "sceneId": "c1_s5_sc03_segregation_sla",
+    "type": "wrong",
+    "script": "CRITICAL INCOMPATIBLE STORAGE HAZARD! Storing oxidizing agents next to flammable solvents causes exothermic decomposition and catastrophic chemical fires. Incompatible hazard classes must always be segregated into isolated sumps!"
+  },
+  {
+    "id": "s05_sc04_intro",
+    "filename": "s05_sc04_intro.mp3",
+    "stage": 5,
+    "sceneIndex": 4,
+    "sceneId": "c1_s5_sc04_deo_grn_posting",
+    "type": "intro",
+    "script": "At Chemical Annex C-04, the put-away operator has successfully unloaded, inspected, and segregated 20 drums of industrial thinner into Bay 1. Who is responsible under Ather S-O-P Clause 4.4 for generating the official Goods Receipt..."
+  },
+  {
+    "id": "s05_sc04_prompt",
+    "filename": "s05_sc04_prompt.mp3",
+    "stage": 5,
+    "sceneIndex": 4,
+    "sceneId": "c1_s5_sc04_deo_grn_posting",
+    "type": "prompt",
+    "script": "After a chemical delivery truck is unloaded and physically verified at Annex C-04, who is responsible for creating the Goods Receipt Note (G-R-N) in S-A-P?"
+  },
+  {
+    "id": "s05_sc04_correct",
+    "filename": "s05_sc04_correct.mp3",
+    "stage": 5,
+    "sceneIndex": 4,
+    "sceneId": "c1_s5_sc04_deo_grn_posting",
+    "type": "correct",
+    "script": "EXACT ROLE HANDOVER! S-O-P Clause 4.4 & Question Bank Q25: The put-away operator conducts the physical unloading and verification check. Once verified, the Data Entry Operator (DEO) generates the official Goods Receipt..."
+  },
+  {
+    "id": "s05_sc04_wrong",
+    "filename": "s05_sc04_wrong.mp3",
+    "stage": 5,
+    "sceneIndex": 4,
+    "sceneId": "c1_s5_sc04_deo_grn_posting",
+    "type": "wrong",
+    "script": "ROLE CONFUSION HAZARD! Put-away operators handle physical material movement, safety earthing, and stowage, but they do NOT generate the G-R-N. The Data Entry Operator (DEO) is designated to generate the G-R-N and..."
+  },
+  {
+    "id": "s05_sc05_intro",
+    "filename": "s05_sc05_intro.mp3",
+    "stage": 5,
+    "sceneIndex": 5,
+    "sceneId": "c1_s5_sc05_static_bonding_clamp",
+    "type": "intro",
+    "script": "Urgent safety audit at Chemical Annex C-04! A drum of industrial thinner has been safely placed on the spill pallet. Before opening the bung cap to sample the viscosity, the operator reaches for the steel..."
+  },
+  {
+    "id": "s05_sc05_prompt",
+    "filename": "s05_sc05_prompt.mp3",
+    "stage": 5,
+    "sceneIndex": 5,
+    "sceneId": "c1_s5_sc05_static_bonding_clamp",
+    "type": "prompt",
+    "script": "An associate prepares to loosen a 200L solvent drum bung for QC sampling without attaching the static bonding grounding clamp. Allow or halt?"
+  },
+  {
+    "id": "s05_sc05_correct",
+    "filename": "s05_sc05_correct.mp3",
+    "stage": 5,
+    "sceneIndex": 5,
+    "sceneId": "c1_s5_sc05_static_bonding_clamp",
+    "type": "correct",
+    "script": "HALT IS THE ONLY SURVIVAL DECISION! S-O-P Clause 4.5: Static electricity generated by wrench friction or liquid sloshing can spark an instantaneous vapor explosion exceeding 800 degrees Celsius! Grounding bonding clamps must..."
+  },
+  {
+    "id": "s05_sc05_wrong",
+    "filename": "s05_sc05_wrong.mp3",
+    "stage": 5,
+    "sceneIndex": 5,
+    "sceneId": "c1_s5_sc05_static_bonding_clamp",
+    "type": "wrong",
+    "script": "CATASTROPHIC FIRE VIOLATION! Flammable solvent vapors linger invisibly around drum bungs. Metal-on-metal spark without grounding causes immediate deflagration and factory-wide evacuation! Never loosen a chemical drum bung without active earthing!"
+  },
+  {
+    "id": "s06_sc01_intro",
+    "filename": "s06_sc01_intro.mp3",
+    "stage": 6,
+    "sceneIndex": 1,
+    "sceneId": "c1_s6_sc01_qc_pass_seal",
+    "type": "intro",
+    "script": "Welcome to Stage 6: Supermarket C-Class Parts Put-Away! Small fasteners and grommets have arrived at the Material Handling 1 (MH1) staging desk from inbound receiving. The lot is marked Non D-O-L, but looking closely at..."
+  },
+  {
+    "id": "s06_sc01_prompt",
+    "filename": "s06_sc01_prompt.mp3",
+    "stage": 6,
+    "sceneIndex": 1,
+    "sceneId": "c1_s6_sc01_qc_pass_seal",
+    "type": "prompt",
+    "script": "A Non D-O-L lot of small fasteners arrives at the MH1 Supermarket desk. The G-R-N sticker has no green 'QC Pass' seal attached. Allow or halt put-away into supermarket racks?"
+  },
+  {
+    "id": "s06_sc01_correct",
+    "filename": "s06_sc01_correct.mp3",
+    "stage": 6,
+    "sceneIndex": 1,
+    "sceneId": "c1_s6_sc01_qc_pass_seal",
+    "type": "correct",
+    "script": "STOP IS THE CORRECT DECISION! S-O-P for Supermarket Put-Away Clause 4.1 & Question Bank Q26: For Non D-O-L parts, the physical 'QC Pass' seal or sticker is mandatory on the G-R-N label...."
+  },
+  {
+    "id": "s06_sc01_wrong",
+    "filename": "s06_sc01_wrong.mp3",
+    "stage": 6,
+    "sceneIndex": 1,
+    "sceneId": "c1_s6_sc01_qc_pass_seal",
+    "type": "wrong",
+    "script": "CRITICAL QUALITY BREACH! Under S-O-P Clause 4.1, no associate may move a Non D-O-L lot to supermarket bins without a verified green 'QC Pass' seal. Rushing unverified parts to the line causes..."
+  },
+  {
+    "id": "s06_sc02_intro",
+    "filename": "s06_sc02_intro.mp3",
+    "stage": 6,
+    "sceneIndex": 2,
+    "sceneId": "c1_s6_sc02_count_discrepancy",
+    "type": "intro",
+    "script": "At the MH1 staging desk, you print the S-A-P inventory dump (transaction LX02), which shows expected stock of 100 M6 hex bolts. You perform a sample count on the digital counting scale and find only..."
+  },
+  {
+    "id": "s06_sc02_prompt",
+    "filename": "s06_sc02_prompt.mp3",
+    "stage": 6,
+    "sceneIndex": 2,
+    "sceneId": "c1_s6_sc02_count_discrepancy",
+    "type": "prompt",
+    "script": "The S-A-P LX02 dump indicates 100 pieces for an inward C-class lot, but physical sampling at MH1 reveals only 92 pieces. What must the operator do?"
+  },
+  {
+    "id": "s06_sc02_correct",
+    "filename": "s06_sc02_correct.mp3",
+    "stage": 6,
+    "sceneIndex": 2,
+    "sceneId": "c1_s6_sc02_count_discrepancy",
+    "type": "correct",
+    "script": "STANDARD PROCEDURE ENFORCED! S-O-P Clause 4.2 & Question Bank Q27: If any discrepancy exists between the physical count and the S-A-P dump, the operator must IMMEDIATELY halt put-away for that material and..."
+  },
+  {
+    "id": "s06_sc02_wrong",
+    "filename": "s06_sc02_wrong.mp3",
+    "stage": 6,
+    "sceneIndex": 2,
+    "sceneId": "c1_s6_sc02_count_discrepancy",
+    "type": "wrong",
+    "script": "CRITICAL INVENTORY INTEGRITY FAILURE! Altering paperwork or stocking a short lot without Zone Leader escalation directly corrupts ERP stock accuracy. Downstream shifts will assume 100 bolts exist, resulting in sudden line starvation..."
+  },
+  {
+    "id": "s06_sc03_intro",
+    "filename": "s06_sc03_intro.mp3",
+    "stage": 6,
+    "sceneIndex": 3,
+    "sceneId": "c1_s6_sc03_gravity_flow_fifo",
+    "type": "intro",
+    "script": "Count audits are cleared! Now we proceed to Supermarket Aisle SM-04 gravity flow racks. These 3.5-degree inclined roller tracks operate on strict First-In First-Out (First-In, First-Out). You must ALWAYS load from the REAR loading lane..."
+  },
+  {
+    "id": "s06_sc03_prompt",
+    "filename": "s06_sc03_prompt.mp3",
+    "stage": 6,
+    "sceneIndex": 3,
+    "sceneId": "c1_s6_sc03_gravity_flow_fifo",
+    "type": "prompt",
+    "script": "Arrange the 4 steps of Supermarket Gravity Flow Rack Put-Away in the strictly mandated S-O-P sequence to guarantee First-In First-Out stock rotation."
+  },
+  {
+    "id": "s06_sc03_correct",
+    "filename": "s06_sc03_correct.mp3",
+    "stage": 6,
+    "sceneIndex": 3,
+    "sceneId": "c1_s6_sc03_gravity_flow_fifo",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s06_sc03_wrong",
+    "filename": "s06_sc03_wrong.mp3",
+    "stage": 6,
+    "sceneIndex": 3,
+    "sceneId": "c1_s6_sc03_gravity_flow_fifo",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s06_sc04_intro",
+    "filename": "s06_sc04_intro.mp3",
+    "stage": 6,
+    "sceneIndex": 4,
+    "sceneId": "c1_s6_sc04_bin_replenishment",
+    "type": "intro",
+    "script": "Look at the front face of Supermarket Bin SM-04-B! After assembly line kitters drew materials, the physical stock has reached the red MIN threshold (2 boxes remaining). Under S-O-P Clause 4.4 and 4.5, what two..."
+  },
+  {
+    "id": "s06_sc04_prompt",
+    "filename": "s06_sc04_prompt.mp3",
+    "stage": 6,
+    "sceneIndex": 4,
+    "sceneId": "c1_s6_sc04_bin_replenishment",
+    "type": "prompt",
+    "script": "Fastener Bin SM-04-B has hit its safety MIN stock level of 2 boxes (200 pcs). What must the Supermarket operator execute immediately?"
+  },
+  {
+    "id": "s06_sc04_correct",
+    "filename": "s06_sc04_correct.mp3",
+    "stage": 6,
+    "sceneIndex": 4,
+    "sceneId": "c1_s6_sc04_bin_replenishment",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s06_sc04_wrong",
+    "filename": "s06_sc04_wrong.mp3",
+    "stage": 6,
+    "sceneIndex": 4,
+    "sceneId": "c1_s6_sc04_bin_replenishment",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s06_sc05_intro",
+    "filename": "s06_sc05_intro.mp3",
+    "stage": 6,
+    "sceneIndex": 5,
+    "sceneId": "c1_s6_sc05_line_pressure_stop_go",
+    "type": "intro",
+    "script": "High tension at MH1 Supermarket desk! You counted 92 bolts on the scale instead of 100. An aggressive line feeder arrives shouting that the main frame line is 2 minutes from stoppage! They demand: 'Sign..."
+  },
+  {
+    "id": "s06_sc05_prompt",
+    "filename": "s06_sc05_prompt.mp3",
+    "stage": 6,
+    "sceneIndex": 5,
+    "sceneId": "c1_s6_sc05_line_pressure_stop_go",
+    "type": "prompt",
+    "script": "MH1 count is 92 pcs (S-A-P expected: 100 pcs). Under urgent line-stoppage pressure, the line feeder demands you sign off 100 pcs immediately. Allow or Halt?"
+  },
+  {
+    "id": "s06_sc05_correct",
+    "filename": "s06_sc05_correct.mp3",
+    "stage": 6,
+    "sceneIndex": 5,
+    "sceneId": "c1_s6_sc05_line_pressure_stop_go",
+    "type": "correct",
+    "script": "STOP IS ABSOLUTELY ESSENTIAL! S-O-P Clause 4.2 & Question Bank Q27: Never sign a false count or release unverified quantities under line pressure! Discrepancy means an active halt for that material and..."
+  },
+  {
+    "id": "s06_sc05_wrong",
+    "filename": "s06_sc05_wrong.mp3",
+    "stage": 6,
+    "sceneIndex": 5,
+    "sceneId": "c1_s6_sc05_line_pressure_stop_go",
+    "type": "wrong",
+    "script": "UNFORGIVABLE INVENTORY VIOLATION! Yielding to line pressure and falsifying 100 pieces when only 92 arrived destroys ERP audit trails. Next shift will run out of bolts midway, causing catastrophic unannounced line shutdown!"
+  },
+  {
+    "id": "s06_sc06_intro",
+    "filename": "s06_sc06_intro.mp3",
+    "stage": 6,
+    "sceneIndex": 6,
+    "sceneId": "c1_s6_sc06_supermarket_classification",
+    "type": "intro",
+    "script": "Final Supermarket certification question! Under Question Bank Q28, which parts are authorized to be stored in Supermarket flow racks at Ather Auric plant?"
+  },
+  {
+    "id": "s06_sc06_prompt",
+    "filename": "s06_sc06_prompt.mp3",
+    "stage": 6,
+    "sceneIndex": 6,
+    "sceneId": "c1_s6_sc06_supermarket_classification",
+    "type": "prompt",
+    "script": "Which categories of parts are stored in Supermarket racks at the Ather Auric Plant?"
+  },
+  {
+    "id": "s06_sc06_correct",
+    "filename": "s06_sc06_correct.mp3",
+    "stage": 6,
+    "sceneIndex": 6,
+    "sceneId": "c1_s6_sc06_supermarket_classification",
+    "type": "correct",
+    "script": "PERFECT CLASSIFICATION MASTERY! S-O-P Clause 1.1 & Question Bank Q28: Supermarket racks are designated EXCLUSIVELY for small C-class items (screws, bolts, clips, washers, O-rings) that are verified at MH1 first. Heavy A-class..."
+  },
+  {
+    "id": "s06_sc06_wrong",
+    "filename": "s06_sc06_wrong.mp3",
+    "stage": 6,
+    "sceneIndex": 6,
+    "sceneId": "c1_s6_sc06_supermarket_classification",
+    "type": "wrong",
+    "script": "INCORRECT CLASSIFICATION! Supermarket gravity racks cannot hold heavy A-class frames or flammable chemicals. Supermarket racks are strictly dedicated to small C-class hardware parts checked at MH1!"
+  },
+  {
+    "id": "s07_sc01_intro",
+    "filename": "s07_sc01_intro.mp3",
+    "stage": 7,
+    "sceneIndex": 1,
+    "sceneId": "c1_s7_sc01_entire_lot_quarantine",
+    "type": "intro",
+    "script": "Critical quality alert at I-Q-C Test Bench 02! While inspecting a 10-piece sample from an incoming batch of 1,000 battery harness connectors, the inspector discovers 2 burnt, defective terminals with critical high resistance. Under S-O-P..."
+  },
+  {
+    "id": "s07_sc01_prompt",
+    "filename": "s07_sc01_prompt.mp3",
+    "stage": 7,
+    "sceneIndex": 1,
+    "sceneId": "c1_s7_sc01_entire_lot_quarantine",
+    "type": "prompt",
+    "script": "When I-Q-C finds 2 defective burnt connectors in a 10-piece sample from a 1,000-piece lot, what materials must be moved to the NG Quarantine area?"
+  },
+  {
+    "id": "s07_sc01_correct",
+    "filename": "s07_sc01_correct.mp3",
+    "stage": 7,
+    "sceneIndex": 1,
+    "sceneId": "c1_s7_sc01_entire_lot_quarantine",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s07_sc01_wrong",
+    "filename": "s07_sc01_wrong.mp3",
+    "stage": 7,
+    "sceneIndex": 1,
+    "sceneId": "c1_s7_sc01_entire_lot_quarantine",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s07_sc02_intro",
+    "filename": "s07_sc02_intro.mp3",
+    "stage": 7,
+    "sceneIndex": 2,
+    "sceneId": "c1_s7_sc02_jira_red_tag",
+    "type": "intro",
+    "script": "The NG Logistics manpower team arrives at the I-Q-C staging desk to collect a rejected pallet of high-voltage wiring harnesses. You inspect the pallet: it has a physical Red Tag affixed, but the QC sticker..."
+  },
+  {
+    "id": "s07_sc02_prompt",
+    "filename": "s07_sc02_prompt.mp3",
+    "stage": 7,
+    "sceneIndex": 2,
+    "sceneId": "c1_s7_sc02_jira_red_tag",
+    "type": "prompt",
+    "script": "A rejected lot carries a Red Tag, but the QC sticker is missing and the JIRA ticket has no Bug ID ('Unknown Cause'). Can the NG team collect it?"
+  },
+  {
+    "id": "s07_sc02_correct",
+    "filename": "s07_sc02_correct.mp3",
+    "stage": 7,
+    "sceneIndex": 2,
+    "sceneId": "c1_s7_sc02_jira_red_tag",
+    "type": "correct",
+    "script": "ABSOLUTELY STOP! Under S-O-P for NG-R-T-V Clause 4.2, every rejected part MUST have BOTH a Red Tag AND a QC sticker, plus a JIRA ticket with a valid Bug ID! Collecting untracked..."
+  },
+  {
+    "id": "s07_sc02_wrong",
+    "filename": "s07_sc02_wrong.mp3",
+    "stage": 7,
+    "sceneIndex": 2,
+    "sceneId": "c1_s7_sc02_jira_red_tag",
+    "type": "wrong",
+    "script": "CRITICAL HAZARD! Never move rejected stock without dual physical identification (Red Tag + QC sticker) and an active JIRA Bug ID. Doing so causes untraceable inventory in the quarantine cage!"
+  },
+  {
+    "id": "s07_sc03_intro",
+    "filename": "s07_sc03_intro.mp3",
+    "stage": 7,
+    "sceneIndex": 3,
+    "sceneId": "c1_s7_sc03_quarantine_transfer",
+    "type": "intro",
+    "script": "We have entered the high-security caged Quarantine Store (Storage Location: SC01 BL)! As rejected materials are stowed here, S-A-P E-W-M moves inventory to Blocked Stock and the digital JIRA ticket transitions to 'Quality Failed'. Under..."
+  },
+  {
+    "id": "s07_sc03_prompt",
+    "filename": "s07_sc03_prompt.mp3",
+    "stage": 7,
+    "sceneIndex": 3,
+    "sceneId": "c1_s7_sc03_quarantine_transfer",
+    "type": "prompt",
+    "script": "Drag each rejected lot to its correct dedicated containment bay inside Quarantine Cage SC01 BL based on its defect root cause."
+  },
+  {
+    "id": "s07_sc03_correct",
+    "filename": "s07_sc03_correct.mp3",
+    "stage": 7,
+    "sceneIndex": 3,
+    "sceneId": "c1_s7_sc03_quarantine_transfer",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s07_sc03_wrong",
+    "filename": "s07_sc03_wrong.mp3",
+    "stage": 7,
+    "sceneIndex": 3,
+    "sceneId": "c1_s7_sc03_quarantine_transfer",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s07_sc04_intro",
+    "filename": "s07_sc04_intro.mp3",
+    "stage": 7,
+    "sceneIndex": 4,
+    "sceneId": "c1_s7_sc04_disposition_filter",
+    "type": "intro",
+    "script": "The Material Review Board (M-R-B) — comprising S-Q-A, Manufacturing Quality, Production, and Warehouse — convenes inside caged store SC01 BL to decide the fate of 4 quarantined lots. Verbal approvals are strictly illegal at Ather..."
+  },
+  {
+    "id": "s07_sc04_prompt",
+    "filename": "s07_sc04_prompt.mp3",
+    "stage": 7,
+    "sceneIndex": 4,
+    "sceneId": "c1_s7_sc04_disposition_filter",
+    "type": "prompt",
+    "script": "Sort the 4 quarantined material cases into their legally authorized disposition routes under Ather S-O-P 07_C1_S4."
+  },
+  {
+    "id": "s07_sc04_correct",
+    "filename": "s07_sc04_correct.mp3",
+    "stage": 7,
+    "sceneIndex": 4,
+    "sceneId": "c1_s7_sc04_disposition_filter",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s07_sc04_wrong",
+    "filename": "s07_sc04_wrong.mp3",
+    "stage": 7,
+    "sceneIndex": 4,
+    "sceneId": "c1_s7_sc04_disposition_filter",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s07_sc05_intro",
+    "filename": "s07_sc05_intro.mp3",
+    "stage": 7,
+    "sceneIndex": 5,
+    "sceneId": "c1_s7_sc05_scrap_weighbridge_exit",
+    "type": "intro",
+    "script": "Final station of Category 1! We are at the Ather Scrapyard Building and Outbound Weighbridge. Defective structural components approved for scrap by Finance and Production must be physically shredded to ensure zero unauthorized street resale,..."
+  },
+  {
+    "id": "s07_sc05_prompt",
+    "filename": "s07_sc05_prompt.mp3",
+    "stage": 7,
+    "sceneIndex": 5,
+    "sceneId": "c1_s7_sc05_scrap_weighbridge_exit",
+    "type": "prompt",
+    "script": "Arrange the 4 steps of the Ather Scrap & Vendor Weighbridge Exit lifecycle in the strictly mandated S-O-P sequence."
+  },
+  {
+    "id": "s07_sc05_correct",
+    "filename": "s07_sc05_correct.mp3",
+    "stage": 7,
+    "sceneIndex": 5,
+    "sceneId": "c1_s7_sc05_scrap_weighbridge_exit",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s07_sc05_wrong",
+    "filename": "s07_sc05_wrong.mp3",
+    "stage": 7,
+    "sceneIndex": 5,
+    "sceneId": "c1_s7_sc05_scrap_weighbridge_exit",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s07_sc06_intro",
+    "filename": "s07_sc06_intro.mp3",
+    "stage": 7,
+    "sceneIndex": 6,
+    "sceneId": "c1_s7_sc06_visual_cone_iqc_hold",
+    "type": "intro",
+    "script": "Visual floor controls at Dock 02! An incoming lot of motor mount brackets has been delayed at the inspection station because specialized C-M-M measuring equipment is undergoing morning calibration. The pallet must sit in the..."
+  },
+  {
+    "id": "s07_sc06_prompt",
+    "filename": "s07_sc06_prompt.mp3",
+    "stage": 7,
+    "sceneIndex": 6,
+    "sceneId": "c1_s7_sc06_visual_cone_iqc_hold",
+    "type": "prompt",
+    "script": "I-Q-C inspection is delayed and an inward lot is waiting in staging. Which cone do you place on the pallet?"
+  },
+  {
+    "id": "s07_sc06_correct",
+    "filename": "s07_sc06_correct.mp3",
+    "stage": 7,
+    "sceneIndex": 6,
+    "sceneId": "c1_s7_sc06_visual_cone_iqc_hold",
+    "type": "correct",
+    "script": "PERFECT IDENTIFICATION! S-O-P Clause 3.2 & Question Bank Q33: When an incoming lot is delayed in inspection, place the 'I-Q-C Hold' cone (Yellow/Amber). 'Hold' means awaiting quality disposition — it does NOT..."
+  },
+  {
+    "id": "s07_sc06_wrong",
+    "filename": "s07_sc06_wrong.mp3",
+    "stage": 7,
+    "sceneIndex": 6,
+    "sceneId": "c1_s7_sc06_visual_cone_iqc_hold",
+    "type": "wrong",
+    "script": "INCORRECT CONE PLACEMENT! Placing an 'NG' cone on a lot that simply has delayed testing causes false vendor panic, wrongful debit note creation, and unnecessary scrap escalation. Use 'I-Q-C Hold' when waiting..."
+  },
+  {
+    "id": "s07_sc07_intro",
+    "filename": "s07_sc07_intro.mp3",
+    "stage": 7,
+    "sceneIndex": 7,
+    "sceneId": "c1_s7_sc07_jira_workflow_transitions",
+    "type": "intro",
+    "script": "Final milestone of Category 1! You have escorted the rejected pallet into Quarantine Caged Store SC01 BL, verified physical Red Tags, and stored it in the correct root-cause bay. Under S-O-P for NG-R-T-V Clause 4.3..."
+  },
+  {
+    "id": "s07_sc07_prompt",
+    "filename": "s07_sc07_prompt.mp3",
+    "stage": 7,
+    "sceneIndex": 7,
+    "sceneId": "c1_s7_sc07_jira_workflow_transitions",
+    "type": "prompt",
+    "script": "After NG parts are put away in the NG caged storage area (SC01 BL), the JIRA status transitions from “QC Done: Fail” to."
+  },
+  {
+    "id": "s07_sc07_correct",
+    "filename": "s07_sc07_correct.mp3",
+    "stage": 7,
+    "sceneIndex": 7,
+    "sceneId": "c1_s7_sc07_jira_workflow_transitions",
+    "type": "correct",
+    "script": "MAGNIFICENT PRECISION! S-O-P Clause 4.3 & Question Bank Q36: After rejected parts are put away in the NG area, the JIRA status transitions from 'QC Done: Fail' to 'Quality Failed'. Material remains..."
+  },
+  {
+    "id": "s07_sc07_wrong",
+    "filename": "s07_sc07_wrong.mp3",
+    "stage": 7,
+    "sceneIndex": 7,
+    "sceneId": "c1_s7_sc07_jira_workflow_transitions",
+    "type": "wrong",
+    "script": "DIGITAL AUDIT ERROR! Never jump prematurely to 'Scrapped' or 'Returned to Vendor' before the Material Review Board convenes and signs off! The immediate status change upon physical put-away in the NG cage..."
+  },
+  {
+    "id": "s08_sc01_intro",
+    "filename": "s08_sc01_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 1,
+    "sceneId": "c2_s8_sc01_mes_wh_task",
+    "type": "intro",
+    "script": "Welcome to Category 2: Line Issuance & Order Picking at Ather Auric Plant M002! On the vehicle assembly line, real-time V-I-N consumption triggers the Manufacturing Execution System (M-E-S) to auto-generate a digital Warehouse (WH) Picking..."
+  },
+  {
+    "id": "s08_sc01_prompt",
+    "filename": "s08_sc01_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 1,
+    "sceneId": "c2_s8_sc01_mes_wh_task",
+    "type": "prompt",
+    "script": "Under S-O-P Clause 4.1, how does the Line Feeder receive picking instructions, and what must be verified before proceeding?"
+  },
+  {
+    "id": "s08_sc01_correct",
+    "filename": "s08_sc01_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 1,
+    "sceneId": "c2_s8_sc01_mes_wh_task",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s08_sc01_wrong",
+    "filename": "s08_sc01_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 1,
+    "sceneId": "c2_s8_sc01_mes_wh_task",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s08_sc02_intro",
+    "filename": "s08_sc02_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 2,
+    "sceneId": "c2_s8_sc02_source_qr_scan",
+    "type": "intro",
+    "script": "You have arrived at High-Rise Rack Aisle 3. Two adjacent bins (H-R-R-A-03-07 and H-R-R-A-03-08) hold similar wiring harness crates. On your H-H-T screen, the task points to H-R-R-A-03-08, but the picking quantity field is blank..."
+  },
+  {
+    "id": "s08_sc02_prompt",
+    "filename": "s08_sc02_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 2,
+    "sceneId": "c2_s8_sc02_source_qr_scan",
+    "type": "prompt",
+    "script": "Under S-O-P Clause 4.1, arrange the mandatory 4-step sequence a Line Feeder must follow when executing a picking task."
+  },
+  {
+    "id": "s08_sc02_correct",
+    "filename": "s08_sc02_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 2,
+    "sceneId": "c2_s8_sc02_source_qr_scan",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s08_sc02_wrong",
+    "filename": "s08_sc02_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 2,
+    "sceneId": "c2_s8_sc02_source_qr_scan",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s08_sc03_intro",
+    "filename": "s08_sc03_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 3,
+    "sceneId": "c2_s8_sc03_trolley_marriage",
+    "type": "intro",
+    "script": "You are preparing to pick wiring harnesses from Supermarket Lane 04 for Workstation 08. The line is running fast, so you quickly grab an empty trolley, load 4 crates directly, and are about to push..."
+  },
+  {
+    "id": "s08_sc03_prompt",
+    "filename": "s08_sc03_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 3,
+    "sceneId": "c2_s8_sc03_trolley_marriage",
+    "type": "prompt",
+    "script": "Can the line feeder move un-scanned materials directly to the assembly line?"
+  },
+  {
+    "id": "s08_sc03_correct",
+    "filename": "s08_sc03_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 3,
+    "sceneId": "c2_s8_sc03_trolley_marriage",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s08_sc03_wrong",
+    "filename": "s08_sc03_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 3,
+    "sceneId": "c2_s8_sc03_trolley_marriage",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s08_sc04_intro",
+    "filename": "s08_sc04_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 4,
+    "sceneId": "c2_s8_sc04_workstation_delivery",
+    "type": "intro",
+    "script": "You have arrived at Workstation 08 on the vehicle assembly line and offloaded the kitted wiring harnesses into the station rack. Under S-O-P Clause 4.2 and Failure Mode 5.3, what two mandatory actions must you..."
+  },
+  {
+    "id": "s08_sc04_prompt",
+    "filename": "s08_sc04_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 4,
+    "sceneId": "c2_s8_sc04_workstation_delivery",
+    "type": "prompt",
+    "script": "Inspect Workstation 08. Which two conditions violate Ather Line-Feeding and Shopfloor Safety SOPs?"
+  },
+  {
+    "id": "s08_sc04_correct",
+    "filename": "s08_sc04_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 4,
+    "sceneId": "c2_s8_sc04_workstation_delivery",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s08_sc04_wrong",
+    "filename": "s08_sc04_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 4,
+    "sceneId": "c2_s8_sc04_workstation_delivery",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s08_sc05_intro",
+    "filename": "s08_sc05_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 5,
+    "sceneId": "c2_s8_sc05_overpicking_prohibition",
+    "type": "intro",
+    "script": "Attention Line Feeder! Your handheld screen clearly displays 'Pick 12 Pieces' for Workstation 06. When looking into the storage bin, you notice exactly 15 pieces remaining. You think: 'Let me just grab all 15 so..."
+  },
+  {
+    "id": "s08_sc05_prompt",
+    "filename": "s08_sc05_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 5,
+    "sceneId": "c2_s8_sc05_overpicking_prohibition",
+    "type": "prompt",
+    "script": "The H-H-T screen says 'Pick 12 pieces'. You see 15 on the rack bin. Take 15 to save a return trip?"
+  },
+  {
+    "id": "s08_sc05_correct",
+    "filename": "s08_sc05_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 5,
+    "sceneId": "c2_s8_sc05_overpicking_prohibition",
+    "type": "correct",
+    "script": "STOP IS STRICTLY MANDATED! S-O-P Clause 4.1 & Question Bank Q29: Pick ONLY the quantity displayed on the device, from that specific location only! Grabbing the extra 3 pieces creates physical bin..."
+  },
+  {
+    "id": "s08_sc05_wrong",
+    "filename": "s08_sc05_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 5,
+    "sceneId": "c2_s8_sc05_overpicking_prohibition",
+    "type": "wrong",
+    "script": "INVENTORY CORRUPTION HAZARD! Taking extra pieces distorts line stock, causes phantom shortages for the next shift, and breaks M-E-S vehicle BOM consumption records!"
+  },
+  {
+    "id": "s08_sc06_intro",
+    "filename": "s08_sc06_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 6,
+    "sceneId": "c2_s8_sc06_feeder_part_ownership",
+    "type": "intro",
+    "script": "On the busy factory floor, two line feeders are working in adjacent aisles. Feeder A is assigned wiring harnesses and Feeder B is assigned brake caliper assemblies. Can both feeders pick and carry the same..."
+  },
+  {
+    "id": "s08_sc06_prompt",
+    "filename": "s08_sc06_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 6,
+    "sceneId": "c2_s8_sc06_feeder_part_ownership",
+    "type": "prompt",
+    "script": "Under Ather Plant S-O-P Clause 4.1 & Question Bank Q22, can two line feeders carry the same part to the assembly line?"
+  },
+  {
+    "id": "s08_sc06_correct",
+    "filename": "s08_sc06_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 6,
+    "sceneId": "c2_s8_sc06_feeder_part_ownership",
+    "type": "correct",
+    "script": "EXACT S-O-P PROTOCOL! S-O-P Clause 4.1 & Question Bank Q22: No two feeders may carry the same part! Every feeder is assigned their own unique parts divided by assembly zone and V-I-N..."
+  },
+  {
+    "id": "s08_sc06_wrong",
+    "filename": "s08_sc06_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 6,
+    "sceneId": "c2_s8_sc06_feeder_part_ownership",
+    "type": "wrong",
+    "script": "OPERATIONAL PROTOCOL VIOLATION! Having multiple feeders move the same part creates severe line-side overflow, trolley collisions in gangways, and chaotic inventory allocation in S-A-P!"
+  },
+  {
+    "id": "s08_sc07_intro",
+    "filename": "s08_sc07_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 7,
+    "sceneId": "c2_s8_sc07_handheld_troubleshooting",
+    "type": "intro",
+    "script": "A new trainee feeder is standing in front of Rack Bin H-R-R-C-02-05. They look confused at their handheld terminal and say: 'The screen shows the part description and location, but the picking quantity field is..."
+  },
+  {
+    "id": "s08_sc07_prompt",
+    "filename": "s08_sc07_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 7,
+    "sceneId": "c2_s8_sc07_handheld_troubleshooting",
+    "type": "prompt",
+    "script": "You cannot see the picking quantity on the handheld terminal screen. Why? (Question Bank Q21)"
+  },
+  {
+    "id": "s08_sc07_correct",
+    "filename": "s08_sc07_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 7,
+    "sceneId": "c2_s8_sc07_handheld_troubleshooting",
+    "type": "correct",
+    "script": "CORRECT S-O-P POKA-YOKE! S-O-P Clause 4.1 & Question Bank Q21: No scan, no quantity! The device intentionally keeps the quantity blind until the operator physically scans the rack location QR code. This..."
+  },
+  {
+    "id": "s08_sc07_wrong",
+    "filename": "s08_sc07_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 7,
+    "sceneId": "c2_s8_sc07_handheld_troubleshooting",
+    "type": "wrong",
+    "script": "MISUNDERSTANDING! The terminal is not broken and the battery is not dead. Ather S-A-P E-W-M enforces blind quantity gating: you MUST scan the source location QR code to reveal the picking number!"
+  },
+  {
+    "id": "s08_sc08_intro",
+    "filename": "s08_sc08_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 8,
+    "sceneId": "c2_s8_sc08_wrong_lane_violation",
+    "type": "intro",
+    "script": "Urgent quality escalation! A line feeder in a rush needs brake levers from Supermarket Lane 02. However, the aisle is narrow, so the feeder casually grabs 10 lever boxes from adjacent Lane 03 without scanning..."
+  },
+  {
+    "id": "s08_sc08_prompt",
+    "filename": "s08_sc08_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 8,
+    "sceneId": "c2_s8_sc08_wrong_lane_violation",
+    "type": "prompt",
+    "script": "You pick from the wrong supermarket lane without scanning the lane QR code. What happens? (Question Bank Q23)"
+  },
+  {
+    "id": "s08_sc08_correct",
+    "filename": "s08_sc08_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 8,
+    "sceneId": "c2_s8_sc08_wrong_lane_violation",
+    "type": "correct",
+    "script": "EXACT SYSTEM IMPACT! S-O-P Failure Mode 5.2 & Question Bank Q23: The correct part's WH task remains OPEN in M-E-S, while a material mismatch alert flashes at the assembly line! The Zone..."
+  },
+  {
+    "id": "s08_sc08_wrong",
+    "filename": "s08_sc08_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 8,
+    "sceneId": "c2_s8_sc08_wrong_lane_violation",
+    "type": "wrong",
+    "script": "CRITICAL MISCONCEPTION! The system does not fix wrong picks automatically. Picking without scanning the lane QR creates line defects, keeps the original task open, and risks assembling wrong model brake levers on..."
+  },
+  {
+    "id": "s08_sc09_intro",
+    "filename": "s08_sc09_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 9,
+    "sceneId": "c2_s8_sc09_five_step_picking_lifecycle",
+    "type": "intro",
+    "script": "Final milestone of Module 8! You have mastered M-E-S triggers, blind-quantity reveals, trolley marriage, over-picking rules, and workstation deliveries. Now prove your expertise by arranging the complete 5-step picking sequence in its exact chronological order..."
+  },
+  {
+    "id": "s08_sc09_prompt",
+    "filename": "s08_sc09_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 9,
+    "sceneId": "c2_s8_sc09_five_step_picking_lifecycle",
+    "type": "prompt",
+    "script": "Arrange the 5 feeder steps in the strictly mandated order under S-O-P Clause 4.1 & Question Bank Q20."
+  },
+  {
+    "id": "s08_sc09_correct",
+    "filename": "s08_sc09_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 9,
+    "sceneId": "c2_s8_sc09_five_step_picking_lifecycle",
+    "type": "correct",
+    "script": "PERFECT 5-STEP LIFECYCLE MASTERY! Question Bank Q20: (b) Scan source location QR then (c) Pick shown quantity then (d) Move to the workstation then (a) Scan destination QR then (e) Start the..."
+  },
+  {
+    "id": "s08_sc09_wrong",
+    "filename": "s08_sc09_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 9,
+    "sceneId": "c2_s8_sc09_five_step_picking_lifecycle",
+    "type": "wrong",
+    "script": "INCORRECT SEQUENCE! Remember S-O-P Clause 4.1: You must scan source location QR first to unlock quantity, pick parts, move to station, scan destination QR to close the task, and only then start..."
+  },
+  {
+    "id": "s09_sc01_intro",
+    "filename": "s09_sc01_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 1,
+    "sceneId": "c2_s9_sc01_aced_trolley_issuance",
+    "type": "intro",
+    "script": "Welcome to Stage 9! At Ather Auric Plant M002, metal body parts (like Mid-Frames, side brackets, and swingarm mounts) undergo Anodic Cathodic Electrodeposition (ACED) before painting. Under S-O-P 02_C2_S1, how are ACED metal parts inwarded..."
+  },
+  {
+    "id": "s09_sc01_prompt",
+    "filename": "s09_sc01_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 1,
+    "sceneId": "c2_s9_sc01_aced_trolley_issuance",
+    "type": "prompt",
+    "script": "Under S-O-P 02_C2_S1, how are ACED metal parts formatted in the storage area and distributed across line feeders?"
+  },
+  {
+    "id": "s09_sc01_correct",
+    "filename": "s09_sc01_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 1,
+    "sceneId": "c2_s9_sc01_aced_trolley_issuance",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s09_sc01_wrong",
+    "filename": "s09_sc01_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 1,
+    "sceneId": "c2_s9_sc01_aced_trolley_issuance",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s09_sc02_intro",
+    "filename": "s09_sc02_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 2,
+    "sceneId": "c2_s9_sc02_twobin_ekanban",
+    "type": "intro",
+    "script": "In the Paint Shop Decanting Area, scooter body parts arrive from suppliers in massive Foldable Large Containers (F-L-Cs). Under S-O-P 03_C2_S2, how many pallet positions are allocated for each body part (like Tail Side Panels),..."
+  },
+  {
+    "id": "s09_sc02_prompt",
+    "filename": "s09_sc02_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 2,
+    "sceneId": "c2_s9_sc02_twobin_ekanban",
+    "type": "prompt",
+    "script": "Under S-O-P 03_C2_S2 Clause 4.1, how many buffer pallet positions must the Decanting Zone Leader maintain for each body part (e.g. Tail Side Panels)?"
+  },
+  {
+    "id": "s09_sc02_correct",
+    "filename": "s09_sc02_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 2,
+    "sceneId": "c2_s9_sc02_twobin_ekanban",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s09_sc02_wrong",
+    "filename": "s09_sc02_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 2,
+    "sceneId": "c2_s9_sc02_twobin_ekanban",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s09_sc03_intro",
+    "filename": "s09_sc03_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 3,
+    "sceneId": "c2_s9_sc03_trolley_capacity_rule",
+    "type": "intro",
+    "script": "Decanting manpower has opened an F-L-C of Tail Side Panels (TSPs). The F-L-C contains 110 panels, and the internal mobile trolley is designed to hold exactly 30 panels. The operator has transferred 24 panels and..."
+  },
+  {
+    "id": "s09_sc03_prompt",
+    "filename": "s09_sc03_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 3,
+    "sceneId": "c2_s9_sc03_trolley_capacity_rule",
+    "type": "prompt",
+    "script": "Can the decanting operator dispatch a partially filled trolley (24/30 panels) to the paint line?"
+  },
+  {
+    "id": "s09_sc03_correct",
+    "filename": "s09_sc03_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 3,
+    "sceneId": "c2_s9_sc03_trolley_capacity_rule",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s09_sc03_wrong",
+    "filename": "s09_sc03_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 3,
+    "sceneId": "c2_s9_sc03_trolley_capacity_rule",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s09_sc04_intro",
+    "filename": "s09_sc04_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 4,
+    "sceneId": "c2_s9_sc04_wrong_part_return",
+    "type": "intro",
+    "script": "An M-H-E forklift operator just dropped an F-L-C at the decanting station. Upon opening, the decanting team discovers Tail Centre Panels (TCP) instead of Tail Side Panels (TSP) due to a miskeyed e-Kanban R-F-I-D tag!..."
+  },
+  {
+    "id": "s09_sc04_prompt",
+    "filename": "s09_sc04_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 4,
+    "sceneId": "c2_s9_sc04_wrong_part_return",
+    "type": "prompt",
+    "script": "Under S-O-P 03_C2_S2 Failure Modes 5.3 & 5.4, arrange the 4 mandatory steps to recover from a wrong part delivery without locking S-A-P E-W-M."
+  },
+  {
+    "id": "s09_sc04_correct",
+    "filename": "s09_sc04_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 4,
+    "sceneId": "c2_s9_sc04_wrong_part_return",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s09_sc04_wrong",
+    "filename": "s09_sc04_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 4,
+    "sceneId": "c2_s9_sc04_wrong_part_return",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s09_sc05_intro",
+    "filename": "s09_sc05_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 5,
+    "sceneId": "c2_s9_sc05_decanting_definition",
+    "type": "intro",
+    "script": "Let's explore the core foundation of Stage 9! At Ather Auric Plant, why do we have a dedicated Decanting Area between receiving racks and the paint shop? Under S-O-P Clause 4.1 & Question Bank Q10,..."
+  },
+  {
+    "id": "s09_sc05_prompt",
+    "filename": "s09_sc05_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 5,
+    "sceneId": "c2_s9_sc05_decanting_definition",
+    "type": "prompt",
+    "script": "Under S-O-P 03_C2_S2 & Question Bank Q10, what is 'Decanting'?"
+  },
+  {
+    "id": "s09_sc05_correct",
+    "filename": "s09_sc05_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 5,
+    "sceneId": "c2_s9_sc05_decanting_definition",
+    "type": "correct",
+    "script": "EXACT INDUSTRIAL DEFINITION! S-O-P Clause 4.1 & Question Bank Q10: Decanting is the controlled transfer of parts from large supplier shipping containers (F-L-Cs) into standardized internal mobile trolleys! The supplier Handling Unit..."
+  },
+  {
+    "id": "s09_sc05_wrong",
+    "filename": "s09_sc05_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 5,
+    "sceneId": "c2_s9_sc05_decanting_definition",
+    "type": "wrong",
+    "script": "MISCONCEPTION! Decanting is not painting parts or discarding packaging into trash. It is the vital physical and digital transformation of supplier bulk crates into ergonomic line-side feeding trolleys!"
+  },
+  {
+    "id": "s09_sc06_intro",
+    "filename": "s09_sc06_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 6,
+    "sceneId": "c2_s9_sc06_flc_batch_calculation",
+    "type": "intro",
+    "script": "Ather Shopfloor Math Challenge! A newly arrived supplier F-L-C contains exactly 90 disc brake caliper assemblies. Each specialized paint-shop mobile trolley has a rated capacity of 30 calipers. Under Question Bank Q12, how many 100..."
+  },
+  {
+    "id": "s09_sc06_prompt",
+    "filename": "s09_sc06_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 6,
+    "sceneId": "c2_s9_sc06_flc_batch_calculation",
+    "type": "prompt",
+    "script": "A brake F-L-C contains 90 brakes. The trolley holds 30. How many full trolleys from one F-L-C? (Question Bank Q12)"
+  },
+  {
+    "id": "s09_sc06_correct",
+    "filename": "s09_sc06_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 6,
+    "sceneId": "c2_s9_sc06_flc_batch_calculation",
+    "type": "correct",
+    "script": "EXACT BATCH ARITHMETIC! 90 total units divided by 30 units per trolley = exactly 3 full trolleys! Remember S-O-P Clause 4.2: Decanting operators must always load exactly to 100 percent capacity —..."
+  },
+  {
+    "id": "s09_sc06_wrong",
+    "filename": "s09_sc06_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 6,
+    "sceneId": "c2_s9_sc06_flc_batch_calculation",
+    "type": "wrong",
+    "script": "CALCULATION ERROR! 90 units divided by 30 units per trolley equals exactly 3 trolleys. Standardized batch multiples prevent line starvation and simplify inventory tracking!"
+  },
+  {
+    "id": "s09_sc07_intro",
+    "filename": "s09_sc07_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 7,
+    "sceneId": "c2_s9_sc07_variant_wave_task_splitting",
+    "type": "intro",
+    "script": "Digital M-E-S planning in action! The plant production plan for Shift 1 calls for 20 Space Black and 10 True Red Ather scooters. How many distinct Warehouse Tasks will S-A-P E-W-M generate inside the Warehouse..."
+  },
+  {
+    "id": "s09_sc07_prompt",
+    "filename": "s09_sc07_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 7,
+    "sceneId": "c2_s9_sc07_variant_wave_task_splitting",
+    "type": "prompt",
+    "script": "The production plan is 20 black + 10 red vehicles. How many WH tasks are generated in the WH order? (Question Bank Q13)"
+  },
+  {
+    "id": "s09_sc07_correct",
+    "filename": "s09_sc07_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 7,
+    "sceneId": "c2_s9_sc07_variant_wave_task_splitting",
+    "type": "correct",
+    "script": "SYSTEM PRECISION CONFIRMED! Question Bank Q13: Exactly 2 WH Tasks! One task to pick 20 black parts and one task to pick 10 red parts. Different colors have distinct part numbers (SKUs)..."
+  },
+  {
+    "id": "s09_sc07_wrong",
+    "filename": "s09_sc07_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 7,
+    "sceneId": "c2_s9_sc07_variant_wave_task_splitting",
+    "type": "wrong",
+    "script": "INCORRECT TASK LOGIC! Different color variants cannot be lumped into a single task. In S-A-P E-W-M, each unique part number generates its own distinct Warehouse Task to prevent paint booth color mix-ups!"
+  },
+  {
+    "id": "s09_sc08_intro",
+    "filename": "s09_sc08_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 8,
+    "sceneId": "c2_s9_sc08_supermarket_rack_ownership",
+    "type": "intro",
+    "script": "Crucial responsibility question! The paint-shop supermarket rack serves as the primary source buffer for all vehicle body parts feeding the line. Under Question Bank Q19, who holds direct operational accountability for ensuring this supermarket rack..."
+  },
+  {
+    "id": "s09_sc08_prompt",
+    "filename": "s09_sc08_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 8,
+    "sceneId": "c2_s9_sc08_supermarket_rack_ownership",
+    "type": "prompt",
+    "script": "Who keeps the paint-shop supermarket rack for body parts filled? (Question Bank Q19)"
+  },
+  {
+    "id": "s09_sc08_correct",
+    "filename": "s09_sc08_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 8,
+    "sceneId": "c2_s9_sc08_supermarket_rack_ownership",
+    "type": "correct",
+    "script": "ZONE LEADER ACCOUNTABILITY! Question Bank Q19: The Decanting Zone Leader (ZL)! The supermarket rack is the official source location for the paint line. The Decanting ZL monitors buffer stock, audits e-Kanban triggers,..."
+  },
+  {
+    "id": "s09_sc08_wrong",
+    "filename": "s09_sc08_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 8,
+    "sceneId": "c2_s9_sc08_supermarket_rack_ownership",
+    "type": "wrong",
+    "script": "INCORRECT ROLE ASSIGNMENT! Security guards and outside delivery drivers do not manage internal factory supermarket racks. This critical replenishment duty belongs strictly to the Decanting Zone Leader!"
+  },
+  {
+    "id": "s09_sc09_intro",
+    "filename": "s09_sc09_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 9,
+    "sceneId": "c2_s9_sc09_empty_trolley_reverse_loop",
+    "type": "intro",
+    "script": "A line feeder has just delivered a specialized mobile trolley of scooter side panels to the paint shop loading booth. The trolley is now completely empty. Under Ather S-O-P and Question Bank Q25, where must..."
+  },
+  {
+    "id": "s09_sc09_prompt",
+    "filename": "s09_sc09_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 9,
+    "sceneId": "c2_s9_sc09_empty_trolley_reverse_loop",
+    "type": "prompt",
+    "script": "After feeding a body-part trolley in the paint shop, where does the empty trolley go? (Question Bank Q25)"
+  },
+  {
+    "id": "s09_sc09_correct",
+    "filename": "s09_sc09_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 9,
+    "sceneId": "c2_s9_sc09_empty_trolley_reverse_loop",
+    "type": "correct",
+    "script": "CORRECT REVERSE FLOW! Question Bank Q25: To the Decant Area! Empty trolleys must be returned immediately to the decant area so they can be cleaned, inspected, and reloaded with the next production..."
+  },
+  {
+    "id": "s09_sc09_wrong",
+    "filename": "s09_sc09_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 9,
+    "sceneId": "c2_s9_sc09_empty_trolley_reverse_loop",
+    "type": "wrong",
+    "script": "HAZARDOUS MISPLACEMENT! Leaving empty trolleys under stairways or pushing them out to the supplier gate causes asset starvation in decanting and severe fire code violations on factory gangways!"
+  },
+  {
+    "id": "s09_sc10_intro",
+    "filename": "s09_sc10_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 10,
+    "sceneId": "c2_s9_sc10_whole_trolley_movement",
+    "type": "intro",
+    "script": "Final milestone of Module 9! A paint-shop WH task asks for a body part (e.g., Tail Side Panel) from the supermarket rack. What physical unit of material do you move to the paint-work line under..."
+  },
+  {
+    "id": "s09_sc10_prompt",
+    "filename": "s09_sc10_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 10,
+    "sceneId": "c2_s9_sc10_whole_trolley_movement",
+    "type": "prompt",
+    "script": "A paint-shop WH task asks for a body part. What do you move to the paint-work line? (Question Bank Q27)"
+  },
+  {
+    "id": "s09_sc10_correct",
+    "filename": "s09_sc10_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 10,
+    "sceneId": "c2_s9_sc10_whole_trolley_movement",
+    "type": "correct",
+    "script": "PERFECT OPERATIONAL MASTERY! Question Bank Q27: The WHOLE TROLLEY of that body part from the supermarket rack! You scan the rack QR to initiate, move the entire loaded trolley to the station,..."
+  },
+  {
+    "id": "s09_sc10_wrong",
+    "filename": "s09_sc10_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 10,
+    "sceneId": "c2_s9_sc10_whole_trolley_movement",
+    "type": "wrong",
+    "script": "INCORRECT UNIT OF MOVEMENT! Feeders never carry loose, single plastic body panels by hand — this causes scratches, surface defects, and massive line starvation. Feeders strictly transport the entire mobile trolley!"
+  },
+  {
+    "id": "s10_sc01_intro",
+    "filename": "s10_sc01_intro.mp3",
+    "stage": 10,
+    "sceneIndex": 1,
+    "sceneId": "c2_s10_sc01_no_reservation_gate",
+    "type": "intro",
+    "script": "Welcome to Stage 10: Indirect Material Handling under S-O-P 10_C2_S1! Centralized Indirect Stores (CM01) houses plant consumables, lubricants, safety gear, and machine spares. A line maintenance supervisor rushes to the counter demanding 10 boxes of..."
+  },
+  {
+    "id": "s10_sc01_prompt",
+    "filename": "s10_sc01_prompt.mp3",
+    "stage": 10,
+    "sceneIndex": 1,
+    "sceneId": "c2_s10_sc01_no_reservation_gate",
+    "type": "prompt",
+    "script": "Can indirect consumables or maintenance spares be physically issued based on a verbal request from a shop supervisor?"
+  },
+  {
+    "id": "s10_sc01_correct",
+    "filename": "s10_sc01_correct.mp3",
+    "stage": 10,
+    "sceneIndex": 1,
+    "sceneId": "c2_s10_sc01_no_reservation_gate",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s10_sc01_wrong",
+    "filename": "s10_sc01_wrong.mp3",
+    "stage": 10,
+    "sceneIndex": 1,
+    "sceneId": "c2_s10_sc01_no_reservation_gate",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s10_sc02_intro",
+    "filename": "s10_sc02_intro.mp3",
+    "stage": 10,
+    "sceneIndex": 2,
+    "sceneId": "c2_s10_sc02_sap_ymb21_transfer",
+    "type": "intro",
+    "script": "Great vigilance blocking the unreserved verbal request in Scene 1! The maintenance supervisor returns with an official reservation slip. Under S-O-P 10_C2_S1 Clause 4.2, what is the mandatory S-A-P Transaction Code (T-Code) used to reserve..."
+  },
+  {
+    "id": "s10_sc02_prompt",
+    "filename": "s10_sc02_prompt.mp3",
+    "stage": 10,
+    "sceneIndex": 2,
+    "sceneId": "c2_s10_sc02_sap_ymb21_transfer",
+    "type": "prompt",
+    "script": "Under S-O-P 10_C2_S1 Clause 4.2, what is the S-A-P transaction code and storage location route for indirect maintenance spares?"
+  },
+  {
+    "id": "s10_sc02_correct",
+    "filename": "s10_sc02_correct.mp3",
+    "stage": 10,
+    "sceneIndex": 2,
+    "sceneId": "c2_s10_sc02_sap_ymb21_transfer",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s10_sc02_wrong",
+    "filename": "s10_sc02_wrong.mp3",
+    "stage": 10,
+    "sceneIndex": 2,
+    "sceneId": "c2_s10_sc02_sap_ymb21_transfer",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s10_sc03_intro",
+    "filename": "s10_sc03_intro.mp3",
+    "stage": 10,
+    "sceneIndex": 3,
+    "sceneId": "c2_s10_sc03_mrs_cost_center_audit",
+    "type": "intro",
+    "script": "Now inspect the printed Material Requisition Slip (MRS) presented at the counter. Under S-O-P Failure Mode 5.1, issuing materials under an incomplete slip causes direct expenses to be billed to the wrong department or left..."
+  },
+  {
+    "id": "s10_sc03_prompt",
+    "filename": "s10_sc03_prompt.mp3",
+    "stage": 10,
+    "sceneIndex": 3,
+    "sceneId": "c2_s10_sc03_mrs_cost_center_audit",
+    "type": "prompt",
+    "script": "Which critical field on this Material Requisition Slip violates S-O-P 10_C2_S1 Failure Mode 5.1 and blocks stock issuance?"
+  },
+  {
+    "id": "s10_sc03_correct",
+    "filename": "s10_sc03_correct.mp3",
+    "stage": 10,
+    "sceneIndex": 3,
+    "sceneId": "c2_s10_sc03_mrs_cost_center_audit",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s10_sc03_wrong",
+    "filename": "s10_sc03_wrong.mp3",
+    "stage": 10,
+    "sceneIndex": 3,
+    "sceneId": "c2_s10_sc03_mrs_cost_center_audit",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s10_sc04_intro",
+    "filename": "s10_sc04_intro.mp3",
+    "stage": 10,
+    "sceneIndex": 4,
+    "sceneId": "c2_s10_sc04_physical_handover_protocol",
+    "type": "intro",
+    "script": "You spotted the missing Cost Center with eagle eyes! The slip is corrected and re-authorized. Now, execute the mandatory 4-step chain of custody sequence under S-O-P 10_C2_S1 Clauses 4.2 & 4.4 and Failure Mode 5.2...."
+  },
+  {
+    "id": "s10_sc04_prompt",
+    "filename": "s10_sc04_prompt.mp3",
+    "stage": 10,
+    "sceneIndex": 4,
+    "sceneId": "c2_s10_sc04_physical_handover_protocol",
+    "type": "prompt",
+    "script": "Arrange the 4 standard operating procedure steps for issuing indirect maintenance spares into the correct chronological order."
+  },
+  {
+    "id": "s10_sc04_correct",
+    "filename": "s10_sc04_correct.mp3",
+    "stage": 10,
+    "sceneIndex": 4,
+    "sceneId": "c2_s10_sc04_physical_handover_protocol",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s10_sc04_wrong",
+    "filename": "s10_sc04_wrong.mp3",
+    "stage": 10,
+    "sceneIndex": 4,
+    "sceneId": "c2_s10_sc04_physical_handover_protocol",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s10_sc05_intro",
+    "filename": "s10_sc05_intro.mp3",
+    "stage": 10,
+    "sceneIndex": 5,
+    "sceneId": "c2_s10_sc05_ppe_jira_ticket_mandate",
+    "type": "intro",
+    "script": "Important PPE security check! An assembly technician arrives at the Indirect Stores counter requesting a brand new pair of steel-toe safety shoes and a company winter jacket. Instead of an approved JIRA ticket, they present..."
+  },
+  {
+    "id": "s10_sc05_prompt",
+    "filename": "s10_sc05_prompt.mp3",
+    "stage": 10,
+    "sceneIndex": 5,
+    "sceneId": "c2_s10_sc05_ppe_jira_ticket_mandate",
+    "type": "prompt",
+    "script": "An associate requests safety shoes and a jacket presenting only an informal handwritten note without a JIRA ticket. Allow or halt? (Question Bank Q29)"
+  },
+  {
+    "id": "s10_sc05_correct",
+    "filename": "s10_sc05_correct.mp3",
+    "stage": 10,
+    "sceneIndex": 5,
+    "sceneId": "c2_s10_sc05_ppe_jira_ticket_mandate",
+    "type": "correct",
+    "script": "STOP IS ABSOLUTELY MANDATED! S-O-P Clause 4.1 & Question Bank Q29: Safety shoes, winter wear, and specialized uniforms strictly require an approved JIRA Ticket with valid Employee ID and size allotment before..."
+  },
+  {
+    "id": "s10_sc05_wrong",
+    "filename": "s10_sc05_wrong.mp3",
+    "stage": 10,
+    "sceneIndex": 5,
+    "sceneId": "c2_s10_sc05_ppe_jira_ticket_mandate",
+    "type": "wrong",
+    "script": "SECURITY BREACH! Handing out safety shoes and uniforms without JIRA tickets breaks HR asset tracking, bypasses company quota limits, and results in direct audit penalties!"
+  },
+  {
+    "id": "s10_sc06_intro",
+    "filename": "s10_sc06_intro.mp3",
+    "stage": 10,
+    "sceneIndex": 6,
+    "sceneId": "c2_s10_sc06_reorder_point_pr",
+    "type": "intro",
+    "script": "Final milestone of Module 10! In Central Indirect Stores (CM01), the physical stock of critical synthetic motor grease has dropped below its Safety Stock Reorder Point (ROP). Under S-O-P 10_C2_S1, how does the Indirect Stores..."
+  },
+  {
+    "id": "s10_sc06_prompt",
+    "filename": "s10_sc06_prompt.mp3",
+    "stage": 10,
+    "sceneIndex": 6,
+    "sceneId": "c2_s10_sc06_reorder_point_pr",
+    "type": "prompt",
+    "script": "When indirect consumables drop below Reorder Point (ROP) in CM01, what is the mandatory S-A-P workflow to replenish stock?"
+  },
+  {
+    "id": "s10_sc06_correct",
+    "filename": "s10_sc06_correct.mp3",
+    "stage": 10,
+    "sceneIndex": 6,
+    "sceneId": "c2_s10_sc06_reorder_point_pr",
+    "type": "correct",
+    "script": "PURCHASE REQUISITION MASTERY! S-O-P Clause 4.5: The Indirect Stores Executive generates an official Purchase Requisition (PR) in S-A-P via T-Code ME51N referencing the Material Master, approved Cost Center, and vendor contract! Stage..."
+  },
+  {
+    "id": "s10_sc06_wrong",
+    "filename": "s10_sc06_wrong.mp3",
+    "stage": 10,
+    "sceneIndex": 6,
+    "sceneId": "c2_s10_sc06_reorder_point_pr",
+    "type": "wrong",
+    "script": "INCORRECT REPLENISHMENT WORKFLOW! Central stores cannot purchase materials with petty cash or verbally call outside shops. Official replenishment requires an authorized S-A-P Purchase Requisition (ME51N) against approved plant budgets!"
+  },
+  {
+    "id": "s11_sc01_intro",
+    "filename": "s11_sc01_intro.mp3",
+    "stage": 11,
+    "sceneIndex": 1,
+    "sceneId": "c2_s11_sc01_jira_budget_id",
+    "type": "intro",
+    "script": "Welcome to Stage 11: Production Inspection & Quality Part Issuance Report (P-I-R)! At Ather Auric, non-standard material requests (for engineering testing, validation, and warranty repairs) must be raised via a formal JIRA P-I-R ticket. These..."
+  },
+  {
+    "id": "s11_sc01_prompt",
+    "filename": "s11_sc01_prompt.mp3",
+    "stage": 11,
+    "sceneIndex": 1,
+    "sceneId": "c2_s11_sc01_jira_budget_id",
+    "type": "prompt",
+    "script": "Can warehouse personnel pick or issue materials when the JIRA P-I-R ticket is missing a Budget ID?"
+  },
+  {
+    "id": "s11_sc01_correct",
+    "filename": "s11_sc01_correct.mp3",
+    "stage": 11,
+    "sceneIndex": 1,
+    "sceneId": "c2_s11_sc01_jira_budget_id",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s11_sc01_wrong",
+    "filename": "s11_sc01_wrong.mp3",
+    "stage": 11,
+    "sceneIndex": 1,
+    "sceneId": "c2_s11_sc01_jira_budget_id",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s11_sc02_intro",
+    "filename": "s11_sc02_intro.mp3",
+    "stage": 11,
+    "sceneIndex": 2,
+    "sceneId": "c2_s11_sc02_pir_approvals",
+    "type": "intro",
+    "script": "Now that the Budget ID is verified on ticket P-I-R-Auric-1042, the requester asks you to pick the materials immediately. However, the ticket requests 30 Brake Calipers worth 45,000 rupees. Under S-O-P 05_C2_S3 Clause 4.2 &..."
+  },
+  {
+    "id": "s11_sc02_prompt",
+    "filename": "s11_sc02_prompt.mp3",
+    "stage": 11,
+    "sceneIndex": 2,
+    "sceneId": "c2_s11_sc02_pir_approvals",
+    "type": "prompt",
+    "script": "Match each emergency P-I-R request ticket to its mandatory authorization authority under S-O-P 05_C2_S3 Clause 4.2."
+  },
+  {
+    "id": "s11_sc02_correct",
+    "filename": "s11_sc02_correct.mp3",
+    "stage": 11,
+    "sceneIndex": 2,
+    "sceneId": "c2_s11_sc02_pir_approvals",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s11_sc02_wrong",
+    "filename": "s11_sc02_wrong.mp3",
+    "stage": 11,
+    "sceneIndex": 2,
+    "sceneId": "c2_s11_sc02_pir_approvals",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s11_sc03_intro",
+    "filename": "s11_sc03_intro.mp3",
+    "stage": 11,
+    "sceneIndex": 3,
+    "sceneId": "c2_s11_sc03_pir_cutoff_clock",
+    "type": "intro",
+    "script": "A fully authorized P-I-R ticket for 5 replacement instrument clusters arrives in the warehouse dispatch queue at 4:15 PM on Friday afternoon. Under S-O-P 05_C2_S3 Clause 4.2 & Failure Mode 5.1, what is the mandatory..."
+  },
+  {
+    "id": "s11_sc03_prompt",
+    "filename": "s11_sc03_prompt.mp3",
+    "stage": 11,
+    "sceneIndex": 3,
+    "sceneId": "c2_s11_sc03_pir_cutoff_clock",
+    "type": "prompt",
+    "script": "Under S-O-P 05_C2_S3 Clause 4.2 & Failure Mode 5.1, how does the 4:00 PM daily cutoff determine P-I-R outbound dispatch timelines?"
+  },
+  {
+    "id": "s11_sc03_correct",
+    "filename": "s11_sc03_correct.mp3",
+    "stage": 11,
+    "sceneIndex": 3,
+    "sceneId": "c2_s11_sc03_pir_cutoff_clock",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s11_sc03_wrong",
+    "filename": "s11_sc03_wrong.mp3",
+    "stage": 11,
+    "sceneIndex": 3,
+    "sceneId": "c2_s11_sc03_pir_cutoff_clock",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s11_sc04_intro",
+    "filename": "s11_sc04_intro.mp3",
+    "stage": 11,
+    "sceneIndex": 4,
+    "sceneId": "c2_s11_sc04_sap_sto_compliance",
+    "type": "intro",
+    "script": "The 30 brake calipers have been picked, foam-packed, and staged for dispatch to an Inter-Branch Plant (IBC). Outbound Delivery VL10B and Post Goods Issue VL02N are posted in S-A-P. The transport carrier truck is waiting..."
+  },
+  {
+    "id": "s11_sc04_prompt",
+    "filename": "s11_sc04_prompt.mp3",
+    "stage": 11,
+    "sceneIndex": 4,
+    "sceneId": "c2_s11_sc04_sap_sto_compliance",
+    "type": "prompt",
+    "script": "Under S-O-P 05_C2_S3 Clause 4.3 and Failure Mode 5.4, what documentation kit is legally required to authorize outbound material gate exit?"
+  },
+  {
+    "id": "s11_sc04_correct",
+    "filename": "s11_sc04_correct.mp3",
+    "stage": 11,
+    "sceneIndex": 4,
+    "sceneId": "c2_s11_sc04_sap_sto_compliance",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s11_sc04_wrong",
+    "filename": "s11_sc04_wrong.mp3",
+    "stage": 11,
+    "sceneIndex": 4,
+    "sceneId": "c2_s11_sc04_sap_sto_compliance",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s11_sc05_intro",
+    "filename": "s11_sc05_intro.mp3",
+    "stage": 11,
+    "sceneIndex": 5,
+    "sceneId": "c2_s11_sc05_pir_destination_routing",
+    "type": "intro",
+    "script": "Dispatch routing masterclass! Under Question Bank Q8, P-I-R requests travel to 3 completely different destinations: (1) Same Location inside Auric plant, (2) Inter-Branch Transfer (IBC) to another Ather factory, or (3) Outside Supplier/Vendor. Match each..."
+  },
+  {
+    "id": "s11_sc05_prompt",
+    "filename": "s11_sc05_prompt.mp3",
+    "stage": 11,
+    "sceneIndex": 5,
+    "sceneId": "c2_s11_sc05_pir_destination_routing",
+    "type": "prompt",
+    "script": "Match each P-I-R destination to its mandatory operational action under Question Bank Q8."
+  },
+  {
+    "id": "s11_sc05_correct",
+    "filename": "s11_sc05_correct.mp3",
+    "stage": 11,
+    "sceneIndex": 5,
+    "sceneId": "c2_s11_sc05_pir_destination_routing",
+    "type": "correct",
+    "script": "PERFECT ROUTING MATCH! Question Bank Q8: (1) Same Location: Pick, pack, and consume directly against Budget ID. (2) IBC (Another Plant): Raise Stock Transport Order (STO PO) alongside picking. (3) Vendor: Consume..."
+  },
+  {
+    "id": "s11_sc05_wrong",
+    "filename": "s11_sc05_wrong.mp3",
+    "stage": 11,
+    "sceneIndex": 5,
+    "sceneId": "c2_s11_sc05_pir_destination_routing",
+    "type": "wrong",
+    "script": "ROUTING MISMATCH! Inter-branch transfers strictly require an S-A-P STO Purchase Order, whereas outside vendor dispatches require a Delivery Challan. Review Question Bank Q8 and try again!"
+  },
+  {
+    "id": "s11_sc06_intro",
+    "filename": "s11_sc06_intro.mp3",
+    "stage": 11,
+    "sceneIndex": 6,
+    "sceneId": "c2_s11_sc06_sap_billing_document_types",
+    "type": "intro",
+    "script": "DEO & Logistics Specialist Challenge! In S-A-P Billing transaction VF01, creating the wrong document type for an outbound STO truck can trigger immediate GST seizure fines exceeding 5,00,000 rupees! Under Question Bank Q31, match billing..."
+  },
+  {
+    "id": "s11_sc06_prompt",
+    "filename": "s11_sc06_prompt.mp3",
+    "stage": 11,
+    "sceneIndex": 6,
+    "sceneId": "c2_s11_sc06_sap_billing_document_types",
+    "type": "prompt",
+    "script": "In S-A-P billing transaction VF01, how are document types ZSTO and ZGST applied under Question Bank Q31?"
+  },
+  {
+    "id": "s11_sc06_correct",
+    "filename": "s11_sc06_correct.mp3",
+    "stage": 11,
+    "sceneIndex": 6,
+    "sceneId": "c2_s11_sc06_sap_billing_document_types",
+    "type": "correct",
+    "script": "EXPERT TAX COMPLIANCE! Question Bank Q31: ZSTO is strictly for intra-state tax-free stock transfers inside the same state (e.g. Maharashtra to Maharashtra); ZGST is strictly for taxable inter-state transfers to another state..."
+  },
+  {
+    "id": "s11_sc06_wrong",
+    "filename": "s11_sc06_wrong.mp3",
+    "stage": 11,
+    "sceneIndex": 6,
+    "sceneId": "c2_s11_sc06_sap_billing_document_types",
+    "type": "wrong",
+    "script": "TAX REGULATORY BREACH! Generating ZSTO for inter-state shipments bypasses integrated IGST reporting, leading to immediate truck detention at state borders. ZGST must be used for inter-state transfers!"
+  },
+  {
+    "id": "s11_sc07_intro",
+    "filename": "s11_sc07_intro.mp3",
+    "stage": 11,
+    "sceneIndex": 7,
+    "sceneId": "c2_s11_sc07_pir_ticket_closure",
+    "type": "intro",
+    "script": "Final milestone of Module 11! The P-I-R shipment has been loaded into the transport carrier truck, inspected by Security, and departed through the plant gates. What final mandatory action closes the P-I-R lifecycle under Question..."
+  },
+  {
+    "id": "s11_sc07_prompt",
+    "filename": "s11_sc07_prompt.mp3",
+    "stage": 11,
+    "sceneIndex": 7,
+    "sceneId": "c2_s11_sc07_pir_ticket_closure",
+    "type": "prompt",
+    "script": "The P-I-R parts have been dispatched. What officially closes the P-I-R process? (Question Bank Q32)"
+  },
+  {
+    "id": "s11_sc07_correct",
+    "filename": "s11_sc07_correct.mp3",
+    "stage": 11,
+    "sceneIndex": 7,
+    "sceneId": "c2_s11_sc07_pir_ticket_closure",
+    "type": "correct",
+    "script": "EXEMPLARY AUDIT CLOSURE! Question Bank Q32: Update transit details in JIRA, attach the signed receipt (Proof of Handover / Lorry Receipt), and set ticket status to 'Closed'! Leaving tickets open creates phantom..."
+  },
+  {
+    "id": "s11_sc07_wrong",
+    "filename": "s11_sc07_wrong.mp3",
+    "stage": 11,
+    "sceneIndex": 7,
+    "sceneId": "c2_s11_sc07_pir_ticket_closure",
+    "type": "wrong",
+    "script": "AUDIT RISK! Never leave a JIRA ticket open after material departs, and never delete tickets! You MUST attach the signed Lorry Receipt / Proof of Handover and transition status to 'Closed'!"
+  },
+  {
+    "id": "s12_sc01_intro",
+    "filename": "s12_sc01_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 1,
+    "sceneId": "c2_s12_sc01_defective_container_spotting",
+    "type": "intro",
+    "script": "Welcome to Stage 12: Reverse Logistics & Empty Bin Loading under S-O-P 15_C2_S4! While collecting returnable empty plastic totes and dunnage trays from the vehicle assembly line, operators must visually audit every container before stacking...."
+  },
+  {
+    "id": "s12_sc01_prompt",
+    "filename": "s12_sc01_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 1,
+    "sceneId": "c2_s12_sc01_defective_container_spotting",
+    "type": "prompt",
+    "script": "Which returnable plastic container has physical damage or foreign contamination that prevents pallet stacking?"
+  },
+  {
+    "id": "s12_sc01_correct",
+    "filename": "s12_sc01_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 1,
+    "sceneId": "c2_s12_sc01_defective_container_spotting",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s12_sc01_wrong",
+    "filename": "s12_sc01_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 1,
+    "sceneId": "c2_s12_sc01_defective_container_spotting",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s12_sc02_intro",
+    "filename": "s12_sc02_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 2,
+    "sceneId": "c2_s12_sc02_rtv_deviation",
+    "type": "intro",
+    "script": "Outstanding work enforcing the Defect Validation Gate in Scene 1! Now, the supplier-caused NG parts are safely staged in the NG Quarantine Area marked 'Quality Failed'. Under S-O-P 06_C2_S4 Clause 4.2, all supplier-caused defects default..."
+  },
+  {
+    "id": "s12_sc02_prompt",
+    "filename": "s12_sc02_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 2,
+    "sceneId": "c2_s12_sc02_rtv_deviation",
+    "type": "prompt",
+    "script": "Line assembly is starved for handlebar sleeves with a minor cosmetic tint flaw. Under S-O-P 06_C2_S4 Clauses 4.4 & 4.5, what is the mandatory approval and S-A-P stock conversion sequence..."
+  },
+  {
+    "id": "s12_sc02_correct",
+    "filename": "s12_sc02_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 2,
+    "sceneId": "c2_s12_sc02_rtv_deviation",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s12_sc02_wrong",
+    "filename": "s12_sc02_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 2,
+    "sceneId": "c2_s12_sc02_rtv_deviation",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s12_sc03_intro",
+    "filename": "s12_sc03_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 3,
+    "sceneId": "c2_s12_sc03_empty_bin_stacking",
+    "type": "intro",
+    "script": "Now we tackle shop floor EHS safety and empty asset circulation under S-O-P 08_C2_S4! As battery pack assembly proceeds at high velocity, empty plastic totes and crates accumulate rapidly by the workstation. To save gangway..."
+  },
+  {
+    "id": "s12_sc03_prompt",
+    "filename": "s12_sc03_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 3,
+    "sceneId": "c2_s12_sc03_empty_bin_stacking",
+    "type": "prompt",
+    "script": "Can an operator stack empty plastic bins higher than 5 feet (operator height) to conserve shop floor gangway space?"
+  },
+  {
+    "id": "s12_sc03_correct",
+    "filename": "s12_sc03_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 3,
+    "sceneId": "c2_s12_sc03_empty_bin_stacking",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s12_sc03_wrong",
+    "filename": "s12_sc03_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 3,
+    "sceneId": "c2_s12_sc03_empty_bin_stacking",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s12_sc04_intro",
+    "filename": "s12_sc04_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 4,
+    "sceneId": "c2_s12_sc04_reverse_truck_loading",
+    "type": "intro",
+    "script": "This is it—the final gate of Stage 12 and the Grand Finale of our 12-Module Warehouse Training Journey! At the outbound reverse logistics dock, the designated transporter truck is positioned with wheel chocks set. We..."
+  },
+  {
+    "id": "s12_sc04_prompt",
+    "filename": "s12_sc04_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 4,
+    "sceneId": "c2_s12_sc04_reverse_truck_loading",
+    "type": "prompt",
+    "script": "Arrange the 4 standard operating procedure steps for reverse truck loading and factory gate clearance into the correct chronological order."
+  },
+  {
+    "id": "s12_sc04_correct",
+    "filename": "s12_sc04_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 4,
+    "sceneId": "c2_s12_sc04_reverse_truck_loading",
+    "type": "correct",
+    "script": "Spot on! Your operational decision complies with Ather Auric standards."
+  },
+  {
+    "id": "s12_sc04_wrong",
+    "filename": "s12_sc04_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 4,
+    "sceneId": "c2_s12_sc04_reverse_truck_loading",
+    "type": "wrong",
+    "script": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety."
+  },
+  {
+    "id": "s12_sc05_intro",
+    "filename": "s12_sc05_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 5,
+    "sceneId": "c2_s12_sc05_gangway_choke_prevention",
+    "type": "intro",
+    "script": "Urgent shopfloor safety audit! Along the main frame assembly line, an operator has emptied 6 plastic component totes and casually stacked them directly in the pedestrian yellow walkway, stating: 'I'll leave them here until shift..."
+  },
+  {
+    "id": "s12_sc05_prompt",
+    "filename": "s12_sc05_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 5,
+    "sceneId": "c2_s12_sc05_gangway_choke_prevention",
+    "type": "prompt",
+    "script": "Empty trolleys and bins are left abandoned at the line side walkway. Allow or halt? (Question Bank Q26)"
+  },
+  {
+    "id": "s12_sc05_correct",
+    "filename": "s12_sc05_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 5,
+    "sceneId": "c2_s12_sc05_gangway_choke_prevention",
+    "type": "correct",
+    "script": "STOP IS ABSOLUTELY ESSENTIAL! S-O-P 08_C2_S4 & Question Bank Q26: Leaving empty bins at line-side chokes the gangways, blocks emergency exits, and completely halts the reverse asset loop! Dedicated Empty Bin Collectors..."
+  },
+  {
+    "id": "s12_sc05_wrong",
+    "filename": "s12_sc05_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 5,
+    "sceneId": "c2_s12_sc05_gangway_choke_prevention",
+    "type": "wrong",
+    "script": "HAZARDOUS EHS VIOLATION! Abandoning empty bins on factory walkways creates tripping hazards, blocks emergency escape corridors, and starves receiving docks of empty packaging!"
+  },
+  {
+    "id": "s12_sc06_intro",
+    "filename": "s12_sc06_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 6,
+    "sceneId": "c2_s12_sc06_supplier_sla_courier_debit",
+    "type": "intro",
+    "script": "Contractual quality compliance! A supplier of defective mirror mounts was notified via JIRA with status 'To be R-T-V'. However, after 3 full working days, the supplier has still failed to send a truck to pick..."
+  },
+  {
+    "id": "s12_sc06_prompt",
+    "filename": "s12_sc06_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 6,
+    "sceneId": "c2_s12_sc06_supplier_sla_courier_debit",
+    "type": "prompt",
+    "script": "The supplier does not arrange pick-up of rejected R-T-V parts within 3 working days. What does the warehouse do? (Question Bank Q34)"
+  },
+  {
+    "id": "s12_sc06_correct",
+    "filename": "s12_sc06_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 6,
+    "sceneId": "c2_s12_sc06_supplier_sla_courier_debit",
+    "type": "correct",
+    "script": "STANDARD RECOVERY PROTOCOL! Question Bank Q34: Dispatch the parts by commercial courier and debit the entire freight shipping cost to the supplier! Attach the courier receipt and debit note PDF to the..."
+  },
+  {
+    "id": "s12_sc06_wrong",
+    "filename": "s12_sc06_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 6,
+    "sceneId": "c2_s12_sc06_supplier_sla_courier_debit",
+    "type": "wrong",
+    "script": "COST MISMANAGEMENT! Holding rejected parts forever chokes warehouse cage storage, while scrapping them at Ather's cost loses company money. Ship via courier and debit the vendor!"
+  },
+  {
+    "id": "s12_sc07_intro",
+    "filename": "s12_sc07_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 7,
+    "sceneId": "c2_s12_sc07_use_as_is_sequence",
+    "type": "intro",
+    "script": "Engineering Deviation Mastery! Under Question Bank Q36, when a minor cosmetic flaw is accepted for production under a 'Use As Is' deviation, what is the exact chronological order of steps from initial approval to vehicle..."
+  },
+  {
+    "id": "s12_sc07_prompt",
+    "filename": "s12_sc07_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 7,
+    "sceneId": "c2_s12_sc07_use_as_is_sequence",
+    "type": "prompt",
+    "script": "Put the 4 steps of the “Use As Is” deviation lifecycle into the exact S-O-P sequence (Question Bank Q36)."
+  },
+  {
+    "id": "s12_sc07_correct",
+    "filename": "s12_sc07_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 7,
+    "sceneId": "c2_s12_sc07_use_as_is_sequence",
+    "type": "correct",
+    "script": "OUTSTANDING PROCESS ACCURACY! Question Bank Q36: (a) Ticket shows 'Deviation Accepted' then (b) Warehouse moves parts to staging, S-A-P stock to QI, JIRA 'Deviated: Available for Build' then (c) I-Q-C moves stock..."
+  },
+  {
+    "id": "s12_sc07_wrong",
+    "filename": "s12_sc07_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 7,
+    "sceneId": "c2_s12_sc07_use_as_is_sequence",
+    "type": "wrong",
+    "script": "INCORRECT SEQUENCE! Parts cannot enter assembly until I-Q-C officially transfers stock from QI (Quality Inspection) to UR (Unrestricted). Review Question Bank Q36!"
+  },
+  {
+    "id": "s12_sc08_intro",
+    "filename": "s12_sc08_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 8,
+    "sceneId": "c2_s12_sc08_reworked_parts_inspection",
+    "type": "intro",
+    "script": "Rework quality containment gate! An internal rework team has repaired 50 instrument cluster brackets that had misaligned mounting pins. The rework technician pushes the trolley toward the main vehicle assembly line, saying: 'We fixed every..."
+  },
+  {
+    "id": "s12_sc08_prompt",
+    "filename": "s12_sc08_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 8,
+    "sceneId": "c2_s12_sc08_reworked_parts_inspection",
+    "type": "prompt",
+    "script": "Reworked parts come back from repair. Can they go straight to the assembly line? (Question Bank Q37)"
+  },
+  {
+    "id": "s12_sc08_correct",
+    "filename": "s12_sc08_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 8,
+    "sceneId": "c2_s12_sc08_reworked_parts_inspection",
+    "type": "correct",
+    "script": "STOP IS MANDATORY! Question Bank Q37: Reworked parts can NEVER go straight to the line! Stock must first move back to QI in S-A-P, JIRA updated to 'Rework Done', and I-Q-C must..."
+  },
+  {
+    "id": "s12_sc08_wrong",
+    "filename": "s12_sc08_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 8,
+    "sceneId": "c2_s12_sc08_reworked_parts_inspection",
+    "type": "wrong",
+    "script": "SEVERE QUALITY HAZARD! Releasing reworked parts without I-Q-C re-inspection risks introducing hidden fractures or out-of-spec dimensions into customer vehicles. 1.5x sampling inspection is non-negotiable!"
+  },
+  {
+    "id": "s12_sc09_intro",
+    "filename": "s12_sc09_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 9,
+    "sceneId": "c2_s12_sc09_non_supplier_scrap_protocol",
+    "type": "intro",
+    "script": "Asset write-off governance! During internal assembly transit, 4 aluminum swingarms were dropped and severely cracked by an in-house forklift operator. Because the defect was caused in-house and not by the vendor, what mandatory documentation is..."
+  },
+  {
+    "id": "s12_sc09_prompt",
+    "filename": "s12_sc09_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 9,
+    "sceneId": "c2_s12_sc09_non_supplier_scrap_protocol",
+    "type": "prompt",
+    "script": "What is mandatory before non-supplier rejected parts are scrapped? (Question Bank Q38)"
+  },
+  {
+    "id": "s12_sc09_correct",
+    "filename": "s12_sc09_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 9,
+    "sceneId": "c2_s12_sc09_non_supplier_scrap_protocol",
+    "type": "correct",
+    "script": "FINANCIAL INTEGRITY ENFORCED! Question Bank Q38: Written approval from the Production or Functional Head AND an official signed Scrap Approval Note! Only then does S-A-P move stock to the scrap location, parts..."
+  },
+  {
+    "id": "s12_sc09_wrong",
+    "filename": "s12_sc09_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 9,
+    "sceneId": "c2_s12_sc09_non_supplier_scrap_protocol",
+    "type": "wrong",
+    "script": "UNAUTHORIZED DISPOSAL! Never scrap plant assets based on verbal comments. Scrapping company materials without signed Production & Finance notes constitutes unauthorized write-off and audit fraud!"
+  },
+  {
+    "id": "s12_sc10_intro",
+    "filename": "s12_sc10_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 10,
+    "sceneId": "c2_s12_sc10_empty_bin_segregation_dashboard",
+    "type": "intro",
+    "script": "Reverse logistics hub in action! Empty plastic bins collected from assembly lines have reached the central Segregation Area. Under Question Bank Q40, how must operators sort these containers, and how do they find which supplier..."
+  },
+  {
+    "id": "s12_sc10_prompt",
+    "filename": "s12_sc10_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 10,
+    "sceneId": "c2_s12_sc10_empty_bin_segregation_dashboard",
+    "type": "prompt",
+    "script": "How do you sort empty bins in the segregation area, and route them to docked trucks? (Question Bank Q40)"
+  },
+  {
+    "id": "s12_sc10_correct",
+    "filename": "s12_sc10_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 10,
+    "sceneId": "c2_s12_sc10_empty_bin_segregation_dashboard",
+    "type": "correct",
+    "script": "DIGITAL LOGISTICS MASTERY! Question Bank Q40: Sort by Supplier ID and Part Number in designated floor bays! Use the live Supplier Truck Dashboard to see docked vehicles and their assigned dock bay!..."
+  },
+  {
+    "id": "s12_sc10_wrong",
+    "filename": "s12_sc10_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 10,
+    "sceneId": "c2_s12_sc10_empty_bin_segregation_dashboard",
+    "type": "wrong",
+    "script": "LOGISTICS DISORGANIZATION! Piling all vendor bins into a random heap causes wrong containers to be sent to wrong suppliers. Use the live docking dashboard and sort by vendor and part number!"
+  },
+  {
+    "id": "s12_sc11_intro",
+    "filename": "s12_sc11_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 11,
+    "sceneId": "c2_s12_sc11_recalled_material_disposition",
+    "type": "intro",
+    "script": "Critical quality containment scenario! Following a field bulletin, a batch of 200 brake cables already in the supermarket was recalled for emergency safety re-testing. Quality conducts containment inspection and 4 cables fail tensile strength testing...."
+  },
+  {
+    "id": "s12_sc11_prompt",
+    "filename": "s12_sc11_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 11,
+    "sceneId": "c2_s12_sc11_recalled_material_disposition",
+    "type": "prompt",
+    "script": "A recalled lot of parts fails quality re-inspection. What happens under Ather S-O-P? (Question Bank Q41)"
+  },
+  {
+    "id": "s12_sc11_correct",
+    "filename": "s12_sc11_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 11,
+    "sceneId": "c2_s12_sc11_recalled_material_disposition",
+    "type": "correct",
+    "script": "CONTAINMENT ENFORCED! Question Bank Q41: Stock is immediately transferred to Blocked Stock in S-A-P, the NG logistics team moves the entire lot to the NG Quarantine Area, and the formal R-T-V return-to-vendor..."
+  },
+  {
+    "id": "s12_sc11_wrong",
+    "filename": "s12_sc11_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 11,
+    "sceneId": "c2_s12_sc11_recalled_material_disposition",
+    "type": "wrong",
+    "script": "CRITICAL SAFETY RISK! Recalled safety parts that fail re-inspection can NEVER return to unrestricted stock. They must be moved to Blocked stock in S-A-P and transferred to the NG quarantine cage for..."
+  },
+  {
+    "id": "s12_sc12_intro",
+    "filename": "s12_sc12_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 12,
+    "sceneId": "c2_s12_sc12_grandmaster_graduation",
+    "type": "intro",
+    "script": "GRANDMASTER CERTIFICATION MILESTONE! You have reached the 91st and final scene of the Ather Auric Plant M002 Warehouse Training Program! Across 12 comprehensive modules, you mastered Inbound Docks, I-Q-C Clearance, Put-Away, Battery Rooms, Hazardous Chemicals,..."
+  },
+  {
+    "id": "s12_sc12_prompt",
+    "filename": "s12_sc12_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 12,
+    "sceneId": "c2_s12_sc12_grandmaster_graduation",
+    "type": "prompt",
+    "script": "What core operational principle unites all 12 modules of the Ather Auric Plant M002 Warehouse System?"
+  },
+  {
+    "id": "s12_sc12_correct",
+    "filename": "s12_sc12_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 12,
+    "sceneId": "c2_s12_sc12_grandmaster_graduation",
+    "type": "correct",
+    "script": "CONGRATULATIONS, GRANDMASTER! Uncompromising Dual-Verification: Every physical movement must be married to real-time digital system scans (S-A-P E-W-M, M-E-S, JIRA) to guarantee 100 percent V-I-N traceability and zero defect leakage! You have completed..."
+  },
+  {
+    "id": "s12_sc12_wrong",
+    "filename": "s12_sc12_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 12,
+    "sceneId": "c2_s12_sc12_grandmaster_graduation",
+    "type": "wrong",
+    "script": "Never compromise on digital verification! Warehouse speed without system discipline causes line stoppages and defect leakage. Always marry physical handling to digital barcode scans!"
+  },
+  {
+    "id": "s12_sc12_victory",
+    "filename": "s12_sc12_victory.mp3",
+    "stage": 12,
+    "sceneIndex": 12,
+    "sceneId": "c2_s12_sc12_grandmaster_graduation",
     "type": "victory",
-    "trigger": "Player successfully completes all operational scenarios.",
-    "vocalDirection": "Triumphant, celebratory, inspiring.",
-    "cleanScript": "Outstanding job, Operations Associate! Every delivery was verified, quality inspections were enforced, battery cells were safely vaulted, and the assembly line ran smoothly without a single second of material downtime. You've mastered the Ather AURIC warehouse standard operating procedures! Your shift is officially complete. Fantastic work!",
-    "rawScript": "[triumphant, celebratory] \"Outstanding job, Operations Associate! Every delivery was verified, quality inspections were enforced, battery cells were safely vaulted, and the assembly line ran smoothly without a single second of material downtime. You've mastered the Ather AURIC warehouse standard operating procedures! Your shift is officially complete. Fantastic work!\""
+    "script": "Outstanding job, Operations Associate! Every delivery was verified, quality inspections were enforced, battery cells were safely vaulted, and the assembly line ran smoothly with zero defect downtime. You've mastered the Ather Auric warehouse standard operating procedures! Your shift is officially complete. Fantastic work!"
   }
 ]

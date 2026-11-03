@@ -1,6 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { MASCOT_IMAGE_MAP } from '../engine/story/assetRegistry';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import type {
   LanguageCode,
   LocalizedText,
@@ -90,6 +88,7 @@ import { FeedbackCard } from '../components/story/FeedbackCard';
 import { MilestoneGateway } from '../components/story/MilestoneGateway';
 import { FacilityPhotoFrame } from '../components/story/FacilityPhotoFrame';
 import { Camera, Video, Minimize2, Maximize2 } from 'lucide-react';
+import { logSceneTelemetry, syncEmployeeSession, type TrainingCategory } from '../services/firebase';
 
 const allStages: StoryStage[] = [
   ...category1Stages,
@@ -104,6 +103,7 @@ export interface StoryStagePlayerProps {
   onViewScorecard?: (summary: RunSummary) => void;
   lang?: LanguageCode;
   onSelectLang?: (lang: LanguageCode) => void;
+  appMode?: 'receiving' | 'picking';
 }
 
 export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
@@ -113,8 +113,14 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
   onExitHome,
   onViewScorecard,
   lang: propLang,
-  onSelectLang: propOnSelectLang
+  onSelectLang: propOnSelectLang,
+  appMode = 'receiving'
 }) => {
+  const isPicking = appMode === 'picking';
+  const activeStages = useMemo(() => {
+    return isPicking ? category2Stages : category1Stages;
+  }, [isPicking]);
+
   const [lang, setLang] = useState<LanguageCode>(() => {
     if (propLang) return propLang;
     try {
@@ -132,11 +138,15 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
 
   const [currentStageIndex, setCurrentStageIndex] = useState<number>(() => {
     if (initialStageIndex !== undefined) {
-      return Math.min(Math.max(0, initialStageIndex), allStages.length - 1);
+      let idx = initialStageIndex;
+      if (isPicking && idx >= 7) {
+        idx = idx - 7;
+      }
+      return Math.min(Math.max(0, idx), activeStages.length - 1);
     }
     try {
-      const saved = localStorage.getItem('ather_stage_idx');
-      return saved !== null ? Math.min(Math.max(0, Number(saved)), allStages.length - 1) : 0;
+      const saved = localStorage.getItem(isPicking ? 'ather_picking_stage_idx' : 'ather_stage_idx');
+      return saved !== null ? Math.min(Math.max(0, Number(saved)), activeStages.length - 1) : 0;
     } catch {
       return 0;
     }
@@ -170,6 +180,9 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
       if (window.location.hash.includes('gateway') || window.location.hash.includes('phase=gateway')) {
         return 'gateway';
       }
+      if (window.location.hash.includes('phase=question') || window.location.hash.includes('question=true')) {
+        return 'interaction_paused';
+      }
     } catch {}
     return 'intro';
   });
@@ -179,19 +192,47 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
   const [isQuestionExpanded, setIsQuestionExpanded] = useState<boolean>(false);
   const [showVideoModal, setShowVideoModal] = useState<boolean>(false);
   const [replayKey, setReplayKey] = useState<number>(0);
-  const [showWrongCenterAlert, setShowWrongCenterAlert] = useState<boolean>(false);
-  const wrongAlertTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const stageData = allStages[currentStageIndex] || allStages[0];
+  // Real-time per-scene duration and assessment telemetry refs
+  const sceneStartTimeRef = useRef<number>(Date.now());
+  const sceneAttemptsRef = useRef<number>(0);
+  const totalDecisionsRef = useRef<number>(0);
+  const correctDecisionsRef = useRef<number>(0);
+  const totalTimeSecondsRef = useRef<number>(0);
+  const continueStoryRef = useRef<() => void>(() => {});
+  const answerEvaluatedRef = useRef<(correct: boolean) => void>(() => {});
+  const resetSceneRef = useRef<() => void>(() => {});
+
+  // 1-Point scoring system and safety breach tracking
+  const [pointsScored, setPointsScored] = useState<number>(() => {
+    try {
+      const saved = localStorage.getItem(isPicking ? 'ather_picking_points' : 'ather_points');
+      return saved !== null ? Number(saved) : 0;
+    } catch {
+      return 0;
+    }
+  });
+  const pointsScoredRef = useRef<number>(pointsScored);
+  const safetyBreachesRef = useRef<number>(0);
+
+  const stageData = activeStages[currentStageIndex] || activeStages[0];
   const scene = stageData.scenes[currentSceneIndex] || stageData.scenes[0];
+  const totalPossiblePoints = useMemo(() => {
+    return activeStages.reduce((acc, s) => acc + s.scenes.length, 0);
+  }, [activeStages]);
 
-  // Clean up alert timeout and audio on unmount
+  // Clean up audio on unmount
   useEffect(() => {
     return () => {
       stopVoice();
-      if (wrongAlertTimeoutRef.current) clearTimeout(wrongAlertTimeoutRef.current);
     };
   }, []);
+
+  // Reset stopwatch timer and attempts on scene change
+  useEffect(() => {
+    sceneStartTimeRef.current = Date.now();
+    sceneAttemptsRef.current = 0;
+  }, [currentStageIndex, currentSceneIndex]);
 
   // Reset canvas view mode on scene change:
   // Default to 'blueprint' (the interactive coded simulation animation),
@@ -208,14 +249,111 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
   // Auto-save progress to localStorage
   useEffect(() => {
     try {
-      localStorage.setItem('ather_stage_idx', String(currentStageIndex));
-      localStorage.setItem('ather_scene_idx', String(currentSceneIndex));
-      localStorage.setItem('ather_xp', String(xp));
+      const stageKey = isPicking ? 'ather_picking_stage_idx' : 'ather_stage_idx';
+      const sceneKey = isPicking ? 'ather_picking_scene_idx' : 'ather_scene_idx';
+      const pointsKey = isPicking ? 'ather_picking_points' : 'ather_points';
+      localStorage.setItem(stageKey, String(currentStageIndex));
+      localStorage.setItem(sceneKey, String(currentSceneIndex));
+      localStorage.setItem(pointsKey, String(pointsScoredRef.current));
+      localStorage.setItem('ather_xp', String(pointsScoredRef.current));
       localStorage.setItem('ather_lang', lang);
     } catch {
       // Storage unavailable
     }
-  }, [currentStageIndex, currentSceneIndex, xp, lang]);
+  }, [currentStageIndex, currentSceneIndex, pointsScored, lang, isPicking]);
+
+  // Dev-only bridge: expose player state and listen for dev events
+  useEffect(() => {
+    if (!import.meta.env.DEV) return;
+
+    const handleDevJump = (e: Event) => {
+      const customEvent = e as CustomEvent<{
+        stageIndex?: number;
+        sceneIndex?: number;
+        phase?: 'intro' | 'interaction_paused' | 'feedback' | 'gateway';
+      }>;
+      const { stageIndex, sceneIndex, phase: targetPhase } = customEvent.detail || {};
+
+      stopVoice();
+
+      if (typeof stageIndex === 'number' && stageIndex !== currentStageIndex) {
+        setCurrentStageIndex(Math.min(Math.max(0, stageIndex), allStages.length - 1));
+      }
+      if (typeof sceneIndex === 'number') {
+        setCurrentSceneIndex(sceneIndex);
+      }
+      if (targetPhase) {
+        setPhase(targetPhase);
+      } else {
+        setPhase('interaction_paused');
+      }
+      setSelectedOptionId(null);
+      setIsLastCorrect(false);
+    };
+
+    const handleDevSkip = () => {
+      continueStoryRef.current();
+    };
+
+    const handleDevSolve = (e: Event) => {
+      const customEvent = e as CustomEvent<{ correct?: boolean }>;
+      const isCorrect = customEvent.detail?.correct !== false;
+
+      // Ensure we switch to the question screen if in intro
+      setPhase('interaction_paused');
+
+      if (scene.interaction.type === 'mcq') {
+        const mcq = scene.interaction as McqInteraction;
+        const targetOption = isCorrect
+          ? mcq.options.find((opt) => opt.correct) || mcq.options[0]
+          : mcq.options.find((opt) => !opt.correct) || mcq.options[0];
+
+        if (targetOption) {
+          setSelectedOptionId(targetOption.id);
+          answerEvaluatedRef.current(isCorrect);
+        } else {
+          answerEvaluatedRef.current(isCorrect);
+        }
+      } else {
+        // Broadcast to interactive cards (Sequence, DragDrop, etc.)
+        window.dispatchEvent(new CustomEvent('ather:dev:card-solve', { detail: { correct: isCorrect } }));
+        answerEvaluatedRef.current(isCorrect);
+      }
+    };
+
+    const handleDevReset = () => {
+      resetSceneRef.current();
+      setPhase('interaction_paused');
+    };
+
+    window.addEventListener('ather:dev:jump', handleDevJump);
+    window.addEventListener('ather:dev:skip', handleDevSkip);
+    window.addEventListener('ather:dev:solve', handleDevSolve);
+    window.addEventListener('ather:dev:reset', handleDevReset);
+
+    return () => {
+      window.removeEventListener('ather:dev:jump', handleDevJump);
+      window.removeEventListener('ather:dev:skip', handleDevSkip);
+      window.removeEventListener('ather:dev:solve', handleDevSolve);
+      window.removeEventListener('ather:dev:reset', handleDevReset);
+    };
+  }, [currentStageIndex, currentSceneIndex, xp, stageData]);
+
+  // Keep window.__ATHER_DEV_STATE__ updated in dev
+  useEffect(() => {
+    if (!import.meta.env.DEV) return;
+    (window as any).__ATHER_DEV_STATE__ = {
+      currentStageIndex,
+      currentSceneIndex,
+      phase,
+      stageData,
+      scene,
+      xp,
+      hearts,
+      lang
+    };
+    window.dispatchEvent(new CustomEvent('ather:dev:state-updated'));
+  }, [currentStageIndex, currentSceneIndex, phase, stageData, scene, xp, hearts, lang]);
 
   // Called when video/animation reaches its SOP pause point or completes
   const handlePauseReached = () => {
@@ -275,18 +413,71 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
     setIsLastCorrect(correct);
     playFeedbackTone(correct);
 
+    // Track First-Time-Right (FTR), attempts, decisions count, and stopwatch elapsed time
+    const isFirstAttempt = sceneAttemptsRef.current === 0;
+    sceneAttemptsRef.current += 1;
+    totalDecisionsRef.current += 1;
+    if (correct) correctDecisionsRef.current += 1;
+
+    const timeSpentSeconds = Math.max(1, Math.round((Date.now() - sceneStartTimeRef.current) / 1000));
+    totalTimeSecondsRef.current += timeSpentSeconds;
+
+    const isFirstTimeRight = correct && isFirstAttempt;
+    if (isFirstTimeRight) {
+      pointsScoredRef.current += 1;
+      setPointsScored(pointsScoredRef.current);
+    }
+    if (!correct) {
+      safetyBreachesRef.current += 1;
+    }
+
+    const category: TrainingCategory = stageData.stageNumber <= 7 ? 'receiving_putaway' : 'picking_packaging';
+    const stageTitleText = stageData.stageTitle?.en || (stageData.stageTitle as any)?.[lang] || `Module ${stageData.stageNumber}`;
+    const sceneTitleText = scene.title?.en || (scene.title as any)?.[lang] || (scene as any).name?.en || `Scene ${currentSceneIndex + 1}`;
+
+    // 1. Log granular telemetry to Firebase
+    logSceneTelemetry({
+      operatorId: userProfile?.operatorId || 'OP-AURIC-104',
+      employeeName: userProfile?.name || 'Ramesh Patil',
+      category,
+      stageIndex: currentStageIndex,
+      stageNumber: stageData.stageNumber,
+      stageTitle: stageTitleText,
+      sceneIndex: currentSceneIndex,
+      sceneId: scene.id,
+      sceneTitle: sceneTitleText,
+      interactionType: scene.interaction.type,
+      timeSpentSeconds,
+      isCorrect: correct,
+      attempts: sceneAttemptsRef.current,
+      pointsAwarded: isFirstTimeRight ? 1 : 0,
+      xpEarned: isFirstTimeRight ? 1 : 0,
+      sopClause: scene.rules.sopClause || 'Standard'
+    });
+
+    // 2. Update employee aggregate live session
+    const currentAcc = Math.round((pointsScoredRef.current / Math.max(1, totalPossiblePoints)) * 100);
+    syncEmployeeSession({
+      operatorId: userProfile?.operatorId || 'OP-AURIC-104',
+      employeeName: userProfile?.name || 'Ramesh Patil',
+      photoUrl: userProfile?.photoUrl,
+      category,
+      currentStageIndex,
+      completedStages: [],
+      totalScoreXP: pointsScoredRef.current,
+      totalPossiblePoints,
+      safetyBreachesCount: safetyBreachesRef.current,
+      accuracyPct: currentAcc,
+      totalDecisionsCount: totalDecisionsRef.current,
+      correctDecisionsCount: correctDecisionsRef.current,
+      totalTimeSpentSeconds: totalTimeSecondsRef.current,
+      status: 'in_progress'
+    });
+
     if (correct) {
-      setXp((prev) => prev + scene.rules.xp);
-      setShowWrongCenterAlert(false);
-      if (wrongAlertTimeoutRef.current) clearTimeout(wrongAlertTimeoutRef.current);
+      setXp(pointsScoredRef.current);
     } else {
       setHearts((prev) => Math.max(1, prev - 1));
-      // Trigger dramatic center screen alert pop-in that draws maximum attention, then transitions to bottom-left
-      setShowWrongCenterAlert(true);
-      if (wrongAlertTimeoutRef.current) clearTimeout(wrongAlertTimeoutRef.current);
-      wrongAlertTimeoutRef.current = setTimeout(() => {
-        setShowWrongCenterAlert(false);
-      }, 1400);
     }
 
     setPhase('feedback');
@@ -295,8 +486,6 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
   // Continue story to next scene or gateway
   const handleContinueStory = () => {
     stopVoice();
-    setShowWrongCenterAlert(false);
-    if (wrongAlertTimeoutRef.current) clearTimeout(wrongAlertTimeoutRef.current);
     if (currentSceneIndex < stageData.scenes.length - 1) {
       setCurrentSceneIndex((prev) => prev + 1);
       setPhase('intro');
@@ -304,6 +493,25 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
       setIsLastCorrect(false);
     } else {
       setPhase('gateway');
+      const category: TrainingCategory = stageData.stageNumber <= 7 ? 'receiving_putaway' : 'picking_packaging';
+      const currentAcc = Math.round((pointsScoredRef.current / Math.max(1, totalPossiblePoints)) * 100);
+      const isFinalStage = currentStageIndex >= activeStages.length - 1;
+      syncEmployeeSession({
+        operatorId: userProfile?.operatorId || 'OP-AURIC-104',
+        employeeName: userProfile?.name || 'Ramesh Patil',
+        photoUrl: userProfile?.photoUrl,
+        category,
+        currentStageIndex,
+        completedStages: [currentStageIndex],
+        totalScoreXP: pointsScoredRef.current,
+        totalPossiblePoints,
+        safetyBreachesCount: safetyBreachesRef.current,
+        accuracyPct: currentAcc,
+        totalDecisionsCount: totalDecisionsRef.current,
+        correctDecisionsCount: correctDecisionsRef.current,
+        totalTimeSpentSeconds: totalTimeSecondsRef.current,
+        status: isFinalStage ? (currentAcc >= 85 && safetyBreachesRef.current === 0 ? 'floor_ready' : 'retrain_needed') : 'in_progress'
+      });
       try {
         confetti({
           particleCount: 80,
@@ -318,8 +526,6 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
 
   const handleSelectScene = (index: number) => {
     stopVoice();
-    setShowWrongCenterAlert(false);
-    if (wrongAlertTimeoutRef.current) clearTimeout(wrongAlertTimeoutRef.current);
     setCurrentSceneIndex(index);
     setPhase('intro');
     setSelectedOptionId(null);
@@ -328,8 +534,6 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
 
   const handleSelectStage = (stageIdx: number) => {
     stopVoice();
-    setShowWrongCenterAlert(false);
-    if (wrongAlertTimeoutRef.current) clearTimeout(wrongAlertTimeoutRef.current);
     setCurrentStageIndex(stageIdx);
     setCurrentSceneIndex(0);
     setPhase('intro');
@@ -339,12 +543,16 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
 
   const handleResetCurrentScene = () => {
     stopVoice();
-    setShowWrongCenterAlert(false);
-    if (wrongAlertTimeoutRef.current) clearTimeout(wrongAlertTimeoutRef.current);
     setPhase('intro');
     setSelectedOptionId(null);
     setIsLastCorrect(false);
   };
+
+  useEffect(() => {
+    continueStoryRef.current = handleContinueStory;
+    answerEvaluatedRef.current = handleAnswerEvaluated;
+    resetSceneRef.current = handleResetCurrentScene;
+  });
 
   // Mascot dynamic pose and text calculation with full Category 1 & Category 2 compatibility
   const mascotData = scene.mascot as any;
@@ -384,29 +592,29 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
   }
 
   const getRunSummary = (): RunSummary => {
-    const isFullJourney = currentStageIndex >= 11;
-    const cat1TotalScenes = category1Stages.reduce((acc, s) => acc + s.scenes.length, 0);
-    const allTotalScenes = allStages.reduce((acc, s) => acc + s.scenes.length, 0);
+    const totalSteps = totalPossiblePoints;
+    const correctSteps = pointsScoredRef.current;
+    const accuracyPct = Math.round((correctSteps / Math.max(1, totalSteps)) * 100);
     return {
-      packId: isFullJourney ? 'ather-all-modules' : (currentStageIndex >= 7 ? 'ather-category-2' : 'ather-category-1'),
+      packId: isPicking ? 'ather_picking_packaging' : 'ather_receiving_putaway',
       packTitle: {
-        en: isFullJourney
-          ? 'All 12 Modules Grandmaster Certification'
-          : (currentStageIndex >= 7 ? 'Category 2: Outbound & Material Issuance' : 'Category 1: Inbound & Storage Certification'),
-        hi: isFullJourney
-          ? 'सभी 12 मॉड्यूल ग्रैंडमास्टर प्रमाणन'
-          : (currentStageIndex >= 7 ? 'श्रेणी 2: जावक एवं सामग्री वितरण' : 'श्रेणी 1: आवक और भंडारण प्रमाणन'),
-        mr: isFullJourney
-          ? 'सर्व 12 मॉड्यूल्स ग्रँडमास्टर प्रमाणपत्र'
-          : (currentStageIndex >= 7 ? 'कॅटेगरी 2: जावक व साहित्य वाटप' : 'कॅटेगरी 1: आवक व साठवणूक प्रमाणपत्र')
+        en: isPicking
+          ? 'Order Picking & Packaging Certification'
+          : 'Warehouse Receiving & Put-Away Certification',
+        hi: isPicking
+          ? 'ऑर्डर पिकिंग और पैकेजिंग प्रमाणन'
+          : 'वेयरहाउस प्राप्ति और पुट-अवे प्रमाणन',
+        mr: isPicking
+          ? 'ऑर्डर पिकिंग आणि पॅकेजिंग प्रमाणपत्र'
+          : 'वेअरहाऊस प्राप्ती आणि पुट-अवे प्रमाणपत्र'
       },
       mode: 'guided',
-      stars: 3,
-      xpGained: xp,
-      accuracyPct: attempts > 0 ? Math.min(100, Math.round(((Math.max(1, attempts - Math.max(0, 3 - hearts))) / attempts) * 100)) : 100,
-      totalSteps: isFullJourney ? allTotalScenes : (currentStageIndex >= 7 ? allTotalScenes - cat1TotalScenes : cat1TotalScenes),
-      correctSteps: Math.max(attempts, 8),
-      safetyPassed: hearts > 0,
+      stars: accuracyPct >= 90 ? 3 : accuracyPct >= 75 ? 2 : 1,
+      xpGained: correctSteps,
+      accuracyPct,
+      totalSteps,
+      correctSteps,
+      safetyPassed: safetyBreachesRef.current === 0,
       lost: false,
       badgesEarned: ['safe', 'perf', 'cert'],
       timestamp: new Date().toISOString()
@@ -414,13 +622,12 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
   };
 
   if (showCertificate) {
-    const isFullJourney = currentStageIndex >= 11;
     const summary: RunSummary = getRunSummary();
 
     const profile: UserProfile = userProfile || {
-      name: 'Ather Certified Warehouse Specialist',
+      name: isPicking ? 'Ather Certified Outbound Specialist' : 'Ather Certified Inbound Specialist',
       operatorId: 'AURIC-M002-WH-42',
-      xp,
+      xp: pointsScoredRef.current,
       streak: 5,
       lastActiveDate: new Date().toISOString().split('T')[0],
       badges: ['safe', 'perf', 'cert'],
@@ -432,7 +639,7 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
         summary={summary}
         lang={lang}
         profile={profile}
-        sopDoc={isFullJourney ? 'AURIC-PRO-ALL-012' : stageData.sopDoc}
+        sopDoc={isPicking ? 'AURIC-PRO-C2-008' : stageData.sopDoc}
         onBack={() => setShowCertificate(false)}
         onNavigateHome={() => {
           setShowCertificate(false);
@@ -442,6 +649,7 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
             handleSelectStage(0);
           }
         }}
+        appMode={appMode}
       />
     );
   }
@@ -1104,9 +1312,9 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
           <MilestoneGateway
             stage={stageData}
             stageIndex={currentStageIndex}
-            totalStages={allStages.length}
+            totalStages={activeStages.length}
             lang={lang}
-            xp={xp}
+            xp={pointsScoredRef.current}
             hearts={hearts}
             attempts={attempts}
             onSelectScene={handleSelectScene}
@@ -1116,64 +1324,10 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
             onRestartFull={() => {
               handleSelectScene(0);
             }}
+            appMode={appMode}
           />
         )}
       </main>
-
-      {/* Dramatic Center Screen Alert when Answer is Wrong (Catches trainee's attention, then flies to bottom-left) */}
-      <AnimatePresence>
-        {showWrongCenterAlert && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-50 pointer-events-none flex items-center justify-center bg-black/40 backdrop-blur-xs select-none"
-          >
-            <motion.div
-              initial={{ scale: 0.2, opacity: 0, y: 40 }}
-              animate={{
-                scale: [0.2, 1.35, 1.1],
-                opacity: 1,
-                y: 0,
-                x: [0, -10, 10, -8, 8, -4, 4, 0]
-              }}
-              exit={{
-                scale: 0.35,
-                opacity: 0,
-                x: -360,
-                y: 240,
-                transition: { duration: 0.5, ease: 'easeInOut' }
-              }}
-              transition={{ duration: 0.55, ease: 'easeOut' }}
-              className="flex flex-col items-center text-center p-6"
-            >
-              {/* Glowing red alert halo */}
-              <div className="relative flex items-center justify-center">
-                <div className="absolute -inset-8 rounded-full bg-rose-600/50 blur-3xl animate-ping opacity-75" />
-                <div className="w-56 h-56 sm:w-64 sm:h-64 relative z-10 filter drop-shadow-[0_20px_35px_rgba(225,29,72,0.7)]">
-                  <img
-                    src={MASCOT_IMAGE_MAP.warning}
-                    alt="AURA Alert"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-
-              {/* SOP Deviation Alert Pill */}
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.15 }}
-                className="mt-4 px-6 py-2 rounded-2xl bg-rose-600 text-white font-black text-sm sm:text-base tracking-wider uppercase shadow-2xl border-2 border-rose-300 flex items-center gap-2"
-              >
-                <span className="text-xl">⚠️</span>
-                <span>SOP Deviation Detected!</span>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 };

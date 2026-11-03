@@ -4,9 +4,12 @@ import { EmployeeRegistration } from './pages/EmployeeRegistration';
 import { StoryStagePlayer } from './pages/StoryStagePlayer';
 import { Results } from './pages/Results';
 import { CertificateView } from './pages/CertificateView';
+import { AdminPanel } from './pages/AdminPanel';
+import { DevFloatingToolbar } from './components/dev/DevFloatingToolbar';
 import type { LanguageCode, UserProfile, RunSummary } from './engine/types';
 
-type Screen = 'landing' | 'register' | 'story' | 'results' | 'certificate';
+type Screen = 'landing' | 'register' | 'story' | 'results' | 'certificate' | 'admin';
+export type AppMode = 'receiving' | 'picking';
 
 const DEFAULT_PROFILE: UserProfile = {
   name: 'Ramesh Patil',
@@ -33,10 +36,50 @@ const MODULE_SOPS: Record<number, string> = {
   11: '12_C2_S12'
 };
 
+const getInitialAppMode = (): AppMode => {
+  try {
+    const hash = window.location.hash.toLowerCase();
+    const search = window.location.search.toLowerCase();
+    if (hash.includes('picking') || search.includes('picking')) return 'picking';
+    if (hash.includes('receiving') || search.includes('receiving')) return 'receiving';
+    const saved = localStorage.getItem('ather_app_mode');
+    if (saved === 'picking' || saved === 'receiving') return saved;
+  } catch {}
+  return 'receiving';
+};
+
 export function App() {
+  const [appMode, setAppMode] = useState<AppMode>(getInitialAppMode);
+
+  // Sync PWA Manifest, Title, and Icon dynamically based on appMode
+  useEffect(() => {
+    try {
+      localStorage.setItem('ather_app_mode', appMode);
+      const isPicking = appMode === 'picking';
+      document.title = isPicking
+        ? 'Order Picking & Packaging | Ather AURIC Plant M002'
+        : 'Warehouse Receiving & Put-Away | Ather AURIC Plant M002';
+
+      // Update PWA manifest link
+      let manifestEl = document.querySelector('link[rel="manifest"]') as HTMLLinkElement | null;
+      const targetManifest = isPicking ? '/manifest-picking.webmanifest' : '/manifest-receiving.webmanifest';
+      if (manifestEl) {
+        manifestEl.href = targetManifest;
+      }
+
+      // Update favicon
+      let iconEl = document.querySelector('link[rel="icon"]') as HTMLLinkElement | null;
+      const targetIcon = isPicking ? '/icons/icon-picking.svg' : '/icons/icon-receiving.svg';
+      if (iconEl) {
+        iconEl.href = targetIcon;
+      }
+    } catch {}
+  }, [appMode]);
+
   const [screen, setScreenState] = useState<Screen>(() => {
     try {
       const hash = window.location.hash;
+      if (hash.startsWith('#admin')) return 'admin';
       if (hash.startsWith('#player') || hash.startsWith('#story')) return 'story';
       if (hash.startsWith('#signin') || hash.startsWith('#register')) return 'register';
       if (hash.startsWith('#results')) return 'results';
@@ -48,7 +91,9 @@ export function App() {
   const setScreen = (newScreen: Screen, extraHash = '') => {
     setScreenState(newScreen);
     try {
-      if (newScreen === 'landing') window.location.hash = '#portal';
+      const prefix = appMode === 'picking' ? '#picking' : '#receiving';
+      if (newScreen === 'landing') window.location.hash = prefix;
+      else if (newScreen === 'admin') window.location.hash = '#admin';
       else if (newScreen === 'register') window.location.hash = '#signin';
       else if (newScreen === 'story') window.location.hash = extraHash || `#player?stage=${targetStageIndex + 1}`;
       else if (newScreen === 'results') window.location.hash = '#results';
@@ -98,7 +143,16 @@ export function App() {
     const handleHashSync = () => {
       try {
         const hash = window.location.hash;
-        if (hash.startsWith('#player') || hash.startsWith('#story')) {
+        const search = window.location.search;
+        if (hash.includes('picking') || search.includes('picking')) {
+          setAppMode('picking');
+        } else if (hash.includes('receiving') || search.includes('receiving')) {
+          setAppMode('receiving');
+        }
+
+        if (hash.startsWith('#admin')) {
+          setScreenState('admin');
+        } else if (hash.startsWith('#player') || hash.startsWith('#story')) {
           setScreenState('story');
           const match = hash.match(/stage=(\d+)/);
           if (match) setTargetStageIndex(Math.max(0, parseInt(match[1], 10) - 1));
@@ -110,7 +164,7 @@ export function App() {
           setScreenState('results');
         } else if (hash.startsWith('#certificate')) {
           setScreenState('certificate');
-        } else if (hash === '#portal' || hash === '' || hash === '#home') {
+        } else if (hash === '#portal' || hash === '' || hash === '#home' || hash === '#receiving' || hash === '#picking') {
           setScreenState('landing');
         }
       } catch {}
@@ -147,7 +201,8 @@ export function App() {
   };
 
   const handleStartTraining = () => {
-    setTargetStageIndex(0);
+    const startStage = appMode === 'picking' ? 7 : 0;
+    setTargetStageIndex(startStage);
     setInitialSceneIndex(0);
     setScreen('register');
   };
@@ -172,9 +227,11 @@ export function App() {
 
     if (resumeSession) {
       try {
-        const sStage = localStorage.getItem('ather_stage_idx');
-        const sScene = localStorage.getItem('ather_scene_idx');
-        const stage = sStage ? parseInt(sStage, 10) : 0;
+        const stageKey = appMode === 'picking' ? 'ather_picking_stage_idx' : 'ather_stage_idx';
+        const sceneKey = appMode === 'picking' ? 'ather_picking_scene_idx' : 'ather_scene_idx';
+        const sStage = localStorage.getItem(stageKey);
+        const sScene = localStorage.getItem(sceneKey);
+        const stage = sStage ? parseInt(sStage, 10) : (appMode === 'picking' ? 7 : 0);
         const scene = sScene ? parseInt(sScene, 10) : 0;
         setTargetStageIndex(stage);
         setInitialSceneIndex(scene);
@@ -188,19 +245,21 @@ export function App() {
   };
 
   const handleViewScorecardFromStory = (summary: any) => {
+    const isPicking = appMode === 'picking';
+    const totalPossiblePoints = isPicking ? 39 : 52;
     const completeSummary: RunSummary = {
-      packId: summary.moduleScores ? Object.keys(summary.moduleScores)[0] || `stage_${targetStageIndex + 1}` : `stage_${targetStageIndex + 1}`,
+      packId: isPicking ? 'ather_picking_packaging' : 'ather_receiving_putaway',
       packTitle: {
-        en: `Module ${targetStageIndex + 1} Assessment`,
-        hi: `मॉड्यूल ${targetStageIndex + 1} मूल्यांकन`,
-        mr: `मॉड्यूल ${targetStageIndex + 1} मूल्यमापन`
+        en: isPicking ? 'Order Picking & Packaging Assessment' : 'Warehouse Receiving & Put-Away Assessment',
+        hi: isPicking ? 'ऑर्डर पिकिंग और पैकेजिंग मूल्यांकन' : 'वेयरहाउस प्राप्ति और पुट-अवे मूल्यांकन',
+        mr: isPicking ? 'ऑर्डर पिकिंग आणि पॅकेजिंग मूल्यमापन' : 'वेअरहाऊस प्राप्ती आणि पुट-अवे मूल्यमापन'
       },
       mode: 'guided',
-      stars: summary.accuracy >= 90 ? 3 : summary.accuracy >= 70 ? 2 : 1,
-      xpGained: summary.score || 180,
+      stars: summary.accuracy >= 90 ? 3 : summary.accuracy >= 75 ? 2 : 1,
+      xpGained: summary.score || summary.correctCount || 0,
       accuracyPct: summary.accuracy || 100,
-      totalSteps: summary.totalQuestions || 9,
-      correctSteps: summary.correctCount || 9,
+      totalSteps: summary.totalQuestions || totalPossiblePoints,
+      correctSteps: summary.correctCount || summary.score || 0,
       safetyPassed: summary.perfectRun ?? true,
       lost: false,
       badgesEarned: ['safe', 'perf', 'cert'],
@@ -220,7 +279,13 @@ export function App() {
           onSelectLang={handleSelectLang}
           onStartTraining={handleStartTraining}
           onLaunchModule={handleLaunchModule}
+          onOpenAdmin={() => setScreen('admin')}
+          appMode={appMode}
         />
+      )}
+
+      {screen === 'admin' && (
+        <AdminPanel onBackToPortal={() => setScreen('landing')} />
       )}
 
       {screen === 'register' && (
@@ -231,11 +296,13 @@ export function App() {
           onSelectLang={handleSelectLang}
           onRegister={handleRegister}
           onBack={() => setScreen('landing')}
+          appMode={appMode}
         />
       )}
 
       {screen === 'story' && (
         <StoryStagePlayer
+          key={`story-${appMode}-${targetStageIndex}-${initialSceneIndex}`}
           initialStageIndex={targetStageIndex}
           initialSceneIndex={initialSceneIndex}
           userProfile={profile}
@@ -243,6 +310,7 @@ export function App() {
           onSelectLang={handleSelectLang}
           onExitHome={() => setScreen('landing')}
           onViewScorecard={handleViewScorecardFromStory}
+          appMode={appMode}
         />
       )}
 
@@ -254,6 +322,7 @@ export function App() {
           onViewCertificate={() => setScreen('certificate')}
           onRestart={() => setScreen('story')}
           onNavigateHome={() => setScreen('landing')}
+          appMode={appMode}
         />
       )}
 
@@ -265,8 +334,12 @@ export function App() {
           sopDoc={currentSopDoc}
           onBack={() => setScreen('results')}
           onNavigateHome={() => setScreen('landing')}
+          appMode={appMode}
         />
       )}
+
+      {/* Development QA Testing Toolbar: Tree-shaken out in production builds */}
+      {import.meta.env.DEV && <DevFloatingToolbar />}
     </div>
   );
 }

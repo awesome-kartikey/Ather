@@ -202,16 +202,26 @@ export async function playNormalizedVoiceover({
     return () => {};
   }
 
+  // Resolve language-specific voiceover path if available
+  let effectiveAudioSrc = audioSrc;
+  if (audioSrc && lang !== 'en') {
+    if (lang === 'hi') {
+      effectiveAudioSrc = audioSrc.replace('/audio/voiceover/', '/audio/voiceover_hi/');
+    } else if (lang === 'mr') {
+      effectiveAudioSrc = audioSrc.replace('/audio/voiceover/', '/audio/voiceover_mr/');
+    }
+  }
+
   // 1. Try Web Audio normalization if an audio file path is provided
-  if (audioSrc) {
+  if (effectiveAudioSrc) {
     try {
       const pipeline = getAudioPipeline();
       if (pipeline) {
         const { ctx, compressor } = pipeline;
 
-        let buffer = bufferCache.get(audioSrc);
+        let buffer = bufferCache.get(effectiveAudioSrc);
         if (!buffer) {
-          const response = await fetch(audioSrc);
+          const response = await fetch(effectiveAudioSrc);
           if (isStale()) return () => {};
           if (!response.ok) {
             throw new Error(`Failed to fetch audio: ${response.status}`);
@@ -220,7 +230,7 @@ export async function playNormalizedVoiceover({
           if (isStale()) return () => {};
           buffer = await ctx.decodeAudioData(arrayBuffer);
           if (isStale()) return () => {};
-          bufferCache.set(audioSrc, buffer);
+          bufferCache.set(effectiveAudioSrc, buffer);
         }
 
         if (isStale()) return () => {};
@@ -286,7 +296,7 @@ export async function playNormalizedVoiceover({
 
     // 2. Fallback to HTML5 Audio element with software volume leveling
     try {
-      const audio = new Audio(audioSrc);
+      const audio = new Audio(effectiveAudioSrc);
       audio.volume = 1.0;
       activeAudioElements.add(audio);
       currentAudioEl = audio;

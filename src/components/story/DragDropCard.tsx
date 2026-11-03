@@ -6,7 +6,6 @@ import {
   RotateCcw,
   Check,
   X,
-  AlertTriangle,
   ArrowRight,
   Sparkles
 } from 'lucide-react';
@@ -37,7 +36,7 @@ export const DragDropCard: React.FC<Props> = ({
   onRetry,
   explanationText,
   sopClause,
-  xpAward = 100
+  xpAward: _xpAward = 100
 }) => {
   // Map of itemId -> zoneId
   const [assignments, setAssignments] = useState<Record<string, string>>({});
@@ -48,6 +47,33 @@ export const DragDropCard: React.FC<Props> = ({
 
   const unassignedItems = interaction.items.filter((item) => !assignments[item.id]);
   const allAssigned = Object.keys(assignments).length === interaction.items.length;
+
+  // Dev-only solver sync: assigns items to correct or wrong zones when testing
+  React.useEffect(() => {
+    if (!import.meta.env.DEV) return;
+    const handleDevCardSolve = (e: Event) => {
+      const customEvent = e as CustomEvent<{ correct?: boolean }>;
+      const isTargetCorrect = customEvent.detail?.correct !== false;
+
+      if (isTargetCorrect) {
+        const correctAssignments: Record<string, string> = {};
+        interaction.items.forEach((item) => {
+          correctAssignments[item.id] = item.targetZoneId;
+        });
+        setAssignments(correctAssignments);
+      } else {
+        const wrongAssignments: Record<string, string> = {};
+        const zones = interaction.zones;
+        interaction.items.forEach((item) => {
+          const wrongZone = zones.find((z) => z.id !== item.targetZoneId) || zones[0];
+          wrongAssignments[item.id] = wrongZone?.id || 'Z_WRONG';
+        });
+        setAssignments(wrongAssignments);
+      }
+    };
+    window.addEventListener('ather:dev:card-solve', handleDevCardSolve);
+    return () => window.removeEventListener('ather:dev:card-solve', handleDevCardSolve);
+  }, [interaction]);
 
   const handleItemClick = (itemId: string) => {
     if (disabled || isAnswered) return;
@@ -164,7 +190,7 @@ export const DragDropCard: React.FC<Props> = ({
         )}
       </div>
 
-      {/* 2. Prompt Title & Subtitle */}
+      {/* 2. Prompt Title */}
       <div className="py-1 shrink-0 space-y-0.5">
         <h3 className="text-sm sm:text-base md:text-[17px] font-bold text-slate-900 leading-snug">
           {interaction.question?.[lang] ||
@@ -173,19 +199,15 @@ export const DragDropCard: React.FC<Props> = ({
             (interaction as any).prompt?.en ||
             ''}
         </h3>
-        <p className="text-[11px] sm:text-xs text-slate-500 font-medium">
-          {selectedItemId
-            ? lang === 'hi'
+        {selectedItemId && (
+          <p className="text-[11px] sm:text-xs text-blue-700 font-bold">
+            {lang === 'hi'
               ? `👉 चयनित: '${selectedItem?.label[lang] || selectedItem?.label.en}' — इसे रखने के लिए गंतव्य डेस्क पर टैप करें।`
               : lang === 'mr'
               ? `👉 निवडले: '${selectedItem?.label[lang] || selectedItem?.label.en}' — ठेवण्यासाठी गंतव्य डेस्कवर टॅप करा.`
-              : `👉 Selected: '${selectedItem?.label[lang] || selectedItem?.label.en}' — Tap destination desk below to deposit.`
-            : lang === 'hi'
-            ? 'दस्तावेज़ कार्ड को सीधे नीचे डेस्क में खींचें, या असाइन करने के लिए कार्ड फिर डेस्क पर टैप करें।'
-            : lang === 'mr'
-            ? 'कागदपत्र कार्ड थेट खाली डेस्कवर ओढा, किंवा असाइन करण्यासाठी कार्ड आणि मग डेस्कवर टॅप करा.'
-            : 'Tap a document card, then tap destination desk to assign (or drag directly).'}
-        </p>
+              : `👉 Selected: '${selectedItem?.label[lang] || selectedItem?.label.en}' — Tap destination desk below to deposit.`}
+          </p>
+        )}
       </div>
 
       {/* 3. Inbound Physical Documents Deck (Compact Horizontal Chips) */}
@@ -219,7 +241,8 @@ export const DragDropCard: React.FC<Props> = ({
                     type="button"
                     drag={canDrag}
                     dragSnapToOrigin={true}
-                    dragElastic={0.15}
+                    dragElastic={0.06}
+                    dragMomentum={false}
                     whileDrag={{
                       scale: 1.05,
                       zIndex: 100,
@@ -231,7 +254,7 @@ export const DragDropCard: React.FC<Props> = ({
                     onDrag={handleDrag}
                     onDragEnd={(e, info) => handleDragEnd(e, info, item.id)}
                     onClick={() => handleItemClick(item.id)}
-                    className={`touch-none select-none min-h-[42px] sm:min-h-[44px] px-3 py-2 rounded-xl text-left flex items-center gap-2 transition-all cursor-grab active:cursor-grabbing border ${
+                    className={`touch-none select-none min-h-[42px] sm:min-h-[44px] px-3 py-2 rounded-xl text-left flex items-center gap-2 transition-[border-color,background-color,box-shadow] duration-150 cursor-grab active:cursor-grabbing border ${
                       isSelected
                         ? 'bg-blue-600 text-white border-blue-700 shadow-md ring-2 ring-blue-400/40'
                         : 'bg-white text-slate-800 border-slate-200 hover:border-blue-400 hover:shadow-xs'
@@ -397,7 +420,7 @@ export const DragDropCard: React.FC<Props> = ({
           className={`p-3 sm:p-3.5 rounded-2xl border transition-all space-y-2 shrink-0 ${
             isCorrect
               ? 'bg-emerald-50/90 border-emerald-300 text-emerald-950 shadow-xs'
-              : 'bg-amber-50/90 border-amber-300 text-amber-950 shadow-xs'
+              : 'bg-slate-50 border-slate-200 text-slate-900 shadow-xs'
           }`}
         >
           {/* Result Header */}
@@ -407,11 +430,11 @@ export const DragDropCard: React.FC<Props> = ({
                 className={`px-3 py-1 rounded-full text-xs font-mono font-bold flex items-center gap-1.5 shadow-2xs ${
                   isCorrect
                     ? 'bg-emerald-100 text-emerald-800 border border-emerald-300'
-                    : 'bg-amber-100 text-amber-800 border border-amber-300'
+                    : 'bg-slate-200 text-slate-700 border border-slate-300'
                 }`}
               >
-                {isCorrect ? <CheckCircle2 className="w-3.5 h-3.5" /> : <AlertTriangle className="w-3.5 h-3.5" />}
-                <span>{isCorrect ? 'Correct Decision! SOP Compliant' : 'SOP Deviation Detected'}</span>
+                {isCorrect ? <CheckCircle2 className="w-3.5 h-3.5" /> : <RotateCcw className="w-3.5 h-3.5" />}
+                <span>{isCorrect ? 'Correct Decision! SOP Compliant' : 'SOP Standard Review'}</span>
               </span>
               {sopClause && (
                 <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-500">
@@ -422,10 +445,10 @@ export const DragDropCard: React.FC<Props> = ({
 
             {isCorrect ? (
               <span className="px-2.5 py-0.5 rounded-full bg-emerald-200/90 text-emerald-900 text-xs font-mono font-bold">
-                +{xpAward} XP
+                +1 Point
               </span>
             ) : (
-              <span className="px-2.5 py-0.5 rounded-full bg-amber-200/90 text-amber-900 text-xs font-mono font-bold">
+              <span className="px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 text-xs font-mono font-bold">
                 {lang === 'hi' ? 'पुनः प्रयास अनुमत' : lang === 'mr' ? 'पुन्हा प्रयत्न करण्याची परवानगी' : 'Retry Allowed'}
               </span>
             )}
@@ -436,6 +459,26 @@ export const DragDropCard: React.FC<Props> = ({
             <div className="p-2 sm:p-2.5 rounded-xl bg-white/95 border border-slate-200/70 text-xs sm:text-[13px] font-semibold text-slate-800 leading-relaxed flex items-start gap-2 shadow-2xs">
               <span className="text-sm shrink-0">💡</span>
               <span>{explanationText}</span>
+            </div>
+          )}
+
+          {/* Official SOP Correct Allocation Breakdown */}
+          {!isCorrect && (
+            <div className="p-2.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs space-y-1 text-left">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-blue-600 block">
+                {lang === 'hi' ? 'आधिकारिक SOP सही आवंटन:' : lang === 'mr' ? 'अधिकृत SOP योग्य वाटप:' : 'Official SOP Correct Allocation:'}
+              </span>
+              <div className="flex flex-wrap gap-1.5">
+                {interaction.zones.map((zone) => {
+                  const correctItems = interaction.items.filter((item) => item.targetZoneId === zone.id);
+                  return (
+                    <div key={zone.id} className="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg bg-slate-50 border border-slate-200 text-xs">
+                      <span className="font-extrabold text-slate-900">{zone.label[lang] || zone.label.en}:</span>
+                      <span className="text-slate-600">{correctItems.map((ci) => ci.label[lang] || ci.label.en).join(', ')}</span>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           )}
 

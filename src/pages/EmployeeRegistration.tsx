@@ -7,7 +7,9 @@ import {
   Upload,
   RotateCcw,
   CheckCircle2,
-  RefreshCw
+  RefreshCw,
+  AlertCircle,
+  Trash2
 } from 'lucide-react';
 import { AtherCapsuleLogo } from '../components/common/AtherCapsuleLogo';
 import { LanguageSwitcher } from '../components/common/LanguageSwitcher';
@@ -20,6 +22,7 @@ interface Props {
   onRegister: (name: string, employeeId: string, photoUrl?: string, resumeSession?: boolean) => void;
   onBack: () => void;
   targetStageIndex?: number;
+  appMode?: string;
 }
 
 export const EmployeeRegistration: React.FC<Props> = ({
@@ -27,13 +30,16 @@ export const EmployeeRegistration: React.FC<Props> = ({
   profile,
   onSelectLang,
   onRegister,
-  onBack
+  onBack,
+  appMode = 'receiving'
 }) => {
+  const isPicking = appMode === 'picking';
   const [name, setName] = useState(profile.name || 'Pooja Deshmukh');
   const [employeeId, setEmployeeId] = useState(profile.operatorId || 'OP-AURIC-305');
   const [photoUrl, setPhotoUrl] = useState<string | null>(profile.photoUrl || null);
   const [isCameraActive, setIsCameraActive] = useState(false);
   const [cameraError, setCameraError] = useState<string | null>(null);
+  const [showValidation, setShowValidation] = useState(false);
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
@@ -49,9 +55,12 @@ export const EmployeeRegistration: React.FC<Props> = ({
 
   useEffect(() => {
     try {
-      const sStage = localStorage.getItem('ather_stage_idx');
-      const sScene = localStorage.getItem('ather_scene_idx');
-      const sXp = localStorage.getItem('ather_xp');
+      const stageKey = isPicking ? 'ather_picking_stage_idx' : 'ather_stage_idx';
+      const sceneKey = isPicking ? 'ather_picking_scene_idx' : 'ather_scene_idx';
+      const pointsKey = isPicking ? 'ather_picking_points' : 'ather_points';
+      const sStage = localStorage.getItem(stageKey);
+      const sScene = localStorage.getItem(sceneKey);
+      const sXp = localStorage.getItem(pointsKey) || localStorage.getItem('ather_xp');
       if (sStage !== null) {
         const stage = parseInt(sStage, 10);
         const scene = parseInt(sScene || '0', 10);
@@ -63,7 +72,7 @@ export const EmployeeRegistration: React.FC<Props> = ({
     } catch {
       // Storage unavailable
     }
-  }, [employeeId]);
+  }, [employeeId, isPicking]);
 
   // Clean up camera stream on unmount
   useEffect(() => {
@@ -174,10 +183,24 @@ export const EmployeeRegistration: React.FC<Props> = ({
     }
   };
 
+  // Validation rules: All 3 credentials (Photo, Name, Employee ID) are compulsory
+  const isNameValid = Boolean(name.trim());
+  const isIdValid = Boolean(employeeId.trim());
+  const isPhotoValid = Boolean(photoUrl && photoUrl.trim());
+  const isFormValid = isNameValid && isIdValid && isPhotoValid;
+
+  const validate = (): boolean => {
+    if (!isFormValid) {
+      setShowValidation(true);
+      return false;
+    }
+    return true;
+  };
+
   // Start fresh from Module 1 / Stage 0 Scene 0 (clearing prior session)
   const handleStartFresh = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
-    if (!name.trim()) return;
+    if (!validate()) return;
     try {
       localStorage.removeItem('ather_stage_idx');
       localStorage.removeItem('ather_scene_idx');
@@ -186,14 +209,14 @@ export const EmployeeRegistration: React.FC<Props> = ({
       // ignore
     }
     setSavedSession({ stageIdx: 0, sceneIdx: 0, xp: 0, hasProgress: false });
-    onRegister(name.trim(), employeeId.trim() || 'OP-AURIC-104', photoUrl || undefined, false);
+    onRegister(name.trim(), employeeId.trim(), photoUrl!, false);
   };
 
   // Resume from saved Module / Scene
   const handleResume = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
-    if (!name.trim()) return;
-    onRegister(name.trim(), employeeId.trim() || 'OP-AURIC-104', photoUrl || undefined, true);
+    if (!validate()) return;
+    onRegister(name.trim(), employeeId.trim(), photoUrl!, true);
   };
 
   return (
@@ -233,15 +256,19 @@ export const EmployeeRegistration: React.FC<Props> = ({
         </div>
 
         <div className="flex items-center gap-3">
-          <span className="text-xs font-bold text-slate-600 hidden md:inline">
-            Operator Verification
+          <span className={`text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full border hidden md:inline-flex ${
+            isPicking
+              ? 'bg-blue-50 text-blue-800 border-blue-200'
+              : 'bg-emerald-50 text-emerald-800 border-emerald-200'
+          }`}>
+            {isPicking ? 'Order Picking & Packaging' : 'Warehouse Receiving & Put-Away'}
           </span>
           <LanguageSwitcher currentLang={lang} onSelectLang={onSelectLang} />
         </div>
       </header>
 
       {/* ── Main Workstation: Dual-Panel Split (Photo on Left, Inputs on Right) ── */}
-      <main className="flex-1 flex flex-col items-center justify-center pt-2 sm:pt-4 pb-6 px-4 sm:px-6 min-h-0 relative z-10 -mt-2 sm:-mt-3">
+      <main className="flex-1 flex flex-col items-center justify-center pt-2 sm:pt-4 pb-14 sm:pb-24 px-4 sm:px-6 min-h-0 relative z-10 -mt-4 sm:-mt-8">
         <motion.div
           initial={{ opacity: 0, y: 12, scale: 0.99 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -252,8 +279,34 @@ export const EmployeeRegistration: React.FC<Props> = ({
             
             {/* ── Left Column: Front Camera & Photo Capture Viewport (5 cols) ── */}
             <div className="md:col-span-5 flex flex-col items-center justify-center">
+              {/* Field Label & Compulsory Status */}
+              <div className="w-full max-w-[224px] mb-2 flex items-center justify-between">
+                <label className="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1">
+                  <span>Badge Photo</span>
+                  <span className="text-rose-500 font-extrabold">*</span>
+                </label>
+                {isPhotoValid ? (
+                  <span className="text-[10px] font-extrabold text-emerald-700 bg-emerald-50 border border-emerald-200 px-1.5 py-0.5 rounded-md flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" />
+                    Captured
+                  </span>
+                ) : (
+                  <span className="text-[10px] font-extrabold text-rose-600 bg-rose-50 border border-rose-200 px-1.5 py-0.5 rounded-md">
+                    Compulsory
+                  </span>
+                )}
+              </div>
+
               {/* Photo Viewport Box */}
-              <div className="relative w-44 h-44 sm:w-52 sm:h-52 rounded-2xl overflow-hidden border-2 border-slate-200 bg-slate-900 shadow-inner flex items-center justify-center">
+              <div
+                className={`relative w-44 h-44 sm:w-52 sm:h-52 rounded-2xl overflow-hidden border-2 transition-all shadow-inner flex items-center justify-center ${
+                  showValidation && !isPhotoValid
+                    ? 'border-rose-400 bg-rose-50/20 ring-4 ring-rose-500/20'
+                    : isPhotoValid
+                    ? 'border-emerald-300 ring-2 ring-emerald-500/20 bg-slate-900'
+                    : 'border-slate-200 bg-slate-900'
+                }`}
+              >
                 {/* Persistent Video Element: Always mounted to prevent black-screen race conditions */}
                 <video
                   ref={videoRef}
@@ -286,13 +339,29 @@ export const EmployeeRegistration: React.FC<Props> = ({
 
                 {/* Placeholder (When neither camera nor photo is active) */}
                 {!isCameraActive && !photoUrl && (
-                  <div className="flex flex-col items-center justify-center text-slate-400 p-4 text-center bg-slate-100 w-full h-full">
-                    <Camera className="w-10 h-10 mb-2 text-slate-300 stroke-[1.5]" />
-                    <span className="text-xs font-semibold text-slate-600">
+                  <div
+                    className={`flex flex-col items-center justify-center p-4 text-center w-full h-full transition-colors ${
+                      showValidation && !isPhotoValid ? 'bg-rose-50/40 text-rose-500' : 'bg-slate-100 text-slate-400'
+                    }`}
+                  >
+                    <Camera
+                      className={`w-10 h-10 mb-2 stroke-[1.5] ${
+                        showValidation && !isPhotoValid ? 'text-rose-500 animate-pulse' : 'text-slate-300'
+                      }`}
+                    />
+                    <span
+                      className={`text-xs font-bold ${
+                        showValidation && !isPhotoValid ? 'text-rose-700' : 'text-slate-700'
+                      }`}
+                    >
                       Operator Badge Photo
                     </span>
-                    <span className="text-[10px] text-slate-400 mt-0.5">
-                      Front camera capture
+                    <span
+                      className={`text-[10px] mt-0.5 ${
+                        showValidation && !isPhotoValid ? 'text-rose-600 font-bold' : 'text-slate-400'
+                      }`}
+                    >
+                      {showValidation && !isPhotoValid ? 'Front camera or upload compulsory' : 'Front camera capture'}
                     </span>
                   </div>
                 )}
@@ -323,7 +392,11 @@ export const EmployeeRegistration: React.FC<Props> = ({
                     <button
                       type="button"
                       onClick={startCamera}
-                      className="flex-1 min-h-[42px] px-3 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-xs active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                      className={`flex-1 min-h-[42px] px-3 py-2 rounded-xl text-white font-bold text-xs shadow-xs active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
+                        showValidation && !photoUrl
+                          ? 'bg-rose-600 hover:bg-rose-700 ring-2 ring-rose-400/40'
+                          : 'bg-blue-600 hover:bg-blue-700'
+                      }`}
                     >
                       {photoUrl ? <RefreshCw className="w-3.5 h-3.5" /> : <Camera className="w-3.5 h-3.5" />}
                       <span>{photoUrl ? 'Retake Photo' : 'Front Camera'}</span>
@@ -333,11 +406,26 @@ export const EmployeeRegistration: React.FC<Props> = ({
                       type="button"
                       onClick={() => fileInputRef.current?.click()}
                       title="Upload photo from device"
-                      className="px-3 min-h-[42px] rounded-xl bg-white hover:bg-slate-50 text-slate-700 font-bold text-xs border border-slate-200 active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-2xs"
+                      className={`px-3 min-h-[42px] rounded-xl font-bold text-xs border active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-2xs ${
+                        showValidation && !photoUrl
+                          ? 'bg-rose-50 hover:bg-rose-100 text-rose-700 border-rose-300'
+                          : 'bg-white hover:bg-slate-50 text-slate-700 border-slate-200'
+                      }`}
                     >
                       <Upload className="w-3.5 h-3.5" />
                       <span>Upload</span>
                     </button>
+
+                    {photoUrl && (
+                      <button
+                        type="button"
+                        onClick={() => setPhotoUrl(null)}
+                        title="Remove photo"
+                        className="p-2.5 min-h-[42px] rounded-xl bg-white hover:bg-rose-50 text-slate-400 hover:text-rose-600 font-bold text-xs border border-slate-200 active:scale-95 transition-all flex items-center justify-center cursor-pointer shadow-2xs"
+                      >
+                        <Trash2 className="w-3.5 h-3.5" />
+                      </button>
+                    )}
 
                     {/* Hidden input configured specifically for Android Front Camera capture */}
                     <input
@@ -355,6 +443,17 @@ export const EmployeeRegistration: React.FC<Props> = ({
                   <p className="text-[11px] text-amber-600 font-medium text-center">
                     {cameraError}
                   </p>
+                )}
+
+                {showValidation && !isPhotoValid && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="flex items-center justify-center gap-1.5 text-[11px] font-bold text-rose-700 bg-rose-50 border border-rose-200 px-2.5 py-1.5 rounded-xl text-center shadow-2xs"
+                  >
+                    <AlertCircle className="w-3.5 h-3.5 shrink-0 text-rose-500" />
+                    <span>Badge photo is compulsory to start</span>
+                  </motion.div>
                 )}
               </div>
             </div>
@@ -374,32 +473,70 @@ export const EmployeeRegistration: React.FC<Props> = ({
               <form onSubmit={savedSession.hasProgress ? handleResume : handleStartFresh} className="space-y-3.5">
                 {/* 1. Operator Full Name Input */}
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1 uppercase tracking-wider">
-                    Operator Full Name
-                  </label>
+                  <div className="flex items-center justify-between mb-1">
+                    <label className="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1">
+                      <span>Operator Full Name</span>
+                      <span className="text-rose-500 font-extrabold">*</span>
+                    </label>
+                    {isNameValid ? (
+                      <span className="text-[10px] font-bold text-emerald-600">✓ Valid</span>
+                    ) : (
+                      <span className="text-[10px] font-bold text-rose-600 bg-rose-50 border border-rose-200 px-1.5 py-0.5 rounded">
+                        Compulsory
+                      </span>
+                    )}
+                  </div>
                   <input
                     type="text"
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Enter full name"
-                    className="w-full px-4 py-2.5 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50 text-sm sm:text-base font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all placeholder:text-slate-400"
+                    className={`w-full px-4 py-2.5 min-h-[46px] rounded-xl border text-sm sm:text-base font-semibold focus:outline-none focus:ring-2 transition-all placeholder:text-slate-400 ${
+                      showValidation && !isNameValid
+                        ? 'border-rose-400 bg-rose-50/20 focus:ring-rose-400 text-slate-900 ring-2 ring-rose-400/20'
+                        : 'border-slate-200 bg-slate-50 focus:ring-blue-500 focus:bg-white text-slate-900'
+                    }`}
                   />
+                  {showValidation && !isNameValid && (
+                    <p className="text-[11px] font-bold text-rose-600 mt-1 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3 shrink-0" /> Please enter operator full name
+                    </p>
+                  )}
                 </div>
 
                 {/* 2. Operator ID Input */}
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1 uppercase tracking-wider">
-                    Operator ID / Badge No.
-                  </label>
+                  <div className="flex items-center justify-between mb-1">
+                    <label className="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1">
+                      <span>Operator ID / Badge No.</span>
+                      <span className="text-rose-500 font-extrabold">*</span>
+                    </label>
+                    {isIdValid ? (
+                      <span className="text-[10px] font-bold text-emerald-600">✓ Valid</span>
+                    ) : (
+                      <span className="text-[10px] font-bold text-rose-600 bg-rose-50 border border-rose-200 px-1.5 py-0.5 rounded">
+                        Compulsory
+                      </span>
+                    )}
+                  </div>
                   <input
                     type="text"
                     required
                     value={employeeId}
                     onChange={(e) => setEmployeeId(e.target.value.toUpperCase())}
-                    placeholder="OP-AURIC-104"
-                    className="w-full px-4 py-2.5 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50 text-sm sm:text-base font-mono font-bold focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all placeholder:text-slate-400"
+                    placeholder="e.g. OP-AURIC-305"
+                    className={`w-full px-4 py-2.5 min-h-[46px] rounded-xl border text-sm sm:text-base font-mono font-bold focus:outline-none focus:ring-2 transition-all placeholder:text-slate-400 ${
+                      showValidation && !isIdValid
+                        ? 'border-rose-400 bg-rose-50/20 focus:ring-rose-400 text-slate-900 ring-2 ring-rose-400/20'
+                        : 'border-slate-200 bg-slate-50 focus:ring-blue-500 focus:bg-white text-slate-900'
+                    }`}
                   />
+                  {showValidation && !isIdValid && (
+                    <p className="text-[11px] font-bold text-rose-600 mt-1 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3 shrink-0" /> Please enter operator badge ID
+                    </p>
+                  )}
                 </div>
 
                 {/* Saved Session Indicator (Subtle single-line badge) */}
@@ -412,8 +549,60 @@ export const EmployeeRegistration: React.FC<Props> = ({
                   </div>
                 )}
 
+                {/* 3 Compulsory Credentials Checklist Status */}
+                <div
+                  className={`p-2.5 rounded-xl border transition-all text-xs ${
+                    isFormValid
+                      ? 'bg-emerald-50 border-emerald-200 text-emerald-800'
+                      : showValidation
+                      ? 'bg-rose-50 border-rose-200 text-rose-800'
+                      : 'bg-slate-50 border-slate-200/90 text-slate-600'
+                  }`}
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="font-bold flex items-center gap-1.5 text-xs">
+                      {isFormValid ? (
+                        <>
+                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                          <span>All 3 Details Verified</span>
+                        </>
+                      ) : showValidation ? (
+                        <>
+                          <AlertCircle className="w-3.5 h-3.5 text-rose-600 shrink-0" />
+                          <span className="font-extrabold">All 3 Details Compulsory</span>
+                        </>
+                      ) : (
+                        <span>Mandatory Details:</span>
+                      )}
+                    </span>
+                    <div className="flex items-center gap-1.5 text-[11px] font-bold">
+                      <span
+                        className={`px-2 py-0.5 rounded-md flex items-center gap-1 transition-colors ${
+                          isPhotoValid ? 'bg-emerald-100 text-emerald-800' : 'bg-slate-200/70 text-slate-600'
+                        }`}
+                      >
+                        {isPhotoValid ? '✓' : '1.'} Photo
+                      </span>
+                      <span
+                        className={`px-2 py-0.5 rounded-md flex items-center gap-1 transition-colors ${
+                          isNameValid ? 'bg-emerald-100 text-emerald-800' : 'bg-slate-200/70 text-slate-600'
+                        }`}
+                      >
+                        {isNameValid ? '✓' : '2.'} Name
+                      </span>
+                      <span
+                        className={`px-2 py-0.5 rounded-md flex items-center gap-1 transition-colors ${
+                          isIdValid ? 'bg-emerald-100 text-emerald-800' : 'bg-slate-200/70 text-slate-600'
+                        }`}
+                      >
+                        {isIdValid ? '✓' : '3.'} ID
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Action Buttons: If prior session exists, show BOTH Start from Beginning AND Resume Training */}
-                <div className="pt-2">
+                <div className="pt-1">
                   {savedSession.hasProgress ? (
                     <div className="flex flex-col sm:flex-row items-center gap-2.5">
                       <button
@@ -450,16 +639,16 @@ export const EmployeeRegistration: React.FC<Props> = ({
           </div>
         </motion.div>
 
-        {/* Subtle Bottom Description & Co-Branding */}
-        <div className="mt-3.5 sm:mt-4 flex flex-col items-center justify-center gap-1 text-center">
-          <div className="inline-flex items-center gap-2 text-xs font-semibold text-slate-500">
-            <span className="font-bold text-slate-700">Ather Energy AURIC Plant</span>
-            <span className="w-1 h-1 rounded-full bg-slate-300" />
-            <span>Digital SOP Training DOJO</span>
-            <span className="w-1 h-1 rounded-full bg-slate-300" />
+        {/* Bottom Description & Co-Branding */}
+        <div className="mt-4 sm:mt-5 flex flex-col items-center justify-center gap-1.5 text-center">
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 text-sm sm:text-base font-semibold text-slate-600">
+            <span className="font-bold text-slate-800">Ather Energy AURIC Plant</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-slate-300 shrink-0" />
+            <span className="font-semibold text-slate-600">Digital SOP Training DOJO</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-slate-300 shrink-0" />
             <span className="font-bold text-blue-600">Tetrahedron Platform</span>
           </div>
-          <p className="text-[11px] text-slate-400 max-w-lg">
+          <p className="text-xs sm:text-sm text-slate-500 font-medium max-w-xl leading-relaxed">
             Personalized SOP competency certification is generated upon successful completion of all scenario evaluations.
           </p>
         </div>

@@ -1,0 +1,3287 @@
+[
+  {
+    "id": "s01_sc01_intro",
+    "filename": "s01_sc01_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 1,
+    "sceneId": "c1_s1_sc01_arrival",
+    "type": "intro",
+    "script": "नमस्ते! सप्लायरचा एक ट्रक नुकताच AURIC च्या मुख्य गेटवर आला आहे. बूम बॅरियर उघडण्यापूर्वी, चालकाने कुठे थांबले पाहिजे?"
+  },
+  {
+    "id": "s01_sc01_prompt",
+    "filename": "s01_sc01_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 1,
+    "sceneId": "c1_s1_sc01_arrival",
+    "type": "prompt",
+    "script": "ट्रक गेटवर पोहोचतो. चालक सर्वप्रथम वाहन कुठे पार्क करतो?"
+  },
+  {
+    "id": "s01_sc01_correct",
+    "filename": "s01_sc01_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 1,
+    "sceneId": "c1_s1_sc01_arrival",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP कलम 4.1.1 नुसार चालकाने इंजिन बंद करून नियुक्त वेटिंग एरियामध्ये गाडी पार्क केली पाहिजे आणि पायी सुरक्षा डेस्कवर गेले पाहिजे."
+  },
+  {
+    "id": "s01_sc01_wrong",
+    "filename": "s01_sc01_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 1,
+    "sceneId": "c1_s1_sc01_arrival",
+    "type": "wrong",
+    "script": "लक्ष द्या! ट्रक कधीही थेट आत नेऊ नये किंवा इंजिन चालू ठेवू नये. वाहने इंजिन बंद करून नियुक्त वेटिंग भागातच पार्क केली पाहिजेत."
+  },
+  {
+    "id": "s01_sc02_intro",
+    "filename": "s01_sc02_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 2,
+    "sceneId": "c1_s1_sc02_doc_sorting",
+    "type": "intro",
+    "script": "चालक 5 प्रत्यक्ष कागदपत्रे घेऊन गेटहाऊसमध्ये आला आहे. चला खात्री करूया की प्रत्येक कागदपत्र योग्य डेस्कवर जमा केले जाईल!"
+  },
+  {
+    "id": "s01_sc02_prompt",
+    "filename": "s01_sc02_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 2,
+    "sceneId": "c1_s1_sc02_doc_sorting",
+    "type": "prompt",
+    "script": "प्रत्येक येणाऱ्या कागदपत्राचे योग्य रिसेप्शन डेस्कवर वर्गीकरण करा."
+  },
+  {
+    "id": "s01_sc02_correct",
+    "filename": "s01_sc02_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 2,
+    "sceneId": "c1_s1_sc02_doc_sorting",
+    "type": "correct",
+    "script": "उत्कृष्ट वर्गीकरण! सुरक्षा रक्षक वैयक्तिक चालक आणि वाहन कागदपत्रे तपासतात, तर DEO गेट पास तयार करण्यासाठी शिपिंग कागदपत्रे प्रोसेस करतात."
+  },
+  {
+    "id": "s01_sc02_wrong",
+    "filename": "s01_sc02_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 2,
+    "sceneId": "c1_s1_sc02_doc_sorting",
+    "type": "wrong",
+    "script": "लक्ष द्या! शिपिंग कागदपत्रे (PO, ASN, टॅक्स इन्व्हॉइस) SAP प्रोसेसिंगसाठी DEO कडे जाणे आवश्यक आहे, तर DL आणि RC सुरक्षा रक्षकाकडे."
+  },
+  {
+    "id": "s01_sc03_intro",
+    "filename": "s01_sc03_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 3,
+    "sceneId": "c1_s1_sc03_sap_entry",
+    "type": "intro",
+    "script": "DEO ची स्क्रीन पहा! त्यांनी SAP GUI उघडले आहे. व्हेंडर इन्व्हॉइस टाकून, SAP तपासते की प्रत्यक्ष डिलिव्हरी डिजिटल ASN शी जुळते का."
+  },
+  {
+    "id": "s01_sc03_prompt",
+    "filename": "s01_sc03_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 3,
+    "sceneId": "c1_s1_sc03_sap_entry",
+    "type": "prompt",
+    "script": "DEO YMM_GATE_ENTRY मध्ये व्हेंडर इन्व्हॉइस टाकतो. या ट्रांझॅक्शनची भूमिका काय आहे, आणि ASN चुकीचे असल्यास काय होते?"
+  },
+  {
+    "id": "s01_sc03_correct",
+    "filename": "s01_sc03_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 3,
+    "sceneId": "c1_s1_sc03_sap_entry",
+    "type": "correct",
+    "script": "अगदी बरोबर! YMM_GATE_ENTRY ASN मधून शिपमेंट माहिती आपोआप भरते. ASN जुळले नाही तर गेट एंट्री थांबवली जाते — चुकीच्या डेटासाठी कोणतीही मॅन्युअल सवलत नाही!"
+  },
+  {
+    "id": "s01_sc03_wrong",
+    "filename": "s01_sc03_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 3,
+    "sceneId": "c1_s1_sc03_sap_entry",
+    "type": "wrong",
+    "script": "लक्ष द्या! AURIC मध्ये कागदपत्रांमध्ये तफावत असल्यास कोणतीही मॅन्युअल सवलत दिली जात नाही. ASN चुकीचे असल्यास गेट एंट्री पुढे जाऊ शकत नाही."
+  },
+  {
+    "id": "s01_sc04_intro",
+    "filename": "s01_sc04_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 4,
+    "sceneId": "c1_s1_sc04_barcode_sequence",
+    "type": "intro",
+    "script": "DEO YPR_GATEENTRY चालवतो! प्रिंटर विंडशील्ड बारकोड पास प्रिंट करतो तर चालक स्टेटस टीव्ही पाहतो. तुम्ही चालकाच्या गेट प्रवासाच्या पायऱ्या योग्य कालक्रमानुसार लावू शकता का?"
+  },
+  {
+    "id": "s01_sc04_prompt",
+    "filename": "s01_sc04_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 4,
+    "sceneId": "c1_s1_sc04_barcode_sequence",
+    "type": "prompt",
+    "script": "चालकाच्या गेट एंट्री प्रवासाची योग्य कालक्रमानुसार मांडणी करा."
+  },
+  {
+    "id": "s01_sc04_correct",
+    "filename": "s01_sc04_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 4,
+    "sceneId": "c1_s1_sc04_barcode_sequence",
+    "type": "correct",
+    "script": "उत्कृष्ट क्रम! अचूक क्रमाचे पालन केल्याने (पार्क ➔ कागदपत्रे ➔ ERP पडताळणी ➔ बारकोड पास ➔ डॉककडे जाणे) गेटवर गर्दी होत नाही आणि साहित्याची 100% खात्रीशीर नोंद राहते."
+  },
+  {
+    "id": "s01_sc04_wrong",
+    "filename": "s01_sc04_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 4,
+    "sceneId": "c1_s1_sc04_barcode_sequence",
+    "type": "wrong",
+    "script": "थांबा! प्रिंट केलेला बारकोड पास घेतल्याशिवाय चालक डॉककडे जाऊ शकत नाही. चला पायऱ्या अचूक SOP क्रमाने लावूया."
+  },
+  {
+    "id": "s01_sc05_intro",
+    "filename": "s01_sc05_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 5,
+    "sceneId": "c1_s1_sc05_dock_alloc",
+    "type": "intro",
+    "script": "DEO YMM_DOCK_ALLOCATE चालवतो! आपल्या वाहनाच्या मेकॅनिकल पार्ट्सच्या डिलिव्हरीनुसार, AURIC प्लांट लेआउटवर कोणता वेअरहाऊस डॉक वाटप केला पाहिजे?"
+  },
+  {
+    "id": "s01_sc05_prompt",
+    "filename": "s01_sc05_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 5,
+    "sceneId": "c1_s1_sc05_dock_alloc",
+    "type": "prompt",
+    "script": "DEO वाहन असेंब्ली सुट्या भागांसाठी YMM_DOCK_ALLOCATE चालवतो. AURIC प्लांट लेआउटवर योग्य वाटप केलेले बे आणि डॉक टॅप करा."
+  },
+  {
+    "id": "s01_sc05_correct",
+    "filename": "s01_sc05_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 5,
+    "sceneId": "c1_s1_sc05_dock_alloc",
+    "type": "correct",
+    "script": "अगदी बरोबर! इनबाउंड बे B मधील डॉक 04 वाहन असेंब्ली सुट्या भागांसाठी नियुक्त केला आहे. डॉक 01 बॅटरी सेलसाठी आणि डॉक 06 घातक रसायनांसाठी राखीव आहे."
+  },
+  {
+    "id": "s01_sc05_wrong",
+    "filename": "s01_sc05_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 5,
+    "sceneId": "c1_s1_sc05_dock_alloc",
+    "type": "wrong",
+    "script": "लक्ष द्या! डॉक 01 फक्त बॅटरी सेलसाठी नियंत्रित वॉल्ट आहे, आणि डॉक 06 रसायनांसाठी आहे. वाहनाचे पार्ट्स डॉक 04 (बे B) वर गेले पाहिजेत."
+  },
+  {
+    "id": "s01_sc06_intro",
+    "filename": "s01_sc06_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 6,
+    "sceneId": "c1_s1_sc06_dock_safety",
+    "type": "intro",
+    "script": "ट्रक बे B, डॉक 04 वर लागला आहे! चाव्या आणि इन्व्हॉइस देण्यापूर्वी तसेच अनलोडिंग सुरू करण्यापूर्वी, वाहनातील एका गंभीर सुरक्षा उल्लंघनाची तपासणी करा."
+  },
+  {
+    "id": "s01_sc06_prompt",
+    "filename": "s01_sc06_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 6,
+    "sceneId": "c1_s1_sc06_dock_safety",
+    "type": "prompt",
+    "script": "गंभीर सुरक्षा ऑडिट: चाव्या स्वीकारण्यापूर्वी आणि अनलोडिंग सुरू करण्यापूर्वी तत्काळ होणारे सुरक्षा उल्लंघन ओळखा."
+  },
+  {
+    "id": "s01_sc06_correct",
+    "filename": "s01_sc06_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 6,
+    "sceneId": "c1_s1_sc06_dock_safety",
+    "type": "correct",
+    "script": "जीव वाचवणारी तत्परता! SOP कलम 4.1.5 नुसार मागील चाकांखाली जड रबर व्हील चॉक्स बसवणे बंधनकारक आहे, जेणेकरून फोर्कलिफ्ट आत शिरताना ट्रेलर पुढे घसरणार नाही."
+  },
+  {
+    "id": "s01_sc06_wrong",
+    "filename": "s01_sc06_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 6,
+    "sceneId": "c1_s1_sc06_dock_safety",
+    "type": "wrong",
+    "script": "अतिधोक्याचा इशारा! जर 3-टन वजनाची फोर्कलिफ्ट चॉक्स नसलेल्या ट्रकमध्ये गेली, तर ट्रक पुढे सरकेल आणि फोर्कलिफ्ट डॉकच्या दरीत कोसळू शकते!"
+  },
+  {
+    "id": "s01_sc07_intro",
+    "filename": "s01_sc07_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 7,
+    "sceneId": "c1_s1_sc07_gate_exit",
+    "type": "intro",
+    "script": "अनलोडिंग पूर्ण झाले! ट्रकने व्हेंडरला परत करण्यासाठी 20 रिकामे निळे FLC डबे लोड केले आहेत. एक्झिट गेटवर चालक म्हणतो: 'बूम बॅरियर उघडा, हे फक्त अथरचे रिकामे डबे आहेत!' तुम्ही काय केले पाहिजे?"
+  },
+  {
+    "id": "s01_sc07_prompt",
+    "filename": "s01_sc07_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 7,
+    "sceneId": "c1_s1_sc07_gate_exit",
+    "type": "prompt",
+    "script": "निर्णय गेट: चालक मॅन्युअल डिलिव्हरी चलन (DC) शिवाय 20 रिकाम्या FLC डब्यांसह बाहेर पडू इच्छितो."
+  },
+  {
+    "id": "s01_sc07_correct",
+    "filename": "s01_sc07_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 7,
+    "sceneId": "c1_s1_sc07_gate_exit",
+    "type": "correct",
+    "script": "उत्कृष्ट सतर्कता! SOP कलम 4.1.6.2 आणि 4.2.4 नुसार एक्झिट गेट बॅरियर उघडण्यापूर्वी रिटर्नेबल डबे/FLC साठी अधिकृत मॅन्युअल डिलिव्हरी चलन (DC) आणि SAP YMM_GATE_EXIT क्लिअरन्स अनिवार्य आहे!"
+  },
+  {
+    "id": "s01_sc07_wrong",
+    "filename": "s01_sc07_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 7,
+    "sceneId": "c1_s1_sc07_gate_exit",
+    "type": "wrong",
+    "script": "थांबा! मॅन्युअल डिलिव्हरी चलन (DC) शिवाय बॅरियर कधीही उघडू नका. रिकामे FLC डबे ही अथर कंपनीची मौल्यवान मालमत्ता आहे. DC शिवाय हजारो रुपयांचे पॅकेजिंग नोंदीविना बाहेर जाईल!"
+  },
+  {
+    "id": "s01_sc08_intro",
+    "filename": "s01_sc08_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 8,
+    "sceneId": "c1_s1_sc08_asn_discrepancy",
+    "type": "intro",
+    "script": "DEO लक्ष द्या! चालक 50 बॅटरी हार्नेसचे इनव्हॉईस सादर करतो, परंतु SAP मधील डिजिटल ॲडव्हान्स्ड शिपिंग नोटीस (ASN) PO 4500018920 अंतर्गत 40 नग दाखवते. SOP कलम 4.2.1 नुसार गेट एंट्री करता येईल का?"
+  },
+  {
+    "id": "s01_sc08_prompt",
+    "filename": "s01_sc08_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 8,
+    "sceneId": "c1_s1_sc08_asn_discrepancy",
+    "type": "prompt",
+    "script": "निर्णय गेट: प्रत्यक्ष इनव्हॉईसमधील संख्या SAP मधील डिजिटल ASN शी जुळत नाही."
+  },
+  {
+    "id": "s01_sc08_correct",
+    "filename": "s01_sc08_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 8,
+    "sceneId": "c1_s1_sc08_asn_discrepancy",
+    "type": "correct",
+    "script": "योग्य निर्णय! चुकीच्या ASN साठी कधीही गेट पास तयार करू नका. DEO व्यवहार थांबवतो आणि व्हेंडर ASN तफावत सोडवण्यासाठी इनबाउंड गेट प्रमुखाला (1-तासाची मुदत) सूचना देतो."
+  },
+  {
+    "id": "s01_sc08_wrong",
+    "filename": "s01_sc08_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 8,
+    "sceneId": "c1_s1_sc08_asn_discrepancy",
+    "type": "wrong",
+    "script": "नियमभंग! चुकीच्या ASN सह गेट पास दिल्यास SAP ERP मध्ये मोठी तफावत होते, ज्यामुळे IQC तपासणी आणि व्हेंडर पेमेंट अडकते."
+  },
+  {
+    "id": "s01_sc09_intro",
+    "filename": "s01_sc09_intro.mp3",
+    "stage": 1,
+    "sceneIndex": 9,
+    "sceneId": "c1_s1_sc09_max_stock_full",
+    "type": "intro",
+    "script": "गेट 01 वर चेसिस फ्रेमचा ट्रक आला आहे. परंतु SAP स्क्रीनवर दिसते की हाय-राईज रॅकमधील जागा 100% पूर्ण भरलेली आहे! SOP कलम 4.2.1 नुसार DEO ने कोणती अधिकृत कृती केली पाहिजे?"
+  },
+  {
+    "id": "s01_sc09_prompt",
+    "filename": "s01_sc09_prompt.mp3",
+    "stage": 1,
+    "sceneIndex": 9,
+    "sceneId": "c1_s1_sc09_max_stock_full",
+    "type": "prompt",
+    "script": "गोदामामध्ये या साहित्याची कमाल क्षमता पूर्ण भरलेली आहे. DEO ने काय केले पाहिजे?"
+  },
+  {
+    "id": "s01_sc09_correct",
+    "filename": "s01_sc09_correct.mp3",
+    "stage": 1,
+    "sceneIndex": 9,
+    "sceneId": "c1_s1_sc09_max_stock_full",
+    "type": "correct",
+    "script": "अगदी बरोबर! असेंब्ली लाईनवर जुना माल वापरून रॅक मोकळे होईपर्यंत ट्रक वेटिंग यार्डमध्ये थांबवला जातो. डॉकवर रस्त्यात माल टाकण्यास सक्त मनाई आहे."
+  },
+  {
+    "id": "s01_sc09_wrong",
+    "filename": "s01_sc09_wrong.mp3",
+    "stage": 1,
+    "sceneIndex": 9,
+    "sceneId": "c1_s1_sc09_max_stock_full",
+    "type": "wrong",
+    "script": "चुकीचे! डॉकच्या चालण्याच्या जागेत माल टाकू नका किंवा ट्रकला परत पाठवू नका. जागा मोकळी होईपर्यंत ट्रक पार्किंगमध्ये थांबवला पाहिजे."
+  },
+  {
+    "id": "s02_sc01_intro",
+    "filename": "s02_sc01_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 1,
+    "sceneId": "c1_s2_sc01_grn_sticker",
+    "type": "intro",
+    "script": "स्टेज 2: रिसीव्हिंग आणि IQC क्लिअरन्समध्ये आपले स्वागत आहे! फोर्कलिफ्टने डॉक 04 इनबाउंड स्टेजिंगमध्ये ब्रेक कॅलिपर्सचे एक पॅलेट उतरवले आहे. पॅलेटवर नवीन लावलेल्या GRN स्टिकरकडे काळजीपूर्वक पहा. ते मोठे '?' चिन्ह आपल्याला काय सांगते?"
+  },
+  {
+    "id": "s02_sc01_prompt",
+    "filename": "s02_sc01_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 1,
+    "sceneId": "c1_s2_sc01_grn_sticker",
+    "type": "prompt",
+    "script": "फोर्कलिफ्टने पॅलेट इनबाउंड स्टेजिंगमध्ये उतरवले आहे. तुम्ही नवीन लावलेल्या GRN स्टिकरची पाहणी करता आणि त्यावर मोठे '?' छापलेले दिसते. या चिन्हाचा अर्थ काय आहे?"
+  },
+  {
+    "id": "s02_sc01_correct",
+    "filename": "s02_sc01_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 1,
+    "sceneId": "c1_s2_sc01_grn_sticker",
+    "type": "correct",
+    "script": "अगदी बरोबर! IQC इश्यूअन्स SOP (कलम 4.1) नुसार, GRN स्टिकरवरील '?' नॉन-DOL (नॉन-डायरेक्ट-ऑन-लाइन) साहित्य दर्शवते. स्टोरेज रॅकमध्ये ठेवण्यापूर्वी IQC द्वारे अनिवार्य 10% सॅम्पलिंग आणि चाचणी आवश्यक आहे!"
+  },
+  {
+    "id": "s02_sc01_wrong",
+    "filename": "s02_sc01_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 1,
+    "sceneId": "c1_s2_sc01_grn_sticker",
+    "type": "wrong",
+    "script": "थांबा! '?' चिन्हाचा अर्थ स्क्रॅप किंवा डायरेक्ट-टू-लाइन असा होत नाही. याचा अर्थ नॉन-DOL आहे—साहित्याची अनिवार्य IQC सॅम्पलिंग झाली पाहिजे. तपासणी न केलेल्या स्टॉकचे वेळेपूर्वी पुट-अवे SAP EWM द्वारे ब्लॉक केले जाईल!"
+  },
+  {
+    "id": "s02_sc02_intro",
+    "filename": "s02_sc02_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 2,
+    "sceneId": "c1_s2_sc02_sampling_calc",
+    "type": "intro",
+    "script": "आता आपल्याला माहित आहे की डिलिव्हरी नॉन-DOL आहे, म्हणून आपण 10% सांख्यिकीय सॅम्पलिंग नियम लागू केला पाहिजे! खरेदी ऑर्डरमध्ये 10 FLC क्रेट्स (एकूण 100 ब्रेक कॅलिपर्स) आहेत. IQC चाचणी भागात नेमके किती FLC क्रेट्स वेगळे करून पाठवले पाहिजेत?"
+  },
+  {
+    "id": "s02_sc02_prompt",
+    "filename": "s02_sc02_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 2,
+    "sceneId": "c1_s2_sc02_sampling_calc",
+    "type": "prompt",
+    "script": "10 FLC चा एक नॉन-DOL लॉट आला आहे. SOP 10% सांख्यिकीय सॅम्पलिंग नियमानुसार, किती FLC क्रेट्स IQC कडे गेले पाहिजेत?"
+  },
+  {
+    "id": "s02_sc02_correct",
+    "filename": "s02_sc02_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 2,
+    "sceneId": "c1_s2_sc02_sampling_calc",
+    "type": "correct",
+    "script": "अगदी बरोबर! IQC इश्यूअन्स SOP (कलम 4.2): लॉटच्या आकाराच्या बरोबर 10% (10 पैकी 1 FLC) IQC स्टेजिंगमध्ये हस्तांतरित केले जाते. IQC नमुना मंजूर करेपर्यंत उर्वरित 9 FLC अनलोडिंग स्टेजिंगमध्ये सुरक्षित राहिले पाहिजेत!"
+  },
+  {
+    "id": "s02_sc02_wrong",
+    "filename": "s02_sc02_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 2,
+    "sceneId": "c1_s2_sc02_sampling_calc",
+    "type": "wrong",
+    "script": "हिशेबात चूक! SOP कलम 4.2 नुसार एकूण इनवर्ड आकाराच्या बरोबर 10% नमुना घेतला पाहिजे. 10-FLC लॉटसाठी, 1 पेक्षा जास्त पाठवल्यास चाचणी लॅब भरून जाईल, आणि कमी पाठवल्यास मानकांचे उल्लंघन होईल."
+  },
+  {
+    "id": "s02_sc03_intro",
+    "filename": "s02_sc03_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 3,
+    "sceneId": "c1_s2_sc03_iqc_cones",
+    "type": "intro",
+    "script": "1 सॅम्पल क्रेट चाचणी लॅबमध्ये गेला आहे, परंतु ब्रेक कॅलिपर्सचे 9 क्रेट्स इनबाउंड स्टेजिंगमध्ये वाट पाहत आहेत! IQC 2 तासांपर्यंत नमुन्याची तपासणी करत असताना, या स्टेज केलेल्या लॉटभोवती कोणते अनिवार्य दृश्य चिन्ह ठेवले पाहिजे?"
+  },
+  {
+    "id": "s02_sc03_prompt",
+    "filename": "s02_sc03_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 3,
+    "sceneId": "c1_s2_sc03_iqc_cones",
+    "type": "prompt",
+    "script": "2 तासांच्या IQC चाचणी कालावधीत उर्वरित 9 FLC क्रेट्स स्टेजिंगमध्ये वाट पाहत आहेत. त्यांच्याभोवती कोणते अनिवार्य दृश्य नियंत्रण ठेवले पाहिजे?"
+  },
+  {
+    "id": "s02_sc03_correct",
+    "filename": "s02_sc03_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 3,
+    "sceneId": "c1_s2_sc03_iqc_cones",
+    "type": "correct",
+    "script": "अगदी बरोबर! IQC इश्यूअन्स SOP (कलम 4.3): स्टेजिंगच्या परिमितीवर चमकदार पिवळे 'UNDER IQC' कोन्स ठेवले पाहिजेत. हे दृश्य क्वारंटाइन फोर्कलिफ्ट चालकांना तपासणी न केलेला साठा चुकीने उचलण्यापासून किंवा पुट-अवे करण्यापासून रोखते!"
+  },
+  {
+    "id": "s02_sc03_wrong",
+    "filename": "s02_sc03_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 3,
+    "sceneId": "c1_s2_sc03_iqc_cones",
+    "type": "wrong",
+    "script": "गुणवत्ता धोका! तपासणी न केलेले स्टेजिंग कधीही चिन्हांकित केल्याशिवाय सोडू नका. पिवळे 'UNDER IQC' कोन्स अनिवार्य आहेत. लाल टॅग फक्त नाकारलेल्या स्क्रॅपसाठी असतात आणि हिरव्या सीलसाठी उत्तीर्ण तपासणी अहवाल आवश्यक असतो."
+  },
+  {
+    "id": "s02_sc04_intro",
+    "filename": "s02_sc04_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 4,
+    "sceneId": "c1_s2_sc04_handover_sla",
+    "type": "intro",
+    "script": "GRN स्टिकर लावला आहे आणि 10% नमुना पॅलेट ट्रकवर लोड केला आहे! कारखान्याचे घड्याळ सुरू झाले आहे. इनबाउंड कर्मचाऱ्यांसाठी हा नमुना प्रत्यक्ष IQC चाचणी कक्षात सोपवण्यासाठी कमाल अनुज्ञेय SLA कालावधी काय आहे?"
+  },
+  {
+    "id": "s02_sc04_prompt",
+    "filename": "s02_sc04_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 4,
+    "sceneId": "c1_s2_sc04_handover_sla",
+    "type": "prompt",
+    "script": "GRN लेबल लावल्यानंतर, इनबाउंड कर्मचाऱ्यांनी नॉन-DOL नमुने IQC चाचणी कक्षात सोपवण्यासाठी काटेकोर SLA कटऑफ वेळ कोणती आहे?"
+  },
+  {
+    "id": "s02_sc04_correct",
+    "filename": "s02_sc04_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 4,
+    "sceneId": "c1_s2_sc04_handover_sla",
+    "type": "correct",
+    "script": "अचूक वेळ व्यवस्थापन! IQC इश्यूअन्स SOP (कलम 4.1): इनबाउंड कर्मचाऱ्यांनी GRN लावल्यापासून बरोबर 30 मिनिटांच्या आत नॉन-DOL नमुना IQC कडे सोपवला पाहिजे. या SLA चे पालन केल्याने उत्पादनाला सुट्या भागांची गरज भासण्यापूर्वी 2 तासांची चाचणी पूर्ण होते!"
+  },
+  {
+    "id": "s02_sc04_wrong",
+    "filename": "s02_sc04_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 4,
+    "sceneId": "c1_s2_sc04_handover_sla",
+    "type": "wrong",
+    "script": "SLA उल्लंघन चेतावणी! SOP फेल्युअर मोड 2 नुसार, नमुना हस्तांतरणात 30 मिनिटांपेक्षा जास्त उशीर झाल्यास SAP EWM मधील वेअरहाऊस ऑर्डर उघडी राहते. यामुळे पुढील पिकिंग ऑर्डर्स ब्लॉक होतात आणि व्हेईकल असेंब्ली लाइनला पार्ट्स मिळण्यास विलंब होतो!"
+  },
+  {
+    "id": "s02_sc05_intro",
+    "filename": "s02_sc05_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 5,
+    "sceneId": "c1_s2_sc05_iqc_outcomes",
+    "type": "intro",
+    "script": "IQC निरीक्षकाने नमुन्याची चाचणी पूर्ण केली आहे! इनवर्ड लॉटला 3 पैकी एक निकाल मिळेल: पास (Pass), होल्ड (Hold), किंवा एनजी/नाकारलेले (NG). वेअरहाऊस कर्मचाऱ्यांनी प्रत्येक निकालासाठी अचूक प्रत्यक्ष SOP प्रोटोकॉलचे पालन केले पाहिजे. प्रत्येक कृती आयटमला त्याच्या योग्य निकाल बकेटशी जोडा!"
+  },
+  {
+    "id": "s02_sc05_prompt",
+    "filename": "s02_sc05_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 5,
+    "sceneId": "c1_s2_sc05_iqc_outcomes",
+    "type": "prompt",
+    "script": "इनकमिंग गुणवत्ता नियंत्रण (IQC) निकालाला अनिवार्य प्रत्यक्ष वेअरहाऊस कृतीशी जोडा."
+  },
+  {
+    "id": "s02_sc05_correct",
+    "filename": "s02_sc05_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 5,
+    "sceneId": "c1_s2_sc05_iqc_outcomes",
+    "type": "correct",
+    "script": "उत्कृष्ट गुणवत्ता अनुपालन! SOP कलम 4.5 नुसार: PASS साठी, पुट-अवे सुरू करण्यासाठी GRN स्टिकरवर हिरवा 'QC Pass' शिक्का मारा. HOLD साठी, पिवळा 'IQC Hold' कोन लावा. NG साठी, लाल NG टॅग लावा, पार्ट # आणि लॉट ID सह जिरा तिकीट नोंदवा, आणि नियुक्त NG कर्मचाऱ्यांद्वारे संपूर्ण लॉट क्वारंटाइन जागा SC01 BL मध्ये हलवा! मॉड्यूल 2 आता 100% पूर्ण झाले आहे!"
+  },
+  {
+    "id": "s02_sc05_wrong",
+    "filename": "s02_sc05_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 5,
+    "sceneId": "c1_s2_sc05_iqc_outcomes",
+    "type": "wrong",
+    "script": "डिस्पोझिशन प्रोटोकॉल चूक! SOP कलम 4.5 नुसार, शिक्का नसलेले भाग कधीही हाय-राइज रॅकमध्ये हलवू नका. जेव्हा लॉट अयशस्वी होतो, तेव्हा केवळ नमुन्याचे तुकडे नव्हे तर संपूर्ण लॉट सक्रिय जिरा तिकिटासह क्वारंटाइन केला पाहिजे!"
+  },
+  {
+    "id": "s02_sc06_intro",
+    "filename": "s02_sc06_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 6,
+    "sceneId": "c1_s2_sc06_iqc_definition",
+    "type": "intro",
+    "script": "IQC गुणवत्ता गेटमध्ये आपले स्वागत आहे! डॉक 04 वर उतरवलेल्या प्रत्येक साहित्याची कडक तपासणी होते. IQC चा अर्थ काय आहे आणि एथर औरिक कारखान्यात त्याची मुख्य जबाबदारी काय आहे?"
+  },
+  {
+    "id": "s02_sc06_prompt",
+    "filename": "s02_sc06_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 6,
+    "sceneId": "c1_s2_sc06_iqc_definition",
+    "type": "prompt",
+    "script": "IQC चा पूर्ण अर्थ काय आहे आणि एथर औरिकमध्ये त्याचा मुख्य उद्देश काय आहे?"
+  },
+  {
+    "id": "s02_sc06_correct",
+    "filename": "s02_sc06_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 6,
+    "sceneId": "c1_s2_sc06_iqc_definition",
+    "type": "correct",
+    "script": "बरोबर! IQC म्हणजे Incoming Quality Control (इनकमिंग क्वालिटी कंट्रोल). माल गोदामात साठवण्यापूर्वी तो तांत्रिक मानकांनुसार योग्य आहे की नाही हे तपासण्याचे काम IQC करते."
+  },
+  {
+    "id": "s02_sc06_wrong",
+    "filename": "s02_sc06_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 6,
+    "sceneId": "c1_s2_sc06_iqc_definition",
+    "type": "wrong",
+    "script": "चुकीचे. IQC म्हणजे Incoming Quality Control, जेणेकरून एकही सदोष पार्ट वाहनांच्या मुख्य लाईनवर जाऊ नये."
+  },
+  {
+    "id": "s02_sc07_intro",
+    "filename": "s02_sc07_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 7,
+    "sceneId": "c1_s2_sc07_six_month_rampup",
+    "type": "intro",
+    "script": "एथरच्या गुणवत्ता धोरणानुसार, नवीन फॅक्टरी सुरू झाल्यानंतरच्या पहिल्या 6 महिन्यांत (AURIC रॅम्प-अप), साठवणुकीपूर्वी कोणता माल IQC तपासणीसाठी पाठवणे बंधनकारक आहे?"
+  },
+  {
+    "id": "s02_sc07_prompt",
+    "filename": "s02_sc07_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 7,
+    "sceneId": "c1_s2_sc07_six_month_rampup",
+    "type": "prompt",
+    "script": "नवीन फॅक्टरीमध्ये, पहिल्या 6 महिन्यांत कोणता आवक माल IQC कडे गेला पाहिजे?"
+  },
+  {
+    "id": "s02_sc07_correct",
+    "filename": "s02_sc07_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 7,
+    "sceneId": "c1_s2_sc07_six_month_rampup",
+    "type": "correct",
+    "script": "अगदी बरोबर! पहिल्या 6 महिन्यांच्या सुरुवातीच्या काळात, सर्वच्या सर्व (100%) माल नॉन-DOL मानून सप्लायरच्या गुणवत्तेची खात्री करण्यासाठी IQC तपासणी केली जाते."
+  },
+  {
+    "id": "s02_sc07_wrong",
+    "filename": "s02_sc07_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 7,
+    "sceneId": "c1_s2_sc07_six_month_rampup",
+    "type": "wrong",
+    "script": "सावध रहा! फॅक्टरी सुरू झाल्यावर पहिल्या 6 महिन्यांत येणारा 100% माल तपासणीसाठी IQC कडे गेलाच पाहिजे."
+  },
+  {
+    "id": "s02_sc08_intro",
+    "filename": "s02_sc08_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 8,
+    "sceneId": "c1_s2_sc08_receiving_sequence",
+    "type": "intro",
+    "script": "माल स्वीकारण्याच्या अचूक क्रमाचे ज्ञान असणे अत्यंत आवश्यक आहे! SOP कलम 4.1 ते 4.5 नुसार नॉन-DOL साहित्याच्या प्राप्तीचा योग्य क्रम लावा."
+  },
+  {
+    "id": "s02_sc08_prompt",
+    "filename": "s02_sc08_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 8,
+    "sceneId": "c1_s2_sc08_receiving_sequence",
+    "type": "prompt",
+    "script": "नॉन-DOL माल प्राप्ती आणि IQC च्या पायऱ्या योग्य कालक्रमाने लावा."
+  },
+  {
+    "id": "s02_sc08_correct",
+    "filename": "s02_sc08_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 8,
+    "sceneId": "c1_s2_sc08_receiving_sequence",
+    "type": "correct",
+    "script": "उत्कृष्ट! अनलोड करून GRN लेबल लावणे $\\to$ 10% सॅम्पल बाजूला काढून त्यावर Under IQC कोन ठेवणे $\\to$ 30 मिनिटांत लॅबकडे प्रत्यक्ष सुपूर्द करणे $\\to$ Pass, Hold किंवा NG चा अधिकृत निर्णय देणे."
+  },
+  {
+    "id": "s02_sc08_wrong",
+    "filename": "s02_sc08_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 8,
+    "sceneId": "c1_s2_sc08_receiving_sequence",
+    "type": "wrong",
+    "script": "चुकीचा क्रम! सॅम्पल काढण्यापूर्वी GRN लेबल लावले पाहिजे आणि लॅबमध्ये देण्यापूर्वी 10% नमुन्यावर पिवळे कोन ठेवले पाहिजेत."
+  },
+  {
+    "id": "s02_sc09_intro",
+    "filename": "s02_sc09_intro.mp3",
+    "stage": 2,
+    "sceneIndex": 9,
+    "sceneId": "c1_s2_sc09_sla_overrun_risk",
+    "type": "intro",
+    "script": "दुसऱ्या ट्रकच्या अनलोडिंगमध्ये टीम व्यस्त राहिल्यामुळे नॉन-DOL चे सॅम्पल तब्बल 75 मिनिटे स्टेजिंगमध्येच पडून राहिले! SOP अपयश मोड 5.1 नुसार 30 मिनिटांची मुदत ओलांडल्यास कोणता गंभीर फटका बसतो?"
+  },
+  {
+    "id": "s02_sc09_prompt",
+    "filename": "s02_sc09_prompt.mp3",
+    "stage": 2,
+    "sceneIndex": 9,
+    "sceneId": "c1_s2_sc09_sla_overrun_risk",
+    "type": "prompt",
+    "script": "नॉन-DOL चे सॅम्पल 30 मिनिटांच्या आत IQC कडे न दिल्यास कोणता धोका निर्माण होतो?"
+  },
+  {
+    "id": "s02_sc09_correct",
+    "filename": "s02_sc09_correct.mp3",
+    "stage": 2,
+    "sceneIndex": 9,
+    "sceneId": "c1_s2_sc09_sla_overrun_risk",
+    "type": "correct",
+    "script": "अगदी बरोबर! 30 मिनिटांत सॅम्पल न दिल्यास SAP WH ऑर्डर उघडाच राहतो, ज्यामुळे पुढील सर्व मालाची साठवणूक ठप्प होते आणि व्हेईकल असेंब्ली लाईन खोळंबते."
+  },
+  {
+    "id": "s02_sc09_wrong",
+    "filename": "s02_sc09_wrong.mp3",
+    "stage": 2,
+    "sceneIndex": 9,
+    "sceneId": "c1_s2_sc09_sla_overrun_risk",
+    "type": "wrong",
+    "script": "नियमभंग! उशिरा सॅम्पल दिल्याने SAP EWM सिस्टीम जाम होते. इनबाउंड झोन लीडरने तात्काळ सॅम्पल लॅबमध्ये पाठवून सिस्टीम मोकळी केली पाहिजे."
+  },
+  {
+    "id": "s03_sc01_intro",
+    "filename": "s03_sc01_intro.mp3",
+    "stage": 3,
+    "sceneIndex": 1,
+    "sceneId": "c1_s3_sc01_hu_scan",
+    "type": "intro",
+    "script": "स्टेज 3: व्हेईकल आणि बॅटरी पार्ट्स पुट-अवेमध्ये आपले स्वागत आहे! इनवर्ड ब्रेक कॅलिपर लॉट तपासणीत मंजूर झाला असून त्यावर हिरवा 'QC Pass' शिक्का आहे. एक MHE रीच-ट्रक ऑपरेटर हँडहेल्ड टर्मिनल घेऊन येतो. पॅलेट रॅककडे नेण्यापूर्वी, SAP EWM वेअरहाऊस टास्क सुरू करण्यासाठी कोणते अनिवार्य डिजिटल स्कॅनिंग केले पाहिजे?"
+  },
+  {
+    "id": "s03_sc01_prompt",
+    "filename": "s03_sc01_prompt.mp3",
+    "stage": 3,
+    "sceneIndex": 1,
+    "sceneId": "c1_s3_sc01_hu_scan",
+    "type": "prompt",
+    "script": "GRN स्टेजिंगमध्ये, पुट-अवे वेअरहाऊस टास्क तयार करण्यासाठी MHE ऑपरेटरने हँडहेल्ड टर्मिनलद्वारे सर्वात आधी काय स्कॅन केले पाहिजे?"
+  },
+  {
+    "id": "s03_sc01_correct",
+    "filename": "s03_sc01_correct.mp3",
+    "stage": 3,
+    "sceneIndex": 1,
+    "sceneId": "c1_s3_sc01_hu_scan",
+    "type": "correct",
+    "script": "मानक कार्यपद्धती पडताळली! SOP कलम 4.1: ऑपरेटरने प्रथम GRN स्टिकरवरील पॅलेट-स्तरीय हँडलिंग युनिट (HU) बारकोड स्कॅन केला पाहिजे. HU स्कॅन केल्याने SAP EWM ला वेअरहाऊस टास्क तयार करण्याचे निर्देश मिळतात, ज्यामध्ये टार्गेट हाय-राइज रॅक बिन आणि पार्ट तपशील दिसतात!"
+  },
+  {
+    "id": "s03_sc01_wrong",
+    "filename": "s03_sc01_wrong.mp3",
+    "stage": 3,
+    "sceneIndex": 1,
+    "sceneId": "c1_s3_sc01_hu_scan",
+    "type": "wrong",
+    "script": "चुकीचा स्कॅन क्रम! SOP कलम 4.1 नुसार, हँडलिंग युनिट (HU) लेबल स्कॅन केल्याशिवाय तुम्ही पुट-अवे सुरू करू शकत नाही. HU स्कॅन करण्यापूर्वी साहित्य हलवल्यास SAP EWM मध्ये ट्रॅकिंग होत नाही, ज्यामुळे ओपन टास्कचा अनुशेष आणि ERP स्टॉक तफावत निर्माण होते."
+  },
+  {
+    "id": "s03_sc02_intro",
+    "filename": "s03_sc02_intro.mp3",
+    "stage": 3,
+    "sceneIndex": 2,
+    "sceneId": "c1_s3_sc02_route_segregation",
+    "type": "intro",
+    "script": "हँडलिंग युनिट स्कॅन केले गेले आहे आणि वेअरहाऊस टास्क सक्रिय आहे! फोर्कलिफ्ट दोन वेगवेगळ्या मार्गांसह एका मुख्य अंतर्गत वेअरहाऊस जंक्शनवर पोहोचते. इनवर्ड साहित्य दोन वेगवेगळ्या पॅकेजिंग प्रकारांमध्ये येते: मानक निळे FLC क्रेट्स आणि विशेष चाके असलेल्या बॉडी ट्रॉलीज. या दोन साहित्याचे विभाजन कसे केले पाहिजे?"
+  },
+  {
+    "id": "s03_sc02_prompt",
+    "filename": "s03_sc02_prompt.mp3",
+    "stage": 3,
+    "sceneIndex": 2,
+    "sceneId": "c1_s3_sc02_route_segregation",
+    "type": "prompt",
+    "script": "वेअरहाऊस जंक्शनवर प्रत्येक इनवर्ड कंटेनर प्रकार कुठे पाठवला पाहिजे?"
+  },
+  {
+    "id": "s03_sc02_correct",
+    "filename": "s03_sc02_correct.mp3",
+    "stage": 3,
+    "sceneIndex": 2,
+    "sceneId": "c1_s3_sc02_route_segregation",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP कलम 4.2: मानक FLC क्रेट्स आणि डबे रीच-ट्रकद्वारे वर ठेवण्यासाठी हाय-राइज रॅक्स (HRR) कडे पाठवले जातात, तर मोठ्या बॉडी फ्रेम्स आणि हेवी ट्रॉलीवरील बॅटरी मॉड्यूल्स थेट नियुक्त ट्रॉली स्टेजिंग भागात नेले जातात!"
+  },
+  {
+    "id": "s03_sc02_wrong",
+    "filename": "s03_sc02_wrong.mp3",
+    "stage": 3,
+    "sceneIndex": 2,
+    "sceneId": "c1_s3_sc02_route_segregation",
+    "type": "wrong",
+    "script": "मार्ग नियोजन चूक! SOP कलम 4.2 नुसार, बीम क्लिअरन्स आणि वजन वितरणाच्या धोक्यांमुळे चाके असलेल्या ट्रॉली हाय-राइज रॅकमध्ये ठेवता येत नाहीत, आणि FLC पॅलेट्स तळमजल्यावरील ट्रॉली फीडिंग लेन अडवू शकत नाहीत!"
+  },
+  {
+    "id": "s03_sc03_intro",
+    "filename": "s03_sc03_intro.mp3",
+    "stage": 3,
+    "sceneIndex": 3,
+    "sceneId": "c1_s3_sc03_bin_marriage",
+    "type": "intro",
+    "script": "रीच-ट्रकने FLC पॅलेट हाय-राइज रॅक्सच्या आइल बी मध्ये सुरक्षितपणे नेले आहे. हायड्रॉलिक फोर्क्स पॅलेटला बिन स्थानक 'HRR-B-04-12' वर शेल्फ लेव्हल 4 वर उचलतात. पॅलेट प्रत्यक्षपणे स्टील बीमवर ठेवलेले आहे. ऑपरेटरने तिथून निघण्यापूर्वी आता कोणती शेवटची अनिवार्य कृती केली पाहिजे?"
+  },
+  {
+    "id": "s03_sc03_prompt",
+    "filename": "s03_sc03_prompt.mp3",
+    "stage": 3,
+    "sceneIndex": 3,
+    "sceneId": "c1_s3_sc03_bin_marriage",
+    "type": "prompt",
+    "script": "FLC पॅलेट शेल्फ बीम HRR-B-04-12 वर ठेवलेले आहे. पुट-अवे अधिकृतपणे पूर्ण करण्यासाठी ऑपरेटरने कोणती अनिवार्य कृती केली पाहिजे?"
+  },
+  {
+    "id": "s03_sc03_correct",
+    "filename": "s03_sc03_correct.mp3",
+    "stage": 3,
+    "sceneIndex": 3,
+    "sceneId": "c1_s3_sc03_bin_marriage",
+    "type": "correct",
+    "script": "उत्कृष्ट अंमलबजावणी! SOP कलम 4.3: ऑपरेटरने रॅक बीम 'HRR-B-04-12' वरील लोकेशन QR कोड स्कॅन केला पाहिजे. यामुळे SAP EWM मध्ये पॅलेट हँडलिंग युनिट (HU) चे विशिष्ट स्टोरेज बिनशी लग्न (मॅरेज) होते, सिस्टीम G-स्टॉक अपडेट होतो आणि सक्रिय वेअरहाऊस टास्क बंद होतो!"
+  },
+  {
+    "id": "s03_sc03_wrong",
+    "filename": "s03_sc03_wrong.mp3",
+    "stage": 3,
+    "sceneIndex": 3,
+    "sceneId": "c1_s3_sc03_bin_marriage",
+    "type": "wrong",
+    "script": "गंभीर चूक! SOP कलम 4.3 आणि फेल्युअर मोड 2 नुसार, लोकेशन QR कोड स्कॅन न करता रॅक सोडल्यास SAP EWM मध्ये वेअरहाऊस टास्क उघडा राहतो. इन्व्हेंटरी पिकिंग टीमसाठी अदृश्य राहते आणि तुमच्या ऑपरेटर कार्यक्षमता KPI वर वाईट परिणाम होतो!"
+  },
+  {
+    "id": "s03_sc04_intro",
+    "filename": "s03_sc04_intro.mp3",
+    "stage": 3,
+    "sceneIndex": 4,
+    "sceneId": "c1_s3_sc04_omitted_scan_risk",
+    "type": "intro",
+    "script": "सावधान! एका प्रशिक्षणार्थी ऑपरेटरने 100 ब्रेक कॅलिपर्सचे पॅलेट बीम HRR-B-04-12 वर ठेवले, फोर्क्स खाली केले आणि रॅक QR कोड स्कॅन न करता लगेच निघून गेला. हे स्कॅन वगळल्याचा तात्काळ ऑपरेशनल आणि सिस्टीमवर काय परिणाम होईल?"
+  },
+  {
+    "id": "s03_sc04_prompt",
+    "filename": "s03_sc04_prompt.mp3",
+    "stage": 3,
+    "sceneIndex": 4,
+    "sceneId": "c1_s3_sc04_omitted_scan_risk",
+    "type": "prompt",
+    "script": "एका MHE ऑपरेटरने रॅकमध्ये FLC पॅलेट ठेवले परंतु निघून जाण्यापूर्वी गंतव्य स्थान QR कोड स्कॅन करण्याचे विसरला. काय होईल?"
+  },
+  {
+    "id": "s03_sc04_correct",
+    "filename": "s03_sc04_correct.mp3",
+    "stage": 3,
+    "sceneIndex": 4,
+    "sceneId": "c1_s3_sc04_omitted_scan_risk",
+    "type": "correct",
+    "script": "महत्त्वपूर्ण SOP माहिती! SOP कलम 5.1 आणि फेल्युअर मोड 2: गंतव्य स्कॅन वगळल्यामुळे, SAP EWM वेअरहाऊस टास्क 'OPEN' स्थितीत ठेवते. साठा सक्रिय G-स्टॉकमध्ये नोंदवला जात नाही, ज्यामुळे असेंब्ली लाइन पिकर्ससाठी तो अदृश्य राहतो आणि रखडलेला टास्क थेट ऑपरेटरच्या कार्यक्षमता KPI वर नकारात्मक परिणाम करतो! झोन लीडरला मॅन्युअली शोध घेऊन टास्क बंद करावा लागतो."
+  },
+  {
+    "id": "s03_sc04_wrong",
+    "filename": "s03_sc04_wrong.mp3",
+    "stage": 3,
+    "sceneIndex": 4,
+    "sceneId": "c1_s3_sc04_omitted_scan_risk",
+    "type": "wrong",
+    "script": "गैरसमज! पुष्टीकरण बारकोड स्कॅनशिवाय ERP सिस्टीम प्रत्यक्ष प्लेसमेंट ओळखू शकत नाही. स्कॅन वगळल्याने टास्क आपोआप पूर्ण होत नाही; उलट यामुळे घोस्ट इन्व्हेंटरी तयार होते, वेअरहाऊस टास्क उघडा राहतो आणि तुमच्या वैयक्तिक KPI चे नुकसान होते."
+  },
+  {
+    "id": "s03_sc05_intro",
+    "filename": "s03_sc05_intro.mp3",
+    "stage": 3,
+    "sceneIndex": 5,
+    "sceneId": "c1_s3_sc05_bin_slotting_violation",
+    "type": "intro",
+    "script": "आइल 04 वरील गंभीर परिस्थिती! तुमच्या हँडहेल्ड टर्मिनल स्क्रीनवर नियुक्त केलेले गंतव्य बिन 'HRR-A-02-04' स्पष्टपणे दिसत आहे. तथापि, ते बिन लेव्हल 2 वर उंचावर आहे. ऑपरेटरला जवळच एक रिकामे खालचे रॅक 'HRR-B-03-08' दिसते आणि वेळ वाचवण्यासाठी तो पॅलेट बिन B मध्ये ठेवण्याचा निर्णय घेतो. या कृतीस परवानगी द्यावी की थांबवावी?"
+  },
+  {
+    "id": "s03_sc05_prompt",
+    "filename": "s03_sc05_prompt.mp3",
+    "stage": 3,
+    "sceneIndex": 5,
+    "sceneId": "c1_s3_sc05_bin_slotting_violation",
+    "type": "prompt",
+    "script": "SAP हँडहेल्ड नियुक्त केलेले बिन A दर्शवते, परंतु ऑपरेटर वेळ वाचवण्यासाठी पॅलेट बिन B मध्ये ठेवतो. काय केले पाहिजे?"
+  },
+  {
+    "id": "s03_sc05_correct",
+    "filename": "s03_sc05_correct.mp3",
+    "stage": 3,
+    "sceneIndex": 5,
+    "sceneId": "c1_s3_sc05_bin_slotting_violation",
+    "type": "correct",
+    "script": "STOP हीच एकमेव योग्य कृती आहे! SOP कलम 4.4 आणि प्रश्न बँक Q23: सिस्टीम FIFO, भागाचे वजन आणि पिक फ्रिक्वेन्सीनुसार स्टोरेज बिन निश्चित करते. अनधिकृत बिनमध्ये माल ठेवल्यास मोठी इन्व्हेंटरी तफावत निर्माण होते. जोपर्यंत नियुक्त केलेले बिन स्कॅन केले जात नाही तोपर्यंत सिस्टीम वेअरहाऊस टास्क बंद करत नाही. तुम्ही ते बिन A मध्ये नेले पाहिजे किंवा झोन लीडरला SAP EWM मध्ये री-स्लॉट करण्यास सांगितले पाहिजे!"
+  },
+  {
+    "id": "s03_sc05_wrong",
+    "filename": "s03_sc05_wrong.mp3",
+    "stage": 3,
+    "sceneIndex": 5,
+    "sceneId": "c1_s3_sc05_bin_slotting_violation",
+    "type": "wrong",
+    "script": "गंभीर साठवणूक विसंगती! नियुक्त न केलेल्या बिनमध्ये पॅलेट ठेवल्यास असेंब्ली लाइन पिकिंग दरम्यान 'घोस्ट स्टॉकआऊट' होतो. सिस्टीम तुमच्या आयडीवर ओपन टास्क नोंदवेल आणि पिकिंग ऑपरेटरना बिन रिकामे सापडेल!"
+  },
+  {
+    "id": "s03_sc06_intro",
+    "filename": "s03_sc06_intro.mp3",
+    "stage": 3,
+    "sceneIndex": 6,
+    "sceneId": "c1_s3_sc06_putaway_sequence",
+    "type": "intro",
+    "script": "अंतिम पुट-अवे प्रमाणपत्र टप्पा! तुम्ही हँडलिंग युनिट्स, हाय-राइज रॅक्स, बिन मॅरेज आणि एरर रिकव्हरीचे नियम आत्मसात केले आहेत. आता प्रश्न बँक Q21 नुसार अचूक कालक्रमानुसार संपूर्ण पुट-अवे जीवन चक्र लावून तुमचे कार्यकौशल्य सिद्ध करा!"
+  },
+  {
+    "id": "s03_sc06_prompt",
+    "filename": "s03_sc06_prompt.mp3",
+    "stage": 3,
+    "sceneIndex": 6,
+    "sceneId": "c1_s3_sc06_putaway_sequence",
+    "type": "prompt",
+    "script": "SOP कलम 4.1 आणि प्रश्न बँक Q21 द्वारे अनिवार्य केलेल्या अचूक कार्यक्रमानुसार 5 पुट-अवे पायऱ्या लावा."
+  },
+  {
+    "id": "s03_sc06_correct",
+    "filename": "s03_sc06_correct.mp3",
+    "stage": 3,
+    "sceneIndex": 6,
+    "sceneId": "c1_s3_sc06_putaway_sequence",
+    "type": "correct",
+    "script": "उत्कृष्ट अचूकता! तुम्ही अधिकृत क्रम यशस्वीरित्या पूर्ण केला आहे: (1) GRN लेबल चिटकवणे, (2) HU लेबल स्कॅन करणे, (3) पॅलेट जागेवर नेणे, (4) लोकेशन QR कोड स्कॅन करणे, (5) टास्क बंद होतो आणि SAP स्टॉक अपडेट होतो! स्टेज 3 आता 100% पूर्ण झाले आहे!"
+  },
+  {
+    "id": "s03_sc06_wrong",
+    "filename": "s03_sc06_wrong.mp3",
+    "stage": 3,
+    "sceneIndex": 6,
+    "sceneId": "c1_s3_sc06_putaway_sequence",
+    "type": "wrong",
+    "script": "चुकीचा क्रम! SOP कलम 4.1 लक्षात ठेवा: आधी GRN लेबल चिटकवले पाहिजे, नंतर टास्क सुरू करण्यासाठी HU स्कॅन करणे, बिनकडे नेणे, रॅक QR स्कॅन करणे आणि शेवटी सिस्टम टास्क बंद होणे!"
+  },
+  {
+    "id": "s04_sc01_intro",
+    "filename": "s04_sc01_intro.mp3",
+    "stage": 4,
+    "sceneIndex": 1,
+    "sceneId": "c1_s4_sc01_mhe_auth",
+    "type": "intro",
+    "script": "स्टेज 4: विशेष बॅटरी सेल पुट-अवेमध्ये आपले स्वागत आहे! डॉक 01 वर उच्च-मूल्याचे लिथियम-आयन बॅटरी सेल क्रेट्स आले आहेत. हे संवेदनशील सेल्स एथर 450X ला उर्जा देतात आणि चुकीच्या पद्धतीने हाताळल्यास धोकादायक असतात. डॉकची जागा मोकळी करण्यासाठी एक सामान्य वेअरहाऊस हेल्पर मॅन्युअल पॅलेट ट्रकने पॅलेट हलवण्याचा प्रयत्न करतो. त्याने पुढे जावे का?"
+  },
+  {
+    "id": "s04_sc01_prompt",
+    "filename": "s04_sc01_prompt.mp3",
+    "stage": 4,
+    "sceneIndex": 1,
+    "sceneId": "c1_s4_sc01_mhe_auth",
+    "type": "prompt",
+    "script": "एक सामान्य वेअरहाऊस हेल्पर डॉकची जागा मोकळी करण्यासाठी मॅन्युअल हँड पॅलेट ट्रक (HPT) चा वापर करून अनलोड केलेले लिथियम-आयन बॅटरी सेल पॅलेट हलवण्याचा प्रयत्न करतो. या हालचालीस परवानगी द्यावी की थांबवावी?"
+  },
+  {
+    "id": "s04_sc01_correct",
+    "filename": "s04_sc01_correct.mp3",
+    "stage": 4,
+    "sceneIndex": 1,
+    "sceneId": "c1_s4_sc01_mhe_auth",
+    "type": "correct",
+    "script": "STOP अगदी बरोबर निर्णय! बॅटरी सेल पुट-अवे SOP (कलम 4.1): बॅटरी सेल्स केवळ प्रमाणित MHE ऑपरेटरद्वारेच नियुक्त इलेक्ट्रिक रीच-ट्रक किंवा पावर्ड पॅलेट ट्रकचा वापर करून हाताळले आणि हलवले पाहिजेत. अप्रमाणित हाताळणीमुळे थर्मल शॉक, मेकॅनिकल डॅमेज किंवा सेल पडण्याचा मोठा धोका असतो!"
+  },
+  {
+    "id": "s04_sc01_wrong",
+    "filename": "s04_sc01_wrong.mp3",
+    "stage": 4,
+    "sceneIndex": 1,
+    "sceneId": "c1_s4_sc01_mhe_auth",
+    "type": "wrong",
+    "script": "गंभीर सुरक्षा उल्लंघन! SOP कलम 4.1 नुसार, सामान्य वेअरहाऊस मदतनीसांना लिथियम-आयन सेल शिपमेंट हलवण्यास सक्त मनाई आहे. नाजूक बॅटरी सेल्सच्या चुकीच्या हाताळणीमुळे अंतर्गत शॉर्ट सर्किट, आगीचा धोका आणि वॉरंटी रद्द होऊ शकते."
+  },
+  {
+    "id": "s04_sc02_intro",
+    "filename": "s04_sc02_intro.mp3",
+    "stage": 4,
+    "sceneIndex": 2,
+    "sceneId": "c1_s4_sc02_cleanroom_params",
+    "type": "intro",
+    "script": "प्रमाणित MHE ऑपरेटरने एअरलाँकद्वारे लिथियम-आयन सेल पॅलेट सीलबंद बॅटरी स्टँडर्ड रूममध्ये नेले आहे. पॅलेट सेल वॉल्टमध्ये ठेवण्यापूर्वी, पर्यावरणीय टेलिमेट्री मॉनिटर्स तपासले पाहिजेत. एथर SOP द्वारे अनिवार्य केलेल्या तापमान आणि सापेक्ष आर्द्रतेच्या अचूक मर्यादा कोणत्या आहेत?"
+  },
+  {
+    "id": "s04_sc02_prompt",
+    "filename": "s04_sc02_prompt.mp3",
+    "stage": 4,
+    "sceneIndex": 2,
+    "sceneId": "c1_s4_sc02_cleanroom_params",
+    "type": "prompt",
+    "script": "एथर AURIC SOP कलम 4.2 नुसार, बॅटरी सेल स्टँडर्ड रूमसाठी अनिवार्य पर्यावरणीय मर्यादा कोणत्या आहेत?"
+  },
+  {
+    "id": "s04_sc02_correct",
+    "filename": "s04_sc02_correct.mp3",
+    "stage": 4,
+    "sceneIndex": 2,
+    "sceneId": "c1_s4_sc02_cleanroom_params",
+    "type": "correct",
+    "script": "अचूक पर्यावरणीय कॅलिब्रेशन! SOP कलम 4.2: बॅटरी स्टँडर्ड रूममध्ये 24/7 20°C–25°C तापमान आणि 60%–65% सापेक्ष आर्द्रता (RH) राखली पाहिजे. हे थर्मल रनवे, इलेक्ट्रोलाइट क्रिस्टलायझेशन आणि कॅथोड/एनोड थरांमध्ये ओलावा शोषून घेण्यास प्रतिबंध करते!"
+  },
+  {
+    "id": "s04_sc02_wrong",
+    "filename": "s04_sc02_wrong.mp3",
+    "stage": 4,
+    "sceneIndex": 2,
+    "sceneId": "c1_s4_sc02_cleanroom_params",
+    "type": "wrong",
+    "script": "पर्यावरणीय नियमांचे उल्लंघन! SOP कलम 4.2 नुसार, 25°C पेक्षा जास्त तापमान सेलचे नुकसान वेगाने करते, तर 60% पेक्षा कमी किंवा 65% पेक्षा जास्त आर्द्रता संवेदनशील बॅटरी टर्मिनल्सभोवती घनीभवन आणि स्टॅटिक डिस्चार्जचा धोका निर्माण करते."
+  },
+  {
+    "id": "s04_sc03_intro",
+    "filename": "s04_sc03_intro.mp3",
+    "stage": 4,
+    "sceneIndex": 3,
+    "sceneId": "c1_s4_sc03_sla_countdown",
+    "type": "intro",
+    "script": "वेअरहाऊसच्या घड्याळाकडे बारकाईने लक्ष द्या! लिथियम-आयन बॅटरी सेलचे पॅलेट्स खुल्या रिसीव्हिंग डॉकवर पडून राहू शकत नाहीत. अनियंत्रित तापमान आणि आर्द्रतेमुळे पेशींचे रासायनिक नुकसान वेगाने होते. एथर SOP कलम 4.3 नुसार, संपूर्ण बॅटरी सेल पुट-अवे पूर्ण करण्यासाठी अनिवार्य कमाल SLA कालमर्यादा किती आहे?"
+  },
+  {
+    "id": "s04_sc03_prompt",
+    "filename": "s04_sc03_prompt.mp3",
+    "stage": 4,
+    "sceneIndex": 3,
+    "sceneId": "c1_s4_sc03_sla_countdown",
+    "type": "prompt",
+    "script": "एथर AURIC SOP कलम 4.3 नुसार, GRN स्टेजिंगमधून स्टँडर्ड रूममध्ये बॅटरी सेल पुट-अवे पूर्ण करण्यासाठी अनिवार्य कमाल SLA कालमर्यादा काय आहे?"
+  },
+  {
+    "id": "s04_sc03_correct",
+    "filename": "s04_sc03_correct.mp3",
+    "stage": 4,
+    "sceneIndex": 3,
+    "sceneId": "c1_s4_sc03_sla_countdown",
+    "type": "correct",
+    "script": "SLA नियमांचे अचूक पालन! SOP कलम 4.3: GRN स्टेजिंगमधून बॅटरी स्टँडर्ड रूममध्ये पुट-अवे करण्यासाठी 2 तासांची कडक SLA मुदत आहे. यामुळे थर्मल ताण किंवा ओलावा सेलच्या आयुष्यावर परिणाम करण्यापूर्वी संवेदनशील सेल्स 20°C–25°C च्या नियंत्रित रूममध्ये सुरक्षित होतात!"
+  },
+  {
+    "id": "s04_sc03_wrong",
+    "filename": "s04_sc03_wrong.mp3",
+    "stage": 4,
+    "sceneIndex": 3,
+    "sceneId": "c1_s4_sc03_sla_countdown",
+    "type": "wrong",
+    "script": "SLA उल्लंघन धोका! SOP कलम 4.3 नुसार, बॅटरी सेल्स 2 तासांपेक्षा जास्त वेळ खुल्या डॉकवर ठेवणे एथर गुणवत्ता नियमांचे उल्लंघन आहे. डॉकवरील उष्णता आणि आर्द्रतेमुळे सेल्सचे डिस्चार्ज वाढते आणि आगीचा धोका उद्भवतो. SLA मुदत काटेकोरपणे 2 तास आहे!"
+  },
+  {
+    "id": "s04_sc04_intro",
+    "filename": "s04_sc04_intro.mp3",
+    "stage": 4,
+    "sceneIndex": 4,
+    "sceneId": "c1_s4_sc04_environmental_breach",
+    "type": "intro",
+    "script": "अलार्म वाजला! तुम्ही सेल वॉल्ट पुट-अवे पूर्ण करण्याची तयारी करत असताना, वॉल टेलिमेट्री फ्लॅश होऊ लागली: सापेक्ष आर्द्रता 75.2% पर्यंत वाढली आहे आणि तापमान 27.4°C वर पोहोचले आहे. बॅटरी इलेक्ट्रोड्ससाठी जास्त ओलावा अतिशय धोकादायक आहे! एथर SOP कलम 5.2 नुसार तुमची तातडीची अनिवार्य कृती काय आहे?"
+  },
+  {
+    "id": "s04_sc04_prompt",
+    "filename": "s04_sc04_prompt.mp3",
+    "stage": 4,
+    "sceneIndex": 4,
+    "sceneId": "c1_s4_sc04_environmental_breach",
+    "type": "prompt",
+    "script": "स्टँडर्ड रूममध्ये लिथियम-आयन सेल्स नेताना, वॉल टेलिमेट्री एम्बर अलर्ट दर्शवते: सापेक्ष आर्द्रता 75% (मर्यादा: 60%–65%) पर्यंत वाढली आहे. तुमची अनिवार्य SOP कृती काय आहे?"
+  },
+  {
+    "id": "s04_sc04_correct",
+    "filename": "s04_sc04_correct.mp3",
+    "stage": 4,
+    "sceneIndex": 4,
+    "sceneId": "c1_s4_sc04_environmental_breach",
+    "type": "correct",
+    "script": "उत्कृष्ट संकट नियंत्रण! SOP कलम 5.2: पर्यावरणीय मर्यादांचे उल्लंघन झाल्यास, तुम्ही त्वरित पॅलेट हालचाल थांबवली पाहिजे, चेंबर सुरक्षित ठेवण्यासाठी एअरलॉक दरवाजे बंद केले पाहिजेत आणि पुट-अवे झोन लीडर व HVAC मेंटेनन्स टीमला कळवले पाहिजे. संवेदनशील पेशी कधीही मर्यादाबाहेरील वॉल्टमध्ये ठेवू नका!"
+  },
+  {
+    "id": "s04_sc04_wrong",
+    "filename": "s04_sc04_wrong.mp3",
+    "stage": 4,
+    "sceneIndex": 4,
+    "sceneId": "c1_s4_sc04_environmental_breach",
+    "type": "wrong",
+    "script": "धोकादायक संदूषण धोका! सक्रिय पर्यावरणीय उल्लंघन कधीही दुर्लक्षित करू नका किंवा आर्द्रता अलार्म बायपास करण्याचा प्रयत्न करू नका. 75% RH मुळे लिथियम-आयन टर्मिनल्सवर ओलावा साचतो, ज्यामुळे अंतर्गत शॉर्ट सर्किट आणि आगीचा धोका उद्भवतो. ताबडतोब थांबवा, वेगळे करा आणि कळवा!"
+  },
+  {
+    "id": "s04_sc05_intro",
+    "filename": "s04_sc05_intro.mp3",
+    "stage": 4,
+    "sceneIndex": 5,
+    "sceneId": "c1_s4_sc05_pallet_stacking_integrity",
+    "type": "intro",
+    "script": "अंतिम टप्पा 4 बॅटरी सेल आव्हान! बॅटरी स्टँडर्ड रूममध्ये जागा कमी आहे. एका ऑपरेटरला पॅलेटवर आधीच ठेवलेले दोन लिथियम-आयन सेल क्रेट्स दिसतात आणि तो बॉक्सच्या कोपऱ्यावरील लाल ShockWatch इंडिकेटरकडे दुर्लक्ष करून त्यावर तिसरा क्रेट (3-हाय स्टॅकिंग) ठेवण्याचा प्रयत्न करतो. यास परवानगी द्यावी की ताबडतोब थांबवावे?"
+  },
+  {
+    "id": "s04_sc05_prompt",
+    "filename": "s04_sc05_prompt.mp3",
+    "stage": 4,
+    "sceneIndex": 5,
+    "sceneId": "c1_s4_sc05_pallet_stacking_integrity",
+    "type": "prompt",
+    "script": "कार्टनवर लाल ShockWatch इंडिकेटर ट्रिगर झालेला असतानाही एक ऑपरेटर स्टोरेज पॅलेटवर बॅटरी सेल क्रेट्स 3-थरांमध्ये ठेवण्याचा प्रयत्न करतो. परवानगी द्यावी की थांबवावी?"
+  },
+  {
+    "id": "s04_sc05_correct",
+    "filename": "s04_sc05_correct.mp3",
+    "stage": 4,
+    "sceneIndex": 5,
+    "sceneId": "c1_s4_sc05_pallet_stacking_integrity",
+    "type": "correct",
+    "script": "STOP पूर्णपणे अनिवार्य आहे! SOP कलम 4.4: खालच्या पेशी दबणे आणि अंतर्गत नुकसान रोखण्यासाठी लिथियम-आयन बॅटरी सेल क्रेट्सची कमाल स्टॅकिंग मर्यादा काटेकोरपणे 2 क्रेट्स आहे. याव्यतिरिक्त, लाल ShockWatch किंवा टिल्ट इंडिकेटर दिसल्यास त्वरित क्वारंटाइन आणि क्वालिटी इंजिनिअरिंग तपासणी अनिवार्य आहे. मॉड्यूल 4 आता 100% पूर्ण झाले आहे!"
+  },
+  {
+    "id": "s04_sc05_wrong",
+    "filename": "s04_sc05_wrong.mp3",
+    "stage": 4,
+    "sceneIndex": 5,
+    "sceneId": "c1_s4_sc05_pallet_stacking_integrity",
+    "type": "wrong",
+    "script": "गंभीर सुरक्षा धोका! 3 क्रेट्स एकावर एक ठेवल्यास नाजूक सेल्स दबले जातात, ज्यामुळे इलेक्ट्रोलाइट गळती आणि अंतर्गत शॉर्ट-सर्किटमुळे आग लागण्याचा धोका असतो. लाल शॉक इंडिकेटर दर्शवतो की वाहतुकीदरम्यान मोठा धक्का बसला आहे, त्यामुळे ते सक्रिय असेंब्ली स्टॉकमध्ये जाऊ शकत नाही!"
+  },
+  {
+    "id": "s05_sc01_intro",
+    "filename": "s05_sc01_intro.mp3",
+    "stage": 5,
+    "sceneIndex": 1,
+    "sceneId": "c1_s5_sc01_facility_bypass",
+    "type": "intro",
+    "script": "स्टेज 5: धोकादायक रसायने आणि थिनर पुट-अवेमध्ये आपले स्वागत आहे! ज्वलनशील थिनर, पेंट्स आणि घातक सॉल्व्हेंट्सचे ड्रम्स घेऊन आलेला सप्लायर ट्रक AURIC मेन गेटवर पोहोचतो. ड्रायव्हर विचारतो की त्यांनी इतर सामान्य गाड्यांप्रमाणे इनबाउंड डॉक 01 (मुख्य असेंब्ली इमारत) वर अनलोड करावे का? एथर SOP कलम 4.1 नुसार, रासायनिक आणि थिनर शिपमेंट कोठे पाठवले पाहिजे?"
+  },
+  {
+    "id": "s05_sc01_prompt",
+    "filename": "s05_sc01_prompt.mp3",
+    "stage": 5,
+    "sceneIndex": 1,
+    "sceneId": "c1_s5_sc01_facility_bypass",
+    "type": "prompt",
+    "script": "एक डिलिव्हरी ट्रक ज्वलनशील थिनर आणि औद्योगिक पेंट्सचे ड्रम्स घेऊन येतो. ड्रायव्हर व्हेईकल बॉडी पॅनल्सजवळ डॉक 01 वर अनलोड करण्याची विचारणा करतो. एथर SOP कलम 4.1 नुसार या वाहनाला कुठे जाण्याचे निर्देश आहेत?"
+  },
+  {
+    "id": "s05_sc01_correct",
+    "filename": "s05_sc01_correct.mp3",
+    "stage": 5,
+    "sceneIndex": 1,
+    "sceneId": "c1_s5_sc01_facility_bypass",
+    "type": "correct",
+    "script": "उत्कृष्ट सुविधा बायपास रूटिंग! SOP कलम 4.1: धोकादायक रसायने, थिनर आणि पेंट्स स्वतंत्र, नियुक्त इमारतींमध्ये साठवले जातात. गेट पासवर विशिष्ट वेगळी इमारत नमूद केलेली असते. ट्रक्सने मुख्य असेंब्ली प्लांट पूर्णपणे बायपास करून थेट फ्लेमप्रूफ आणि स्पिल बर्म्स असलेल्या स्वतंत्र रासायनिक स्टोअर अ‍ॅनेक्सवर डॉक केले पाहिजे!"
+  },
+  {
+    "id": "s05_sc01_wrong",
+    "filename": "s05_sc01_wrong.mp3",
+    "stage": 5,
+    "sceneIndex": 1,
+    "sceneId": "c1_s5_sc01_facility_bypass",
+    "type": "wrong",
+    "script": "गंभीर औद्योगिक आगीचा धोका! SOP कलम 4.1 नुसार, घातक सॉल्व्हेंट्स, ज्वलनशील पेंट्स आणि थिनरने कधीही मुख्य उत्पादन प्लांट किंवा सामान्य डॉक 01 मध्ये प्रवेश करू नये. हाय-व्होल्टेज असेंब्ली लाईन्सजवळ रासायनिक वाष्प किंवा गळतीमुळे भीषण स्फोटाचा धोका उद्भवू शकतो!"
+  },
+  {
+    "id": "s05_sc02_intro",
+    "filename": "s05_sc02_intro.mp3",
+    "stage": 5,
+    "sceneIndex": 2,
+    "sceneId": "c1_s5_sc02_ppe_spill_berm",
+    "type": "intro",
+    "script": "केमिकल अ‍ॅनेक्स C-04 वर, ट्रक डॉक झाला आहे आणि ऑपरेटर औद्योगिक थिनरचे 200-लिटर स्टील ड्रम्स उतरवण्यास सुरुवात करतो. अनलोडिंग सेटअपचे काळजीपूर्वक निरीक्षण करा. एथर SOP कलम 4.2 नुसार, कोणता मोठा सुरक्षिततेचा धोका आमच्या अनिवार्य रासायनिक हाताळणी नियमांचे उल्लंघन करतो?"
+  },
+  {
+    "id": "s05_sc02_prompt",
+    "filename": "s05_sc02_prompt.mp3",
+    "stage": 5,
+    "sceneIndex": 2,
+    "sceneId": "c1_s5_sc02_ppe_spill_berm",
+    "type": "prompt",
+    "script": "सुरक्षिततेचे उल्लंघन ओळखा: एक ऑपरेटर केमिकल अ‍ॅनेक्स C-04 वर 200L ज्वलनशील थिनर ड्रम्स उतरवत आहे. कोणती परिस्थिती एथर सुरक्षा नियमांचे उल्लंघन करते?"
+  },
+  {
+    "id": "s05_sc02_correct",
+    "filename": "s05_sc02_correct.mp3",
+    "stage": 5,
+    "sceneIndex": 2,
+    "sceneId": "c1_s5_sc02_ppe_spill_berm",
+    "type": "correct",
+    "script": "धोका अचूक ओळखला! SOP कलम 4.2: ज्वलनशील रसायने कधीही दुय्यम स्पिल ट्रे / बंडशिवाय उघड्या सिमेंटच्या जमिनीवर ठेवू नयेत, आणि स्टील ड्रम्स हाताळण्यापूर्वी त्यांना अर्थिंग क्लॅम्प जोडणे अनिवार्य आहे. इलेक्ट्रोस्टॅटिक ठिणगीमुळे (ESD) थिनरच्या वाफेला भीषण आग लागू शकते आणि गळतीमुळे गंभीर प्रदूषण होते!"
+  },
+  {
+    "id": "s05_sc02_wrong",
+    "filename": "s05_sc02_wrong.mp3",
+    "stage": 5,
+    "sceneIndex": 2,
+    "sceneId": "c1_s5_sc02_ppe_spill_berm",
+    "type": "wrong",
+    "script": "मोठा सुरक्षिततेचा धोका दुर्लक्षित झाला! अर्थिंग क्लॅम्पशिवाय आणि स्पिल पॅलेटशिवाय ज्वलनशील थिनरचे ड्रम थेट जमिनीवर ठेवणे अत्यंत घातक आहे. एका लहान इलेक्ट्रोस्टॅटिक ठिणगीमुळे संपूर्ण केमिकल गोदामात आग लागू शकते!"
+  },
+  {
+    "id": "s05_sc03_intro",
+    "filename": "s05_sc03_intro.mp3",
+    "stage": 5,
+    "sceneIndex": 3,
+    "sceneId": "c1_s5_sc03_segregation_sla",
+    "type": "intro",
+    "script": "केमिकल अ‍ॅनेक्स C-04 च्या आत, 4 वेगवेगळ्या धोकादायक ड्रम्सचे स्टोरेज करायचे आहे. रासायनिक सुरक्षा नियमांनुसार विसंगत वर्गांची रसायने एकाच कंटेनमेंट बे मध्ये ठेवण्यास सक्त मनाई आहे: ज्वलनशील सॉल्व्हेंट्स आणि ऑक्सिडायझर्स एकत्र आल्यास भीषण स्फोट होऊ शकतो! तसेच, एथर SOP कलम 4.3 नुसार सर्व रसायने 2 तासांच्या कडक SLA मुदतीत सुरक्षित रॅकवर ठेवली पाहिजेत. मुदत संपण्यापूर्वी प्रत्येक ड्रम योग्य बे मध्ये वर्गीकृत करा!"
+  },
+  {
+    "id": "s05_sc03_prompt",
+    "filename": "s05_sc03_prompt.mp3",
+    "stage": 5,
+    "sceneIndex": 3,
+    "sceneId": "c1_s5_sc03_segregation_sla",
+    "type": "prompt",
+    "script": "एथर SOP कलम 4.3 आणि 2-तासांच्या SLA मर्यादेनुसार इनवर्ड रसायने त्यांच्या नियुक्त स्टोरेज बे मध्ये वेगळी करा."
+  },
+  {
+    "id": "s05_sc03_correct",
+    "filename": "s05_sc03_correct.mp3",
+    "stage": 5,
+    "sceneIndex": 3,
+    "sceneId": "c1_s5_sc03_segregation_sla",
+    "type": "correct",
+    "script": "केमिकल मॅट्रिक्स नियमांचे अचूक पालन! SOP कलम 4.3: क्लास 3 ज्वलनशील (थिनर आणि पेंट्स), क्लास 5.1 ऑक्सिडायझर्स (पेरॉक्साइड्स) आणि क्लास 8 कॉरोसिव्ह (अ‍ॅसिड वॉश) पूर्णपणे स्वतंत्र बे मध्ये वेगळे केले आहेत, आणि सर्व पुट-अवे 2 तासांच्या अनिवार्य SLA मुदतीत पूर्ण झाले आहे!"
+  },
+  {
+    "id": "s05_sc03_wrong",
+    "filename": "s05_sc03_wrong.mp3",
+    "stage": 5,
+    "sceneIndex": 3,
+    "sceneId": "c1_s5_sc03_segregation_sla",
+    "type": "wrong",
+    "script": "धोकादायक विसंगत साठवणूक! ज्वलनशील सॉल्व्हेंट्सजवळ ऑक्सिडायझर्स ठेवल्यास रासायनिक प्रक्रियेमुळे प्रचंड उष्णता निर्माण होऊन स्फोट होऊ शकतो. विसंगत वर्ग नेहमी स्वतंत्र संपमध्ये वेगळे ठेवले पाहिजेत!"
+  },
+  {
+    "id": "s05_sc04_intro",
+    "filename": "s05_sc04_intro.mp3",
+    "stage": 5,
+    "sceneIndex": 4,
+    "sceneId": "c1_s5_sc04_deo_grn_posting",
+    "type": "intro",
+    "script": "केमिकल अ‍ॅनेक्स C-04 वर, पुट-अवे ऑपरेटरने औद्योगिक थिनरचे 20 ड्रम्स बे 1 मध्ये यशस्वीरित्या अनलोड, तपासणी आणि वर्गीकरण केले आहे. एथर SOP कलम 4.4 नुसार SAP मध्ये अधिकृत गुड्स रिसीट नोट (GRN) तयार करण्यासाठी आणि ERP सिस्टीममध्ये इन्व्हेंटरी स्टॉक पोस्ट करण्यासाठी कोण जबाबदार आहे?"
+  },
+  {
+    "id": "s05_sc04_prompt",
+    "filename": "s05_sc04_prompt.mp3",
+    "stage": 5,
+    "sceneIndex": 4,
+    "sceneId": "c1_s5_sc04_deo_grn_posting",
+    "type": "prompt",
+    "script": "अ‍ॅनेक्स C-04 वर केमिकल डिलिव्हरी ट्रक अनलोड करून प्रत्यक्ष तपासणी केल्यानंतर, SAP मध्ये गुड्स रिसीट नोट (GRN) तयार करण्यासाठी कोण जबाबदार आहे?"
+  },
+  {
+    "id": "s05_sc04_correct",
+    "filename": "s05_sc04_correct.mp3",
+    "stage": 5,
+    "sceneIndex": 4,
+    "sceneId": "c1_s5_sc04_deo_grn_posting",
+    "type": "correct",
+    "script": "अचूक जबाबदारी वाटप! SOP कलम 4.4 आणि प्रश्न बँक Q25: पुट-अवे ऑपरेटर प्रत्यक्ष अनलोडिंग आणि तपासणी करतो. तपासणी पूर्ण झाल्यावर, डेटा एन्ट्री ऑपरेटर (DEO) SAP मध्ये अधिकृत GRN तयार करतो, लेबल्स चिटकवतो आणि पुट-अवे पूर्ण झाल्यावर इन्व्हेंटरी पोस्ट करतो!"
+  },
+  {
+    "id": "s05_sc04_wrong",
+    "filename": "s05_sc04_wrong.mp3",
+    "stage": 5,
+    "sceneIndex": 4,
+    "sceneId": "c1_s5_sc04_deo_grn_posting",
+    "type": "wrong",
+    "script": "कामातील गैरसमज! पुट-अवे ऑपरेटर प्रत्यक्ष मालाची हालचाल, अर्थिंग आणि साठवणूक करतो, परंतु तो GRN बनवत नाही. अधिकृत GRN तयार करणे आणि SAP मध्ये स्टॉक पोस्ट करणे ही डेटा एन्ट्री ऑपरेटरची (DEO) जबाबदारी आहे."
+  },
+  {
+    "id": "s05_sc05_intro",
+    "filename": "s05_sc05_intro.mp3",
+    "stage": 5,
+    "sceneIndex": 5,
+    "sceneId": "c1_s5_sc05_static_bonding_clamp",
+    "type": "intro",
+    "script": "केमिकल अ‍ॅनेक्स C-04 वर तातडीचे सुरक्षा ऑडिट! औद्योगिक थिनरचा एक ड्रम स्पिल पॅलेटवर सुरक्षित ठेवला आहे. व्हिस्कोसिटी सॅम्पल तपासण्यासाठी ड्रमचे झाकण उघडण्यापूर्वी, ऑपरेटर कॉपर स्टॅटिक अर्थिंग क्लॅम्प प्लांटच्या अर्थिंग पट्टीला न जोडता स्टील पाना हाताळतो. ऑपरेटर म्हणतो, 'फक्त 10 सेकंदांची तपासणी आहे.' या कृतीस परवानगी द्यावी की ताबडतोब थांबवावे?"
+  },
+  {
+    "id": "s05_sc05_prompt",
+    "filename": "s05_sc05_prompt.mp3",
+    "stage": 5,
+    "sceneIndex": 5,
+    "sceneId": "c1_s5_sc05_static_bonding_clamp",
+    "type": "prompt",
+    "script": "एक कामगार स्टॅटिक बॉन्डिंग अर्थिंग क्लॅम्प न जोडता QC सॅम्पलिंगसाठी 200L सॉल्व्हेंट ड्रमचे झाकण उघडण्याची तयारी करतो. परवानगी द्यावी की थांबवावी?"
+  },
+  {
+    "id": "s05_sc05_correct",
+    "filename": "s05_sc05_correct.mp3",
+    "stage": 5,
+    "sceneIndex": 5,
+    "sceneId": "c1_s5_sc05_static_bonding_clamp",
+    "type": "correct",
+    "script": "HALT हाच एकमेव सुरक्षित निर्णय! SOP कलम 4.5: पाना फिरवताना होणाऱ्या घर्षणामुळे किंवा द्रवाच्या हालचालीमुळे निर्माण होणाऱ्या स्टॅटिक ठिणगीने 800°C पेक्षा जास्त तापमानाचा भीषण स्फोट होऊ शकतो! ज्वलनशील ड्रमचे झाकण उघडण्यापूर्वी अर्थिंग बॉन्डिंग क्लॅम्प धातूच्या पृष्ठभागावर जोडणे अनिवार्य आहे. मॉड्यूल 5 आता 100% पूर्ण झाले आहे!"
+  },
+  {
+    "id": "s05_sc05_wrong",
+    "filename": "s05_sc05_wrong.mp3",
+    "stage": 5,
+    "sceneIndex": 5,
+    "sceneId": "c1_s5_sc05_static_bonding_clamp",
+    "type": "wrong",
+    "script": "गंभीर आगीचे उल्लंघन! ड्रमच्या झाकणाभोवती अदृश्य ज्वलनशील वाष्प असते. अर्थिंगशिवाय धातूवर धातू आदळल्यास पडणाऱ्या ठिणगीमुळे क्षणार्धात आग लागून संपूर्ण फॅक्टरी रिकामी करावी लागू शकते! अर्थिंगशिवाय केमिकल ड्रम कधीही उघडू नका!"
+  },
+  {
+    "id": "s06_sc01_intro",
+    "filename": "s06_sc01_intro.mp3",
+    "stage": 6,
+    "sceneIndex": 1,
+    "sceneId": "c1_s6_sc01_qc_pass_seal",
+    "type": "intro",
+    "script": "स्टेज 6: सुपरमार्केट सी-क्लास पार्ट्स पुट-अवेमध्ये आपले स्वागत आहे! इनबाउंड रिसीव्हिंगमधून मटेरियल हँडलिंग 1 (MH1) स्टेजिंग डेस्कवर लहान फास्टनर्स आणि ग्रॉमेट्स आले आहेत. हा लॉट नॉन-DOL आहे, परंतु GRN स्टिकर बारकाईने पाहिल्यास हिरवा 'QC Pass' शिक्का पूर्णपणे गायब आहे! असेंब्ली लाईन या स्क्रूची वाट पाहत आहे. ऑपरेटरने हे सुपरमार्केट रॅकमध्ये ठेवण्यास पुढे जावे का?"
+  },
+  {
+    "id": "s06_sc01_prompt",
+    "filename": "s06_sc01_prompt.mp3",
+    "stage": 6,
+    "sceneIndex": 1,
+    "sceneId": "c1_s6_sc01_qc_pass_seal",
+    "type": "prompt",
+    "script": "लहान फास्टनर्सचा एक नॉन-DOL लॉट MH1 सुपरमार्केट डेस्कवर येतो. GRN स्टिकरवर कोणताही हिरवा 'QC Pass' शिक्का नाही. सुपरमार्केट रॅकमध्ये पुट-अवे करण्यास परवानगी द्यावी की थांबवावी?"
+  },
+  {
+    "id": "s06_sc01_correct",
+    "filename": "s06_sc01_correct.mp3",
+    "stage": 6,
+    "sceneIndex": 1,
+    "sceneId": "c1_s6_sc01_qc_pass_seal",
+    "type": "correct",
+    "script": "STOP अगदी योग्य निर्णय! सुपरमार्केट पुट-अवे SOP कलम 4.1 आणि प्रश्न बँक Q26: नॉन-DOL पार्ट्ससाठी, GRN लेबलवर 'QC Pass' चा हिरवा शिक्का किंवा स्टिकर असणे अनिवार्य आहे. या शिक्क्याशिवाय पार्ट्स क्वालिटी कंट्रोलकडून मंजूर झालेले नसतात आणि ते सदोष असू शकतात. अप्रमाणित पार्ट्स सुपरमार्केटमध्ये ठेवल्यास असेंब्ली लाईनवर मोठा बिघाड होऊ शकतो!"
+  },
+  {
+    "id": "s06_sc01_wrong",
+    "filename": "s06_sc01_wrong.mp3",
+    "stage": 6,
+    "sceneIndex": 1,
+    "sceneId": "c1_s6_sc01_qc_pass_seal",
+    "type": "wrong",
+    "script": "गंभीर गुणवत्ता उल्लंघन! SOP कलम 4.1 नुसार, कोणत्याही कर्मचाऱ्याने 'QC Pass' शिक्क्याशिवाय नॉन-DOL लॉट सुपरमार्केट बिन्समध्ये हलवू नये. अप्रमाणित पार्ट्स लाईनवर पाठवल्यास वाहनांमध्ये गंभीर दोष निर्माण होतात!"
+  },
+  {
+    "id": "s06_sc02_intro",
+    "filename": "s06_sc02_intro.mp3",
+    "stage": 6,
+    "sceneIndex": 2,
+    "sceneId": "c1_s6_sc02_count_discrepancy",
+    "type": "intro",
+    "script": "MH1 स्टेजिंग डेस्कवर, तुम्ही SAP इन्व्हेंटरी डंप (ट्रान्झॅक्शन LX02) प्रिंट करता, ज्यामध्ये 100 M6 हेक्स बोल्ट्स अपेक्षित स्टॉक दिसतो. तुम्ही डिजिटल वेईंग स्केलवर नमुना मोजणी करता तेव्हा फक्त 92 तुकडे आढळतात—8 तुकड्यांची तफावत! लाईन फिडर म्हणतो: 'लाईन थांबू नये म्हणून हे 92 बोल्ट्स रॅकमध्ये ठेवा, नंतर आकडेवारी जुळवू.' एथर कलम 4.2 नुसार अनिवार्य SOP कृती काय आहे?"
+  },
+  {
+    "id": "s06_sc02_prompt",
+    "filename": "s06_sc02_prompt.mp3",
+    "stage": 6,
+    "sceneIndex": 2,
+    "sceneId": "c1_s6_sc02_count_discrepancy",
+    "type": "prompt",
+    "script": "SAP LX02 डंप इनवर्ड सी-क्लास लॉटसाठी 100 तुकडे दर्शवतो, परंतु MH1 वर प्रत्यक्ष मोजणीत फक्त 92 तुकडे आढळतात. ऑपरेटरने काय केले पाहिजे?"
+  },
+  {
+    "id": "s06_sc02_correct",
+    "filename": "s06_sc02_correct.mp3",
+    "stage": 6,
+    "sceneIndex": 2,
+    "sceneId": "c1_s6_sc02_count_discrepancy",
+    "type": "correct",
+    "script": "मानक कार्यपद्धतीचे अचूक पालन! SOP कलम 4.2 आणि प्रश्न बँक Q27: प्रत्यक्ष मोजणी आणि SAP डंपमध्ये तफावत आढळल्यास, ऑपरेटरने ताबडतोब त्या साहित्याचे पुट-अवे थांबवले पाहिजे आणि सुपरमार्केट झोन लीडरला (ZL) कळवले पाहिजे. आकडेवारीत परस्पर बदल करू नका किंवा कमी माल रॅकमध्ये भरू नका, यामुळे सिस्टीममध्ये घोस्ट इन्व्हेंटरी निर्माण होते!"
+  },
+  {
+    "id": "s06_sc02_wrong",
+    "filename": "s06_sc02_wrong.mp3",
+    "stage": 6,
+    "sceneIndex": 2,
+    "sceneId": "c1_s6_sc02_count_discrepancy",
+    "type": "wrong",
+    "script": "इन्व्हेंटरी अचूकतेचा मोठा बिघाड! झोन लीडरला न कळवता परस्पर कागदपत्रात बदल करणे किंवा कमी माल रॅकमध्ये ठेवणे थेट ERP स्टॉक खराब करते. पुढच्या शिफ्टला 100 बोल्ट्स आहेत असे वाटेल, पण प्रत्यक्षात 92 असल्याने अचानक उत्पादन ठप्प होईल!"
+  },
+  {
+    "id": "s06_sc03_intro",
+    "filename": "s06_sc03_intro.mp3",
+    "stage": 6,
+    "sceneIndex": 3,
+    "sceneId": "c1_s6_sc03_gravity_flow_fifo",
+    "type": "intro",
+    "script": "मोजणी ऑडिट पूर्ण झाले आहे! आता आपण सुपरमार्केट Aisle SM-04 ग्रॅव्हिटी फ्लो रॅकवर जाऊया. हे 3.5 अंश झुकलेले रोलर ट्रॅक कडक FIFO नियमावर चालतात. तुम्ही नेहमी मागील (REAR) लोडिंग लेनमधूनच माल भरला पाहिजे जेणेकरून बॉक्सेस समोरील पिकिंग फेसवर पुढे सरकतील. पुढून भरल्यास जुना माल मागे अडकून खराब होतो. पुट-अवेचे 4 टप्पे अचूक SOP क्रमाने लावा!"
+  },
+  {
+    "id": "s06_sc03_prompt",
+    "filename": "s06_sc03_prompt.mp3",
+    "stage": 6,
+    "sceneIndex": 3,
+    "sceneId": "c1_s6_sc03_gravity_flow_fifo",
+    "type": "prompt",
+    "script": "FIFO स्टॉक रोटेशनची खात्री करण्यासाठी सुपरमार्केट ग्रॅव्हिटी फ्लो रॅक पुट-अवेच्या 4 टप्प्यांची अचूक SOP क्रमाने मांडणी करा."
+  },
+  {
+    "id": "s06_sc03_correct",
+    "filename": "s06_sc03_correct.mp3",
+    "stage": 6,
+    "sceneIndex": 3,
+    "sceneId": "c1_s6_sc03_gravity_flow_fifo",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP-PUTAWAY-SM कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s06_sc03_wrong",
+    "filename": "s06_sc03_wrong.mp3",
+    "stage": 6,
+    "sceneIndex": 3,
+    "sceneId": "c1_s6_sc03_gravity_flow_fifo",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s06_sc04_intro",
+    "filename": "s06_sc04_intro.mp3",
+    "stage": 6,
+    "sceneIndex": 4,
+    "sceneId": "c1_s6_sc04_bin_replenishment",
+    "type": "intro",
+    "script": "सुपरमार्केट बिन SM-04-B च्या समोरील बाजूकडे लक्ष द्या! लाईन किटर्सनी माल नेल्यानंतर प्रत्यक्ष साठा लाल रंगाच्या MIN मर्यादेवर (फक्त 2 बॉक्सेस शिल्लक) आला आहे. SOP कलम 4.4 व 4.5 नुसार लाईन बंद पडू नये म्हणून तुम्ही ताबडतोब कोणत्या दोन अनिवार्य गोष्टी केल्या पाहिजेत?"
+  },
+  {
+    "id": "s06_sc04_prompt",
+    "filename": "s06_sc04_prompt.mp3",
+    "stage": 6,
+    "sceneIndex": 4,
+    "sceneId": "c1_s6_sc04_bin_replenishment",
+    "type": "prompt",
+    "script": "फास्टनर बिन SM-04-B त्याच्या सुरक्षित MIN पातळीवर म्हणजेच 2 बॉक्सवर (200 नग) आला आहे. ऑपरेटरने ताबडतोब कोणती कृती केली पाहिजे?"
+  },
+  {
+    "id": "s06_sc04_correct",
+    "filename": "s06_sc04_correct.mp3",
+    "stage": 6,
+    "sceneIndex": 4,
+    "sceneId": "c1_s6_sc04_bin_replenishment",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP-PUTAWAY-SM कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s06_sc04_wrong",
+    "filename": "s06_sc04_wrong.mp3",
+    "stage": 6,
+    "sceneIndex": 4,
+    "sceneId": "c1_s6_sc04_bin_replenishment",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s06_sc05_intro",
+    "filename": "s06_sc05_intro.mp3",
+    "stage": 6,
+    "sceneIndex": 5,
+    "sceneId": "c1_s6_sc05_line_pressure_stop_go",
+    "type": "intro",
+    "script": "MH1 सुपरमार्केट डेस्कवर प्रचंड तणाव! तुम्ही वेईंग स्केलवर 100 ऐवजी 92 बोल्ट्स मोजले आहेत. एक लाईन फिडर धावत येतो आणि ओरडतो की मेन फ्रेम लाईन बंद पडायला फक्त 2 मिनिटे उरली आहेत! तो म्हणतो: 'आत्ताच्या आत्ता 100 ची पूर्ण सही करा, बिन माझ्या हवाली करा आणि उरलेले 8 तुकडे नंतर आठवडाभरात जुळवून घेऊ.' तुम्ही या डिस्पॅचला परवानगी द्याल की ताबडतोब थांबवाल?"
+  },
+  {
+    "id": "s06_sc05_prompt",
+    "filename": "s06_sc05_prompt.mp3",
+    "stage": 6,
+    "sceneIndex": 5,
+    "sceneId": "c1_s6_sc05_line_pressure_stop_go",
+    "type": "prompt",
+    "script": "MH1 मोजणी 92 नग आहे (SAP अपेक्षित: 100 नग). लाईन बंद पडण्याच्या दबावाखाली लाईन फिडर 100 नगांवर सही करण्याची मागणी करतो. परवानगी द्यावी की थांबवावी?"
+  },
+  {
+    "id": "s06_sc05_correct",
+    "filename": "s06_sc05_correct.mp3",
+    "stage": 6,
+    "sceneIndex": 5,
+    "sceneId": "c1_s6_sc05_line_pressure_stop_go",
+    "type": "correct",
+    "script": "STOP अत्यंत आवश्यक आहे! SOP कलम 4.2 आणि प्रश्न बँक Q27: लाईनच्या दबावाखाली कधीही खोट्या मोजणीवर स्वाक्षरी करू नका किंवा अप्रमाणित माल सोडू नका! तफावत आढळल्यास तात्काळ तो माल थांबवणे आणि झोन लीडरला (ZL) कळवणे बंधनकारक आहे. खोटी नोंद केल्यास घोस्ट इन्व्हेंटरी तयार होते आणि कंपनीचे मोठे आर्थिक नुकसान होते!"
+  },
+  {
+    "id": "s06_sc05_wrong",
+    "filename": "s06_sc05_wrong.mp3",
+    "stage": 6,
+    "sceneIndex": 5,
+    "sceneId": "c1_s6_sc05_line_pressure_stop_go",
+    "type": "wrong",
+    "script": "अक्षम्य इन्व्हेंटरी उल्लंघन! लाईनच्या दबावाखाली येऊन 92 ऐवजी 100 ची खोटी नोंद केल्यास ERP ऑडिट ट्रेल नष्ट होतो. पुढच्या शिफ्टला अचानक माल संपल्याने लाईन अचानक बंद पडेल!"
+  },
+  {
+    "id": "s06_sc06_intro",
+    "filename": "s06_sc06_intro.mp3",
+    "stage": 6,
+    "sceneIndex": 6,
+    "sceneId": "c1_s6_sc06_supermarket_classification",
+    "type": "intro",
+    "script": "अंतिम सुपरमार्केट प्रमाणपत्र प्रश्न! प्रश्न बँक Q28 नुसार, एथर AURIC प्लांटमध्ये सुपरमार्केट फ्लो रॅकमध्ये कोणते सुटे भाग साठवण्यासाठी अधिकृत आहेत?"
+  },
+  {
+    "id": "s06_sc06_prompt",
+    "filename": "s06_sc06_prompt.mp3",
+    "stage": 6,
+    "sceneIndex": 6,
+    "sceneId": "c1_s6_sc06_supermarket_classification",
+    "type": "prompt",
+    "script": "एथर AURIC प्लांटमध्ये सुपरमार्केट रॅकमध्ये कोणत्या श्रेणीतील सुटे भाग साठवले जातात?"
+  },
+  {
+    "id": "s06_sc06_correct",
+    "filename": "s06_sc06_correct.mp3",
+    "stage": 6,
+    "sceneIndex": 6,
+    "sceneId": "c1_s6_sc06_supermarket_classification",
+    "type": "correct",
+    "script": "उत्कृष्ट वर्गीकरण प्रभुत्व! SOP कलम 1.1 आणि प्रश्न बँक Q28: सुपरमार्केट रॅक हे केवळ लहान C-क्लास आयटम्ससाठी (स्क्रू, बोल्ट्स, क्लिप्स, वॉशर्स, ओ-रिंग्स) राखीव आहेत जे आधी MH1 वर तपासले जातात. जड A-क्लास भाग हाय-राईज रॅक्स (HRR) आणि ट्रॉली स्टेजिंगमध्ये असतात! स्टेज 6 आता 100% पूर्ण झाले आहे!"
+  },
+  {
+    "id": "s06_sc06_wrong",
+    "filename": "s06_sc06_wrong.mp3",
+    "stage": 6,
+    "sceneIndex": 6,
+    "sceneId": "c1_s6_sc06_supermarket_classification",
+    "type": "wrong",
+    "script": "चुकीचे वर्गीकरण! सुपरमार्केट ग्रॅव्हिटी रॅक जड A-क्लास फ्रेम्स किंवा ज्वलनशील रसायने साठवू शकत नाहीत. सुपरमार्केट रॅक केवळ MH1 वर तपासलेल्या लहान C-क्लास भागांसाठीच राखीव आहेत!"
+  },
+  {
+    "id": "s07_sc01_intro",
+    "filename": "s07_sc01_intro.mp3",
+    "stage": 7,
+    "sceneIndex": 1,
+    "sceneId": "c1_s7_sc01_entire_lot_quarantine",
+    "type": "intro",
+    "script": "IQC टेस्ट बेंच 02 वर गंभीर गुणवत्ता इशारा! 1,000 बॅटरी हार्नेस कनेक्टर्सच्या आलेल्या बॅचमधून 10 नगांच्या नमुन्याची तपासणी करताना, निरीक्षकाला 2 जळालेले व धोकादायक दोषपूर्ण टर्मिनल्स सापडतात. SOP 07_C1_S4 व IQC कलम 4.1 नुसार कोणते साहित्य तात्काळ NG क्वारंटाइन भागात पाठवले पाहिजे?"
+  },
+  {
+    "id": "s07_sc01_prompt",
+    "filename": "s07_sc01_prompt.mp3",
+    "stage": 7,
+    "sceneIndex": 1,
+    "sceneId": "c1_s7_sc01_entire_lot_quarantine",
+    "type": "prompt",
+    "script": "जेव्हा IQC ला 1,000 नगांच्या लॉटमधून घेतलेल्या 10 नमुन्यांमध्ये 2 जळालेले सदोष कनेक्टर्स सापडतात, तेव्हा कोणते साहित्य NG क्वारंटाइन विभागात हलवले पाहिजे?"
+  },
+  {
+    "id": "s07_sc01_correct",
+    "filename": "s07_sc01_correct.mp3",
+    "stage": 7,
+    "sceneIndex": 1,
+    "sceneId": "c1_s7_sc01_entire_lot_quarantine",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP-IQC-AURIC आणि SOP-NG-RTV कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s07_sc01_wrong",
+    "filename": "s07_sc01_wrong.mp3",
+    "stage": 7,
+    "sceneIndex": 1,
+    "sceneId": "c1_s7_sc01_entire_lot_quarantine",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s07_sc02_intro",
+    "filename": "s07_sc02_intro.mp3",
+    "stage": 7,
+    "sceneIndex": 2,
+    "sceneId": "c1_s7_sc02_jira_red_tag",
+    "type": "intro",
+    "script": "हाय-व्होल्टेज वायरिंग हार्नेसचा बाद झालेला पॅलेट गोळा करण्यासाठी NG लॉजिस्टिक्स टीम IQC डेस्कवर पोहोचते. तुम्ही पॅलेट तपासता: त्यावर लाल रंगाचा Red Tag लावलेला आहे, पण QC स्टिकर गायब आहे आणि JIRA तिकीटामध्ये Bug ID नसून कारण 'Unknown' दाखवत आहे. SOP NG-RTV कलम 4.2 व प्रश्न संच Q34/Q35 नुसार NG टीमने काय केले पाहिजे?"
+  },
+  {
+    "id": "s07_sc02_prompt",
+    "filename": "s07_sc02_prompt.mp3",
+    "stage": 7,
+    "sceneIndex": 2,
+    "sceneId": "c1_s7_sc02_jira_red_tag",
+    "type": "prompt",
+    "script": "नाकारलेल्या पॅलेटवर Red Tag आहे, पण QC स्टिकर गायब आहे आणि JIRA तिकीटात Bug ID नसून 'Unknown Cause' लिहिले आहे. NG टीम तो पॅलेट गोळा करू शकते का?"
+  },
+  {
+    "id": "s07_sc02_correct",
+    "filename": "s07_sc02_correct.mp3",
+    "stage": 7,
+    "sceneIndex": 2,
+    "sceneId": "c1_s7_sc02_jira_red_tag",
+    "type": "correct",
+    "script": "नक्कीच STOP! SOP NG-RTV कलम 4.2 नुसार, प्रत्येक नाकारलेल्या भागावर Red Tag आणि QC स्टिकर दोन्ही असणे आणि वैध Bug ID सह JIRA तिकीट असणे बंधनकारक आहे! असा माल उचलल्यास सिस्टममध्ये माल गहाळ होतो आणि सप्लायरवरील वॉरंटी क्लेम रद्द होतो!"
+  },
+  {
+    "id": "s07_sc02_wrong",
+    "filename": "s07_sc02_wrong.mp3",
+    "stage": 7,
+    "sceneIndex": 2,
+    "sceneId": "c1_s7_sc02_jira_red_tag",
+    "type": "wrong",
+    "script": "गंभीर चूक! दुहेरी भौतिक पडताळणी (Red Tag + QC स्टिकर) आणि सक्रिय JIRA Bug ID असल्याशिवाय नाकारलेला माल कधीही हलवू नका. अन्यथा क्वारंटाइन केजमध्ये हिशोब न लागणारा माल जमा होतो!"
+  },
+  {
+    "id": "s07_sc03_intro",
+    "filename": "s07_sc03_intro.mp3",
+    "stage": 7,
+    "sceneIndex": 3,
+    "sceneId": "c1_s7_sc03_quarantine_transfer",
+    "type": "intro",
+    "script": "आपण अति-सुरक्षित केज्ड क्वारंटाइन स्टोअरमध्ये (लोकेशन: SC01 BL) प्रवेश केला आहे! नाकारलेले साहित्य येथे ठेवताच SAP मधील स्टॉक Blocked Stock मध्ये जातो आणि JIRA तिकीट 'Quality Failed' स्टेटसमध्ये बदलते. SOP NG-RTV कलम 4.3 आणि प्रश्न संच Q36 व Q37 नुसार केजच्या आत साहित्याची वर्गवारी कशी केली पाहिजे?"
+  },
+  {
+    "id": "s07_sc03_prompt",
+    "filename": "s07_sc03_prompt.mp3",
+    "stage": 7,
+    "sceneIndex": 3,
+    "sceneId": "c1_s7_sc03_quarantine_transfer",
+    "type": "prompt",
+    "script": "दोष निर्मितीच्या कारणावर आधारित प्रत्येक नाकारलेला लॉट क्वारंटाइन केज SC01 BL मधील योग्य बे मध्ये ड्रॅग करा."
+  },
+  {
+    "id": "s07_sc03_correct",
+    "filename": "s07_sc03_correct.mp3",
+    "stage": 7,
+    "sceneIndex": 3,
+    "sceneId": "c1_s7_sc03_quarantine_transfer",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP for NG - RTV कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s07_sc03_wrong",
+    "filename": "s07_sc03_wrong.mp3",
+    "stage": 7,
+    "sceneIndex": 3,
+    "sceneId": "c1_s7_sc03_quarantine_transfer",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s07_sc04_intro",
+    "filename": "s07_sc04_intro.mp3",
+    "stage": 7,
+    "sceneIndex": 4,
+    "sceneId": "c1_s7_sc04_disposition_filter",
+    "type": "intro",
+    "script": "मटेरियल रिव्ह्यू बोर्ड (MRB) — ज्यामध्ये SQA, उत्पादन गुणवत्ता, प्रोडक्शन आणि वेअरहाऊस प्रमुख असतात — 4 क्वारंटाइन लॉट्सच्या विल्हेवाटीचा निर्णय घेण्यासाठी SC01 BL मध्ये एकत्र येतो. एथर औरिक प्लांट M002 मध्ये तोंडी संमतीला सक्त मनाई आहे! प्रत्येक केस स्टडीला तिच्या अधिकृत विल्हेवाट मार्गावर (Auto-RTV, Rework, Use As-Is Deviation, किंवा Scrap) पाठवा."
+  },
+  {
+    "id": "s07_sc04_prompt",
+    "filename": "s07_sc04_prompt.mp3",
+    "stage": 7,
+    "sceneIndex": 4,
+    "sceneId": "c1_s7_sc04_disposition_filter",
+    "type": "prompt",
+    "script": "एथर SOP 07_C1_S4 नुसार 4 क्वारंटाइन साहित्यांची त्यांच्या अधिकृत विल्हेवाट मार्गानुसार वर्गवारी करा."
+  },
+  {
+    "id": "s07_sc04_correct",
+    "filename": "s07_sc04_correct.mp3",
+    "stage": 7,
+    "sceneIndex": 4,
+    "sceneId": "c1_s7_sc04_disposition_filter",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP for NG - RTV कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s07_sc04_wrong",
+    "filename": "s07_sc04_wrong.mp3",
+    "stage": 7,
+    "sceneIndex": 4,
+    "sceneId": "c1_s7_sc04_disposition_filter",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s07_sc05_intro",
+    "filename": "s07_sc05_intro.mp3",
+    "stage": 7,
+    "sceneIndex": 5,
+    "sceneId": "c1_s7_sc05_scrap_weighbridge_exit",
+    "type": "intro",
+    "script": "कॅटेगरी 1 चा अंतिम टप्पा! आपण एथर स्क्रॅप यार्ड आणि आऊटबाउंड वेईब्रिजवर पोहोचलो आहोत. फायनान्स व प्रोडक्शनने स्क्रॅप मंजूर केलेल्या नाकारलेल्या साहित्याचे औद्योगिक श्रेडरमध्ये तुकडे केले पाहिजेत जेणेकरून ते पुन्हा बाजारात जाऊ नये, आणि त्यानंतर वेईब्रिजवर वजन करून ट्रक सोडला जातो. अधिकृत SOP नुसार स्क्रॅप विल्हेवाटीच्या 4 टप्प्यांचा अचूक क्रम लावा!"
+  },
+  {
+    "id": "s07_sc05_prompt",
+    "filename": "s07_sc05_prompt.mp3",
+    "stage": 7,
+    "sceneIndex": 5,
+    "sceneId": "c1_s7_sc05_scrap_weighbridge_exit",
+    "type": "prompt",
+    "script": "कडक SOP नियमांनुसार एथर स्क्रॅप आणि वेईब्रिज गेट एक्झिटच्या 4 टप्प्यांची अचूक क्रमाने मांडणी करा."
+  },
+  {
+    "id": "s07_sc05_correct",
+    "filename": "s07_sc05_correct.mp3",
+    "stage": 7,
+    "sceneIndex": 5,
+    "sceneId": "c1_s7_sc05_scrap_weighbridge_exit",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP for NG - Scrap स्क्रॅप मालमत्तेसाठी कडक नियमावली सांगते: (1) फायनान्स व प्रोडक्शन मंजुरी अनधिकृत स्क्रॅप रोखते; (2) यांत्रिक श्रेडिंगमुळे नाकारलेले चेसिस किंवा बॅटरीचे सुटे भाग पुन्हा बाजारात विकले जाण्याचा किंवा अपघात होण्याचा धोका संपतो; (3) JIRA वरील फोटो पुरावे अंतर्गत ऑडिटसाठी बंधनकारक आहेत; (4) वेईब्रिजवर रिकाम्या व भरलेल्या ट्रकचे अचूक वजन करून चोरी रोखली जाते आणि फायनान्सचे डिलिव्हरी चलन घेऊनच गेटमधून ट्रक बाहेर पडतो. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s07_sc05_wrong",
+    "filename": "s07_sc05_wrong.mp3",
+    "stage": 7,
+    "sceneIndex": 5,
+    "sceneId": "c1_s7_sc05_scrap_weighbridge_exit",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s07_sc06_intro",
+    "filename": "s07_sc06_intro.mp3",
+    "stage": 7,
+    "sceneIndex": 6,
+    "sceneId": "c1_s7_sc06_visual_cone_iqc_hold",
+    "type": "intro",
+    "script": "डॉक 02 वरील व्हिज्युअल फ्लोअर नियंत्रण! मोटर माउंट ब्रॅकेट्सचा इनवर्ड लॉट तपासणी स्टेशनवर थांबला आहे कारण CMM मोजणी उपकरणाचे सकाळचे कॅलिब्रेशन सुरू आहे. पॅलेटला स्टेजिंग भागात 3 तास थांबावे लागेल. एथर SOP आणि प्रश्न संच Q33 नुसार, या थांबलेल्या पॅलेटवर तुम्ही कोणता ओळख शंकू (कोन) ठेवला पाहिजे?"
+  },
+  {
+    "id": "s07_sc06_prompt",
+    "filename": "s07_sc06_prompt.mp3",
+    "stage": 7,
+    "sceneIndex": 6,
+    "sceneId": "c1_s7_sc06_visual_cone_iqc_hold",
+    "type": "prompt",
+    "script": "IQC तपासणीला उशीर होत असून इनवर्ड लॉट स्टेजिंगमध्ये थांबलेला आहे. तुम्ही पॅलेटवर कोणता शंकू (कोन) ठेवता?"
+  },
+  {
+    "id": "s07_sc06_correct",
+    "filename": "s07_sc06_correct.mp3",
+    "stage": 7,
+    "sceneIndex": 6,
+    "sceneId": "c1_s7_sc06_visual_cone_iqc_hold",
+    "type": "correct",
+    "script": "अचूक ओळख! SOP कलम 3.2 आणि प्रश्न बँक Q33: तपासणीत उशीर झाल्यास 'IQC Hold' शंकू (पिवळा) ठेवावा. 'Hold' म्हणजे निर्णयाची प्रतीक्षा — माल खराब असा त्याचा अर्थ होत नाही. लाल 'NG' शंकू केवळ प्रत्यक्ष दोष सिद्ध झालेल्या आणि नाकारलेल्या मालासाठीच राखीव आहे!"
+  },
+  {
+    "id": "s07_sc06_wrong",
+    "filename": "s07_sc06_wrong.mp3",
+    "stage": 7,
+    "sceneIndex": 6,
+    "sceneId": "c1_s7_sc06_visual_cone_iqc_hold",
+    "type": "wrong",
+    "script": "चुकीचा शंकू वापरला! केवळ तपासणीला उशीर झालेल्या मालावर 'NG' शंकू ठेवल्यास विनाकारण सप्लायरवर डेबिट नोट निघेल आणि गोंधळ उडेल. चाचणीच्या निकालाची वाट पाहत असताना 'IQC Hold' शंकूच वापरावा!"
+  },
+  {
+    "id": "s07_sc07_intro",
+    "filename": "s07_sc07_intro.mp3",
+    "stage": 7,
+    "sceneIndex": 7,
+    "sceneId": "c1_s7_sc07_jira_workflow_transitions",
+    "type": "intro",
+    "script": "कॅटेगरी 1 चा अंतिम टप्पा! तुम्ही नाकारलेला पॅलेट क्वारंटाइन केज्ड स्टोअर SC01 BL मध्ये सुरक्षित ठेवला आहे, Red Tags तपासले आहेत आणि कारणांनुसार योग्य बे मध्ये लावला आहे. SOP NG-RTV कलम 4.3 आणि प्रश्न बँक Q36 नुसार साहित्य NG भागात ठेवल्यावर JIRA मध्ये पुढील अनिवार्य डिजिटल स्टेटस काय बदलते?"
+  },
+  {
+    "id": "s07_sc07_prompt",
+    "filename": "s07_sc07_prompt.mp3",
+    "stage": 7,
+    "sceneIndex": 7,
+    "sceneId": "c1_s7_sc07_jira_workflow_transitions",
+    "type": "prompt",
+    "script": "NG साहित्य NG केज्ड स्टोरेज भागात (SC01 BL) ठेवल्यानंतर JIRA स्टेटस “QC Done: Fail” वरून कशात बदलते."
+  },
+  {
+    "id": "s07_sc07_correct",
+    "filename": "s07_sc07_correct.mp3",
+    "stage": 7,
+    "sceneIndex": 7,
+    "sceneId": "c1_s7_sc07_jira_workflow_transitions",
+    "type": "correct",
+    "script": "अतिशय उत्कृष्ट अचूकता! SOP कलम 4.3 आणि प्रश्न बँक Q36: नाकारलेले साहित्य NG भागात ठेवल्यानंतर JIRA स्टेटस 'QC Done: Fail' वरून 'Quality Failed' मध्ये बदलते. MRB निर्णय देईपर्यंत माल Blocked Stock मध्ये राहतो. अभिनंदन! कॅटेगरी 1 इनबाउंड आणि क्वारंटाइन फाउंडेशन (मॉड्यूल्स 1 ते 7, 47 सीन्स) आता 100% पूर्ण झाले आहे! तुमचे इनबाउंड आणि क्वारंटाइन विशेषज्ञ प्रमाणपत्र अनलॉक झाले आहे!"
+  },
+  {
+    "id": "s07_sc07_wrong",
+    "filename": "s07_sc07_wrong.mp3",
+    "stage": 7,
+    "sceneIndex": 7,
+    "sceneId": "c1_s7_sc07_jira_workflow_transitions",
+    "type": "wrong",
+    "script": "डिजिटल ऑडिट चूक! मटेरियल रिव्ह्यू बोर्डाच्या बैठकीपूर्वी आणि स्वाक्षरीपूर्वी परस्पर 'Scrapped' किंवा 'Returned to Vendor' स्टेटस करू नका! NG केजमध्ये माल ठेवताच तात्काळ बदलणारा स्टेटस काटेकोरपणे 'Quality Failed' असाच असतो!"
+  },
+  {
+    "id": "s08_sc01_intro",
+    "filename": "s08_sc01_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 1,
+    "sceneId": "c2_s8_sc01_mes_wh_task",
+    "type": "intro",
+    "script": "एथर औरिक प्लांट M002 मधील कॅटेगरी 2: लाईन इश्यूअन्स आणि ऑर्डर पिकिंगमध्ये आपले स्वागत आहे! वाहन असेंब्ली लाईनवर, रिअल-टाइम VIN वापरामुळे मॅन्युफॅक्चरिंग एक्झिक्युशन सिस्टीम (MES) द्वारे तुमच्या हॅन्डहेल्ड टर्मिनलवर (HHT) डिजिटल वेअरहाऊस पिकिंग टास्क आपोआप तयार होते. कोणतेही साहित्य उचलण्यापूर्वी, लाईन फीडरने HHT स्क्रीनवर कोणती महत्त्वाची माहिती तपासली पाहिजे?"
+  },
+  {
+    "id": "s08_sc01_prompt",
+    "filename": "s08_sc01_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 1,
+    "sceneId": "c2_s8_sc01_mes_wh_task",
+    "type": "prompt",
+    "script": "SOP कलम 4.1 नुसार, लाईन फीडरला पिकिंगच्या सूचना कशा मिळतात आणि पुढे जाण्यापूर्वी काय तपासणे बंधनकारक आहे?"
+  },
+  {
+    "id": "s08_sc01_correct",
+    "filename": "s08_sc01_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 1,
+    "sceneId": "c2_s8_sc01_mes_wh_task",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP फॉर लाईन इश्यूअन्स व्हेईकल प्लांट कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s08_sc01_wrong",
+    "filename": "s08_sc01_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 1,
+    "sceneId": "c2_s8_sc01_mes_wh_task",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s08_sc02_intro",
+    "filename": "s08_sc02_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 2,
+    "sceneId": "c2_s8_sc02_source_qr_scan",
+    "type": "intro",
+    "script": "तुम्ही हाय-राईज रॅक Aisle 3 जवळ पोहोचला आहात. शेजारील दोन बिन्समध्ये (HRR-A-03-07 व HRR-A-03-08) सारखेच वायरिंग हार्नेसचे क्रेट्स आहेत. HHT स्क्रीनवर HRR-A-03-08 लोकेशन दिसते, पण आवश्यक साहित्याची संख्या मात्र लॉक आहे! जोपर्यंत तुम्ही प्रत्यक्ष रॅक बीमवरील QR कोड स्कॅन करत नाही, तोपर्यंत एथर SOP कलम 4.1 नुसार आवश्यक संख्या गुप्त का ठेवली जाते?"
+  },
+  {
+    "id": "s08_sc02_prompt",
+    "filename": "s08_sc02_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 2,
+    "sceneId": "c2_s8_sc02_source_qr_scan",
+    "type": "prompt",
+    "script": "SOP कलम 4.1 नुसार, लाईन फीडरने पिकिंगचे काम करताना पाळावयाच्या अनिवार्य 4 पायऱ्या योग्य क्रमाने लावा."
+  },
+  {
+    "id": "s08_sc02_correct",
+    "filename": "s08_sc02_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 2,
+    "sceneId": "c2_s8_sc02_source_qr_scan",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP फॉर लाईन इश्यूअन्स व्हेईकल प्लांट कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s08_sc02_wrong",
+    "filename": "s08_sc02_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 2,
+    "sceneId": "c2_s8_sc02_source_qr_scan",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s08_sc03_intro",
+    "filename": "s08_sc03_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 3,
+    "sceneId": "c2_s8_sc03_trolley_marriage",
+    "type": "intro",
+    "script": "तुम्ही वर्कस्टेशन 08 साठी सुपरमार्केट लेन 04 मधून वायरिंग हार्नेस उचलत आहात. असेंब्ली लाईन वेगाने चालू असल्याने, तुम्ही घाईघाईने रिकामी ट्रॉली घेता, 4 क्रेट्स थेट लोड करता आणि ट्रॉलीचा QR किंवा लेनचा QR स्कॅन न करता ती लाईनवर नेण्यास तयार होता! SOP अपयश मोड 5.1 व 5.2 नुसार, ही ट्रॉली थेट असेंब्ली लाईनवर नेण्यास परवानगी आहे का?"
+  },
+  {
+    "id": "s08_sc03_prompt",
+    "filename": "s08_sc03_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 3,
+    "sceneId": "c2_s8_sc03_trolley_marriage",
+    "type": "prompt",
+    "script": "निर्णय गेट: लाईन फीडर स्कॅन न केलेले साहित्य थेट असेंब्ली लाईनवर घेऊन जाऊ शकतो का?"
+  },
+  {
+    "id": "s08_sc03_correct",
+    "filename": "s08_sc03_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 3,
+    "sceneId": "c2_s8_sc03_trolley_marriage",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP फॉर लाईन इश्यूअन्स व्हेईकल प्लांट फेल्युअर मोड 5. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s08_sc03_wrong",
+    "filename": "s08_sc03_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 3,
+    "sceneId": "c2_s8_sc03_trolley_marriage",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s08_sc04_intro",
+    "filename": "s08_sc04_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 4,
+    "sceneId": "c2_s8_sc04_workstation_delivery",
+    "type": "intro",
+    "script": "तुम्ही व्हेईकल असेंब्ली लाईनवरील वर्कस्टेशन 08 जवळ पोहोचला आहात आणि स्टेशन रॅकवर वायरिंग हार्नेसचे साहित्य व्यवस्थित ठेवले आहे. SOP कलम 4.2 आणि अपयश मोड 5.3 नुसार, डिलिव्हरी अधिकृतपणे पूर्ण होण्यासाठी आणि सुरक्षेसाठी वर्कस्टेशन सोडण्यापूर्वी तुम्ही कोणते दोन अनिवार्य नियम पाळले पाहिजेत?"
+  },
+  {
+    "id": "s08_sc04_prompt",
+    "filename": "s08_sc04_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 4,
+    "sceneId": "c2_s8_sc04_workstation_delivery",
+    "type": "prompt",
+    "script": "नियमभंग ओळखा: वर्कस्टेशन 08 ची पाहणी करा. कोणत्या दोन बाबी एथर लाईन-फीडिंग आणि सुरक्षा नियमांचे उल्लंघन करतात?"
+  },
+  {
+    "id": "s08_sc04_correct",
+    "filename": "s08_sc04_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 4,
+    "sceneId": "c2_s8_sc04_workstation_delivery",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP फॉर लाईन इश्यूअन्स व्हेईकल प्लांट कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s08_sc04_wrong",
+    "filename": "s08_sc04_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 4,
+    "sceneId": "c2_s8_sc04_workstation_delivery",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s08_sc05_intro",
+    "filename": "s08_sc05_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 5,
+    "sceneId": "c2_s8_sc05_overpicking_prohibition",
+    "type": "intro",
+    "script": "लक्ष द्या लाईन फीडर! तुमच्या हँडहेल्ड स्क्रीनवर वर्कस्टेशन 06 साठी 'Pick 12 Pieces' असा स्पष्ट मेसेज दिसत आहे. स्टोरेज बिनमध्ये पाहिल्यावर तुम्हाला बरोबर 15 पार्ट शिल्लक दिसतात. तुम्ही विचार करता: 'हे सर्व 15 पार्ट उचलून घेऊया, म्हणजे बिन रिकामे होईल आणि पुढच्या तासात पुन्हा फेरा मारावा लागणार नाही.' तुम्ही या जास्तीच्या माल उचलण्यास परवानगी द्याल की थांबवाल?"
+  },
+  {
+    "id": "s08_sc05_prompt",
+    "filename": "s08_sc05_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 5,
+    "sceneId": "c2_s8_sc05_overpicking_prohibition",
+    "type": "prompt",
+    "script": "HHT स्क्रीन सांगते '12 नग उचला'. रॅक बिनमध्ये 15 पार्ट आहेत. पुन्हा फेरा वाचवण्यासाठी 15 पार्ट उचलून घ्यावेत का?"
+  },
+  {
+    "id": "s08_sc05_correct",
+    "filename": "s08_sc05_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 5,
+    "sceneId": "c2_s8_sc05_overpicking_prohibition",
+    "type": "correct",
+    "script": "STOP करणे अत्यंत बंधनकारक आहे! SOP कलम 4.1 आणि प्रश्न बँक Q29: स्क्रीनवर जेवढी संख्या दाखवली आहे तेवढाच माल आणि त्याच ठिकाणाहून उचलावा! परस्पर 3 जास्तीचे तुकडे उचलल्यास दुसऱ्या ऑपरेटरच्या कामात तुटवडा निर्माण होतो आणि MES इन्व्हेंटरी बिघडते!"
+  },
+  {
+    "id": "s08_sc05_wrong",
+    "filename": "s08_sc05_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 5,
+    "sceneId": "c2_s8_sc05_overpicking_prohibition",
+    "type": "wrong",
+    "script": "इन्व्हेंटरी बिघाडाचा मोठा धोका! परस्पर जास्तीचे पार्ट उचलल्यास लाईन स्टॉक खराब होतो, पुढच्या शिफ्टला माल सापडत नाही आणि MES मधील अचूक हिशोब चुकतो!"
+  },
+  {
+    "id": "s08_sc06_intro",
+    "filename": "s08_sc06_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 6,
+    "sceneId": "c2_s8_sc06_feeder_part_ownership",
+    "type": "intro",
+    "script": "कारखान्यामध्ये दोन लाईन फीडर शेजारील पॅसेजमध्ये काम करत आहेत. फीडर A कडे वायरिंग हार्नेस आणि फीडर B कडे ब्रेक कॅलिपरचे काम आहे. दोन्ही फीडर एकाच वेळी एकाच पार्ट नंबरचा माल उचलून असेंब्ली लाईनवर नेऊ शकतात का?"
+  },
+  {
+    "id": "s08_sc06_prompt",
+    "filename": "s08_sc06_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 6,
+    "sceneId": "c2_s8_sc06_feeder_part_ownership",
+    "type": "prompt",
+    "script": "एथर प्लांट SOP कलम 4.1 आणि प्रश्न बँक Q22 नुसार, दोन लाईन फीडर एकाच पार्टचे साहित्य असेंब्ली लाईनवर नेऊ शकतात का?"
+  },
+  {
+    "id": "s08_sc06_correct",
+    "filename": "s08_sc06_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 6,
+    "sceneId": "c2_s8_sc06_feeder_part_ownership",
+    "type": "correct",
+    "script": "अचूक SOP नियम! SOP कलम 4.1 आणि प्रश्न बँक Q22: कोणतेही दोन फीडर एकाच पार्टची वाहतूक करू शकत नाहीत! प्रत्येक फीडरला त्याच्या असेंब्ली झोननुसार स्वतंत्र पार्ट वाटून दिलेले असतात. यामुळे लाईनवर एकाच साहित्याची दुहेरी गर्दी होत नाही आणि कामाची स्पष्ट जबाबदारी राहते!"
+  },
+  {
+    "id": "s08_sc06_wrong",
+    "filename": "s08_sc06_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 6,
+    "sceneId": "c2_s8_sc06_feeder_part_ownership",
+    "type": "wrong",
+    "script": "कार्यपद्धतीचे उल्लंघन! अनेक फीडरनी एकच माल आणल्यास लाईनवर साहित्याची अवाजवी गर्दी होते, रस्त्यामध्ये ट्रॉलियांची धडक होते आणि SAP मधील स्टॉक वाटप बिघडते!"
+  },
+  {
+    "id": "s08_sc07_intro",
+    "filename": "s08_sc07_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 7,
+    "sceneId": "c2_s8_sc07_handheld_troubleshooting",
+    "type": "intro",
+    "script": "एक नवीन प्रशिक्षणार्थी फीडर रॅक बिन HRR-C-02-05 समोर उभा आहे. तो हँडहेल्ड स्क्रीनकडे पाहून गोंधळून विचारतो: 'स्क्रीनवर पार्टचे नाव आणि जागा दिसतेय, पण किती नग उचलायचे ती संख्या रिकामी दिसतेय! माझे मशीन बिघडले आहे का?' प्रश्न संच Q21 नुसार, ऑपरेटरला संख्या का दिसत नाही?"
+  },
+  {
+    "id": "s08_sc07_prompt",
+    "filename": "s08_sc07_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 7,
+    "sceneId": "c2_s8_sc07_handheld_troubleshooting",
+    "type": "prompt",
+    "script": "तुम्हाला हँडहेल्ड टर्मिनल स्क्रीनवर उचलावयाची संख्या का दिसत नाही? (प्रश्न बँक Q21)"
+  },
+  {
+    "id": "s08_sc07_correct",
+    "filename": "s08_sc07_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 7,
+    "sceneId": "c2_s8_sc07_handheld_troubleshooting",
+    "type": "correct",
+    "script": "अचूक SOP पोका-योक नियम! SOP कलम 4.1 आणि प्रश्न बँक Q21: स्कॅन नाही, तर संख्या नाही! जोपर्यंत ऑपरेटर प्रत्यक्ष रॅक लोकेशनवरील QR कोड स्कॅन करत नाही, तोपर्यंत सिस्टीम आवश्यक संख्या दाखवत नाही. यामुळे ऑपरेटर योग्य ठिकाणी पोहोचल्याची खात्री होते!"
+  },
+  {
+    "id": "s08_sc07_wrong",
+    "filename": "s08_sc07_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 7,
+    "sceneId": "c2_s8_sc07_handheld_troubleshooting",
+    "type": "wrong",
+    "script": "गैरसमज! मशीन बिघडलेले नाही. एथर SAP EWM मध्ये ब्लाइंड क्वांटिटी नियम लागू आहे: रॅकवरील लोकेशन QR स्कॅन केल्यावरच उचलावयाची संख्या अनलॉक होते!"
+  },
+  {
+    "id": "s08_sc08_intro",
+    "filename": "s08_sc08_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 8,
+    "sceneId": "c2_s8_sc08_wrong_lane_violation",
+    "type": "intro",
+    "script": "तातडीचा गुणवत्ता इशारा! एका घाईत असलेल्या लाईन फीडरला सुपरमार्केट लेन 02 मधून ब्रेक लिव्हर्स हवे आहेत. रस्ता अरुंद असल्याने, तो लेनचा QR स्कॅन न करता शेजारच्या लेन 03 मधून 10 लिव्हरचे बॉक्सेस उचलून ट्रॉलीवर भरतो. SOP फेल्युअर मोड 5.2 आणि प्रश्न संच Q23 नुसार काय घडते?"
+  },
+  {
+    "id": "s08_sc08_prompt",
+    "filename": "s08_sc08_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 8,
+    "sceneId": "c2_s8_sc08_wrong_lane_violation",
+    "type": "prompt",
+    "script": "तुम्ही लेनचा QR कोड स्कॅन न करता चुकीच्या सुपरमार्केट लेनमधून माल उचलता. काय होते? (प्रश्न बँक Q23)"
+  },
+  {
+    "id": "s08_sc08_correct",
+    "filename": "s08_sc08_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 8,
+    "sceneId": "c2_s8_sc08_wrong_lane_violation",
+    "type": "correct",
+    "script": "अचूक सिस्टीम परिणाम! SOP फेल्युअर मोड 5.2 आणि प्रश्न बँक Q23: योग्य पार्टचा WH टास्क MES मध्ये उघडाच राहतो, आणि असेंब्ली लाईनवर चुकीचा माल आल्याचा अलर्ट वाजतो! झोन लीडरला हस्तक्षेप करून लाईन थांबवावी लागते, चुकीची ट्रॉली परत पाठवावी लागते आणि ऑपरेटरला पुन्हा प्रशिक्षण द्यावे लागते. माल उचलण्यापूर्वी नेहमी लेनचा QR स्कॅन करा!"
+  },
+  {
+    "id": "s08_sc08_wrong",
+    "filename": "s08_sc08_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 8,
+    "sceneId": "c2_s8_sc08_wrong_lane_violation",
+    "type": "wrong",
+    "script": "गंभीर गैरसमज! सिस्टीम आपोआप चूक सुधारत नाही. लेन QR स्कॅन न करता माल उचलल्याने लाईनवर चुकीचे पार्ट जाऊन वाहनांचे गंभीर नुकसान होऊ शकते!"
+  },
+  {
+    "id": "s08_sc09_intro",
+    "filename": "s08_sc09_intro.mp3",
+    "stage": 8,
+    "sceneIndex": 9,
+    "sceneId": "c2_s8_sc09_five_step_picking_lifecycle",
+    "type": "intro",
+    "script": "मॉड्यूल 8 चा अंतिम टप्पा! तुम्ही MES ट्रिगर्स, ब्लाइंड-क्वांटिटी, ट्रॉली मॅरेज, अतिरिक्त माल न उचलण्याचे नियम आणि वर्कस्टेशन डिलिव्हरीमध्ये प्रावीण्य मिळवले आहे. आता प्रश्न बँक Q20 नुसार संपूर्ण 5 पायऱ्यांचा अचूक क्रम लावून तुमचे कौशल्य सिद्ध करा!"
+  },
+  {
+    "id": "s08_sc09_prompt",
+    "filename": "s08_sc09_prompt.mp3",
+    "stage": 8,
+    "sceneIndex": 9,
+    "sceneId": "c2_s8_sc09_five_step_picking_lifecycle",
+    "type": "prompt",
+    "script": "SOP कलम 4.1 आणि प्रश्न बँक Q20 नुसार लाईन फीडरच्या 5 पायऱ्या योग्य क्रमाने लावा."
+  },
+  {
+    "id": "s08_sc09_correct",
+    "filename": "s08_sc09_correct.mp3",
+    "stage": 8,
+    "sceneIndex": 9,
+    "sceneId": "c2_s8_sc09_five_step_picking_lifecycle",
+    "type": "correct",
+    "script": "अतिशय उत्कृष्ट 5-पायऱ्यांचे प्रावीण्य! प्रश्न बँक Q20: (b) सोर्स लोकेशनचा QR स्कॅन करणे -> (c) दाखवलेली संख्या उचलणे -> (d) वर्कस्टेशनवर जाणे -> (a) डेस्टिनेशन QR स्कॅन करणे -> (e) पुढचा WH टास्क सुरू करणे! स्टेज 8 आता 100% पूर्ण झाले आहे!"
+  },
+  {
+    "id": "s08_sc09_wrong",
+    "filename": "s08_sc09_wrong.mp3",
+    "stage": 8,
+    "sceneIndex": 9,
+    "sceneId": "c2_s8_sc09_five_step_picking_lifecycle",
+    "type": "wrong",
+    "script": "चुकीचा क्रम! SOP कलम 4.1 लक्षात ठेवा: संख्या पाहण्यासाठी आधी सोर्स QR स्कॅन करा, माल उचला, स्टेशनवर जा, टास्क बंद करण्यासाठी डेस्टिनेशन QR स्कॅन करा आणि त्यानंतरच पुढचा टास्क सुरू करा!"
+  },
+  {
+    "id": "s09_sc01_intro",
+    "filename": "s09_sc01_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 1,
+    "sceneId": "c2_s9_sc01_aced_trolley_issuance",
+    "type": "intro",
+    "script": "स्टेज 9 मध्ये आपले स्वागत आहे! एथर औरिक प्लांट M002 मध्ये, पेंटिंगपूर्वी धातूच्या बॉडी पार्ट्सवर (उदा. मिड-फ्रेम, साइड ब्रॅकेट्स, स्विंगआर्म माउंट) अनोडीक कॅथोडीक इलेक्ट्रोडिपोझिशन (ACED) प्रक्रिया केली जाते. SOP 02_C2_S1 नुसार, पार्ट मिक्स-अप टाळण्यासाठी ACED चे पार्ट कसे साठवले जातात आणि लाईन फीडरमध्ये कसे वाटले जातात?"
+  },
+  {
+    "id": "s09_sc01_prompt",
+    "filename": "s09_sc01_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 1,
+    "sceneId": "c2_s9_sc01_aced_trolley_issuance",
+    "type": "prompt",
+    "script": "SOP 02_C2_S1 नुसार, स्टोअरेज एरियामध्ये ACED चे धातूचे पार्ट कोणत्या स्वरूपात ठेवले जातात आणि फीडरमध्ये कसे वाटले जातात?"
+  },
+  {
+    "id": "s09_sc01_correct",
+    "filename": "s09_sc01_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 1,
+    "sceneId": "c2_s9_sc01_aced_trolley_issuance",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP फॉर लाईन इश्यूअन्स पेंट-शॉप कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s09_sc01_wrong",
+    "filename": "s09_sc01_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 1,
+    "sceneId": "c2_s9_sc01_aced_trolley_issuance",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s09_sc02_intro",
+    "filename": "s09_sc02_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 2,
+    "sceneId": "c2_s9_sc02_twobin_ekanban",
+    "type": "intro",
+    "script": "पेंट शॉप डिकॅन्टिंग एरियामध्ये, स्कूटरचे बॉडी पार्ट्स सप्लायरकडून मोठ्या फोल्डेबल लार्ज कंटेनरमध्ये (FLC) येतात. SOP 03_C2_S2 नुसार, प्रत्येक बॉडी पार्टसाठी (उदा. टेल साइड पॅनेल्स - TSP) किती पॅलेट जागा राखीव असतात आणि माल संपण्यापूर्वी हाय-राईज रॅकमधून नवीन माल मागवण्याचा अचूक नियम काय आहे?"
+  },
+  {
+    "id": "s09_sc02_prompt",
+    "filename": "s09_sc02_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 2,
+    "sceneId": "c2_s9_sc02_twobin_ekanban",
+    "type": "prompt",
+    "script": "SOP 03_C2_S2 कलम 4.1 नुसार, डिकॅन्टिंग झोन लीडरने प्रत्येक बॉडी पार्टसाठी (उदा. टेल साइड पॅनेल्स) किती बफर पॅलेट जागा ठेवल्या पाहिजेत?"
+  },
+  {
+    "id": "s09_sc02_correct",
+    "filename": "s09_sc02_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 2,
+    "sceneId": "c2_s9_sc02_twobin_ekanban",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s09_sc02_wrong",
+    "filename": "s09_sc02_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 2,
+    "sceneId": "c2_s9_sc02_twobin_ekanban",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s09_sc03_intro",
+    "filename": "s09_sc03_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 3,
+    "sceneId": "c2_s9_sc03_trolley_capacity_rule",
+    "type": "intro",
+    "script": "डिकॅन्टिंग ऑपरेटरने टेल साइड पॅनेल्सचा (TSP) FLC उघडला आहे. FLC मध्ये 110 पॅनेल्स आहेत, आणि अंतर्गत मोबाईल ट्रॉलीची क्षमता बरोबर 30 पॅनेल्सची आहे. ऑपरेटरने 24 पॅनेल्स भरले आहेत आणि उर्वरित 6 पॅनेल्सची वाट न पाहता लगेच अर्धवट ट्रॉली पेंट लाईनवर पाठवू इच्छितो. SOP 03_C2_S2 अपयश मोड 5.1 नुसार, यास परवानगी आहे का? थांबा किंवा पुढे जा?"
+  },
+  {
+    "id": "s09_sc03_prompt",
+    "filename": "s09_sc03_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 3,
+    "sceneId": "c2_s9_sc03_trolley_capacity_rule",
+    "type": "prompt",
+    "script": "निर्णय गेट: डिकॅन्टिंग ऑपरेटर अर्धवट भरलेली ट्रॉली (24/30 पॅनेल्स) पेंट लाईनवर पाठवू शकतो का?"
+  },
+  {
+    "id": "s09_sc03_correct",
+    "filename": "s09_sc03_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 3,
+    "sceneId": "c2_s9_sc03_trolley_capacity_rule",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप अपयश मोड 5. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s09_sc03_wrong",
+    "filename": "s09_sc03_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 3,
+    "sceneId": "c2_s9_sc03_trolley_capacity_rule",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s09_sc04_intro",
+    "filename": "s09_sc04_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 4,
+    "sceneId": "c2_s9_sc04_wrong_part_return",
+    "type": "intro",
+    "script": "MHE फोर्कलिफ्ट ऑपरेटरने डिकॅन्टिंग स्टेशनवर FLC ठेवला आहे. पेटी उघडल्यावर चुकीच्या ई-कनबन टॅगमुळे टेल साइड पॅनेल्स ऐवजी (TSP) टेल सेंटर पॅनेल्स (TCP) आल्याचे लक्षात आले! SOP 03_C2_S2 अपयश मोड 5.3 व 5.4 नुसार, SAP EWM सिस्टीम अडकून न पडता हा प्रश्न सोडवण्यासाठी झोन लीडर व ऑपरेटरने कोणती अचूक प्रक्रिया केली पाहिजे?"
+  },
+  {
+    "id": "s09_sc04_prompt",
+    "filename": "s09_sc04_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 4,
+    "sceneId": "c2_s9_sc04_wrong_part_return",
+    "type": "prompt",
+    "script": "SOP 03_C2_S2 अपयश मोड 5.3 आणि 5.4 नुसार, SAP EWM सिस्टीम न अडकवता चुकीच्या पार्टच्या डिलिव्हरीतून सावरण्यासाठी 4 अनिवार्य पायऱ्या योग्य क्रमाने लावा."
+  },
+  {
+    "id": "s09_sc04_correct",
+    "filename": "s09_sc04_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 4,
+    "sceneId": "c2_s9_sc04_wrong_part_return",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप अपयश मोड 5. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s09_sc04_wrong",
+    "filename": "s09_sc04_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 4,
+    "sceneId": "c2_s9_sc04_wrong_part_return",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s09_sc05_intro",
+    "filename": "s09_sc05_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 5,
+    "sceneId": "c2_s9_sc05_decanting_definition",
+    "type": "intro",
+    "script": "स्टेज 9 च्या मूळ संकल्पनेकडे वळूया! एथर औरिक प्लांटमध्ये, स्टोअरेज रॅक्स आणि पेंट शॉप यांच्यामध्ये स्वतंत्र डिकॅन्टिंग एरिया का असतो? SOP कलम 4.1 आणि प्रश्न बँक Q10 नुसार, 'डिकॅन्टिंग' ची नेमकी व्याख्या आणि कामाचा उद्देश काय आहे?"
+  },
+  {
+    "id": "s09_sc05_prompt",
+    "filename": "s09_sc05_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 5,
+    "sceneId": "c2_s9_sc05_decanting_definition",
+    "type": "prompt",
+    "script": "SOP 03_C2_S2 आणि प्रश्न बँक Q10 नुसार, 'डिकॅन्टिंग' म्हणजे काय?"
+  },
+  {
+    "id": "s09_sc05_correct",
+    "filename": "s09_sc05_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 5,
+    "sceneId": "c2_s9_sc05_decanting_definition",
+    "type": "correct",
+    "script": "अचूक औद्योगिक व्याख्या! SOP कलम 4.1 आणि प्रश्न बँक Q10: डिकॅन्टिंग म्हणजे सप्लायरच्या मोठ्या कंटेनर्समधून (FLC) सुटे भाग काढून फॅक्टरीच्या प्रमाणित अंतर्गत मोबाईल ट्रॉलीमध्ये व्यवस्थित भरणे! यामुळे सप्लायरचे हँडलिंग युनिट (HU) बंद होते आणि कारखान्यातील अंतर्गत HU बारकोड तयार होतो!"
+  },
+  {
+    "id": "s09_sc05_wrong",
+    "filename": "s09_sc05_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 5,
+    "sceneId": "c2_s9_sc05_decanting_definition",
+    "type": "wrong",
+    "script": "गैरसमज! डिकॅन्टिंग म्हणजे रंगकाम करणे किंवा कचरा फेकणे नव्हे. सप्लायरच्या मोठ्या पेट्यांमधून माल काढून लाईनवर नेण्यासाठीच्या अंतर्गत ट्रॉलीमध्ये भरणे म्हणजेच डिकॅन्टिंग होय!"
+  },
+  {
+    "id": "s09_sc06_intro",
+    "filename": "s09_sc06_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 6,
+    "sceneId": "c2_s9_sc06_flc_batch_calculation",
+    "type": "intro",
+    "script": "एथर शॉपफ्लोर गणित आव्हान! सप्लायरकडून आलेल्या एका FLC मध्ये बरोबर 90 डिस्क ब्रेक कॅलिपर्स आहेत. पेंट-शॉपच्या प्रत्येक मोबाईल ट्रॉलीची अधिकृत क्षमता 30 कॅलिपर्सची आहे. प्रश्न संच Q12 नुसार, डिकॅन्टिंग टीम या एकाच FLC मधून 100% भरलेल्या किती ट्रॉली तयार करू शकते?"
+  },
+  {
+    "id": "s09_sc06_prompt",
+    "filename": "s09_sc06_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 6,
+    "sceneId": "c2_s9_sc06_flc_batch_calculation",
+    "type": "prompt",
+    "script": "एका FLC मध्ये 90 ब्रेक्स आहेत. एका ट्रॉलीमध्ये 30 बसतात. एका FLC मधून किती पूर्ण भरलेल्या ट्रॉली तयार होतील? (प्रश्न बँक Q12)"
+  },
+  {
+    "id": "s09_sc06_correct",
+    "filename": "s09_sc06_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 6,
+    "sceneId": "c2_s9_sc06_flc_batch_calculation",
+    "type": "correct",
+    "script": "अचूक हिशोब! एकूण 90 भाग भागिले प्रति ट्रॉली 30 भाग = बरोबर 3 पूर्ण ट्रॉली! SOP कलम 4.2 लक्षात ठेवा: ऑपरेटरने नेहमी 100% क्षमतेनेच ट्रॉली भरली पाहिजे — अर्धवट ट्रॉली लाईनवर पाठवण्यास सक्त मनाई आहे!"
+  },
+  {
+    "id": "s09_sc06_wrong",
+    "filename": "s09_sc06_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 6,
+    "sceneId": "c2_s9_sc06_flc_batch_calculation",
+    "type": "wrong",
+    "script": "हिशोबात चूक! 90 भागिले 30 म्हणजे बरोबर 3 ट्रॉली होतात. ठरवून दिलेल्या संख्येनुसार काम केल्याने हिशोब अचूक राहतो!"
+  },
+  {
+    "id": "s09_sc07_intro",
+    "filename": "s09_sc07_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 7,
+    "sceneId": "c2_s9_sc07_variant_wave_task_splitting",
+    "type": "intro",
+    "script": "डिजिटल MES नियोजन प्रत्यक्षात! शिफ्ट 1 च्या उत्पादन योजनेनुसार 20 स्पेस ब्लॅक आणि 10 ट्रू रेड एथर स्कूटर्स तयार करायच्या आहेत. प्रश्न संच Q13 नुसार हे बॉडी पॅनेल्स पेंट लाईनवर पुरवण्यासाठी SAP EWM वेअरहाऊस ऑर्डरमध्ये किती स्वतंत्र WH टास्क तयार करेल?"
+  },
+  {
+    "id": "s09_sc07_prompt",
+    "filename": "s09_sc07_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 7,
+    "sceneId": "c2_s9_sc07_variant_wave_task_splitting",
+    "type": "prompt",
+    "script": "उत्पादन योजना 20 काळ्या + 10 लाल वाहनांची आहे. WH ऑर्डरमध्ये किती WH टास्क तयार होतील? (प्रश्न बँक Q13)"
+  },
+  {
+    "id": "s09_sc07_correct",
+    "filename": "s09_sc07_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 7,
+    "sceneId": "c2_s9_sc07_variant_wave_task_splitting",
+    "type": "correct",
+    "script": "अचूक सिस्टीम नियम! प्रश्न बँक Q13: बरोबर 2 WH टास्क! एक टास्क 20 काळे पार्ट उचलण्यासाठी आणि दुसरा टास्क 10 लाल पार्ट उचलण्यासाठी. वेगवेगळ्या रंगांचे पार्ट नंबर (SKU) SAP EWM मध्ये वेगळे असतात, त्यामुळे प्रत्येक रंगासाठी स्वतंत्र टास्क तयार होतो!"
+  },
+  {
+    "id": "s09_sc07_wrong",
+    "filename": "s09_sc07_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 7,
+    "sceneId": "c2_s9_sc07_variant_wave_task_splitting",
+    "type": "wrong",
+    "script": "चुकीचा नियम! वेगवेगळ्या रंगांचा माल एकाच टास्कमध्ये एकत्र करता येत नाही. रंगांचा गोंधळ टाळण्यासाठी प्रत्येक पार्ट नंबरचा स्वतंत्र WH टास्क तयार होतो!"
+  },
+  {
+    "id": "s09_sc08_intro",
+    "filename": "s09_sc08_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 8,
+    "sceneId": "c2_s9_sc08_supermarket_rack_ownership",
+    "type": "intro",
+    "script": "महत्त्वाचा जबाबदारीचा प्रश्न! पेंट-शॉप सुपरमार्केट रॅक हा लाईनवर जाणाऱ्या सर्व बॉडी पार्ट्ससाठी मुख्य बफर म्हणून काम करतो. प्रश्न संच Q19 नुसार, हा सुपरमार्केट रॅक नेहमी मालाने भरलेला ठेवण्याची प्रत्यक्ष जबाबदारी कोणाची असते?"
+  },
+  {
+    "id": "s09_sc08_prompt",
+    "filename": "s09_sc08_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 8,
+    "sceneId": "c2_s9_sc08_supermarket_rack_ownership",
+    "type": "prompt",
+    "script": "बॉडी पार्ट्ससाठीचा पेंट-शॉप सुपरमार्केट रॅक भरलेला ठेवण्याची जबाबदारी कोणाची असते? (प्रश्न बँक Q19)"
+  },
+  {
+    "id": "s09_sc08_correct",
+    "filename": "s09_sc08_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 8,
+    "sceneId": "c2_s9_sc08_supermarket_rack_ownership",
+    "type": "correct",
+    "script": "झोन लीडरची थेट जबाबदारी! प्रश्न बँक Q19: डिकॅन्टिंग झोन लीडर (ZL)! सुपरमार्केट रॅक हे पेंट लाईनसाठीचे अधिकृत सोर्स लोकेशन आहे. डिकॅन्टिंग ZL बफर साठ्यावर लक्ष ठेवतो, ई-कनबन ट्रिगर्स तपासतो आणि लाईन थांबू नये म्हणून वेळेत माल मागवतो!"
+  },
+  {
+    "id": "s09_sc08_wrong",
+    "filename": "s09_sc08_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 8,
+    "sceneId": "c2_s9_sc08_supermarket_rack_ownership",
+    "type": "wrong",
+    "script": "चुकीची व्यक्ती निवडली! सिक्युरिटी गार्ड किंवा बाहेरील ट्रक ड्रायव्हर कारखान्यातील रॅक भरत नाहीत. ही अत्यंत महत्त्वाची जबाबदारी डिकॅन्टिंग झोन लीडरची (ZL) असते!"
+  },
+  {
+    "id": "s09_sc09_intro",
+    "filename": "s09_sc09_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 9,
+    "sceneId": "c2_s9_sc09_empty_trolley_reverse_loop",
+    "type": "intro",
+    "script": "एका लाईन फीडरने पेंट शॉप लोडिंग बूथवर स्कूटर साईड पॅनेल्सची ट्रॉली रिकामी केली आहे. ट्रॉली आता पूर्णपणे रिकामी झाली आहे. एथर SOP आणि प्रश्न संच Q25 नुसार, ही रिकामी ट्रॉली ताबडतोब कुठे पाठवली पाहिजे?"
+  },
+  {
+    "id": "s09_sc09_prompt",
+    "filename": "s09_sc09_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 9,
+    "sceneId": "c2_s9_sc09_empty_trolley_reverse_loop",
+    "type": "prompt",
+    "script": "पेंट शॉपमध्ये बॉडी पार्ट दिल्यानंतर रिकामी ट्रॉली कुठे जाते? (प्रश्न बँक Q25)"
+  },
+  {
+    "id": "s09_sc09_correct",
+    "filename": "s09_sc09_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 9,
+    "sceneId": "c2_s9_sc09_empty_trolley_reverse_loop",
+    "type": "correct",
+    "script": "अचूक रिव्हर्स लॉजिस्टिक! प्रश्न बँक Q25: डिकॅन्ट एरियामध्ये! रिकाम्या झालेल्या ट्रॉली त्वरित डिकॅन्ट भागात परत पाठवल्या पाहिजेत जेणेकरून त्या स्वच्छ करून पुढील उत्पादनासाठी पुन्हा भरता येतील. रिकाम्या ट्रॉली रस्त्यामध्ये किंवा पायऱ्यांखाली सोडून देण्यास सक्त मनाई आहे!"
+  },
+  {
+    "id": "s09_sc09_wrong",
+    "filename": "s09_sc09_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 9,
+    "sceneId": "c2_s9_sc09_empty_trolley_reverse_loop",
+    "type": "wrong",
+    "script": "धोकादायक वर्तन! रिकाम्या ट्रॉली पायऱ्यांखाली टाकून दिल्यास डिकॅन्टिंग भागात ट्रॉलींचा तुटवडा भासतो आणि आगीच्या वेळी आपत्कालीन रस्ता अडकल्याने मोठा धोका निर्माण होतो!"
+  },
+  {
+    "id": "s09_sc10_intro",
+    "filename": "s09_sc10_intro.mp3",
+    "stage": 9,
+    "sceneIndex": 10,
+    "sceneId": "c2_s9_sc10_whole_trolley_movement",
+    "type": "intro",
+    "script": "मॉड्यूल 9 चा अंतिम टप्पा! एका पेंट-शॉप WH टास्कमध्ये सुपरमार्केट रॅकमधून बॉडी पार्टची (उदा. टेल साइड पॅनेल) मागणी केली आहे. प्रश्न संच Q27 नुसार तुम्ही पेंट लाईनवर नेमके काय घेऊन जाता?"
+  },
+  {
+    "id": "s09_sc10_prompt",
+    "filename": "s09_sc10_prompt.mp3",
+    "stage": 9,
+    "sceneIndex": 10,
+    "sceneId": "c2_s9_sc10_whole_trolley_movement",
+    "type": "prompt",
+    "script": "पेंट-शॉप WH टास्कमध्ये बॉडी पार्टची मागणी केली आहे. तुम्ही पेंट लाईनवर काय घेऊन जाता? (प्रश्न बँक Q27)"
+  },
+  {
+    "id": "s09_sc10_correct",
+    "filename": "s09_sc10_correct.mp3",
+    "stage": 9,
+    "sceneIndex": 10,
+    "sceneId": "c2_s9_sc10_whole_trolley_movement",
+    "type": "correct",
+    "script": "अतिशय उत्कृष्ट प्रावीण्य! प्रश्न बँक Q27: सुपरमार्केट रॅकमधून त्या बॉडी पार्टची संपूर्ण भरलेली ट्रॉली! काम सुरू करण्यासाठी रॅकचा QR स्कॅन करायचा, पूर्ण ट्रॉली वर्कस्टेशनवर न्यायची आणि काम पूर्ण करण्यासाठी डेस्टिनेशन QR स्कॅन करायचा. स्टेज 9 आता 100% पूर्ण झाले आहे!"
+  },
+  {
+    "id": "s09_sc10_wrong",
+    "filename": "s09_sc10_wrong.mp3",
+    "stage": 9,
+    "sceneIndex": 10,
+    "sceneId": "c2_s9_sc10_whole_trolley_movement",
+    "type": "wrong",
+    "script": "चुकीची पद्धत! ऑपरेटर कधीही एक-एक पार्ट हाताने उचलून नेत नाहीत — यामुळे पार्टवर ओरखडे पडतात आणि लाईनचा वेळ वाया जातो. ऑपरेटर संपूर्ण भरलेली ट्रॉलीच घेऊन जातात!"
+  },
+  {
+    "id": "s10_sc01_intro",
+    "filename": "s10_sc01_intro.mp3",
+    "stage": 10,
+    "sceneIndex": 1,
+    "sceneId": "c2_s10_sc01_no_reservation_gate",
+    "type": "intro",
+    "script": "SOP 10_C2_S1 नुसार स्टेज 10: अप्रत्यक्ष साहित्य हाताळणीमध्ये आपले स्वागत आहे! मध्यवर्ती अप्रत्यक्ष स्टोअरमध्ये (CM01) कारखान्यातील उपभोग्य वस्तू, वंगण, सुरक्षा उपकरणे (PPE) आणि मशीनचे सुटे भाग ठेवले जातात. लाईन मेंटेनन्स सुपरवायझर घाईघाईत काउंटरवर येतो आणि म्हणतो: 'तातडीने ब्रेकडाउन दुरुस्तीसाठी मला 10 बॉक्स नायट्रिल ग्लोव्हज आणि 2 ट्यूब ग्रीस आत्ताच द्या, मी जेवणानंतर SAP मध्ये स्लिप बनवून देईन!' SOP कलम 4.1 आणि अपयश मोड 5.1 नुसार, तुमचा निर्णय काय असेल? थांबा किंवा पुढे जा?"
+  },
+  {
+    "id": "s10_sc01_prompt",
+    "filename": "s10_sc01_prompt.mp3",
+    "stage": 10,
+    "sceneIndex": 1,
+    "sceneId": "c2_s10_sc01_no_reservation_gate",
+    "type": "prompt",
+    "script": "निर्णय गेट: सुपरवायझरच्या केवळ तोंडी विनंतीवरून उपभोग्य वस्तू किंवा मेंटेनन्स सुटे भाग प्रत्यक्ष हातात दिले जाऊ शकतात का?"
+  },
+  {
+    "id": "s10_sc01_correct",
+    "filename": "s10_sc01_correct.mp3",
+    "stage": 10,
+    "sceneIndex": 1,
+    "sceneId": "c2_s10_sc01_no_reservation_gate",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP 10_C2_S1 स्पष्ट करतो की अप्रत्यक्ष साहित्याचा खर्च थेट कंपनीच्या ऑपेक्स (OpEx) खात्यातून होतो. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s10_sc01_wrong",
+    "filename": "s10_sc01_wrong.mp3",
+    "stage": 10,
+    "sceneIndex": 1,
+    "sceneId": "c2_s10_sc01_no_reservation_gate",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s10_sc02_intro",
+    "filename": "s10_sc02_intro.mp3",
+    "stage": 10,
+    "sceneIndex": 2,
+    "sceneId": "c2_s10_sc02_sap_ymb21_transfer",
+    "type": "intro",
+    "script": "दृश्य 1 मध्ये तोंडी विनंती रोखून नियमांचे पालन केल्याबद्दल अभिनंदन! आता मेंटेनन्स सुपरवायझर अधिकृत आरक्षण स्लिप घेऊन आला आहे. SOP 10_C2_S1 कलम 4.2 नुसार, अप्रत्यक्ष साहित्याचे आरक्षण करण्यासाठी कोणता SAP ट्रान्झॅक्शन कोड (T-Code) वापरला जातो आणि हा स्टॉक कोणत्या स्टोअरमधून कुठे वर्ग होतो?"
+  },
+  {
+    "id": "s10_sc02_prompt",
+    "filename": "s10_sc02_prompt.mp3",
+    "stage": 10,
+    "sceneIndex": 2,
+    "sceneId": "c2_s10_sc02_sap_ymb21_transfer",
+    "type": "prompt",
+    "script": "SOP 10_C2_S1 कलम 4.2 नुसार, मेंटेनन्स सुट्या भागांसाठी SAP ट्रान्झॅक्शन कोड आणि स्टोअर लोकेशनचा अचूक मार्ग कोणता आहे?"
+  },
+  {
+    "id": "s10_sc02_correct",
+    "filename": "s10_sc02_correct.mp3",
+    "stage": 10,
+    "sceneIndex": 2,
+    "sceneId": "c2_s10_sc02_sap_ymb21_transfer",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP 10_C2_S1 कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s10_sc02_wrong",
+    "filename": "s10_sc02_wrong.mp3",
+    "stage": 10,
+    "sceneIndex": 2,
+    "sceneId": "c2_s10_sc02_sap_ymb21_transfer",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s10_sc03_intro",
+    "filename": "s10_sc03_intro.mp3",
+    "stage": 10,
+    "sceneIndex": 3,
+    "sceneId": "c2_s10_sc03_mrs_cost_center_audit",
+    "type": "intro",
+    "script": "आता काउंटरवर आणलेल्या कागदी मटेरियल रिक्विजिशन स्लिपची (MRS) बारकाईने तपासणी करा. SOP अपयश मोड 5.1 नुसार, अपुऱ्या स्लिपवर सामान दिल्यास त्याचा खर्च चुकीच्या खात्यावर पडतो किंवा कंपनीचे मोठे नुकसान होते! गोदामातून कोणतीही वस्तू देण्यापूर्वी या स्लिपमधील गंभीर चूक ओळखा आणि त्यावर टॅप करा!"
+  },
+  {
+    "id": "s10_sc03_prompt",
+    "filename": "s10_sc03_prompt.mp3",
+    "stage": 10,
+    "sceneIndex": 3,
+    "sceneId": "c2_s10_sc03_mrs_cost_center_audit",
+    "type": "prompt",
+    "script": "चूक ओळखा: या मागणी पत्रकातील कोणती गंभीर त्रुटी SOP 10_C2_S1 अपयश मोड 5.1 चे उल्लंघन करते आणि माल देण्यास मज्जाव करते?"
+  },
+  {
+    "id": "s10_sc03_correct",
+    "filename": "s10_sc03_correct.mp3",
+    "stage": 10,
+    "sceneIndex": 3,
+    "sceneId": "c2_s10_sc03_mrs_cost_center_audit",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP 10_C2_S1 अपयश मोड 5. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s10_sc03_wrong",
+    "filename": "s10_sc03_wrong.mp3",
+    "stage": 10,
+    "sceneIndex": 3,
+    "sceneId": "c2_s10_sc03_mrs_cost_center_audit",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s10_sc04_intro",
+    "filename": "s10_sc04_intro.mp3",
+    "stage": 10,
+    "sceneIndex": 4,
+    "sceneId": "c2_s10_sc04_physical_handover_protocol",
+    "type": "intro",
+    "script": "तुम्ही ती रिकामी कॉस्ट सेंटरची चूक अगदी अचूक पकडलीत! आता स्लिप दुरुस्त करून अधिकृत करण्यात आली आहे. आता SOP 10_C2_S1 कलम 4.2, 4.4 आणि अपयश मोड 5.2 नुसार साहित्याचे वाटप करण्याचा अचूक 4-टप्प्यांचा क्रम लावा. लक्षात ठेवा: SAP मधील नोंद पूर्ण करण्याआधी प्रत्यक्ष माल दिल्यास CM01 मध्ये साठ्यात तफावत होते! चारही पायऱ्या योग्य क्रमाने लावा!"
+  },
+  {
+    "id": "s10_sc04_prompt",
+    "filename": "s10_sc04_prompt.mp3",
+    "stage": 10,
+    "sceneIndex": 4,
+    "sceneId": "c2_s10_sc04_physical_handover_protocol",
+    "type": "prompt",
+    "script": "क्रम लावा: मेंटेनन्स सुटे भाग वाटप करण्याच्या 4 प्रमाणित पायऱ्या योग्य कालानुक्रमाने लावा."
+  },
+  {
+    "id": "s10_sc04_correct",
+    "filename": "s10_sc04_correct.mp3",
+    "stage": 10,
+    "sceneIndex": 4,
+    "sceneId": "c2_s10_sc04_physical_handover_protocol",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP 10_C2_S1 दोन-टप्प्यांचा अचूक नियम स्पष्ट करतो: 'गोदाम कर्मचाऱ्याने आधी SAP मध्ये CM01 ते MN01 ट्रान्स्फर पोस्टिंग पूर्ण केले पाहिजे. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s10_sc04_wrong",
+    "filename": "s10_sc04_wrong.mp3",
+    "stage": 10,
+    "sceneIndex": 4,
+    "sceneId": "c2_s10_sc04_physical_handover_protocol",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s10_sc05_intro",
+    "filename": "s10_sc05_intro.mp3",
+    "stage": 10,
+    "sceneIndex": 5,
+    "sceneId": "c2_s10_sc05_ppe_jira_ticket_mandate",
+    "type": "intro",
+    "script": "महत्त्वाची PPE सुरक्षा तपासणी! एक असेंब्ली कामगार अप्रत्यक्ष स्टोअर काउंटरवर येऊन नवीन स्टील-टो सेफ्टी शूज आणि कंपनीचे विंटर जॅकेट मागतो. अधिकृत JIRA तिकिटाऐवजी तो टीम लीडरची साध्या कागदावर केलेली कच्ची स्वाक्षरी दाखवतो. SOP 10_C2_S1 कलम 4.1 आणि प्रश्न संच Q29 नुसार, तुम्ही हे साहित्य देण्यास परवानगी द्याल की थांबवाल?"
+  },
+  {
+    "id": "s10_sc05_prompt",
+    "filename": "s10_sc05_prompt.mp3",
+    "stage": 10,
+    "sceneIndex": 5,
+    "sceneId": "c2_s10_sc05_ppe_jira_ticket_mandate",
+    "type": "prompt",
+    "script": "एक कामगार JIRA तिकिटाशिवाय साध्या कागदावरील सही दाखवून सेफ्टी शूज आणि जॅकेटची मागणी करतो. परवानगी द्यावी की थांबवावी? (प्रश्न बँक Q29)"
+  },
+  {
+    "id": "s10_sc05_correct",
+    "filename": "s10_sc05_correct.mp3",
+    "stage": 10,
+    "sceneIndex": 5,
+    "sceneId": "c2_s10_sc05_ppe_jira_ticket_mandate",
+    "type": "correct",
+    "script": "STOP करणे अत्यंत बंधनकारक आहे! SOP कलम 4.1 आणि प्रश्न बँक Q29: सेफ्टी शूज, विंटर जॅकेट आणि गणवेश यासाठी प्रत्यक्ष माल देण्यापूर्वी कर्मचाऱ्याचा आयडी आणि मापासह अधिकृत JIRA तिकीट असणे सक्तीचे आहे! सुट्या भागांसाठी SAP YMB21 आरक्षण लागते, पण PPE साहित्यासाठी JIRA मंजुरीच लागते. कागदावरील कच्च्या चिठ्ठ्यांना कोणतीही मान्यता नाही!"
+  },
+  {
+    "id": "s10_sc05_wrong",
+    "filename": "s10_sc05_wrong.mp3",
+    "stage": 10,
+    "sceneIndex": 5,
+    "sceneId": "c2_s10_sc05_ppe_jira_ticket_mandate",
+    "type": "wrong",
+    "script": "सुरक्षा नियमांचे उल्लंघन! JIRA तिकिटाशिवाय सेफ्टी शूज आणि जॅकेट दिल्यास कंपनीच्या मालमत्ता नोंदी चुकतात आणि ऑडिटमध्ये दंड होऊ शकतो!"
+  },
+  {
+    "id": "s10_sc06_intro",
+    "filename": "s10_sc06_intro.mp3",
+    "stage": 10,
+    "sceneIndex": 6,
+    "sceneId": "c2_s10_sc06_reorder_point_pr",
+    "type": "intro",
+    "script": "मॉड्यूल 10 चा अंतिम टप्पा! सेंट्रल इनडायरेक्ट स्टोअर्समध्ये (CM01), सिंथेटिक मोटर ग्रीसचा प्रत्यक्ष साठा सुरक्षा मर्यादेखाली (ROP) आला आहे. SOP 10_C2_S1 नुसार, कारखान्यात वंगणाचा तुटवडा पडू नये म्हणून स्टोअर एक्झिक्युटिव्ह SAP मध्ये कशी पुनर्नोंद करतो?"
+  },
+  {
+    "id": "s10_sc06_prompt",
+    "filename": "s10_sc06_prompt.mp3",
+    "stage": 10,
+    "sceneIndex": 6,
+    "sceneId": "c2_s10_sc06_reorder_point_pr",
+    "type": "prompt",
+    "script": "CM01 मध्ये अप्रत्यक्ष साठा ROP मर्यादेखाली आल्यास, माल पुन्हा भरण्यासाठी कोणता अधिकृत SAP वर्कफ्लो वापरला जातो?"
+  },
+  {
+    "id": "s10_sc06_correct",
+    "filename": "s10_sc06_correct.mp3",
+    "stage": 10,
+    "sceneIndex": 6,
+    "sceneId": "c2_s10_sc06_reorder_point_pr",
+    "type": "correct",
+    "script": "खरेदी मागणी प्रावीण्य! SOP कलम 4.5: स्टोअर एक्झिक्युटिव्ह SAP टी-कोड ME51N द्वारे मटेरियल मास्टर आणि अधिकृत कॉस्ट सेंटरचा संदर्भ देऊन नवीन पर्चेस रिक्विझिशन (PR) तयार करतो! स्टेज 10 आता 100% पूर्ण झाले आहे!"
+  },
+  {
+    "id": "s10_sc06_wrong",
+    "filename": "s10_sc06_wrong.mp3",
+    "stage": 10,
+    "sceneIndex": 6,
+    "sceneId": "c2_s10_sc06_reorder_point_pr",
+    "type": "wrong",
+    "script": "चुकीची कार्यपद्धती! स्टोअर कर्मचारी परस्पर रोख पैशाने किंवा बाहेरून फोन करून माल मागवू शकत नाहीत. अधिकृत खरेदीसाठी SAP ME51N द्वारे बजेटनुसार अधिकृत PR तयार करणे बंधनकारक असते!"
+  },
+  {
+    "id": "s11_sc01_intro",
+    "filename": "s11_sc01_intro.mp3",
+    "stage": 11,
+    "sceneIndex": 1,
+    "sceneId": "c2_s11_sc01_jira_budget_id",
+    "type": "intro",
+    "script": "स्टेज 11 मध्ये आपले स्वागत आहे: उत्पादन तपासणी आणि गुणवत्ता पार्ट इश्यूअन्स रिपोर्ट (PIR)! एथर औरिकमध्ये, विशेष कामांसाठी (उदा. R&D टेस्टिंग, व्हेलिडेशन, वॉरंटी बदल) लागणारे साहित्य JIRA PIR तिकिटाद्वारे मागवले जाते. हे साहित्य परत न येणारे (non-returnable) असते आणि त्याचा खर्च संबंधित विभागाच्या बजेट आयडीवर पडतो. एक R&D इंजिनिअर 2 बॅटरी पॅक मागण्यासाठी येतो, ज्याच्या JIRA तिकिटात बजेट आयडीची जागा रिकामी आहे; तो म्हणतो: 'आत्ता बॅटरी द्या, मी उद्या JIRA मध्ये बजेट आयडी टाकेन.' SOP 05_C2_S3 नुसार, तुम्ही बॅटरी पॅक देऊ शकता का? थांबा किंवा पुढे जा?"
+  },
+  {
+    "id": "s11_sc01_prompt",
+    "filename": "s11_sc01_prompt.mp3",
+    "stage": 11,
+    "sceneIndex": 1,
+    "sceneId": "c2_s11_sc01_jira_budget_id",
+    "type": "prompt",
+    "script": "निर्णय गेट: JIRA PIR तिकिटात बजेट आयडी नसताना गोदामातील कर्मचारी माल देऊ शकतात का?"
+  },
+  {
+    "id": "s11_sc01_correct",
+    "filename": "s11_sc01_correct.mp3",
+    "stage": 11,
+    "sceneIndex": 1,
+    "sceneId": "c2_s11_sc01_jira_budget_id",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP फॉर PIR औरिक कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s11_sc01_wrong",
+    "filename": "s11_sc01_wrong.mp3",
+    "stage": 11,
+    "sceneIndex": 1,
+    "sceneId": "c2_s11_sc01_jira_budget_id",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s11_sc02_intro",
+    "filename": "s11_sc02_intro.mp3",
+    "stage": 11,
+    "sceneIndex": 2,
+    "sceneId": "c2_s11_sc02_pir_approvals",
+    "type": "intro",
+    "script": "आता PIR-AURIC-1042 वर बजेट आयडी तपासला गेला आहे, पण विनंतीदार म्हणतो की ताबडतोब माल उचलून द्या. या तिकिटात ₹45,000 किमतीचे 30 ब्रेक कॅलिपर्स मागवले आहेत. SOP 05_C2_S3 कलम 4.2 आणि अपयश मोड 5.1 नुसार, गोदामातून माल उचलण्यापूर्वी कोणत्या दोन अधिकाऱ्यांची मंजुरी असणे अनिवार्य आहे?"
+  },
+  {
+    "id": "s11_sc02_prompt",
+    "filename": "s11_sc02_prompt.mp3",
+    "stage": 11,
+    "sceneIndex": 2,
+    "sceneId": "c2_s11_sc02_pir_approvals",
+    "type": "prompt",
+    "script": "मंजुरी वाटप: प्रत्येक तातडीच्या PIR तिकिटाला SOP 05_C2_S3 कलम 4.2 नुसार त्याच्या योग्य मंजुरी अधिकाऱ्याशी जोडा."
+  },
+  {
+    "id": "s11_sc02_correct",
+    "filename": "s11_sc02_correct.mp3",
+    "stage": 11,
+    "sceneIndex": 2,
+    "sceneId": "c2_s11_sc02_pir_approvals",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP फॉर PIR औरिक कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s11_sc02_wrong",
+    "filename": "s11_sc02_wrong.mp3",
+    "stage": 11,
+    "sceneIndex": 2,
+    "sceneId": "c2_s11_sc02_pir_approvals",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s11_sc03_intro",
+    "filename": "s11_sc03_intro.mp3",
+    "stage": 11,
+    "sceneIndex": 3,
+    "sceneId": "c2_s11_sc03_pir_cutoff_clock",
+    "type": "intro",
+    "script": "5 नवीन इन्स्ट्रुमेंट क्लस्टर्ससाठी सर्व मंजुऱ्या मिळालेले एक PIR तिकीट शुक्रवारी दुपारी 4:15 वाजता गोदामाच्या डिस्पॅच स्क्रीनवर येते. SOP 05_C2_S3 कलम 4.2 आणि अपयश मोड 5.1 नुसार, डिस्पॅचचे वेळापत्रक आणि गोदामाचा अनिवार्य नियम काय सांगतो?"
+  },
+  {
+    "id": "s11_sc03_prompt",
+    "filename": "s11_sc03_prompt.mp3",
+    "stage": 11,
+    "sceneIndex": 3,
+    "sceneId": "c2_s11_sc03_pir_cutoff_clock",
+    "type": "prompt",
+    "script": "SOP 05_C2_S3 कलम 4.2 आणि अपयश मोड 5.1 नुसार, दुपारी 4:00 वाजताचा कटऑफ नियम PIR डिस्पॅचची वेळ कशी ठरवतो?"
+  },
+  {
+    "id": "s11_sc03_correct",
+    "filename": "s11_sc03_correct.mp3",
+    "stage": 11,
+    "sceneIndex": 3,
+    "sceneId": "c2_s11_sc03_pir_cutoff_clock",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP फॉर PIR औरिक कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s11_sc03_wrong",
+    "filename": "s11_sc03_wrong.mp3",
+    "stage": 11,
+    "sceneIndex": 3,
+    "sceneId": "c2_s11_sc03_pir_cutoff_clock",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s11_sc04_intro",
+    "filename": "s11_sc04_intro.mp3",
+    "stage": 11,
+    "sceneIndex": 4,
+    "sceneId": "c2_s11_sc04_sap_sto_compliance",
+    "type": "intro",
+    "script": "30 ब्रेक कॅलिपर्स सुरक्षित फोममध्ये पॅक करून दुसऱ्या शाखेला (IBC) पाठवण्यासाठी तयार आहेत. SAP मध्ये आउटबाउंड डिलिव्हरी VL10B आणि पोस्ट गुड्स इश्यू VL02N ची नोंद झाली आहे. ट्रान्सपोर्टचा ट्रक बाहेर पडण्याच्या गेटवर उभा आहे. SOP 05_C2_S3 कलम 4.3 आणि अपयश मोड 5.4 नुसार, गेटचा बूम बॅरियर उघडण्यापूर्वी सिक्युरिटीने कोणत्या तीन अनिवार्य कागदपत्रांची तपासणी केली पाहिजे?"
+  },
+  {
+    "id": "s11_sc04_prompt",
+    "filename": "s11_sc04_prompt.mp3",
+    "stage": 11,
+    "sceneIndex": 4,
+    "sceneId": "c2_s11_sc04_sap_sto_compliance",
+    "type": "prompt",
+    "script": "SOP 05_C2_S3 कलम 4.3 आणि अपयश मोड 5.4 नुसार, कंपनीच्या गेटवरून माल बाहेर सोडण्यासाठी कायद्यानुसार कोणती कागदपत्रे असणे बंधनकारक आहे?"
+  },
+  {
+    "id": "s11_sc04_correct",
+    "filename": "s11_sc04_correct.mp3",
+    "stage": 11,
+    "sceneIndex": 4,
+    "sceneId": "c2_s11_sc04_sap_sto_compliance",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP फॉर PIR औरिक कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s11_sc04_wrong",
+    "filename": "s11_sc04_wrong.mp3",
+    "stage": 11,
+    "sceneIndex": 4,
+    "sceneId": "c2_s11_sc04_sap_sto_compliance",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s11_sc05_intro",
+    "filename": "s11_sc05_intro.mp3",
+    "stage": 11,
+    "sceneIndex": 5,
+    "sceneId": "c2_s11_sc05_pir_destination_routing",
+    "type": "intro",
+    "script": "डिस्पॅच मार्ग नियोजन मास्टरक्लास! प्रश्न बँक Q8 नुसार, PIR विनंत्या 3 वेगवेगळ्या ठिकाणी जातात: (1) औरिक प्लांटमधील समान जागा, (2) दुसऱ्या फॅक्टरीत इंटर-ब्रांच ट्रान्सफर (IBC), किंवा (3) बाहेरील सप्लायर/व्हेंडर. प्रत्येक ठिकाणाला त्याच्या कायदेशीर अनिवार्य कृतीशी जोडा!"
+  },
+  {
+    "id": "s11_sc05_prompt",
+    "filename": "s11_sc05_prompt.mp3",
+    "stage": 11,
+    "sceneIndex": 5,
+    "sceneId": "c2_s11_sc05_pir_destination_routing",
+    "type": "prompt",
+    "script": "प्रश्न बँक Q8 नुसार प्रत्येक PIR गंतव्याला त्याच्या योग्य कृतीशी जोडा."
+  },
+  {
+    "id": "s11_sc05_correct",
+    "filename": "s11_sc05_correct.mp3",
+    "stage": 11,
+    "sceneIndex": 5,
+    "sceneId": "c2_s11_sc05_pir_destination_routing",
+    "type": "correct",
+    "script": "अचूक मार्ग जुळवणी! प्रश्न बँक Q8: (1) समान जागा: माल उचला, पॅक करा आणि बजेट आयडीवर नोंद करा. (2) IBC (दुसरा प्लांट): उचलण्यासोबतच STO PO तयार करा. (3) सप्लायर: बजेट आयडीवर नोंद, मॅन्युअल DC तयार करा आणि डिस्पॅच करा!"
+  },
+  {
+    "id": "s11_sc05_wrong",
+    "filename": "s11_sc05_wrong.mp3",
+    "stage": 11,
+    "sceneIndex": 5,
+    "sceneId": "c2_s11_sc05_pir_destination_routing",
+    "type": "wrong",
+    "script": "मार्गात चूक! दुसऱ्या शाखेत माल पाठवताना SAP STO PO लागतो, तर बाहेरील सप्लायरकडे पाठवताना डिलिव्हरी चलन (DC) लागते. प्रश्न संच Q8 पुन्हा तपासा!"
+  },
+  {
+    "id": "s11_sc06_intro",
+    "filename": "s11_sc06_intro.mp3",
+    "stage": 11,
+    "sceneIndex": 6,
+    "sceneId": "c2_s11_sc06_sap_billing_document_types",
+    "type": "intro",
+    "script": "DEO आणि लॉजिस्टिक्स आव्हान! SAP बिलिंग ट्रान्झॅक्शन VF01 मध्ये चुकीचा दस्तऐवज प्रकार निवडल्यास GST कायद्यानुसार गाडी जप्त होऊन ₹5,00,000 चा दंड होऊ शकतो! प्रश्न बँक Q31 नुसार, ZSTO आणि ZGST या दोन बिलिंग प्रकारांचा अचूक वापर ओळखा!"
+  },
+  {
+    "id": "s11_sc06_prompt",
+    "filename": "s11_sc06_prompt.mp3",
+    "stage": 11,
+    "sceneIndex": 6,
+    "sceneId": "c2_s11_sc06_sap_billing_document_types",
+    "type": "prompt",
+    "script": "SAP बिलिंग ट्रान्झॅक्शन VF01 मध्ये, प्रश्न बँक Q31 नुसार ZSTO आणि ZGST चा वापर कसा केला जातो?"
+  },
+  {
+    "id": "s11_sc06_correct",
+    "filename": "s11_sc06_correct.mp3",
+    "stage": 11,
+    "sceneIndex": 6,
+    "sceneId": "c2_s11_sc06_sap_billing_document_types",
+    "type": "correct",
+    "script": "अचूक कर नियम प्रावीण्य! प्रश्न बँक Q31: ZSTO हे एकाच राज्यातील (उदा. महाराष्ट्र ते महाराष्ट्र) करमुक्त साठ्यासाठी वापरले जाते; तर ZGST हे दुसऱ्या राज्यात (उदा. महाराष्ट्र ते कर्नाटक) पाठवताना सरकारी ई-इनव्हॉइससह वापरले जाते!"
+  },
+  {
+    "id": "s11_sc06_wrong",
+    "filename": "s11_sc06_wrong.mp3",
+    "stage": 11,
+    "sceneIndex": 6,
+    "sceneId": "c2_s11_sc06_sap_billing_document_types",
+    "type": "wrong",
+    "script": "कर नियमांचे गंभीर उल्लंघन! दुसऱ्या राज्यात माल पाठवताना ZSTO वापरल्यास सीमेवर गाडी पकडली जाईल. आंतरराज्यीय वाहतुकीसाठी ZGST चाच वापर केला पाहिजे!"
+  },
+  {
+    "id": "s11_sc07_intro",
+    "filename": "s11_sc07_intro.mp3",
+    "stage": 11,
+    "sceneIndex": 7,
+    "sceneId": "c2_s11_sc07_pir_ticket_closure",
+    "type": "intro",
+    "script": "मॉड्यूल 11 चा अंतिम टप्पा! PIR चे साहित्य ट्रकमध्ये लोड झाले, सिक्युरिटीने तपासले आणि गाडी कंपनीच्या गेटबाहेर पडली. प्रश्न संच Q32 नुसार संपूर्ण PIR प्रक्रिया अधिकृतपणे बंद करण्यासाठी शेवटची कोणती कृती केली पाहिजे?"
+  },
+  {
+    "id": "s11_sc07_prompt",
+    "filename": "s11_sc07_prompt.mp3",
+    "stage": 11,
+    "sceneIndex": 7,
+    "sceneId": "c2_s11_sc07_pir_ticket_closure",
+    "type": "prompt",
+    "script": "PIR चे साहित्य रवाना झाले आहे. PIR प्रक्रिया अधिकृतपणे कशामुळे बंद होते? (प्रश्न बँक Q32)"
+  },
+  {
+    "id": "s11_sc07_correct",
+    "filename": "s11_sc07_correct.mp3",
+    "stage": 11,
+    "sceneIndex": 7,
+    "sceneId": "c2_s11_sc07_pir_ticket_closure",
+    "type": "correct",
+    "script": "आदर्श ऑडिट पूर्तता! प्रश्न बँक Q32: JIRA मध्ये वाहतुकीचा तपशील अपडेट करणे, स्वाक्षरी केलेली पोचपावती (Proof of Handover / LR) जोडणे आणि तिकीट स्टेटस 'Closed' करणे! तिकीट उघडे राहिल्यास सिस्टीममध्ये स्टॉक तफावत राहते. मॉड्यूल 11 आता 100% पूर्ण झाले आहे!"
+  },
+  {
+    "id": "s11_sc07_wrong",
+    "filename": "s11_sc07_wrong.mp3",
+    "stage": 11,
+    "sceneIndex": 7,
+    "sceneId": "c2_s11_sc07_pir_ticket_closure",
+    "type": "wrong",
+    "script": "ऑडिट धोका! माल गेल्यानंतर JIRA तिकीट उघडे ठेवू नका किंवा नष्ट करू नका! स्वाक्षरी केलेली पोचपावती जोडून तिकीट 'Closed' करणे सक्तीचे आहे!"
+  },
+  {
+    "id": "s12_sc01_intro",
+    "filename": "s12_sc01_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 1,
+    "sceneId": "c2_s12_sc01_defective_container_spotting",
+    "type": "intro",
+    "script": "SOP 15_C2_S4 नुसार स्टेज 12: रिव्हर्स लॉजिस्टिक्स आणि रिकाम्या पेट्यांची हाताळणीमध्ये आपले स्वागत आहे! असेंब्ली लाईनवरून सप्लायरला परत पाठवायचे रिकामे क्रेट्स आणि बॅटरी ट्रे गोळा करताना प्रत्येक पेटी तपासून घेतली पाहिजे. तुटलेल्या किंवा लोखंडी कचरा असलेल्या पेट्या व्हेंडरकडे परत पाठवल्यास नवीन पार्ट भरताना ते खराब होऊ शकतात. थप्पी रचण्यापूर्वी या पेटीमधील दोष ओळखा आणि त्यावर टॅप करा!"
+  },
+  {
+    "id": "s12_sc01_prompt",
+    "filename": "s12_sc01_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 1,
+    "sceneId": "c2_s12_sc01_defective_container_spotting",
+    "type": "prompt",
+    "script": "कोणत्या प्लास्टिक पेटीमध्ये भौतिक तुटफूट किंवा घाण/कचरा आहे ज्यामुळे ती पॅलेटवर रचता येत नाही?"
+  },
+  {
+    "id": "s12_sc01_correct",
+    "filename": "s12_sc01_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 1,
+    "sceneId": "c2_s12_sc01_defective_container_spotting",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP-EMPTYBIN COLLECTION AND LOADING Auric कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s12_sc01_wrong",
+    "filename": "s12_sc01_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 1,
+    "sceneId": "c2_s12_sc01_defective_container_spotting",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s12_sc02_intro",
+    "filename": "s12_sc02_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 2,
+    "sceneId": "c2_s12_sc02_rtv_deviation",
+    "type": "intro",
+    "script": "दृश्य 1 मधील दोष पडताळणी गेट यशस्वीरीत्या पार पाडल्याबद्दल अभिनंदन! आता सप्लायरमुळे नाकारलेला माल 'Quality Failed' म्हणून NG क्वारंटाईन भागात ठेवला आहे. SOP 06_C2_S4 कलम 4.2 नुसार, सप्लायरच्या सर्व दोषांवर आपोआप 3 दिवसांच्या मुदतीत 'Auto RTV' लागू होते. परंतु, असेंब्ली लाईनवर हँडलबार ग्रिप स्लीव्ह्सचा मोठा तुटवडा निर्माण झाला आहे! SQA ला आढळले की हा केवळ रंगाचा किरकोळ फरक आहे. सप्लायर मॅनेजरने JIRA मध्ये 'Use As It Is' विचलनाची मागणी केली. JIRA मध्ये हे विचलन मंजूर करण्याचा एकमेव अधिकार कोणाचा आहे आणि उत्पादनासाठी SAP मध्ये स्टॉक कसा उपलब्ध केला जातो?"
+  },
+  {
+    "id": "s12_sc02_prompt",
+    "filename": "s12_sc02_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 2,
+    "sceneId": "c2_s12_sc02_rtv_deviation",
+    "type": "prompt",
+    "script": "रंगाच्या किरकोळ फरकामुळे हँडलबार स्लीव्ह्स अभावी लाईन खोळंबली आहे. SOP 06_C2_S4 कलम 4.4 आणि 4.5 नुसार, 'Use As It Is' विचलनासाठी कोणाची मंजुरी आवश्यक आहे आणि SAP स्टॉक रूपांतरणाचा अचूक क्रम काय आहे?"
+  },
+  {
+    "id": "s12_sc02_correct",
+    "filename": "s12_sc02_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 2,
+    "sceneId": "c2_s12_sc02_rtv_deviation",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP फॉर NG - RTV कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s12_sc02_wrong",
+    "filename": "s12_sc02_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 2,
+    "sceneId": "c2_s12_sc02_rtv_deviation",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s12_sc03_intro",
+    "filename": "s12_sc03_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 3,
+    "sceneId": "c2_s12_sc03_empty_bin_stacking",
+    "type": "intro",
+    "script": "आता आपण SOP 08_C2_S4 नुसार शॉप फ्लोअर EHS सुरक्षा आणि रिकाम्या पेट्यांचे व्यवस्थापन शिकणार आहोत! बॅटरी पॅक असेंब्ली वेगाने सुरू असताना वर्कस्टेशनजवळ रिकाम्या पेट्यांचा ढीग जमा होतो. पॅसेजमधील जागा वाचवण्याचा दावा करत एका नवीन कामगाराने तब्बल 7.5 फूट उंच 8 पेट्यांची एकच थप्पी रचली. तो विचारतो की पॅलेट हलवण्यापूर्वी त्यावर अजून 2 पेट्या ठेवू का? SOP 08_C2_S4 कलम 4.1 सुरक्षा नियमांनुसार तुमचा निर्णय काय असेल? थांबा किंवा पुढे जा?"
+  },
+  {
+    "id": "s12_sc03_prompt",
+    "filename": "s12_sc03_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 3,
+    "sceneId": "c2_s12_sc03_empty_bin_stacking",
+    "type": "prompt",
+    "script": "निर्णय गेट: पॅसेजमधील जागा वाचवण्यासाठी कामगार रिकाम्या प्लास्टिक पेट्यांची थप्पी 5 फुटांपेक्षा (स्वतःच्या उंचीपेक्षा) जास्त करू शकतो का?"
+  },
+  {
+    "id": "s12_sc03_correct",
+    "filename": "s12_sc03_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 3,
+    "sceneId": "c2_s12_sc03_empty_bin_stacking",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP-EMPTYBIN COLLECTION AND LOADING Auric कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s12_sc03_wrong",
+    "filename": "s12_sc03_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 3,
+    "sceneId": "c2_s12_sc03_empty_bin_stacking",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s12_sc04_intro",
+    "filename": "s12_sc04_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 4,
+    "sceneId": "c2_s12_sc04_reverse_truck_loading",
+    "type": "intro",
+    "script": "हाच तो क्षण—स्टेज 12 चे अंतिम गेट आणि संपूर्ण 12-मॉड्यूल वेअरहाऊस प्रशिक्षण प्रवासाचा महा-अंतिम टप्पा! आउटबाउंड रिव्हर्स लॉजिस्टिक्स डॉकवर व्हेंडरचा ट्रक व्हील चॉक्स लावून सज्ज आहे. आपल्याकडे 24 पट्टे बांधलेल्या रिकाम्या पेट्या (5 फुटांपेक्षा कमी उंची) आणि लाल टॅग व डेबिट नोट लावलेल्या 12 RTV नाकारलेल्या पेट्या आहेत. सुरक्षा गेटबाहेर जाण्यापूर्वी संपूर्ण कायदेशीर पूर्तता आणि ऑडिट नोंदींसाठी SOP 06_C2_S4 कलम 4.10 व SOP 08_C2_S4 नुसार अनिवार्य क्रम कोणता आहे?"
+  },
+  {
+    "id": "s12_sc04_prompt",
+    "filename": "s12_sc04_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 4,
+    "sceneId": "c2_s12_sc04_reverse_truck_loading",
+    "type": "prompt",
+    "script": "डिस्पॅच क्रम लावा: रिव्हर्स ट्रक लोडिंग आणि गेट क्लिअरन्सच्या 4 प्रमाणित पायऱ्या योग्य कालानुक्रमाने लावा."
+  },
+  {
+    "id": "s12_sc04_correct",
+    "filename": "s12_sc04_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 4,
+    "sceneId": "c2_s12_sc04_reverse_truck_loading",
+    "type": "correct",
+    "script": "अगदी बरोबर! SOP फॉर NG - RTV कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+  },
+  {
+    "id": "s12_sc04_wrong",
+    "filename": "s12_sc04_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 4,
+    "sceneId": "c2_s12_sc04_reverse_truck_loading",
+    "type": "wrong",
+    "script": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+  },
+  {
+    "id": "s12_sc05_intro",
+    "filename": "s12_sc05_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 5,
+    "sceneId": "c2_s12_sc05_gangway_choke_prevention",
+    "type": "intro",
+    "script": "तातडीचे शॉपफ्लोर सुरक्षा ऑडिट! असेंब्ली लाईनच्या बाजूला, एका ऑपरेटरने 6 रिकाम्या प्लास्टिक पेट्या थेट पिवळ्या आपत्कालीन रस्त्यात टाकल्या आणि म्हणाला: 'मी शिफ्ट संपेपर्यंत या इथेच ठेवतो जेणेकरून मला चालत जावे लागणार नाही.' SOP 08_C2_S4 आणि प्रश्न संच Q26 नुसार, या कृतीला परवानगी द्यावी की थांबवावी?"
+  },
+  {
+    "id": "s12_sc05_prompt",
+    "filename": "s12_sc05_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 5,
+    "sceneId": "c2_s12_sc05_gangway_choke_prevention",
+    "type": "prompt",
+    "script": "रिकाम्या ट्रॉली आणि पेट्या लाईनच्या बाजूला रस्त्यावर सोडून दिल्या आहेत. परवानगी द्यावी की थांबवावी? (प्रश्न बँक Q26)"
+  },
+  {
+    "id": "s12_sc05_correct",
+    "filename": "s12_sc05_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 5,
+    "sceneId": "c2_s12_sc05_gangway_choke_prevention",
+    "type": "correct",
+    "script": "STOP करणे अत्यंत आवश्यक आहे! SOP 08_C2_S4 आणि प्रश्न बँक Q26: लाईनच्या बाजूला रिकाम्या पेट्या सोडल्यास रस्ता अडकतो, आगीच्या वेळी बाहेर पडण्याचा मार्ग बंद होतो आणि पेट्यांचा तुटवडा भासतो! रिकाम्या पेट्या गोळा करणाऱ्या स्वतंत्र टीमने दर 30 मिनिटांनी लाईन साफ केली पाहिजे!"
+  },
+  {
+    "id": "s12_sc05_wrong",
+    "filename": "s12_sc05_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 5,
+    "sceneId": "c2_s12_sc05_gangway_choke_prevention",
+    "type": "wrong",
+    "script": "गंभीर सुरक्षा नियमभंग! रस्त्यावर रिकाम्या पेट्या टाकल्याने लोक अडखळून पडतात, आपत्कालीन रस्ता बंद होतो आणि गोदामात पेट्यांचा तुटवडा होतो!"
+  },
+  {
+    "id": "s12_sc06_intro",
+    "filename": "s12_sc06_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 6,
+    "sceneId": "c2_s12_sc06_supplier_sla_courier_debit",
+    "type": "intro",
+    "script": "सप्लायर नियम पूर्तता! सदोष मिरर माउंट्सच्या सप्लायरला JIRA द्वारे 'To be RTV' अशी अधिकृत सूचना दिली होती. परंतु, 3 दिवस उलटून गेले तरी सप्लायरने आपला नाकारलेला माल नेण्यासाठी गाडी पाठवली नाही. एथर SOP आणि प्रश्न संच Q34 नुसार गोदामाने कोणती कारवाई केली पाहिजे?"
+  },
+  {
+    "id": "s12_sc06_prompt",
+    "filename": "s12_sc06_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 6,
+    "sceneId": "c2_s12_sc06_supplier_sla_courier_debit",
+    "type": "prompt",
+    "script": "सप्लायरने 3 दिवसांत नाकारलेला RTV माल उचलण्यासाठी गाडी पाठवली नाही. गोदामाने काय केले पाहिजे? (प्रश्न बँक Q34)"
+  },
+  {
+    "id": "s12_sc06_correct",
+    "filename": "s12_sc06_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 6,
+    "sceneId": "c2_s12_sc06_supplier_sla_courier_debit",
+    "type": "correct",
+    "script": "प्रमाणित कारवाई पद्धत! प्रश्न बँक Q34: कमर्शियल कुरिअरने माल सप्लायरकडे पाठवून द्यावा आणि वाहतुकीचा संपूर्ण खर्च सप्लायरच्या खात्यावर डेबिट करावा! कुरिअर पावती आणि डेबिट नोटची PDF JIRA तिकिटाला जोडावी!"
+  },
+  {
+    "id": "s12_sc06_wrong",
+    "filename": "s12_sc06_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 6,
+    "sceneId": "c2_s12_sc06_supplier_sla_courier_debit",
+    "type": "wrong",
+    "script": "आर्थिक निष्काळजीपणा! नाकारलेला माल गोदामात पडून राहिल्यास जागा अडकते आणि आपल्या खर्चाने भंगारात काढल्यास कंपनीचे नुकसान होते. कुरिअरने पाठवून सप्लायरला बिल लावावे!"
+  },
+  {
+    "id": "s12_sc07_intro",
+    "filename": "s12_sc07_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 7,
+    "sceneId": "c2_s12_sc07_use_as_is_sequence",
+    "type": "intro",
+    "script": "इंजिनिअरिंग विचलन प्रावीण्य! प्रश्न संच Q36 नुसार, जेव्हा 'Use As Is' विचलनाखाली किरकोळ दोषासह माल उत्पादनासाठी स्वीकारला जातो, तेव्हा मंजुरीपासून ते असेंब्ली लाईनपर्यंतचा अचूक क्रम काय असतो?"
+  },
+  {
+    "id": "s12_sc07_prompt",
+    "filename": "s12_sc07_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 7,
+    "sceneId": "c2_s12_sc07_use_as_is_sequence",
+    "type": "prompt",
+    "script": "प्रश्न बँक Q36 नुसार 'Use As Is' विचलन जीवनचक्राच्या 4 पायऱ्या योग्य क्रमाने लावा."
+  },
+  {
+    "id": "s12_sc07_correct",
+    "filename": "s12_sc07_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 7,
+    "sceneId": "c2_s12_sc07_use_as_is_sequence",
+    "type": "correct",
+    "script": "अतिशय अचूक कार्यपद्धती! प्रश्न बँक Q36: (a) तिकीट स्टेटस 'Deviation Accepted' होते -> (b) गोदाम माल स्टेजिंगमध्ये आणते, SAP स्टॉक QI मध्ये जातो, JIRA 'Deviated: Available for Build' होते -> (c) IQC टीम SAP मध्ये QI मधून UR मध्ये स्टॉक वर्ग करते -> (d) पार्ट असेंब्ली लाईनवर पाठवले जातात!"
+  },
+  {
+    "id": "s12_sc07_wrong",
+    "filename": "s12_sc07_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 7,
+    "sceneId": "c2_s12_sc07_use_as_is_sequence",
+    "type": "wrong",
+    "script": "चुकीचा क्रम! जोपर्यंत IQC टीम SAP मध्ये QI मधून UR मध्ये स्टॉक वर्ग करत नाही तोपर्यंत पार्ट लाईनवर जाऊ शकत नाहीत. प्रश्न बँक Q36 पुन्हा तपासा!"
+  },
+  {
+    "id": "s12_sc08_intro",
+    "filename": "s12_sc08_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 8,
+    "sceneId": "c2_s12_sc08_reworked_parts_inspection",
+    "type": "intro",
+    "script": "रिवर्क गुणवत्ता नियंत्रण गेट! कारखान्यातील रिवर्क टीमने 50 इन्स्ट्रुमेंट क्लस्टर ब्रॅकेट्स दुरुस्त केले आहेत. दुरुस्ती करणारा कामगार थेट असेंब्ली लाईनकडे ट्रॉली नेताना म्हणतो: 'आम्ही सर्व पिन्स जिगच्या मदतीने बरोबर केल्या आहेत, त्यामुळे हा माल आत्ताच थेट स्टेशन 05 वर नेऊन वापरू शकतो.' SOP आणि प्रश्न संच Q37 नुसार, यास परवानगी द्यावी की थांबवावे?"
+  },
+  {
+    "id": "s12_sc08_prompt",
+    "filename": "s12_sc08_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 8,
+    "sceneId": "c2_s12_sc08_reworked_parts_inspection",
+    "type": "prompt",
+    "script": "दुरुस्त केलेले पार्ट रिपेअरवरून परत आले आहेत. ते थेट असेंब्ली लाईनवर जाऊ शकतात का? (प्रश्न बँक Q37)"
+  },
+  {
+    "id": "s12_sc08_correct",
+    "filename": "s12_sc08_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 8,
+    "sceneId": "c2_s12_sc08_reworked_parts_inspection",
+    "type": "correct",
+    "script": "STOP करणे सक्तीचे आहे! प्रश्न बँक Q37: दुरुस्त केलेले पार्ट कधीही थेट लाईनवर जाऊ शकत नाहीत! आधी माल SAP मध्ये QI मध्ये घेतला पाहिजे, JIRA स्टेटस 'Rework Done' केले पाहिजे आणि IQC कडून 1.5 पट कडक तपासणी झालीच पाहिजे!"
+  },
+  {
+    "id": "s12_sc08_wrong",
+    "filename": "s12_sc08_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 8,
+    "sceneId": "c2_s12_sc08_reworked_parts_inspection",
+    "type": "wrong",
+    "script": "मोठा गुणवत्ता धोका! IQC च्या फेरतपासणीशिवाय माल लाईनवर पाठवल्यास ग्राहकांच्या वाहनांमध्ये मोठे दोष निर्माण होऊ शकतात. 1.5 पट कडक तपासणी अनिवार्य आहे!"
+  },
+  {
+    "id": "s12_sc09_intro",
+    "filename": "s12_sc09_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 9,
+    "sceneId": "c2_s12_sc09_non_supplier_scrap_protocol",
+    "type": "intro",
+    "script": "कंपनी मालमत्ता हिशोब नियम! फॅक्टरी अंतर्गत वाहतुकीदरम्यान फोर्कलिफ्ट चालकाकडून पडून 4 अ‍ॅल्युमिनिअम स्विंगआर्म्स तडकले. हा दोष सप्लायरमुळे नसून फॅक्टरीमध्येच घडल्यामुळे, प्रश्न संच Q38 नुसार हे पार्ट स्क्रॅप यार्डमध्ये तोडण्यासाठी नेण्यापूर्वी कोणत्या कागदपत्रांची सक्ती असते?"
+  },
+  {
+    "id": "s12_sc09_prompt",
+    "filename": "s12_sc09_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 9,
+    "sceneId": "c2_s12_sc09_non_supplier_scrap_protocol",
+    "type": "prompt",
+    "script": "सप्लायर व्यतिरिक्त फॅक्टरीतील खराब पार्ट स्क्रॅप करण्यापूर्वी काय असणे बंधनकारक आहे? (प्रश्न बँक Q38)"
+  },
+  {
+    "id": "s12_sc09_correct",
+    "filename": "s12_sc09_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 9,
+    "sceneId": "c2_s12_sc09_non_supplier_scrap_protocol",
+    "type": "correct",
+    "script": "आर्थिक नियमांचे अचूक पालन! प्रश्न बँक Q38: प्रॉडक्शन किंवा फंक्शनल प्रमुखांची लेखी मंजुरी आणि अधिकृत स्वाक्षरी केलेले स्क्रॅप अ‍ॅप्रूव्हल नोट! त्यानंतरच SAP मधील स्टॉक स्क्रॅप खात्यात जातो आणि JIRA स्टेटस 'Scrapped' होतो!"
+  },
+  {
+    "id": "s12_sc09_wrong",
+    "filename": "s12_sc09_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 9,
+    "sceneId": "c2_s12_sc09_non_supplier_scrap_protocol",
+    "type": "wrong",
+    "script": "अनधिकृत विल्हेवाट! तोंडी सांगण्यावरून कधीही कंपनीचा माल तोडू नका. लेखी मंजुरीशिवाय स्क्रॅप करणे हा कंपनीच्या नियमांनुसार गुन्हा ठरतो!"
+  },
+  {
+    "id": "s12_sc10_intro",
+    "filename": "s12_sc10_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 10,
+    "sceneId": "c2_s12_sc10_empty_bin_segregation_dashboard",
+    "type": "intro",
+    "script": "रिव्हर्स लॉजिस्टिक्स केंद्र प्रत्यक्षात! लाईनवरून गोळा केलेल्या रिकाम्या पेट्या सेंट्रल सेग्रिगेशन भागात आल्या आहेत. प्रश्न संच Q40 नुसार, ऑपरेटरने या पेट्या कशा वेगळ्या करायच्या आणि त्या भरण्यासाठी कोणता सप्लायर ट्रक कोणत्या डॉकवर उभा आहे हे कसे शोधायचे?"
+  },
+  {
+    "id": "s12_sc10_prompt",
+    "filename": "s12_sc10_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 10,
+    "sceneId": "c2_s12_sc10_empty_bin_segregation_dashboard",
+    "type": "prompt",
+    "script": "रिकाम्या पेट्यांचे वर्गीकरण कसे करता आणि डॉकवर उभ्या असलेल्या ट्रकमध्ये कसे पाठवता? (प्रश्न बँक Q40)"
+  },
+  {
+    "id": "s12_sc10_correct",
+    "filename": "s12_sc10_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 10,
+    "sceneId": "c2_s12_sc10_empty_bin_segregation_dashboard",
+    "type": "correct",
+    "script": "डिजिटल लॉजिस्टिक्स प्रावीण्य! प्रश्न बँक Q40: ठरवून दिलेल्या जागेत सप्लायर आयडी आणि पार्ट नंबरनुसार पेट्यांची वर्गवारी करा! आणि कोणता ट्रक कोणत्या डॉकवर उभा आहे हे पाहण्यासाठी लाईव्ह सप्लायर ट्रक डॅशबोर्डचा वापर करा!"
+  },
+  {
+    "id": "s12_sc10_wrong",
+    "filename": "s12_sc10_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 10,
+    "sceneId": "c2_s12_sc10_empty_bin_segregation_dashboard",
+    "type": "wrong",
+    "script": "अव्यवस्थित कारभार! सर्व पेट्या एकत्र ढिगाऱ्यात टाकल्यास चुकीच्या सप्लायरकडे चुकीच्या पेट्या जातील. डॅशबोर्ड पाहून सप्लायर आणि पार्टनुसारच पेट्या वेगळ्या करा!"
+  },
+  {
+    "id": "s12_sc11_intro",
+    "filename": "s12_sc11_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 11,
+    "sceneId": "c2_s12_sc11_recalled_material_disposition",
+    "type": "intro",
+    "script": "अति-गंभीर गुणवत्ता नियंत्रण प्रसंग! तक्रारीनंतर सुपरमार्केटमध्ये असलेल्या 200 ब्रेक केबल्सचा लॉट तातडीने फेरतपासणीसाठी परत मागवला गेला. तपासणीमध्ये 4 केबल्स तुटून चाचणीत नापास झाल्या. एथर SOP आणि प्रश्न संच Q41 नुसार, या नापास झालेल्या लॉटवर तात्काळ कोणती कारवाई झाली पाहिजे?"
+  },
+  {
+    "id": "s12_sc11_prompt",
+    "filename": "s12_sc11_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 11,
+    "sceneId": "c2_s12_sc11_recalled_material_disposition",
+    "type": "prompt",
+    "script": "परत मागवलेला मालाचा लॉट फेरतपासणीत नापास झाला. एथर SOP नुसार काय होते? (प्रश्न बँक Q41)"
+  },
+  {
+    "id": "s12_sc11_correct",
+    "filename": "s12_sc11_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 11,
+    "sceneId": "c2_s12_sc11_recalled_material_disposition",
+    "type": "correct",
+    "script": "कडक नियंत्रण लागू! प्रश्न बँक Q41: माल तात्काळ SAP मध्ये Blocked Stock मध्ये वर्ग केला जातो, NG टीम संपूर्ण लॉट NG क्वारंटाईन विभागात हलवते आणि अधिकृत RTV प्रक्रिया सुरू होते! सुरक्षेशी तडजोड न करता सदोष माल पूर्णपणे रोखला जातो!"
+  },
+  {
+    "id": "s12_sc11_wrong",
+    "filename": "s12_sc11_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 11,
+    "sceneId": "c2_s12_sc11_recalled_material_disposition",
+    "type": "wrong",
+    "script": "गंभीर सुरक्षा धोका! चाचणीत नापास झालेले सुरक्षिततेचे पार्ट कधीही वापरात आणता येत नाहीत. ते तात्काळ SAP मध्ये ब्लॉक करून NG क्वारंटाईनमध्ये RTV साठी पाठवलेच पाहिजेत!"
+  },
+  {
+    "id": "s12_sc12_intro",
+    "filename": "s12_sc12_intro.mp3",
+    "stage": 12,
+    "sceneIndex": 12,
+    "sceneId": "c2_s12_sc12_grandmaster_graduation",
+    "type": "intro",
+    "script": "ग्रँडमास्टर प्रमाणपत्र महा-टप्पा! तुम्ही एथर औरिक प्लांट M002 वेअरहाऊस प्रशिक्षण कार्यक्रमाच्या 91 व्या आणि अंतिम टप्प्यावर पोहोचला आहात! संपूर्ण 12 मॉड्यूल्समध्ये तुम्ही इनबाउंड डॉक, IQC तपासणी, पुट-अवे, बॅटरी रूम, घातक रसायने, सुपरमार्केट, क्वारंटाईन, ऑर्डर पिकिंग, पेंट डिकॅन्टिंग, अप्रत्यक्ष स्टोअर, PIR डिस्पॅच आणि रिव्हर्स लॉजिस्टिकमध्ये प्रावीण्य मिळवले आहे. आपल्या गोदामातील प्रत्येक कामाला नियंत्रित करणारा मूळ पाया कोणता आहे?"
+  },
+  {
+    "id": "s12_sc12_prompt",
+    "filename": "s12_sc12_prompt.mp3",
+    "stage": 12,
+    "sceneIndex": 12,
+    "sceneId": "c2_s12_sc12_grandmaster_graduation",
+    "type": "prompt",
+    "script": "एथर औरिक प्लांट M002 वेअरहाऊस सिस्टीमच्या सर्व 12 मॉड्यूल्सना एकत्र बांधणारा मुख्य कार्यप्रणाली नियम कोणता आहे?"
+  },
+  {
+    "id": "s12_sc12_correct",
+    "filename": "s12_sc12_correct.mp3",
+    "stage": 12,
+    "sceneIndex": 12,
+    "sceneId": "c2_s12_sc12_grandmaster_graduation",
+    "type": "correct",
+    "script": "अभिनंदन, ग्रँडमास्टर! अढळ दुहेरी पडताळणी: 100% VIN ट्रॅकिंग आणि शून्य त्रुटीच्या हमीसाठी प्रत्येक प्रत्यक्ष मालाची हालचाल डिजिटल सिस्टीम स्कॅनिंगशी (SAP EWM, MES, JIRA) जोडलीच पाहिजे! तुम्ही सर्व 12 मॉड्यूल्समधील सर्व 91 सीन्स अत्यंत उत्कृष्टतेने पूर्ण केले आहेत! तुमचे अधिकृत एथर औरिक ग्रँडमास्टर प्रमाणपत्र आता अनलॉक झाले आहे!"
+  },
+  {
+    "id": "s12_sc12_wrong",
+    "filename": "s12_sc12_wrong.mp3",
+    "stage": 12,
+    "sceneIndex": 12,
+    "sceneId": "c2_s12_sc12_grandmaster_graduation",
+    "type": "wrong",
+    "script": "डिजिटल पडताळणीत कधीही तडजोड करू नका! सिस्टीम नियमांशिवाय घाई केल्यास असेंब्ली लाईन बंद पडते. नेहमी प्रत्यक्ष कामाला बारकोड स्कॅनिंगची जोड द्या!"
+  },
+  {
+    "id": "s12_sc12_victory",
+    "filename": "s12_sc12_victory.mp3",
+    "stage": 12,
+    "sceneIndex": 12,
+    "sceneId": "c2_s12_sc12_grandmaster_graduation",
+    "type": "victory",
+    "script": "उत्कृष्ट कामगिरी, ऑपरेशन्स असोसिएट! प्रत्येक इनबाउंड डिलिव्हरीची अचूक पडताळणी झाली, गुणवत्तेचे निकष काटेकोरपणे पाळले गेले, आणि बॅटरी सेल्स सुरक्षितपणे व्हॉल्टमध्ये ठेवले गेले. तुम्ही एथर औरिक वेअरहाऊसच्या सर्व स्टँडर्ड ऑपरेटिंग प्रोसिजर्समध्ये पूर्ण प्राविण्य मिळवले आहे! तुमची शिफ्ट यशस्वीपणे पूर्ण झाली. मनःपूर्वक अभिनंदन!"
+  }
+]

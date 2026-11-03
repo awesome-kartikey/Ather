@@ -38,7 +38,7 @@ export const EmployeeSessionBar: React.FC<EmployeeSessionBarProps> = ({ profile,
             {profile.name || 'Floor Operator'}
           </span>
           <span className="text-slate-400 font-mono text-[10px] leading-tight">
-            XP: {profile.xp || 0} · Streak: {profile.streak || 1}d
+            Score: {profile.xp || 0} pts · Streak: {profile.streak || 1}d
           </span>
         </div>
       </div>

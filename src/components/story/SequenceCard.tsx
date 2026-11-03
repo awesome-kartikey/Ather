@@ -9,7 +9,6 @@ import {
   GripVertical,
   Check,
   X,
-  AlertTriangle,
   ArrowRight
 } from 'lucide-react';
 import type { SequenceInteraction, LanguageCode } from '../../engine/story/types';
@@ -38,20 +37,22 @@ export const SequenceCard: React.FC<Props> = ({
   onContinue,
   onRetry,
   explanationText,
-  sopClause,
-  xpAward
+  sopClause
 }) => {
   const steps = interaction.steps || (interaction as any).items || [];
   const questionText = interaction.question || (interaction as any).prompt;
 
   // Derive authoritative chronological sequence
-  const correctIds: string[] =
-    interaction.correctOrder ||
-    (steps as any[])
-      .slice()
-      .sort((a: any, b: any) => (a.correctOrder || 0) - (b.correctOrder || 0))
-      .map((s: any) => s.id) ||
-    [];
+  const correctIds: string[] = React.useMemo(() => {
+    return (
+      interaction.correctOrder ||
+      (steps as any[])
+        .slice()
+        .sort((a: any, b: any) => (a.correctOrder || 0) - (b.correctOrder || 0))
+        .map((s: any) => s.id) ||
+      []
+    );
+  }, [interaction.correctOrder, steps]);
 
   // Initial shuffle so the user has to sort it
   const [orderedIds, setOrderedIds] = useState<string[]>(() => {
@@ -59,8 +60,49 @@ export const SequenceCard: React.FC<Props> = ({
     return [...ids].reverse();
   });
 
+  const [activeDraggingId, setActiveDraggingId] = useState<string | null>(null);
+  const [lastMovedId, setLastMovedId] = useState<string | null>(null);
+  const movedTimeoutRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const triggerMovedFlash = (id: string) => {
+    if (movedTimeoutRef.current) {
+      clearTimeout(movedTimeoutRef.current);
+    }
+    setLastMovedId(id);
+    movedTimeoutRef.current = setTimeout(() => {
+      setLastMovedId(null);
+    }, 1200);
+  };
+
+  React.useEffect(() => {
+    return () => {
+      if (movedTimeoutRef.current) {
+        clearTimeout(movedTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  // Dev-only solver sync: arranges cards into correct or wrong order when testing
+  React.useEffect(() => {
+    if (!import.meta.env.DEV) return;
+    const handleDevCardSolve = (e: Event) => {
+      const customEvent = e as CustomEvent<{ correct?: boolean }>;
+      const isTargetCorrect = customEvent.detail?.correct !== false;
+
+      if (isTargetCorrect) {
+        setOrderedIds([...correctIds]);
+      } else {
+        const wrongIds = [...correctIds].reverse();
+        setOrderedIds(wrongIds);
+      }
+    };
+    window.addEventListener('ather:dev:card-solve', handleDevCardSolve);
+    return () => window.removeEventListener('ather:dev:card-solve', handleDevCardSolve);
+  }, [correctIds]);
+
   const handleMoveUp = (index: number) => {
     if (disabled || isAnswered || index === 0) return;
+    const movedId = orderedIds[index];
     setOrderedIds((prev) => {
       const next = [...prev];
       const temp = next[index - 1];
@@ -68,10 +110,12 @@ export const SequenceCard: React.FC<Props> = ({
       next[index] = temp;
       return next;
     });
+    triggerMovedFlash(movedId);
   };
 
   const handleMoveDown = (index: number) => {
     if (disabled || isAnswered || index === orderedIds.length - 1) return;
+    const movedId = orderedIds[index];
     setOrderedIds((prev) => {
       const next = [...prev];
       const temp = next[index + 1];
@@ -79,10 +123,13 @@ export const SequenceCard: React.FC<Props> = ({
       next[index] = temp;
       return next;
     });
+    triggerMovedFlash(movedId);
   };
 
   const handleReset = () => {
     if (disabled || isAnswered) return;
+    setActiveDraggingId(null);
+    setLastMovedId(null);
     setOrderedIds([...steps.map((s: any) => s.id)].reverse());
   };
 
@@ -127,22 +174,22 @@ export const SequenceCard: React.FC<Props> = ({
             <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
             <span>
               {lang === 'hi'
-                ? 'टच स्क्रीन: सही क्रम में लगाने के लिए कार्ड को ऊपर या नीचे खींचें (या तीरों का उपयोग करें)।'
+                ? 'चरणों को पहले से अंतिम तक सही कालानुक्रम में व्यवस्थित करें।'
                 : lang === 'mr'
-                ? 'टच स्क्रीन: योग्य कालक्रमानुसार लावण्यासाठी कार्ड वर किंवा खाली ओढा (किंवा बाण वापरा).'
-                : 'Touch screen: Drag cards up or down to arrange in chronological order (or use the arrow buttons).'}
+                ? 'पायऱ्या पहिल्यापासून शेवटपर्यंत योग्य कालक्रमानुसार लावा.'
+                : 'Arrange steps in chronological sequence from first to last.'}
             </span>
           </p>
         </div>
       </div>
 
       {/* 2. Reorderable Steps List Stack (Touch-Friendly Drag & Drop) */}
-      <div className="flex-1 min-h-0 flex flex-col justify-center py-2 overflow-hidden">
+      <div className="flex-1 min-h-0 flex flex-col justify-center py-2 px-1 overflow-y-auto overflow-x-hidden">
         <Reorder.Group
           axis="y"
           values={orderedIds}
           onReorder={setOrderedIds}
-          className="flex flex-col gap-2 sm:gap-2.5 overflow-hidden"
+          className="flex flex-col gap-2 sm:gap-2.5 relative py-1"
         >
           {orderedIds.map((stepId, index) => {
             const stepItem = steps.find((s: any) => s.id === stepId);
@@ -151,31 +198,66 @@ export const SequenceCard: React.FC<Props> = ({
             const isPositionCorrect = isAnswered && correctIds[index] === stepId;
             const expectedPosition = correctIds.indexOf(stepId) + 1;
             const canDrag = !disabled && !isAnswered;
+            const isDragging = activeDraggingId === stepId;
+            const isRecentlyMoved = lastMovedId === stepId;
+            const isSiblingOfDragging = Boolean(activeDraggingId && !isDragging);
 
             return (
               <Reorder.Item
                 key={stepId}
                 value={stepId}
                 dragListener={canDrag}
-                whileDrag={{
-                  scale: 1.02,
-                  zIndex: 50,
-                  boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
-                  borderColor: '#2563eb'
+                dragElastic={0.06}
+                dragMomentum={false}
+                transition={{
+                  type: 'spring',
+                  damping: 26,
+                  stiffness: 340,
+                  mass: 0.8
                 }}
-                className={`touch-none select-none relative p-2.5 sm:p-3 rounded-xl sm:rounded-2xl border-2 transition-all flex items-center justify-between gap-3 shadow-2xs ${
+                whileDrag={{
+                  scale: 1.025,
+                  zIndex: 60
+                }}
+                onDragStart={() => setActiveDraggingId(stepId)}
+                onDragEnd={() => {
+                  setActiveDraggingId(null);
+                  triggerMovedFlash(stepId);
+                }}
+                className={`touch-none select-none relative p-2.5 sm:p-3 rounded-xl sm:rounded-2xl border-2 flex items-center justify-between gap-3 transition-[background-color,border-color,box-shadow,opacity] duration-150 ${
                   isAnswered
                     ? isPositionCorrect
-                      ? 'bg-emerald-50/70 border-emerald-400 text-emerald-950'
-                      : 'bg-rose-50/70 border-rose-300 text-rose-950'
-                    : 'bg-white border-slate-200/90 hover:border-blue-400 hover:shadow-xs text-slate-800'
-                } ${canDrag ? 'cursor-grab active:cursor-grabbing' : ''}`}
+                      ? 'bg-emerald-50/80 border-emerald-400 text-emerald-950 shadow-2xs'
+                      : 'bg-rose-50/80 border-rose-300 text-rose-950 shadow-2xs'
+                    : isDragging
+                    ? 'bg-blue-50/95 border-blue-600 ring-4 ring-blue-500/20 shadow-2xl shadow-blue-600/20 z-50 text-slate-900 cursor-grabbing'
+                    : isRecentlyMoved
+                    ? 'bg-blue-50/50 border-blue-400 ring-2 ring-blue-400/30 shadow-md text-slate-900'
+                    : isSiblingOfDragging
+                    ? 'bg-slate-50/70 border-slate-200/80 opacity-75 scale-[0.99] text-slate-700'
+                    : 'bg-white border-slate-200/90 hover:border-slate-300 hover:shadow-xs text-slate-800 shadow-2xs'
+                } ${canDrag && !isDragging ? 'cursor-grab' : ''}`}
               >
                 {/* Left Section: Drag Grip + Step Pill + Icon + Label */}
                 <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1">
                   {/* Tactile Drag Grip Indicator */}
                   {!isAnswered && (
-                    <div className="text-slate-300 hover:text-blue-600 transition-colors shrink-0 cursor-grab active:cursor-grabbing p-0.5">
+                    <div
+                      className={`shrink-0 p-1 rounded-lg transition-colors flex items-center justify-center ${
+                        isDragging
+                          ? 'text-blue-600 bg-blue-100/90'
+                          : isRecentlyMoved
+                          ? 'text-blue-500 bg-blue-50'
+                          : 'text-slate-400 hover:text-blue-600 hover:bg-slate-100'
+                      }`}
+                      title={
+                        lang === 'hi'
+                          ? 'क्रम बदलने के लिए खींचें'
+                          : lang === 'mr'
+                          ? 'क्रम बदलण्यासाठी ओढा'
+                          : 'Drag to reorder'
+                      }
+                    >
                       <GripVertical className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                   )}
@@ -187,6 +269,10 @@ export const SequenceCard: React.FC<Props> = ({
                         ? isPositionCorrect
                           ? 'bg-emerald-600 text-white'
                           : 'bg-rose-600 text-white'
+                        : isDragging
+                        ? 'bg-blue-600 text-white ring-2 ring-blue-300 ring-offset-1 scale-105 shadow-md shadow-blue-500/30'
+                        : isRecentlyMoved
+                        ? 'bg-blue-600 text-white shadow-xs'
                         : 'bg-slate-900 text-white'
                     }`}
                   >
@@ -200,13 +286,13 @@ export const SequenceCard: React.FC<Props> = ({
 
                   {/* Step Description */}
                   <div className="min-w-0 flex-1">
-                    <span className="text-xs sm:text-sm md:text-[14.5px] font-bold text-slate-900 leading-snug block truncate sm:whitespace-normal">
+                    <span className="text-xs sm:text-sm md:text-[14.5px] font-bold text-slate-900 leading-snug block">
                       {stepItem.label[lang] || stepItem.label.en}
                     </span>
                   </div>
                 </div>
 
-                {/* Right Section: In-Place Evaluation Badge (Answered) OR Tactical Arrows (Interactive) */}
+                {/* Right Section: In-Place Evaluation Badge (Answered) OR Tactical Controls (Interactive) */}
                 {isAnswered ? (
                   <div className="shrink-0 flex items-center gap-1.5">
                     {isPositionCorrect ? (
@@ -227,8 +313,35 @@ export const SequenceCard: React.FC<Props> = ({
                       </span>
                     )}
                   </div>
+                ) : isDragging ? (
+                  /* Live Slot Indicator when dragging */
+                  <div className="shrink-0 flex items-center">
+                    <span className="px-2.5 py-1 rounded-lg bg-blue-600 text-white text-[11px] font-mono font-extrabold flex items-center gap-1.5 shadow-sm">
+                      <GripVertical className="w-3.5 h-3.5" />
+                      <span>
+                        {lang === 'hi'
+                          ? `स्थान #${index + 1}`
+                          : lang === 'mr'
+                          ? `स्थान #${index + 1}`
+                          : `Slot #${index + 1}`}
+                      </span>
+                    </span>
+                  </div>
                 ) : (
-                  <div className="flex items-center gap-1 shrink-0">
+                  /* Interactive Arrow Controls & Arrival Badge */
+                  <div className="flex items-center gap-1.5 shrink-0">
+                    {isRecentlyMoved && (
+                      <span className="hidden sm:inline-flex px-2 py-0.5 rounded-md bg-blue-100 text-blue-800 border border-blue-200 text-[10px] font-mono font-bold items-center gap-1 animate-pulse">
+                        <Check className="w-3 h-3 text-blue-600 stroke-[3]" />
+                        <span>
+                          {lang === 'hi'
+                            ? `चरण #${index + 1}`
+                            : lang === 'mr'
+                            ? `पायरी #${index + 1}`
+                            : `Step #${index + 1}`}
+                        </span>
+                      </span>
+                    )}
                     <button
                       type="button"
                       disabled={disabled || index === 0}
@@ -295,7 +408,7 @@ export const SequenceCard: React.FC<Props> = ({
           className={`p-3 sm:p-3.5 rounded-2xl border transition-all space-y-2 shrink-0 ${
             isCorrect
               ? 'bg-emerald-50/90 border-emerald-300 text-emerald-950 shadow-xs'
-              : 'bg-amber-50/90 border-amber-300 text-amber-950 shadow-xs'
+              : 'bg-slate-50 border-slate-200 text-slate-900 shadow-xs'
           }`}
         >
           {/* Result Header */}
@@ -305,11 +418,11 @@ export const SequenceCard: React.FC<Props> = ({
                 className={`px-3 py-1 rounded-full text-xs font-mono font-bold flex items-center gap-1.5 shadow-2xs ${
                   isCorrect
                     ? 'bg-emerald-100 text-emerald-800 border border-emerald-300'
-                    : 'bg-amber-100 text-amber-800 border border-amber-300'
+                    : 'bg-slate-200 text-slate-700 border border-slate-300'
                 }`}
               >
-                {isCorrect ? <CheckCircle2 className="w-3.5 h-3.5" /> : <AlertTriangle className="w-3.5 h-3.5" />}
-                <span>{isCorrect ? 'Sequence SOP Compliant' : 'Sequence SOP Deviation'}</span>
+                {isCorrect ? <CheckCircle2 className="w-3.5 h-3.5" /> : <RotateCcw className="w-3.5 h-3.5" />}
+                <span>{isCorrect ? 'Sequence SOP Compliant' : 'Sequence SOP Review'}</span>
               </span>
               {sopClause && (
                 <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-500">
@@ -318,9 +431,13 @@ export const SequenceCard: React.FC<Props> = ({
               )}
             </div>
 
-            {isCorrect && xpAward && (
+            {isCorrect ? (
               <span className="px-2.5 py-0.5 rounded-full bg-emerald-200/90 text-emerald-900 text-xs font-mono font-bold">
-                +{xpAward} XP
+                +1 Point
+              </span>
+            ) : (
+              <span className="px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 text-xs font-mono font-bold">
+                {lang === 'hi' ? 'पुनः प्रयास अनुमत' : lang === 'mr' ? 'पुन्हा प्रयत्न करण्याची परवानगी' : 'Retry Allowed'}
               </span>
             )}
           </div>

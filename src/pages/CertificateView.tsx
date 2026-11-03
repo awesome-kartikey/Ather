@@ -11,16 +11,19 @@ interface Props {
   onBack: () => void;
   onNavigateHome: () => void;
   sopDoc?: string;
+  appMode?: 'receiving' | 'picking';
 }
 
 export const CertificateView: React.FC<Props> = ({
   summary,
-  lang,
+  lang: _lang,
   profile,
   onBack,
   onNavigateHome,
-  sopDoc
+  sopDoc,
+  appMode = 'receiving'
 }) => {
+  const isPicking = appMode === 'picking';
   const currentDate = React.useMemo(() => {
     return new Date().toLocaleDateString('en-IN', {
       day: '2-digit',
@@ -38,9 +41,10 @@ export const CertificateView: React.FC<Props> = ({
     window.print();
   };
 
-  const isGrandmaster = summary.packId === 'ather-all-modules';
-  const packTitleText = summary.packTitle?.[lang] || summary.packTitle?.en || 'Warehouse Floor Operations Certification';
-  const resolvedSop = sopDoc || (isGrandmaster ? 'AURIC-PRO-ALL-012 (Master Operations Suite)' : 'AURIC-PRO-001 (Floor Standard Operating Procedure)');
+  const packTitleText = isPicking
+    ? 'Order Picking & Packaging Certification'
+    : 'Warehouse Receiving & Put-Away Certification';
+  const resolvedSop = sopDoc || (isPicking ? 'AURIC-PRO-C2-008 (Line Feeding & Reverse Logistics)' : 'AURIC-PRO-C1-001 (Inbound Intake & Stowage Protocol)');
 
   return (
     <div className="min-h-screen bg-slate-100/90 text-slate-900 flex flex-col font-sans select-none print:bg-white print:p-0">
@@ -192,7 +196,7 @@ export const CertificateView: React.FC<Props> = ({
                   {packTitleText}
                 </span>
                 <span className="text-[11px] text-slate-600">
-                  {isGrandmaster ? '12 Modules · 91 Operational Slices' : 'Standard Factory Simulation DOJO'}
+                  {isPicking ? '5 Modules · 39 Operational Slices' : '7 Modules · 52 Operational Slices'}
                 </span>
               </div>
 
@@ -216,7 +220,7 @@ export const CertificateView: React.FC<Props> = ({
                   {summary.accuracyPct}% Accuracy
                 </span>
                 <span className="text-[11px] font-mono text-slate-500">
-                  {summary.xpGained} XP Earned · Zero Violations
+                  {summary.correctSteps} / {summary.totalSteps} Points Scored · Zero Violations
                 </span>
               </div>
             </div>

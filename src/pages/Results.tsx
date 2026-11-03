@@ -12,6 +12,7 @@ interface Props {
   onViewCertificate: () => void;
   onRestart: () => void;
   onNavigateHome: () => void;
+  appMode?: 'receiving' | 'picking';
 }
 
 export const Results: React.FC<Props> = ({
@@ -20,8 +21,10 @@ export const Results: React.FC<Props> = ({
   profile,
   onViewCertificate,
   onRestart,
-  onNavigateHome
+  onNavigateHome,
+  appMode = 'receiving'
 }) => {
+  const isPicking = appMode === 'picking';
   const percentage = summary.accuracyPct;
   const passed = percentage >= 80;
   const [showMistakes, setShowMistakes] = useState(false);
@@ -60,8 +63,12 @@ export const Results: React.FC<Props> = ({
               Ather AURIC Plant M002 · Floor Competency Scorecard
             </span>
           </div>
-          <span className="text-xs font-mono font-extrabold text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
-            SOP Standard Assessment
+          <span className={`text-xs font-mono font-extrabold px-3 py-1 rounded-full border ${
+            isPicking
+              ? 'text-blue-700 bg-blue-50 border-blue-200'
+              : 'text-emerald-700 bg-emerald-50 border-emerald-200'
+          }`}>
+            {isPicking ? 'Order Picking & Packaging' : 'Warehouse Receiving & Put-Away'}
           </span>
         </div>
       </header>
@@ -121,8 +128,8 @@ export const Results: React.FC<Props> = ({
               </div>
 
               <div className="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/80">
-                <span className="text-[10px] font-mono text-slate-400 font-extrabold uppercase">XP Gained</span>
-                <p className="text-2xl sm:text-3xl font-black text-emerald-600 mt-0.5">+{summary.xpGained}</p>
+                <span className="text-[10px] font-mono text-slate-400 font-extrabold uppercase">Points Scored</span>
+                <p className="text-2xl sm:text-3xl font-black text-emerald-600 mt-0.5">{summary.correctSteps} / {summary.totalSteps} pts</p>
               </div>
 
               <div className="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/80">
@@ -220,7 +227,7 @@ export const Results: React.FC<Props> = ({
                         className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-extrabold text-slate-800 shadow-2xs"
                       >
                         <span className="text-base">{b.icon}</span>
-                        <span>{b.title[lang]}</span>
+                        <span>{(b.title as any)[lang] || b.title.en}</span>
                       </span>
                     );
                   })}

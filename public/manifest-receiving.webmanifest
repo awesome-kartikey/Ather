@@ -1,0 +1,29 @@
+{
+  "name": "Warehouse Receiving & Put-Away - Ather Energy",
+  "short_name": "Receiving & Put-Away",
+  "description": "Ather Energy AURIC Plant M002 - Inbound Warehouse Receiving, IQC & Put-Away Training SOPs (Modules 1-7)",
+  "start_url": "/#receiving",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "theme_color": "#047857",
+  "background_color": "#f8fafc",
+  "icons": [
+    {
+      "src": "/icons/icon-receiving.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,10 +1,5 @@
-import { useState } from 'react';
 import { motion } from 'motion/react';
-import {
-  ChevronRight,
-  Layers,
-  ShieldCheck
-} from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { AtherCapsuleLogo } from '../components/common/AtherCapsuleLogo';
 import { LanguageSwitcher } from '../components/common/LanguageSwitcher';
 import type { LanguageCode } from '../engine/types';
@@ -14,6 +9,8 @@ interface LandingPageProps {
   onSelectLang: (lang: LanguageCode) => void;
   onStartTraining: () => void;
   onLaunchModule: (stageIndex: number) => void;
+  onOpenAdmin?: () => void;
+  appMode?: 'receiving' | 'picking';
 }
 
 interface ModuleInfo {
@@ -218,17 +215,20 @@ export const LandingPage: React.FC<LandingPageProps> = ({
   lang,
   onSelectLang,
   onStartTraining,
-  onLaunchModule
+  onLaunchModule,
+  onOpenAdmin,
+  appMode = 'receiving'
 }) => {
-  const [activeCategoryTab, setActiveCategoryTab] = useState<1 | 2>(1);
+  const activeCategoryTab: 1 | 2 = appMode === 'picking' ? 2 : 1;
+  const isPicking = appMode === 'picking';
 
   const filteredModules = MODULES_DATA.filter((m) => m.category === activeCategoryTab);
 
   return (
     <div className="min-h-[100dvh] w-full overflow-x-hidden bg-slate-50 text-slate-900 font-sans relative flex flex-col justify-between">
       {/* Background ambient lighting orbs */}
-      <div className="fixed top-[-20%] left-[-10%] w-[800px] h-[800px] bg-blue-400/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="fixed bottom-[-20%] right-[-10%] w-[800px] h-[800px] bg-emerald-400/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className={`fixed top-[-20%] left-[-10%] w-[800px] h-[800px] ${isPicking ? 'bg-blue-400/10' : 'bg-emerald-400/10'} rounded-full blur-[120px] pointer-events-none`} />
+      <div className="fixed bottom-[-20%] right-[-10%] w-[800px] h-[800px] bg-slate-400/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="fixed inset-0 bg-[url('/noise.svg')] opacity-[0.025] pointer-events-none" />
 
       {/* ── Top Bar: Dual Branding & Language Switcher (Clean 48px Header) ── */}
@@ -251,9 +251,31 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               Tetrahedron
             </span>
           </a>
+
+          <div className="h-4 w-px bg-slate-300 hidden md:block" />
+
+          {/* App Badge */}
+          <span className={`hidden md:inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-mono font-black uppercase tracking-wider ${
+            isPicking
+              ? 'bg-blue-50 text-blue-800 border border-blue-200'
+              : 'bg-emerald-50 text-emerald-800 border border-emerald-200'
+          }`}>
+            {isPicking ? 'Order Picking & Packaging' : 'Warehouse Receiving & Put-Away'}
+          </span>
         </div>
 
         <div className="flex items-center gap-3">
+          {onOpenAdmin && (
+            <button
+              type="button"
+              onClick={onOpenAdmin}
+              className="px-2.5 py-1.5 rounded-lg text-xs font-mono font-bold bg-slate-900 text-slate-200 hover:bg-slate-800 border border-slate-700 transition-colors flex items-center gap-1.5 shadow-2xs cursor-pointer"
+              title="Open Admin & Telemetry Console"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Admin Console</span>
+            </button>
+          )}
           <LanguageSwitcher currentLang={lang} onSelectLang={onSelectLang} />
         </div>
       </header>
@@ -266,25 +288,42 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className="flex flex-col items-center space-y-3 max-w-2xl mx-auto"
         >
-          {/* Main Title - Single punchy statement */}
+          {/* Main Title - Branded for Specific PWA */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-tight">
-            Warehouse SOP{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700">
-              Training DOJO
-            </span>
+            {isPicking ? (
+              <>
+                Order Picking &amp;{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700">
+                  Packaging DOJO
+                </span>
+              </>
+            ) : (
+              <>
+                Warehouse Receiving &amp;{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700">
+                  Put-Away DOJO
+                </span>
+              </>
+            )}
           </h1>
 
-          {/* Subtitle - Single clear line */}
+          {/* Subtitle */}
           <p className="text-sm sm:text-base text-slate-600 font-medium max-w-xl">
-            Interactive digital SOP simulation station for floor operators at Ather AURIC plant.
+            {isPicking
+              ? 'Interactive vehicle line feeding, paint decanting, order picking, and reverse logistics simulations for Ather AURIC Plant M002.'
+              : 'Interactive vehicle gate check, DEO document triage, SAP ERP intake, and high-rise put-away simulations for Ather AURIC Plant M002.'}
           </p>
 
-          {/* Primary Action Button - Cleanly anchored directly beneath */}
+          {/* Primary Action Button */}
           <div className="pt-2">
             <button
               type="button"
               onClick={onStartTraining}
-              className="min-h-[50px] px-8 py-3 text-base sm:text-lg font-extrabold text-white transition-all duration-300 bg-blue-600 hover:bg-blue-700 rounded-xl shadow-md shadow-blue-500/20 active:scale-98 cursor-pointer flex items-center gap-2"
+              className={`min-h-[50px] px-8 py-3 text-base sm:text-lg font-extrabold text-white transition-all duration-300 rounded-xl shadow-md active:scale-98 cursor-pointer flex items-center gap-2 ${
+                isPicking
+                  ? 'bg-blue-600 hover:bg-blue-700 shadow-blue-500/20'
+                  : 'bg-emerald-600 hover:bg-emerald-700 shadow-emerald-500/20'
+              }`}
             >
               <span>Enter DOJO Station</span>
               <ChevronRight className="w-5 h-5" />
@@ -292,46 +331,20 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           </div>
         </motion.div>
 
-        {/* ── 12-Module Interactive Grid Launcher ─────────────────────── */}
+        {/* ── Targeted Modules Grid Launcher (Zero cross-category leakage) ── */}
         <section className="w-full mt-10 text-left">
-          {/* Category Tabs */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6">
+          <div className="flex items-center justify-between gap-3 mb-6">
             <div>
               <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
-                Floor Operations Roster
+                {isPicking
+                  ? 'Order Picking & Packaging Modules (SOP 08 – 12)'
+                  : 'Warehouse Receiving & Put-Away Modules (SOP 01 – 07)'}
               </h3>
               <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
-                Select any operational module below to enter targeted simulation training.
+                {isPicking
+                  ? 'Master all 5 Outbound Standard Operating Procedures with 100% SOP accuracy.'
+                  : 'Master all 7 Inbound Standard Operating Procedures with 100% SOP accuracy.'}
               </p>
-            </div>
-
-            {/* Category Tabs */}
-            <div className="flex items-center gap-2 p-1 bg-white rounded-2xl border border-slate-200/90 shadow-2xs">
-              <button
-                type="button"
-                onClick={() => setActiveCategoryTab(1)}
-                className={`min-h-[44px] px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer flex items-center gap-2 ${
-                  activeCategoryTab === 1
-                    ? 'bg-blue-600 text-white shadow-sm'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-                }`}
-              >
-                <Layers className="w-4 h-4" />
-                <span>Cat 1: Inbound &amp; Stowage (M1–M7)</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setActiveCategoryTab(2)}
-                className={`min-h-[44px] px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer flex items-center gap-2 ${
-                  activeCategoryTab === 2
-                    ? 'bg-blue-600 text-white shadow-sm'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-                }`}
-              >
-                <ShieldCheck className="w-4 h-4" />
-                <span>Cat 2: Line Feed &amp; Reverse (M8–M12)</span>
-              </button>
             </div>
           </div>
 

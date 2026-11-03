@@ -32,7 +32,7 @@
             "hi": "नमस्ते! आपूर्तिकर्ता का एक ट्रक अभी AURIC के मुख्य गेट पर पहुंचा है। बूम बैरियर खोलने से पहले, चालक को कहां रुकना चाहिए?",
             "mr": "नमस्ते! सप्लायरचा एक ट्रक नुकताच AURIC च्या मुख्य गेटवर आला आहे. बूम बॅरियर उघडण्यापूर्वी, चालकाने कुठे थांबले पाहिजे?"
           },
-          "audioSrc": "/audio/voiceover_neerja/ACT-01-AURA-WELCOME.mp3"
+          "audioSrc": "/audio/voiceover/s01_sc01_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
@@ -41,7 +41,7 @@
             "hi": "बिल्कुल सही! SOP क्लॉज 4.1.1 के अनुसार चालक को इंजन बंद करके निर्धारित वेटिंग यार्ड में पार्क करना होगा और पैदल सुरक्षा डेस्क पर जाना होगा।",
             "mr": "अगदी बरोबर! SOP कलम 4.1.1 नुसार चालकाने इंजिन बंद करून नियुक्त वेटिंग एरियामध्ये गाडी पार्क केली पाहिजे आणि पायी सुरक्षा डेस्कवर गेले पाहिजे."
           },
-          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q01-CORRECT.mp3"
+          "audioSrc": "/audio/voiceover/s01_sc01_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -50,7 +50,7 @@
             "hi": "सावधान! ट्रक को कभी भी सीधे अंदर नहीं जाना चाहिए और न ही इंजन चालू छोड़ना चाहिए। वाहन को इंजन बंद करके वेटिंग यार्ड में पार्क करना अनिवार्य है।",
             "mr": "लक्ष द्या! ट्रक कधीही थेट आत नेऊ नये किंवा इंजिन चालू ठेवू नये. वाहने इंजिन बंद करून नियुक्त वेटिंग भागातच पार्क केली पाहिजेत."
           },
-          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q01-WRONG.mp3"
+          "audioSrc": "/audio/voiceover/s01_sc01_wrong.mp3"
         }
       },
       "interaction": {
@@ -97,7 +97,7 @@
           "mr": "ट्रक गेटवर पोहोचतो. चालक सर्वप्रथम वाहन कुठे पार्क करतो?"
         },
         "id": "c1-q01",
-        "audioSrc": "/audio/voiceover_neerja/ACT-01-Q01-PROMPT.mp3"
+        "audioSrc": "/audio/voiceover/s01_sc01_prompt.mp3"
       },
       "rules": {
         "xp": 100,
@@ -132,7 +132,7 @@
             "hi": "चालक 5 भौतिक दस्तावेज लेकर गेटहाउस के अंदर आ गया है। आइए सुनिश्चित करें कि प्रत्येक दस्तावेज़ सही डेस्क पर जमा किया जाए!",
             "mr": "चालक 5 प्रत्यक्ष कागदपत्रे घेऊन गेटहाऊसमध्ये आला आहे. चला खात्री करूया की प्रत्येक कागदपत्र योग्य डेस्कवर जमा केले जाईल!"
           },
-          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q02-PROMPT.mp3"
+          "audioSrc": "/audio/voiceover/s01_sc02_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
@@ -141,7 +141,7 @@
             "hi": "उत्कृष्ट छँटाई! सुरक्षा कर्मी व्यक्तिगत चालक और वाहन दस्तावेजों की जांच करते हैं, जबकि DEO गेट पास जनरेट करने के लिए शिपिंग दस्तावेजों को प्रोसेस करता है।",
             "mr": "उत्कृष्ट वर्गीकरण! सुरक्षा रक्षक वैयक्तिक चालक आणि वाहन कागदपत्रे तपासतात, तर DEO गेट पास तयार करण्यासाठी शिपिंग कागदपत्रे प्रोसेस करतात."
           },
-          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q02-CORRECT.mp3"
+          "audioSrc": "/audio/voiceover/s01_sc02_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -150,7 +150,7 @@
             "hi": "ध्यान दें! शिपिंग दस्तावेज़ (PO, ASN, टैक्स इनवॉइस) SAP प्रोसेसिंग के लिए DEO के पास जाने चाहिए, जबकि DL और RC सुरक्षा कर्मी के पास।",
             "mr": "लक्ष द्या! शिपिंग कागदपत्रे (PO, ASN, टॅक्स इन्व्हॉइस) SAP प्रोसेसिंगसाठी DEO कडे जाणे आवश्यक आहे, तर DL आणि RC सुरक्षा रक्षकाकडे."
           },
-          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q02-WRONG.mp3"
+          "audioSrc": "/audio/voiceover/s01_sc02_wrong.mp3"
         }
       },
       "interaction": {
@@ -244,7 +244,8 @@
           "hi": "प्रत्येक आने वाले दस्तावेज़ को सही रिसेप्शन डेस्क पर छाँटें:",
           "mr": "प्रत्येक येणाऱ्या कागदपत्राचे योग्य रिसेप्शन डेस्कवर वर्गीकरण करा:"
         },
-        "id": "c1-q02"
+        "id": "c1-q02",
+        "audioSrc": "/audio/voiceover/s01_sc02_prompt.mp3"
       },
       "rules": {
         "xp": 100,
@@ -277,7 +278,8 @@
             "en": "Look at the DEO's screen! They have opened SAP GUI. By entering the vendor invoice, SAP checks if the physical delivery matches the digital ASN.",
             "hi": "DEO की स्क्रीन देखें! उन्होंने SAP GUI खोला है। विक्रेता इनवॉइस दर्ज करके, SAP जांचता है कि क्या भौतिक डिलीवरी डिजिटल ASN से मेल खाती है।",
             "mr": "DEO ची स्क्रीन पहा! त्यांनी SAP GUI उघडले आहे. व्हेंडर इन्व्हॉइस टाकून, SAP तपासते की प्रत्यक्ष डिलिव्हरी डिजिटल ASN शी जुळते का."
-          }
+          },
+          "audioSrc": "/audio/voiceover/s01_sc03_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
@@ -285,7 +287,8 @@
             "en": "Spot on! YMM_GATE_ENTRY auto-fills shipment data from the ASN. If the ASN doesn't match, gate entry is halted — zero manual overrides for bad data!",
             "hi": "बिल्कुल सही! YMM_GATE_ENTRY ASN से शिपमेंट डेटा स्वतः भरता है। यदि ASN मेल नहीं खाता है, तो गेट एंट्री रोक दी जाती है — गलत डेटा के लिए कोई मैन्युअल ओवरराइड नहीं!",
             "mr": "अगदी बरोबर! YMM_GATE_ENTRY ASN मधून शिपमेंट माहिती आपोआप भरते. ASN जुळले नाही तर गेट एंट्री थांबवली जाते — चुकीच्या डेटासाठी कोणतीही मॅन्युअल सवलत नाही!"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s01_sc03_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -293,7 +296,8 @@
             "en": "Careful! In AURIC, there is zero manual override for mismatched paperwork. If the ASN is wrong, gate entry cannot proceed.",
             "hi": "सावधान! AURIC में बेमेल कागजी कार्रवाई के लिए कोई मैन्युअल ओवरराइड नहीं है। यदि ASN गलत है, तो गेट एंट्री आगे नहीं बढ़ सकती।",
             "mr": "लक्ष द्या! AURIC मध्ये कागदपत्रांमध्ये तफावत असल्यास कोणतीही मॅन्युअल सवलत दिली जात नाही. ASN चुकीचे असल्यास गेट एंट्री पुढे जाऊ शकत नाही."
-          }
+          },
+          "audioSrc": "/audio/voiceover/s01_sc03_wrong.mp3"
         }
       },
       "interaction": {
@@ -339,7 +343,8 @@
           "hi": "DEO YMM_GATE_ENTRY में विक्रेता इनवॉइस दर्ज करता है। इस ट्रांजैक्शन की क्या भूमिका है, और यदि ASN गलत हो तो क्या होता है?",
           "mr": "DEO YMM_GATE_ENTRY मध्ये व्हेंडर इन्व्हॉइस टाकतो. या ट्रांझॅक्शनची भूमिका काय आहे, आणि ASN चुकीचे असल्यास काय होते?"
         },
-        "id": "c1-q03"
+        "id": "c1-q03",
+        "audioSrc": "/audio/voiceover/s01_sc03_prompt.mp3"
       },
       "rules": {
         "xp": 100,
@@ -374,7 +379,7 @@
             "hi": "DEO YPR_GATEENTRY चलाता है! प्रिंटर विंडशील्ड बारकोड पास प्रिंट करता है जबकि चालक स्टेटस टीवी देखता है। क्या आप चालक के गेट यात्रा चरणों को सही कालानुक्रमिक क्रम में लगा सकते हैं?",
             "mr": "DEO YPR_GATEENTRY चालवतो! प्रिंटर विंडशील्ड बारकोड पास प्रिंट करतो तर चालक स्टेटस टीव्ही पाहतो. तुम्ही चालकाच्या गेट प्रवासाच्या पायऱ्या योग्य कालक्रमानुसार लावू शकता का?"
           },
-          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q04-PROMPT.mp3"
+          "audioSrc": "/audio/voiceover/s01_sc04_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
@@ -383,7 +388,7 @@
             "hi": "उत्कृष्ट क्रम! सटीक क्रम का पालन करने से (पार्क ➔ क्रेडेंशियल्स ➔ ERP सत्यापन ➔ बारकोड पास ➔ डॉक प्रस्थान) गेट पर जाम नहीं लगता और 100% ट्रैसबिलिटी सुनिश्चित होती है।",
             "mr": "उत्कृष्ट क्रम! अचूक क्रमाचे पालन केल्याने (पार्क ➔ कागदपत्रे ➔ ERP पडताळणी ➔ बारकोड पास ➔ डॉककडे जाणे) गेटवर गर्दी होत नाही आणि साहित्याची 100% खात्रीशीर नोंद राहते."
           },
-          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q04-CORRECT.mp3"
+          "audioSrc": "/audio/voiceover/s01_sc04_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -392,7 +397,7 @@
             "hi": "रुकिए! प्रिंटेड बारकोड पास प्राप्त करने से पहले चालक डॉक पर नहीं जा सकता। आइए चरणों को सटीक SOP क्रम में व्यवस्थित करें।",
             "mr": "थांबा! प्रिंट केलेला बारकोड पास घेतल्याशिवाय चालक डॉककडे जाऊ शकत नाही. चला पायऱ्या अचूक SOP क्रमाने लावूया."
           },
-          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q04-WRONG.mp3"
+          "audioSrc": "/audio/voiceover/s01_sc04_wrong.mp3"
         }
       },
       "interaction": {
@@ -468,7 +473,8 @@
           "hi": "चालक की गेट एंट्री यात्रा को सही कालानुक्रमिक क्रम में व्यवस्थित करें:",
           "mr": "चालकाच्या गेट एंट्री प्रवासाची योग्य कालक्रमानुसार मांडणी करा:"
         },
-        "id": "c1-q04"
+        "id": "c1-q04",
+        "audioSrc": "/audio/voiceover/s01_sc04_prompt.mp3"
       },
       "rules": {
         "xp": 100,
@@ -501,7 +507,8 @@
             "en": "The DEO executes YMM_DOCK_ALLOCATE! Based on our shipment of vehicle mechanical parts, which warehouse dock on the AURIC plant layout must be allocated?",
             "hi": "DEO YMM_DOCK_ALLOCATE चलाता है! हमारे वाहन मैकेनिकल पार्ट्स के शिपमेंट के आधार पर, AURIC प्लांट लेआउट पर कौन सा वेयरहाउस डॉक आवंटित किया जाना चाहिए?",
             "mr": "DEO YMM_DOCK_ALLOCATE चालवतो! आपल्या वाहनाच्या मेकॅनिकल पार्ट्सच्या डिलिव्हरीनुसार, AURIC प्लांट लेआउटवर कोणता वेअरहाऊस डॉक वाटप केला पाहिजे?"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s01_sc05_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
@@ -509,7 +516,8 @@
             "en": "Spot on! Dock 04 in Inbound Bay B is designated for vehicle assembly components. Dock 01 is reserved for battery cells and Dock 06 for hazardous chemicals.",
             "hi": "बिल्कुल सही! इनबाउंड बे B में डॉक 04 वाहन असेंबली घटकों के लिए निर्धारित है। डॉक 01 बैटरी सेल और डॉक 06 खतरनाक रसायनों के लिए आरक्षित है।",
             "mr": "अगदी बरोबर! इनबाउंड बे B मधील डॉक 04 वाहन असेंब्ली सुट्या भागांसाठी नियुक्त केला आहे. डॉक 01 बॅटरी सेलसाठी आणि डॉक 06 घातक रसायनांसाठी राखीव आहे."
-          }
+          },
+          "audioSrc": "/audio/voiceover/s01_sc05_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -517,7 +525,8 @@
             "en": "Careful! Dock 01 is an environmentally controlled vault for battery cells only, and Dock 06 is for chemicals. Vehicle parts belong at Dock 04 (Bay B).",
             "hi": "सावधान! डॉक 01 केवल बैटरी सेल के लिए नियंत्रित वॉल्ट है, और डॉक 06 रसायनों के लिए है। वाहन के पार्ट्स डॉक 04 (बे B) में जाने चाहिए।",
             "mr": "लक्ष द्या! डॉक 01 फक्त बॅटरी सेलसाठी नियंत्रित वॉल्ट आहे, आणि डॉक 06 रसायनांसाठी आहे. वाहनाचे पार्ट्स डॉक 04 (बे B) वर गेले पाहिजेत."
-          }
+          },
+          "audioSrc": "/audio/voiceover/s01_sc05_wrong.mp3"
         }
       },
       "interaction": {
@@ -583,7 +592,8 @@
           "hi": "DEO वाहन असेंबली पार्ट्स के लिए YMM_DOCK_ALLOCATE चलाता है। AURIC प्लांट लेआउट पर सही आवंटित बे और डॉक पर टैप करें:",
           "mr": "DEO वाहन असेंब्ली सुट्या भागांसाठी YMM_DOCK_ALLOCATE चालवतो. AURIC प्लांट लेआउटवर योग्य वाटप केलेले बे आणि डॉक टॅप करा:"
         },
-        "id": "c1-q05"
+        "id": "c1-q05",
+        "audioSrc": "/audio/voiceover/s01_sc05_prompt.mp3"
       },
       "rules": {
         "xp": 100,
@@ -620,7 +630,7 @@
             "hi": "ट्रक बे B, डॉक 04 पर खड़ा हो गया है! चाबियां और इनवॉइस सौंपने तथा अनलोडिंग शुरू करने से पहले, वाहन में एक महत्वपूर्ण सुरक्षा उल्लंघन का निरीक्षण करें।",
             "mr": "ट्रक बे B, डॉक 04 वर लागला आहे! चाव्या आणि इन्व्हॉइस देण्यापूर्वी तसेच अनलोडिंग सुरू करण्यापूर्वी, वाहनातील एका गंभीर सुरक्षा उल्लंघनाची तपासणी करा."
           },
-          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q05-PROMPT.mp3"
+          "audioSrc": "/audio/voiceover/s01_sc06_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
@@ -629,7 +639,7 @@
             "hi": "जीवनरक्षक निरीक्षण! SOP क्लॉज 4.1.5 के अनुसार पिछले पहियों के नीचे भारी रबर व्हील चॉक्स लगाना अनिवार्य है ताकि फोर्कलिफ्ट प्रवेश करते समय ट्रेलर आगे न लुढ़के।",
             "mr": "जीव वाचवणारी तत्परता! SOP कलम 4.1.5 नुसार मागील चाकांखाली जड रबर व्हील चॉक्स बसवणे बंधनकारक आहे, जेणेकरून फोर्कलिफ्ट आत शिरताना ट्रेलर पुढे घसरणार नाही."
           },
-          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q05-CORRECT.mp3"
+          "audioSrc": "/audio/voiceover/s01_sc06_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -638,7 +648,7 @@
             "hi": "उच्च खतरे की चेतावनी! यदि 3-टन फोर्कलिफ्ट बिना चॉक्स वाले ट्रेलर में जाती है, तो ट्रेलर आगे खिसक जाएगा और फोर्कलिफ्ट डॉक गैप में गिर सकती है!",
             "mr": "अतिधोक्याचा इशारा! जर 3-टन वजनाची फोर्कलिफ्ट चॉक्स नसलेल्या ट्रकमध्ये गेली, तर ट्रक पुढे सरकेल आणि फोर्कलिफ्ट डॉकच्या दरीत कोसळू शकते!"
           },
-          "audioSrc": "/audio/voiceover_neerja/ACT-01-Q05-WRONG.mp3"
+          "audioSrc": "/audio/voiceover/s01_sc06_wrong.mp3"
         }
       },
       "interaction": {
@@ -704,7 +714,8 @@
           "hi": "महत्वपूर्ण सुरक्षा ऑडिट: चाबियां स्वीकारने और अनलोडिंग शुरू करने से पहले तुरंत सुरक्षा उल्लंघन को पहचानें:",
           "mr": "गंभीर सुरक्षा ऑडिट: चाव्या स्वीकारण्यापूर्वी आणि अनलोडिंग सुरू करण्यापूर्वी तत्काळ होणारे सुरक्षा उल्लंघन ओळखा:"
         },
-        "id": "c1-q06"
+        "id": "c1-q06",
+        "audioSrc": "/audio/voiceover/s01_sc06_prompt.mp3"
       },
       "rules": {
         "xp": 100,
@@ -736,7 +747,8 @@
             "en": "Unloading is done! The truck has loaded 20 empty blue FLC bins to return to the vendor. At the exit gate, the driver demands: 'Open the boom barrier, these are just Ather's empty bins!' What must you do?",
             "hi": "अनलोडिंग पूरी हो गई! ट्रक ने वेंडर को वापस करने के लिए 20 खाली नीले FLC डिब्बे लोड किए हैं। एग्जिट गेट पर चालक कहता है: 'बूम बैरियर खोलिए, ये सिर्फ एथर के खाली डिब्बे हैं!' आपको क्या करना चाहिए?",
             "mr": "अनलोडिंग पूर्ण झाले! ट्रकने व्हेंडरला परत करण्यासाठी 20 रिकामे निळे FLC डबे लोड केले आहेत. एक्झिट गेटवर चालक म्हणतो: 'बूम बॅरियर उघडा, हे फक्त अथरचे रिकामे डबे आहेत!' तुम्ही काय केले पाहिजे?"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s01_sc07_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
@@ -744,7 +756,8 @@
             "en": "Brilliant vigilance! SOP Clause 4.1.6.2 & 4.2.4 strictly enforce that returnable bins/FLCs require an authorized manual Delivery Challan (DC) and SAP YMM_GATE_EXIT clearance before the exit gate barrier opens!",
             "hi": "शानदार सतर्कता! SOP क्लॉज 4.1.6.2 और 4.2.4 का सख्त नियम: एग्जिट गेट बैरियर खोलने से पहले रिटर्नेबल डिब्बे/FLC के लिए अधिकृत मैनुअल डिलीवरी चालान (DC) और SAP YMM_GATE_EXIT क्लीयरेंस अनिवार्य है!",
             "mr": "उत्कृष्ट सतर्कता! SOP कलम 4.1.6.2 आणि 4.2.4 नुसार एक्झिट गेट बॅरियर उघडण्यापूर्वी रिटर्नेबल डबे/FLC साठी अधिकृत मॅन्युअल डिलिव्हरी चलन (DC) आणि SAP YMM_GATE_EXIT क्लिअरन्स अनिवार्य आहे!"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s01_sc07_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -752,7 +765,8 @@
             "en": "Stop! Never raise the barrier without a manual Delivery Challan (DC). Empty FLC bins are valuable Ather company assets. Without a DC, thousands of rupees of packaging exit untracked!",
             "hi": "रुकिए! मैनुअल डिलीवरी चालान (DC) के बिना कभी बैरियर न उठाएं। खाली FLC डिब्बे एथर कंपनी की मूल्यवान संपत्ति हैं। बिना DC के, हजारों रुपये की पैकेजिंग बिना रिकॉर्ड के बाहर चली जाएगी!",
             "mr": "थांबा! मॅन्युअल डिलिव्हरी चलन (DC) शिवाय बॅरियर कधीही उघडू नका. रिकामे FLC डबे ही अथर कंपनीची मौल्यवान मालमत्ता आहे. DC शिवाय हजारो रुपयांचे पॅकेजिंग नोंदीविना बाहेर जाईल!"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s01_sc07_wrong.mp3"
         }
       },
       "interaction": {
@@ -795,7 +809,8 @@
           "hi": "निर्णय गेट: चालक बिना मैनुअल डिलीवरी चालान (DC) के 20 खाली FLC डिब्बों के साथ निकलना चाहता है:",
           "mr": "निर्णय गेट: चालक मॅन्युअल डिलिव्हरी चलन (DC) शिवाय 20 रिकाम्या FLC डब्यांसह बाहेर पडू इच्छितो:"
         },
-        "id": "c1-q07"
+        "id": "c1-q07",
+        "audioSrc": "/audio/voiceover/s01_sc07_prompt.mp3"
       },
       "rules": {
         "xp": 100,
@@ -829,7 +844,8 @@
             "en": "Attention DEO! The driver presents an invoice for 50 battery harnesses, but the digital Advanced Shipping Notice (ASN) in SAP lists 40 pieces under PO 4500018920. Can gate entry proceed under SOP Clause 4.2.1?",
             "hi": "ध्यान दें DEO! चालक 50 बैटरी हार्नेस के लिए एक चालान प्रस्तुत करता है, लेकिन SAP में डिजिटल उन्नत शिपिंग सूचना (ASN) PO 4500018920 के तहत 40 टुकड़े सूचीबद्ध करती है। क्या SOP क्लॉज 4.2.1 के तहत गेट एंट्री आगे बढ़ सकती है?",
             "mr": "DEO लक्ष द्या! चालक 50 बॅटरी हार्नेसचे इनव्हॉईस सादर करतो, परंतु SAP मधील डिजिटल ॲडव्हान्स्ड शिपिंग नोटीस (ASN) PO 4500018920 अंतर्गत 40 नग दाखवते. SOP कलम 4.2.1 नुसार गेट एंट्री करता येईल का?"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s01_sc08_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
@@ -837,7 +853,8 @@
             "en": "Correct decision! Never generate a gate pass for a mismatched ASN. The DEO halts the transaction and alerts the Inbound Gate Incharge (1-Hour SLA) to resolve the vendor ASN discrepancy.",
             "hi": "सही निर्णय! बेमेल ASN के लिए कभी भी गेट पास न बनाएं। DEO लेनदेन रोकता है और विक्रेता ASN विसंगति को हल करने के लिए इनबाउंड गेट प्रभारी (1-घंटे का SLA) को सचेत करता है।",
             "mr": "योग्य निर्णय! चुकीच्या ASN साठी कधीही गेट पास तयार करू नका. DEO व्यवहार थांबवतो आणि व्हेंडर ASN तफावत सोडवण्यासाठी इनबाउंड गेट प्रमुखाला (1-तासाची मुदत) सूचना देतो."
-          }
+          },
+          "audioSrc": "/audio/voiceover/s01_sc08_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -845,7 +862,8 @@
             "en": "Violation! Generating a gate pass with an incorrect ASN creates major inventory mismatches in SAP ERP that block IQC receiving and vendor payment clearance.",
             "hi": "उल्लंघन! गलत ASN के साथ गेट पास बनाने से SAP ERP में बड़ी इन्वेंट्री विसंगतियां पैदा होती हैं जो IQC प्राप्ति और विक्रेता भुगतान निकासी को रोकती हैं।",
             "mr": "नियमभंग! चुकीच्या ASN सह गेट पास दिल्यास SAP ERP मध्ये मोठी तफावत होते, ज्यामुळे IQC तपासणी आणि व्हेंडर पेमेंट अडकते."
-          }
+          },
+          "audioSrc": "/audio/voiceover/s01_sc08_wrong.mp3"
         }
       },
       "interaction": {
@@ -888,7 +906,8 @@
           "hi": "निर्णय गेट: भौतिक चालान मात्रा SAP में डिजिटल ASN से भिन्न है:",
           "mr": "निर्णय गेट: प्रत्यक्ष इनव्हॉईसमधील संख्या SAP मधील डिजिटल ASN शी जुळत नाही:"
         },
-        "id": "c1-q06-asn-discrepancy"
+        "id": "c1-q06-asn-discrepancy",
+        "audioSrc": "/audio/voiceover/s01_sc08_prompt.mp3"
       },
       "rules": {
         "xp": 110,
@@ -921,7 +940,8 @@
             "en": "A scheduled chassis frame truck reports at Gate 01. However, the SAP inventory screen indicates that High-Rise Rack storage for frames is already at 100% maximum capacity! What is the mandatory DEO action under SOP Clause 4.2.1?",
             "hi": "गेट 01 पर एक निर्धारित चेसिस फ्रेम ट्रक की रिपोर्ट है। हालांकि, SAP इन्वेंट्री स्क्रीन इंगित करती है कि फ्रेम के लिए हाई-राइज रैक स्टोरेज पहले से ही 100% अधिकतम क्षमता पर है! SOP क्लॉज 4.2.1 के तहत अनिवार्य DEO कार्रवाई क्या है?",
             "mr": "गेट 01 वर चेसिस फ्रेमचा ट्रक आला आहे. परंतु SAP स्क्रीनवर दिसते की हाय-राईज रॅकमधील जागा 100% पूर्ण भरलेली आहे! SOP कलम 4.2.1 नुसार DEO ने कोणती अधिकृत कृती केली पाहिजे?"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s01_sc09_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
@@ -929,7 +949,8 @@
             "en": "Spot-on! The truck remains in the designated waiting parking area until line assembly consumes existing stock and clears warehouse pallet positions. Dumping material on dock gangways is strictly forbidden.",
             "hi": "बिल्कुल सही! ट्रक निर्दिष्ट प्रतीक्षा पार्किंग क्षेत्र में तब तक रहता है जब तक कि असेंबली लाइन मौजूदा स्टॉक की खपत नहीं करती और रैक स्पेस खाली नहीं करती। डॉक पर सामग्री फेंकना सख्त मना है।",
             "mr": "अगदी बरोबर! असेंब्ली लाईनवर जुना माल वापरून रॅक मोकळे होईपर्यंत ट्रक वेटिंग यार्डमध्ये थांबवला जातो. डॉकवर रस्त्यात माल टाकण्यास सक्त मनाई आहे."
-          }
+          },
+          "audioSrc": "/audio/voiceover/s01_sc09_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -937,7 +958,8 @@
             "en": "Incorrect! Never dump material in active dock corridors or send the supplier away. Truck must wait in parking bay until pallet locations clear.",
             "hi": "गलत! सक्रिय डॉक गलियारों में सामग्री कभी न फेंके या आपूर्तिकर्ता को वापस न भेजें। पैलेट स्थान खाली होने तक ट्रक को पार्किंग बे में प्रतीक्षा करनी चाहिए।",
             "mr": "चुकीचे! डॉकच्या चालण्याच्या जागेत माल टाकू नका किंवा ट्रकला परत पाठवू नका. जागा मोकळी होईपर्यंत ट्रक पार्किंगमध्ये थांबवला पाहिजे."
-          }
+          },
+          "audioSrc": "/audio/voiceover/s01_sc09_wrong.mp3"
         }
       },
       "interaction": {
@@ -992,7 +1014,8 @@
           "hi": "गोदाम में इस सामग्री के लिए अधिकतम स्टॉक क्षमता भरी हुई है। DEO को क्या करना चाहिए?",
           "mr": "गोदामामध्ये या साहित्याची कमाल क्षमता पूर्ण भरलेली आहे. DEO ने काय केले पाहिजे?"
         },
-        "id": "c1-q07-max-stock-full"
+        "id": "c1-q07-max-stock-full",
+        "audioSrc": "/audio/voiceover/s01_sc09_prompt.mp3"
       },
       "rules": {
         "xp": 115,

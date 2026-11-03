@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, AlertTriangle, ArrowRight, RotateCcw } from 'lucide-react';
+import { CheckCircle2, ArrowRight, RotateCcw } from 'lucide-react';
 import type { StoryScene, LanguageCode } from '../../engine/story/types';
 
 interface Props {
@@ -61,10 +61,10 @@ export const FeedbackCard: React.FC<Props> = ({
 
   return (
     <div
-      className={`w-full rounded-3xl border-2 shadow-xl p-5 sm:p-6 transition-all space-y-3.5 select-none ${
+      className={`w-full rounded-3xl border shadow-lg p-5 sm:p-6 transition-all space-y-3.5 select-none ${
         isCorrect
-          ? 'bg-emerald-50/90 border-emerald-400 text-emerald-950'
-          : 'bg-amber-50/90 border-amber-400 text-amber-950'
+          ? 'bg-emerald-50/90 border-emerald-300 text-emerald-950'
+          : 'bg-slate-50 border-slate-200 text-slate-900'
       }`}
     >
       {/* Status Header */}
@@ -72,10 +72,10 @@ export const FeedbackCard: React.FC<Props> = ({
         <div className="flex items-center gap-3">
           <div
             className={`w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-xs ${
-              isCorrect ? 'bg-emerald-600' : 'bg-amber-600'
+              isCorrect ? 'bg-emerald-600' : 'bg-slate-700'
             }`}
           >
-            {isCorrect ? <CheckCircle2 className="w-5 h-5" /> : <AlertTriangle className="w-5 h-5" />}
+            {isCorrect ? <CheckCircle2 className="w-5 h-5" /> : <RotateCcw className="w-5 h-5" />}
           </div>
           <div>
             <h4 className="text-base font-extrabold tracking-tight">
@@ -86,10 +86,10 @@ export const FeedbackCard: React.FC<Props> = ({
                   ? 'योग्य निर्णय! SOP अनुपालन'
                   : 'Correct Decision! SOP Compliant'
                 : lang === 'hi'
-                ? 'SOP विचलन का पता चला'
+                ? 'SOP मानक समीक्षा'
                 : lang === 'mr'
-                ? 'SOP नियम विचलन आढळले'
-                : 'SOP Deviation Detected'}
+                ? 'SOP मानक पुनरावलोकन'
+                : 'SOP Standard Review'}
             </h4>
             <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500">
               {scene.rules.sopClause}
@@ -100,10 +100,10 @@ export const FeedbackCard: React.FC<Props> = ({
         <div>
           {isCorrect ? (
             <span className="px-3 py-1 rounded-full bg-emerald-200/90 text-emerald-800 text-xs font-mono font-bold">
-              +{scene.rules.xp} XP
+              +1 Point
             </span>
           ) : (
-            <span className="px-3 py-1 rounded-full bg-amber-200/90 text-amber-800 text-xs font-mono font-bold">
+            <span className="px-3 py-1 rounded-full bg-slate-200 text-slate-700 text-xs font-mono font-bold">
               {lang === 'hi' ? 'पुनः प्रयास अनुमत' : lang === 'mr' ? 'पुन्हा प्रयत्न करण्याची परवानगी' : 'Retry Allowed'}
             </span>
           )}
@@ -160,7 +160,7 @@ export const FeedbackCard: React.FC<Props> = ({
               onClick={onContinue}
               className={`${
                 onRetry ? 'w-full sm:w-1/2' : 'w-full'
-              } min-h-[56px] px-5 py-3 rounded-2xl font-black text-sm sm:text-base bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-600/30 flex items-center justify-center gap-2 transition-all cursor-pointer active:scale-95`}
+              } min-h-[56px] px-5 py-3 rounded-2xl font-black text-sm sm:text-base bg-slate-900 hover:bg-slate-800 text-white shadow-md flex items-center justify-center gap-2 transition-all cursor-pointer active:scale-95`}
             >
               <span>
                 {lang === 'hi' ? 'समीक्षा करें और आगे बढ़ें' : lang === 'mr' ? 'पुढील चरणावर सुरू ठेवा' : 'Review & Continue Story'}

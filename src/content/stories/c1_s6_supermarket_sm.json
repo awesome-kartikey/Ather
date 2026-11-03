@@ -31,7 +31,8 @@
             "en": "Welcome to Stage 6: Supermarket C-Class Parts Put-Away! Small fasteners and grommets have arrived at the Material Handling 1 (MH1) staging desk from inbound receiving. The lot is marked Non-DOL, but looking closely at the GRN sticker, the green 'QC Pass' circular stamp is completely missing! The line is waiting for these screws. Should the operator proceed to put these into the supermarket racks?",
             "hi": "स्टेज 6: सुपरमार्केट सी-क्लास पार्ट्स पुट-अवे में आपका स्वागत है! इनबाउंड रिसीविंग से मटेरियल हैंडलिंग 1 (MH1) स्टेजिंग डेस्क पर छोटे फास्टनर और ग्रोमेट पहुंचे हैं। लॉट को नॉन-DOL के रूप में चिह्नित किया गया है, लेकिन GRN स्टिकर को ध्यान से देखने पर, हरा 'QC Pass' गोलाकार स्टैम्प पूरी तरह से गायब है! असेंबली लाइन इन स्क्रू का इंतज़ार कर रही है। क्या ऑपरेटर को इन्हें सुपरमार्केट रैक में रखना चाहिए?",
             "mr": "स्टेज 6: सुपरमार्केट सी-क्लास पार्ट्स पुट-अवेमध्ये आपले स्वागत आहे! इनबाउंड रिसीव्हिंगमधून मटेरियल हँडलिंग 1 (MH1) स्टेजिंग डेस्कवर लहान फास्टनर्स आणि ग्रॉमेट्स आले आहेत. हा लॉट नॉन-DOL आहे, परंतु GRN स्टिकर बारकाईने पाहिल्यास हिरवा 'QC Pass' शिक्का पूर्णपणे गायब आहे! असेंब्ली लाईन या स्क्रूची वाट पाहत आहे. ऑपरेटरने हे सुपरमार्केट रॅकमध्ये ठेवण्यास पुढे जावे का?"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s06_sc01_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
@@ -39,7 +40,8 @@
             "en": "STOP IS THE CORRECT DECISION! SOP for Supermarket Put-Away Clause 4.1 & Question Bank Q26: For Non-DOL parts, the physical 'QC Pass' seal or sticker is mandatory on the GRN label. Without this seal, the parts have NOT been released by Quality Control and could be defective. Moving uncertified parts to the supermarket risks line assembly defects and immediate vehicle recalls!",
             "hi": "STOP बिल्कुल सही निर्णय है! सुपरमार्केट पुट-अवे SOP क्लॉज 4.1 और प्रश्न बैंक Q26: नॉन-DOL पार्ट्स के लिए, GRN लेबल पर भौतिक 'QC Pass' सील या स्टिकर अनिवार्य है। इस सील के बिना, पार्ट्स को क्वालिटी कंट्रोल द्वारा जारी नहीं किया गया है और वे दोषपूर्ण हो सकते हैं। अप्रमाणित पार्ट्स को सुपरमार्केट में ले जाने से लाइन असेंबली में खराबी और तत्काल वाहन रिकॉल का जोखिम होता है!",
             "mr": "STOP अगदी योग्य निर्णय! सुपरमार्केट पुट-अवे SOP कलम 4.1 आणि प्रश्न बँक Q26: नॉन-DOL पार्ट्ससाठी, GRN लेबलवर 'QC Pass' चा हिरवा शिक्का किंवा स्टिकर असणे अनिवार्य आहे. या शिक्क्याशिवाय पार्ट्स क्वालिटी कंट्रोलकडून मंजूर झालेले नसतात आणि ते सदोष असू शकतात. अप्रमाणित पार्ट्स सुपरमार्केटमध्ये ठेवल्यास असेंब्ली लाईनवर मोठा बिघाड होऊ शकतो!"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s06_sc01_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -47,7 +49,8 @@
             "en": "CRITICAL QUALITY BREACH! Under SOP Clause 4.1, no associate may move a Non-DOL lot to supermarket bins without a verified green 'QC Pass' seal. Rushing unverified parts to the line causes catastrophic vehicle assembly failures!",
             "hi": "गंभीर गुणवत्ता उल्लंघन! SOP क्लॉज 4.1 के तहत, कोई भी सहयोगी सत्यापित हरे 'QC Pass' सील के बिना नॉन-DOL लॉट को सुपरमार्केट डिब्बे में नहीं ले जा सकता है। असेंबली लाइन पर असत्यापित पार्ट्स भेजने से विनाशकारी विफलताएं होती हैं!",
             "mr": "गंभीर गुणवत्ता उल्लंघन! SOP कलम 4.1 नुसार, कोणत्याही कर्मचाऱ्याने 'QC Pass' शिक्क्याशिवाय नॉन-DOL लॉट सुपरमार्केट बिन्समध्ये हलवू नये. अप्रमाणित पार्ट्स लाईनवर पाठवल्यास वाहनांमध्ये गंभीर दोष निर्माण होतात!"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s06_sc01_wrong.mp3"
         }
       },
       "interaction": {
@@ -90,7 +93,8 @@
           "hi": "छोटे फास्टनर्स का एक नॉन-DOL लॉट MH1 सुपरमार्केट डेस्क पर आता है। GRN स्टिकर पर कोई हरा 'QC Pass' सील नहीं लगा है। सुपरमार्केट रैक में पुट-अवे की अनुमति दें या रोकें?",
           "mr": "लहान फास्टनर्सचा एक नॉन-DOL लॉट MH1 सुपरमार्केट डेस्कवर येतो. GRN स्टिकरवर कोणताही हिरवा 'QC Pass' शिक्का नाही. सुपरमार्केट रॅकमध्ये पुट-अवे करण्यास परवानगी द्यावी की थांबवावी?"
         },
-        "id": "c1-q26"
+        "id": "c1-q26",
+        "audioSrc": "/audio/voiceover/s06_sc01_prompt.mp3"
       },
       "rules": {
         "xp": 110,
@@ -123,7 +127,8 @@
             "en": "At the MH1 staging desk, you print the SAP inventory dump (transaction LX02), which shows expected stock of 100 M6 hex bolts. You perform a sample count on the digital counting scale and find only 92 pieces—an 8-piece shortage! A line feeder says: 'Just put the 92 bolts into the bin so the line doesn't stop, and adjust the number later.' What is the mandatory SOP action under Ather Clause 4.2?",
             "hi": "MH1 स्टेजिंग डेस्क पर, आप SAP इन्वेंट्री डंप (लेनदेन LX02) प्रिंट करते हैं, जो 100 M6 हेक्स बोल्ट का अपेक्षित स्टॉक दिखाता है। आप डिजिटल काउंटिंग स्केल पर नमूना गणना करते हैं और केवल 92 टुकड़े पाते हैं—8 टुकड़ों की कमी! एक लाइन फीडर कहता है: 'बस 92 बोल्ट बिन में रख दो ताकि लाइन न रुके, और बाद में संख्या को समायोजित कर लेना।' एथर क्लॉज 4.2 के तहत अनिवार्य SOP कार्रवाई क्या है?",
             "mr": "MH1 स्टेजिंग डेस्कवर, तुम्ही SAP इन्व्हेंटरी डंप (ट्रान्झॅक्शन LX02) प्रिंट करता, ज्यामध्ये 100 M6 हेक्स बोल्ट्स अपेक्षित स्टॉक दिसतो. तुम्ही डिजिटल वेईंग स्केलवर नमुना मोजणी करता तेव्हा फक्त 92 तुकडे आढळतात—8 तुकड्यांची तफावत! लाईन फिडर म्हणतो: 'लाईन थांबू नये म्हणून हे 92 बोल्ट्स रॅकमध्ये ठेवा, नंतर आकडेवारी जुळवू.' एथर कलम 4.2 नुसार अनिवार्य SOP कृती काय आहे?"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s06_sc02_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
@@ -131,7 +136,8 @@
             "en": "STANDARD PROCEDURE ENFORCED! SOP Clause 4.2 & Question Bank Q27: If any discrepancy exists between the physical count and the SAP dump, the operator must IMMEDIATELY halt put-away for that material and escalate to the Supermarket Zone Leader (ZL). Never alter slips or stock short lots, as this creates ghost inventory that starves future production!",
             "hi": "मानक प्रक्रिया लागू की गई! SOP क्लॉज 4.2 और प्रश्न बैंक Q27: यदि भौतिक गणना और SAP डंप के बीच कोई विसंगति मौजूद है, तो ऑपरेटर को उस सामग्री के लिए तुरंत पुट-अवे रोकना होगा और सुपरमार्केट ज़ोन लीडर (ZL) को सूचित करना होगा। कभी भी पर्चियों में बदलाव न करें या कम लॉट स्टॉक न करें, क्योंकि इससे घोस्ट इन्वेंट्री बनती है जो भविष्य के उत्पादन को रोक देती है!",
             "mr": "मानक कार्यपद्धतीचे अचूक पालन! SOP कलम 4.2 आणि प्रश्न बँक Q27: प्रत्यक्ष मोजणी आणि SAP डंपमध्ये तफावत आढळल्यास, ऑपरेटरने ताबडतोब त्या साहित्याचे पुट-अवे थांबवले पाहिजे आणि सुपरमार्केट झोन लीडरला (ZL) कळवले पाहिजे. आकडेवारीत परस्पर बदल करू नका किंवा कमी माल रॅकमध्ये भरू नका, यामुळे सिस्टीममध्ये घोस्ट इन्व्हेंटरी निर्माण होते!"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s06_sc02_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -139,7 +145,8 @@
             "en": "CRITICAL INVENTORY INTEGRITY FAILURE! Altering paperwork or stocking a short lot without Zone Leader escalation directly corrupts ERP stock accuracy. Downstream shifts will assume 100 bolts exist, resulting in sudden line starvation when only 92 are present!",
             "hi": "गंभीर इन्वेंट्री अखंडता विफलता! ज़ोन लीडर को बताए बिना कागजी कार्रवाई में बदलाव करना या कम लॉट का भंडारण करना सीधे ERP स्टॉक सटीकता को दूषित करता है। डाउनस्ट्रीम शिफ्ट्स मान लेंगी कि 100 बोल्ट मौजूद हैं, जिसके परिणामस्वरूप केवल 92 होने पर अचानक लाइन बंद हो जाएगी!",
             "mr": "इन्व्हेंटरी अचूकतेचा मोठा बिघाड! झोन लीडरला न कळवता परस्पर कागदपत्रात बदल करणे किंवा कमी माल रॅकमध्ये ठेवणे थेट ERP स्टॉक खराब करते. पुढच्या शिफ्टला 100 बोल्ट्स आहेत असे वाटेल, पण प्रत्यक्षात 92 असल्याने अचानक उत्पादन ठप्प होईल!"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s06_sc02_wrong.mp3"
         }
       },
       "interaction": {
@@ -194,7 +201,8 @@
           "hi": "SAP LX02 डंप आवक सी-क्लास लॉट के लिए 100 टुकड़े दर्शाता है, लेकिन MH1 पर भौतिक नमूना केवल 92 टुकड़े दिखाता है। ऑपरेटर को क्या करना चाहिए?",
           "mr": "SAP LX02 डंप इनवर्ड सी-क्लास लॉटसाठी 100 तुकडे दर्शवतो, परंतु MH1 वर प्रत्यक्ष मोजणीत फक्त 92 तुकडे आढळतात. ऑपरेटरने काय केले पाहिजे?"
         },
-        "id": "c1-q27"
+        "id": "c1-q27",
+        "audioSrc": "/audio/voiceover/s06_sc02_prompt.mp3"
       },
       "rules": {
         "xp": 115,
@@ -224,23 +232,29 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": ""
+            "en": "",
+            "hi": "गिनती का ऑडिट पूरा हो गया है! अब हम सुपरमार्केट ऐल SM-04 ग्रैविटी फ्लो रैक पर चलते हैं। ये 3.5-डिग्री झुके हुए रोलर ट्रैक सख्त FIFO (पहले आना, पहले जाना) पर काम करते हैं। आपको हमेशा पीछे (REAR) लोडिंग लेन से लोड करना चाहिए ताकि बॉक्स आगे पिकिंग फेस पर स्लाइड हों। आगे से लोड करने से पुराना स्टॉक पीछे फंस जाता है। पुट-अवे के 4 चरणों को सही SOP क्रम में व्यवस्थित करें!",
+            "mr": "मोजणी ऑडिट पूर्ण झाले आहे! आता आपण सुपरमार्केट Aisle SM-04 ग्रॅव्हिटी फ्लो रॅकवर जाऊया. हे 3.5 अंश झुकलेले रोलर ट्रॅक कडक FIFO नियमावर चालतात. तुम्ही नेहमी मागील (REAR) लोडिंग लेनमधूनच माल भरला पाहिजे जेणेकरून बॉक्सेस समोरील पिकिंग फेसवर पुढे सरकतील. पुढून भरल्यास जुना माल मागे अडकून खराब होतो. पुट-अवेचे 4 टप्पे अचूक SOP क्रमाने लावा!"
           },
-          "audioSrc": "/audio/voiceover_neerja/ACT-03-Q21-PROMPT.mp3"
+          "audioSrc": "/audio/voiceover/s06_sc03_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": ""
+            "en": "Spot on! Your operational decision complies with Ather Auric standards.",
+            "hi": "बिल्कुल सही! SOP-PUTAWAY-SM क्लॉज 4। यह एथर SOP मानकों के 100% अनुरूप है।",
+            "mr": "अगदी बरोबर! SOP-PUTAWAY-SM कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
           },
-          "audioSrc": "/audio/voiceover_neerja/ACT-03-Q21-CORRECT.mp3"
+          "audioSrc": "/audio/voiceover/s06_sc03_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": ""
+            "en": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety.",
+            "hi": "सावधान! SOP प्रोटोकॉल का उल्लंघन। प्लांट सुरक्षा और गुणवत्ता सुनिश्चित करने के लिए निर्धारित प्रक्रिया का पालन करें।",
+            "mr": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
           },
-          "audioSrc": "/audio/voiceover_neerja/ACT-03-Q21-WRONG.mp3"
+          "audioSrc": "/audio/voiceover/s06_sc03_wrong.mp3"
         }
       },
       "media": {
@@ -348,7 +362,8 @@
           "step_rear_load",
           "step_gravity_feed",
           "step_confirm_fifo"
-        ]
+        ],
+        "audioSrc": "/audio/voiceover/s06_sc03_prompt.mp3"
       },
       "rules": {
         "xp": 120,
@@ -374,6 +389,33 @@
           "en": "Look at the front face of Supermarket Bin SM-04-B! After assembly line kitters drew materials, the physical stock has reached the red MIN threshold (2 boxes remaining). Under SOP Clause 4.4 and 4.5, what two mandatory actions must you execute immediately to prevent factory line starvation?",
           "hi": "सुपरमार्केट बिन SM-04-B के सामने वाले हिस्से को देखें! असेंबली लाइन किटर्स द्वारा सामग्री लेने के बाद, भौतिक स्टॉक लाल MIN सीमा (2 बॉक्स शेष) तक पहुंच गया है। SOP क्लॉज 4.4 और 4.5 के तहत, असेंबली लाइन को पुर्जों की कमी से बचाने के लिए आपको तुरंत कौन सी दो अनिवार्य कार्रवाइयां करनी चाहिए?",
           "mr": "सुपरमार्केट बिन SM-04-B च्या समोरील बाजूकडे लक्ष द्या! लाईन किटर्सनी माल नेल्यानंतर प्रत्यक्ष साठा लाल रंगाच्या MIN मर्यादेवर (फक्त 2 बॉक्सेस शिल्लक) आला आहे. SOP कलम 4.4 व 4.5 नुसार लाईन बंद पडू नये म्हणून तुम्ही ताबडतोब कोणत्या दोन अनिवार्य गोष्टी केल्या पाहिजेत?"
+        },
+        "intro": {
+          "pose": "explaining",
+          "text": {
+            "en": "Look at the front face of Supermarket Bin SM-04-B! After assembly line kitters drew materials, the physical stock has reached the red MIN threshold (2 boxes remaining). Under S-O-P Clause 4.4 and 4.5, what two...",
+            "hi": "सुपरमार्केट बिन SM-04-B के सामने वाले हिस्से को देखें! असेंबली लाइन किटर्स द्वारा सामग्री लेने के बाद, भौतिक स्टॉक लाल MIN सीमा (2 बॉक्स शेष) तक पहुंच गया है। SOP क्लॉज 4.4 और 4.5 के तहत, असेंबली लाइन को पुर्जों की कमी से बचाने के लिए आपको तुरंत कौन सी दो अनिवार्य कार्रवाइयां करनी चाहिए?",
+            "mr": "सुपरमार्केट बिन SM-04-B च्या समोरील बाजूकडे लक्ष द्या! लाईन किटर्सनी माल नेल्यानंतर प्रत्यक्ष साठा लाल रंगाच्या MIN मर्यादेवर (फक्त 2 बॉक्सेस शिल्लक) आला आहे. SOP कलम 4.4 व 4.5 नुसार लाईन बंद पडू नये म्हणून तुम्ही ताबडतोब कोणत्या दोन अनिवार्य गोष्टी केल्या पाहिजेत?"
+          },
+          "audioSrc": "/audio/voiceover/s06_sc04_intro.mp3"
+        },
+        "onCorrect": {
+          "pose": "success",
+          "text": {
+            "en": "Spot on! Your operational decision complies with Ather Auric standards.",
+            "hi": "बिल्कुल सही! SOP-PUTAWAY-SM क्लॉज 4। यह एथर SOP मानकों के 100% अनुरूप है।",
+            "mr": "अगदी बरोबर! SOP-PUTAWAY-SM कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+          },
+          "audioSrc": "/audio/voiceover/s06_sc04_correct.mp3"
+        },
+        "onIncorrect": {
+          "pose": "warning",
+          "text": {
+            "en": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety.",
+            "hi": "सावधान! SOP प्रोटोकॉल का उल्लंघन। प्लांट सुरक्षा और गुणवत्ता सुनिश्चित करने के लिए निर्धारित प्रक्रिया का पालन करें।",
+            "mr": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+          },
+          "audioSrc": "/audio/voiceover/s06_sc04_wrong.mp3"
         }
       },
       "media": {
@@ -437,7 +479,8 @@
           "hi": "फास्टनर बिन SM-04-B अपने सुरक्षा MIN स्टॉक स्तर 2 बॉक्स (200 नग) पर पहुंच गया है। सुपरमार्केट ऑपरेटर को तुरंत क्या करना चाहिए?",
           "mr": "फास्टनर बिन SM-04-B त्याच्या सुरक्षित MIN पातळीवर म्हणजेच 2 बॉक्सवर (200 नग) आला आहे. ऑपरेटरने ताबडतोब कोणती कृती केली पाहिजे?"
         },
-        "questionId": "c1-q29-kanban"
+        "questionId": "c1-q29-kanban",
+        "audioSrc": "/audio/voiceover/s06_sc04_prompt.mp3"
       },
       "rules": {
         "xp": 125,
@@ -470,7 +513,8 @@
             "en": "High tension at MH1 Supermarket desk! You counted 92 bolts on the scale instead of 100. An aggressive line feeder arrives shouting that the main frame line is 2 minutes from stoppage! They demand: 'Sign off the full 100 pieces right now, hand me the bin, and let us fix the missing 8 pieces later in the week.' Do you allow this dispatch or stop immediately?",
             "hi": "MH1 सुपरमार्केट डेस्क पर भारी तनाव! आपने स्केल पर 100 के बजाय 92 बोल्ट गिने। एक लाइन फीडर चिल्लाते हुए आता है कि मुख्य फ्रेम लाइन बंद होने में सिर्फ 2 मिनट बाकी हैं! वे मांग करते हैं: 'अभी पूरे 100 टुकड़ों पर हस्ताक्षर करें, मुझे बिन सौंपें, और बाकी 8 टुकड़ों को बाद में ठीक कर लेंगे।' क्या आप इस डिस्पैच की अनुमति देते हैं या तुरंत रोकते हैं?",
             "mr": "MH1 सुपरमार्केट डेस्कवर प्रचंड तणाव! तुम्ही वेईंग स्केलवर 100 ऐवजी 92 बोल्ट्स मोजले आहेत. एक लाईन फिडर धावत येतो आणि ओरडतो की मेन फ्रेम लाईन बंद पडायला फक्त 2 मिनिटे उरली आहेत! तो म्हणतो: 'आत्ताच्या आत्ता 100 ची पूर्ण सही करा, बिन माझ्या हवाली करा आणि उरलेले 8 तुकडे नंतर आठवडाभरात जुळवून घेऊ.' तुम्ही या डिस्पॅचला परवानगी द्याल की ताबडतोब थांबवाल?"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s06_sc05_intro.mp3"
         },
         "onCorrect": {
           "pose": "trophy",
@@ -478,7 +522,8 @@
             "en": "STOP IS ABSOLUTELY ESSENTIAL! SOP Clause 4.2 & Question Bank Q27: Never sign a false count or release unverified quantities under line pressure! Discrepancy means an active halt for that material and instant escalation to the Supermarket Zone Leader (ZL). Falsifying records creates ghost inventory and leaves Ather legally exposed to supplier invoice fraud!",
             "hi": "STOP बिल्कुल आवश्यक है! SOP क्लॉज 4.2 और प्रश्न बैंक Q27: लाइन के दबाव में कभी भी गलत गिनती पर हस्ताक्षर न करें या असत्यापित मात्रा जारी न करें! विसंगति का मतलब है उस सामग्री के लिए तत्काल रोक और सुपरमार्केट ज़ोन लीडर (ZL) को तत्काल सूचना। रिकॉर्ड में हेराफेरी से घोस्ट इन्वेंट्री बनती है और एथर को आपूर्तिकर्ता चालान धोखाधड़ी का खतरा होता है!",
             "mr": "STOP अत्यंत आवश्यक आहे! SOP कलम 4.2 आणि प्रश्न बँक Q27: लाईनच्या दबावाखाली कधीही खोट्या मोजणीवर स्वाक्षरी करू नका किंवा अप्रमाणित माल सोडू नका! तफावत आढळल्यास तात्काळ तो माल थांबवणे आणि झोन लीडरला (ZL) कळवणे बंधनकारक आहे. खोटी नोंद केल्यास घोस्ट इन्व्हेंटरी तयार होते आणि कंपनीचे मोठे आर्थिक नुकसान होते!"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s06_sc05_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -486,7 +531,8 @@
             "en": "UNFORGIVABLE INVENTORY VIOLATION! Yielding to line pressure and falsifying 100 pieces when only 92 arrived destroys ERP audit trails. Next shift will run out of bolts midway, causing catastrophic unannounced line shutdown!",
             "hi": "अक्षम्य इन्वेंट्री उल्लंघन! लाइन के दबाव में आना और केवल 92 आने पर 100 टुकड़ों की झूठी पुष्टि करना ERP ऑडिट ट्रेल्स को नष्ट कर देता है। अगली शिफ्ट में बीच में ही बोल्ट खत्म हो जाएंगे, जिससे अचानक लाइन बंद हो जाएगी!",
             "mr": "अक्षम्य इन्व्हेंटरी उल्लंघन! लाईनच्या दबावाखाली येऊन 92 ऐवजी 100 ची खोटी नोंद केल्यास ERP ऑडिट ट्रेल नष्ट होतो. पुढच्या शिफ्टला अचानक माल संपल्याने लाईन अचानक बंद पडेल!"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s06_sc05_wrong.mp3"
         }
       },
       "interaction": {
@@ -529,7 +575,8 @@
           "hi": "MH1 गणना 92 नग है (SAP अपेक्षित: 100 नग)। तत्काल लाइन-स्टॉप दबाव के तहत, लाइन फीडर मांग करता है कि आप तुरंत 100 नग पर हस्ताक्षर करें। अनुमति दें या रोकें?",
           "mr": "MH1 मोजणी 92 नग आहे (SAP अपेक्षित: 100 नग). लाईन बंद पडण्याच्या दबावाखाली लाईन फिडर 100 नगांवर सही करण्याची मागणी करतो. परवानगी द्यावी की थांबवावी?"
         },
-        "id": "c1-q27b"
+        "id": "c1-q27b",
+        "audioSrc": "/audio/voiceover/s06_sc05_prompt.mp3"
       },
       "rules": {
         "xp": 120,
@@ -562,7 +609,8 @@
             "en": "Final Supermarket certification question! Under Question Bank Q28, which parts are authorized to be stored in Supermarket flow racks at Ather AURIC plant?",
             "hi": "अंतिम सुपरमार्केट प्रमाणन प्रश्न! प्रश्न बैंक Q28 के तहत, एथर AURIC संयंत्र में सुपरमार्केट फ्लो रैक में कौन से पुर्जे संग्रहीत करने के लिए अधिकृत हैं?",
             "mr": "अंतिम सुपरमार्केट प्रमाणपत्र प्रश्न! प्रश्न बँक Q28 नुसार, एथर AURIC प्लांटमध्ये सुपरमार्केट फ्लो रॅकमध्ये कोणते सुटे भाग साठवण्यासाठी अधिकृत आहेत?"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s06_sc06_intro.mp3"
         },
         "onCorrect": {
           "pose": "trophy",
@@ -570,7 +618,8 @@
             "en": "PERFECT CLASSIFICATION MASTERY! SOP Clause 1.1 & Question Bank Q28: Supermarket racks are designated EXCLUSIVELY for small C-class items (screws, bolts, clips, washers, O-rings) that are verified at MH1 first. Heavy A-class parts belong to High-Rise Racks (HRR) and Trolley Staging! Stage 6: Supermarket C-Class Parts Put-Away is 100% complete!",
             "hi": "सटीक वर्गीकरण महारत! SOP क्लॉज 1.1 और प्रश्न बैंक Q28: सुपरमार्केट रैक विशेष रूप से छोटे C-क्लास आइटम (स्क्रू, बोल्ट, क्लिप, वाशर, ओ-रिंग) के लिए नामित हैं जिन्हें पहले MH1 पर सत्यापित किया जाता है। भारी A-क्लास भाग हाई-राइज रैक (HRR) और ट्रॉली स्टेजिंग से संबंधित हैं! स्टेज 6 अब 100% पूरा हुआ!",
             "mr": "उत्कृष्ट वर्गीकरण प्रभुत्व! SOP कलम 1.1 आणि प्रश्न बँक Q28: सुपरमार्केट रॅक हे केवळ लहान C-क्लास आयटम्ससाठी (स्क्रू, बोल्ट्स, क्लिप्स, वॉशर्स, ओ-रिंग्स) राखीव आहेत जे आधी MH1 वर तपासले जातात. जड A-क्लास भाग हाय-राईज रॅक्स (HRR) आणि ट्रॉली स्टेजिंगमध्ये असतात! स्टेज 6 आता 100% पूर्ण झाले आहे!"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s06_sc06_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
@@ -578,7 +627,8 @@
             "en": "INCORRECT CLASSIFICATION! Supermarket gravity racks cannot hold heavy A-class frames or flammable chemicals. Supermarket racks are strictly dedicated to small C-class hardware parts checked at MH1!",
             "hi": "गलत वर्गीकरण! सुपरमार्केट ग्रैविटी रैक भारी A-क्लास फ्रेम या ज्वलनशील रसायनों को नहीं रख सकते हैं। सुपरमार्केट रैक सख्ती से MH1 पर जांचे गए छोटे C-क्लास हार्डवेयर भागों के लिए समर्पित हैं!",
             "mr": "चुकीचे वर्गीकरण! सुपरमार्केट ग्रॅव्हिटी रॅक जड A-क्लास फ्रेम्स किंवा ज्वलनशील रसायने साठवू शकत नाहीत. सुपरमार्केट रॅक केवळ MH1 वर तपासलेल्या लहान C-क्लास भागांसाठीच राखीव आहेत!"
-          }
+          },
+          "audioSrc": "/audio/voiceover/s06_sc06_wrong.mp3"
         }
       },
       "interaction": {
@@ -633,7 +683,8 @@
           "hi": "एथर AURIC प्लांट में सुपरमार्केट रैक में किस श्रेणी के पुर्जे संग्रहीत किए जाते हैं?",
           "mr": "एथर AURIC प्लांटमध्ये सुपरमार्केट रॅकमध्ये कोणत्या श्रेणीतील सुटे भाग साठवले जातात?"
         },
-        "id": "c1-q28"
+        "id": "c1-q28",
+        "audioSrc": "/audio/voiceover/s06_sc06_prompt.mp3"
       },
       "rules": {
         "xp": 110,

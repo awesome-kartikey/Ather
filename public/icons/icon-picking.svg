@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGradBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="accentGradCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  <!-- Rounded App Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGradBlue)" />
+  
+  <!-- Outer Circular Ring -->
+  <circle cx="256" cy="230" r="160" fill="#0f172a" opacity="0.4" />
+  
+  <!-- Outbound Line Picking Trolley & Packaging Box -->
+  <!-- Trolley Frame -->
+  <path d="M140 160 L180 160 L220 320 L370 320" stroke="#93c5fd" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <circle cx="230" cy="360" r="28" fill="#38bdf8" />
+  <circle cx="360" cy="360" r="28" fill="#38bdf8" />
+  
+  <!-- Packed Shipping Carton -->
+  <rect x="220" y="180" width="160" height="120" rx="14" fill="#ffffff" />
+  <!-- Packaging Tape Seal -->
+  <path d="M220 230 L380 230" stroke="#f59e0b" stroke-width="12" />
+  <path d="M300 180 L300 300" stroke="#f59e0b" stroke-width="12" />
+  
+  <!-- Forward Outbound Delivery Arrow -->
+  <path d="M280 120 L370 120" stroke="url(#accentGradCyan)" stroke-width="20" stroke-linecap="round" />
+  <path d="M345 95 L375 120 L345 145" stroke="url(#accentGradCyan)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  
+  <!-- Badge Tag -->
+  <rect x="100" y="420" width="312" height="48" rx="24" fill="#0284c7" />
+  <text x="256" y="452" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">PICKING &amp; PACKAGING</text>
+</svg>
