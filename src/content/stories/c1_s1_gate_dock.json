@@ -121,7 +121,7 @@
         "fallbackAnimation": "gatehouse_cabin_desk",
         "durationSeconds": 18,
         "pauseAtSecond": 3,
-        "imageSrc": "/Assets/environments/bg_deo_gate_office.jpg",
+        "imageSrc": "/Assets/Scenes/c1_s1_sc02_doc_sorting.webp",
         "propSrc": "/Assets/Props/prop_eway_bill_tablet.png"
       },
       "mascot": {
@@ -269,7 +269,7 @@
         "fallbackAnimation": "sap_terminal_screen",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/environments/bg_deo_gate_office.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s1_sc03_sap_entry.webp"
       },
       "mascot": {
         "intro": {
@@ -368,7 +368,7 @@
         "fallbackAnimation": "thermal_printer_tv",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/environments/bg_deo_gate_office.jpg",
+        "imageSrc": "/Assets/Scenes/c1_s1_sc04_barcode_sequence.webp",
         "propSrc": "/Assets/Props/prop_windshield_barcode_pass.png"
       },
       "mascot": {
@@ -498,7 +498,7 @@
         "fallbackAnimation": "dock_blueprint_map",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/environments/bg_plant_map_hotspot.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s1_sc05_dock_alloc.webp"
       },
       "mascot": {
         "intro": {
@@ -738,7 +738,8 @@
       "media": {
         "fallbackAnimation": "exit_gatehouse_barrier",
         "durationSeconds": 18,
-        "pauseAtSecond": 3.5
+        "pauseAtSecond": 3.5,
+        "imageSrc": "/Assets/Scenes/c1_s1_sc07_gate_exit.webp"
       },
       "mascot": {
         "intro": {

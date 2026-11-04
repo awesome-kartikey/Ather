@@ -21,7 +21,7 @@
         "fallbackAnimation": "grn_sticker_staging",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/videos/scene_03_iqc_inspection_split_alt.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s2_sc01_grn_sticker.webp"
       },
       "mascot": {
         "intro": {
@@ -208,7 +208,7 @@
         "fallbackAnimation": "iqc_cones_staging",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/videos/scene_03_iqc_inspection_split_alt.jpg",
+        "imageSrc": "/Assets/Scenes/c1_s2_sc03_iqc_cones.webp",
         "propSrc": "/Assets/Props/prop_warning_cones_iqc.png"
       },
       "mascot": {
@@ -554,7 +554,7 @@
         "fallbackAnimation": "iqc_sample_inspection",
         "durationSeconds": 15,
         "pauseAtSecond": 4.5,
-        "imageSrc": "/Assets/videos/scene_03_iqc_inspection_split_alt.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s2_sc06_iqc_definition.webp"
       },
       "mascot": {
         "intro": {
@@ -662,7 +662,7 @@
         "fallbackAnimation": "iqc_sample_inspection",
         "durationSeconds": 15,
         "pauseAtSecond": 4.5,
-        "imageSrc": "/Assets/videos/scene_03_iqc_inspection_split_alt.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s2_sc07_six_month_rampup.webp"
       },
       "mascot": {
         "intro": {

@@ -21,7 +21,7 @@
         "fallbackAnimation": "hu_scan_initiation",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg",
+        "imageSrc": "/Assets/Scenes/c1_s3_sc01_hu_scan.webp",
         "propSrc": "/Assets/Props/prop_hht_scanner.png"
       },
       "mascot": {

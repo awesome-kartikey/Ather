@@ -239,7 +239,7 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
   // ensuring learners immediately see the interactive terminals, screens, blueprints,
   // and process animations. Users can toggle to 'PHOTO' anytime if a real photograph is attached.
   useEffect(() => {
-    const isExplicitPhoto = scene.media?.preferredViewMode === 'photo';
+    const isExplicitPhoto = scene.media?.preferredViewMode === 'photo' || (Boolean(scene.media?.imageSrc) && !scene.media?.videoSrc);
     setCanvasViewMode(isExplicitPhoto ? 'photo' : 'blueprint');
     const isMultiZone = scene.interaction.type === 'drag_drop' || scene.interaction.type === 'sequence';
     setIsQuestionExpanded(isMultiZone);
