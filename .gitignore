@@ -2,7 +2,10 @@
 logs
 *.log
 docs
-scripts
+scripts/*.json
+scripts/*.txt
+scripts/*.py
+scripts/*.cjs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

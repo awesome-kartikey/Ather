@@ -10,6 +10,8 @@
     "build:receiving": "tsc -b && vite build --mode receiving",
     "build:picking": "tsc -b && vite build --mode picking",
     "cap:sync": "cap sync android",
+    "cap:sync:receiving": "tsx scripts/sync-android-mode.ts receiving && cap sync android",
+    "cap:sync:picking": "tsx scripts/sync-android-mode.ts picking && cap sync android",
     "check:i18n": "tsx scripts/check-i18n.ts",
     "lint": "oxlint",
     "preview": "vite preview"

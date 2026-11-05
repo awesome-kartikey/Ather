@@ -24,10 +24,10 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Setup Node.js 20
+      - name: Setup Node.js 22
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
@@ -74,6 +74,7 @@ jobs:
 
       - name: Sync Capacitor Android (Receiving)
         run: |
+          pnpm exec tsx scripts/sync-android-mode.ts receiving
           CAPACITOR_APP_MODE=receiving pnpm exec cap sync android
 
       - name: Build Android APK (Receiving)
@@ -91,6 +92,7 @@ jobs:
 
       - name: Sync Capacitor Android (Picking)
         run: |
+          pnpm exec tsx scripts/sync-android-mode.ts picking
           CAPACITOR_APP_MODE=picking pnpm exec cap sync android
 
       - name: Build Android APK (Picking)
