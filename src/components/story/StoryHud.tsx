@@ -43,8 +43,8 @@ export const StoryHud: React.FC<Props> = ({
   }, []);
 
   return (
-    <header className="shrink-0 w-full h-12 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-2xs z-30 flex items-center select-none">
-      <div className="w-full px-3 sm:px-5 flex items-center justify-between gap-3">
+    <header className="shrink-0 w-full min-h-12 pt-[env(safe-area-inset-top,0px)] bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-2xs z-30 flex items-center select-none">
+      <div className="w-full px-3 sm:px-5 pl-[max(env(safe-area-inset-left),0.75rem)] pr-[max(env(safe-area-inset-right),2.5rem)] py-1.5 flex items-center justify-between gap-3">
         {/* Left: Ather Capsule Logo + Tetrahedron Logo + Clean Stage Title */}
         <div className="flex items-center gap-1.5 sm:gap-2 shrink-0 min-w-0">
           <AtherCapsuleLogo height={10} />

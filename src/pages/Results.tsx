@@ -56,8 +56,8 @@ export const Results: React.FC<Props> = ({
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans select-none">
       {/* Top Bar */}
-      <header className="shrink-0 bg-white border-b border-slate-200/90 shadow-2xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
+      <header className="shrink-0 bg-white border-b border-slate-200/90 shadow-2xs pt-[env(safe-area-inset-top,0px)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 pl-[max(env(safe-area-inset-left),1rem)] pr-[max(env(safe-area-inset-right),2.5rem)] py-3.5 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="text-xs font-mono font-bold text-slate-500 uppercase tracking-widest">
               Ather AURIC Plant M002 · Floor Competency Scorecard

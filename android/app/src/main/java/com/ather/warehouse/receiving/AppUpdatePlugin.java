@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
@@ -19,6 +20,24 @@ import java.io.File;
 
 @CapacitorPlugin(name = "AppUpdate")
 public class AppUpdatePlugin extends Plugin {
+
+    @PluginMethod
+    public void getAppVersion(PluginCall call) {
+        try {
+            Context context = getContext();
+            PackageInfo pInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
+            JSObject ret = new JSObject();
+            ret.put("versionName", pInfo.versionName != null ? pInfo.versionName : "1.0.0");
+            long vCode = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P ? pInfo.getLongVersionCode() : pInfo.versionCode;
+            ret.put("versionCode", vCode);
+            call.resolve(ret);
+        } catch (Exception e) {
+            JSObject fallback = new JSObject();
+            fallback.put("versionName", "1.0.0");
+            fallback.put("versionCode", 1);
+            call.resolve(fallback);
+        }
+    }
 
     @PluginMethod
     public void installApk(PluginCall call) {

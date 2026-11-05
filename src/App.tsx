@@ -6,6 +6,7 @@ import { Results } from './pages/Results';
 import { CertificateView } from './pages/CertificateView';
 import { AdminPanel } from './pages/AdminPanel';
 import { DevFloatingToolbar } from './components/dev/DevFloatingToolbar';
+import { OrientationGuard } from './components/OrientationGuard';
 import type { LanguageCode, UserProfile, RunSummary } from './engine/types';
 import { checkForAppUpdate, type UpdateInfo } from './services/autoUpdate';
 import { UpdateModal } from './components/common/UpdateModal';
@@ -301,6 +302,7 @@ export function App() {
 
   return (
     <div className="w-full min-h-[100dvh]">
+      <OrientationGuard lang={lang} />
       {screen === 'landing' && (
         <LandingPage
           lang={lang}

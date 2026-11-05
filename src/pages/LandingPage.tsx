@@ -231,8 +231,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       <div className="fixed bottom-[-20%] right-[-10%] w-[800px] h-[800px] bg-slate-400/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="fixed inset-0 bg-[url('/noise.svg')] opacity-[0.025] pointer-events-none" />
 
-      {/* ── Top Bar: Dual Branding & Language Switcher (Clean 48px Header) ── */}
-      <header className="shrink-0 w-full px-4 sm:px-8 py-3 flex items-center justify-between border-b border-slate-200/80 bg-white/80 backdrop-blur-md relative z-20">
+      {/* ── Top Bar: Dual Branding & Language Switcher (Clean 48px Header with Tablet Safe-Area) ── */}
+      <header className="shrink-0 w-full px-4 sm:px-8 pl-[max(env(safe-area-inset-left),1rem)] pr-[max(env(safe-area-inset-right),2.5rem)] pt-[max(env(safe-area-inset-top),0.75rem)] pb-3 flex items-center justify-between border-b border-slate-200/80 bg-white/90 backdrop-blur-md relative z-20">
         <div className="flex items-center gap-2">
           <AtherCapsuleLogo />
           <div className="h-4 w-px bg-slate-300" />

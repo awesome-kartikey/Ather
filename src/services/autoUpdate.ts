@@ -1,6 +1,6 @@
 import { registerPlugin, Capacitor } from '@capacitor/core';
 
-export const CURRENT_APP_VERSION = '1.0.0';
+export const CURRENT_APP_VERSION = '1.0.4';
 
 export interface UpdateInfo {
   hasUpdate: boolean;
@@ -13,6 +13,7 @@ export interface UpdateInfo {
 }
 
 interface AppUpdatePluginInterface {
+  getAppVersion(): Promise<{ versionName: string; versionCode: number }>;
   installApk(options: { url: string }): Promise<{ status: string; downloadId?: number }>;
 }
 
@@ -64,7 +65,31 @@ export async function checkForAppUpdate(appMode: 'receiving' | 'picking'): Promi
     const latestTag = release.tag_name || release.name || '1.0.0';
     const cleanLatest = latestTag.replace(/^v/, '');
 
-    const hasUpdate = compareVersions(cleanLatest, CURRENT_APP_VERSION) > 0;
+    // 1. Get true installed version from Android OS
+    let installedVersion = CURRENT_APP_VERSION;
+    if (Capacitor.isNativePlatform()) {
+      try {
+        const info = await AppUpdate.getAppVersion();
+        if (info && info.versionName) {
+          installedVersion = info.versionName.replace(/^v/, '');
+        }
+      } catch (err) {
+        console.warn('[AutoUpdate] Could not fetch native app version:', err);
+      }
+    }
+
+    // 2. Check if user already dismissed or installed this version in this session
+    const dismissedVersion = localStorage.getItem('ather_dismissed_update_version');
+    const installedVersionCache = localStorage.getItem('ather_installed_update_version');
+    if (dismissedVersion === cleanLatest || installedVersionCache === cleanLatest) {
+      return null;
+    }
+
+    // 3. Compare versions: only prompt if release is strictly higher than installed
+    const hasUpdate = compareVersions(cleanLatest, installedVersion) > 0;
+    if (!hasUpdate) {
+      return null;
+    }
 
     // Pick target APK based on appMode
     const isPicking = appMode === 'picking';
@@ -86,7 +111,7 @@ export async function checkForAppUpdate(appMode: 'receiving' | 'picking'): Promi
 
     return {
       hasUpdate,
-      currentVersion: CURRENT_APP_VERSION,
+      currentVersion: installedVersion,
       latestVersion: cleanLatest,
       releaseName: release.name || `Release v${cleanLatest}`,
       releaseNotes: release.body || 'New operational training features, voiceover sync, and performance optimizations.',
@@ -102,8 +127,12 @@ export async function checkForAppUpdate(appMode: 'receiving' | 'picking'): Promi
 /**
  * Initiate in-app APK download and installation
  */
-export async function installAppUpdate(downloadUrl: string): Promise<{ success: boolean; message: string }> {
+export async function installAppUpdate(downloadUrl: string, latestVersion?: string): Promise<{ success: boolean; message: string }> {
   try {
+    if (latestVersion) {
+      localStorage.setItem('ather_installed_update_version', latestVersion);
+    }
+
     if (Capacitor.isNativePlatform()) {
       try {
         await AppUpdate.installApk({ url: downloadUrl });

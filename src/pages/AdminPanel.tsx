@@ -264,7 +264,7 @@ export const AdminPanel: React.FC<Props> = ({ onBackToPortal }) => {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans select-none antialiased">
       {/* 1. Master Top Header (Light Mode with Ather Capsule & Clean Actions) */}
-      <header className="border-b border-slate-200 bg-white/95 backdrop-blur-md px-4 sm:px-8 py-3 sticky top-0 z-30 flex flex-wrap items-center justify-between gap-4 shadow-2xs">
+      <header className="border-b border-slate-200 bg-white/95 backdrop-blur-md px-4 sm:px-8 pl-[max(env(safe-area-inset-left),1rem)] pr-[max(env(safe-area-inset-right),2.5rem)] pt-[max(env(safe-area-inset-top),0.75rem)] pb-3 sticky top-0 z-30 flex flex-wrap items-center justify-between gap-4 shadow-2xs">
         <div className="flex items-center gap-3.5">
           <button
             type="button"

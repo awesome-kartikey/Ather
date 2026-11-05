@@ -12,10 +12,17 @@ export const UpdateModal: React.FC<UpdateModalProps> = ({ updateInfo, onClose })
   const [installing, setInstalling] = useState(false);
   const [feedback, setFeedback] = useState<string | null>(null);
 
+  const handleDismiss = () => {
+    try {
+      localStorage.setItem('ather_dismissed_update_version', updateInfo.latestVersion);
+    } catch {}
+    onClose();
+  };
+
   const handleUpdate = async () => {
     setInstalling(true);
     setFeedback('Initiating update download...');
-    const result = await installAppUpdate(updateInfo.downloadUrl);
+    const result = await installAppUpdate(updateInfo.downloadUrl, updateInfo.latestVersion);
     setFeedback(result.message);
   };
 
@@ -38,7 +45,7 @@ export const UpdateModal: React.FC<UpdateModalProps> = ({ updateInfo, onClose })
             </div>
           </div>
           <button
-            onClick={onClose}
+            onClick={handleDismiss}
             className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
             title="Dismiss"
           >
@@ -83,7 +90,7 @@ export const UpdateModal: React.FC<UpdateModalProps> = ({ updateInfo, onClose })
           <div className="flex items-center gap-3 pt-2">
             <button
               type="button"
-              onClick={onClose}
+              onClick={handleDismiss}
               className="flex-1 px-4 py-3 rounded-xl border border-slate-300 text-slate-600 hover:bg-slate-100 font-semibold text-sm transition-colors"
             >
               Remind Later

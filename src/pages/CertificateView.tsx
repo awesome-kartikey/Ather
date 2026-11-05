@@ -49,8 +49,8 @@ export const CertificateView: React.FC<Props> = ({
   return (
     <div className="min-h-screen bg-slate-100/90 text-slate-900 flex flex-col font-sans select-none print:bg-white print:p-0">
       {/* Top Action Bar (Hidden on print) */}
-      <header className="shrink-0 bg-white border-b border-slate-200/90 shadow-2xs print:hidden">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <header className="shrink-0 bg-white border-b border-slate-200/90 shadow-2xs print:hidden pt-[env(safe-area-inset-top,0px)]">
+        <div className="max-w-6xl mx-auto px-6 pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),2.5rem)] py-4 flex items-center justify-between">
           <button
             onClick={onBack}
             className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold font-mono text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-200 transition-all cursor-pointer"

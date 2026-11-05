@@ -226,8 +226,8 @@ export const EmployeeRegistration: React.FC<Props> = ({
       <div className="fixed bottom-[-15%] right-[-5%] w-[500px] h-[500px] bg-emerald-400/10 rounded-full blur-[100px] pointer-events-none" />
       <div className="fixed inset-0 bg-[url('/noise.svg')] opacity-[0.025] pointer-events-none" />
 
-      {/* ── Top Bar: Dual Branding & Language Switcher (Compact 48px Header) ── */}
-      <header className="shrink-0 w-full px-4 sm:px-6 py-2.5 flex items-center justify-between border-b border-slate-200/80 bg-white/80 backdrop-blur-md relative z-20">
+      {/* ── Top Bar: Dual Branding & Language Switcher (Compact Header with Safe-Area) ── */}
+      <header className="shrink-0 w-full px-4 sm:px-6 pl-[max(env(safe-area-inset-left),1rem)] pr-[max(env(safe-area-inset-right),2.5rem)] pt-[max(env(safe-area-inset-top),0.625rem)] pb-2.5 flex items-center justify-between border-b border-slate-200/80 bg-white/80 backdrop-blur-md relative z-20">
         <div className="flex items-center gap-2">
           <button
             type="button"
