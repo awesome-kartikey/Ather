@@ -7,6 +7,8 @@ import { CertificateView } from './pages/CertificateView';
 import { AdminPanel } from './pages/AdminPanel';
 import { DevFloatingToolbar } from './components/dev/DevFloatingToolbar';
 import type { LanguageCode, UserProfile, RunSummary } from './engine/types';
+import { checkForAppUpdate, type UpdateInfo } from './services/autoUpdate';
+import { UpdateModal } from './components/common/UpdateModal';
 
 type Screen = 'landing' | 'register' | 'story' | 'results' | 'certificate' | 'admin';
 export type AppMode = 'receiving' | 'picking';
@@ -52,6 +54,30 @@ const getInitialAppMode = (): AppMode => {
 
 export function App() {
   const [appMode, setAppMode] = useState<AppMode>(getInitialAppMode);
+  const [updateInfo, setUpdateInfo] = useState<UpdateInfo | null>(null);
+
+  // Background check for application updates on launch
+  useEffect(() => {
+    let isMounted = true;
+    const checkUpdates = async () => {
+      const info = await checkForAppUpdate(appMode);
+      if (isMounted && info && info.hasUpdate) {
+        setUpdateInfo(info);
+      }
+    };
+    const timer = setTimeout(checkUpdates, 2500);
+
+    const handleManualCheck = () => {
+      checkUpdates();
+    };
+    window.addEventListener('ather:check-update', handleManualCheck);
+
+    return () => {
+      isMounted = false;
+      clearTimeout(timer);
+      window.removeEventListener('ather:check-update', handleManualCheck);
+    };
+  }, [appMode]);
 
   // Sync PWA Manifest, Title, and Icon dynamically based on appMode
   useEffect(() => {
@@ -337,6 +363,14 @@ export function App() {
           onBack={() => setScreen('results')}
           onNavigateHome={() => setScreen('landing')}
           appMode={appMode}
+        />
+      )}
+
+      {/* In-App Auto Update Modal */}
+      {updateInfo && (
+        <UpdateModal
+          updateInfo={updateInfo}
+          onClose={() => setUpdateInfo(null)}
         />
       )}
 

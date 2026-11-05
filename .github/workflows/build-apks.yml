@@ -13,6 +13,8 @@ jobs:
     name: Build Receiving & Picking APKs
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout Code
@@ -78,6 +80,9 @@ jobs:
           CAPACITOR_APP_MODE=receiving pnpm exec cap sync android
 
       - name: Build Android APK (Receiving)
+        env:
+          BUILD_NUMBER: ${{ github.run_number }}
+          BUILD_NAME: 1.0.${{ github.run_number }}
         run: |
           cd android
           ./gradlew clean assembleDebug --stacktrace
@@ -96,6 +101,9 @@ jobs:
           CAPACITOR_APP_MODE=picking pnpm exec cap sync android
 
       - name: Build Android APK (Picking)
+        env:
+          BUILD_NUMBER: ${{ github.run_number }}
+          BUILD_NAME: 1.0.${{ github.run_number }}
         run: |
           cd android
           ./gradlew clean assembleDebug --stacktrace
@@ -112,3 +120,23 @@ jobs:
           path: build-apks/*.apk
           if-no-files-found: error
           retention-days: 30
+
+      # ========================================================
+      # 4. Publish GitHub Release with APKs for In-App Auto-Update
+      # ========================================================
+      - name: Publish GitHub Release with APKs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG_NAME="v1.0.${{ github.run_number }}"
+          TITLE="Ather Warehouse Training v1.0.${{ github.run_number }}"
+          gh release create "$TAG_NAME" \
+            build-apks/Ather_Warehouse_Receiving_PutAway.apk \
+            build-apks/Ather_Order_Picking_Packaging.apk \
+            --title "$TITLE" \
+            --notes "### Ather AURIC Mega-Plant Training Release ($TAG_NAME)
+          - Automated Build from Commit: ${{ github.sha }}
+          - In-App Auto-Update APK Assets attached:
+            - 📦 **Receiving & Put-Away**: [Download APK](https://github.com/awesome-kartikey/Ather/releases/download/$TAG_NAME/Ather_Warehouse_Receiving_PutAway.apk)
+            - 📦 **Order Picking & Packaging**: [Download APK](https://github.com/awesome-kartikey/Ather/releases/download/$TAG_NAME/Ather_Order_Picking_Packaging.apk)" \
+            --latest
