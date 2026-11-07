@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Capacitor } from '@capacitor/core';
 import { LandingPage } from './pages/LandingPage';
 import { EmployeeRegistration } from './pages/EmployeeRegistration';
 import { StoryStagePlayer } from './pages/StoryStagePlayer';
@@ -15,12 +16,12 @@ type Screen = 'landing' | 'register' | 'story' | 'results' | 'certificate' | 'ad
 export type AppMode = 'receiving' | 'picking';
 
 const DEFAULT_PROFILE: UserProfile = {
-  name: 'Ramesh Patil',
-  operatorId: 'OP-AURIC-104',
-  xp: 150,
+  name: '',
+  operatorId: '',
+  xp: 0,
   streak: 1,
   lastActiveDate: new Date().toISOString().split('T')[0],
-  badges: ['safe', 'perf'],
+  badges: [],
   packBestStars: {}
 };
 
@@ -57,8 +58,10 @@ export function App() {
   const [appMode, setAppMode] = useState<AppMode>(getInitialAppMode);
   const [updateInfo, setUpdateInfo] = useState<UpdateInfo | null>(null);
 
-  // Background check for application updates on launch
+  // Background check for application updates on launch (native Android only)
   useEffect(() => {
+    if (!Capacitor.isNativePlatform()) return;
+
     let isMounted = true;
     const checkUpdates = async () => {
       const info = await checkForAppUpdate(appMode);
@@ -140,15 +143,7 @@ export function App() {
     return 'en';
   });
 
-  const [profile, setProfile] = useState<UserProfile>(() => {
-    try {
-      const stored = localStorage.getItem('ather_user_profile');
-      if (stored) {
-        return JSON.parse(stored);
-      }
-    } catch { }
-    return DEFAULT_PROFILE;
-  });
+  const [profile, setProfile] = useState<UserProfile>(DEFAULT_PROFILE);
 
   const [targetStageIndex, setTargetStageIndex] = useState<number>(() => {
     try {
@@ -233,41 +228,37 @@ export function App() {
     const startStage = appMode === 'picking' ? 7 : 0;
     setTargetStageIndex(startStage);
     setInitialSceneIndex(0);
+    setProfile(DEFAULT_PROFILE);
     setScreen('register');
   };
 
   const handleLaunchModule = (stageIndex: number) => {
     setTargetStageIndex(stageIndex);
     setInitialSceneIndex(0);
+    setProfile(DEFAULT_PROFILE);
     setScreen('register');
   };
 
-  const handleRegister = (name: string, employeeId: string, photoUrl?: string, resumeSession?: boolean) => {
+  const handleRegister = (name: string, employeeId: string, photoUrl?: string) => {
     const updatedProfile: UserProfile = {
-      ...profile,
+      ...DEFAULT_PROFILE,
       name,
       operatorId: employeeId,
-      photoUrl: photoUrl || profile.photoUrl
+      photoUrl
     };
     setProfile(updatedProfile);
     try {
       localStorage.setItem('ather_user_profile', JSON.stringify(updatedProfile));
+      // Every employee starts fresh from the beginning - clear all prior progress and scores
+      localStorage.removeItem('ather_stage_idx');
+      localStorage.removeItem('ather_scene_idx');
+      localStorage.removeItem('ather_picking_stage_idx');
+      localStorage.removeItem('ather_picking_scene_idx');
+      localStorage.removeItem('ather_xp');
+      localStorage.removeItem('ather_points');
+      localStorage.removeItem('ather_picking_points');
+      localStorage.removeItem('ather_current_operator');
     } catch { }
-
-    if (resumeSession) {
-      try {
-        const stageKey = appMode === 'picking' ? 'ather_picking_stage_idx' : 'ather_stage_idx';
-        const sceneKey = appMode === 'picking' ? 'ather_picking_scene_idx' : 'ather_scene_idx';
-        const sStage = localStorage.getItem(stageKey);
-        const sScene = localStorage.getItem(sceneKey);
-        const stage = sStage ? parseInt(sStage, 10) : (appMode === 'picking' ? 7 : 0);
-        const scene = sScene ? parseInt(sScene, 10) : 0;
-        setTargetStageIndex(stage);
-        setInitialSceneIndex(scene);
-        setScreen('story', `#player?stage=${stage + 1}`);
-        return;
-      } catch { }
-    }
 
     setInitialSceneIndex(0);
     setScreen('story', `#player?stage=${targetStageIndex + 1}`);

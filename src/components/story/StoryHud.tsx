@@ -4,6 +4,7 @@ import { AtherCapsuleLogo } from '../common/AtherCapsuleLogo';
 import { LanguageSwitcher } from '../common/LanguageSwitcher';
 import type { LanguageCode } from '../../engine/story/types';
 import { getAutoVoiceover, setAutoVoiceover, subscribeAutoVoiceover } from '../../engine/sound';
+import { getHudTranslations } from '../../i18n/translations';
 
 export interface StageTabItem {
   id: string;
@@ -36,6 +37,7 @@ export const StoryHud: React.FC<Props> = ({
   totalScenes = 9,
   onExitHome
 }) => {
+  const t = getHudTranslations(lang);
   const [autoVoice, setAutoVoice] = useState<boolean>(getAutoVoiceover());
 
   useEffect(() => {
@@ -63,7 +65,7 @@ export const StoryHud: React.FC<Props> = ({
         {/* Center: Subtle Scene Milestone Pill */}
         <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100/90 border border-slate-200/80 text-[11px] font-mono font-bold text-slate-700 shadow-2xs shrink-0">
           <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
-          <span>Scene {currentSceneIndex + 1} of {totalScenes}</span>
+          <span>{t.sceneCounter(currentSceneIndex + 1, totalScenes)}</span>
         </div>
 
         {/* Right: Language Switcher + Auto-Voice Toggle + DOJO Home Exit Button */}
@@ -76,8 +78,8 @@ export const StoryHud: React.FC<Props> = ({
             onClick={() => setAutoVoiceover(!autoVoice)}
             title={
               autoVoice
-                ? 'Auto Voiceover: ON (Click to Mute)'
-                : 'Auto Voiceover: MUTED (Click to Enable)'
+                ? `${t.voice}: ${t.on}`
+                : `${t.voice}: ${t.muted}`
             }
             className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-[11px] font-mono font-bold transition-all cursor-pointer ${
               autoVoice
@@ -88,17 +90,17 @@ export const StoryHud: React.FC<Props> = ({
             {autoVoice ? (
               <>
                 <Volume2 className="w-3.5 h-3.5 text-emerald-600" />
-                <span className="hidden md:inline">Voice</span>
+                <span className="hidden md:inline">{t.voice}</span>
                 <span className="text-[9px] bg-emerald-600 text-white px-1.5 py-0.2 rounded-full font-extrabold">
-                  ON
+                  {t.on}
                 </span>
               </>
             ) : (
               <>
                 <VolumeX className="w-3.5 h-3.5 text-slate-400" />
-                <span className="hidden md:inline">Voice</span>
+                <span className="hidden md:inline">{t.voice}</span>
                 <span className="text-[9px] bg-slate-200 text-slate-600 px-1.5 py-0.2 rounded-full font-bold">
-                  OFF
+                  {t.muted}
                 </span>
               </>
             )}
@@ -113,7 +115,7 @@ export const StoryHud: React.FC<Props> = ({
               className="p-1.5 px-2 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-blue-50 border border-slate-200 transition-colors cursor-pointer flex items-center gap-1"
             >
               <Home className="w-3.5 h-3.5" />
-              <span className="text-[11px] font-mono font-bold hidden lg:inline">Exit</span>
+              <span className="text-[11px] font-mono font-bold hidden lg:inline">{t.dojoHome}</span>
             </button>
           )}
         </div>

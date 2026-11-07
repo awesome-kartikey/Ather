@@ -1,8 +1,25 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
-import { Trophy, RefreshCcw, Award, ShieldCheck, Printer, Home, AlertTriangle, CheckCircle2, Clock, Gauge, ChevronDown, ChevronUp } from 'lucide-react';
+import { 
+  Trophy, 
+  RefreshCcw, 
+  Award, 
+  ShieldCheck, 
+  Printer, 
+  Home, 
+  AlertTriangle, 
+  CheckCircle2, 
+  Clock, 
+  Gauge, 
+  ChevronDown, 
+  ChevronUp,
+  UserCheck,
+  Sparkles
+} from 'lucide-react';
 import type { RunSummary, LanguageCode, UserProfile } from '../engine/types';
 import { BADGES } from '../engine/gamification';
+import { AtherCapsuleLogo } from '../components/common/AtherCapsuleLogo';
+import { getResultsTranslations, getLandingTranslations } from '../i18n/translations';
 import confetti from 'canvas-confetti';
 
 interface Props {
@@ -28,13 +45,15 @@ export const Results: React.FC<Props> = ({
   const percentage = summary.accuracyPct;
   const passed = percentage >= 80;
   const [showMistakes, setShowMistakes] = useState(false);
+  const t = getResultsTranslations(lang);
+  const tLanding = getLandingTranslations(lang);
 
   useEffect(() => {
     if (passed) {
       try {
         confetti({
-          particleCount: 90,
-          spread: 75,
+          particleCount: 80,
+          spread: 70,
           origin: { y: 0.6 }
         });
       } catch {}
@@ -42,191 +61,273 @@ export const Results: React.FC<Props> = ({
   }, [passed]);
 
   // Pillar 1: Safety & Compliance (100% Mandatory)
-  const safetyStatus = summary.safetyPassed ? 'PASS' : 'VIOLATION';
-  const safetyColor = summary.safetyPassed ? 'text-emerald-600 bg-emerald-50 border-emerald-200' : 'text-rose-600 bg-rose-50 border-rose-200';
+  const safetyStatus = summary.safetyPassed ? t.statusPass : t.statusViolation;
+  const safetyColor = summary.safetyPassed 
+    ? 'text-emerald-700 bg-emerald-50 border-emerald-300' 
+    : 'text-rose-700 bg-rose-50 border-rose-300';
 
   // Pillar 2: Operational Accuracy (80% Benchmark)
-  const accuracyStatus = percentage >= 80 ? 'QUALIFIED' : 'NEEDS RE-ATTEMPT';
-  const accuracyColor = percentage >= 80 ? 'text-blue-600 bg-blue-50 border-blue-200' : 'text-amber-600 bg-amber-50 border-amber-200';
+  const accuracyStatus = percentage >= 80 ? t.statusQualified : t.statusNeedsReattempt;
+  const accuracyColor = percentage >= 80 
+    ? 'text-blue-700 bg-blue-50 border-blue-300' 
+    : 'text-amber-700 bg-amber-50 border-amber-300';
 
   // Pillar 3: SLA & Velocity
-  const slaStatus = 'COMPLIANT (ON TIME)';
-  const slaColor = 'text-teal-600 bg-teal-50 border-teal-200';
+  const slaStatus = t.statusCompliant;
+  const slaColor = 'text-teal-700 bg-teal-50 border-teal-300';
+
+  const currentDate = new Date().toLocaleDateString('en-IN', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric'
+  });
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans select-none">
-      {/* Top Bar */}
-      <header className="shrink-0 bg-white border-b border-slate-200/90 shadow-2xs pt-[env(safe-area-inset-top,0px)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 pl-[max(env(safe-area-inset-left),1rem)] pr-[max(env(safe-area-inset-right),2.5rem)] py-3.5 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="text-xs font-mono font-bold text-slate-500 uppercase tracking-widest">
-              Ather AURIC Plant M002 · Floor Competency Scorecard
-            </span>
-          </div>
-          <span className={`text-xs font-mono font-extrabold px-3 py-1 rounded-full border ${
+    <div className="h-[100dvh] max-h-[100dvh] w-full overflow-hidden bg-[#F8FAFC] text-slate-900 flex flex-col justify-between font-sans select-none antialiased">
+      {/* ── Top Bar: Dual Branding & Header ───────────────────────── */}
+      <header className="shrink-0 h-11 sm:h-12 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-2xs px-4 sm:px-6 flex items-center justify-between z-20">
+        <div className="flex items-center gap-2.5">
+          <AtherCapsuleLogo height={10} />
+          <div className="h-3.5 w-px bg-slate-300" />
+          <img
+            src="/logo/Tetrahedron-logo-transparent.svg"
+            alt="Tetrahedron"
+            className="h-3.5 w-auto object-contain"
+          />
+          <div className="h-3.5 w-px bg-slate-300 hidden sm:block" />
+          <span className="hidden sm:inline-block text-xs font-mono font-bold text-slate-600 uppercase tracking-wider">
+            {t.headerTitle}
+          </span>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <span className={`text-[10px] sm:text-[11px] font-mono font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${
             isPicking
-              ? 'text-blue-700 bg-blue-50 border-blue-200'
-              : 'text-emerald-700 bg-emerald-50 border-emerald-200'
+              ? 'bg-blue-50 text-blue-800 border-blue-200'
+              : 'bg-emerald-50 text-emerald-800 border-emerald-200'
           }`}>
-            {isPicking ? 'Order Picking & Packaging' : 'Warehouse Receiving & Put-Away'}
+            {isPicking ? tLanding.modePickingBadge : tLanding.modeReceivingBadge}
           </span>
         </div>
       </header>
 
-      {/* Main Results Container */}
+      {/* ── Main Scorecard Container (Zero Vertical Scroll, Balanced Proportions) ── */}
       <motion.main
-        initial={{ opacity: 0, scale: 0.98 }}
+        initial={{ opacity: 0, scale: 0.99 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.35 }}
-        className="flex-1 flex flex-col items-center justify-start sm:justify-center p-4 sm:p-6 overflow-y-auto"
+        transition={{ duration: 0.3 }}
+        className="flex-1 min-h-0 w-full max-w-5xl mx-auto p-2 sm:p-4 flex items-center justify-center overflow-hidden"
       >
-        <div className="w-full max-w-2xl bg-white border border-slate-200/90 rounded-3xl shadow-xl overflow-hidden">
-          {/* Top Result Banner */}
-          <div
-            className={`relative px-6 sm:px-8 py-7 text-white text-center flex flex-col items-center overflow-hidden ${
-              passed
-                ? 'bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-800'
-                : 'bg-gradient-to-br from-blue-600 via-indigo-700 to-slate-800'
-            }`}
-          >
-            <img
-              src="/Assets/environments/bg_supermarket_sm.jpg"
-              alt=""
-              className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay pointer-events-none"
-            />
-            {passed && (
-              <img
-                src="/Assets/Props/prop_qc_pass_stamp.png"
-                alt="QC Pass Stamp"
-                className="absolute -right-4 -bottom-4 w-28 h-28 object-contain opacity-25 rotate-12 pointer-events-none"
-              />
-            )}
-
-            <div className="relative z-10 w-16 h-16 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center mb-3 shadow-md backdrop-blur-xs">
-              {passed ? (
-                <Trophy className="w-8 h-8 text-amber-300 animate-bounce" />
-              ) : (
-                <RefreshCcw className="w-8 h-8 text-white" />
+        <div className="w-full bg-white border border-slate-200/90 rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden md:grid md:grid-cols-12">
+          
+          {/* ── Left Column: Hero Master Card, Metrics & Tactile Actions (5 cols) ── */}
+          <div className="md:col-span-5 flex flex-col justify-between border-b md:border-b-0 md:border-r border-slate-200 bg-white">
+            
+            {/* Top Result Hero Banner */}
+            <div
+              className={`relative p-4 sm:p-5 text-white overflow-hidden shrink-0 ${
+                passed
+                  ? 'bg-gradient-to-br from-[#14232b] via-[#1a3540] to-[#0f242d]'
+                  : 'bg-gradient-to-br from-[#1e293b] via-[#334155] to-[#0f172a]'
+              }`}
+            >
+              {/* Subtle Ambient Radial Lighting */}
+              <div className="absolute top-0 right-0 w-44 h-44 bg-emerald-500/15 rounded-full blur-2xl pointer-events-none" />
+              {passed && (
+                <img
+                  src="/Assets/Props/prop_qc_pass_stamp.png"
+                  alt="QC Pass"
+                  className="absolute -right-3 -bottom-3 w-20 h-20 object-contain opacity-20 rotate-12 pointer-events-none"
+                />
               )}
-            </div>
 
-            <h2 className="relative z-10 text-2xl sm:text-3xl font-black tracking-tight mb-1">
-              {passed ? 'SOP Floor Competency Certified!' : 'Floor Training Practice Completed'}
-            </h2>
-            <p className="relative z-10 text-xs sm:text-sm text-white/90 font-medium">
-              Operator: <strong className="text-white">{profile.name || 'Floor Operator'}</strong> ({profile.operatorId || 'OP-AURIC-104'}) · Ather Plant M002
-            </p>
-          </div>
+              {/* Title & Status Badge */}
+              <div className="relative z-10 flex items-start gap-3">
+                <div className={`w-11 h-11 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center shrink-0 shadow-md ${
+                  passed
+                    ? 'bg-emerald-500/20 border border-emerald-400/40 text-emerald-400'
+                    : 'bg-amber-500/20 border border-amber-400/40 text-amber-400'
+                }`}>
+                  {passed ? (
+                    <Trophy className="w-6 h-6 animate-pulse" />
+                  ) : (
+                    <RefreshCcw className="w-5 h-5 text-white" />
+                  )}
+                </div>
 
-          {/* Metrics Body */}
-          <div className="p-6 sm:p-8 flex flex-col gap-6">
-            {/* Quick Metrics Bar */}
-            <div className="grid grid-cols-3 gap-3 text-center">
-              <div className="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/80">
-                <span className="text-[10px] font-mono text-slate-400 font-extrabold uppercase">Accuracy</span>
-                <p className="text-2xl sm:text-3xl font-black text-slate-900 mt-0.5">{percentage}%</p>
-              </div>
-
-              <div className="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/80">
-                <span className="text-[10px] font-mono text-slate-400 font-extrabold uppercase">Points Scored</span>
-                <p className="text-2xl sm:text-3xl font-black text-emerald-600 mt-0.5">{summary.correctSteps} / {summary.totalSteps} pts</p>
-              </div>
-
-              <div className="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/80">
-                <span className="text-[10px] font-mono text-slate-400 font-extrabold uppercase">Floor Rating</span>
-                <p className="text-xl sm:text-2xl font-black text-amber-500 mt-0.5">
-                  {'⭐'.repeat(summary.stars || 1)}
-                </p>
-              </div>
-            </div>
-
-            {/* ── 3-Pillar Industrial Competency Scorecard ────────────── */}
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <h4 className="text-xs font-mono font-extrabold text-slate-500 uppercase tracking-wider flex items-center gap-1.5">
-                  <Gauge className="w-4 h-4 text-blue-600" />
-                  3-Pillar Floor Competency Audit
-                </h4>
-                <span className="text-[11px] font-bold text-slate-400">Ather Standard ISO 9001:2015</span>
-              </div>
-
-              {/* Pillar 1: Safety & Compliance */}
-              <div className="p-4 rounded-2xl bg-slate-50/80 border border-slate-200 flex items-start justify-between gap-3">
-                <div className="flex items-start gap-3">
-                  <div className={`p-2 rounded-xl mt-0.5 ${summary.safetyPassed ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
-                    <ShieldCheck className="w-5 h-5" />
+                <div className="flex-1 min-w-0">
+                  <div className="inline-flex items-center gap-1 text-[9px] font-mono font-bold tracking-widest uppercase px-2 py-0.5 rounded-full bg-white/10 text-emerald-300 border border-emerald-400/20 mb-1">
+                    <Sparkles className="w-2.5 h-2.5" />
+                    <span>ISO 9001:2015 DOJO</span>
                   </div>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm font-extrabold text-slate-900">Pillar 1: Safety &amp; EHS Adherence</span>
-                      <span className={`text-[10px] font-mono font-black px-2 py-0.5 rounded-md border ${safetyColor}`}>
-                        {safetyStatus}
-                      </span>
-                    </div>
-                    <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">
-                      Mandatory dock wheel chocking, engine shut-off, chemical Class 3 PPE, and hazardous vapor protocols. Zero tolerance threshold.
-                    </p>
-                  </div>
+                  <h2 className="text-base sm:text-lg font-black tracking-tight leading-snug">
+                    {passed ? t.certifiedTitle : t.completedTitle}
+                  </h2>
                 </div>
               </div>
 
-              {/* Pillar 2: Operational Accuracy */}
-              <div className="p-4 rounded-2xl bg-slate-50/80 border border-slate-200 flex items-start justify-between gap-3">
-                <div className="flex items-start gap-3">
-                  <div className={`p-2 rounded-xl mt-0.5 ${percentage >= 80 ? 'bg-blue-100 text-blue-700' : 'bg-amber-100 text-amber-700'}`}>
-                    <CheckCircle2 className="w-5 h-5" />
+              {/* Operator Identity Pill with Real Photo if captured */}
+              <div className="relative z-10 mt-3 pt-3 border-t border-white/10 flex items-center gap-2.5">
+                {profile.photoUrl ? (
+                  <div className="w-9 h-9 rounded-lg overflow-hidden border border-emerald-400/50 shadow-2xs shrink-0 bg-white">
+                    <img src={profile.photoUrl} alt={profile.name} className="w-full h-full object-cover" />
                   </div>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm font-extrabold text-slate-900">Pillar 2: Process &amp; Stowage Accuracy</span>
-                      <span className={`text-[10px] font-mono font-black px-2 py-0.5 rounded-md border ${accuracyColor}`}>
-                        {accuracyStatus} ({percentage}%)
-                      </span>
-                    </div>
-                    <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">
-                      Barcode verification, bin marriage scans, 10% statistical sampling, and SAP EWM transaction accuracy.
-                    </p>
+                ) : (
+                  <div className="w-9 h-9 rounded-lg bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 flex items-center justify-center font-black text-xs shrink-0">
+                    <UserCheck className="w-4 h-4" />
                   </div>
+                )}
+                <div className="flex-1 min-w-0 text-left">
+                  <span className="text-xs font-extrabold text-white truncate block">
+                    {profile.name || 'Floor Operator'}
+                  </span>
+                  <span className="text-[10px] font-mono text-slate-300 block">
+                    ID: {profile.operatorId || 'OP-AURIC-104'} · Plant M002
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Metrics Bar: 3 Clean High-Density Tiles */}
+            <div className="p-3 sm:p-4 bg-slate-50/70 border-b border-slate-200/80">
+              <div className="grid grid-cols-3 gap-2 text-center">
+                <div className="bg-white p-2 sm:p-2.5 rounded-xl border border-slate-200/90 shadow-2xs">
+                  <span className="text-[9px] font-mono text-slate-400 font-extrabold uppercase block">{t.accuracy}</span>
+                  <p className="text-lg sm:text-xl font-black text-slate-900 mt-0.5">{percentage}%</p>
+                </div>
+
+                <div className="bg-white p-2 sm:p-2.5 rounded-xl border border-slate-200/90 shadow-2xs">
+                  <span className="text-[9px] font-mono text-slate-400 font-extrabold uppercase block">{t.pointsScored}</span>
+                  <p className="text-lg sm:text-xl font-black text-emerald-600 mt-0.5">{summary.correctSteps}/{summary.totalSteps}</p>
+                </div>
+
+                <div className="bg-white p-2 sm:p-2.5 rounded-xl border border-slate-200/90 shadow-2xs">
+                  <span className="text-[9px] font-mono text-slate-400 font-extrabold uppercase block">{t.floorRating}</span>
+                  <p className="text-sm sm:text-base font-black text-amber-500 mt-0.5">
+                    {'⭐'.repeat(summary.stars || 1)}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Tactile Action Buttons: Placed directly on left column */}
+            <div className="p-3 sm:p-4 space-y-2 bg-white">
+              <button
+                type="button"
+                onClick={onViewCertificate}
+                className="w-full min-h-[46px] py-2.5 px-3 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm rounded-xl shadow-md shadow-emerald-600/25 flex items-center justify-center gap-2 transition-all cursor-pointer active:scale-98"
+              >
+                <Printer className="w-4 h-4" />
+                <span>{t.viewCertificate}</span>
+              </button>
+
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  type="button"
+                  onClick={onRestart}
+                  className="min-h-[38px] py-2 px-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-xl border border-slate-200 transition-all text-xs flex items-center justify-center gap-1.5 cursor-pointer active:scale-98"
+                >
+                  <RefreshCcw className="w-3.5 h-3.5" />
+                  <span>{t.restartModule}</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={onNavigateHome}
+                  className="min-h-[38px] py-2 px-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-xl border border-slate-200 transition-all text-xs flex items-center justify-center gap-1.5 cursor-pointer active:scale-98"
+                >
+                  <Home className="w-3.5 h-3.5" />
+                  <span>{t.dojoHome}</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Right Column: 3-Pillar Audit Breakdown & Badges (7 cols) ── */}
+          <div className="md:col-span-7 p-4 sm:p-5 flex flex-col justify-between gap-2.5 bg-slate-50/50">
+            {/* Audit Header */}
+            <div className="flex items-center justify-between pb-1.5 border-b border-slate-200/80">
+              <div className="flex items-center gap-1.5 text-xs font-mono font-extrabold text-slate-700 uppercase tracking-wider">
+                <Gauge className="w-3.5 h-3.5 text-emerald-600" />
+                <span>{t.auditDeckTitle}</span>
+              </div>
+              <span className="text-[10px] font-mono font-bold text-slate-400">{t.isoStandard}</span>
+            </div>
+
+            {/* 3 Pillar Audit Rows (Compact, cohesive layout) */}
+            <div className="space-y-2">
+              {/* Pillar 1: Safety & Compliance */}
+              <div className="p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/90 shadow-2xs flex items-start gap-2.5">
+                <div className={`p-1.5 rounded-lg shrink-0 mt-0.5 ${summary.safetyPassed ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
+                  <ShieldCheck className="w-4 h-4" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-xs font-extrabold text-slate-900 truncate">{t.pillar1Title}</span>
+                    <span className={`text-[9px] font-mono font-black px-2 py-0.5 rounded border shrink-0 ${safetyColor}`}>
+                      {safetyStatus}
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
+                    {t.pillar1Desc}
+                  </p>
+                </div>
+              </div>
+
+              {/* Pillar 2: Process & Stowage Accuracy */}
+              <div className="p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/90 shadow-2xs flex items-start gap-2.5">
+                <div className={`p-1.5 rounded-lg shrink-0 mt-0.5 ${percentage >= 80 ? 'bg-blue-100 text-blue-700' : 'bg-amber-100 text-amber-700'}`}>
+                  <CheckCircle2 className="w-4 h-4" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-xs font-extrabold text-slate-900 truncate">{t.pillar2Title}</span>
+                    <span className={`text-[9px] font-mono font-black px-2 py-0.5 rounded border shrink-0 ${accuracyColor}`}>
+                      {accuracyStatus} ({percentage}%)
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
+                    {t.pillar2Desc}
+                  </p>
                 </div>
               </div>
 
               {/* Pillar 3: SLA & Velocity */}
-              <div className="p-4 rounded-2xl bg-slate-50/80 border border-slate-200 flex items-start justify-between gap-3">
-                <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-xl mt-0.5 bg-teal-100 text-teal-700">
-                    <Clock className="w-5 h-5" />
+              <div className="p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/90 shadow-2xs flex items-start gap-2.5">
+                <div className="p-1.5 rounded-lg shrink-0 mt-0.5 bg-teal-100 text-teal-700">
+                  <Clock className="w-4 h-4" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-xs font-extrabold text-slate-900 truncate">{t.pillar3Title}</span>
+                    <span className={`text-[9px] font-mono font-black px-2 py-0.5 rounded border shrink-0 ${slaColor}`}>
+                      {slaStatus}
+                    </span>
                   </div>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm font-extrabold text-slate-900">Pillar 3: Line Feeder SLA &amp; Velocity</span>
-                      <span className={`text-[10px] font-mono font-black px-2 py-0.5 rounded-md border ${slaColor}`}>
-                        {slaStatus}
-                      </span>
-                    </div>
-                    <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">
-                      Non-DOL 30-min handover SLA, paint shop 2-hour decanting buffer, and 4:00 PM STO dispatch cutoff adherence.
-                    </p>
-                  </div>
+                  <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
+                    {t.pillar3Desc}
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Unlocked Badges */}
+            {/* Unlocked Badges (Sleek Horizontal Pill Row) */}
             {summary.badgesEarned.length > 0 && (
-              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col gap-2">
-                <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wide flex items-center gap-1.5">
-                  <Award className="w-4 h-4 text-blue-600" /> Operational Badges Earned:
+              <div className="p-2 sm:p-2.5 rounded-xl bg-white border border-slate-200/80 flex items-center justify-between gap-2">
+                <span className="text-[10px] font-mono font-bold text-slate-500 uppercase tracking-wide flex items-center gap-1 shrink-0">
+                  <Award className="w-3.5 h-3.5 text-blue-600" />
+                  <span>{t.badgesTitle}</span>
                 </span>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 justify-end">
                   {summary.badgesEarned.map((badgeId) => {
                     const b = BADGES[badgeId];
                     if (!b) return null;
                     return (
                       <span
                         key={badgeId}
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-extrabold text-slate-800 shadow-2xs"
+                        className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-50 border border-slate-200 text-[11px] font-bold text-slate-800 shadow-2xs"
                       >
-                        <span className="text-base">{b.icon}</span>
+                        <span>{b.icon}</span>
                         <span>{(b.title as any)[lang] || b.title.en}</span>
                       </span>
                     );
@@ -237,28 +338,28 @@ export const Results: React.FC<Props> = ({
 
             {/* Mistake Review Toggle (if not 100% or safety failed) */}
             {(!passed || !summary.safetyPassed) && (
-              <div className="border border-amber-200 bg-amber-50/60 rounded-2xl p-4">
+              <div className="border border-amber-200 bg-amber-50/70 rounded-xl p-2.5">
                 <button
                   type="button"
                   onClick={() => setShowMistakes(!showMistakes)}
                   className="w-full flex items-center justify-between text-xs font-bold text-amber-900 cursor-pointer"
                 >
-                  <span className="flex items-center gap-2">
-                    <AlertTriangle className="w-4 h-4 text-amber-600" />
-                    Review Operational Violations &amp; Corrective Actions
+                  <span className="flex items-center gap-1.5">
+                    <AlertTriangle className="w-3.5 h-3.5 text-amber-600" />
+                    Review Violations &amp; Corrective Actions
                   </span>
-                  {showMistakes ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                  {showMistakes ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
                 </button>
                 {showMistakes && (
-                  <div className="mt-3 pt-3 border-t border-amber-200 text-xs text-amber-950 space-y-2">
+                  <div className="mt-2 pt-2 border-t border-amber-200 text-[11px] text-amber-950 space-y-1.5">
                     {!summary.safetyPassed && (
-                      <div className="p-2.5 rounded-xl bg-white border border-amber-200 leading-relaxed">
-                        <strong>Safety Violation:</strong> Wheel chocks or engine shut-off protocol was omitted during truck dock arrival. SOP XXXX_PRO_001 mandates wheel chocks be placed prior to any container unlatching.
+                      <div className="p-2 rounded-lg bg-white border border-amber-200 leading-snug">
+                        <strong>Safety Violation:</strong> Dock wheel chocks or engine shut-off protocol was omitted during truck dock arrival.
                       </div>
                     )}
                     {percentage < 80 && (
-                      <div className="p-2.5 rounded-xl bg-white border border-amber-200 leading-relaxed">
-                        <strong>Quality/Stowage Accuracy:</strong> Re-attempt the module to ensure 100% scan verification before placing high-rise bins or chemical consignments.
+                      <div className="p-2 rounded-lg bg-white border border-amber-200 leading-snug">
+                        <strong>Accuracy:</strong> Re-attempt the module to ensure 100% scan verification before placing high-rise bins.
                       </div>
                     )}
                   </div>
@@ -266,38 +367,16 @@ export const Results: React.FC<Props> = ({
               </div>
             )}
 
-            {/* Action Buttons (Glove-friendly min 56px height) */}
-            <div className="space-y-3 pt-1">
-              <button
-                type="button"
-                onClick={onViewCertificate}
-                className="w-full min-h-[56px] py-3.5 px-4 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold rounded-2xl shadow-lg shadow-blue-500/25 transition-all text-base flex items-center justify-center gap-2.5 cursor-pointer active:scale-99"
-              >
-                <Printer className="w-5 h-5" />
-                <span>View &amp; Print Official Certificate</span>
-              </button>
-
-              <div className="grid grid-cols-2 gap-3">
-                <button
-                  type="button"
-                  onClick={onRestart}
-                  className="min-h-[50px] py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-xl border border-slate-200 transition-all text-xs sm:text-sm flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  <RefreshCcw className="w-4 h-4" />
-                  <span>Restart Module</span>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={onNavigateHome}
-                  className="min-h-[50px] py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-xl border border-slate-200 transition-all text-xs sm:text-sm flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  <Home className="w-4 h-4" />
-                  <span>DOJO Home</span>
-                </button>
-              </div>
+            {/* Quality Cell Verification Footer */}
+            <div className="pt-1 border-t border-slate-200 flex items-center justify-between text-[10px] font-mono text-slate-400">
+              <span className="flex items-center gap-1 text-emerald-700 font-bold">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                Telemetric Audit Logged
+              </span>
+              <span>Ather QA Cell · {currentDate}</span>
             </div>
           </div>
+
         </div>
       </motion.main>
     </div>

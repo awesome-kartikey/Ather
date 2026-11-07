@@ -3,6 +3,7 @@ import { ChevronRight } from 'lucide-react';
 import { AtherCapsuleLogo } from '../components/common/AtherCapsuleLogo';
 import { LanguageSwitcher } from '../components/common/LanguageSwitcher';
 import type { LanguageCode } from '../engine/types';
+import { getLandingTranslations } from '../i18n/translations';
 
 interface LandingPageProps {
   lang: LanguageCode;
@@ -221,6 +222,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 }) => {
   const activeCategoryTab: 1 | 2 = appMode === 'picking' ? 2 : 1;
   const isPicking = appMode === 'picking';
+  const t = getLandingTranslations(lang);
 
   const filteredModules = MODULES_DATA.filter((m) => m.category === activeCategoryTab);
 
@@ -260,7 +262,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               ? 'bg-blue-50 text-blue-800 border border-blue-200'
               : 'bg-emerald-50 text-emerald-800 border border-emerald-200'
           }`}>
-            {isPicking ? 'Order Picking & Packaging' : 'Warehouse Receiving & Put-Away'}
+            {isPicking ? t.modePickingBadge : t.modeReceivingBadge}
           </span>
         </div>
 
@@ -273,7 +275,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               title="Open Admin & Telemetry Console"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Admin Console</span>
+              <span>{t.adminConsole}</span>
             </button>
           )}
           <LanguageSwitcher currentLang={lang} onSelectLang={onSelectLang} />
@@ -292,16 +294,16 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-tight">
             {isPicking ? (
               <>
-                Order Picking &amp;{' '}
+                {t.titlePickingMain}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700">
-                  Packaging DOJO
+                  {t.titlePickingHighlight}
                 </span>
               </>
             ) : (
               <>
-                Warehouse Receiving &amp;{' '}
+                {t.titleReceivingMain}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700">
-                  Put-Away DOJO
+                  {t.titleReceivingHighlight}
                 </span>
               </>
             )}
@@ -309,9 +311,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
           {/* Subtitle */}
           <p className="text-sm sm:text-base text-slate-600 font-medium max-w-xl">
-            {isPicking
-              ? 'Interactive vehicle line feeding, paint decanting, order picking, and reverse logistics simulations for Ather AURIC Plant M002.'
-              : 'Interactive vehicle gate check, DEO document triage, SAP ERP intake, and high-rise put-away simulations for Ather AURIC Plant M002.'}
+            {isPicking ? t.descPicking : t.descReceiving}
           </p>
 
           {/* Primary Action Button */}
@@ -325,7 +325,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                   : 'bg-emerald-600 hover:bg-emerald-700 shadow-emerald-500/20'
               }`}
             >
-              <span>Enter DOJO Station</span>
+              <span>{t.enterDojoStation}</span>
               <ChevronRight className="w-5 h-5" />
             </button>
           </div>
@@ -336,14 +336,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           <div className="flex items-center justify-between gap-3 mb-6">
             <div>
               <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
-                {isPicking
-                  ? 'Order Picking & Packaging Modules (SOP 08 – 12)'
-                  : 'Warehouse Receiving & Put-Away Modules (SOP 01 – 07)'}
+                {isPicking ? t.modulesHeadingPicking : t.modulesHeadingReceiving}
               </h3>
               <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
-                {isPicking
-                  ? 'Master all 5 Outbound Standard Operating Procedures with 100% SOP accuracy.'
-                  : 'Master all 7 Inbound Standard Operating Procedures with 100% SOP accuracy.'}
+                {isPicking ? t.modulesSubPicking : t.modulesSubReceiving}
               </p>
             </div>
           </div>
@@ -371,10 +367,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                   {/* Metadata Row BELOW the image: Module Number on Left, Scenes Count on Right */}
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-[11px] font-mono font-extrabold px-2.5 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-200/70">
-                      MODULE {String(m.number).padStart(2, '0')}
+                      {t.moduleLabel} {String(m.number).padStart(2, '0')}
                     </span>
                     <span className="text-[11px] font-mono font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200/60">
-                      {m.scenesCount} Scenes
+                      {t.scenesCount(m.scenesCount)}
                     </span>
                   </div>
 
@@ -385,7 +381,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
                   {/* Role Badge */}
                   <div className="flex items-center gap-2 mt-1 text-xs text-slate-500 font-medium">
-                    <span className="text-emerald-700 font-bold">{m.badge}</span>
+                    <span className="text-emerald-700 font-bold">{t.roleBadges[m.badge] || m.badge}</span>
                   </div>
                 </div>
               </motion.div>

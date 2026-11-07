@@ -130,6 +130,12 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
     }
   });
 
+  useEffect(() => {
+    if (propLang && propLang !== lang) {
+      setLang(propLang);
+    }
+  }, [propLang]);
+
   const handleSetLang = (newLang: LanguageCode) => {
     stopVoice();
     setLang(newLang);
@@ -144,32 +150,15 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
       }
       return Math.min(Math.max(0, idx), activeStages.length - 1);
     }
-    try {
-      const saved = localStorage.getItem(isPicking ? 'ather_picking_stage_idx' : 'ather_stage_idx');
-      return saved !== null ? Math.min(Math.max(0, Number(saved)), activeStages.length - 1) : 0;
-    } catch {
-      return 0;
-    }
+    return 0;
   });
   const [currentSceneIndex, setCurrentSceneIndex] = useState<number>(() => {
     if (initialSceneIndex !== undefined) {
       return initialSceneIndex;
     }
-    try {
-      const saved = localStorage.getItem('ather_scene_idx');
-      return saved !== null ? Number(saved) : 0;
-    } catch {
-      return 0;
-    }
+    return 0;
   });
-  const [xp, setXp] = useState<number>(() => {
-    try {
-      const saved = localStorage.getItem('ather_xp');
-      return saved !== null ? Number(saved) : 0;
-    } catch {
-      return 0;
-    }
-  });
+  const [xp, setXp] = useState<number>(0);
   const [hearts, setHearts] = useState<number>(3);
   const [attempts, setAttempts] = useState<number>(0);
   const [showCertificate, setShowCertificate] = useState<boolean>(false);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import {
   Users,
   Clock,
@@ -22,6 +22,8 @@ import {
   fetchAllSceneTelemetry,
   syncEmployeeSession,
   logSceneTelemetry,
+  getCachedSessions,
+  getCachedTelemetry,
   type EmployeeSessionRecord,
   type SceneTelemetryRecord,
   type TrainingCategory
@@ -38,19 +40,21 @@ interface Props {
 }
 
 export const AdminPanel: React.FC<Props> = ({ onBackToPortal }) => {
-  const [sessions, setSessions] = useState<EmployeeSessionRecord[]>([]);
-  const [telemetry, setTelemetry] = useState<SceneTelemetryRecord[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
   const [categoryFilter, setCategoryFilter] = useState<'all' | TrainingCategory>('all');
+  const [sessions, setSessions] = useState<EmployeeSessionRecord[]>(() => getCachedSessions());
+  const [telemetry, setTelemetry] = useState<SceneTelemetryRecord[]>(() => getCachedTelemetry());
+  const [loading, setLoading] = useState<boolean>(() => getCachedSessions().length === 0);
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [statusFilter, setStatusFilter] = useState<'all' | 'in_progress' | 'completed'>('all');
   const [activeTab, setActiveTab] = useState<'roster' | 'benchmarks' | 'scoring_guide'>('roster');
   const [expandedOperatorId, setExpandedOperatorId] = useState<string | null>(null);
 
-  // Subscribe to real-time employee sessions
+  // Subscribe to real-time employee sessions (Instant cache-first + background live sync)
   useEffect(() => {
-    setLoading(true);
     const filter = categoryFilter === 'all' ? undefined : categoryFilter;
+    if (sessions.length === 0) {
+      setLoading(true);
+    }
     const unsub = subscribeEmployeeSessions((data) => {
       setSessions(data);
       setLoading(false);
@@ -59,15 +63,16 @@ export const AdminPanel: React.FC<Props> = ({ onBackToPortal }) => {
     return () => unsub();
   }, [categoryFilter]);
 
-  // Fetch telemetry logs
-  const refreshTelemetry = async () => {
-    const data = await fetchAllSceneTelemetry();
+  // Fetch telemetry logs on category change / mount / manual refresh (not triggered in a loop by sessions)
+  const refreshTelemetry = useCallback(async () => {
+    const filter = categoryFilter === 'all' ? undefined : categoryFilter;
+    const data = await fetchAllSceneTelemetry(undefined, filter);
     setTelemetry(data);
-  };
+  }, [categoryFilter]);
 
   useEffect(() => {
     refreshTelemetry();
-  }, [sessions]);
+  }, [refreshTelemetry]);
 
   // Filtered session records
   const filteredSessions = useMemo(() => {

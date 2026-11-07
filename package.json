@@ -1,7 +1,7 @@
 {
   "name": "floor-trainer",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Floor Trainer - Ather Energy Warehouse Training PWA",
   "type": "module",
   "scripts": {

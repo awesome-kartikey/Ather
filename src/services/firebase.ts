@@ -9,6 +9,7 @@ import {
   query,
   where,
   orderBy,
+  limit,
   onSnapshot,
   serverTimestamp,
   type Firestore,
@@ -108,6 +109,22 @@ function saveLocalFallback<T>(key: string, items: T[]) {
   try {
     localStorage.setItem(key, JSON.stringify(items));
   } catch {}
+}
+
+/**
+ * Get instant cached employee sessions for zero-latency initial UI rendering
+ */
+export function getCachedSessions(categoryFilter?: TrainingCategory): EmployeeSessionRecord[] {
+  const local = getLocalFallback<EmployeeSessionRecord>(LOCAL_SESSION_KEY);
+  if (!categoryFilter || categoryFilter === ('all' as any)) return local;
+  return local.filter((s) => s.category === categoryFilter);
+}
+
+/**
+ * Get instant cached telemetry for zero-latency initial UI rendering
+ */
+export function getCachedTelemetry(): SceneTelemetryRecord[] {
+  return getLocalFallback<SceneTelemetryRecord>(LOCAL_TELEMETRY_KEY);
 }
 
 /**
@@ -214,11 +231,15 @@ export function subscribeEmployeeSessions(
   onUpdate: (sessions: EmployeeSessionRecord[]) => void,
   categoryFilter?: TrainingCategory
 ): Unsubscribe {
+  // 1. Immediately emit cached data so the UI renders in 0ms without waiting for network
+  const initialCached = getCachedSessions(categoryFilter);
+  if (initialCached.length > 0) {
+    onUpdate(initialCached);
+  }
+
   // If Firestore is unavailable, return local fallback
   if (!db) {
-    const local = getLocalFallback<EmployeeSessionRecord>(LOCAL_SESSION_KEY);
-    const filtered = categoryFilter ? local.filter((s) => s.category === categoryFilter) : local;
-    onUpdate(filtered);
+    if (initialCached.length === 0) onUpdate([]);
     return () => {};
   }
 
@@ -250,7 +271,10 @@ export function subscribeEmployeeSessions(
           mergedMap.set(rec.id || `${rec.operatorId}_${rec.category}`, rec);
         }
 
-        onUpdate(Array.from(mergedMap.values()));
+        const mergedList = Array.from(mergedMap.values());
+        // Save back to local fallback so future page visits are instant
+        saveLocalFallback(LOCAL_SESSION_KEY, mergedList);
+        onUpdate(mergedList);
       },
       (error) => {
         console.warn('Firestore subscription error, using local fallback:', error);
@@ -284,14 +308,14 @@ export async function fetchAllSceneTelemetry(
 
   try {
     const colRef = collection(db, 'scene_telemetry');
-    let q = query(colRef, orderBy('timestamp', 'desc'));
+    let q = query(colRef, orderBy('timestamp', 'desc'), limit(150));
 
     if (operatorId && category) {
-      q = query(colRef, where('operatorId', '==', operatorId), where('category', '==', category));
+      q = query(colRef, where('operatorId', '==', operatorId), where('category', '==', category), limit(150));
     } else if (operatorId) {
-      q = query(colRef, where('operatorId', '==', operatorId));
+      q = query(colRef, where('operatorId', '==', operatorId), limit(150));
     } else if (category) {
-      q = query(colRef, where('category', '==', category));
+      q = query(colRef, where('category', '==', category), limit(150));
     }
 
     const snapshot = await getDocs(q);
@@ -306,6 +330,9 @@ export async function fetchAllSceneTelemetry(
     });
 
     if (list.length === 0) return localFiltered;
+
+    // Cache latest telemetry records locally for instant load next time
+    saveLocalFallback(LOCAL_TELEMETRY_KEY, list);
     return list;
   } catch (err) {
     console.warn('Failed to query Firestore scene telemetry, returning local fallback:', err);

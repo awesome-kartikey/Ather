@@ -1,6 +1,6 @@
 import { registerPlugin, Capacitor } from '@capacitor/core';
 
-export const CURRENT_APP_VERSION = '1.0.4';
+export const CURRENT_APP_VERSION = '1.0.5';
 
 export interface UpdateInfo {
   hasUpdate: boolean;
@@ -44,6 +44,11 @@ function compareVersions(vA: string, vB: string): number {
  * Check GitHub Releases for newer APK versions
  */
 export async function checkForAppUpdate(appMode: 'receiving' | 'picking'): Promise<UpdateInfo | null> {
+  // Only check and prompt for APK updates when running as a native Android app
+  if (!Capacitor.isNativePlatform()) {
+    return null;
+  }
+
   try {
     const repo = 'awesome-kartikey/Ather';
     const response = await fetch(`https://api.github.com/repos/${repo}/releases/latest`, {
