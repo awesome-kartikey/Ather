@@ -37,7 +37,17 @@ export const MascotAura: React.FC<MascotAuraProps> = ({
     return subscribeAutoVoiceover(() => {});
   }, []);
 
-  const textToSpeak = dialogue?.[lang] || dialogue?.en || '';
+  const textToSpeak = (() => {
+    const localized = dialogue?.[lang]?.trim();
+    if (localized) return localized;
+    const english = dialogue?.en?.trim();
+    if (english) return english;
+    const other = Object.values(dialogue || {}).find(
+      (v) => typeof v === 'string' && v.trim().length > 0
+    );
+    if (other && typeof other === 'string') return other.trim();
+    return 'Observe the operational scene and execute the mandatory SOP decision.';
+  })();
   const mascotImgUrl = MASCOT_IMAGE_MAP[pose];
 
   // Auto-play voiceover whenever dialogue or audioSrc updates

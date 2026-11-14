@@ -400,7 +400,7 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "",
+            "en": "The Material Review Board (MRB) — comprising SQA, Manufacturing Quality, Production, and Warehouse — convenes inside caged store SC01 BL to decide the fate of 4 quarantined lots. Verbal approvals are strictly illegal at Ather AURIC Plant M002! Route each quarantined component case study to its authorized disposition path (Auto-RTV, Rework, Use As-Is Deviation, or Scrap).",
             "hi": "मटेरियल रिव्यू बोर्ड (MRB) — जिसमें SQA, मैन्युफैक्चरिंग क्वालिटी, प्रोडक्शन और वेयरहाउस शामिल हैं — 4 क्वारंटाइन लॉट के भाग्य का फैसला करने के लिए केज्ड स्टोर SC01 BL के अंदर बैठक करता है। एथर औरिक प्लांट M002 में मौखिक अनुमोदन सख्त अवैध हैं! प्रत्येक क्वारंटाइन घटक केस स्टडी को उसके अधिकृत निस्तारण पथ (Auto-RTV, Rework, Use As-Is Deviation, या Scrap) पर भेजें।",
             "mr": "मटेरियल रिव्ह्यू बोर्ड (MRB) — ज्यामध्ये SQA, उत्पादन गुणवत्ता, प्रोडक्शन आणि वेअरहाऊस प्रमुख असतात — 4 क्वारंटाइन लॉट्सच्या विल्हेवाटीचा निर्णय घेण्यासाठी SC01 BL मध्ये एकत्र येतो. एथर औरिक प्लांट M002 मध्ये तोंडी संमतीला सक्त मनाई आहे! प्रत्येक केस स्टडीला तिच्या अधिकृत विल्हेवाट मार्गावर (Auto-RTV, Rework, Use As-Is Deviation, किंवा Scrap) पाठवा."
           },
@@ -551,7 +551,7 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "",
+            "en": "Final station of Category 1! We are at the Ather Scrapyard Building and Outbound Weighbridge. Defective structural components approved for scrap by Finance and Production must be physically shredded to ensure zero unauthorized street resale, followed by strict weighbridge verification before truck gate exit. Put the 4 steps of the complete scrap disposal lifecycle in the exact SOP sequence!",
             "hi": "श्रेणी 1 का अंतिम स्टेशन! हम एथर स्क्रैपयार्ड बिल्डिंग और आउटबाउंड वेईब्रिज पर हैं। वित्त और उत्पादन द्वारा स्क्रैप के लिए अनुमोदित दोषपूर्ण संरचनात्मक घटकों को शारीरिक रूप से काटा जाना चाहिए ताकि शून्य अनधिकृत सड़क पुनर्विक्रय सुनिश्चित हो सके, जिसके बाद ट्रक गेट से बाहर निकलने से पहले सख्त वेईब्रिज सत्यापन हो। पूर्ण स्क्रैप निपटान जीवनचक्र के 4 चरणों को सटीक SOP क्रम में रखें!",
             "mr": "कॅटेगरी 1 चा अंतिम टप्पा! आपण एथर स्क्रॅप यार्ड आणि आऊटबाउंड वेईब्रिजवर पोहोचलो आहोत. फायनान्स व प्रोडक्शनने स्क्रॅप मंजूर केलेल्या नाकारलेल्या साहित्याचे औद्योगिक श्रेडरमध्ये तुकडे केले पाहिजेत जेणेकरून ते पुन्हा बाजारात जाऊ नये, आणि त्यानंतर वेईब्रिजवर वजन करून ट्रक सोडला जातो. अधिकृत SOP नुसार स्क्रॅप विल्हेवाटीच्या 4 टप्प्यांचा अचूक क्रम लावा!"
           },

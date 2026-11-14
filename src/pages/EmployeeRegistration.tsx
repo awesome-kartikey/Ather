@@ -181,18 +181,6 @@ export const EmployeeRegistration: React.FC<Props> = ({
   const handleSubmit = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
     if (!validate()) return;
-    try {
-      localStorage.removeItem('ather_stage_idx');
-      localStorage.removeItem('ather_scene_idx');
-      localStorage.removeItem('ather_xp');
-      localStorage.removeItem('ather_points');
-      localStorage.removeItem('ather_picking_stage_idx');
-      localStorage.removeItem('ather_picking_scene_idx');
-      localStorage.removeItem('ather_picking_points');
-      localStorage.removeItem('ather_user_profile');
-    } catch {
-      // ignore
-    }
     onRegister(name.trim(), employeeId.trim(), photoUrl!);
   };
 

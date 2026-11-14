@@ -46,10 +46,14 @@ const getInitialAppMode = (): AppMode => {
     if (envMode === 'picking' || envMode === 'receiving') return envMode;
     const hash = window.location.hash.toLowerCase();
     const search = window.location.search.toLowerCase();
+    const stageMatch = hash.match(/stage=(\d+)/);
+    if (stageMatch) {
+      const stg = parseInt(stageMatch[1], 10);
+      if (stg >= 8) return 'picking';
+      if (stg >= 1) return 'receiving';
+    }
     if (hash.includes('picking') || search.includes('picking')) return 'picking';
     if (hash.includes('receiving') || search.includes('receiving')) return 'receiving';
-    const saved = localStorage.getItem('ather_app_mode');
-    if (saved === 'picking' || saved === 'receiving') return saved;
   } catch {}
   return 'receiving';
 };
@@ -86,7 +90,6 @@ export function App() {
   // Sync PWA Manifest, Title, and Icon dynamically based on appMode
   useEffect(() => {
     try {
-      localStorage.setItem('ather_app_mode', appMode);
       const isPicking = appMode === 'picking';
       document.title = isPicking
         ? 'Order Picking & Packaging | Ather AURIC Plant M002'
@@ -123,8 +126,7 @@ export function App() {
   const setScreen = (newScreen: Screen, extraHash = '') => {
     setScreenState(newScreen);
     try {
-      const prefix = appMode === 'picking' ? '#picking' : '#receiving';
-      if (newScreen === 'landing') window.location.hash = prefix;
+      if (newScreen === 'landing') window.location.hash = '';
       else if (newScreen === 'admin') window.location.hash = '#admin';
       else if (newScreen === 'register') window.location.hash = '#signin';
       else if (newScreen === 'story') window.location.hash = extraHash || `#player?stage=${targetStageIndex + 1}`;
@@ -151,7 +153,7 @@ export function App() {
       const match = hash.match(/stage=(\d+)/);
       if (match) return Math.max(0, parseInt(match[1], 10) - 1);
     } catch {}
-    return 0;
+    return getInitialAppMode() === 'picking' ? 7 : 0;
   });
   const [initialSceneIndex, setInitialSceneIndex] = useState<number>(() => {
     try {
@@ -168,7 +170,13 @@ export function App() {
       try {
         const hash = window.location.hash;
         const search = window.location.search;
-        if (hash.includes('picking') || search.includes('picking')) {
+        const match = hash.match(/stage=(\d+)/);
+        if (match) {
+          const stgNum = parseInt(match[1], 10);
+          const stgIdx = Math.max(0, stgNum - 1);
+          setTargetStageIndex(stgIdx);
+          setAppMode(stgNum >= 8 ? 'picking' : 'receiving');
+        } else if (hash.includes('picking') || search.includes('picking')) {
           setAppMode('picking');
         } else if (hash.includes('receiving') || search.includes('receiving')) {
           setAppMode('receiving');
@@ -178,8 +186,6 @@ export function App() {
           setScreenState('admin');
         } else if (hash.startsWith('#player') || hash.startsWith('#story')) {
           setScreenState('story');
-          const match = hash.match(/stage=(\d+)/);
-          if (match) setTargetStageIndex(Math.max(0, parseInt(match[1], 10) - 1));
           const sceneMatch = hash.match(/scene=(\d+)/);
           if (sceneMatch) setInitialSceneIndex(Math.max(0, parseInt(sceneMatch[1], 10) - 1));
         } else if (hash.startsWith('#signin') || hash.startsWith('#register')) {
@@ -233,6 +239,8 @@ export function App() {
   };
 
   const handleLaunchModule = (stageIndex: number) => {
+    const mode = stageIndex >= 7 ? 'picking' : 'receiving';
+    setAppMode(mode);
     setTargetStageIndex(stageIndex);
     setInitialSceneIndex(0);
     setProfile(DEFAULT_PROFILE);
@@ -247,19 +255,6 @@ export function App() {
       photoUrl
     };
     setProfile(updatedProfile);
-    try {
-      localStorage.setItem('ather_user_profile', JSON.stringify(updatedProfile));
-      // Every employee starts fresh from the beginning - clear all prior progress and scores
-      localStorage.removeItem('ather_stage_idx');
-      localStorage.removeItem('ather_scene_idx');
-      localStorage.removeItem('ather_picking_stage_idx');
-      localStorage.removeItem('ather_picking_scene_idx');
-      localStorage.removeItem('ather_xp');
-      localStorage.removeItem('ather_points');
-      localStorage.removeItem('ather_picking_points');
-      localStorage.removeItem('ather_current_operator');
-    } catch { }
-
     setInitialSceneIndex(0);
     setScreen('story', `#player?stage=${targetStageIndex + 1}`);
   };

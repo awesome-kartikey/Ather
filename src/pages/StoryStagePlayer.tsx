@@ -192,16 +192,9 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
   const answerEvaluatedRef = useRef<(correct: boolean) => void>(() => {});
   const resetSceneRef = useRef<() => void>(() => {});
 
-  // 1-Point scoring system and safety breach tracking
-  const [pointsScored, setPointsScored] = useState<number>(() => {
-    try {
-      const saved = localStorage.getItem(isPicking ? 'ather_picking_points' : 'ather_points');
-      return saved !== null ? Number(saved) : 0;
-    } catch {
-      return 0;
-    }
-  });
-  const pointsScoredRef = useRef<number>(pointsScored);
+  // 1-Point scoring system and safety breach tracking - always starts fresh at 0 for each session
+  const [pointsScored, setPointsScored] = useState<number>(0);
+  const pointsScoredRef = useRef<number>(0);
   const safetyBreachesRef = useRef<number>(0);
 
   const stageData = activeStages[currentStageIndex] || activeStages[0];
@@ -235,21 +228,23 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
     setShowVideoModal(false);
   }, [currentStageIndex, currentSceneIndex]);
 
-  // Auto-save progress to localStorage
+  // Save language preference and keep URL hash in sync with real stage & scene
   useEffect(() => {
     try {
-      const stageKey = isPicking ? 'ather_picking_stage_idx' : 'ather_stage_idx';
-      const sceneKey = isPicking ? 'ather_picking_scene_idx' : 'ather_scene_idx';
-      const pointsKey = isPicking ? 'ather_picking_points' : 'ather_points';
-      localStorage.setItem(stageKey, String(currentStageIndex));
-      localStorage.setItem(sceneKey, String(currentSceneIndex));
-      localStorage.setItem(pointsKey, String(pointsScoredRef.current));
-      localStorage.setItem('ather_xp', String(pointsScoredRef.current));
       localStorage.setItem('ather_lang', lang);
+
+      const realStageNumber = stageData.stageNumber;
+      const currentHash = window.location.hash;
+      if (currentHash.startsWith('#player') || currentHash.startsWith('#story')) {
+        const newHash = `#player?stage=${realStageNumber}&scene=${currentSceneIndex + 1}`;
+        if (currentHash !== newHash) {
+          window.history.replaceState(null, '', newHash);
+        }
+      }
     } catch {
       // Storage unavailable
     }
-  }, [currentStageIndex, currentSceneIndex, pointsScored, lang, isPicking]);
+  }, [currentStageIndex, currentSceneIndex, lang, stageData.stageNumber]);
 
   // Dev-only bridge: expose player state and listen for dev events
   useEffect(() => {
@@ -543,39 +538,79 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
     resetSceneRef.current = handleResetCurrentScene;
   });
 
+  const getValidDialogue = (
+    primary?: any,
+    secondary?: any,
+    fallback?: LocalizedText
+  ): LocalizedText => {
+    const defaultText: LocalizedText = {
+      en: 'Observe the operational scene and execute the mandatory SOP decision.',
+      hi: 'परिचालन दृश्य का निरीक्षण करें और अनिवार्य SOP निर्णय निष्पादित करें।',
+      mr: 'कारखान्यातील दृश्य पहा आणि आवश्यक SOP निर्णय घ्या.'
+    };
+    const def = fallback || defaultText;
+
+    const en =
+      (typeof primary?.en === 'string' && primary.en.trim() ? primary.en.trim() : null) ||
+      (typeof secondary?.en === 'string' && secondary.en.trim() ? secondary.en.trim() : null) ||
+      def.en;
+    const hi =
+      (typeof primary?.hi === 'string' && primary.hi.trim() ? primary.hi.trim() : null) ||
+      (typeof secondary?.hi === 'string' && secondary.hi.trim() ? secondary.hi.trim() : null) ||
+      def.hi ||
+      en;
+    const mr =
+      (typeof primary?.mr === 'string' && primary.mr.trim() ? primary.mr.trim() : null) ||
+      (typeof secondary?.mr === 'string' && secondary.mr.trim() ? secondary.mr.trim() : null) ||
+      def.mr ||
+      en;
+
+    return { en, hi, mr };
+  };
+
   // Mascot dynamic pose and text calculation with full Category 1 & Category 2 compatibility
   const mascotData = scene.mascot as any;
   const interactionData = scene.interaction as any;
 
   let currentPose: MascotPose = mascotData?.pose || mascotData?.intro?.pose || 'explaining';
-  let currentDialogue: LocalizedText = mascotData?.intro?.text || mascotData?.dialog || {
-    en: 'Observe the operational scene and execute the mandatory SOP decision.',
-    hi: 'परिचालन दृश्य का निरीक्षण करें और अनिवार्य SOP निर्णय निष्पादित करें।',
-    mr: 'कारखान्यातील दृश्य पहा आणि आवश्यक SOP निर्णय घ्या.'
-  };
+  let currentDialogue: LocalizedText = getValidDialogue(
+    mascotData?.intro?.text,
+    mascotData?.dialog
+  );
   let currentAudio: string | undefined = mascotData?.intro?.audioSrc;
 
   if (phase === 'interaction_paused') {
     currentPose = 'thinking';
-    currentDialogue = interactionData?.question || interactionData?.prompt || currentDialogue;
+    currentDialogue = getValidDialogue(
+      interactionData?.question || interactionData?.prompt,
+      currentDialogue
+    );
     // Strict separation: do not bleed intro audio into interaction phase unless explicitly defined for this question
     currentAudio = interactionData?.audioSrc || undefined;
   } else if (phase === 'feedback') {
     if (isLastCorrect) {
       currentPose = 'success';
-      currentDialogue = mascotData?.onCorrect?.text || {
-        en: 'Excellent! Your operational decision is 100% compliant with Ather AURIC SOP standards.',
-        hi: 'बहुत बढ़िया! आपका परिचालन निर्णय एथर औरिक SOP मानकों के साथ 100% अनुपालन है।',
-        mr: 'उत्कृष्ट! तुमचा निर्णय एथर औरिक SOP मानकांनुसार 100% योग्य आहे.'
-      };
+      currentDialogue = getValidDialogue(
+        mascotData?.onCorrect?.text,
+        undefined,
+        {
+          en: 'Excellent! Your operational decision is 100% compliant with Ather AURIC SOP standards.',
+          hi: 'बहुत बढ़िया! आपका परिचालन निर्णय एथर औरिक SOP मानकों के साथ 100% अनुपालन है।',
+          mr: 'उत्कृष्ट! तुमचा निर्णय एथर औरिक SOP मानकांनुसार 100% योग्य आहे.'
+        }
+      );
       currentAudio = mascotData?.onCorrect?.audioSrc;
     } else {
       currentPose = 'warning';
-      currentDialogue = mascotData?.onIncorrect?.text || {
-        en: 'Warning: SOP Protocol Violation! Review the official clause explanation below.',
-        hi: 'चेतावनी: SOP प्रोटोकॉल उल्लंघन! नीचे दिए गए आधिकारिक क्लॉज विवरण की समीक्षा करें।',
-        mr: 'सावधान: SOP नियमांचे उल्लंघन! खालील अधिकृत नियमाचे स्पष्टीकरण काळजीपूर्वक वाचा.'
-      };
+      currentDialogue = getValidDialogue(
+        mascotData?.onIncorrect?.text,
+        undefined,
+        {
+          en: 'Warning: SOP Protocol Violation! Review the official clause explanation below.',
+          hi: 'चेतावनी: SOP प्रोटोकॉल उल्लंघन! नीचे दिए गए आधिकारिक क्लॉज विवरण की समीक्षा करें।',
+          mr: 'सावधान: SOP नियमांचे उल्लंघन! खालील अधिकृत नियमाचे स्पष्टीकरण काळजीपूर्वक वाचा.'
+        }
+      );
       currentAudio = mascotData?.onIncorrect?.audioSrc;
     }
   }

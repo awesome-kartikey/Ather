@@ -408,7 +408,7 @@ export const DevFloatingToolbar: React.FC = () => {
               <span>DEV</span>
               {liveState && (
                 <span className="px-1.5 py-0.2 rounded bg-blue-800/60 text-[10px] font-mono text-blue-100">
-                  M{liveState.stageIndex + 1}:S{liveState.sceneIndex + 1}
+                  M{liveState.stageData?.stageNumber ?? (liveState.stageIndex + 1)}:S{liveState.sceneIndex + 1}
                 </span>
               )}
             </button>
@@ -478,7 +478,7 @@ export const DevFloatingToolbar: React.FC = () => {
                   </div>
                   <p className="text-[10px] text-slate-500">
                     {liveState
-                      ? `Module ${liveState.stageIndex + 1} · Scene ${liveState.sceneIndex + 1}`
+                      ? `Module ${liveState.stageData?.stageNumber ?? (liveState.stageIndex + 1)} · Scene ${liveState.sceneIndex + 1}`
                       : 'Scene Navigator & QA Solver'}
                   </p>
                 </div>
