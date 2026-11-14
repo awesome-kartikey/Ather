@@ -10,7 +10,7 @@ interface Props {
 
 export const BinMarriageAnimation: React.FC<Props> = ({
   videoSrc,
-  posterSrc = '/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg',
+  posterSrc = '/Assets/videos/scene_04_high_rise_pallet_putaway_poster.webp',
   isPaused,
   onPauseReached
 }) => {

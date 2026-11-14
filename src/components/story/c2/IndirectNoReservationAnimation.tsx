@@ -55,7 +55,7 @@ export const IndirectNoReservationAnimation: React.FC<Props> = ({
 
       {/* Industrial Background with Authentic Indirect Store CM01 Photo */}
       <img
-        src="/Assets/Background%20Environments/bg_indirect_material_store.jpg"
+        src="/Assets/environments/bg_indirect_material_store.webp"
         alt="Indirect Material Tool Crib CM01"
         className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay pointer-events-none"
       />

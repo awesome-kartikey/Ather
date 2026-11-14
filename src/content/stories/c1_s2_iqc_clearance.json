@@ -118,11 +118,11 @@
       },
       "media": {
         "videoSrc": "/Assets/videos/scene_03_iqc_inspection_split.mp4",
-        "posterSrc": "/Assets/videos/scene_03_iqc_inspection_split_poster.jpg",
+        "posterSrc": "/Assets/videos/scene_03_iqc_inspection_split_poster.webp",
         "fallbackAnimation": "iqc_sampling_transfer",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "altPosterSrc": "/Assets/videos/scene_03_iqc_inspection_split_alt.jpg"
+        "altPosterSrc": "/Assets/videos/scene_03_iqc_inspection_split_alt.webp"
       },
       "mascot": {
         "intro": {
@@ -308,7 +308,7 @@
         "fallbackAnimation": "iqc_handover_sla_clock",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/videos/scene_03_iqc_inspection_split_alt.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s2_sc04_handover_sla.webp"
       },
       "mascot": {
         "intro": {
@@ -407,7 +407,7 @@
         "fallbackAnimation": "iqc_disposition_workbench",
         "durationSeconds": 20,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/videos/scene_03_iqc_inspection_split_alt.jpg",
+        "imageSrc": "/Assets/Scenes/c1_s2_sc05_iqc_outcomes.webp",
         "propSrc": "/Assets/Props/prop_qc_pass_stamp.png"
       },
       "mascot": {
@@ -770,7 +770,7 @@
         "fallbackAnimation": "iqc_staging_cones",
         "durationSeconds": 15,
         "pauseAtSecond": 4.5,
-        "imageSrc": "/Assets/videos/scene_03_iqc_inspection_split_alt.jpg",
+        "imageSrc": "/Assets/Scenes/c1_s2_sc08_receiving_sequence.webp",
         "propSrc": "/Assets/Props/prop_warning_cones_iqc.png"
       },
       "mascot": {
@@ -890,7 +890,7 @@
         "fallbackAnimation": "iqc_handover_sla",
         "durationSeconds": 15,
         "pauseAtSecond": 4.5,
-        "imageSrc": "/Assets/videos/scene_03_iqc_inspection_split_alt.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s2_sc09_sla_overrun_risk.webp"
       },
       "mascot": {
         "intro": {

@@ -60,8 +60,8 @@
           "mr": "ACED धातू पार्ट वाटप: 7-9 धातूचे पार्ट खास ट्रॉली स्वरूपात साठवून 28 स्वतंत्र लाईन फीडरमध्ये वाटले जातात"
         },
         "videoSrc": "/Assets/videos/scene_06_bulk_decanting_trolley.mp4",
-        "posterSrc": "/Assets/videos/scene_06_bulk_decanting_trolley_poster.jpg",
-        "altPosterSrc": "/Assets/videos/scene_06_bulk_decanting_trolley_alt.jpg"
+        "posterSrc": "/Assets/videos/scene_06_bulk_decanting_trolley_poster.webp",
+        "altPosterSrc": "/Assets/videos/scene_06_bulk_decanting_trolley_alt.webp"
       },
       "interaction": {
         "type": "mcq",
@@ -178,7 +178,7 @@
           "hi": "2-पैलेट डिकैन्टिंग बफर: ज़ोन लीडर प्रति बॉडी पार्ट 2 पैलेट पोजीशन रखता है और बिन 1 खाली होते ही ई-कनबन आरएफआईडी ट्रिगर करता है",
           "mr": "2-पॅलेट डिकॅन्टिंग बफर: झोन लीडर प्रत्येक पार्टसाठी 2 पॅलेट जागा ठेवतो आणि पहिली बिन संपताच ई-कनबन RFID ट्रिगर करतो"
         },
-        "imageSrc": "/Assets/videos/scene_06_bulk_decanting_trolley_alt.jpg"
+        "imageSrc": "/Assets/Scenes/c2_s9_sc02_twobin_ekanban.webp"
       },
       "interaction": {
         "type": "count_stepper",
@@ -279,7 +279,7 @@
           "hi": "100% ट्रॉली क्षमता गेट: डिकैन्टिंग ऑपरेटर को ठीक 30 टीएसपी लोड करने होंगे; ज़ोन लीडर को आंशिक रूप से भरी ट्रॉलियों को अस्वीकार करना होगा",
           "mr": "100% ट्रॉली क्षमता गेट: डिकॅन्टिंग ऑपरेटरने ट्रॉलीत बरोबर 30 TSP भरलेच पाहिजेत; अर्धवट भरलेली ट्रॉली झोन लीडरने रोखली पाहिजे"
         },
-        "imageSrc": "/Assets/videos/scene_06_bulk_decanting_trolley_alt.jpg"
+        "imageSrc": "/Assets/Scenes/c2_s9_sc03_trolley_capacity_rule.webp"
       },
       "interaction": {
         "type": "stop_go",
@@ -385,7 +385,7 @@
           "hi": "रिवर्स प्रोटोकॉल और क्लोज्ड-लूप स्कैनिंग: गलत कार्य रद्द करें, HRR के लिए रिटर्न WH कार्य बनाएं, सही FLC ट्रिगर करें, और ऑर्डर बंद करने के लिए स्कैन करें",
           "mr": "रिव्हर्स प्रोटोकॉल आणि क्लोज्ड-लूप स्कॅनिंग: चुकीचा टास्क रद्द करून HRR कडे परतीचा रिटर्न टास्क तयार करणे, योग्य FLC मागवणे आणि स्कॅन करून ऑर्डर बंद करणे"
         },
-        "imageSrc": "/Assets/videos/scene_06_bulk_decanting_trolley_alt.jpg"
+        "imageSrc": "/Assets/Scenes/c2_s9_sc04_wrong_part_return.webp"
       },
       "interaction": {
         "type": "sequence",
@@ -475,7 +475,7 @@
         "fallbackAnimation": "decanting_definition_hu",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/videos/scene_06_bulk_decanting_trolley_alt.jpg"
+        "imageSrc": "/Assets/Scenes/c2_s9_sc05_decanting_definition.webp"
       },
       "mascot": {
         "intro": {
@@ -583,7 +583,7 @@
         "fallbackAnimation": "flc_trolley_batch_calculation",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/videos/scene_06_bulk_decanting_trolley_alt.jpg"
+        "imageSrc": "/Assets/Scenes/c2_s9_sc06_flc_batch_calculation.webp"
       },
       "mascot": {
         "intro": {
@@ -674,7 +674,7 @@
         "fallbackAnimation": "variant_wave_task_splitting",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/videos/scene_06_bulk_decanting_trolley_alt.jpg"
+        "imageSrc": "/Assets/Scenes/c2_s9_sc07_variant_wave_task_splitting.webp"
       },
       "mascot": {
         "intro": {
@@ -782,7 +782,7 @@
         "fallbackAnimation": "supermarket_rack_replenishment_zl",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/environments/bg_supermarket_sm.jpg"
+        "imageSrc": "/Assets/Scenes/c2_s9_sc08_supermarket_rack_ownership.webp"
       },
       "mascot": {
         "intro": {
@@ -890,7 +890,7 @@
         "fallbackAnimation": "empty_trolley_reverse_loop",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/videos/scene_06_bulk_decanting_trolley_alt.jpg"
+        "imageSrc": "/Assets/Scenes/c2_s9_sc09_empty_trolley_reverse_loop.webp"
       },
       "mascot": {
         "intro": {
@@ -998,7 +998,7 @@
         "fallbackAnimation": "whole_trolley_movement_gate",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/videos/scene_06_bulk_decanting_trolley_alt.jpg"
+        "imageSrc": "/Assets/Scenes/c2_s9_sc10_whole_trolley_movement.webp"
       },
       "mascot": {
         "intro": {

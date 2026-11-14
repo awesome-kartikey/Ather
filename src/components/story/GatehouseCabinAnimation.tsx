@@ -48,7 +48,7 @@ export const GatehouseCabinAnimation: React.FC<Props> = ({
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         {/* Authentic Factory Background Photo */}
         <img
-          src="/Assets/Background%20Environments/bg_deo_gate_office.jpg"
+          src="/Assets/environments/bg_deo_gate_office.webp"
           alt="DEO Gate Office"
           className="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-overlay pointer-events-none"
         />

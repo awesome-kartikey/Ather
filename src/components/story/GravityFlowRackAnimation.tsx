@@ -56,7 +56,7 @@ export const GravityFlowRackAnimation: React.FC<Props> = ({
 
       {/* Atmospheric Industrial Grid Background with Authentic Supermarket Photo */}
       <img
-        src="/Assets/Background%20Environments/bg_supermarket_sm.jpg"
+        src="/Assets/environments/bg_supermarket_sm.webp"
         alt="Supermarket Flow Racks"
         className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay pointer-events-none"
       />

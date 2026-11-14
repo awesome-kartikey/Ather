@@ -130,7 +130,7 @@
         "fallbackAnimation": "route_segregation_junction",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s3_sc02_route_segregation.webp"
       },
       "mascot": {
         "intro": {
@@ -265,11 +265,11 @@
       },
       "media": {
         "videoSrc": "/Assets/videos/scene_04_high_rise_pallet_putaway.mp4",
-        "posterSrc": "/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg",
+        "posterSrc": "/Assets/videos/scene_04_high_rise_pallet_putaway_poster.webp",
         "fallbackAnimation": "bin_marriage_lift",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "altPosterSrc": "/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg"
+        "altPosterSrc": "/Assets/videos/scene_04_high_rise_pallet_putaway_poster.webp"
       },
       "mascot": {
         "intro": {
@@ -377,7 +377,7 @@
         "fallbackAnimation": "omitted_scan_hazard",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg",
+        "imageSrc": "/Assets/Scenes/c1_s3_sc04_omitted_scan_risk.webp",
         "propSrc": "/Assets/Props/prop_hht_scanner.png"
       },
       "mascot": {
@@ -486,7 +486,7 @@
         "fallbackAnimation": "bin_slotting_violation",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s3_sc05_bin_slotting_violation.webp"
       },
       "mascot": {
         "intro": {
@@ -582,7 +582,7 @@
         "fallbackAnimation": "putaway_sequence_lifecycle",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s3_sc06_putaway_sequence.webp"
       },
       "mascot": {
         "intro": {

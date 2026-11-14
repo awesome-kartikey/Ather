@@ -55,7 +55,7 @@ export const ChemicalUnloadingAnimation: React.FC<Props> = ({
 
       {/* Atmospheric Industrial Grid Background with Authentic Chemical Building Photo */}
       <img
-        src="/Assets/Background%20Environments/bg_chemical_building.jpg"
+        src="/Assets/environments/bg_chemical_building.webp"
         alt="Chemical Storage Building"
         className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay pointer-events-none"
       />

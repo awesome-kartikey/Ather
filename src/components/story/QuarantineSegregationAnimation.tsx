@@ -55,7 +55,7 @@ export const QuarantineSegregationAnimation: React.FC<Props> = ({
 
       {/* Atmospheric Security Wire-Mesh Background with Authentic NG Quarantine Photo */}
       <img
-        src="/Assets/Background%20Environments/bg_ng_quarantine_area.jpg"
+        src="/Assets/environments/bg_ng_quarantine_area.webp"
         alt="Quarantine Rejection Area"
         className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay pointer-events-none"
       />

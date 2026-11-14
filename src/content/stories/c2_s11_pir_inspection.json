@@ -59,7 +59,7 @@
           "hi": "वित्तीय लागत आवंटन गेट: पीआईआर के तहत जारी सामग्री गैर-वापसी योग्य है; पिकिंग से पहले वैध बजट आईडी अनिवार्य है",
           "mr": "आर्थिक खर्च वाटप गेट: PIR अंतर्गत दिलेला माल परत येत नाही; माल उचलण्यापूर्वी वैध बजेट आयडी असणे सक्तीचे आहे"
         },
-        "imageSrc": "/Assets/environments/bg_deo_gate_office.jpg",
+        "imageSrc": "/Assets/Scenes/c2_s11_sc01_jira_budget_id.webp",
         "propSrc": "/Assets/Props/prop_eway_bill_tablet.png"
       },
       "interaction": {
@@ -166,7 +166,7 @@
           "hi": "दोहरा अनुमोदन गेट: कुल मूल्य ₹25,000 से अधिक होने पर उत्पाद स्वामी के हस्ताक्षर अनिवार्य हैं; मात्रा 25 से अधिक होने पर योजना टीम के हस्ताक्षर अनिवार्य हैं",
           "mr": "दुहेरी मंजुरी गेट: एकूण किंमत ₹25,000 पेक्षा जास्त असल्यास प्रॉडक्ट ओनरची मंजुरी; संख्या 25 पेक्षा जास्त असल्यास प्लॅनिंग टीमची मंजुरी अनिवार्य आहे"
         },
-        "imageSrc": "/Assets/environments/bg_deo_gate_office.jpg",
+        "imageSrc": "/Assets/Scenes/c2_s11_sc02_pir_approvals.webp",
         "propSrc": "/Assets/Props/prop_qc_pass_stamp.png"
       },
       "interaction": {
@@ -313,7 +313,7 @@
           "hi": "दैनिक 4:00 बजे कटऑफ: शाम 4 बजे से पहले स्वीकृत अनुरोध उसी दिन प्रेषित होते हैं; शाम 4 बजे के बाद स्वीकृत टिकट स्वचालित रूप से अगले कार्य दिवस के लिए कतारबद्ध होते हैं",
           "mr": "दुपारी 4:00 वाजताचा कटऑफ: दुपारी 4 पूर्वी मंजूर झालेले तिकीट त्याच दिवशी डिस्पॅच होते; दुपारी 4 नंतर मंजूर झालेले तिकीट आपोआप पुढच्या कामाच्या दिवशी पाठवले जाते"
         },
-        "imageSrc": "/Assets/environments/bg_deo_gate_office.jpg"
+        "imageSrc": "/Assets/Scenes/c2_s11_sc03_pir_cutoff_clock.webp"
       },
       "interaction": {
         "type": "mcq",
@@ -430,7 +430,7 @@
           "hi": "परिवहन अनुपालन किट: गेट से बाहर निकलने से पहले सुरक्षा मुद्रित एसएपी चालान (YPR_STO), डिलीवरी चालान (DC), और सरकारी ई-वे बिल अनिवार्य करती है",
           "mr": "वाहतूक नियम संच: गेटवरून गाडी बाहेर सोडण्यापूर्वी सिक्युरिटी छापील SAP इनव्हॉइस (YPR_STO), डिलिव्हरी चलन (DC) आणि सरकारी ई-वे बिल तपासणे अनिवार्य आहे"
         },
-        "imageSrc": "/Assets/environments/bg_deo_gate_office.jpg",
+        "imageSrc": "/Assets/Scenes/c2_s11_sc04_sap_sto_compliance.webp",
         "propSrc": "/Assets/Props/prop_eway_bill_tablet.png"
       },
       "interaction": {
@@ -509,7 +509,7 @@
         "fallbackAnimation": "pir_destination_routing_matrix",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/environments/bg_deo_gate_office.jpg"
+        "imageSrc": "/Assets/Scenes/c2_s11_sc05_pir_destination_routing.webp"
       },
       "mascot": {
         "intro": {
@@ -642,7 +642,7 @@
         "fallbackAnimation": "sap_billing_types_matrix",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/environments/bg_deo_gate_office.jpg"
+        "imageSrc": "/Assets/Scenes/c2_s11_sc06_sap_billing_document_types.webp"
       },
       "mascot": {
         "intro": {
@@ -750,7 +750,7 @@
         "fallbackAnimation": "pir_ticket_closure_handover",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/environments/bg_deo_gate_office.jpg"
+        "imageSrc": "/Assets/Scenes/c2_s11_sc07_pir_ticket_closure.webp"
       },
       "mascot": {
         "intro": {

@@ -10,7 +10,7 @@ interface Props {
 
 export const WorkstationDeliveryAnimation: React.FC<Props> = ({
   videoSrc,
-  posterSrc = '/Assets/videos/scene_07_milk_run_delivery_poster.jpg',
+  posterSrc = '/Assets/videos/scene_07_milk_run_delivery_poster.webp',
   isPaused,
   onPauseReached
 }) => {

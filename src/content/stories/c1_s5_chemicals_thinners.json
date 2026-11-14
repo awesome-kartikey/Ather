@@ -21,7 +21,7 @@
         "fallbackAnimation": "chemical_bypass_routing",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/environments/bg_chemical_building.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s5_sc01_facility_bypass.webp"
       },
       "mascot": {
         "intro": {
@@ -129,7 +129,7 @@
         "fallbackAnimation": "chemical_unloading_spill",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/environments/bg_chemical_building.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s5_sc02_ppe_spill_berm.webp"
       },
       "mascot": {
         "intro": {
@@ -262,7 +262,7 @@
         "fallbackAnimation": "chemical_segregation_matrix",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/environments/bg_chemical_building.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s5_sc03_segregation_sla.webp"
       },
       "mascot": {
         "intro": {
@@ -408,7 +408,7 @@
         "fallbackAnimation": "chemical_deo_posting",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/environments/bg_deo_gate_office.jpg",
+        "imageSrc": "/Assets/Scenes/c1_s5_sc04_deo_grn_posting.webp",
         "propSrc": "/Assets/Props/prop_eway_bill_tablet.png"
       },
       "mascot": {
@@ -517,7 +517,7 @@
         "fallbackAnimation": "static_bonding_clamp",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/environments/bg_chemical_building.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s5_sc05_static_bonding_clamp.webp"
       },
       "mascot": {
         "intro": {

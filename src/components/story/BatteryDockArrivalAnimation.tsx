@@ -10,7 +10,7 @@ interface Props {
 
 export const BatteryDockArrivalAnimation: React.FC<Props> = ({
   videoSrc,
-  posterSrc = '/Assets/videos/scene_05_battery_vault_climate_poster.jpg',
+  posterSrc = '/Assets/videos/scene_05_battery_vault_climate_poster.webp',
   isPaused,
   onPauseReached
 }) => {

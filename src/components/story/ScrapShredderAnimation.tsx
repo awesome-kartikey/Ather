@@ -55,7 +55,7 @@ export const ScrapShredderAnimation: React.FC<Props> = ({
 
       {/* Atmospheric Industrial Grid Background with Authentic Scrapyard Photo */}
       <img
-        src="/Assets/Background%20Environments/bg_final_scrapyard.jpg"
+        src="/Assets/environments/bg_final_scrapyard.webp"
         alt="Final Scrapyard"
         className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay pointer-events-none"
       />

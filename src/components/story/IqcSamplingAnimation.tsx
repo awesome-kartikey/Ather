@@ -10,7 +10,7 @@ interface Props {
 
 export const IqcSamplingAnimation: React.FC<Props> = ({
   videoSrc,
-  posterSrc = '/Assets/videos/scene_03_iqc_inspection_split_poster.jpg',
+  posterSrc = '/Assets/videos/scene_03_iqc_inspection_split_poster.webp',
   isPaused,
   onPauseReached
 }) => {

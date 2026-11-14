@@ -19,7 +19,7 @@
       },
       "media": {
         "videoSrc": "/Assets/videos/scene_01_gate_arrival.mp4",
-        "posterSrc": "/Assets/videos/scene_01_gate_arrival_poster.jpg",
+        "posterSrc": "/Assets/videos/scene_01_gate_arrival_poster.webp",
         "fallbackAnimation": "truck_arrival_gate",
         "durationSeconds": 15,
         "pauseAtSecond": 4.5
@@ -28,27 +28,27 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Namaste! An inbound logistics truck has just reported outside the AURIC main gate. Before the boom barrier opens, where must the driver wait?",
-            "hi": "नमस्ते! आपूर्तिकर्ता का एक ट्रक अभी AURIC के मुख्य गेट पर पहुंचा है। बूम बैरियर खोलने से पहले, चालक को कहां रुकना चाहिए?",
-            "mr": "नमस्ते! सप्लायरचा एक ट्रक नुकताच AURIC च्या मुख्य गेटवर आला आहे. बूम बॅरियर उघडण्यापूर्वी, चालकाने कुठे थांबले पाहिजे?"
+            "en": "A delivery truck has reached the main gate. Where should the driver wait before entering?",
+            "hi": "डिलीवरी ट्रक मुख्य गेट पर पहुंचा है। अंदर जाने से पहले चालक कहां रुके?",
+            "mr": "डिलिव्हरी ट्रक मुख्य गेटवर आला आहे. आत जाण्यापूर्वी चालकाने कुठे थांबावे?"
           },
           "audioSrc": "/audio/voiceover/s01_sc01_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Spot on! SOP Clause 4.1.1 mandates that the driver park in the designated waiting area with engine off, and approach Security on foot.",
-            "hi": "बिल्कुल सही! SOP क्लॉज 4.1.1 के अनुसार चालक को इंजन बंद करके निर्धारित वेटिंग यार्ड में पार्क करना होगा और पैदल सुरक्षा डेस्क पर जाना होगा।",
-            "mr": "अगदी बरोबर! SOP कलम 4.1.1 नुसार चालकाने इंजिन बंद करून नियुक्त वेटिंग एरियामध्ये गाडी पार्क केली पाहिजे आणि पायी सुरक्षा डेस्कवर गेले पाहिजे."
+            "en": "Park in the waiting area, switch off the engine, and walk to Security.",
+            "hi": "वेटिंग एरिया में वाहन पार्क करें, इंजन बंद करें और पैदल सुरक्षा डेस्क पर जाएं।",
+            "mr": "वेटिंग एरियात वाहन पार्क करा, इंजिन बंद करा आणि पायी सुरक्षा डेस्कवर जा."
           },
           "audioSrc": "/audio/voiceover/s01_sc01_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Careful! A truck must never drive straight inside or idle its engine. Vehicles must park in the designated waiting yard with engine off.",
-            "hi": "सावधान! ट्रक को कभी भी सीधे अंदर नहीं जाना चाहिए और न ही इंजन चालू छोड़ना चाहिए। वाहन को इंजन बंद करके वेटिंग यार्ड में पार्क करना अनिवार्य है।",
-            "mr": "लक्ष द्या! ट्रक कधीही थेट आत नेऊ नये किंवा इंजिन चालू ठेवू नये. वाहने इंजिन बंद करून नियुक्त वेटिंग भागातच पार्क केली पाहिजेत."
+            "en": "Wait in the waiting area with the engine off. Do not drive straight inside.",
+            "hi": "इंजन बंद करके वेटिंग एरिया में रुकें। सीधे अंदर न जाएं।",
+            "mr": "इंजिन बंद करून वेटिंग एरियात थांबा. थेट आत जाऊ नका."
           },
           "audioSrc": "/audio/voiceover/s01_sc01_wrong.mp3"
         }
@@ -58,9 +58,9 @@
         "questionId": "c1-q01",
         "safetyCritical": false,
         "question": {
-          "en": "The supplier truck reaches the gate. Where does the driver park first?",
-          "hi": "ट्रक गेट पर पहुंचता है। चालक सबसे पहले वाहन कहां पार्क करता है?",
-          "mr": "ट्रक गेटवर पोहोचतो. चालक सर्वप्रथम वाहन कुठे पार्क करतो?"
+          "en": "Where should the driver park first?",
+          "hi": "चालक पहले वाहन कहां पार्क करे?",
+          "mr": "चालकाने आधी वाहन कुठे पार्क करावे?"
         },
         "options": [
           {
@@ -76,9 +76,9 @@
             "id": "opt_waiting_yard",
             "correct": true,
             "label": {
-              "en": "In the designated waiting parking area, engine turned off",
-              "hi": "इंजन बंद करके निर्धारित वेटिंग पार्किंग क्षेत्र में",
-              "mr": "इंजिन बंद करून नियुक्त वेटिंग पार्किंग भागात"
+              "en": "In the waiting area with the engine off",
+              "hi": "इंजन बंद करके वेटिंग एरिया में",
+              "mr": "इंजिन बंद करून वेटिंग एरियात"
             }
           },
           {
@@ -92,9 +92,9 @@
           }
         ],
         "prompt": {
-          "en": "The supplier truck reaches the gate. Where does the driver park first?",
-          "hi": "ट्रक गेट पर पहुंचता है। चालक सबसे पहले वाहन कहां पार्क करता है?",
-          "mr": "ट्रक गेटवर पोहोचतो. चालक सर्वप्रथम वाहन कुठे पार्क करतो?"
+          "en": "Where should the driver park first?",
+          "hi": "चालक पहले वाहन कहां पार्क करे?",
+          "mr": "चालकाने आधी वाहन कुठे पार्क करावे?"
         },
         "id": "c1-q01",
         "audioSrc": "/audio/voiceover/s01_sc01_prompt.mp3"
@@ -103,9 +103,9 @@
         "xp": 100,
         "sopClause": "SOP XXXX_PRO_001 Clause 4.1.1",
         "why": {
-          "en": "Clause 4.1.1: Driver parks in designated waiting parking area, turns off engine, and proceeds on foot to the security desk with driver credentials.",
-          "hi": "क्लॉज 4.1.1: चालक निर्धारित वेटिंग पार्किंग क्षेत्र में पार्क करता है, इंजन बंद करता है, और क्रेडेंशियल्स के साथ पैदल सुरक्षा डेस्क पर जाता है।",
-          "mr": "कलम 4.1.1: चालक नियुक्त वेटिंग पार्किंग भागात गाडी पार्क करतो, इंजिन बंद करतो आणि कागदपत्रांसह पायी सुरक्षा डेस्कवर जातो."
+          "en": "Park in the waiting area, switch off the engine, and walk to Security with your ID.",
+          "hi": "वेटिंग एरिया में वाहन पार्क करें, इंजन बंद करें और पहचान पत्र लेकर सुरक्षा डेस्क पर जाएं।",
+          "mr": "वेटिंग एरियात वाहन पार्क करा, इंजिन बंद करा आणि ओळखपत्र घेऊन सुरक्षा डेस्कवर जा."
         }
       }
     },
@@ -128,27 +128,27 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "The driver has walked into the gatehouse holding 5 physical documents. Let's make sure each document is submitted to the correct desk!",
-            "hi": "चालक 5 भौतिक दस्तावेज लेकर गेटहाउस के अंदर आ गया है। आइए सुनिश्चित करें कि प्रत्येक दस्तावेज़ सही डेस्क पर जमा किया जाए!",
-            "mr": "चालक 5 प्रत्यक्ष कागदपत्रे घेऊन गेटहाऊसमध्ये आला आहे. चला खात्री करूया की प्रत्येक कागदपत्र योग्य डेस्कवर जमा केले जाईल!"
+            "en": "The driver has five documents. Match each one to the right desk.",
+            "hi": "चालक के पास पांच दस्तावेज़ हैं। हर दस्तावेज़ सही डेस्क पर दें।",
+            "mr": "चालकाकडे पाच कागदपत्रे आहेत. प्रत्येक कागदपत्र योग्य डेस्कवर द्या."
           },
           "audioSrc": "/audio/voiceover/s01_sc02_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Excellent separation! Security handles personal driver & vehicle credentials, while the DEO processes shipping papers to generate the gate pass.",
-            "hi": "उत्कृष्ट छँटाई! सुरक्षा कर्मी व्यक्तिगत चालक और वाहन दस्तावेजों की जांच करते हैं, जबकि DEO गेट पास जनरेट करने के लिए शिपिंग दस्तावेजों को प्रोसेस करता है।",
-            "mr": "उत्कृष्ट वर्गीकरण! सुरक्षा रक्षक वैयक्तिक चालक आणि वाहन कागदपत्रे तपासतात, तर DEO गेट पास तयार करण्यासाठी शिपिंग कागदपत्रे प्रोसेस करतात."
+            "en": "Security checks driver and vehicle documents. The DEO checks shipping papers and prepares the gate pass.",
+            "hi": "सुरक्षा कर्मी चालक और वाहन के दस्तावेज़ जांचते हैं। DEO शिपिंग कागज़ जांचकर गेट पास बनाता है।",
+            "mr": "सुरक्षा रक्षक चालक आणि वाहनाची कागदपत्रे तपासतात. DEO शिपिंगची कागदपत्रे तपासून गेट पास तयार करतो."
           },
           "audioSrc": "/audio/voiceover/s01_sc02_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Watch out! Shipping documents (PO, ASN, Tax Invoice) must go to the DEO for SAP processing, while DL and RC go to Security.",
-            "hi": "ध्यान दें! शिपिंग दस्तावेज़ (PO, ASN, टैक्स इनवॉइस) SAP प्रोसेसिंग के लिए DEO के पास जाने चाहिए, जबकि DL और RC सुरक्षा कर्मी के पास।",
-            "mr": "लक्ष द्या! शिपिंग कागदपत्रे (PO, ASN, टॅक्स इन्व्हॉइस) SAP प्रोसेसिंगसाठी DEO कडे जाणे आवश्यक आहे, तर DL आणि RC सुरक्षा रक्षकाकडे."
+            "en": "Send PO, ASN, and invoice to the DEO. Send the driver's license and vehicle papers to Security.",
+            "hi": "PO, ASN और इनवॉइस DEO को दें। ड्राइविंग लाइसेंस और वाहन के कागज़ सुरक्षा कर्मी को दें।",
+            "mr": "PO, ASN आणि इनव्हॉइस DEO कडे द्या. चालकाचा परवाना आणि वाहनाची कागदपत्रे सुरक्षा रक्षकाकडे द्या."
           },
           "audioSrc": "/audio/voiceover/s01_sc02_wrong.mp3"
         }
@@ -158,32 +158,32 @@
         "questionId": "c1-q02",
         "safetyCritical": false,
         "question": {
-          "en": "Sort each incoming document to the correct reception desk:",
-          "hi": "प्रत्येक आने वाले दस्तावेज़ को सही रिसेप्शन डेस्क पर छाँटें:",
-          "mr": "प्रत्येक येणाऱ्या कागदपत्राचे योग्य रिसेप्शन डेस्कवर वर्गीकरण करा:"
+          "en": "Match each document to the right desk.",
+          "hi": "हर दस्तावेज़ सही डेस्क पर दें।",
+          "mr": "प्रत्येक कागदपत्र योग्य डेस्कवर द्या."
         },
         "instruction": {
-          "en": "Tap a document card, then tap the destination desk to assign it.",
-          "hi": "दस्तावेज़ कार्ड पर टैप करें, फिर उसे असाइन करने के लिए गंतव्य डेस्क पर टैप करें।",
-          "mr": "कागदपत्र कार्डवर टॅप करा, नंतर ते वाटप करण्यासाठी संबंधित डेस्कवर टॅप करा."
+          "en": "Tap a document, then tap its desk.",
+          "hi": "दस्तावेज़ पर टैप करें, फिर उसकी डेस्क पर टैप करें।",
+          "mr": "कागदपत्रावर टॅप करा, नंतर योग्य डेस्कवर टॅप करा."
         },
         "zones": [
           {
             "id": "zone_security",
             "icon": "🛡️",
             "label": {
-              "en": "Security Desk (Driver & Vehicle)",
-              "hi": "सुरक्षा डेस्क (चालक और वाहन)",
-              "mr": "सुरक्षा डेस्क (चालक आणि वाहन)"
+              "en": "Security Desk",
+              "hi": "सुरक्षा डेस्क",
+              "mr": "सुरक्षा डेस्क"
             }
           },
           {
             "id": "zone_deo",
             "icon": "💻",
             "label": {
-              "en": "DEO Window (ERP & Shipping)",
-              "hi": "DEO विंडो (ERP और शिपिंग)",
-              "mr": "DEO विंडो (ERP आणि शिपिंग)"
+              "en": "DEO Window",
+              "hi": "DEO विंडो",
+              "mr": "DEO विंडो"
             }
           }
         ],
@@ -251,9 +251,9 @@
         "xp": 100,
         "sopClause": "SOP XXXX_PRO_001 Clause 4.1.1 & 4.1.2",
         "why": {
-          "en": "Per SOP 4.1.1 & 4.1.2: Security verifies personal/vehicle identity (DL, RC, Insurance) in the logbook. The DEO at the gate window receives shipping papers (PO, ASN, Tax Invoice) to validate in SAP ERP.",
-          "hi": "SOP 4.1.1 और 4.1.2 के अनुसार: सुरक्षा कर्मी लॉगबुक में व्यक्तिगत/वाहन पहचान (DL, RC, बीमा) की पुष्टि करते हैं। DEO गेट विंडो पर SAP ERP में सत्यापन के लिए शिपिंग दस्तावेज़ (PO, ASN, टैक्स इनवॉइस) प्राप्त करता है।",
-          "mr": "SOP 4.1.1 आणि 4.1.2 नुसार: सुरक्षा रक्षक लॉगबुकमध्ये वैयक्तिक/वाहन ओळख (DL, RC, विमा) तपासतात. DEO गेट खिडकीवर SAP ERP मध्ये पडताळणीसाठी शिपिंग कागदपत्रे (PO, ASN, टॅक्स इन्व्हॉइस) स्वीकारतात."
+          "en": "Security checks the driver's license, vehicle papers, and insurance. The DEO checks the PO, ASN, and invoice in the system.",
+          "hi": "सुरक्षा कर्मी ड्राइविंग लाइसेंस, वाहन के कागज़ और बीमा जांचते हैं। DEO सिस्टम में PO, ASN और इनवॉइस जांचता है।",
+          "mr": "सुरक्षा रक्षक चालकाचा परवाना, वाहनाची कागदपत्रे आणि विमा तपासतात. DEO सिस्टममध्ये PO, ASN आणि इनव्हॉइस तपासतो."
         }
       }
     },
@@ -261,9 +261,9 @@
       "id": "c1_s1_sc03_sap_entry",
       "stepNumber": 3,
       "title": {
-        "en": "SAP Gate Entry & ASN Auto-Fill",
-        "hi": "SAP गेट एंट्री और ASN स्वतः भरना",
-        "mr": "SAP गेट एंट्री आणि ASN आपोआप भरणे"
+        "en": "Gate Entry Check",
+        "hi": "गेट एंट्री जांच",
+        "mr": "गेट एंट्री तपासणी"
       },
       "media": {
         "fallbackAnimation": "sap_terminal_screen",
@@ -275,27 +275,27 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Look at the DEO's screen! They have opened SAP GUI. By entering the vendor invoice, SAP checks if the physical delivery matches the digital ASN.",
-            "hi": "DEO की स्क्रीन देखें! उन्होंने SAP GUI खोला है। विक्रेता इनवॉइस दर्ज करके, SAP जांचता है कि क्या भौतिक डिलीवरी डिजिटल ASN से मेल खाती है।",
-            "mr": "DEO ची स्क्रीन पहा! त्यांनी SAP GUI उघडले आहे. व्हेंडर इन्व्हॉइस टाकून, SAP तपासते की प्रत्यक्ष डिलिव्हरी डिजिटल ASN शी जुळते का."
+            "en": "The DEO enters the invoice in the system. The system checks whether the truck delivery matches the ASN.",
+            "hi": "DEO सिस्टम में इनवॉइस डालता है। सिस्टम जांचता है कि ट्रक का माल ASN से मिलता है या नहीं।",
+            "mr": "DEO सिस्टममध्ये इनव्हॉइस टाकतो. ट्रकमधील माल ASN शी जुळतो का ते सिस्टम तपासते."
           },
           "audioSrc": "/audio/voiceover/s01_sc03_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Spot on! YMM_GATE_ENTRY auto-fills shipment data from the ASN. If the ASN doesn't match, gate entry is halted — zero manual overrides for bad data!",
-            "hi": "बिल्कुल सही! YMM_GATE_ENTRY ASN से शिपमेंट डेटा स्वतः भरता है। यदि ASN मेल नहीं खाता है, तो गेट एंट्री रोक दी जाती है — गलत डेटा के लिए कोई मैन्युअल ओवरराइड नहीं!",
-            "mr": "अगदी बरोबर! YMM_GATE_ENTRY ASN मधून शिपमेंट माहिती आपोआप भरते. ASN जुळले नाही तर गेट एंट्री थांबवली जाते — चुकीच्या डेटासाठी कोणतीही मॅन्युअल सवलत नाही!"
+            "en": "The system fills the shipment details from the ASN. If it does not match, stop the gate entry until it is corrected.",
+            "hi": "सिस्टम ASN से शिपमेंट की जानकारी भरता है। जानकारी न मिले तो सुधार होने तक गेट एंट्री रोकें।",
+            "mr": "सिस्टम ASN मधून शिपमेंटची माहिती भरते. माहिती जुळली नाही तर दुरुस्ती होईपर्यंत गेट एंट्री थांबवा."
           },
           "audioSrc": "/audio/voiceover/s01_sc03_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Careful! In AURIC, there is zero manual override for mismatched paperwork. If the ASN is wrong, gate entry cannot proceed.",
-            "hi": "सावधान! AURIC में बेमेल कागजी कार्रवाई के लिए कोई मैन्युअल ओवरराइड नहीं है। यदि ASN गलत है, तो गेट एंट्री आगे नहीं बढ़ सकती।",
-            "mr": "लक्ष द्या! AURIC मध्ये कागदपत्रांमध्ये तफावत असल्यास कोणतीही मॅन्युअल सवलत दिली जात नाही. ASN चुकीचे असल्यास गेट एंट्री पुढे जाऊ शकत नाही."
+            "en": "Do not bypass a mismatch. If the ASN is wrong, stop the gate entry and get it corrected.",
+            "hi": "गलत जानकारी को छोड़कर आगे न बढ़ें। ASN गलत हो तो गेट एंट्री रोकें और उसे ठीक कराएं।",
+            "mr": "तफावत असताना पुढे जाऊ नका. ASN चुकीचे असल्यास गेट एंट्री थांबवा आणि ते दुरुस्त करून घ्या."
           },
           "audioSrc": "/audio/voiceover/s01_sc03_wrong.mp3"
         }
@@ -305,9 +305,9 @@
         "questionId": "c1-q03",
         "safetyCritical": false,
         "question": {
-          "en": "The DEO enters the vendor invoice in YMM_GATE_ENTRY. What is the role of this transaction, and what happens if the ASN is wrong?",
-          "hi": "DEO YMM_GATE_ENTRY में विक्रेता इनवॉइस दर्ज करता है। इस ट्रांजैक्शन की क्या भूमिका है, और यदि ASN गलत हो तो क्या होता है?",
-          "mr": "DEO YMM_GATE_ENTRY मध्ये व्हेंडर इन्व्हॉइस टाकतो. या ट्रांझॅक्शनची भूमिका काय आहे, आणि ASN चुकीचे असल्यास काय होते?"
+          "en": "What does this system check do if the ASN is wrong?",
+          "hi": "ASN गलत हो तो सिस्टम क्या करता है?",
+          "mr": "ASN चुकीचे असल्यास सिस्टम काय करते?"
         },
         "options": [
           {
@@ -323,9 +323,9 @@
             "id": "opt_validate_halt",
             "correct": true,
             "label": {
-              "en": "Validates the ASN and auto-populates data; if wrong, gate entry halts until corrected",
-              "hi": "ASN को सत्यापित करता है और डेटा स्वतः भरता है; गलत होने पर सुधार तक गेट एंट्री रुक जाती है",
-              "mr": "ASN पडताळते आणि माहिती आपोआप भरते; चुकीचे असल्यास सुधारणा होईपर्यंत गेट एंट्री थांबते"
+              "en": "It checks and fills the data. Gate entry stops until a wrong ASN is corrected.",
+              "hi": "यह जानकारी जांचकर भरता है। ASN गलत हो तो सुधार तक गेट एंट्री रुकती है।",
+              "mr": "हे माहिती तपासून भरते. ASN चुकीचे असल्यास दुरुस्ती होईपर्यंत गेट एंट्री थांबते."
             }
           },
           {
@@ -339,9 +339,9 @@
           }
         ],
         "prompt": {
-          "en": "The DEO enters the vendor invoice in YMM_GATE_ENTRY. What is the role of this transaction, and what happens if the ASN is wrong?",
-          "hi": "DEO YMM_GATE_ENTRY में विक्रेता इनवॉइस दर्ज करता है। इस ट्रांजैक्शन की क्या भूमिका है, और यदि ASN गलत हो तो क्या होता है?",
-          "mr": "DEO YMM_GATE_ENTRY मध्ये व्हेंडर इन्व्हॉइस टाकतो. या ट्रांझॅक्शनची भूमिका काय आहे, आणि ASN चुकीचे असल्यास काय होते?"
+          "en": "What does this system check do if the ASN is wrong?",
+          "hi": "ASN गलत हो तो सिस्टम क्या करता है?",
+          "mr": "ASN चुकीचे असल्यास सिस्टम काय करते?"
         },
         "id": "c1-q03",
         "audioSrc": "/audio/voiceover/s01_sc03_prompt.mp3"
@@ -350,9 +350,9 @@
         "xp": 100,
         "sopClause": "SOP XXXX_PRO_001 Clause 4.2.1 & 5.1",
         "why": {
-          "en": "SOP Clause 4.2.1 & 5.1: YMM_GATE_ENTRY cross-references the invoice with the vendor's digital ASN to auto-populate vehicle and part details. If the ASN is invalid, the vehicle is placed on 'Hold due to ASN' with zero manual override.",
-          "hi": "SOP क्लॉज 4.2.1 और 5.1: YMM_GATE_ENTRY वाहन और सामग्री विवरण स्वतः भरने के लिए इनवॉइस को विक्रेता के डिजिटल ASN से मिलाता है। यदि ASN अमान्य है, तो बिना किसी मैन्युअल ओवरराइड के वाहन को 'Hold due to ASN' पर रखा जाता है।",
-          "mr": "SOP कलम 4.2.1 आणि 5.1: YMM_GATE_ENTRY वाहन आणि साहित्याची माहिती आपोआप भरण्यासाठी इन्व्हॉइसला व्हेंडरच्या डिजिटल ASN शी जुळवून पाहते. ASN अवैध असल्यास, कोणत्याही मॅन्युअल सवलतीशिवाय वाहनाला 'Hold due to ASN' स्थितीत ठेवले जाते."
+          "en": "The system matches the invoice with the ASN and fills vehicle and part details. If the ASN is wrong, keep the truck on hold until it is corrected.",
+          "hi": "सिस्टम इनवॉइस को ASN से मिलाकर वाहन और माल की जानकारी भरता है। ASN गलत हो तो ट्रक को सुधार होने तक रोकें।",
+          "mr": "सिस्टम इनव्हॉइस ASN शी जुळवून वाहन आणि मालाची माहिती भरते. ASN चुकीचे असल्यास ट्रक दुरुस्ती होईपर्यंत थांबवा."
         }
       }
     },
@@ -615,12 +615,12 @@
       },
       "media": {
         "videoSrc": "/Assets/videos/scene_02_wheel_chock_safety.mp4",
-        "posterSrc": "/Assets/videos/scene_02_wheel_chock_safety_poster.jpg",
+        "posterSrc": "/Assets/videos/scene_02_wheel_chock_safety_poster.webp",
         "fallbackAnimation": "dock_safety_chocks",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
         "propSrc": "/Assets/Props/prop_rubber_wheel_chock.png",
-        "altPosterSrc": "/Assets/videos/scene_02_wheel_chock_safety_alt.jpg"
+        "altPosterSrc": "/Assets/videos/scene_02_wheel_chock_safety_alt.webp"
       },
       "mascot": {
         "intro": {
@@ -835,7 +835,7 @@
         "fallbackAnimation": "gatehouse_cabin_desk",
         "durationSeconds": 15,
         "pauseAtSecond": 4.5,
-        "imageSrc": "/Assets/environments/bg_deo_gate_office.jpg",
+        "imageSrc": "/Assets/Scenes/c1_s1_sc08_asn_discrepancy.webp",
         "propSrc": "/Assets/Props/prop_eway_bill_tablet.png"
       },
       "mascot": {
@@ -932,7 +932,7 @@
         "fallbackAnimation": "truck_arrival_gate",
         "durationSeconds": 15,
         "pauseAtSecond": 4.5,
-        "imageSrc": "/Assets/environments/bg_plant_map_hotspot.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s1_sc09_max_stock_full.webp"
       },
       "mascot": {
         "intro": {

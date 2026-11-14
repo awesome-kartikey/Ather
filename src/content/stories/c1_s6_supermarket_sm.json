@@ -21,7 +21,7 @@
         "fallbackAnimation": "supermarket_mh1_seal",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/environments/bg_supermarket_sm.jpg",
+        "imageSrc": "/Assets/Scenes/c1_s6_sc01_qc_pass_seal.webp",
         "propSrc": "/Assets/Props/prop_qc_pass_stamp.png"
       },
       "mascot": {
@@ -118,7 +118,7 @@
         "fallbackAnimation": "supermarket_count_audit",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/environments/bg_supermarket_sm.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s6_sc02_count_discrepancy.webp"
       },
       "mascot": {
         "intro": {
@@ -265,7 +265,7 @@
           "hi": "दोहरे-पहुंच ग्रैविटी फ्लो रैक (3.5° झुकाव): रियर लोडिंग लेन फ्रंट पिकिंग फेस पर पहले आना, पहले जाना (FIFO) सुनिश्चित करता है",
           "mr": "ड्युअल-अ‍ॅक्सेस ग्रॅव्हिटी फ्लो रॅक (3.5° उतार): मागील लोडिंग लेन समोरील पिकिंग फेसवर FIFO स्टॉक रोटेशन सुनिश्चित करते"
         },
-        "imageSrc": "/Assets/environments/bg_supermarket_sm.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s6_sc03_gravity_flow_fifo.webp"
       },
       "interaction": {
         "type": "sequence",
@@ -426,7 +426,7 @@
           "hi": "सुपरमार्केट फ्रंट फेस: भौतिक बिन कार्ड लेज़र और ई-कानबान आरएफ बारकोड पुनःपूर्ति ट्रिगर",
           "mr": "सुपरमार्केट फ्रंट फेस: प्रत्यक्ष बिन कार्ड नोंदवही आणि ई-कानबान आरएफ बारकोड रिप्लेनिशमेंट ट्रिगर"
         },
-        "imageSrc": "/Assets/environments/bg_supermarket_sm.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s6_sc04_bin_replenishment.webp"
       },
       "interaction": {
         "type": "mcq",
@@ -504,7 +504,7 @@
         "fallbackAnimation": "line_pressure_discrepancy",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/environments/bg_supermarket_sm.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s6_sc05_line_pressure_stop_go.webp"
       },
       "mascot": {
         "intro": {
@@ -600,7 +600,7 @@
         "fallbackAnimation": "supermarket_classification_bins",
         "durationSeconds": 18,
         "pauseAtSecond": 3.5,
-        "imageSrc": "/Assets/environments/bg_supermarket_sm.jpg"
+        "imageSrc": "/Assets/Scenes/c1_s6_sc06_supermarket_classification.webp"
       },
       "mascot": {
         "intro": {

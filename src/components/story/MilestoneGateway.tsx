@@ -156,7 +156,7 @@ export const MilestoneGateway: React.FC<Props> = ({
   const heroImage =
     stage.scenes[0]?.media?.posterSrc ||
     stage.scenes[0]?.media?.imageSrc ||
-    '/Assets/environments/bg_plant_map_hotspot.jpg';
+    '/Assets/environments/bg_plant_map_hotspot.webp';
 
   return (
     <div className="w-full max-w-xl mx-auto my-auto bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-2xl flex flex-col overflow-hidden select-none animate-in fade-in zoom-in-95 duration-200">

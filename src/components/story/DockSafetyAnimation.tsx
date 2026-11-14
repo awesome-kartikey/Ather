@@ -10,7 +10,7 @@ interface Props {
 
 export const DockSafetyAnimation: React.FC<Props> = ({
   videoSrc,
-  posterSrc = '/Assets/videos/scene_02_wheel_chock_safety_poster.jpg',
+  posterSrc = '/Assets/videos/scene_02_wheel_chock_safety_poster.webp',
   isPaused,
   onPauseReached
 }) => {

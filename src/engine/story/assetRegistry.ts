@@ -27,49 +27,49 @@ export interface SequentialSceneMedia {
 export const SEQUENTIAL_SCENES_MEDIA: Record<number, SequentialSceneMedia> = {
   1: {
     videoSrc: '/Assets/videos/scene_01_gate_arrival.mp4',
-    posterSrc: '/Assets/videos/scene_01_gate_arrival_poster.jpg',
+    posterSrc: '/Assets/videos/scene_01_gate_arrival_poster.webp',
     title: 'Inbound Truck Gate Arrival & Waiting Yard',
   },
   2: {
     videoSrc: '/Assets/videos/scene_02_wheel_chock_safety.mp4',
-    posterSrc: '/Assets/videos/scene_02_wheel_chock_safety_poster.jpg',
-    altPosterSrc: '/Assets/videos/scene_02_wheel_chock_safety_alt.jpg',
+    posterSrc: '/Assets/videos/scene_02_wheel_chock_safety_poster.webp',
+    altPosterSrc: '/Assets/videos/scene_02_wheel_chock_safety_alt.webp',
     title: 'Loading Dock 04 & Wheel Chock Placement',
   },
   3: {
     videoSrc: '/Assets/videos/scene_03_iqc_inspection_split.mp4',
-    posterSrc: '/Assets/videos/scene_03_iqc_inspection_split_poster.jpg',
-    altPosterSrc: '/Assets/videos/scene_03_iqc_inspection_split_alt.jpg',
+    posterSrc: '/Assets/videos/scene_03_iqc_inspection_split_poster.webp',
+    altPosterSrc: '/Assets/videos/scene_03_iqc_inspection_split_alt.webp',
     title: 'Unloading & 10% Statistical IQC Inspection Split',
   },
   4: {
     videoSrc: '/Assets/videos/scene_04_high_rise_pallet_putaway.mp4',
-    posterSrc: '/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg',
+    posterSrc: '/Assets/videos/scene_04_high_rise_pallet_putaway_poster.webp',
     title: 'Forklift High-Rise Rack Placement & Scan',
   },
   5: {
     videoSrc: '/Assets/videos/scene_05_battery_vault_climate.mp4',
-    posterSrc: '/Assets/videos/scene_05_battery_vault_climate_poster.jpg',
-    altPosterSrc: '/Assets/videos/scene_05_battery_vault_climate_alt.jpg',
+    posterSrc: '/Assets/videos/scene_05_battery_vault_climate_poster.webp',
+    altPosterSrc: '/Assets/videos/scene_05_battery_vault_climate_alt.webp',
     title: 'Battery Cell Vault & Climate Inspection',
   },
   6: {
     videoSrc: '/Assets/videos/scene_06_bulk_decanting_trolley.mp4',
-    posterSrc: '/Assets/videos/scene_06_bulk_decanting_trolley_poster.jpg',
-    altPosterSrc: '/Assets/videos/scene_06_bulk_decanting_trolley_alt.jpg',
+    posterSrc: '/Assets/videos/scene_06_bulk_decanting_trolley_poster.webp',
+    altPosterSrc: '/Assets/videos/scene_06_bulk_decanting_trolley_alt.webp',
     title: 'Bulk Decanting (FLC to Assembly Trolley)',
   },
   7: {
     videoSrc: '/Assets/videos/scene_07_milk_run_delivery.mp4',
-    posterSrc: '/Assets/videos/scene_07_milk_run_delivery_poster.jpg',
-    altPosterSrc: '/Assets/videos/scene_07_milk_run_delivery_alt.jpg',
+    posterSrc: '/Assets/videos/scene_07_milk_run_delivery_poster.webp',
+    altPosterSrc: '/Assets/videos/scene_07_milk_run_delivery_alt.webp',
     title: 'Milk Run Line Delivery & Station Drop-off',
   },
   8: {
     videoSrc: '/Assets/videos/scene_08_empty_bin_strapping.mp4',
-    posterSrc: '/Assets/videos/scene_08_empty_bin_strapping_poster.jpg',
-    altPosterSrc: '/Assets/videos/scene_08_empty_bin_strapping_alt1.jpg',
-    altPoster2Src: '/Assets/videos/scene_08_empty_bin_strapping_alt2.jpg',
+    posterSrc: '/Assets/videos/scene_08_empty_bin_strapping_poster.webp',
+    altPosterSrc: '/Assets/videos/scene_08_empty_bin_strapping_alt1.webp',
+    altPoster2Src: '/Assets/videos/scene_08_empty_bin_strapping_alt2.webp',
     title: 'Empty Bin Stacking & Strapping',
   },
 };
@@ -90,13 +90,13 @@ export type PropKey = keyof typeof PROP_IMAGE_MAP;
 
 // 4. Authentic Facility Backgrounds (JPG)
 export const BACKGROUND_IMAGE_MAP = {
-  plantMapHotspot: '/Assets/environments/bg_plant_map_hotspot.jpg',
-  deoGateOffice: '/Assets/environments/bg_deo_gate_office.jpg',
-  chemicalBuilding: '/Assets/environments/bg_chemical_building.jpg',
-  supermarketSm: '/Assets/environments/bg_supermarket_sm.jpg',
-  ngQuarantineArea: '/Assets/environments/bg_ng_quarantine_area.jpg',
-  finalScrapyard: '/Assets/environments/bg_final_scrapyard.jpg',
-  indirectMaterialStore: '/Assets/environments/bg_indirect_material_store.jpg',
+  plantMapHotspot: '/Assets/environments/bg_plant_map_hotspot.webp',
+  deoGateOffice: '/Assets/environments/bg_deo_gate_office.webp',
+  chemicalBuilding: '/Assets/environments/bg_chemical_building.webp',
+  supermarketSm: '/Assets/environments/bg_supermarket_sm.webp',
+  ngQuarantineArea: '/Assets/environments/bg_ng_quarantine_area.webp',
+  finalScrapyard: '/Assets/environments/bg_final_scrapyard.webp',
+  indirectMaterialStore: '/Assets/environments/bg_indirect_material_store.webp',
 } as const;
 
 export type BackgroundKey = keyof typeof BACKGROUND_IMAGE_MAP;

@@ -41,7 +41,7 @@ const MODULES_DATA: ModuleInfo[] = [
     sopDoc: 'XXXX_PRO_001',
     badge: 'GATE KEEPER',
     color: 'from-blue-600 to-indigo-600',
-    imageSrc: '/Assets/videos/scene_01_gate_arrival_poster.jpg'
+    imageSrc: '/Assets/videos/scene_01_gate_arrival_poster.webp'
   },
   {
     index: 1,
@@ -56,7 +56,7 @@ const MODULES_DATA: ModuleInfo[] = [
     sopDoc: '02_C1_S2',
     badge: 'QUALITY SENTINEL',
     color: 'from-emerald-600 to-teal-600',
-    imageSrc: '/Assets/videos/scene_03_iqc_inspection_split_poster.jpg'
+    imageSrc: '/Assets/videos/scene_03_iqc_inspection_split_poster.webp'
   },
   {
     index: 2,
@@ -71,7 +71,7 @@ const MODULES_DATA: ModuleInfo[] = [
     sopDoc: '03_C1_S3',
     badge: 'HIGH-RISE STOWAGE MASTER',
     color: 'from-amber-600 to-orange-600',
-    imageSrc: '/Assets/videos/scene_04_high_rise_pallet_putaway_poster.jpg'
+    imageSrc: '/Assets/videos/scene_04_high_rise_pallet_putaway_poster.webp'
   },
   {
     index: 3,
@@ -86,7 +86,7 @@ const MODULES_DATA: ModuleInfo[] = [
     sopDoc: '04_C1_S4',
     badge: 'CELL VAULT GUARDIAN',
     color: 'from-rose-600 to-red-600',
-    imageSrc: '/Assets/videos/scene_05_battery_vault_climate_poster.jpg'
+    imageSrc: '/Assets/videos/scene_05_battery_vault_climate_poster.webp'
   },
   {
     index: 4,
@@ -101,7 +101,7 @@ const MODULES_DATA: ModuleInfo[] = [
     sopDoc: '05_C1_S5',
     badge: 'HAZMAT CUSTODIAN',
     color: 'from-purple-600 to-indigo-700',
-    imageSrc: '/Assets/environments/bg_chemical_building.jpg'
+    imageSrc: '/Assets/environments/bg_chemical_building.webp'
   },
   {
     index: 5,
@@ -116,7 +116,7 @@ const MODULES_DATA: ModuleInfo[] = [
     sopDoc: '06_C1_S6',
     badge: 'SUPERMARKET KANBAN SPECIALIST',
     color: 'from-teal-600 to-cyan-600',
-    imageSrc: '/Assets/environments/bg_supermarket_sm.jpg'
+    imageSrc: '/Assets/environments/bg_supermarket_sm.webp'
   },
   {
     index: 6,
@@ -131,7 +131,7 @@ const MODULES_DATA: ModuleInfo[] = [
     sopDoc: '07_C1_S7',
     badge: 'QUARANTINE DISPOSITION AUTHORITY',
     color: 'from-red-600 to-rose-700',
-    imageSrc: '/Assets/environments/bg_ng_quarantine_area.jpg'
+    imageSrc: '/Assets/environments/bg_ng_quarantine_area.webp'
   },
 
   // Category 2: Line Feeding & Reverse Logistics (Modules 8 - 12)
@@ -148,7 +148,7 @@ const MODULES_DATA: ModuleInfo[] = [
     sopDoc: '08_C2_S8',
     badge: 'LINE FEEDER CHAMPION',
     color: 'from-blue-600 to-cyan-700',
-    imageSrc: '/Assets/videos/scene_07_milk_run_delivery_poster.jpg'
+    imageSrc: '/Assets/videos/scene_07_milk_run_delivery_poster.webp'
   },
   {
     index: 8,
@@ -163,7 +163,7 @@ const MODULES_DATA: ModuleInfo[] = [
     sopDoc: '09_C2_S9',
     badge: 'PAINT & DECANTING VIRTUOSO',
     color: 'from-indigo-600 to-violet-700',
-    imageSrc: '/Assets/videos/scene_06_bulk_decanting_trolley_poster.jpg'
+    imageSrc: '/Assets/videos/scene_06_bulk_decanting_trolley_poster.webp'
   },
   {
     index: 9,
@@ -178,7 +178,7 @@ const MODULES_DATA: ModuleInfo[] = [
     sopDoc: '10_C2_S10',
     badge: 'INDIRECT STORES CUSTODIAN',
     color: 'from-amber-600 to-yellow-600',
-    imageSrc: '/Assets/environments/bg_indirect_material_store.jpg'
+    imageSrc: '/Assets/environments/bg_indirect_material_store.webp'
   },
   {
     index: 10,
@@ -193,7 +193,7 @@ const MODULES_DATA: ModuleInfo[] = [
     sopDoc: '11_C2_S11',
     badge: 'PIR & STO DISPATCH SPECIALIST',
     color: 'from-emerald-600 to-green-700',
-    imageSrc: '/Assets/environments/bg_deo_gate_office.jpg'
+    imageSrc: '/Assets/environments/bg_deo_gate_office.webp'
   },
   {
     index: 11,
@@ -208,7 +208,7 @@ const MODULES_DATA: ModuleInfo[] = [
     sopDoc: '12_C2_S12',
     badge: 'WAREHOUSE GRANDMASTER',
     color: 'from-blue-700 to-slate-900',
-    imageSrc: '/Assets/videos/scene_08_empty_bin_strapping_poster.jpg'
+    imageSrc: '/Assets/videos/scene_08_empty_bin_strapping_poster.webp'
   }
 ];
 

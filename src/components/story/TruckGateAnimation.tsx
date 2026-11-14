@@ -10,7 +10,7 @@ interface Props {
 
 export const TruckGateAnimation: React.FC<Props> = ({
   videoSrc,
-  posterSrc = '/Assets/videos/scene_01_gate_arrival_poster.jpg',
+  posterSrc = '/Assets/videos/scene_01_gate_arrival_poster.webp',
   isPaused,
   onPauseReached
 }) => {

@@ -10,7 +10,7 @@ interface Props {
 
 export const ReverseTruckLoadingAnimation: React.FC<Props> = ({
   videoSrc,
-  posterSrc = '/Assets/videos/scene_08_empty_bin_strapping_poster.jpg',
+  posterSrc = '/Assets/videos/scene_08_empty_bin_strapping_poster.webp',
   isPaused,
   onPauseReached
 }) => {
