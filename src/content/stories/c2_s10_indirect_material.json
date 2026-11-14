@@ -31,9 +31,9 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Welcome to Stage 10: Indirect Material Handling under SOP 10_C2_S1! Centralized Indirect Stores (CM01) houses plant consumables, lubricants, safety gear, and machine spares. A line maintenance supervisor rushes to the counter demanding 10 boxes of nitrile gloves and 2 tubes of synthetic grease immediately for an emergency breakdown, stating: 'Give them to me right away, I will raise the SAP slip after lunch!' Under SOP Clause 4.1 & Failure Mode 5.1, what is your mandatory operational decision? STOP OR GO?",
-            "hi": "SOP 10_C2_S1 के तहत स्टेज 10: अप्रत्यक्ष सामग्री प्रबंधन में आपका स्वागत है! केंद्रीकृत अप्रत्यक्ष स्टोर (CM01) में संयंत्र उपभोग्य वस्तुएं, स्नेहक, सुरक्षा उपकरण और मशीन स्पेयर रखे जाते हैं। एक लाइन रखरखाव पर्यवेक्षक आपातकालीन ब्रेकडाउन के लिए तुरंत 10 बॉक्स नाइट्राइल दस्ताने और 2 ट्यूब सिंथेटिक ग्रीस की मांग करते हुए काउंटर पर आता है, यह कहते हुए: 'मुझे अभी दे दो, मैं दोपहर के भोजन के बाद SAP पर्ची बनाऊंगा!' SOP क्लॉज 4.1 और विफलता मोड 5.1 के तहत, आपका अनिवार्य परिचालन निर्णय क्या है? रुकें या जाएं?",
-            "mr": "SOP 10_C2_S1 नुसार स्टेज 10: अप्रत्यक्ष साहित्य हाताळणीमध्ये आपले स्वागत आहे! मध्यवर्ती अप्रत्यक्ष स्टोअरमध्ये (CM01) कारखान्यातील उपभोग्य वस्तू, वंगण, सुरक्षा उपकरणे (PPE) आणि मशीनचे सुटे भाग ठेवले जातात. लाईन मेंटेनन्स सुपरवायझर घाईघाईत काउंटरवर येतो आणि म्हणतो: 'तातडीने ब्रेकडाउन दुरुस्तीसाठी मला 10 बॉक्स नायट्रिल ग्लोव्हज आणि 2 ट्यूब ग्रीस आत्ताच द्या, मी जेवणानंतर SAP मध्ये स्लिप बनवून देईन!' SOP कलम 4.1 आणि अपयश मोड 5.1 नुसार, तुमचा निर्णय काय असेल? थांबा किंवा पुढे जा?"
+            "en": "Welcome to Stage 10: Indirect Material Handling! Centralized Indirect Stores (CM01) houses plant consumables, lubricants, safety gear, and machine spares. A line maintenance supervisor rushes to the counter demanding 10 boxes of nitrile gloves and 2 tubes of synthetic grease immediately for an emergency breakdown, stating: 'Give them to me right away, I will raise the SAP slip after lunch!' what is your mandatory operational decision? STOP OR GO?",
+            "hi": "के तहत स्टेज 10: अप्रत्यक्ष सामग्री प्रबंधन में आपका स्वागत है! केंद्रीकृत अप्रत्यक्ष स्टोर (CM01) में संयंत्र उपभोग्य वस्तुएं, स्नेहक, सुरक्षा उपकरण और मशीन स्पेयर रखे जाते हैं। एक लाइन रखरखाव पर्यवेक्षक आपातकालीन ब्रेकडाउन के लिए तुरंत 10 बॉक्स नाइट्राइल दस्ताने और 2 ट्यूब सिंथेटिक ग्रीस की मांग करते हुए काउंटर पर आता है, यह कहते हुए: 'मुझे अभी दे दो, मैं दोपहर के भोजन के बाद SAP पर्ची बनाऊंगा!' आपका अनिवार्य परिचालन निर्णय क्या है? रुकें या जाएं?",
+            "mr": "नुसार स्टेज 10: अप्रत्यक्ष साहित्य हाताळणीमध्ये आपले स्वागत आहे! मध्यवर्ती अप्रत्यक्ष स्टोअरमध्ये (CM01) कारखान्यातील उपभोग्य वस्तू, वंगण, सुरक्षा उपकरणे (PPE) आणि मशीनचे सुटे भाग ठेवले जातात. लाईन मेंटेनन्स सुपरवायझर घाईघाईत काउंटरवर येतो आणि म्हणतो: 'तातडीने ब्रेकडाउन दुरुस्तीसाठी मला 10 बॉक्स नायट्रिल ग्लोव्हज आणि 2 ट्यूब ग्रीस आत्ताच द्या, मी जेवणानंतर SAP मध्ये स्लिप बनवून देईन!' आणि नुसार, तुमचा निर्णय काय असेल? थांबा किंवा पुढे जा?"
           },
           "audioSrc": "/audio/voiceover/s10_sc01_intro.mp3"
         },
@@ -41,8 +41,8 @@
           "pose": "success",
           "text": {
             "en": "Spot on! Your operational decision complies with Ather Auric standards.",
-            "hi": "बिल्कुल सही! SOP 10_C2_S1 स्थापित करता है कि अप्रत्यक्ष सामग्री सीधे कारखाने के परिचालन व्यय (OpEx) को प्रभावित करती है। यह एथर SOP मानकों के 100% अनुरूप है।",
-            "mr": "अगदी बरोबर! SOP 10_C2_S1 स्पष्ट करतो की अप्रत्यक्ष साहित्याचा खर्च थेट कंपनीच्या ऑपेक्स (OpEx) खात्यातून होतो. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+            "hi": "बिल्कुल सही! स्थापित करता है कि अप्रत्यक्ष सामग्री सीधे कारखाने के परिचालन व्यय (OpEx) को प्रभावित करती है। यह एथर SOP मानकों के 100% अनुरूप है।",
+            "mr": "अगदी बरोबर! स्पष्ट करतो की अप्रत्यक्ष साहित्याचा खर्च थेट कंपनीच्या ऑपेक्स (OpEx) खात्यातून होतो. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
           },
           "audioSrc": "/audio/voiceover/s10_sc01_correct.mp3"
         },
@@ -71,9 +71,9 @@
         "questionId": "c2-q09-no-reservation-gate",
         "safetyCritical": true,
         "question": {
-          "en": "DECISION GATE: Can indirect consumables or maintenance spares be physically issued based on a verbal request from a shop supervisor?",
-          "hi": "निर्णय गेट: क्या दुकान पर्यवेक्षक के मौखिक अनुरोध के आधार पर अप्रत्यक्ष उपभोग्य वस्तुएं या रखरखाव पुर्जे भौतिक रूप से जारी किए जा सकते हैं?",
-          "mr": "निर्णय गेट: सुपरवायझरच्या केवळ तोंडी विनंतीवरून उपभोग्य वस्तू किंवा मेंटेनन्स सुटे भाग प्रत्यक्ष हातात दिले जाऊ शकतात का?"
+          "en": "Can indirect consumables or maintenance spares be physically issued based on a verbal request from a shop supervisor?",
+          "hi": "क्या दुकान पर्यवेक्षक के मौखिक अनुरोध के आधार पर अप्रत्यक्ष उपभोग्य वस्तुएं या रखरखाव पुर्जे भौतिक रूप से जारी किए जा सकते हैं?",
+          "mr": "सुपरवायझरच्या केवळ तोंडी विनंतीवरून उपभोग्य वस्तू किंवा मेंटेनन्स सुटे भाग प्रत्यक्ष हातात दिले जाऊ शकतात का?"
         },
         "situation": {
           "en": "A maintenance supervisor insists on collecting gloves and grease immediately to clear a machine stoppage, promising to create the SAP reservation slip later.",
@@ -102,9 +102,9 @@
           "mr": "केवळ विश्वासावर सामान देऊन टाका, ज्यामुळे SAP मध्ये साठ्यात तफावत निर्माण होईल आणि खर्च कोणत्या खात्यावर टाकायचा हे कळणार नाही."
         },
         "prompt": {
-          "en": "DECISION GATE: Can indirect consumables or maintenance spares be physically issued based on a verbal request from a shop supervisor?",
-          "hi": "निर्णय गेट: क्या दुकान पर्यवेक्षक के मौखिक अनुरोध के आधार पर अप्रत्यक्ष उपभोग्य वस्तुएं या रखरखाव पुर्जे भौतिक रूप से जारी किए जा सकते हैं?",
-          "mr": "निर्णय गेट: सुपरवायझरच्या केवळ तोंडी विनंतीवरून उपभोग्य वस्तू किंवा मेंटेनन्स सुटे भाग प्रत्यक्ष हातात दिले जाऊ शकतात का?"
+          "en": "Can indirect consumables or maintenance spares be physically issued based on a verbal request from a shop supervisor?",
+          "hi": "क्या दुकान पर्यवेक्षक के मौखिक अनुरोध के आधार पर अप्रत्यक्ष उपभोग्य वस्तुएं या रखरखाव पुर्जे भौतिक रूप से जारी किए जा सकते हैं?",
+          "mr": "सुपरवायझरच्या केवळ तोंडी विनंतीवरून उपभोग्य वस्तू किंवा मेंटेनन्स सुटे भाग प्रत्यक्ष हातात दिले जाऊ शकतात का?"
         },
         "id": "c2-q09-no-reservation-gate",
         "audioSrc": "/audio/voiceover/s10_sc01_prompt.mp3"
@@ -113,9 +113,9 @@
         "xp": 140,
         "sopClause": "SOP for Indirect Material Handling Auric Clause 4.1 & Failure Mode 5.1",
         "why": {
-          "en": "SOP 10_C2_S1 establishes that indirect materials directly impact factory operational expenditure (OpEx). Without a validated SAP reservation number or JIRA PPE ticket, the ERP cannot assign the expense to the requesting department's Cost Center in Controlling (CO). Verbal handovers lead to physical stockouts for critical maintenance while leaving phantom stock recorded in Central Stores (CM01).",
-          "hi": "SOP 10_C2_S1 स्थापित करता है कि अप्रत्यक्ष सामग्री सीधे कारखाने के परिचालन व्यय (OpEx) को प्रभावित करती है। एक मान्य SAP आरक्षण संख्या या JIRA PPE टिकट के बिना, ERP कंट्रोलिंग (CO) में अनुरोधकर्ता विभाग के लागत केंद्र को खर्च आवंटित नहीं कर सकता है। मौखिक हस्तांतरण से महत्वपूर्ण रखरखाव के लिए स्टॉक की कमी हो जाती है।",
-          "mr": "SOP 10_C2_S1 स्पष्ट करतो की अप्रत्यक्ष साहित्याचा खर्च थेट कंपनीच्या ऑपेक्स (OpEx) खात्यातून होतो. वैध SAP आरक्षण क्रमांक किंवा JIRA तिकिटाशिवाय SAP Controlling (CO) मध्ये संबंधित विभागाच्या बजेटवर हा खर्च टाकता येत नाही. तोंडी सामान दिल्याने गोदामातील साठा संपतो आणि नोंदींमध्ये मात्र माल शिल्लक दिसतो."
+          "en": "Establishes that indirect materials directly impact factory operational expenditure (OpEx). Without a validated SAP reservation number or JIRA PPE ticket, the ERP cannot assign the expense to the requesting department's Cost Center in Controlling (CO). Verbal handovers lead to physical stockouts for critical maintenance while leaving phantom stock recorded in Central Stores (CM01).",
+          "hi": "स्थापित करता है कि अप्रत्यक्ष सामग्री सीधे कारखाने के परिचालन व्यय (OpEx) को प्रभावित करती है। एक मान्य SAP आरक्षण संख्या या JIRA PPE टिकट के बिना, ERP कंट्रोलिंग (CO) में अनुरोधकर्ता विभाग के लागत केंद्र को खर्च आवंटित नहीं कर सकता है। मौखिक हस्तांतरण से महत्वपूर्ण रखरखाव के लिए स्टॉक की कमी हो जाती है।",
+          "mr": "स्पष्ट करतो की अप्रत्यक्ष साहित्याचा खर्च थेट कंपनीच्या ऑपेक्स (OpEx) खात्यातून होतो. वैध SAP आरक्षण क्रमांक किंवा JIRA तिकिटाशिवाय SAP Controlling (CO) मध्ये संबंधित विभागाच्या बजेटवर हा खर्च टाकता येत नाही. तोंडी सामान दिल्याने गोदामातील साठा संपतो आणि नोंदींमध्ये मात्र माल शिल्लक दिसतो."
         }
       }
     },
@@ -142,9 +142,9 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Great vigilance blocking the unreserved verbal request in Scene 1! The maintenance supervisor returns with an official reservation slip. Under S-O-P 10_C2_S1 Clause 4.2, what is the mandatory S-A-P Transaction Code (T-Code) used to reserve...",
-            "hi": "दृश्य 1 में बिना आरक्षण वाले मौखिक अनुरोध को अवरुद्ध करने की बेहतरीन सतर्कता! रखरखाव पर्यवेक्षक एक आधिकारिक आरक्षण पर्ची के साथ लौटता है। SOP 10_C2_S1 क्लॉज 4.2 के तहत, अप्रत्यक्ष सामग्रियों को आरक्षित करने के लिए उपयोग किया जाने वाला अनिवार्य SAP लेनदेन कोड (T-Code) क्या है, और कौन से भंडारण स्थान स्थानांतरण पोस्टिंग को नियंत्रित करते हैं?",
-            "mr": "दृश्य 1 मध्ये तोंडी विनंती रोखून नियमांचे पालन केल्याबद्दल अभिनंदन! आता मेंटेनन्स सुपरवायझर अधिकृत आरक्षण स्लिप घेऊन आला आहे. SOP 10_C2_S1 कलम 4.2 नुसार, अप्रत्यक्ष साहित्याचे आरक्षण करण्यासाठी कोणता SAP ट्रान्झॅक्शन कोड (T-Code) वापरला जातो आणि हा स्टॉक कोणत्या स्टोअरमधून कुठे वर्ग होतो?"
+            "en": "Great vigilance blocking the unreserved verbal request in Scene 1! The maintenance supervisor returns with an official reservation slip. What is the mandatory S-A-P Transaction Code (T-Code) used to reserve.",
+            "hi": "दृश्य 1 में बिना आरक्षण वाले मौखिक अनुरोध को अवरुद्ध करने की बेहतरीन सतर्कता! रखरखाव पर्यवेक्षक एक आधिकारिक आरक्षण पर्ची के साथ लौटता है। अप्रत्यक्ष सामग्रियों को आरक्षित करने के लिए उपयोग किया जाने वाला अनिवार्य SAP लेनदेन कोड (T-Code) क्या है, और कौन से भंडारण स्थान स्थानांतरण पोस्टिंग को नियंत्रित करते हैं?",
+            "mr": "दृश्य 1 मध्ये तोंडी विनंती रोखून नियमांचे पालन केल्याबद्दल अभिनंदन! आता मेंटेनन्स सुपरवायझर अधिकृत आरक्षण स्लिप घेऊन आला आहे. अप्रत्यक्ष साहित्याचे आरक्षण करण्यासाठी कोणता SAP ट्रान्झॅक्शन कोड (T-Code) वापरला जातो आणि हा स्टॉक कोणत्या स्टोअरमधून कुठे वर्ग होतो?"
           },
           "audioSrc": "/audio/voiceover/s10_sc02_intro.mp3"
         },
@@ -152,8 +152,8 @@
           "pose": "success",
           "text": {
             "en": "Spot on! Your operational decision complies with Ather Auric standards.",
-            "hi": "बिल्कुल सही! SOP 10_C2_S1 क्लॉज 4। यह एथर SOP मानकों के 100% अनुरूप है।",
-            "mr": "अगदी बरोबर! SOP 10_C2_S1 कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+            "hi": "बिल्कुल सही!। यह एथर SOP मानकों के 100% अनुरूप है।",
+            "mr": "अगदी बरोबर! हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
           },
           "audioSrc": "/audio/voiceover/s10_sc02_correct.mp3"
         },
@@ -181,9 +181,9 @@
         "type": "mcq",
         "questionId": "c2-q10-sap-ymb21-transfer",
         "question": {
-          "en": "Under SOP 10_C2_S1 Clause 4.2, what is the SAP transaction code and storage location route for indirect maintenance spares?",
-          "hi": "SOP 10_C2_S1 क्लॉज 4.2 के तहत, अप्रत्यक्ष रखरखाव पुर्जों के लिए SAP लेनदेन कोड और भंडारण स्थान मार्ग क्या है?",
-          "mr": "SOP 10_C2_S1 कलम 4.2 नुसार, मेंटेनन्स सुट्या भागांसाठी SAP ट्रान्झॅक्शन कोड आणि स्टोअर लोकेशनचा अचूक मार्ग कोणता आहे?"
+          "en": "What is the SAP transaction code and storage location route for indirect maintenance spares?",
+          "hi": "अप्रत्यक्ष रखरखाव पुर्जों के लिए SAP लेनदेन कोड और भंडारण स्थान मार्ग क्या है?",
+          "mr": "मेंटेनन्स सुट्या भागांसाठी SAP ट्रान्झॅक्शन कोड आणि स्टोअर लोकेशनचा अचूक मार्ग कोणता आहे?"
         },
         "options": [
           {
@@ -224,9 +224,9 @@
           }
         ],
         "prompt": {
-          "en": "Under SOP 10_C2_S1 Clause 4.2, what is the SAP transaction code and storage location route for indirect maintenance spares?",
-          "hi": "SOP 10_C2_S1 क्लॉज 4.2 के तहत, अप्रत्यक्ष रखरखाव पुर्जों के लिए SAP लेनदेन कोड और भंडारण स्थान मार्ग क्या है?",
-          "mr": "SOP 10_C2_S1 कलम 4.2 नुसार, मेंटेनन्स सुट्या भागांसाठी SAP ट्रान्झॅक्शन कोड आणि स्टोअर लोकेशनचा अचूक मार्ग कोणता आहे?"
+          "en": "What is the SAP transaction code and storage location route for indirect maintenance spares?",
+          "hi": "अप्रत्यक्ष रखरखाव पुर्जों के लिए SAP लेनदेन कोड और भंडारण स्थान मार्ग क्या है?",
+          "mr": "मेंटेनन्स सुट्या भागांसाठी SAP ट्रान्झॅक्शन कोड आणि स्टोअर लोकेशनचा अचूक मार्ग कोणता आहे?"
         },
         "id": "c2-q10-sap-ymb21-transfer",
         "audioSrc": "/audio/voiceover/s10_sc02_prompt.mp3"
@@ -235,9 +235,9 @@
         "xp": 145,
         "sopClause": "SOP for Indirect Material Handling Auric Clause 4.2",
         "why": {
-          "en": "SOP 10_C2_S1 Clause 4.2 dictates: 'When a department requires indirect materials, they raise a request via SAP. For materials handled in SAP, the 1CODE used is YMB21... initiating a Material Transfer Posting from CM01 to the MN01 storage location. A reservation number is generated upon saving the request with the specific part number and quantity.' This ensures real-time stock deduction from CM01 and accurate consumption debiting in MN01.",
-          "hi": "SOP 10_C2_S1 क्लॉज 4.2 निर्देश देता है: 'जब किसी विभाग को अप्रत्यक्ष सामग्री की आवश्यकता होती है, तो वे SAP के माध्यम से अनुरोध करते हैं। SAP में उपयोग किया जाने वाला कोड YMB21 है... जो CM01 से MN01 भंडारण स्थान में सामग्री स्थानांतरण पोस्टिंग शुरू करता है।' यह CM01 से वास्तविक समय कटौती और MN01 में सटीक खपत सुनिश्चित करता है।",
-          "mr": "SOP 10_C2_S1 कलम 4.2 स्पष्ट नमूद करतो: 'जेव्हा कोणत्याही विभागाला अप्रत्यक्ष साहित्याची गरज असते, तेव्हा ते SAP द्वारे मागणी नोंदवतात. यासाठी YMB21 कोड वापरला जातो... ज्यामुळे CM01 मधून MN01 स्टोअर लोकेशनमध्ये माल वर्ग होतो. पार्ट नंबर व संख्या नोंदवताच आरक्षण क्रमांक तयार होतो.' यामुळे CM01 मधील साठ्याची तात्काळ वजावट होते आणि MN01 मध्ये योग्य नोंद राहते."
+          "en": "Dictates: 'When a department requires indirect materials, they raise a request via SAP. For materials handled in SAP, the 1CODE used is YMB21. Initiating a Material Transfer Posting from CM01 to the MN01 storage location. A reservation number is generated upon saving the request with the specific part number and quantity.' This ensures real-time stock deduction from CM01 and accurate consumption debiting in MN01.",
+          "hi": "निर्देश देता है: 'जब किसी विभाग को अप्रत्यक्ष सामग्री की आवश्यकता होती है, तो वे SAP के माध्यम से अनुरोध करते हैं। SAP में उपयोग किया जाने वाला कोड YMB21 है. जो CM01 से MN01 भंडारण स्थान में सामग्री स्थानांतरण पोस्टिंग शुरू करता है।' यह CM01 से वास्तविक समय कटौती और MN01 में सटीक खपत सुनिश्चित करता है।",
+          "mr": "स्पष्ट नमूद करतो: 'जेव्हा कोणत्याही विभागाला अप्रत्यक्ष साहित्याची गरज असते, तेव्हा ते SAP द्वारे मागणी नोंदवतात. यासाठी YMB21 कोड वापरला जातो. ज्यामुळे CM01 मधून MN01 स्टोअर लोकेशनमध्ये माल वर्ग होतो. पार्ट नंबर व संख्या नोंदवताच आरक्षण क्रमांक तयार होतो.' यामुळे CM01 मधील साठ्याची तात्काळ वजावट होते आणि MN01 मध्ये योग्य नोंद राहते."
         }
       }
     },
@@ -264,9 +264,9 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Now inspect the printed Material Requisition Slip (MRS) presented at the counter. Under S-O-P Failure Mode 5.1, issuing materials under an incomplete slip causes direct expenses to be billed to the wrong department or left...",
-            "hi": "अब काउंटर पर प्रस्तुत मुद्रित सामग्री मांग पर्ची (MRS) का निरीक्षण करें। SOP विफलता मोड 5.1 के तहत, एक अधूरी पर्ची के तहत सामग्री जारी करने से प्रत्यक्ष खर्च गलत विभाग को बिल हो जाता है या SAP CO में बिना आवंटित कमी के रूप में छोड़ दिया जाता है! किसी भी स्टॉक को जारी करने से पहले इस मांग पर्ची पर महत्वपूर्ण दोष को टैप करें और पहचानें!",
-            "mr": "आता काउंटरवर आणलेल्या कागदी मटेरियल रिक्विजिशन स्लिपची (MRS) बारकाईने तपासणी करा. SOP अपयश मोड 5.1 नुसार, अपुऱ्या स्लिपवर सामान दिल्यास त्याचा खर्च चुकीच्या खात्यावर पडतो किंवा कंपनीचे मोठे नुकसान होते! गोदामातून कोणतीही वस्तू देण्यापूर्वी या स्लिपमधील गंभीर चूक ओळखा आणि त्यावर टॅप करा!"
+            "en": "Now inspect the printed Material Requisition Slip (MRS) presented at the counter. Issuing materials under an incomplete slip causes direct expenses to be billed to the wrong department or left.",
+            "hi": "अब काउंटर पर प्रस्तुत मुद्रित सामग्री मांग पर्ची (MRS) का निरीक्षण करें। एक अधूरी पर्ची के तहत सामग्री जारी करने से प्रत्यक्ष खर्च गलत विभाग को बिल हो जाता है या SAP CO में बिना आवंटित कमी के रूप में छोड़ दिया जाता है! किसी भी स्टॉक को जारी करने से पहले इस मांग पर्ची पर महत्वपूर्ण दोष को टैप करें और पहचानें!",
+            "mr": "आता काउंटरवर आणलेल्या कागदी मटेरियल रिक्विजिशन स्लिपची (MRS) बारकाईने तपासणी करा. SOP नुसार, अपुऱ्या स्लिपवर सामान दिल्यास त्याचा खर्च चुकीच्या खात्यावर पडतो किंवा कंपनीचे मोठे नुकसान होते! गोदामातून कोणतीही वस्तू देण्यापूर्वी या स्लिपमधील गंभीर चूक ओळखा आणि त्यावर टॅप करा!"
           },
           "audioSrc": "/audio/voiceover/s10_sc03_intro.mp3"
         },
@@ -274,8 +274,8 @@
           "pose": "success",
           "text": {
             "en": "Spot on! Your operational decision complies with Ather Auric standards.",
-            "hi": "बिल्कुल सही! SOP 10_C2_S1 विफलता मोड 5। यह एथर SOP मानकों के 100% अनुरूप है।",
-            "mr": "अगदी बरोबर! SOP 10_C2_S1 अपयश मोड 5. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+            "hi": "बिल्कुल सही!। यह एथर SOP मानकों के 100% अनुरूप है।",
+            "mr": "अगदी बरोबर! हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
           },
           "audioSrc": "/audio/voiceover/s10_sc03_correct.mp3"
         },
@@ -304,9 +304,9 @@
         "questionId": "c2-q11-mrs-cost-center-audit",
         "safetyCritical": true,
         "question": {
-          "en": "SPOT THE DEFECT: Which critical field on this Material Requisition Slip violates SOP 10_C2_S1 Failure Mode 5.1 and blocks stock issuance?",
-          "hi": "दोष पहचानें: इस सामग्री मांग पर्ची पर कौन सा महत्वपूर्ण क्षेत्र SOP 10_C2_S1 विफलता मोड 5.1 का उल्लंघन करता है और स्टॉक निर्गमन को रोकता है?",
-          "mr": "चूक ओळखा: या मागणी पत्रकातील कोणती गंभीर त्रुटी SOP 10_C2_S1 अपयश मोड 5.1 चे उल्लंघन करते आणि माल देण्यास मज्जाव करते?"
+          "en": "SPOT THE DEFECT: Which critical field on this Material Requisition Slip violates and blocks stock issuance?",
+          "hi": "दोष पहचानें: इस सामग्री मांग पर्ची पर कौन सा महत्वपूर्ण क्षेत्र का उल्लंघन करता है और स्टॉक निर्गमन को रोकता है?",
+          "mr": "चूक ओळखा: या मागणी पत्रकातील कोणती गंभीर त्रुटी चे उल्लंघन करते आणि माल देण्यास मज्जाव करते?"
         },
         "instruction": {
           "en": "Select the non-compliant field that must be rejected prior to executing the Goods Issue in SAP.",
@@ -372,9 +372,9 @@
           }
         ],
         "prompt": {
-          "en": "SPOT THE DEFECT: Which critical field on this Material Requisition Slip violates SOP 10_C2_S1 Failure Mode 5.1 and blocks stock issuance?",
-          "hi": "दोष पहचानें: इस सामग्री मांग पर्ची पर कौन सा महत्वपूर्ण क्षेत्र SOP 10_C2_S1 विफलता मोड 5.1 का उल्लंघन करता है और स्टॉक निर्गमन को रोकता है?",
-          "mr": "चूक ओळखा: या मागणी पत्रकातील कोणती गंभीर त्रुटी SOP 10_C2_S1 अपयश मोड 5.1 चे उल्लंघन करते आणि माल देण्यास मज्जाव करते?"
+          "en": "SPOT THE DEFECT: Which critical field on this Material Requisition Slip violates and blocks stock issuance?",
+          "hi": "दोष पहचानें: इस सामग्री मांग पर्ची पर कौन सा महत्वपूर्ण क्षेत्र का उल्लंघन करता है और स्टॉक निर्गमन को रोकता है?",
+          "mr": "चूक ओळखा: या मागणी पत्रकातील कोणती गंभीर त्रुटी चे उल्लंघन करते आणि माल देण्यास मज्जाव करते?"
         },
         "id": "c2-q11-mrs-cost-center-audit",
         "audioSrc": "/audio/voiceover/s10_sc03_prompt.mp3"
@@ -383,9 +383,9 @@
         "xp": 150,
         "sopClause": "SOP for Indirect Material Handling Auric Failure Mode 5.1",
         "why": {
-          "en": "SOP 10_C2_S1 Failure Mode 5.1 strictly establishes: 'The Indirect Stores operator must cross-reference the reservation document against the requesting individual's credentials and verify that the target Cost Center/Storage Location matches the reservation details before executing the Goods Issue.' If the Cost Center is blank, the transaction will fail financial reconciliation in SAP Controlling (CO), and the warehouse operator will be held accountable for inventory discrepancy.",
-          "hi": "SOP 10_C2_S1 विफलता मोड 5.1 कड़ाई से स्थापित करता है: 'अप्रत्यक्ष स्टोर ऑपरेटर को मांग दस्तावेज को क्रॉस-रेफरेंस करना होगा और सत्यापित करना होगा कि लक्ष्य लागत केंद्र विवरण से मेल खाता है।' यदि लागत केंद्र खाली है, तो लेनदेन SAP में विफल हो जाएगा।",
-          "mr": "SOP 10_C2_S1 अपयश मोड 5.1 कडक बजावतो: 'अप्रत्यक्ष स्टोअर कर्मचाऱ्याने कागदपत्रे तपासून हे पाहिले पाहिजे की कॉस्ट सेंटर आणि स्टोअर लोकेशन अचूक नोंदवले आहे.' जर कॉस्ट सेंटरची जागा रिकामी असेल, तर SAP Controlling (CO) मध्ये हा व्यवहार अडकतो आणि गैरव्यवहाराची जबाबदारी स्टोअर कर्मचाऱ्यावर येते."
+          "en": "Strictly establishes: 'The Indirect Stores operator must cross-reference the reservation document against the requesting individual's credentials and verify that the target Cost Center/Storage Location matches the reservation details before executing the Goods Issue.' If the Cost Center is blank, the transaction will fail financial reconciliation in SAP Controlling (CO), and the warehouse operator will be held accountable for inventory discrepancy.",
+          "hi": "कड़ाई से स्थापित करता है: 'अप्रत्यक्ष स्टोर ऑपरेटर को मांग दस्तावेज को क्रॉस-रेफरेंस करना होगा और सत्यापित करना होगा कि लक्ष्य लागत केंद्र विवरण से मेल खाता है।' यदि लागत केंद्र खाली है, तो लेनदेन SAP में विफल हो जाएगा।",
+          "mr": "कडक बजावतो: 'अप्रत्यक्ष स्टोअर कर्मचाऱ्याने कागदपत्रे तपासून हे पाहिले पाहिजे की कॉस्ट सेंटर आणि स्टोअर लोकेशन अचूक नोंदवले आहे.' जर कॉस्ट सेंटरची जागा रिकामी असेल, तर SAP Controlling (CO) मध्ये हा व्यवहार अडकतो आणि गैरव्यवहाराची जबाबदारी स्टोअर कर्मचाऱ्यावर येते."
         }
       }
     },
@@ -412,9 +412,9 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "You spotted the missing Cost Center with eagle eyes! The slip is corrected and re-authorized. Now, execute the mandatory 4-step chain of custody sequence under S-O-P 10_C2_S1 Clauses 4.2 & 4.4 and Failure Mode 5.2....",
-            "hi": "आपने बाज की नजर से छूटे हुए लागत केंद्र को पहचान लिया! पर्ची को सही और पुनः अधिकृत किया गया है। अब, SOP 10_C2_S1 क्लॉज 4.2 और 4.4 तथा विफलता मोड 5.2 के तहत अनिवार्य 4-चरणीय श्रृंखला निष्पादित करें। याद रखें: SAP लेनदेन पूरा करने से पहले भौतिक भागों को सौंपने से CM01 में घोस्ट इन्वेंट्री होती है! 4 कार्यों को उनके सटीक कालानुक्रमिक क्रम में रखें!",
-            "mr": "तुम्ही ती रिकामी कॉस्ट सेंटरची चूक अगदी अचूक पकडलीत! आता स्लिप दुरुस्त करून अधिकृत करण्यात आली आहे. आता SOP 10_C2_S1 कलम 4.2, 4.4 आणि अपयश मोड 5.2 नुसार साहित्याचे वाटप करण्याचा अचूक 4-टप्प्यांचा क्रम लावा. लक्षात ठेवा: SAP मधील नोंद पूर्ण करण्याआधी प्रत्यक्ष माल दिल्यास CM01 मध्ये साठ्यात तफावत होते! चारही पायऱ्या योग्य क्रमाने लावा!"
+            "en": "You spotted the missing Cost Center with eagle eyes! The slip is corrected and re-authorized. Now, execute the mandatory 4-step chain of custody sequence 4.2 & 4.4",
+            "hi": "आपने बाज की नजर से छूटे हुए लागत केंद्र को पहचान लिया! पर्ची को सही और पुनः अधिकृत किया गया है। अब, अनिवार्य 4-चरणीय श्रृंखला निष्पादित करें। याद रखें: SAP लेनदेन पूरा करने से पहले भौतिक भागों को सौंपने से CM01 में घोस्ट इन्वेंट्री होती है! 4 कार्यों को उनके सटीक कालानुक्रमिक क्रम में रखें!",
+            "mr": "तुम्ही ती रिकामी कॉस्ट सेंटरची चूक अगदी अचूक पकडलीत! आता स्लिप दुरुस्त करून अधिकृत करण्यात आली आहे. आता 4.4 आणि नुसार साहित्याचे वाटप करण्याचा अचूक 4-टप्प्यांचा क्रम लावा. लक्षात ठेवा: SAP मधील नोंद पूर्ण करण्याआधी प्रत्यक्ष माल दिल्यास CM01 मध्ये साठ्यात तफावत होते! चारही पायऱ्या योग्य क्रमाने लावा!"
           },
           "audioSrc": "/audio/voiceover/s10_sc04_intro.mp3"
         },
@@ -422,8 +422,8 @@
           "pose": "success",
           "text": {
             "en": "Spot on! Your operational decision complies with Ather Auric standards.",
-            "hi": "बिल्कुल सही! SOP 10_C2_S1 कड़ाई से दो-चरणीय इन्वेंट्री सिंक्रनाइज़ेशन नियम का आदेश देता है: 'अप्रत्यक्ष स्टोर को पहले SAP में CM01 से MN01 तक व्यवस्थित आंदोलन पूरा करना होगा। यह एथर SOP मानकों के 100% अनुरूप है।",
-            "mr": "अगदी बरोबर! SOP 10_C2_S1 दोन-टप्प्यांचा अचूक नियम स्पष्ट करतो: 'गोदाम कर्मचाऱ्याने आधी SAP मध्ये CM01 ते MN01 ट्रान्स्फर पोस्टिंग पूर्ण केले पाहिजे. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+            "hi": "बिल्कुल सही! कड़ाई से दो-चरणीय इन्वेंट्री सिंक्रनाइज़ेशन नियम का आदेश देता है: 'अप्रत्यक्ष स्टोर को पहले SAP में CM01 से MN01 तक व्यवस्थित आंदोलन पूरा करना होगा। यह एथर SOP मानकों के 100% अनुरूप है।",
+            "mr": "अगदी बरोबर! दोन-टप्प्यांचा अचूक नियम स्पष्ट करतो: 'गोदाम कर्मचाऱ्याने आधी SAP मध्ये CM01 ते MN01 ट्रान्स्फर पोस्टिंग पूर्ण केले पाहिजे. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
           },
           "audioSrc": "/audio/voiceover/s10_sc04_correct.mp3"
         },
@@ -517,9 +517,9 @@
         "xp": 160,
         "sopClause": "SOP for Indirect Material Handling Auric Clauses 4.2, 4.4 & Failure Mode 5.2",
         "why": {
-          "en": "SOP 10_C2_S1 strictly mandates the two-step inventory synchronization rule: 'Indirect Stores must complete the systematic movement (Warehouse Task / Transfer Posting from CM01 to MN01) in SAP first. Parts are physically issued to maintenance personnel only after the system transaction is finalized.' Immediately following physical handover, the document number and recipient signature must be archived in the physical tracking register to maintain a tamper-proof audit trail.",
-          "hi": "SOP 10_C2_S1 कड़ाई से दो-चरणीय इन्वेंट्री सिंक्रनाइज़ेशन नियम का आदेश देता है: 'अप्रत्यक्ष स्टोर को पहले SAP में CM01 से MN01 तक व्यवस्थित आंदोलन पूरा करना होगा। सिस्टम लेनदेन अंतिम होने के बाद ही पुर्जे भौतिक रूप से सौंपे जाते हैं।' इसके तुरंत बाद, भौतिक ट्रैकिंग रजिस्टर में हस्ताक्षर दर्ज किए जाने चाहिए।",
-          "mr": "SOP 10_C2_S1 दोन-टप्प्यांचा अचूक नियम स्पष्ट करतो: 'गोदाम कर्मचाऱ्याने आधी SAP मध्ये CM01 ते MN01 ट्रान्स्फर पोस्टिंग पूर्ण केले पाहिजे. सिस्टीम व्यवहार पूर्ण झाल्यावरच प्रत्यक्ष माल कर्मचाऱ्याच्या हातात दिला जातो.' माल दिल्यानंतर लगेचच रजिस्टरमध्ये दस्तऐवज क्रमांक नोंदवून स्वाक्षरी घेतली पाहिजे जेणेकरून ऑडिटमध्ये कोणताही घोळ होणार नाही."
+          "en": "Strictly mandates the two-step inventory synchronization rule: 'Indirect Stores must complete the systematic movement (Warehouse Task / Transfer Posting from CM01 to MN01) in SAP first. Parts are physically issued to maintenance personnel only after the system transaction is finalized.' Immediately following physical handover, the document number and recipient signature must be archived in the physical tracking register to maintain a tamper-proof audit trail.",
+          "hi": "कड़ाई से दो-चरणीय इन्वेंट्री सिंक्रनाइज़ेशन नियम का आदेश देता है: 'अप्रत्यक्ष स्टोर को पहले SAP में CM01 से MN01 तक व्यवस्थित आंदोलन पूरा करना होगा। सिस्टम लेनदेन अंतिम होने के बाद ही पुर्जे भौतिक रूप से सौंपे जाते हैं।' इसके तुरंत बाद, भौतिक ट्रैकिंग रजिस्टर में हस्ताक्षर दर्ज किए जाने चाहिए।",
+          "mr": "दोन-टप्प्यांचा अचूक नियम स्पष्ट करतो: 'गोदाम कर्मचाऱ्याने आधी SAP मध्ये CM01 ते MN01 ट्रान्स्फर पोस्टिंग पूर्ण केले पाहिजे. सिस्टीम व्यवहार पूर्ण झाल्यावरच प्रत्यक्ष माल कर्मचाऱ्याच्या हातात दिला जातो.' माल दिल्यानंतर लगेचच रजिस्टरमध्ये दस्तऐवज क्रमांक नोंदवून स्वाक्षरी घेतली पाहिजे जेणेकरून ऑडिटमध्ये कोणताही घोळ होणार नाही."
         }
       }
     },
@@ -541,18 +541,18 @@
         "intro": {
           "pose": "warning",
           "text": {
-            "en": "Important PPE security check! An assembly technician arrives at the Indirect Stores counter requesting a brand new pair of steel-toe safety shoes and a company winter jacket. Instead of an approved JIRA ticket, they present a torn paper scrap with an informal handwritten signature from their team lead. Under SOP 10_C2_S1 Clause 4.1 & Question Bank Q29, should you allow or halt this issuance?",
-            "hi": "महत्वपूर्ण पीपीई सुरक्षा जांच! एक असेंबली तकनीशियन अप्रत्यक्ष स्टोर काउंटर पर स्टील-टो सुरक्षा जूते और एक कंपनी शीतकालीन जैकेट की एक नई जोड़ी का अनुरोध करने के लिए आता है। एक अनुमोदित JIRA टिकट के बजाय, वे अपने टीम लीड से एक अनौपचारिक हस्तलिखित हस्ताक्षर के साथ एक फटा हुआ कागज का टुकड़ा प्रस्तुत करते हैं। SOP 10_C2_S1 क्लॉज 4.1 और प्रश्न बैंक Q29 के तहत, क्या आपको इस निर्गमन की अनुमति देनी चाहिए या रोकना चाहिए?",
-            "mr": "महत्त्वाची PPE सुरक्षा तपासणी! एक असेंब्ली कामगार अप्रत्यक्ष स्टोअर काउंटरवर येऊन नवीन स्टील-टो सेफ्टी शूज आणि कंपनीचे विंटर जॅकेट मागतो. अधिकृत JIRA तिकिटाऐवजी तो टीम लीडरची साध्या कागदावर केलेली कच्ची स्वाक्षरी दाखवतो. SOP 10_C2_S1 कलम 4.1 आणि प्रश्न संच Q29 नुसार, तुम्ही हे साहित्य देण्यास परवानगी द्याल की थांबवाल?"
+            "en": "Important PPE security check! An assembly technician arrives at the Indirect Stores counter requesting a brand new pair of steel-toe safety shoes and a company winter jacket. Instead of an approved JIRA ticket, they present a torn paper scrap with an informal handwritten signature from their team lead. Should you allow or halt this issuance?",
+            "hi": "महत्वपूर्ण पीपीई सुरक्षा जांच! एक असेंबली तकनीशियन अप्रत्यक्ष स्टोर काउंटर पर स्टील-टो सुरक्षा जूते और एक कंपनी शीतकालीन जैकेट की एक नई जोड़ी का अनुरोध करने के लिए आता है। एक अनुमोदित JIRA टिकट के बजाय, वे अपने टीम लीड से एक अनौपचारिक हस्तलिखित हस्ताक्षर के साथ एक फटा हुआ कागज का टुकड़ा प्रस्तुत करते हैं। क्या आपको इस निर्गमन की अनुमति देनी चाहिए या रोकना चाहिए?",
+            "mr": "महत्त्वाची PPE सुरक्षा तपासणी! एक असेंब्ली कामगार अप्रत्यक्ष स्टोअर काउंटरवर येऊन नवीन स्टील-टो सेफ्टी शूज आणि कंपनीचे विंटर जॅकेट मागतो. अधिकृत JIRA तिकिटाऐवजी तो टीम लीडरची साध्या कागदावर केलेली कच्ची स्वाक्षरी दाखवतो. तुम्ही हे साहित्य देण्यास परवानगी द्याल की थांबवाल?"
           },
           "audioSrc": "/audio/voiceover/s10_sc05_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "STOP IS ABSOLUTELY MANDATED! SOP Clause 4.1 & Question Bank Q29: Safety shoes, winter wear, and specialized uniforms strictly require an approved JIRA Ticket with valid Employee ID and size allotment before physical issuance! General spares require SAP reservation YMB21, but personal PPE requires JIRA HR/EHS authorization. Handwritten notes are strictly invalid!",
-            "hi": "STOP बिल्कुल अनिवार्य है! SOP क्लॉज 4.1 और प्रश्न बैंक Q29: सुरक्षा जूते, सर्दियों के कपड़े, और विशेष वर्दी के लिए भौतिक निर्गमन से पहले वैध कर्मचारी आईडी और आकार आवंटन के साथ एक अनुमोदित JIRA टिकट की सख्त आवश्यकता होती है! सामान्य स्पेयर पार्ट्स के लिए SAP आरक्षण YMB21 की आवश्यकता होती है, लेकिन व्यक्तिगत PPE के लिए JIRA HR/EHS प्राधिकरण की आवश्यकता होती है। हस्तलिखित नोट पूरी तरह से अमान्य हैं!",
-            "mr": "STOP करणे अत्यंत बंधनकारक आहे! SOP कलम 4.1 आणि प्रश्न बँक Q29: सेफ्टी शूज, विंटर जॅकेट आणि गणवेश यासाठी प्रत्यक्ष माल देण्यापूर्वी कर्मचाऱ्याचा आयडी आणि मापासह अधिकृत JIRA तिकीट असणे सक्तीचे आहे! सुट्या भागांसाठी SAP YMB21 आरक्षण लागते, पण PPE साहित्यासाठी JIRA मंजुरीच लागते. कागदावरील कच्च्या चिठ्ठ्यांना कोणतीही मान्यता नाही!"
+            "en": "STOP IS ABSOLUTELY MANDATED! Safety shoes, winter wear, and specialized uniforms strictly require an approved JIRA Ticket with valid Employee ID and size allotment before physical issuance! General spares require SAP reservation YMB21, but personal PPE requires JIRA HR/EHS authorization. Handwritten notes are strictly invalid!",
+            "hi": "STOP बिल्कुल अनिवार्य है! सुरक्षा जूते, सर्दियों के कपड़े, और विशेष वर्दी के लिए भौतिक निर्गमन से पहले वैध कर्मचारी आईडी और आकार आवंटन के साथ एक अनुमोदित JIRA टिकट की सख्त आवश्यकता होती है! सामान्य स्पेयर पार्ट्स के लिए SAP आरक्षण YMB21 की आवश्यकता होती है, लेकिन व्यक्तिगत PPE के लिए JIRA HR/EHS प्राधिकरण की आवश्यकता होती है। हस्तलिखित नोट पूरी तरह से अमान्य हैं!",
+            "mr": "STOP करणे अत्यंत बंधनकारक आहे! सेफ्टी शूज, विंटर जॅकेट आणि गणवेश यासाठी प्रत्यक्ष माल देण्यापूर्वी कर्मचाऱ्याचा आयडी आणि मापासह अधिकृत JIRA तिकीट असणे सक्तीचे आहे! सुट्या भागांसाठी SAP YMB21 आरक्षण लागते, पण PPE साहित्यासाठी JIRA मंजुरीच लागते. कागदावरील कच्च्या चिठ्ठ्यांना कोणतीही मान्यता नाही!"
           },
           "audioSrc": "/audio/voiceover/s10_sc05_correct.mp3"
         },
@@ -571,9 +571,9 @@
         "questionId": "c2-q29-ppe",
         "safetyCritical": true,
         "question": {
-          "en": "An associate requests safety shoes and a jacket presenting only an informal handwritten note without a JIRA ticket. Allow or halt? (Question Bank Q29)",
-          "hi": "एक सहयोगी बिना JIRA टिकट के केवल एक अनौपचारिक हस्तलिखित नोट प्रस्तुत करते हुए सुरक्षा जूते और जैकेट का अनुरोध करता है। अनुमति दें या रोकें? (प्रश्न बैंक Q29)",
-          "mr": "एक कामगार JIRA तिकिटाशिवाय साध्या कागदावरील सही दाखवून सेफ्टी शूज आणि जॅकेटची मागणी करतो. परवानगी द्यावी की थांबवावी? (प्रश्न बँक Q29)"
+          "en": "An associate requests safety shoes and a jacket presenting only an informal handwritten note without a JIRA ticket. Allow or halt?",
+          "hi": "एक सहयोगी बिना JIRA टिकट के केवल एक अनौपचारिक हस्तलिखित नोट प्रस्तुत करते हुए सुरक्षा जूते और जैकेट का अनुरोध करता है। अनुमति दें या रोकें?",
+          "mr": "एक कामगार JIRA तिकिटाशिवाय साध्या कागदावरील सही दाखवून सेफ्टी शूज आणि जॅकेटची मागणी करतो. परवानगी द्यावी की थांबवावी?"
         },
         "situation": {
           "en": "AUDIT: Associate requesting Steel-Toe Shoes (Size 9) & Fleece Jacket. Documentation: Handwritten paper scrap. System JIRA ticket: None.",
@@ -602,9 +602,9 @@
           "mr": "परवानगी द्या: टीम लीडरची चिठ्ठी स्वीकारून त्वरित शूज देऊन टाका"
         },
         "prompt": {
-          "en": "An associate requests safety shoes and a jacket presenting only an informal handwritten note without a JIRA ticket. Allow or halt? (Question Bank Q29)",
-          "hi": "एक सहयोगी बिना JIRA टिकट के केवल एक अनौपचारिक हस्तलिखित नोट प्रस्तुत करते हुए सुरक्षा जूते और जैकेट का अनुरोध करता है। अनुमति दें या रोकें? (प्रश्न बैंक Q29)",
-          "mr": "एक कामगार JIRA तिकिटाशिवाय साध्या कागदावरील सही दाखवून सेफ्टी शूज आणि जॅकेटची मागणी करतो. परवानगी द्यावी की थांबवावी? (प्रश्न बँक Q29)"
+          "en": "An associate requests safety shoes and a jacket presenting only an informal handwritten note without a JIRA ticket. Allow or halt?",
+          "hi": "एक सहयोगी बिना JIRA टिकट के केवल एक अनौपचारिक हस्तलिखित नोट प्रस्तुत करते हुए सुरक्षा जूते और जैकेट का अनुरोध करता है। अनुमति दें या रोकें?",
+          "mr": "एक कामगार JIRA तिकिटाशिवाय साध्या कागदावरील सही दाखवून सेफ्टी शूज आणि जॅकेटची मागणी करतो. परवानगी द्यावी की थांबवावी?"
         },
         "id": "c2-q29-ppe",
         "audioSrc": "/audio/voiceover/s10_sc05_prompt.mp3"
@@ -613,9 +613,9 @@
         "xp": 125,
         "sopClause": "SOP for Indirect Material Handling Auric Clause 4.1 & Question Bank Q29",
         "why": {
-          "en": "SOP 10_C2_S1 Clause 4.1 & Question Bank Q29 establishes: 'For SAP-managed maintenance spares, users must present a valid SAP YMB21 reservation hard copy; for uniforms, safety shoes, and specialized PPE, a validated JIRA ticket is required prior to physical handover.' JIRA tracks individual employee entitlement cycles (e.g. 1 pair of shoes per 12 months) and links the asset directly to employee payroll and EHS audit records.",
-          "hi": "SOP 10_C2_S1 क्लॉज 4.1 और प्रश्न बैंक Q29: SAP-प्रबंधित स्पेयर पार्ट्स के लिए, उपयोगकर्ताओं को एक वैध SAP YMB21 आरक्षण प्रस्तुत करना होगा; वर्दी और सुरक्षा जूतों के लिए, भौतिक हैंडओवर से पहले एक मान्य JIRA टिकट की आवश्यकता होती है। JIRA कर्मचारी पात्रता चक्र को ट्रैक करता है।",
-          "mr": "SOP 10_C2_S1 कलम 4.1 आणि प्रश्न बँक Q29: सुट्या भागांसाठी कागदी SAP YMB21 आरक्षण स्लिप लागते; आणि गणवेश व सेफ्टी शूजसाठी JIRA तिकीट आवश्यक असते. JIRA द्वारे कर्मचाऱ्याला दर 12 महिन्यांनी मिळणाऱ्या साहित्याची नोंद राहते आणि सुरक्षेच्या नियमांचे पालन होते."
+          "en": "Establishes: 'For SAP-managed maintenance spares, users must present a valid SAP YMB21 reservation hard copy; for uniforms, safety shoes, and specialized PPE, a validated JIRA ticket is required prior to physical handover.' JIRA tracks individual employee entitlement cycles (e. G. 1 pair of shoes per 12 months) and links the asset directly to employee payroll and EHS audit records.",
+          "hi": "SAP-प्रबंधित स्पेयर पार्ट्स के लिए, उपयोगकर्ताओं को एक वैध SAP YMB21 आरक्षण प्रस्तुत करना होगा; वर्दी और सुरक्षा जूतों के लिए, भौतिक हैंडओवर से पहले एक मान्य JIRA टिकट की आवश्यकता होती है। JIRA कर्मचारी पात्रता चक्र को ट्रैक करता है।",
+          "mr": "सुट्या भागांसाठी कागदी SAP YMB21 आरक्षण स्लिप लागते; आणि गणवेश व सेफ्टी शूजसाठी JIRA तिकीट आवश्यक असते. JIRA द्वारे कर्मचाऱ्याला दर 12 महिन्यांनी मिळणाऱ्या साहित्याची नोंद राहते आणि सुरक्षेच्या नियमांचे पालन होते."
         }
       }
     },
@@ -637,18 +637,18 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Final milestone of Module 10! In Central Indirect Stores (CM01), the physical stock of critical synthetic motor grease has dropped below its Safety Stock Reorder Point (ROP). Under SOP 10_C2_S1, how does the Indirect Stores Executive initiate systemic replenishment to prevent plant-wide breakdown shortages?",
-            "hi": "मॉड्यूल 10 का अंतिम मील का पत्थर! सेंट्रल इनडायरेक्ट स्टोर्स (CM01) में, महत्वपूर्ण सिंथेटिक मोटर ग्रीस का भौतिक स्टॉक अपने सुरक्षा स्टॉक पुनरावृत्ति बिंदु (ROP) से नीचे चला गया है। SOP 10_C2_S1 के तहत, प्लांट-व्यापी ब्रेकडाउन की कमी को रोकने के लिए इनडायरेक्ट स्टोर्स एक्जीक्यूटिव व्यवस्थित पुनःपूर्ति कैसे शुरू करता है?",
-            "mr": "मॉड्यूल 10 चा अंतिम टप्पा! सेंट्रल इनडायरेक्ट स्टोअर्समध्ये (CM01), सिंथेटिक मोटर ग्रीसचा प्रत्यक्ष साठा सुरक्षा मर्यादेखाली (ROP) आला आहे. SOP 10_C2_S1 नुसार, कारखान्यात वंगणाचा तुटवडा पडू नये म्हणून स्टोअर एक्झिक्युटिव्ह SAP मध्ये कशी पुनर्नोंद करतो?"
+            "en": "Final milestone of Module 10! In Central Indirect Stores (CM01), the physical stock of critical synthetic motor grease has dropped below its Safety Stock Reorder Point (ROP). How does the Indirect Stores Executive initiate systemic replenishment to prevent plant-wide breakdown shortages?",
+            "hi": "मॉड्यूल 10 का अंतिम मील का पत्थर! सेंट्रल इनडायरेक्ट स्टोर्स (CM01) में, महत्वपूर्ण सिंथेटिक मोटर ग्रीस का भौतिक स्टॉक अपने सुरक्षा स्टॉक पुनरावृत्ति बिंदु (ROP) से नीचे चला गया है। के तहत, प्लांट-व्यापी ब्रेकडाउन की कमी को रोकने के लिए इनडायरेक्ट स्टोर्स एक्जीक्यूटिव व्यवस्थित पुनःपूर्ति कैसे शुरू करता है?",
+            "mr": "मॉड्यूल 10 चा अंतिम टप्पा! सेंट्रल इनडायरेक्ट स्टोअर्समध्ये (CM01), सिंथेटिक मोटर ग्रीसचा प्रत्यक्ष साठा सुरक्षा मर्यादेखाली (ROP) आला आहे. नुसार, कारखान्यात वंगणाचा तुटवडा पडू नये म्हणून स्टोअर एक्झिक्युटिव्ह SAP मध्ये कशी पुनर्नोंद करतो?"
           },
           "audioSrc": "/audio/voiceover/s10_sc06_intro.mp3"
         },
         "onCorrect": {
           "pose": "trophy",
           "text": {
-            "en": "PURCHASE REQUISITION MASTERY! SOP Clause 4.5: The Indirect Stores Executive generates an official Purchase Requisition (PR) in SAP via T-Code ME51N referencing the Material Master, approved Cost Center, and vendor contract! Stage 10: Indirect Material Handling (CM01 to MN01) is now 100% complete!",
-            "hi": "खरीद मांग महारत! SOP क्लॉज 4.5: इनडायरेक्ट स्टोर्स एक्जीक्यूटिव मटेरियल मास्टर, अनुमोदित लागत केंद्र और विक्रेता अनुबंध का संदर्भ देते हुए टी-कोड ME51N के माध्यम से SAP में एक आधिकारिक खरीद मांग (PR) उत्पन्न करता है! स्टेज 10 अब 100% पूरा हुआ!",
-            "mr": "खरेदी मागणी प्रावीण्य! SOP कलम 4.5: स्टोअर एक्झिक्युटिव्ह SAP टी-कोड ME51N द्वारे मटेरियल मास्टर आणि अधिकृत कॉस्ट सेंटरचा संदर्भ देऊन नवीन पर्चेस रिक्विझिशन (PR) तयार करतो! स्टेज 10 आता 100% पूर्ण झाले आहे!"
+            "en": "PURCHASE REQUISITION MASTERY! The Indirect Stores Executive generates an official Purchase Requisition (PR) in SAP via T-Code ME51N referencing the Material Master, approved Cost Center, and vendor contract! Stage 10: Indirect Material Handling (CM01 to MN01) is now 100% complete!",
+            "hi": "खरीद मांग महारत! इनडायरेक्ट स्टोर्स एक्जीक्यूटिव मटेरियल मास्टर, अनुमोदित लागत केंद्र और विक्रेता अनुबंध का संदर्भ देते हुए टी-कोड ME51N के माध्यम से SAP में एक आधिकारिक खरीद मांग (PR) उत्पन्न करता है! स्टेज 10 अब 100% पूरा हुआ!",
+            "mr": "खरेदी मागणी प्रावीण्य! स्टोअर एक्झिक्युटिव्ह SAP टी-कोड ME51N द्वारे मटेरियल मास्टर आणि अधिकृत कॉस्ट सेंटरचा संदर्भ देऊन नवीन पर्चेस रिक्विझिशन (PR) तयार करतो! स्टेज 10 आता 100% पूर्ण झाले आहे!"
           },
           "audioSrc": "/audio/voiceover/s10_sc06_correct.mp3"
         },
@@ -676,9 +676,9 @@
             "id": "opt_me51n_pr",
             "correct": true,
             "label": {
-              "en": "Generate a Purchase Requisition (PR) in SAP via T-Code ME51N against the approved department Cost Center (Clause 4.5)",
-              "hi": "स्वीकृत विभाग लागत केंद्र के विरुद्ध टी-कोड ME51N के माध्यम से SAP में एक खरीद मांग (PR) उत्पन्न करें (क्लॉज 4.5)",
-              "mr": "अधिकृत डिपार्टमेंट कॉस्ट सेंटरच्या बजेटनुसार SAP टी-कोड ME51N द्वारे पर्चेस रिक्विझिशन (PR) तयार करणे (कलम 4.5)"
+              "en": "Generate a Purchase Requisition (PR) in SAP via T-Code ME51N against the approved department Cost Center",
+              "hi": "स्वीकृत विभाग लागत केंद्र के विरुद्ध टी-कोड ME51N के माध्यम से SAP में एक खरीद मांग (PR) उत्पन्न करें",
+              "mr": "अधिकृत डिपार्टमेंट कॉस्ट सेंटरच्या बजेटनुसार SAP टी-कोड ME51N द्वारे पर्चेस रिक्विझिशन (PR) तयार करणे"
             }
           },
           {
@@ -721,9 +721,9 @@
         "xp": 120,
         "sopClause": "SOP for Indirect Material Handling Auric Clause 4.5 & Procurement Governance",
         "why": {
-          "en": "SOP 10_C2_S1 Clause 4.5 mandates systematic reorder governance: Central Stores (CM01) tracks continuous Reorder Point (ROP) thresholds. When consumption drops inventory below minimum safety buffers, the Store Executive raises a formal Purchase Requisition via SAP ME51N. Procurement then converts the PR into a Purchase Order (PO) to guarantee contracted vendor pricing, quality compliance, and timely delivery.",
-          "hi": "SOP 10_C2_S1 क्लॉज 4.5 व्यवस्थित पुनःपूर्ति शासन का आदेश देता है: सेंट्रल स्टोर्स (CM01) निरंतर पुनरावृत्ति बिंदु (ROP) सीमाओं को ट्रैक करता है। जब इन्वेंट्री बफर से नीचे गिर जाती है, तो स्टोर एक्जीक्यूटिव SAP ME51N के माध्यम से एक औपचारिक खरीद मांग उठाता है।",
-          "mr": "SOP 10_C2_S1 कलम 4.5 पुनर्नोंदणीच्या नियमांचे पालन करण्याचे निर्देश देतो: सेंट्रल स्टोअर्स (CM01) मध्ये सतत साठ्यावर लक्ष ठेवले जाते. साठा किमान मर्यादेखाली जाताच, SAP ME51N द्वारे अधिकृत PR काढला जातो आणि खरेदी विभागामार्फत अधिकृत पुरवठादाराकडून दर्जेदार माल मागवला जातो."
+          "en": "Mandates systematic reorder governance: Central Stores (CM01) tracks continuous Reorder Point (ROP) thresholds. When consumption drops inventory below minimum safety buffers, the Store Executive raises a formal Purchase Requisition via SAP ME51N. Procurement then converts the PR into a Purchase Order to guarantee contracted vendor pricing, quality compliance, and timely delivery.",
+          "hi": "व्यवस्थित पुनःपूर्ति शासन का आदेश देता है: सेंट्रल स्टोर्स (CM01) निरंतर पुनरावृत्ति बिंदु (ROP) सीमाओं को ट्रैक करता है। जब इन्वेंट्री बफर से नीचे गिर जाती है, तो स्टोर एक्जीक्यूटिव SAP ME51N के माध्यम से एक औपचारिक खरीद मांग उठाता है।",
+          "mr": "पुनर्नोंदणीच्या नियमांचे पालन करण्याचे निर्देश देतो: सेंट्रल स्टोअर्स (CM01) मध्ये सतत साठ्यावर लक्ष ठेवले जाते. साठा किमान मर्यादेखाली जाताच, SAP ME51N द्वारे अधिकृत PR काढला जातो आणि खरेदी विभागामार्फत अधिकृत पुरवठादाराकडून दर्जेदार माल मागवला जातो."
         }
       }
     }

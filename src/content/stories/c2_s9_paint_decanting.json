@@ -26,9 +26,9 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Welcome to Stage 9! At Ather AURIC Plant M002, metal body parts (like Mid-Frames, side brackets, and swingarm mounts) undergo Anodic Cathodic Electrodeposition (ACED) before painting. Under SOP 02_C2_S1, how are ACED metal parts inwarded and distributed among line feeders to ensure zero parts mix-up?",
-            "hi": "स्टेज 9 में आपका स्वागत है! एथर औरिक प्लांट M002 में, पेंटिंग से पहले धातु के शरीर के अंगों (जैसे मिड-फ्रेम, साइड ब्रैकेट और स्विंगआर्म माउंट) पर एनोडिक कैथोडिक इलेक्ट्रोडिपोजिशन (ACED) होता है। SOP 02_C2_S1 के तहत, शून्य पुर्जा मिश्रण सुनिश्चित करने के लिए ACED धातु के हिस्सों को कैसे प्राप्त किया जाता है और लाइन फीडरों के बीच वितरित किया जाता है?",
-            "mr": "स्टेज 9 मध्ये आपले स्वागत आहे! एथर औरिक प्लांट M002 मध्ये, पेंटिंगपूर्वी धातूच्या बॉडी पार्ट्सवर (उदा. मिड-फ्रेम, साइड ब्रॅकेट्स, स्विंगआर्म माउंट) अनोडीक कॅथोडीक इलेक्ट्रोडिपोझिशन (ACED) प्रक्रिया केली जाते. SOP 02_C2_S1 नुसार, पार्ट मिक्स-अप टाळण्यासाठी ACED चे पार्ट कसे साठवले जातात आणि लाईन फीडरमध्ये कसे वाटले जातात?"
+            "en": "Welcome to Stage 9! At Ather AURIC Plant M002, metal body parts (like Mid-Frames, side brackets, and swingarm mounts) undergo Anodic Cathodic Electrodeposition (ACED) before painting. How are ACED metal parts inwarded and distributed among line feeders to ensure zero parts mix-up?",
+            "hi": "स्टेज 9 में आपका स्वागत है! एथर औरिक प्लांट M002 में, पेंटिंग से पहले धातु के शरीर के अंगों (जैसे मिड-फ्रेम, साइड ब्रैकेट और स्विंगआर्म माउंट) पर एनोडिक कैथोडिक इलेक्ट्रोडिपोजिशन (ACED) होता है। के तहत, शून्य पुर्जा मिश्रण सुनिश्चित करने के लिए ACED धातु के हिस्सों को कैसे प्राप्त किया जाता है और लाइन फीडरों के बीच वितरित किया जाता है?",
+            "mr": "स्टेज 9 मध्ये आपले स्वागत आहे! एथर औरिक प्लांट M002 मध्ये, पेंटिंगपूर्वी धातूच्या बॉडी पार्ट्सवर (उदा. मिड-फ्रेम, साइड ब्रॅकेट्स, स्विंगआर्म माउंट) अनोडीक कॅथोडीक इलेक्ट्रोडिपोझिशन (ACED) प्रक्रिया केली जाते. नुसार, पार्ट मिक्स-अप टाळण्यासाठी ACED चे पार्ट कसे साठवले जातात आणि लाईन फीडरमध्ये कसे वाटले जातात?"
           },
           "audioSrc": "/audio/voiceover/s09_sc01_intro.mp3"
         },
@@ -36,8 +36,8 @@
           "pose": "success",
           "text": {
             "en": "Spot on! Your operational decision complies with Ather Auric standards.",
-            "hi": "बिल्कुल सही! लाइन निर्गमन पेंट-शॉप के लिए SOP क्लॉज 4। यह एथर SOP मानकों के 100% अनुरूप है।",
-            "mr": "अगदी बरोबर! SOP फॉर लाईन इश्यूअन्स पेंट-शॉप कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+            "hi": "बिल्कुल सही! यह एथर SOP मानकों के 100% अनुरूप है।",
+            "mr": "अगदी बरोबर! हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
           },
           "audioSrc": "/audio/voiceover/s09_sc01_correct.mp3"
         },
@@ -67,9 +67,9 @@
         "type": "mcq",
         "id": "c2-q05-aced-feeder",
         "prompt": {
-          "en": "Under SOP 02_C2_S1, how are ACED metal parts formatted in the storage area and distributed across line feeders?",
-          "hi": "SOP 02_C2_S1 के तहत, भंडारण क्षेत्र में ACED धातु के पुर्जों को कैसे स्वरूपित किया जाता है और लाइन फीडरों में कैसे वितरित किया जाता है?",
-          "mr": "SOP 02_C2_S1 नुसार, स्टोअरेज एरियामध्ये ACED चे धातूचे पार्ट कोणत्या स्वरूपात ठेवले जातात आणि फीडरमध्ये कसे वाटले जातात?"
+          "en": "How are ACED metal parts formatted in the storage area and distributed across line feeders?",
+          "hi": "के तहत, भंडारण क्षेत्र में ACED धातु के पुर्जों को कैसे स्वरूपित किया जाता है और लाइन फीडरों में कैसे वितरित किया जाता है?",
+          "mr": "नुसार, स्टोअरेज एरियामध्ये ACED चे धातूचे पार्ट कोणत्या स्वरूपात ठेवले जातात आणि फीडरमध्ये कसे वाटले जातात?"
         },
         "options": [
           {
@@ -110,9 +110,9 @@
           }
         ],
         "question": {
-          "en": "Under SOP 02_C2_S1, how are ACED metal parts formatted in the storage area and distributed across line feeders?",
-          "hi": "SOP 02_C2_S1 के तहत, भंडारण क्षेत्र में ACED धातु के पुर्जों को कैसे स्वरूपित किया जाता है और लाइन फीडरों में कैसे वितरित किया जाता है?",
-          "mr": "SOP 02_C2_S1 नुसार, स्टोअरेज एरियामध्ये ACED चे धातूचे पार्ट कोणत्या स्वरूपात ठेवले जातात आणि फीडरमध्ये कसे वाटले जातात?"
+          "en": "How are ACED metal parts formatted in the storage area and distributed across line feeders?",
+          "hi": "के तहत, भंडारण क्षेत्र में ACED धातु के पुर्जों को कैसे स्वरूपित किया जाता है और लाइन फीडरों में कैसे वितरित किया जाता है?",
+          "mr": "नुसार, स्टोअरेज एरियामध्ये ACED चे धातूचे पार्ट कोणत्या स्वरूपात ठेवले जातात आणि फीडरमध्ये कसे वाटले जातात?"
         },
         "questionId": "c2-q05-aced-feeder",
         "audioSrc": "/audio/voiceover/s09_sc01_prompt.mp3"
@@ -121,9 +121,9 @@
         "xp": 130,
         "sopClause": "SOP for Line Issuance Paint-Shop Clause 4.1 & Category 2 Stage Guide",
         "why": {
-          "en": "SOP for Line Issuance Paint-Shop Clause 4.1 establishes: 'All line feeders have unique parts distributed among 28 feeders, meant to be issued at particular workstations for ACED and paint-line. ACED parts are inwarded in trolley format; a total of 7–9 metal parts are stored in the trolley area.' Distributing unique, non-overlapping SKUs across 28 feeders prevents workstation starvation and eliminates part cross-contamination during electrodeposition dipping.",
-          "hi": "लाइन निर्गमन पेंट-शॉप के लिए SOP क्लॉज 4.1 स्थापित करता है: 'सभी लाइन फीडरों के पास 28 फीडरों के बीच वितरित अद्वितीय हिस्से होते हैं, जो ACED और पेंट-लाइन के लिए विशेष वर्कस्टेशनों पर जारी किए जाने हैं। ACED हिस्से ट्रॉली प्रारूप में आवक होते हैं; कुल 7-9 धातु के हिस्से ट्रॉली क्षेत्र में संग्रहीत होते हैं।' 28 फीडरों में गैर-अतिव्यापी SKU का वितरण लाइन की कमी और क्रॉस-संदूषण को रोकता है।",
-          "mr": "SOP फॉर लाईन इश्यूअन्स पेंट-शॉप कलम 4.1 स्पष्ट सांगते: '28 लाईन फीडरमध्ये सर्व युनिक पार्ट वाटलेले असतात, जे ACED आणि पेंट लाईनवरील ठरलेल्या वर्कस्टेशनवर पोहोचवायचे असतात. ACED चे पार्ट ट्रॉली स्वरूपात येतात; ट्रॉली एरियात एकूण 7-9 धातूचे पार्ट साठवले जातात.' प्रत्येक फीडरकडे स्वतंत्र पार्ट असल्याने कामात गोंधळ होत नाही आणि इलेक्ट्रोडिपोझिशन कोटिंग प्रक्रियेत कोणताही दोष येत नाही."
+          "en": "SOP for Line Issuance Paint-Shop establishes: 'All line feeders have unique parts distributed among 28 feeders, meant to be issued at particular workstations for ACED and paint-line. ACED parts are inwarded in trolley format; a total of 7–9 metal parts are stored in the trolley area.' Distributing unique, non-overlapping SKUs across 28 feeders prevents workstation starvation and eliminates part cross-contamination during electrodeposition dipping.",
+          "hi": ".1 स्थापित करता है: 'सभी लाइन फीडरों के पास 28 फीडरों के बीच वितरित अद्वितीय हिस्से होते हैं, जो ACED और पेंट-लाइन के लिए विशेष वर्कस्टेशनों पर जारी किए जाने हैं। ACED हिस्से ट्रॉली प्रारूप में आवक होते हैं; कुल 7-9 धातु के हिस्से ट्रॉली क्षेत्र में संग्रहीत होते हैं।' 28 फीडरों में गैर-अतिव्यापी SKU का वितरण लाइन की कमी और क्रॉस-संदूषण को रोकता है।",
+          "mr": "1 स्पष्ट सांगते: '28 लाईन फीडरमध्ये सर्व युनिक पार्ट वाटलेले असतात, जे ACED आणि पेंट लाईनवरील ठरलेल्या वर्कस्टेशनवर पोहोचवायचे असतात. ACED चे पार्ट ट्रॉली स्वरूपात येतात; ट्रॉली एरियात एकूण 7-9 धातूचे पार्ट साठवले जातात.' प्रत्येक फीडरकडे स्वतंत्र पार्ट असल्याने कामात गोंधळ होत नाही आणि इलेक्ट्रोडिपोझिशन कोटिंग प्रक्रियेत कोणताही दोष येत नाही."
         }
       }
     },
@@ -145,9 +145,9 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "In the Paint Shop Decanting Area, scooter body parts arrive from suppliers in massive Foldable Large Containers (F-L-Cs). Under S-O-P 03_C2_S2, how many pallet positions are allocated for each body part (like Tail Side Panels),...",
-            "hi": "पेंट शॉप डिकैन्टिंग क्षेत्र में, स्कूटर के बॉडी पार्ट्स आपूर्तिकर्ताओं से बड़े फोल्डेबल लार्ज कंटेनर (FLC) में आते हैं। SOP 03_C2_S2 के तहत, प्रत्येक बॉडी पार्ट (जैसे टेल साइड पैनल) के लिए कितने पैलेट पोजीशन आवंटित किए जाते हैं, और स्टॉक खत्म होने से पहले हाई-राइज रैक से पुनःपूर्ति बुलाने का सटीक ट्रिगर क्या है?",
-            "mr": "पेंट शॉप डिकॅन्टिंग एरियामध्ये, स्कूटरचे बॉडी पार्ट्स सप्लायरकडून मोठ्या फोल्डेबल लार्ज कंटेनरमध्ये (FLC) येतात. SOP 03_C2_S2 नुसार, प्रत्येक बॉडी पार्टसाठी (उदा. टेल साइड पॅनेल्स - TSP) किती पॅलेट जागा राखीव असतात आणि माल संपण्यापूर्वी हाय-राईज रॅकमधून नवीन माल मागवण्याचा अचूक नियम काय आहे?"
+            "en": "In the Paint Shop Decanting Area, scooter body parts arrive from suppliers in massive Foldable Large Containers. How many pallet positions are allocated for each body part (like Tail Side Panels),.",
+            "hi": "पेंट शॉप डिकैन्टिंग क्षेत्र में, स्कूटर के बॉडी पार्ट्स आपूर्तिकर्ताओं से बड़े फोल्डेबल लार्ज कंटेनर में आते हैं। के तहत, प्रत्येक बॉडी पार्ट (जैसे टेल साइड पैनल) के लिए कितने पैलेट पोजीशन आवंटित किए जाते हैं, और स्टॉक खत्म होने से पहले हाई-राइज रैक से पुनःपूर्ति बुलाने का सटीक ट्रिगर क्या है?",
+            "mr": "पेंट शॉप डिकॅन्टिंग एरियामध्ये, स्कूटरचे बॉडी पार्ट्स सप्लायरकडून मोठ्या फोल्डेबल लार्ज कंटेनरमध्ये येतात. नुसार, प्रत्येक बॉडी पार्टसाठी (उदा. टेल साइड पॅनेल्स - TSP) किती पॅलेट जागा राखीव असतात आणि माल संपण्यापूर्वी हाय-राईज रॅकमधून नवीन माल मागवण्याचा अचूक नियम काय आहे?"
           },
           "audioSrc": "/audio/voiceover/s09_sc02_intro.mp3"
         },
@@ -155,8 +155,8 @@
           "pose": "success",
           "text": {
             "en": "Spot on! Your operational decision complies with Ather Auric standards.",
-            "hi": "बिल्कुल सही! पेंट-शॉप डिकैन्टिंग प्रक्रियाओं के लिए SOP क्लॉज 4। यह एथर SOP मानकों के 100% अनुरूप है।",
-            "mr": "अगदी बरोबर! SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप कलम 4. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+            "hi": "बिल्कुल सही! पेंट-शॉप डिकैन्टिंग प्रक्रियाओं के लिए। यह एथर SOP मानकों के 100% अनुरूप है।",
+            "mr": "अगदी बरोबर! SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
           },
           "audioSrc": "/audio/voiceover/s09_sc02_correct.mp3"
         },
@@ -185,9 +185,9 @@
         "questionId": "c2-q06-twobin-stepper",
         "safetyCritical": true,
         "question": {
-          "en": "Under SOP 03_C2_S2 Clause 4.1, how many buffer pallet positions must the Decanting Zone Leader maintain for each body part (e.g. Tail Side Panels)?",
-          "hi": "SOP 03_C2_S2 क्लॉज 4.1 के तहत, डिकैन्टिंग ज़ोन लीडर को प्रत्येक बॉडी पार्ट (उदा. टेल साइड पैनल) के लिए कितने बफर पैलेट पोजीशन बनाए रखने चाहिए?",
-          "mr": "SOP 03_C2_S2 कलम 4.1 नुसार, डिकॅन्टिंग झोन लीडरने प्रत्येक बॉडी पार्टसाठी (उदा. टेल साइड पॅनेल्स) किती बफर पॅलेट जागा ठेवल्या पाहिजेत?"
+          "en": "How many buffer pallet positions must the Decanting Zone Leader maintain for each body part (e. G. Tail Side Panels)?",
+          "hi": "डिकैन्टिंग ज़ोन लीडर को प्रत्येक बॉडी पार्ट (उदा. टेल साइड पैनल) के लिए कितने बफर पैलेट पोजीशन बनाए रखने चाहिए?",
+          "mr": "डिकॅन्टिंग झोन लीडरने प्रत्येक बॉडी पार्टसाठी (उदा. टेल साइड पॅनेल्स) किती बफर पॅलेट जागा ठेवल्या पाहिजेत?"
         },
         "instruction": {
           "en": "Use the + and - buttons to dial the required buffer pallet positions.",
@@ -211,9 +211,9 @@
           "mr": "FLC पॅलेट"
         },
         "prompt": {
-          "en": "Under SOP 03_C2_S2 Clause 4.1, how many buffer pallet positions must the Decanting Zone Leader maintain for each body part (e.g. Tail Side Panels)?",
-          "hi": "SOP 03_C2_S2 क्लॉज 4.1 के तहत, डिकैन्टिंग ज़ोन लीडर को प्रत्येक बॉडी पार्ट (उदा. टेल साइड पैनल) के लिए कितने बफर पैलेट पोजीशन बनाए रखने चाहिए?",
-          "mr": "SOP 03_C2_S2 कलम 4.1 नुसार, डिकॅन्टिंग झोन लीडरने प्रत्येक बॉडी पार्टसाठी (उदा. टेल साइड पॅनेल्स) किती बफर पॅलेट जागा ठेवल्या पाहिजेत?"
+          "en": "How many buffer pallet positions must the Decanting Zone Leader maintain for each body part (e. G. Tail Side Panels)?",
+          "hi": "डिकैन्टिंग ज़ोन लीडर को प्रत्येक बॉडी पार्ट (उदा. टेल साइड पैनल) के लिए कितने बफर पैलेट पोजीशन बनाए रखने चाहिए?",
+          "mr": "डिकॅन्टिंग झोन लीडरने प्रत्येक बॉडी पार्टसाठी (उदा. टेल साइड पॅनेल्स) किती बफर पॅलेट जागा ठेवल्या पाहिजेत?"
         },
         "id": "c2-q06-twobin-stepper",
         "audioSrc": "/audio/voiceover/s09_sc02_prompt.mp3"
@@ -222,9 +222,9 @@
         "xp": 135,
         "sopClause": "SOP for Decanting Processes Paint-Shop Clause 4.1 & Failure Mode 5.2",
         "why": {
-          "en": "SOP for Decanting Processes Paint-Shop Clause 4.1 & Failure Mode 5.2 mandates: 'In decanting area, each body-part allocated two pallet positions for decanting. Decanting ZL must maintain 2 pallet/bin quantity of each body-part each time; to replenish, trigger kanban through device. If Zone Incharge does not generate e-Kanban RFID tag when bin depletes, both bins deplete, causing line stoppage.' The 2-bin buffer ensures that while Bin 2 is actively feeding the paint line, the MHE operator has sufficient SLA time to pull replacement FLCs from High-Rise Racks.",
-          "hi": "पेंट-शॉप डिकैन्टिंग प्रक्रियाओं के लिए SOP क्लॉज 4.1 और विफलता मोड 5.2 आदेश देता है: 'डिकैन्टिंग क्षेत्र में, प्रत्येक बॉडी पार्ट के लिए दो पैलेट पोजीशन आवंटित की जाती हैं। डिकैन्टिंग ZL को हर समय 2 पैलेट/बिन मात्रा बनाए रखनी चाहिए; पुनःपूर्ति के लिए, डिवाइस के माध्यम से कनबन ट्रिगर करें।' 2-बिन बफर यह सुनिश्चित करता है कि जब बिन 2 लाइन को खिला रहा हो, तो MHE ऑपरेटर के पास हाई-राइज रैक से नया FLC लाने के लिए पर्याप्त समय हो।",
-          "mr": "SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप कलम 4.1 आणि अपयश मोड 5.2 सांगते: 'डिकॅन्टिंग क्षेत्रात प्रत्येक बॉडी पार्टसाठी 2 पॅलेट जागा नेमून दिलेल्या असतात. झोन लीडरने नेहमी 2 पॅलेटचा साठा ठेवला पाहिजे; पहिली बिन संपताच तात्काळ ई-कनबन ट्रिगर करावा. जर झोन लीडरने वेळेत ई-कनबन RFID ट्रिगर केला नाही, तर दोन्ही बिन्स संपून पेंट लाईन ठप्प होते.' हा 2-बिन नियम लाईन कधीही बंद पडू न देण्यासाठी अत्यंत महत्त्वाचा आहे."
+          "en": "SOP for Decanting Processes Paint-Shop mandates: 'In decanting area, each body-part allocated two pallet positions for decanting. Decanting Zone Leader must maintain 2 pallet/bin quantity of each body-part each time; to replenish, trigger kanban through device. If Zone Incharge does not generate e-Kanban RFID tag when bin depletes, both bins deplete, causing line stoppage.' The 2-bin buffer ensures that while Bin 2 is actively feeding the paint line, the Material Handling Equipment operator has sufficient SLA time to pull replacement Foldable Large Containers from High-Rise Racks.",
+          "hi": "पेंट-शॉप डिकैन्टिंग प्रक्रियाओं के लिए आदेश देता है: 'डिकैन्टिंग क्षेत्र में, प्रत्येक बॉडी पार्ट के लिए दो पैलेट पोजीशन आवंटित की जाती हैं। डिकैन्टिंग ज़ोन लीडर को हर समय 2 पैलेट/बिन मात्रा बनाए रखनी चाहिए; पुनःपूर्ति के लिए, डिवाइस के माध्यम से कनबन ट्रिगर करें।' 2-बिन बफर यह सुनिश्चित करता है कि जब बिन 2 लाइन को खिला रहा हो, तो मटेरियल हैंडलिंग इक्विपमेंट ऑपरेटर के पास हाई-राइज रैक से नया फोल्डेबल लार्ज कंटेनर लाने के लिए पर्याप्त समय हो।",
+          "mr": "SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप आणि सांगते: 'डिकॅन्टिंग क्षेत्रात प्रत्येक बॉडी पार्टसाठी 2 पॅलेट जागा नेमून दिलेल्या असतात. झोन लीडरने नेहमी 2 पॅलेटचा साठा ठेवला पाहिजे; पहिली बिन संपताच तात्काळ ई-कनबन ट्रिगर करावा. जर झोन लीडरने वेळेत ई-कनबन RFID ट्रिगर केला नाही, तर दोन्ही बिन्स संपून पेंट लाईन ठप्प होते.' हा 2-बिन नियम लाईन कधीही बंद पडू न देण्यासाठी अत्यंत महत्त्वाचा आहे."
         }
       }
     },
@@ -246,9 +246,9 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Decanting manpower has opened an F-L-C of Tail Side Panels (TSPs). The F-L-C contains 110 panels, and the internal mobile trolley is designed to hold exactly 30 panels. The operator has transferred 24 panels and...",
-            "hi": "डिकैन्टिंग जनशक्ति ने टेल साइड पैनल (TSP) का एक FLC खोला है। FLC में 110 पैनल हैं, और आंतरिक मोबाइल ट्रॉली को ठीक 30 पैनल रखने के लिए डिज़ाइन किया गया है। ऑपरेटर ने 24 पैनल स्थानांतरित किए हैं और अंतिम 6 पैनलों की प्रतीक्षा करने से बचने के लिए तुरंत ट्रॉली को पेंट लाइन पर भेजना चाहता है। SOP 03_C2_S2 विफलता मोड 5.1 के तहत, क्या इसकी अनुमति है? रुकें या जाएं?",
-            "mr": "डिकॅन्टिंग ऑपरेटरने टेल साइड पॅनेल्सचा (TSP) FLC उघडला आहे. FLC मध्ये 110 पॅनेल्स आहेत, आणि अंतर्गत मोबाईल ट्रॉलीची क्षमता बरोबर 30 पॅनेल्सची आहे. ऑपरेटरने 24 पॅनेल्स भरले आहेत आणि उर्वरित 6 पॅनेल्सची वाट न पाहता लगेच अर्धवट ट्रॉली पेंट लाईनवर पाठवू इच्छितो. SOP 03_C2_S2 अपयश मोड 5.1 नुसार, यास परवानगी आहे का? थांबा किंवा पुढे जा?"
+            "en": "Decanting manpower has opened an Foldable Large Container of Tail Side Panels (TSPs). The Foldable Large Container contains 110 panels, and the internal mobile trolley is designed to hold exactly 30 panels. The operator has transferred 24 panels and.",
+            "hi": "डिकैन्टिंग जनशक्ति ने टेल साइड पैनल (TSP) का एक फोल्डेबल लार्ज कंटेनर खोला है। फोल्डेबल लार्ज कंटेनर में 110 पैनल हैं, और आंतरिक मोबाइल ट्रॉली को ठीक 30 पैनल रखने के लिए डिज़ाइन किया गया है। ऑपरेटर ने 24 पैनल स्थानांतरित किए हैं और अंतिम 6 पैनलों की प्रतीक्षा करने से बचने के लिए तुरंत ट्रॉली को पेंट लाइन पर भेजना चाहता है। के तहत, क्या इसकी अनुमति है? रुकें या जाएं?",
+            "mr": "डिकॅन्टिंग ऑपरेटरने टेल साइड पॅनेल्सचा (TSP) फोल्डेबल लार्ज कंटेनर उघडला आहे. फोल्डेबल लार्ज कंटेनर मध्ये 110 पॅनेल्स आहेत, आणि अंतर्गत मोबाईल ट्रॉलीची क्षमता बरोबर 30 पॅनेल्सची आहे. ऑपरेटरने 24 पॅनेल्स भरले आहेत आणि उर्वरित 6 पॅनेल्सची वाट न पाहता लगेच अर्धवट ट्रॉली पेंट लाईनवर पाठवू इच्छितो. नुसार, यास परवानगी आहे का? थांबा किंवा पुढे जा?"
           },
           "audioSrc": "/audio/voiceover/s09_sc03_intro.mp3"
         },
@@ -256,8 +256,8 @@
           "pose": "success",
           "text": {
             "en": "Spot on! Your operational decision complies with Ather Auric standards.",
-            "hi": "बिल्कुल सही! पेंट-शॉप डिकैन्टिंग प्रक्रियाओं के लिए SOP विफलता मोड 5। यह एथर SOP मानकों के 100% अनुरूप है।",
-            "mr": "अगदी बरोबर! SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप अपयश मोड 5. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+            "hi": "बिल्कुल सही! पेंट-शॉप डिकैन्टिंग प्रक्रियाओं के लिए SOP। यह एथर SOP मानकों के 100% अनुरूप है।",
+            "mr": "अगदी बरोबर! SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
           },
           "audioSrc": "/audio/voiceover/s09_sc03_correct.mp3"
         },
@@ -286,9 +286,9 @@
         "questionId": "c2-q07-trolley-capacity",
         "safetyCritical": true,
         "question": {
-          "en": "DECISION GATE: Can the decanting operator dispatch a partially filled trolley (24/30 panels) to the paint line?",
-          "hi": "निर्णय गेट: क्या डिकैन्टिंग ऑपरेटर आंशिक रूप से भरी हुई ट्रॉली (24/30 पैनल) को पेंट लाइन पर भेज सकता है?",
-          "mr": "निर्णय गेट: डिकॅन्टिंग ऑपरेटर अर्धवट भरलेली ट्रॉली (24/30 पॅनेल्स) पेंट लाईनवर पाठवू शकतो का?"
+          "en": "Can the decanting operator dispatch a partially filled trolley (24/30 panels) to the paint line?",
+          "hi": "क्या डिकैन्टिंग ऑपरेटर आंशिक रूप से भरी हुई ट्रॉली (24/30 पैनल) को पेंट लाइन पर भेज सकता है?",
+          "mr": "डिकॅन्टिंग ऑपरेटर अर्धवट भरलेली ट्रॉली (24/30 पॅनेल्स) पेंट लाईनवर पाठवू शकतो का?"
         },
         "situation": {
           "en": "The mobile trolley rated capacity is 30 Tail Side Panels. The operator loaded 24 panels and is attempting to push it to the paint line, stating: '24 is enough to keep the line running for the next 20 minutes.'",
@@ -317,9 +317,9 @@
           "mr": "पेंट बूथ ऑपरेटरला 60 सेकंद थांबावे लागू नये म्हणून आत्ताच अर्धवट ट्रॉली पाठवून द्या."
         },
         "prompt": {
-          "en": "DECISION GATE: Can the decanting operator dispatch a partially filled trolley (24/30 panels) to the paint line?",
-          "hi": "निर्णय गेट: क्या डिकैन्टिंग ऑपरेटर आंशिक रूप से भरी हुई ट्रॉली (24/30 पैनल) को पेंट लाइन पर भेज सकता है?",
-          "mr": "निर्णय गेट: डिकॅन्टिंग ऑपरेटर अर्धवट भरलेली ट्रॉली (24/30 पॅनेल्स) पेंट लाईनवर पाठवू शकतो का?"
+          "en": "Can the decanting operator dispatch a partially filled trolley (24/30 panels) to the paint line?",
+          "hi": "क्या डिकैन्टिंग ऑपरेटर आंशिक रूप से भरी हुई ट्रॉली (24/30 पैनल) को पेंट लाइन पर भेज सकता है?",
+          "mr": "डिकॅन्टिंग ऑपरेटर अर्धवट भरलेली ट्रॉली (24/30 पॅनेल्स) पेंट लाईनवर पाठवू शकतो का?"
         },
         "id": "c2-q07-trolley-capacity",
         "audioSrc": "/audio/voiceover/s09_sc03_prompt.mp3"
@@ -328,9 +328,9 @@
         "xp": 140,
         "sopClause": "SOP for Decanting Processes Paint-Shop Failure Mode 5.1",
         "why": {
-          "en": "SOP for Decanting Processes Paint-Shop Failure Mode 5.1 dictates: 'The decanting operator does not refill the trolley completely / partly fills the trolley. Decanting operator must fill trolley completely before moving to ACED and paint line. Zone Leader must check before trolley is fed to line. Mandatory check while moving trolley to paint/ACED line eliminates possibility of partial trolley being moved.' Partially filled trolleys disrupt paint booth takt times, cause erratic conveyor loading, and lead to premature line starvation.",
-          "hi": "पेंट-शॉप डिकैन्टिंग प्रक्रियाओं के लिए SOP विफलता मोड 5.1 आदेश देता है: 'डिकैन्टिंग ऑपरेटर ट्रॉली को पूरी तरह से नहीं भरता है / आंशिक रूप से भरता है। ACED और पेंट लाइन पर जाने से पहले डिकैन्टिंग ऑपरेटर को ट्रॉली को पूरी तरह से भरना होगा। ज़ोन लीडर को लाइन में भेजने से पहले जांच करनी होगी।' आंशिक रूप से भरी ट्रॉलियां उत्पादन चक्र को बाधित करती हैं और लाइन की कमी का कारण बनती हैं।",
-          "mr": "SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप अपयश मोड 5.1 स्पष्ट आदेश देतो: 'डिकॅन्टिंग ऑपरेटरने ट्रॉली अर्धवट भरल्यास पेंट लाईनचा वेग मंदावतो. ACED किंवा पेंट लाईनवर पाठवण्यापूर्वी ऑपरेटरने ट्रॉली 100% पूर्ण भरलीच पाहिजे. झोन लीडरने तपासणी करून खात्री केल्याशिवाय कोणतीही ट्रॉली पुढे जाणार नाही.' अर्धवट ट्रॉलीमुळे पेंटिंग बूथचे टॅक्ट टाईम बिघडते आणि उत्पादन प्रक्रियेत गंभीर अडथळे येतात."
+          "en": "SOP for Decanting Processes Paint-Shop dictates: 'The decanting operator does not refill the trolley completely / partly fills the trolley. Decanting operator must fill trolley completely before moving to ACED and paint line. Zone Leader must check before trolley is fed to line. Mandatory check while moving trolley to paint/ACED line eliminates possibility of partial trolley being moved.' Partially filled trolleys disrupt paint booth takt times, cause erratic conveyor loading, and lead to premature line starvation.",
+          "hi": "पेंट-शॉप डिकैन्टिंग प्रक्रियाओं के लिए SOPआदेश देता है: 'डिकैन्टिंग ऑपरेटर ट्रॉली को पूरी तरह से नहीं भरता है / आंशिक रूप से भरता है। ACED और पेंट लाइन पर जाने से पहले डिकैन्टिंग ऑपरेटर को ट्रॉली को पूरी तरह से भरना होगा। ज़ोन लीडर को लाइन में भेजने से पहले जांच करनी होगी।' आंशिक रूप से भरी ट्रॉलियां उत्पादन चक्र को बाधित करती हैं और लाइन की कमी का कारण बनती हैं।",
+          "mr": "SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप स्पष्ट आदेश देतो: 'डिकॅन्टिंग ऑपरेटरने ट्रॉली अर्धवट भरल्यास पेंट लाईनचा वेग मंदावतो. ACED किंवा पेंट लाईनवर पाठवण्यापूर्वी ऑपरेटरने ट्रॉली 100% पूर्ण भरलीच पाहिजे. झोन लीडरने तपासणी करून खात्री केल्याशिवाय कोणतीही ट्रॉली पुढे जाणार नाही.' अर्धवट ट्रॉलीमुळे पेंटिंग बूथचे टॅक्ट टाईम बिघडते आणि उत्पादन प्रक्रियेत गंभीर अडथळे येतात."
         }
       }
     },
@@ -352,9 +352,9 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "An M-H-E forklift operator just dropped an F-L-C at the decanting station. Upon opening, the decanting team discovers Tail Centre Panels (TCP) instead of Tail Side Panels (TSP) due to a miskeyed e-Kanban R-F-I-D tag!...",
-            "hi": "एक MHE फोर्कलिफ्ट ऑपरेटर ने अभी-अभी डिकैन्टिंग स्टेशन पर एक FLC गिराया है। खोलने पर, डिकैन्टिंग टीम को गलत ई-कनबन आरएफआईडी टैग के कारण टेल साइड पैनल (TSP) के बजाय टेल सेंटर पैनल (TCP) का पता चलता है! SOP 03_C2_S2 विफलता मोड 5.3 और 5.4 के तहत, SAP EWM कतार को लॉक किए बिना इसे हल करने के लिए ज़ोन लीडर और MHE ऑपरेटर को किस सटीक प्रोटोकॉल का पालन करना चाहिए?",
-            "mr": "MHE फोर्कलिफ्ट ऑपरेटरने डिकॅन्टिंग स्टेशनवर FLC ठेवला आहे. पेटी उघडल्यावर चुकीच्या ई-कनबन टॅगमुळे टेल साइड पॅनेल्स ऐवजी (TSP) टेल सेंटर पॅनेल्स (TCP) आल्याचे लक्षात आले! SOP 03_C2_S2 अपयश मोड 5.3 व 5.4 नुसार, SAP EWM सिस्टीम अडकून न पडता हा प्रश्न सोडवण्यासाठी झोन लीडर व ऑपरेटरने कोणती अचूक प्रक्रिया केली पाहिजे?"
+            "en": "An M-H-E forklift operator just dropped an Foldable Large Container at the decanting station. Upon opening, the decanting team discovers Tail Centre Panels (TCP) instead of Tail Side Panels (TSP) due to a miskeyed e-Kanban R-F-I-D tag!.",
+            "hi": "एक मटेरियल हैंडलिंग इक्विपमेंट फोर्कलिफ्ट ऑपरेटर ने अभी-अभी डिकैन्टिंग स्टेशन पर एक फोल्डेबल लार्ज कंटेनर गिराया है। खोलने पर, डिकैन्टिंग टीम को गलत ई-कनबन आरएफआईडी टैग के कारण टेल साइड पैनल (TSP) के बजाय टेल सेंटर पैनल (TCP) का पता चलता है! 5.4 के तहत, SAP EWM कतार को लॉक किए बिना इसे हल करने के लिए ज़ोन लीडर और मटेरियल हैंडलिंग इक्विपमेंट ऑपरेटर को किस सटीक प्रोटोकॉल का पालन करना चाहिए?",
+            "mr": "मटेरियल हँडलिंग इक्विपमेंट फोर्कलिफ्ट ऑपरेटरने डिकॅन्टिंग स्टेशनवर फोल्डेबल लार्ज कंटेनर ठेवला आहे. पेटी उघडल्यावर चुकीच्या ई-कनबन टॅगमुळे टेल साइड पॅनेल्स ऐवजी (TSP) टेल सेंटर पॅनेल्स (TCP) आल्याचे लक्षात आले! 5.4 नुसार, SAP EWM सिस्टीम अडकून न पडता हा प्रश्न सोडवण्यासाठी झोन लीडर व ऑपरेटरने कोणती अचूक प्रक्रिया केली पाहिजे?"
           },
           "audioSrc": "/audio/voiceover/s09_sc04_intro.mp3"
         },
@@ -362,8 +362,8 @@
           "pose": "success",
           "text": {
             "en": "Spot on! Your operational decision complies with Ather Auric standards.",
-            "hi": "बिल्कुल सही! पेंट-शॉप डिकैन्टिंग प्रक्रियाओं के लिए SOP विफलता मोड 5। यह एथर SOP मानकों के 100% अनुरूप है।",
-            "mr": "अगदी बरोबर! SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप अपयश मोड 5. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+            "hi": "बिल्कुल सही! पेंट-शॉप डिकैन्टिंग प्रक्रियाओं के लिए SOP। यह एथर SOP मानकों के 100% अनुरूप है।",
+            "mr": "अगदी बरोबर! SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
           },
           "audioSrc": "/audio/voiceover/s09_sc04_correct.mp3"
         },
@@ -392,9 +392,9 @@
         "questionId": "c2-q08-wrong-part-sequence",
         "safetyCritical": true,
         "question": {
-          "en": "Under SOP 03_C2_S2 Failure Modes 5.3 & 5.4, arrange the 4 mandatory steps to recover from a wrong part delivery without locking SAP EWM:",
-          "hi": "SOP 03_C2_S2 विफलता मोड 5.3 और 5.4 के तहत, SAP EWM को लॉक किए बिना गलत पुर्जे की डिलीवरी से उबरने के लिए 4 अनिवार्य चरणों को व्यवस्थित करें:",
-          "mr": "SOP 03_C2_S2 अपयश मोड 5.3 आणि 5.4 नुसार, SAP EWM सिस्टीम न अडकवता चुकीच्या पार्टच्या डिलिव्हरीतून सावरण्यासाठी 4 अनिवार्य पायऱ्या योग्य क्रमाने लावा:"
+          "en": "Arrange the 4 mandatory steps to recover from a wrong part delivery without locking SAP EWM:",
+          "hi": "5.4 के तहत, SAP EWM को लॉक किए बिना गलत पुर्जे की डिलीवरी से उबरने के लिए 4 अनिवार्य चरणों को व्यवस्थित करें:",
+          "mr": "5.4 नुसार, SAP EWM सिस्टीम न अडकवता चुकीच्या पार्टच्या डिलिव्हरीतून सावरण्यासाठी 4 अनिवार्य पायऱ्या योग्य क्रमाने लावा:"
         },
         "instruction": {
           "en": "Arrange the operational recovery steps in correct chronological order from first to last.",
@@ -446,9 +446,9 @@
           "step_dual_scan_closure"
         ],
         "prompt": {
-          "en": "Under SOP 03_C2_S2 Failure Modes 5.3 & 5.4, arrange the 4 mandatory steps to recover from a wrong part delivery without locking SAP EWM:",
-          "hi": "SOP 03_C2_S2 विफलता मोड 5.3 और 5.4 के तहत, SAP EWM को लॉक किए बिना गलत पुर्जे की डिलीवरी से उबरने के लिए 4 अनिवार्य चरणों को व्यवस्थित करें:",
-          "mr": "SOP 03_C2_S2 अपयश मोड 5.3 आणि 5.4 नुसार, SAP EWM सिस्टीम न अडकवता चुकीच्या पार्टच्या डिलिव्हरीतून सावरण्यासाठी 4 अनिवार्य पायऱ्या योग्य क्रमाने लावा:"
+          "en": "Arrange the 4 mandatory steps to recover from a wrong part delivery without locking SAP EWM:",
+          "hi": "5.4 के तहत, SAP EWM को लॉक किए बिना गलत पुर्जे की डिलीवरी से उबरने के लिए 4 अनिवार्य चरणों को व्यवस्थित करें:",
+          "mr": "5.4 नुसार, SAP EWM सिस्टीम न अडकवता चुकीच्या पार्टच्या डिलिव्हरीतून सावरण्यासाठी 4 अनिवार्य पायऱ्या योग्य क्रमाने लावा:"
         },
         "id": "c2-q08-wrong-part-sequence",
         "audioSrc": "/audio/voiceover/s09_sc04_prompt.mp3"
@@ -457,9 +457,9 @@
         "xp": 145,
         "sopClause": "SOP for Decanting Processes Paint-Shop Failure Modes 5.3 & 5.4",
         "why": {
-          "en": "SOP for Decanting Processes Paint-Shop Failure Modes 5.3 & 5.4 establishes: 'If e-Kanban triggers for wrong part, cancellation of WH task must be done. Zone leader creates WH task for return of wrongly issued parts, along with WH task for correct material replenishment. MHE operator completes replenishment task and then return task. Furthermore, scanning of picking and feeding must be done to close WH order. If MHE operator misses scanning, WH order will not close, halting subsequent tasks in SAP EWM.' Closed-loop scanning maintains inventory ledger precision and prevents system deadlocks.",
-          "hi": "पेंट-शॉप डिकैन्टिंग प्रक्रियाओं के लिए SOP विफलता मोड 5.3 और 5.4 स्थापित करता है: 'यदि ई-कनबन गलत हिस्से के लिए ट्रिगर होता है, तो WH कार्य को रद्द करना होगा। ज़ोन लीडर गलत पुर्जों की वापसी के लिए WH कार्य बनाता है, साथ ही सही सामग्री के लिए नया कार्य बनाता है। इसके अतिरिक्त, WH ऑर्डर को बंद करने के लिए पिकिंग और फीडिंग की स्कैनिंग अनिवार्य है। यदि ऑपरेटर स्कैनिंग छोड़ देता है, तो WH ऑर्डर बंद नहीं होगा, जिससे SAP EWM में आगे के कार्य रुक जाएंगे।' क्लोज्ड-लूप स्कैनिंग इन्वेंट्री सटीकता बनाए रखती है।",
-          "mr": "SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप अपयश मोड 5.3 आणि 5.4 सांगते: 'जर चुकीच्या पार्टसाठी ई-कनबन ट्रिगर झाला असेल, तर तो WH टास्क त्वरित रद्द करावा. झोन लीडर चुकीचा माल HRR ला परत करण्यासाठी रिटर्न टास्क बनवतो आणि योग्य मालासाठी नवीन टास्क देतो. तसेच ऑर्डर बंद करण्यासाठी पिकिंग आणि ड्रॉप दोन्ही ठिकाणी QR स्कॅन करणे बंधनकारक आहे. ऑपरेटरने स्कॅनिंग न केल्यास WH ऑर्डर बंद होत नाही आणि SAP EWM मध्ये पुढील सर्व कामे अडकून पडतात.' क्लोज्ड-लूप स्कॅनिंगमुळे गोदामाचा अचूक ताळेबंद राहतो."
+          "en": "SOP for Decanting Processes Paint-Shop establishes: 'If e-Kanban triggers for wrong part, cancellation of WH task must be done. Zone leader creates WH task for return of wrongly issued parts, along with WH task for correct material replenishment. Material Handling Equipment operator completes replenishment task and then return task. Furthermore, scanning of picking and feeding must be done to close WH order. If Material Handling Equipment operator misses scanning, WH order will not close, halting subsequent tasks in SAP EWM.' Closed-loop scanning maintains inventory ledger precision and prevents system deadlocks.",
+          "hi": "पेंट-शॉप डिकैन्टिंग प्रक्रियाओं के लिए SOPऔर 5.4 स्थापित करता है: 'यदि ई-कनबन गलत हिस्से के लिए ट्रिगर होता है, तो WH कार्य को रद्द करना होगा। ज़ोन लीडर गलत पुर्जों की वापसी के लिए WH कार्य बनाता है, साथ ही सही सामग्री के लिए नया कार्य बनाता है। इसके अतिरिक्त, WH ऑर्डर को बंद करने के लिए पिकिंग और फीडिंग की स्कैनिंग अनिवार्य है। यदि ऑपरेटर स्कैनिंग छोड़ देता है, तो WH ऑर्डर बंद नहीं होगा, जिससे SAP EWM में आगे के कार्य रुक जाएंगे।' क्लोज्ड-लूप स्कैनिंग इन्वेंट्री सटीकता बनाए रखती है।",
+          "mr": "SOP फॉर डिकॅन्टिंग प्रोसेसेस पेंट-शॉप आणि 5.4 सांगते: 'जर चुकीच्या पार्टसाठी ई-कनबन ट्रिगर झाला असेल, तर तो WH टास्क त्वरित रद्द करावा. झोन लीडर चुकीचा माल हाय-राइज रॅक ला परत करण्यासाठी रिटर्न टास्क बनवतो आणि योग्य मालासाठी नवीन टास्क देतो. तसेच ऑर्डर बंद करण्यासाठी पिकिंग आणि ड्रॉप दोन्ही ठिकाणी QR स्कॅन करणे बंधनकारक आहे. ऑपरेटरने स्कॅनिंग न केल्यास WH ऑर्डर बंद होत नाही आणि SAP EWM मध्ये पुढील सर्व कामे अडकून पडतात.' क्लोज्ड-लूप स्कॅनिंगमुळे गोदामाचा अचूक ताळेबंद राहतो."
         }
       }
     },
@@ -481,18 +481,18 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Let's explore the core foundation of Stage 9! At Ather AURIC Plant, why do we have a dedicated Decanting Area between receiving racks and the paint shop? Under SOP Clause 4.1 & Question Bank Q10, what exactly is the definition and operational purpose of 'Decanting'?",
-            "hi": "आइए स्टेज 9 की मुख्य नींव का पता लगाएं! एथर औरिक प्लांट में, हमारे पास रिसीविंग रैक और पेंट शॉप के बीच एक समर्पित डिकैन्टिंग क्षेत्र क्यों है? SOP क्लॉज 4.1 और प्रश्न बैंक Q10 के तहत, 'डिकैन्टिंग' की सटीक परिभाषा और परिचालन उद्देश्य क्या है?",
-            "mr": "स्टेज 9 च्या मूळ संकल्पनेकडे वळूया! एथर औरिक प्लांटमध्ये, स्टोअरेज रॅक्स आणि पेंट शॉप यांच्यामध्ये स्वतंत्र डिकॅन्टिंग एरिया का असतो? SOP कलम 4.1 आणि प्रश्न बँक Q10 नुसार, 'डिकॅन्टिंग' ची नेमकी व्याख्या आणि कामाचा उद्देश काय आहे?"
+            "en": "Let's explore the core foundation of Stage 9! At Ather AURIC Plant, why do we have a dedicated Decanting Area between receiving racks and the paint shop? What exactly is the definition and operational purpose of 'Decanting'?",
+            "hi": "आइए स्टेज 9 की मुख्य नींव का पता लगाएं! एथर औरिक प्लांट में, हमारे पास रिसीविंग रैक और पेंट शॉप के बीच एक समर्पित डिकैन्टिंग क्षेत्र क्यों है? 'डिकैन्टिंग' की सटीक परिभाषा और परिचालन उद्देश्य क्या है?",
+            "mr": "स्टेज 9 च्या मूळ संकल्पनेकडे वळूया! एथर औरिक प्लांटमध्ये, स्टोअरेज रॅक्स आणि पेंट शॉप यांच्यामध्ये स्वतंत्र डिकॅन्टिंग एरिया का असतो? 'डिकॅन्टिंग' ची नेमकी व्याख्या आणि कामाचा उद्देश काय आहे?"
           },
           "audioSrc": "/audio/voiceover/s09_sc05_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "EXACT INDUSTRIAL DEFINITION! SOP Clause 4.1 & Question Bank Q10: Decanting is the controlled transfer of parts from large supplier shipping containers (FLCs) into standardized internal mobile trolleys! The supplier Handling Unit (HU) is closed, and an internal plant HU barcode is generated for shopfloor line feeding!",
-            "hi": "सटीक औद्योगिक परिभाषा! SOP क्लॉज 4.1 और प्रश्न बैंक Q10: डिकैन्टिंग बड़े आपूर्तिकर्ता शिपिंग कंटेनरों (FLCs) से मानकीकृत आंतरिक मोबाइल ट्रॉलियों में भागों का नियंत्रित स्थानांतरण है! आपूर्तिकर्ता हैंडलिंग यूनिट (HU) बंद हो जाती है, और शॉपफ्लोर लाइन फीडिंग के लिए एक आंतरिक प्लांट HU बारकोड उत्पन्न होता है!",
-            "mr": "अचूक औद्योगिक व्याख्या! SOP कलम 4.1 आणि प्रश्न बँक Q10: डिकॅन्टिंग म्हणजे सप्लायरच्या मोठ्या कंटेनर्समधून (FLC) सुटे भाग काढून फॅक्टरीच्या प्रमाणित अंतर्गत मोबाईल ट्रॉलीमध्ये व्यवस्थित भरणे! यामुळे सप्लायरचे हँडलिंग युनिट (HU) बंद होते आणि कारखान्यातील अंतर्गत HU बारकोड तयार होतो!"
+            "en": "EXACT INDUSTRIAL DEFINITION! Decanting is the controlled transfer of parts from large supplier shipping containers (Foldable Large Containers) into standardized internal mobile trolleys! The supplier Handling Unit is closed, and an internal plant Handling Unit barcode is generated for shopfloor line feeding!",
+            "hi": "सटीक औद्योगिक परिभाषा! डिकैन्टिंग बड़े आपूर्तिकर्ता शिपिंग कंटेनरों (FLCs) से मानकीकृत आंतरिक मोबाइल ट्रॉलियों में भागों का नियंत्रित स्थानांतरण है! आपूर्तिकर्ता हैंडलिंग यूनिट बंद हो जाती है, और शॉपफ्लोर लाइन फीडिंग के लिए एक आंतरिक प्लांट हैंडलिंग यूनिट बारकोड उत्पन्न होता है!",
+            "mr": "अचूक औद्योगिक व्याख्या! डिकॅन्टिंग म्हणजे सप्लायरच्या मोठ्या कंटेनर्समधून सुटे भाग काढून फॅक्टरीच्या प्रमाणित अंतर्गत मोबाईल ट्रॉलीमध्ये व्यवस्थित भरणे! यामुळे सप्लायरचे हँडलिंग युनिट बंद होते आणि कारखान्यातील अंतर्गत हँडलिंग युनिट बारकोड तयार होतो!"
           },
           "audioSrc": "/audio/voiceover/s09_sc05_correct.mp3"
         },
@@ -511,18 +511,18 @@
         "questionId": "c2-q10",
         "safetyCritical": false,
         "question": {
-          "en": "Under SOP 03_C2_S2 & Question Bank Q10, what is 'Decanting'?",
-          "hi": "SOP 03_C2_S2 और प्रश्न बैंक Q10 के तहत, 'डिकैन्टिंग' क्या है?",
-          "mr": "SOP 03_C2_S2 आणि प्रश्न बँक Q10 नुसार, 'डिकॅन्टिंग' म्हणजे काय?"
+          "en": "What is 'Decanting'?",
+          "hi": "'डिकैन्टिंग' क्या है?",
+          "mr": "'डिकॅन्टिंग' म्हणजे काय?"
         },
         "options": [
           {
             "id": "opt_decanting_def",
             "correct": true,
             "label": {
-              "en": "Moving parts from big supplier containers into standard internal trolleys (Supplier HU closed, internal HU created) (Q10)",
-              "hi": "बड़े आपूर्तिकर्ता कंटेनरों से मानक आंतरिक ट्रॉलियों में भागों को स्थानांतरित करना (आपूर्तिकर्ता HU बंद, आंतरिक HU बनाया गया) (Q10)",
-              "mr": "सप्लायरच्या मोठ्या कंटेनरमधून पार्ट प्रमाणित अंतर्गत ट्रॉलीमध्ये भरणे (सप्लायर HU बंद होऊन अंतर्गत HU तयार होतो) (Q10)"
+              "en": "Moving parts from big supplier containers into standard internal trolleys (Supplier Handling Unit closed, internal Handling Unit created) (Q10)",
+              "hi": "बड़े आपूर्तिकर्ता कंटेनरों से मानक आंतरिक ट्रॉलियों में भागों को स्थानांतरित करना (आपूर्तिकर्ता हैंडलिंग यूनिट बंद, आंतरिक हैंडलिंग यूनिट बनाया गया) (Q10)",
+              "mr": "सप्लायरच्या मोठ्या कंटेनरमधून पार्ट प्रमाणित अंतर्गत ट्रॉलीमध्ये भरणे (सप्लायर हँडलिंग युनिट बंद होऊन अंतर्गत हँडलिंग युनिट तयार होतो) (Q10)"
             }
           },
           {
@@ -554,9 +554,9 @@
           }
         ],
         "prompt": {
-          "en": "Under SOP 03_C2_S2 & Question Bank Q10, what is 'Decanting'?",
-          "hi": "SOP 03_C2_S2 और प्रश्न बैंक Q10 के तहत, 'डिकैन्टिंग' क्या है?",
-          "mr": "SOP 03_C2_S2 आणि प्रश्न बँक Q10 नुसार, 'डिकॅन्टिंग' म्हणजे काय?"
+          "en": "What is 'Decanting'?",
+          "hi": "'डिकैन्टिंग' क्या है?",
+          "mr": "'डिकॅन्टिंग' म्हणजे काय?"
         },
         "id": "c2-q10",
         "audioSrc": "/audio/voiceover/s09_sc05_prompt.mp3"
@@ -565,9 +565,9 @@
         "xp": 115,
         "sopClause": "SOP for Decanting Processes Paint-Shop Clause 4.1 & Question Bank Q10",
         "why": {
-          "en": "SOP Clause 4.1 & Question Bank Q10: Large returnable Foldable Large Containers (FLCs) are too heavy and bulky for line-side assembly. Decanting unpacks vendor materials into lean, ergonomic wheeled trolleys sized specifically for plant conveyor racks. The ERP system closes the external supplier Handling Unit (HU) and generates an internal tracking barcode, maintaining 100% inventory custody.",
-          "hi": "SOP क्लॉज 4.1 और प्रश्न बैंक Q10: बड़े फोल्डेबल लार्ज कंटेनर (FLC) लाइन-साइड असेंबली के लिए बहुत भारी होते हैं। डिकैन्टिंग विक्रेता सामग्री को प्लांट कन्वेयर रैक के लिए विशेष रूप से आकार की ट्रॉलियों में खोलती है। ERP सिस्टम बाहरी आपूर्तिकर्ता HU को बंद करता है और आंतरिक बारकोड बनाता है।",
-          "mr": "SOP कलम 4.1 आणि प्रश्न बँक Q10: सप्लायरच्या मोठ्या पेट्या (FLC) लाईनवर नेणे अवघड असते. डिकॅन्टिंगमुळे माल हलक्या, सुलभ ट्रॉलीमध्ये भरला जातो, ज्यामुळे कामगारांना काम करणे सोपे होते आणि सिस्टीममध्ये अंतर्गत HU बारकोड तयार होतो."
+          "en": "Large returnable Foldable Large Containers (Foldable Large Containers) are too heavy and bulky for line-side assembly. Decanting unpacks vendor materials into lean, ergonomic wheeled trolleys sized specifically for plant conveyor racks. The ERP system closes the external supplier Handling Unit and generates an internal tracking barcode, maintaining 100% inventory custody.",
+          "hi": "बड़े फोल्डेबल लार्ज कंटेनर लाइन-साइड असेंबली के लिए बहुत भारी होते हैं। डिकैन्टिंग विक्रेता सामग्री को प्लांट कन्वेयर रैक के लिए विशेष रूप से आकार की ट्रॉलियों में खोलती है। ERP सिस्टम बाहरी आपूर्तिकर्ता हैंडलिंग यूनिट को बंद करता है और आंतरिक बारकोड बनाता है।",
+          "mr": "सप्लायरच्या मोठ्या पेट्या लाईनवर नेणे अवघड असते. डिकॅन्टिंगमुळे माल हलक्या, सुलभ ट्रॉलीमध्ये भरला जातो, ज्यामुळे कामगारांना काम करणे सोपे होते आणि सिस्टीममध्ये अंतर्गत हँडलिंग युनिट बारकोड तयार होतो."
         }
       }
     },
@@ -589,18 +589,18 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Ather Shopfloor Math Challenge! A newly arrived supplier FLC contains exactly 90 disc brake caliper assemblies. Each specialized paint-shop mobile trolley has a rated capacity of 30 calipers. Under Question Bank Q12, how many 100% full trolleys can the decanting team prepare from this single FLC?",
-            "hi": "एथर शॉपफ्लोर गणित चुनौती! एक नए आपूर्तिकर्ता FLC में ठीक 90 डिस्क ब्रेक कैलिपर असेंबली शामिल हैं। प्रत्येक विशेष पेंट-शॉप मोबाइल ट्रॉली की रेटेड क्षमता 30 कैलीपर्स है। प्रश्न बैंक Q12 के तहत, डिकैन्टिंग टीम इस एकल FLC से कितने 100% पूर्ण ट्रॉली तैयार कर सकती है?",
-            "mr": "एथर शॉपफ्लोर गणित आव्हान! सप्लायरकडून आलेल्या एका FLC मध्ये बरोबर 90 डिस्क ब्रेक कॅलिपर्स आहेत. पेंट-शॉपच्या प्रत्येक मोबाईल ट्रॉलीची अधिकृत क्षमता 30 कॅलिपर्सची आहे. प्रश्न संच Q12 नुसार, डिकॅन्टिंग टीम या एकाच FLC मधून 100% भरलेल्या किती ट्रॉली तयार करू शकते?"
+            "en": "Ather Shopfloor Math Challenge! A newly arrived supplier Foldable Large Container contains exactly 90 disc brake caliper assemblies. Each specialized paint-shop mobile trolley has a rated capacity of 30 calipers. How many 100% full trolleys can the decanting team prepare from this single Foldable Large Container?",
+            "hi": "एथर शॉपफ्लोर गणित चुनौती! एक नए आपूर्तिकर्ता फोल्डेबल लार्ज कंटेनर में ठीक 90 डिस्क ब्रेक कैलिपर असेंबली शामिल हैं। प्रत्येक विशेष पेंट-शॉप मोबाइल ट्रॉली की रेटेड क्षमता 30 कैलीपर्स है।डिकैन्टिंग टीम इस एकल फोल्डेबल लार्ज कंटेनर से कितने 100% पूर्ण ट्रॉली तैयार कर सकती है?",
+            "mr": "एथर शॉपफ्लोर गणित आव्हान! सप्लायरकडून आलेल्या एका फोल्डेबल लार्ज कंटेनर मध्ये बरोबर 90 डिस्क ब्रेक कॅलिपर्स आहेत. पेंट-शॉपच्या प्रत्येक मोबाईल ट्रॉलीची अधिकृत क्षमता 30 कॅलिपर्सची आहे.डिकॅन्टिंग टीम या एकाच फोल्डेबल लार्ज कंटेनर मधून 100% भरलेल्या किती ट्रॉली तयार करू शकते?"
           },
           "audioSrc": "/audio/voiceover/s09_sc06_intro.mp3"
         },
         "onCorrect": {
           "pose": "trophy",
           "text": {
-            "en": "EXACT BATCH ARITHMETIC! 90 total units divided by 30 units per trolley = exactly 3 full trolleys! Remember SOP Clause 4.2: Decanting operators must always load exactly to 100% capacity — partial trolleys disrupt conveyor rhythm and are rejected by the Zone Leader!",
-            "hi": "सटीक बैच अंकगणित! कुल 90 इकाइयां प्रति ट्रॉली 30 इकाइयों से विभाजित = ठीक 3 पूर्ण ट्रॉलियां! SOP क्लॉज 4.2 याद रखें: डिकैन्टिंग ऑपरेटरों को हमेशा 100% क्षमता तक लोड करना चाहिए — आंशिक ट्रॉलियों को ज़ोन लीडर द्वारा अस्वीकार कर दिया जाता है!",
-            "mr": "अचूक हिशोब! एकूण 90 भाग भागिले प्रति ट्रॉली 30 भाग = बरोबर 3 पूर्ण ट्रॉली! SOP कलम 4.2 लक्षात ठेवा: ऑपरेटरने नेहमी 100% क्षमतेनेच ट्रॉली भरली पाहिजे — अर्धवट ट्रॉली लाईनवर पाठवण्यास सक्त मनाई आहे!"
+            "en": "EXACT BATCH ARITHMETIC! 90 total units divided by 30 units per trolley = exactly 3 full trolleys! Remember Decanting operators must always load exactly to 100% capacity — partial trolleys disrupt conveyor rhythm and are rejected by the Zone Leader!",
+            "hi": "सटीक बैच अंकगणित! कुल 90 इकाइयां प्रति ट्रॉली 30 इकाइयों से विभाजित = ठीक 3 पूर्ण ट्रॉलियां! याद रखें: डिकैन्टिंग ऑपरेटरों को हमेशा 100% क्षमता तक लोड करना चाहिए — आंशिक ट्रॉलियों को ज़ोन लीडर द्वारा अस्वीकार कर दिया जाता है!",
+            "mr": "अचूक हिशोब! एकूण 90 भाग भागिले प्रति ट्रॉली 30 भाग = बरोबर 3 पूर्ण ट्रॉली! लक्षात ठेवा: ऑपरेटरने नेहमी 100% क्षमतेनेच ट्रॉली भरली पाहिजे — अर्धवट ट्रॉली लाईनवर पाठवण्यास सक्त मनाई आहे!"
           },
           "audioSrc": "/audio/voiceover/s09_sc06_correct.mp3"
         },
@@ -619,9 +619,9 @@
         "questionId": "c2-q12",
         "safetyCritical": false,
         "question": {
-          "en": "A brake FLC contains 90 brakes. The trolley holds 30. How many full trolleys from one FLC? (Question Bank Q12)",
-          "hi": "एक ब्रेक FLC में 90 ब्रेक हैं। ट्रॉली में 30 आते हैं। एक FLC से कितनी पूरी ट्रॉलियां बनेंगी? (प्रश्न बैंक Q12)",
-          "mr": "एका FLC मध्ये 90 ब्रेक्स आहेत. एका ट्रॉलीमध्ये 30 बसतात. एका FLC मधून किती पूर्ण भरलेल्या ट्रॉली तयार होतील? (प्रश्न बँक Q12)"
+          "en": "A brake Foldable Large Container contains 90 brakes. The trolley holds 30. How many full trolleys from one Foldable Large Container?",
+          "hi": "एक ब्रेक फोल्डेबल लार्ज कंटेनर में 90 ब्रेक हैं। ट्रॉली में 30 आते हैं। एक फोल्डेबल लार्ज कंटेनर से कितनी पूरी ट्रॉलियां बनेंगी?",
+          "mr": "एका फोल्डेबल लार्ज कंटेनर मध्ये 90 ब्रेक्स आहेत. एका ट्रॉलीमध्ये 30 बसतात. एका फोल्डेबल लार्ज कंटेनर मधून किती पूर्ण भरलेल्या ट्रॉली तयार होतील?"
         },
         "instruction": {
           "en": "Use the + and - buttons to dial the exact number of full trolleys:",
@@ -645,9 +645,9 @@
           "mr": "मोबाईल ट्रॉली"
         },
         "prompt": {
-          "en": "A brake FLC contains 90 brakes. The trolley holds 30. How many full trolleys from one FLC? (Question Bank Q12)",
-          "hi": "एक ब्रेक FLC में 90 ब्रेक हैं। ट्रॉली में 30 आते हैं। एक FLC से कितनी पूरी ट्रॉलियां बनेंगी? (प्रश्न बैंक Q12)",
-          "mr": "एका FLC मध्ये 90 ब्रेक्स आहेत. एका ट्रॉलीमध्ये 30 बसतात. एका FLC मधून किती पूर्ण भरलेल्या ट्रॉली तयार होतील? (प्रश्न बँक Q12)"
+          "en": "A brake Foldable Large Container contains 90 brakes. The trolley holds 30. How many full trolleys from one Foldable Large Container?",
+          "hi": "एक ब्रेक फोल्डेबल लार्ज कंटेनर में 90 ब्रेक हैं। ट्रॉली में 30 आते हैं। एक फोल्डेबल लार्ज कंटेनर से कितनी पूरी ट्रॉलियां बनेंगी?",
+          "mr": "एका फोल्डेबल लार्ज कंटेनर मध्ये 90 ब्रेक्स आहेत. एका ट्रॉलीमध्ये 30 बसतात. एका फोल्डेबल लार्ज कंटेनर मधून किती पूर्ण भरलेल्या ट्रॉली तयार होतील?"
         },
         "id": "c2-q12",
         "audioSrc": "/audio/voiceover/s09_sc06_prompt.mp3"
@@ -656,9 +656,9 @@
         "xp": 115,
         "sopClause": "SOP for Decanting Processes Paint-Shop Clause 4.2 & Question Bank Q12",
         "why": {
-          "en": "SOP Clause 4.2 & Question Bank Q12: 90 brakes / 30 per trolley = 3 full trolleys. Decanting SOP requires strict full-batch completion. Loading exactly 30 parts per trolley maintains standard conveyor balancing, prevents ergonomic strain, and ensures seamless kanban replenishment.",
-          "hi": "SOP क्लॉज 4.2 और प्रश्न बैंक Q12: 90 ब्रेक / 30 प्रति ट्रॉली = 3 पूर्ण ट्रॉलियां। डिकैन्टिंग SOP के लिए सख्त पूर्ण-बैच पूरा करने की आवश्यकता होती है। प्रति ट्रॉली ठीक 30 पुर्जे लोड करने से कन्वेयर संतुलन बना रहता है।",
-          "mr": "SOP कलम 4.2 आणि प्रश्न बँक Q12: 90 ब्रेक्स / 30 प्रति ट्रॉली = बरोबर 3 पूर्ण भरलेल्या ट्रॉली. पूर्ण क्षमतेने ट्रॉली भरल्याने असेंब्ली लाईनचा वेग टिकून राहतो."
+          "en": "90 brakes / 30 per trolley = 3 full trolleys. Decanting SOP requires strict full-batch completion. Loading exactly 30 parts per trolley maintains standard conveyor balancing, prevents ergonomic strain, and ensures seamless kanban replenishment.",
+          "hi": "90 ब्रेक / 30 प्रति ट्रॉली = 3 पूर्ण ट्रॉलियां। डिकैन्टिंग SOP के लिए सख्त पूर्ण-बैच पूरा करने की आवश्यकता होती है। प्रति ट्रॉली ठीक 30 पुर्जे लोड करने से कन्वेयर संतुलन बना रहता है।",
+          "mr": "90 ब्रेक्स / 30 प्रति ट्रॉली = बरोबर 3 पूर्ण भरलेल्या ट्रॉली. पूर्ण क्षमतेने ट्रॉली भरल्याने असेंब्ली लाईनचा वेग टिकून राहतो."
         }
       }
     },
@@ -680,18 +680,18 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Digital MES planning in action! The plant production plan for Shift 1 calls for 20 Space Black and 10 True Red Ather scooters. How many distinct Warehouse Tasks will SAP EWM generate inside the Warehouse Order to feed these body panels to the paint line under Question Bank Q13?",
-            "hi": "कार्रवाई में डिजिटल एमईएस योजना! शिफ्ट 1 के लिए संयंत्र उत्पादन योजना 20 स्पेस ब्लैक और 10 ट्रू रेड एथर स्कूटरों की मांग करती है। प्रश्न बैंक Q13 के तहत इन बॉडी पैनलों को पेंट लाइन में खिलाने के लिए SAP EWM वेयरहाउस ऑर्डर के अंदर कितने अलग वेयरहाउस टास्क उत्पन्न करेगा?",
-            "mr": "डिजिटल MES नियोजन प्रत्यक्षात! शिफ्ट 1 च्या उत्पादन योजनेनुसार 20 स्पेस ब्लॅक आणि 10 ट्रू रेड एथर स्कूटर्स तयार करायच्या आहेत. प्रश्न संच Q13 नुसार हे बॉडी पॅनेल्स पेंट लाईनवर पुरवण्यासाठी SAP EWM वेअरहाऊस ऑर्डरमध्ये किती स्वतंत्र WH टास्क तयार करेल?"
+            "en": "Digital MES planning in action! The plant production plan for Shift 1 calls for 20 Space Black and 10 True Red Ather scooters. How many distinct Warehouse Tasks will SAP EWM generate inside the Warehouse Order to feed these body panels to the paint line?",
+            "hi": "कार्रवाई में डिजिटल एमईएस योजना! शिफ्ट 1 के लिए संयंत्र उत्पादन योजना 20 स्पेस ब्लैक और 10 ट्रू रेड एथर स्कूटरों की मांग करती है।इन बॉडी पैनलों को पेंट लाइन में खिलाने के लिए SAP EWM वेयरहाउस ऑर्डर के अंदर कितने अलग वेयरहाउस टास्क उत्पन्न करेगा?",
+            "mr": "डिजिटल MES नियोजन प्रत्यक्षात! शिफ्ट 1 च्या उत्पादन योजनेनुसार 20 स्पेस ब्लॅक आणि 10 ट्रू रेड एथर स्कूटर्स तयार करायच्या आहेत.हे बॉडी पॅनेल्स पेंट लाईनवर पुरवण्यासाठी SAP EWM वेअरहाऊस ऑर्डरमध्ये किती स्वतंत्र WH टास्क तयार करेल?"
           },
           "audioSrc": "/audio/voiceover/s09_sc07_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "SYSTEM PRECISION CONFIRMED! Question Bank Q13: Exactly 2 WH Tasks! One task to pick 20 black parts and one task to pick 10 red parts. Different colors have distinct part numbers (SKUs) in SAP EWM, so each variant receives its own discrete warehouse picking task!",
-            "hi": "सिस्टम सटीकता की पुष्टि! प्रश्न बैंक Q13: ठीक 2 WH कार्य! 20 काले पुर्जे चुनने के लिए एक कार्य और 10 लाल पुर्जे चुनने के लिए एक कार्य। SAP EWM में विभिन्न रंगों के अलग-अलग पार्ट नंबर (SKU) होते हैं, इसलिए प्रत्येक संस्करण को अपना अलग वेयरहाउस पिकिंग कार्य मिलता है!",
-            "mr": "अचूक सिस्टीम नियम! प्रश्न बँक Q13: बरोबर 2 WH टास्क! एक टास्क 20 काळे पार्ट उचलण्यासाठी आणि दुसरा टास्क 10 लाल पार्ट उचलण्यासाठी. वेगवेगळ्या रंगांचे पार्ट नंबर (SKU) SAP EWM मध्ये वेगळे असतात, त्यामुळे प्रत्येक रंगासाठी स्वतंत्र टास्क तयार होतो!"
+            "en": "SYSTEM PRECISION CONFIRMED! Exactly 2 WH Tasks! One task to pick 20 black parts and one task to pick 10 red parts. Different colors have distinct part numbers (SKUs) in SAP EWM, so each variant receives its own discrete warehouse picking task!",
+            "hi": "सिस्टम सटीकता की पुष्टि!ठीक 2 WH कार्य! 20 काले पुर्जे चुनने के लिए एक कार्य और 10 लाल पुर्जे चुनने के लिए एक कार्य। SAP EWM में विभिन्न रंगों के अलग-अलग पार्ट नंबर (SKU) होते हैं, इसलिए प्रत्येक संस्करण को अपना अलग वेयरहाउस पिकिंग कार्य मिलता है!",
+            "mr": "अचूक सिस्टीम नियम!बरोबर 2 WH टास्क! एक टास्क 20 काळे पार्ट उचलण्यासाठी आणि दुसरा टास्क 10 लाल पार्ट उचलण्यासाठी. वेगवेगळ्या रंगांचे पार्ट नंबर (SKU) SAP EWM मध्ये वेगळे असतात, त्यामुळे प्रत्येक रंगासाठी स्वतंत्र टास्क तयार होतो!"
           },
           "audioSrc": "/audio/voiceover/s09_sc07_correct.mp3"
         },
@@ -710,9 +710,9 @@
         "questionId": "c2-q13",
         "safetyCritical": false,
         "question": {
-          "en": "The production plan is 20 black + 10 red vehicles. How many WH tasks are generated in the WH order? (Question Bank Q13)",
-          "hi": "उत्पादन योजना 20 काले + 10 लाल वाहनों की है। WH ऑर्डर में कितने WH कार्य उत्पन्न होते हैं? (प्रश्न बैंक Q13)",
-          "mr": "उत्पादन योजना 20 काळ्या + 10 लाल वाहनांची आहे. WH ऑर्डरमध्ये किती WH टास्क तयार होतील? (प्रश्न बँक Q13)"
+          "en": "The production plan is 20 black + 10 red vehicles. How many WH tasks are generated in the WH order?",
+          "hi": "उत्पादन योजना 20 काले + 10 लाल वाहनों की है। WH ऑर्डर में कितने WH कार्य उत्पन्न होते हैं?",
+          "mr": "उत्पादन योजना 20 काळ्या + 10 लाल वाहनांची आहे. WH ऑर्डरमध्ये किती WH टास्क तयार होतील?"
         },
         "options": [
           {
@@ -753,9 +753,9 @@
           }
         ],
         "prompt": {
-          "en": "The production plan is 20 black + 10 red vehicles. How many WH tasks are generated in the WH order? (Question Bank Q13)",
-          "hi": "उत्पादन योजना 20 काले + 10 लाल वाहनों की है। WH ऑर्डर में कितने WH कार्य उत्पन्न होते हैं? (प्रश्न बैंक Q13)",
-          "mr": "उत्पादन योजना 20 काळ्या + 10 लाल वाहनांची आहे. WH ऑर्डरमध्ये किती WH टास्क तयार होतील? (प्रश्न बँक Q13)"
+          "en": "The production plan is 20 black + 10 red vehicles. How many WH tasks are generated in the WH order?",
+          "hi": "उत्पादन योजना 20 काले + 10 लाल वाहनों की है। WH ऑर्डर में कितने WH कार्य उत्पन्न होते हैं?",
+          "mr": "उत्पादन योजना 20 काळ्या + 10 लाल वाहनांची आहे. WH ऑर्डरमध्ये किती WH टास्क तयार होतील?"
         },
         "id": "c2-q13",
         "audioSrc": "/audio/voiceover/s09_sc07_prompt.mp3"
@@ -764,9 +764,9 @@
         "xp": 120,
         "sopClause": "SOP for Line Issuance Paint-Shop Clause 4.2 & Question Bank Q13",
         "why": {
-          "en": "SOP Clause 4.2 & Question Bank Q13: In SAP EWM, warehouse orders group picking tasks by Bill of Materials (BOM) item numbers. Because Space Black and True Red side panels have separate part numbers, the system creates exactly two distinct Warehouse Tasks within the WH Order. This ensures strict color batch integrity and prevents feeding wrong-colored panels to robotic spray arms.",
-          "hi": "SOP क्लॉज 4.2 और प्रश्न बैंक Q13: SAP EWM में, वेयरहाउस ऑर्डर बिल ऑफ मैटेरियल्स (BOM) आइटम नंबरों द्वारा पिकिंग कार्यों को समूहीकृत करते हैं। चूंकि काले और लाल पैनलों के अलग-अलग पार्ट नंबर हैं, सिस्टम ठीक दो अलग-अलग वेयरहाउस टास्क बनाता है। यह रोबोटिक स्प्रे आर्म्स को गलत रंग के पैनल खिलाने से रोकता है।",
-          "mr": "SOP कलम 4.2 आणि प्रश्न बँक Q13: SAP EWM मध्ये पार्ट नंबरनुसार (BOM) टास्क तयार होतात. काळ्या आणि लाल रंगाचे पार्ट नंबर वेगळे असल्याने सिस्टीम बरोबर 2 स्वतंत्र WH टास्क तयार करते. यामुळे रोबोटिक पेंटिंग दरम्यान चुकीच्या रंगाचा पार्ट जाणे टळते."
+          "en": "In SAP EWM, warehouse orders group picking tasks by Bill of Materials (BOM) item numbers. Because Space Black and True Red side panels have separate part numbers, the system creates exactly two distinct Warehouse Tasks within the WH Order. This ensures strict color batch integrity and prevents feeding wrong-colored panels to robotic spray arms.",
+          "hi": "SAP EWM में, वेयरहाउस ऑर्डर बिल ऑफ मैटेरियल्स (BOM) आइटम नंबरों द्वारा पिकिंग कार्यों को समूहीकृत करते हैं। चूंकि काले और लाल पैनलों के अलग-अलग पार्ट नंबर हैं, सिस्टम ठीक दो अलग-अलग वेयरहाउस टास्क बनाता है। यह रोबोटिक स्प्रे आर्म्स को गलत रंग के पैनल खिलाने से रोकता है।",
+          "mr": "SAP EWM मध्ये पार्ट नंबरनुसार (BOM) टास्क तयार होतात. काळ्या आणि लाल रंगाचे पार्ट नंबर वेगळे असल्याने सिस्टीम बरोबर 2 स्वतंत्र WH टास्क तयार करते. यामुळे रोबोटिक पेंटिंग दरम्यान चुकीच्या रंगाचा पार्ट जाणे टळते."
         }
       }
     },
@@ -788,18 +788,18 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Crucial responsibility question! The paint-shop supermarket rack serves as the primary source buffer for all vehicle body parts feeding the line. Under Question Bank Q19, who holds direct operational accountability for ensuring this supermarket rack remains continuously filled and replenished?",
-            "hi": "महत्वपूर्ण जिम्मेदारी का प्रश्न! पेंट-शॉप सुपरमार्केट रैक लाइन को खिलाने वाले सभी वाहन बॉडी पार्ट्स के लिए प्राथमिक स्रोत बफर के रूप में कार्य करता है। प्रश्न बैंक Q19 के तहत, यह सुनिश्चित करने के लिए प्रत्यक्ष परिचालन जवाबदेही किसके पास है कि यह सुपरमार्केट रैक लगातार भरा और पुनः भरा रहे?",
-            "mr": "महत्त्वाचा जबाबदारीचा प्रश्न! पेंट-शॉप सुपरमार्केट रॅक हा लाईनवर जाणाऱ्या सर्व बॉडी पार्ट्ससाठी मुख्य बफर म्हणून काम करतो. प्रश्न संच Q19 नुसार, हा सुपरमार्केट रॅक नेहमी मालाने भरलेला ठेवण्याची प्रत्यक्ष जबाबदारी कोणाची असते?"
+            "en": "Crucial responsibility question! The paint-shop supermarket rack serves as the primary source buffer for all vehicle body parts feeding the line. Who holds direct operational accountability for ensuring this supermarket rack remains continuously filled and replenished?",
+            "hi": "महत्वपूर्ण जिम्मेदारी का प्रश्न! पेंट-शॉप सुपरमार्केट रैक लाइन को खिलाने वाले सभी वाहन बॉडी पार्ट्स के लिए प्राथमिक स्रोत बफर के रूप में कार्य करता है।यह सुनिश्चित करने के लिए प्रत्यक्ष परिचालन जवाबदेही किसके पास है कि यह सुपरमार्केट रैक लगातार भरा और पुनः भरा रहे?",
+            "mr": "महत्त्वाचा जबाबदारीचा प्रश्न! पेंट-शॉप सुपरमार्केट रॅक हा लाईनवर जाणाऱ्या सर्व बॉडी पार्ट्ससाठी मुख्य बफर म्हणून काम करतो.हा सुपरमार्केट रॅक नेहमी मालाने भरलेला ठेवण्याची प्रत्यक्ष जबाबदारी कोणाची असते?"
           },
           "audioSrc": "/audio/voiceover/s09_sc08_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "ZONE LEADER ACCOUNTABILITY! Question Bank Q19: The Decanting Zone Leader (ZL)! The supermarket rack is the official source location for the paint line. The Decanting ZL monitors buffer stock, audits e-Kanban triggers, and coordinates MHE replenishment to prevent line starvation!",
-            "hi": "ज़ोन लीडर की जवाबदेही! प्रश्न बैंक Q19: डिकैन्टिंग ज़ोन लीडर (ZL)! सुपरमार्केट रैक पेंट लाइन के लिए आधिकारिक स्रोत स्थान है। डिकैन्टिंग ZL बफर स्टॉक की निगरानी करता है, ई-कनबन ट्रिगर्स का ऑडिट करता है, और लाइन को रुकने से रोकने के लिए MHE पुनःपूर्ति का समन्वय करता है!",
-            "mr": "झोन लीडरची थेट जबाबदारी! प्रश्न बँक Q19: डिकॅन्टिंग झोन लीडर (ZL)! सुपरमार्केट रॅक हे पेंट लाईनसाठीचे अधिकृत सोर्स लोकेशन आहे. डिकॅन्टिंग ZL बफर साठ्यावर लक्ष ठेवतो, ई-कनबन ट्रिगर्स तपासतो आणि लाईन थांबू नये म्हणून वेळेत माल मागवतो!"
+            "en": "ZONE LEADER ACCOUNTABILITY! The Decanting Zone Leader! The supermarket rack is the official source location for the paint line. The Decanting Zone Leader monitors buffer stock, audits e-Kanban triggers, and coordinates Material Handling Equipment replenishment to prevent line starvation!",
+            "hi": "ज़ोन लीडर की जवाबदेही!डिकैन्टिंग ज़ोन लीडर! सुपरमार्केट रैक पेंट लाइन के लिए आधिकारिक स्रोत स्थान है। डिकैन्टिंग ज़ोन लीडर बफर स्टॉक की निगरानी करता है, ई-कनबन ट्रिगर्स का ऑडिट करता है, और लाइन को रुकने से रोकने के लिए मटेरियल हैंडलिंग इक्विपमेंट पुनःपूर्ति का समन्वय करता है!",
+            "mr": "झोन लीडरची थेट जबाबदारी!डिकॅन्टिंग झोन लीडर! सुपरमार्केट रॅक हे पेंट लाईनसाठीचे अधिकृत सोर्स लोकेशन आहे. डिकॅन्टिंग झोन लीडर बफर साठ्यावर लक्ष ठेवतो, ई-कनबन ट्रिगर्स तपासतो आणि लाईन थांबू नये म्हणून वेळेत माल मागवतो!"
           },
           "audioSrc": "/audio/voiceover/s09_sc08_correct.mp3"
         },
@@ -808,7 +808,7 @@
           "text": {
             "en": "INCORRECT ROLE ASSIGNMENT! Security guards and outside delivery drivers do not manage internal factory supermarket racks. This critical replenishment duty belongs strictly to the Decanting Zone Leader!",
             "hi": "गलत भूमिका आवंटन! सुरक्षा गार्ड और बाहरी डिलीवरी ड्राइवर आंतरिक फैक्ट्री सुपरमार्केट रैक का प्रबंधन नहीं करते हैं। यह महत्वपूर्ण पुनःपूर्ति कर्तव्य सख्ती से डिकैन्टिंग ज़ोन लीडर का है!",
-            "mr": "चुकीची व्यक्ती निवडली! सिक्युरिटी गार्ड किंवा बाहेरील ट्रक ड्रायव्हर कारखान्यातील रॅक भरत नाहीत. ही अत्यंत महत्त्वाची जबाबदारी डिकॅन्टिंग झोन लीडरची (ZL) असते!"
+            "mr": "चुकीची व्यक्ती निवडली! सिक्युरिटी गार्ड किंवा बाहेरील ट्रक ड्रायव्हर कारखान्यातील रॅक भरत नाहीत. ही अत्यंत महत्त्वाची जबाबदारी डिकॅन्टिंग झोन लीडरची असते!"
           },
           "audioSrc": "/audio/voiceover/s09_sc08_wrong.mp3"
         }
@@ -818,9 +818,9 @@
         "questionId": "c2-q19",
         "safetyCritical": true,
         "question": {
-          "en": "Who keeps the paint-shop supermarket rack for body parts filled? (Question Bank Q19)",
-          "hi": "बॉडी पार्ट्स के लिए पेंट-शॉप सुपरमार्केट रैक को कौन भरा रखता है? (प्रश्न बैंक Q19)",
-          "mr": "बॉडी पार्ट्ससाठीचा पेंट-शॉप सुपरमार्केट रॅक भरलेला ठेवण्याची जबाबदारी कोणाची असते? (प्रश्न बँक Q19)"
+          "en": "Who keeps the paint-shop supermarket rack for body parts filled?",
+          "hi": "बॉडी पार्ट्स के लिए पेंट-शॉप सुपरमार्केट रैक को कौन भरा रखता है?",
+          "mr": "बॉडी पार्ट्ससाठीचा पेंट-शॉप सुपरमार्केट रॅक भरलेला ठेवण्याची जबाबदारी कोणाची असते?"
         },
         "options": [
           {
@@ -861,9 +861,9 @@
           }
         ],
         "prompt": {
-          "en": "Who keeps the paint-shop supermarket rack for body parts filled? (Question Bank Q19)",
-          "hi": "बॉडी पार्ट्स के लिए पेंट-शॉप सुपरमार्केट रैक को कौन भरा रखता है? (प्रश्न बैंक Q19)",
-          "mr": "बॉडी पार्ट्ससाठीचा पेंट-शॉप सुपरमार्केट रॅक भरलेला ठेवण्याची जबाबदारी कोणाची असते? (प्रश्न बँक Q19)"
+          "en": "Who keeps the paint-shop supermarket rack for body parts filled?",
+          "hi": "बॉडी पार्ट्स के लिए पेंट-शॉप सुपरमार्केट रैक को कौन भरा रखता है?",
+          "mr": "बॉडी पार्ट्ससाठीचा पेंट-शॉप सुपरमार्केट रॅक भरलेला ठेवण्याची जबाबदारी कोणाची असते?"
         },
         "id": "c2-q19",
         "audioSrc": "/audio/voiceover/s09_sc08_prompt.mp3"
@@ -872,9 +872,9 @@
         "xp": 110,
         "sopClause": "SOP for Line Issuance Paint-Shop Clause 4.1 & Question Bank Q19",
         "why": {
-          "en": "SOP Clause 4.1 & Question Bank Q19: The paint-shop supermarket flow rack represents the single point of failure between warehouse storage and active conveyor painting. The Decanting Zone Leader (ZL) owns buffer health, monitors consumption rates, and triggers timely replenishment to ensure paint operators never experience starvation delays.",
-          "hi": "SOP क्लॉज 4.1 और प्रश्न बैंक Q19: पेंट-शॉप सुपरमार्केट फ्लो रैक वेयरहाउस स्टोरेज और सक्रिय कन्वेयर पेंटिंग के बीच महत्वपूर्ण कड़ी है। डिकैन्टिंग ज़ोन लीडर (ZL) बफर स्थिति की निगरानी करता है और समय पर पुनःपूर्ति सुनिश्चित करता है।",
-          "mr": "SOP कलम 4.1 आणि प्रश्न बँक Q19: सुपरमार्केट रॅक हा गोदामातून पेंट लाईनला माल पुरवणारा मुख्य दुवा आहे. डिकॅन्टिंग झोन लीडर (ZL) सतत साठ्यावर लक्ष ठेवून वेळेत माल भरण्याची खात्री करतो जेणेकरून लाईन कधीही थांबणार नाही."
+          "en": "The paint-shop supermarket flow rack represents the single point of failure between warehouse storage and active conveyor painting. The Decanting Zone Leader owns buffer health, monitors consumption rates, and triggers timely replenishment to ensure paint operators never experience starvation delays.",
+          "hi": "पेंट-शॉप सुपरमार्केट फ्लो रैक वेयरहाउस स्टोरेज और सक्रिय कन्वेयर पेंटिंग के बीच महत्वपूर्ण कड़ी है। डिकैन्टिंग ज़ोन लीडर बफर स्थिति की निगरानी करता है और समय पर पुनःपूर्ति सुनिश्चित करता है।",
+          "mr": "सुपरमार्केट रॅक हा गोदामातून पेंट लाईनला माल पुरवणारा मुख्य दुवा आहे. डिकॅन्टिंग झोन लीडर सतत साठ्यावर लक्ष ठेवून वेळेत माल भरण्याची खात्री करतो जेणेकरून लाईन कधीही थांबणार नाही."
         }
       }
     },
@@ -896,18 +896,18 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "A line feeder has just delivered a specialized mobile trolley of scooter side panels to the paint shop loading booth. The trolley is now completely empty. Under Ather SOP and Question Bank Q25, where must this empty trolley immediately be moved?",
-            "hi": "एक लाइन फीडर ने अभी-अभी पेंट शॉप लोडिंग बूथ पर स्कूटर साइड पैनल की एक विशेष मोबाइल ट्रॉली पहुंचाई है। ट्रॉली अब पूरी तरह से खाली है। एथर SOP और प्रश्न बैंक Q25 के तहत, इस खाली ट्रॉली को तुरंत कहां ले जाना चाहिए?",
-            "mr": "एका लाईन फीडरने पेंट शॉप लोडिंग बूथवर स्कूटर साईड पॅनेल्सची ट्रॉली रिकामी केली आहे. ट्रॉली आता पूर्णपणे रिकामी झाली आहे. एथर SOP आणि प्रश्न संच Q25 नुसार, ही रिकामी ट्रॉली ताबडतोब कुठे पाठवली पाहिजे?"
+            "en": "A line feeder has just delivered a specialized mobile trolley of scooter side panels to the paint shop loading booth. The trolley is now completely empty. Under standard procedure where must this empty trolley immediately be moved?",
+            "hi": "एक लाइन फीडर ने अभी-अभी पेंट शॉप लोडिंग बूथ पर स्कूटर साइड पैनल की एक विशेष मोबाइल ट्रॉली पहुंचाई है। ट्रॉली अब पूरी तरह से खाली है। एथर SOP इस खाली ट्रॉली को तुरंत कहां ले जाना चाहिए?",
+            "mr": "एका लाईन फीडरने पेंट शॉप लोडिंग बूथवर स्कूटर साईड पॅनेल्सची ट्रॉली रिकामी केली आहे. ट्रॉली आता पूर्णपणे रिकामी झाली आहे. एथर SOP ही रिकामी ट्रॉली ताबडतोब कुठे पाठवली पाहिजे?"
           },
           "audioSrc": "/audio/voiceover/s09_sc09_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "CORRECT REVERSE FLOW! Question Bank Q25: To the Decant Area! Empty trolleys must be returned immediately to the decant area so they can be cleaned, inspected, and reloaded with the next production wave. Never leave empty trolleys blocking aisles or under stairways!",
-            "hi": "सही रिवर्स फ्लो! प्रश्न बैंक Q25: डिकैन्ट क्षेत्र में! खाली ट्रॉलियों को तुरंत डिकैन्ट क्षेत्र में वापस किया जाना चाहिए ताकि उन्हें साफ किया जा सके, निरीक्षण किया जा सके और अगली उत्पादन लहर के साथ फिर से लोड किया जा सके। गलियारों को अवरुद्ध करते हुए खाली ट्रॉलियों को कभी न छोड़ें!",
-            "mr": "अचूक रिव्हर्स लॉजिस्टिक! प्रश्न बँक Q25: डिकॅन्ट एरियामध्ये! रिकाम्या झालेल्या ट्रॉली त्वरित डिकॅन्ट भागात परत पाठवल्या पाहिजेत जेणेकरून त्या स्वच्छ करून पुढील उत्पादनासाठी पुन्हा भरता येतील. रिकाम्या ट्रॉली रस्त्यामध्ये किंवा पायऱ्यांखाली सोडून देण्यास सक्त मनाई आहे!"
+            "en": "CORRECT REVERSE FLOW! To the Decant Area! Empty trolleys must be returned immediately to the decant area so they can be cleaned, inspected, and reloaded with the next production wave. Never leave empty trolleys blocking aisles or under stairways!",
+            "hi": "सही रिवर्स फ्लो!डिकैन्ट क्षेत्र में! खाली ट्रॉलियों को तुरंत डिकैन्ट क्षेत्र में वापस किया जाना चाहिए ताकि उन्हें साफ किया जा सके, निरीक्षण किया जा सके और अगली उत्पादन लहर के साथ फिर से लोड किया जा सके। गलियारों को अवरुद्ध करते हुए खाली ट्रॉलियों को कभी न छोड़ें!",
+            "mr": "अचूक रिव्हर्स लॉजिस्टिक!डिकॅन्ट एरियामध्ये! रिकाम्या झालेल्या ट्रॉली त्वरित डिकॅन्ट भागात परत पाठवल्या पाहिजेत जेणेकरून त्या स्वच्छ करून पुढील उत्पादनासाठी पुन्हा भरता येतील. रिकाम्या ट्रॉली रस्त्यामध्ये किंवा पायऱ्यांखाली सोडून देण्यास सक्त मनाई आहे!"
           },
           "audioSrc": "/audio/voiceover/s09_sc09_correct.mp3"
         },
@@ -926,9 +926,9 @@
         "questionId": "c2-q25",
         "safetyCritical": true,
         "question": {
-          "en": "After feeding a body-part trolley in the paint shop, where does the empty trolley go? (Question Bank Q25)",
-          "hi": "पेंट शॉप में बॉडी-पार्ट ट्रॉली खिलाने के बाद, खाली ट्रॉली कहाँ जाती है? (प्रश्न बैंक Q25)",
-          "mr": "पेंट शॉपमध्ये बॉडी पार्ट दिल्यानंतर रिकामी ट्रॉली कुठे जाते? (प्रश्न बँक Q25)"
+          "en": "After feeding a body-part trolley in the paint shop, where does the empty trolley go?",
+          "hi": "पेंट शॉप में बॉडी-पार्ट ट्रॉली खिलाने के बाद, खाली ट्रॉली कहाँ जाती है?",
+          "mr": "पेंट शॉपमध्ये बॉडी पार्ट दिल्यानंतर रिकामी ट्रॉली कुठे जाते?"
         },
         "options": [
           {
@@ -969,9 +969,9 @@
           }
         ],
         "prompt": {
-          "en": "After feeding a body-part trolley in the paint shop, where does the empty trolley go? (Question Bank Q25)",
-          "hi": "पेंट शॉप में बॉडी-पार्ट ट्रॉली खिलाने के बाद, खाली ट्रॉली कहाँ जाती है? (प्रश्न बैंक Q25)",
-          "mr": "पेंट शॉपमध्ये बॉडी पार्ट दिल्यानंतर रिकामी ट्रॉली कुठे जाते? (प्रश्न बँक Q25)"
+          "en": "After feeding a body-part trolley in the paint shop, where does the empty trolley go?",
+          "hi": "पेंट शॉप में बॉडी-पार्ट ट्रॉली खिलाने के बाद, खाली ट्रॉली कहाँ जाती है?",
+          "mr": "पेंट शॉपमध्ये बॉडी पार्ट दिल्यानंतर रिकामी ट्रॉली कुठे जाते?"
         },
         "id": "c2-q25",
         "audioSrc": "/audio/voiceover/s09_sc09_prompt.mp3"
@@ -980,9 +980,9 @@
         "xp": 115,
         "sopClause": "SOP for Line Issuance Paint-Shop Clause 4.3 & Question Bank Q25",
         "why": {
-          "en": "SOP Clause 4.3 & Question Bank Q25: Mobile trolleys are specialized closed-loop internal handling assets engineered specifically for Ather painted components. Once offloaded at the paint booth, the feeder routes the empty trolley back to the Decanting Area immediately. This maintains uninterrupted asset turnaround and ensures decanting operators always have empty trolleys ready to receive incoming parts.",
-          "hi": "SOP क्लॉज 4.3 और प्रश्न बैंक Q25: मोबाइल ट्रॉलियां विशेष क्लोज्ड-लूप आंतरिक हैंडलिंग संपत्तियां हैं। पेंट बूथ पर अनलोड होने के बाद, फीडर खाली ट्रॉली को तुरंत डिकैन्टिंग क्षेत्र में वापस भेजता है। यह डिकैन्टिंग ऑपरेटरों के लिए ट्रॉलियों की निरंतर उपलब्धता सुनिश्चित करता है।",
-          "mr": "SOP कलम 4.3 आणि प्रश्न बँक Q25: मोबाईल ट्रॉली हे कारखान्यातील अत्यंत महत्त्वाचे अंतर्गत साधन आहे. पेंट बूथवर माल उतरवल्यानंतर रिकामी ट्रॉली तात्काळ डिकॅन्टिंग भागात परत केली पाहिजे, जेणेकरून पुढील कामासाठी ट्रॉलीचा तुटवडा भासणार नाही."
+          "en": "Mobile trolleys are specialized closed-loop internal handling assets engineered specifically for Ather painted components. Once offloaded at the paint booth, the feeder routes the empty trolley back to the Decanting Area immediately. This maintains uninterrupted asset turnaround and ensures decanting operators always have empty trolleys ready to receive incoming parts.",
+          "hi": "मोबाइल ट्रॉलियां विशेष क्लोज्ड-लूप आंतरिक हैंडलिंग संपत्तियां हैं। पेंट बूथ पर अनलोड होने के बाद, फीडर खाली ट्रॉली को तुरंत डिकैन्टिंग क्षेत्र में वापस भेजता है। यह डिकैन्टिंग ऑपरेटरों के लिए ट्रॉलियों की निरंतर उपलब्धता सुनिश्चित करता है।",
+          "mr": "मोबाईल ट्रॉली हे कारखान्यातील अत्यंत महत्त्वाचे अंतर्गत साधन आहे. पेंट बूथवर माल उतरवल्यानंतर रिकामी ट्रॉली तात्काळ डिकॅन्टिंग भागात परत केली पाहिजे, जेणेकरून पुढील कामासाठी ट्रॉलीचा तुटवडा भासणार नाही."
         }
       }
     },
@@ -1004,18 +1004,18 @@
         "intro": {
           "pose": "trophy",
           "text": {
-            "en": "Final milestone of Module 9! A paint-shop WH task asks for a body part (e.g., Tail Side Panel) from the supermarket rack. What physical unit of material do you move to the paint-work line under Question Bank Q27?",
-            "hi": "मॉड्यूल 9 का अंतिम मील का पत्थर! एक पेंट-शॉप WH कार्य सुपरमार्केट रैक से एक बॉडी पार्ट (जैसे, टेल साइड पैनल) की मांग करता है। प्रश्न बैंक Q27 के तहत आप पेंट-वर्क लाइन में सामग्री की किस भौतिक इकाई को ले जाते हैं?",
-            "mr": "मॉड्यूल 9 चा अंतिम टप्पा! एका पेंट-शॉप WH टास्कमध्ये सुपरमार्केट रॅकमधून बॉडी पार्टची (उदा. टेल साइड पॅनेल) मागणी केली आहे. प्रश्न संच Q27 नुसार तुम्ही पेंट लाईनवर नेमके काय घेऊन जाता?"
+            "en": "Final milestone of Module 9! A paint-shop WH task asks for a body part (e. G., Tail Side Panel) from the supermarket rack. What physical unit of material do you move to the paint-work line?",
+            "hi": "मॉड्यूल 9 का अंतिम मील का पत्थर! एक पेंट-शॉप WH कार्य सुपरमार्केट रैक से एक बॉडी पार्ट (जैसे, टेल साइड पैनल) की मांग करता है।आप पेंट-वर्क लाइन में सामग्री की किस भौतिक इकाई को ले जाते हैं?",
+            "mr": "मॉड्यूल 9 चा अंतिम टप्पा! एका पेंट-शॉप WH टास्कमध्ये सुपरमार्केट रॅकमधून बॉडी पार्टची (उदा. टेल साइड पॅनेल) मागणी केली आहे.तुम्ही पेंट लाईनवर नेमके काय घेऊन जाता?"
           },
           "audioSrc": "/audio/voiceover/s09_sc10_intro.mp3"
         },
         "onCorrect": {
           "pose": "trophy",
           "text": {
-            "en": "PERFECT OPERATIONAL MASTERY! Question Bank Q27: The WHOLE TROLLEY of that body part from the supermarket rack! You scan the rack QR to initiate, move the entire loaded trolley to the station, and scan the destination QR to close the task. Stage 9: Paint Shop Line Issuance & Decanting is now 100% complete!",
-            "hi": "उत्कृष्ट परिचालन महारत! प्रश्न बैंक Q27: सुपरमार्केट रैक से उस बॉडी पार्ट की पूरी ट्रॉली! आप शुरू करने के लिए रैक QR को स्कैन करते हैं, पूरी भरी हुई ट्रॉली को स्टेशन पर ले जाते हैं, और कार्य को बंद करने के लिए गंतव्य QR को स्कैन करते हैं। स्टेज 9 अब 100% पूरा हुआ!",
-            "mr": "अतिशय उत्कृष्ट प्रावीण्य! प्रश्न बँक Q27: सुपरमार्केट रॅकमधून त्या बॉडी पार्टची संपूर्ण भरलेली ट्रॉली! काम सुरू करण्यासाठी रॅकचा QR स्कॅन करायचा, पूर्ण ट्रॉली वर्कस्टेशनवर न्यायची आणि काम पूर्ण करण्यासाठी डेस्टिनेशन QR स्कॅन करायचा. स्टेज 9 आता 100% पूर्ण झाले आहे!"
+            "en": "PERFECT OPERATIONAL MASTERY! The WHOLE TROLLEY of that body part from the supermarket rack! You scan the rack QR to initiate, move the entire loaded trolley to the station, and scan the destination QR to close the task. Stage 9: Paint Shop Line Issuance & Decanting is now 100% complete!",
+            "hi": "उत्कृष्ट परिचालन महारत!सुपरमार्केट रैक से उस बॉडी पार्ट की पूरी ट्रॉली! आप शुरू करने के लिए रैक QR को स्कैन करते हैं, पूरी भरी हुई ट्रॉली को स्टेशन पर ले जाते हैं, और कार्य को बंद करने के लिए गंतव्य QR को स्कैन करते हैं। स्टेज 9 अब 100% पूरा हुआ!",
+            "mr": "अतिशय उत्कृष्ट प्रावीण्य!सुपरमार्केट रॅकमधून त्या बॉडी पार्टची संपूर्ण भरलेली ट्रॉली! काम सुरू करण्यासाठी रॅकचा QR स्कॅन करायचा, पूर्ण ट्रॉली वर्कस्टेशनवर न्यायची आणि काम पूर्ण करण्यासाठी डेस्टिनेशन QR स्कॅन करायचा. स्टेज 9 आता 100% पूर्ण झाले आहे!"
           },
           "audioSrc": "/audio/voiceover/s09_sc10_correct.mp3"
         },
@@ -1034,9 +1034,9 @@
         "questionId": "c2-q27",
         "safetyCritical": true,
         "question": {
-          "en": "A paint-shop WH task asks for a body part. What do you move to the paint-work line? (Question Bank Q27)",
-          "hi": "एक पेंट-शॉप WH कार्य एक बॉडी पार्ट की मांग करता है। आप पेंट-वर्क लाइन में क्या ले जाते हैं? (प्रश्न बैंक Q27)",
-          "mr": "पेंट-शॉप WH टास्कमध्ये बॉडी पार्टची मागणी केली आहे. तुम्ही पेंट लाईनवर काय घेऊन जाता? (प्रश्न बँक Q27)"
+          "en": "A paint-shop WH task asks for a body part. What do you move to the paint-work line?",
+          "hi": "एक पेंट-शॉप WH कार्य एक बॉडी पार्ट की मांग करता है। आप पेंट-वर्क लाइन में क्या ले जाते हैं?",
+          "mr": "पेंट-शॉप WH टास्कमध्ये बॉडी पार्टची मागणी केली आहे. तुम्ही पेंट लाईनवर काय घेऊन जाता?"
         },
         "options": [
           {
@@ -1061,9 +1061,9 @@
             "id": "opt_full_flc",
             "correct": false,
             "label": {
-              "en": "A full 300kg supplier FLC container pushed by hand across the line",
-              "hi": "लाइन के पार हाथ से धकेला गया एक पूरा 300 किग्रा आपूर्तिकर्ता FLC कंटेनर",
-              "mr": "हाताने ढकलून नेलेली 300 किलोची मोठी सप्लायरची FLC पेटी"
+              "en": "A full 300kg supplier Foldable Large Container container pushed by hand across the line",
+              "hi": "लाइन के पार हाथ से धकेला गया एक पूरा 300 किग्रा आपूर्तिकर्ता फोल्डेबल लार्ज कंटेनर कंटेनर",
+              "mr": "हाताने ढकलून नेलेली 300 किलोची मोठी सप्लायरची फोल्डेबल लार्ज कंटेनर पेटी"
             }
           },
           {
@@ -1077,9 +1077,9 @@
           }
         ],
         "prompt": {
-          "en": "A paint-shop WH task asks for a body part. What do you move to the paint-work line? (Question Bank Q27)",
-          "hi": "एक पेंट-शॉप WH कार्य एक बॉडी पार्ट की मांग करता है। आप पेंट-वर्क लाइन में क्या ले जाते हैं? (प्रश्न बैंक Q27)",
-          "mr": "पेंट-शॉप WH टास्कमध्ये बॉडी पार्टची मागणी केली आहे. तुम्ही पेंट लाईनवर काय घेऊन जाता? (प्रश्न बँक Q27)"
+          "en": "A paint-shop WH task asks for a body part. What do you move to the paint-work line?",
+          "hi": "एक पेंट-शॉप WH कार्य एक बॉडी पार्ट की मांग करता है। आप पेंट-वर्क लाइन में क्या ले जाते हैं?",
+          "mr": "पेंट-शॉप WH टास्कमध्ये बॉडी पार्टची मागणी केली आहे. तुम्ही पेंट लाईनवर काय घेऊन जाता?"
         },
         "id": "c2-q27",
         "audioSrc": "/audio/voiceover/s09_sc10_prompt.mp3"
@@ -1088,9 +1088,9 @@
         "xp": 130,
         "sopClause": "SOP for Line Issuance Paint-Shop Clause 4.2 & Question Bank Q27",
         "why": {
-          "en": "SOP Clause 4.2 & Question Bank Q27 dictates: Paint shop feeding is strictly standardized by mobile trolley unit loads. Handlers must never carry loose body parts by hand, which damages delicate Class-A plastic surfaces. The operator scans the supermarket rack QR, transports the whole trolley, and scans the destination station QR to officially complete the task in MES.",
-          "hi": "SOP क्लॉज 4.2 और प्रश्न बैंक Q27: पेंट शॉप फीडिंग मोबाइल ट्रॉली यूनिट लोड द्वारा सख्ती से मानकीकृत है। संचालक कभी भी खुले बॉडी पार्ट्स को हाथ से नहीं ले जाते हैं, जिससे प्लास्टिक की सतह क्षतिग्रस्त हो जाती है। ऑपरेटर पूरी ट्रॉली ले जाता है और कार्य पूरा करने के लिए गंतव्य QR को स्कैन करता है।",
-          "mr": "SOP कलम 4.2 आणि प्रश्न बँक Q27: पेंट शॉपमध्ये साहित्याची वाहतूक प्रमाणित ट्रॉलीद्वारेच केली जाते. हाताने सुटे पार्ट नेल्यास त्यांच्यावर ओरखडे पडून पेंटिंग खराब होते. ऑपरेटर रॅकचा QR स्कॅन करतो, संपूर्ण ट्रॉली नेतो आणि लाईनवरील QR स्कॅन करून टास्क बंद करतो."
+          "en": "Dictates: Paint shop feeding is strictly standardized by mobile trolley unit loads. Handlers must never carry loose body parts by hand, which damages delicate Class-A plastic surfaces. The operator scans the supermarket rack QR, transports the whole trolley, and scans the destination station QR to officially complete the task in MES.",
+          "hi": "पेंट शॉप फीडिंग मोबाइल ट्रॉली यूनिट लोड द्वारा सख्ती से मानकीकृत है। संचालक कभी भी खुले बॉडी पार्ट्स को हाथ से नहीं ले जाते हैं, जिससे प्लास्टिक की सतह क्षतिग्रस्त हो जाती है। ऑपरेटर पूरी ट्रॉली ले जाता है और कार्य पूरा करने के लिए गंतव्य QR को स्कैन करता है।",
+          "mr": "पेंट शॉपमध्ये साहित्याची वाहतूक प्रमाणित ट्रॉलीद्वारेच केली जाते. हाताने सुटे पार्ट नेल्यास त्यांच्यावर ओरखडे पडून पेंटिंग खराब होते. ऑपरेटर रॅकचा QR स्कॅन करतो, संपूर्ण ट्रॉली नेतो आणि लाईनवरील QR स्कॅन करून टास्क बंद करतो."
         }
       }
     }
