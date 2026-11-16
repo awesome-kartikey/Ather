@@ -36,7 +36,7 @@
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "PERFECT FACILITY BYPASS ROUTING! Hazardous chemicals, thinners, and paints are stored in separate, designated buildings. The gate pass specifies the exact isolated building. Trucks must bypass the main assembly plant completely and dock directly at the detached Chemical Storage Annex equipped with flameproof fixtures and spill berms!",
+            "en": "PERFECT FACILITY BYPASS ROUTING! Hazardous chemicals, thinners, and paints are stored in separate, designated buildings. The gate pass specifies the exact isolated building. Trucks must bypass the main assembly plant completely and dock directly at the detached Chemical Storage detached Chemical Annex, equipped with flameproof fixtures and spill berms!",
             "hi": "उत्कृष्ट सुविधा बाईपास रूटिंग! खतरनाक रसायन, थिनर और पेंट अलग, निर्दिष्ट भवनों में संग्रहीत किए जाते हैं। गेट पास में सटीक पृथक भवन निर्दिष्ट होता है। ट्रकों को मुख्य असेंबली प्लांट को पूरी तरह से बायपास करना चाहिए और फ्लेमप्रूफ फिक्स्चर और स्पिल बर्म से सुसज्जित अलग रासायनिक भंडारण एनेक्स पर सीधे डॉक करना चाहिए!",
             "mr": "उत्कृष्ट सुविधा बायपास रूटिंग! धोकादायक रसायने, थिनर आणि पेंट्स स्वतंत्र, नियुक्त इमारतींमध्ये साठवले जातात. गेट पासवर विशिष्ट वेगळी इमारत नमूद केलेली असते. ट्रक्सने मुख्य असेंब्ली प्लांट पूर्णपणे बायपास करून थेट फ्लेमप्रूफ आणि स्पिल बर्म्स असलेल्या स्वतंत्र रासायनिक स्टोअर अ‍ॅनेक्सवर डॉक केले पाहिजे!"
           },
@@ -50,6 +50,11 @@
             "mr": "गंभीर औद्योगिक आगीचा धोका! घातक सॉल्व्हेंट्स, ज्वलनशील पेंट्स आणि थिनरने कधीही मुख्य उत्पादन प्लांट किंवा सामान्य डॉक 01 मध्ये प्रवेश करू नये. हाय-व्होल्टेज असेंब्ली लाईन्सजवळ रासायनिक वाष्प किंवा गळतीमुळे भीषण स्फोटाचा धोका उद्भवू शकतो!"
           },
           "audioSrc": "/audio/voiceover/s05_sc01_wrong.mp3"
+        },
+        "dialog": {
+          "en": "Welcome to Stage 5: Hazardous Chemicals & Thinners Put-Away! A supplier truck carrying drums of flammable thinners, paints, and hazardous solvents arrives at the AURIC Main Gate. The driver asks if they should dock at Inbound Dock 01 (Main Assembly Building) with the other standard trucks. Under Ather where must chemical and thinner shipments proceed?",
+          "hi": "स्टेज 5: खतरनाक रसायन और थिनर पुट-अवे में आपका स्वागत है! ज्वलनशील थिनर, पेंट और खतरनाक सॉल्वैंट्स के ड्रम ले जाने वाला एक आपूर्तिकर्ता ट्रक AURIC मेन गेट पर पहुंचता है। ड्राइवर पूछता है कि क्या उन्हें अन्य सामान्य ट्रकों के साथ इनबाउंड डॉक 01 (मुख्य असेंबली बिल्डिंग) पर डॉक करना चाहिए। एथर रसायन और थिनर शिपमेंट को कहां जाना चाहिए?",
+          "mr": "स्टेज 5: धोकादायक रसायने आणि थिनर पुट-अवेमध्ये आपले स्वागत आहे! ज्वलनशील थिनर, पेंट्स आणि घातक सॉल्व्हेंट्सचे ड्रम्स घेऊन आलेला सप्लायर ट्रक AURIC मेन गेटवर पोहोचतो. ड्रायव्हर विचारतो की त्यांनी इतर सामान्य गाड्यांप्रमाणे इनबाउंड डॉक 01 (मुख्य असेंब्ली इमारत) वर अनलोड करावे का? एथर रासायनिक आणि थिनर शिपमेंट कोठे पाठवले पाहिजे?"
         }
       },
       "interaction": {
@@ -135,9 +140,9 @@
         "intro": {
           "pose": "warning",
           "text": {
-            "en": "At Chemical Annex C-04, the truck has docked and an operator begins unloading 200-liter steel drums of industrial thinner. Take a close look at the unloading setup. Under Ather which critical safety hazard violates our mandatory chemical handling protocols?",
-            "hi": "रासायनिक एनेक्स C-04 पर, ट्रक डॉक हो गया है और एक ऑपरेटर औद्योगिक थिनर के 200-लीटर स्टील के ड्रम उतारना शुरू करता है। अनलोडिंग सेटअप पर बारीकी से नज़र डालें। एथर कौन सा महत्वपूर्ण सुरक्षा खतरा हमारे अनिवार्य रासायनिक हैंडलिंग प्रोटोकॉल का उल्लंघन करता है?",
-            "mr": "केमिकल अ‍ॅनेक्स C-04 वर, ट्रक डॉक झाला आहे आणि ऑपरेटर औद्योगिक थिनरचे 200-लिटर स्टील ड्रम्स उतरवण्यास सुरुवात करतो. अनलोडिंग सेटअपचे काळजीपूर्वक निरीक्षण करा. एथर कोणता मोठा सुरक्षिततेचा धोका आमच्या अनिवार्य रासायनिक हाताळणी नियमांचे उल्लंघन करतो?"
+            "en": "At Chemical Storage Annex, the truck has docked and an operator begins unloading 200-liter steel drums of industrial thinner. Take a close look at the unloading setup. Under Ather which critical safety hazard violates our mandatory chemical handling protocols?",
+            "hi": "रासायनिक केमिकल एनेक्स पर, ट्रक डॉक हो गया है और एक ऑपरेटर औद्योगिक थिनर के 200-लीटर स्टील के ड्रम उतारना शुरू करता है। अनलोडिंग सेटअप पर बारीकी से नज़र डालें। एथर कौन सा महत्वपूर्ण सुरक्षा खतरा हमारे अनिवार्य रासायनिक हैंडलिंग प्रोटोकॉल का उल्लंघन करता है?",
+            "mr": "केमिकल स्टोरेज अ‍ॅनेक्स वर, ट्रक डॉक झाला आहे आणि ऑपरेटर औद्योगिक थिनरचे 200-लिटर स्टील ड्रम्स उतरवण्यास सुरुवात करतो. अनलोडिंग सेटअपचे काळजीपूर्वक निरीक्षण करा. एथर कोणता मोठा सुरक्षिततेचा धोका आमच्या अनिवार्य रासायनिक हाताळणी नियमांचे उल्लंघन करतो?"
           },
           "audioSrc": "/audio/voiceover/s05_sc02_intro.mp3"
         },
@@ -158,6 +163,11 @@
             "mr": "मोठा सुरक्षिततेचा धोका दुर्लक्षित झाला! अर्थिंग क्लॅम्पशिवाय आणि स्पिल पॅलेटशिवाय ज्वलनशील थिनरचे ड्रम थेट जमिनीवर ठेवणे अत्यंत घातक आहे. एका लहान इलेक्ट्रोस्टॅटिक ठिणगीमुळे संपूर्ण केमिकल गोदामात आग लागू शकते!"
           },
           "audioSrc": "/audio/voiceover/s05_sc02_wrong.mp3"
+        },
+        "dialog": {
+          "en": "At Chemical Storage Annex, the truck has docked and an operator begins unloading 200-liter steel drums of industrial thinner. Take a close look at the unloading setup. Under Ather which critical safety hazard violates our mandatory chemical handling protocols?",
+          "hi": "रासायनिक केमिकल एनेक्स पर, ट्रक डॉक हो गया है और एक ऑपरेटर औद्योगिक थिनर के 200-लीटर स्टील के ड्रम उतारना शुरू करता है। अनलोडिंग सेटअप पर बारीकी से नज़र डालें। एथर कौन सा महत्वपूर्ण सुरक्षा खतरा हमारे अनिवार्य रासायनिक हैंडलिंग प्रोटोकॉल का उल्लंघन करता है?",
+          "mr": "केमिकल स्टोरेज अ‍ॅनेक्स वर, ट्रक डॉक झाला आहे आणि ऑपरेटर औद्योगिक थिनरचे 200-लिटर स्टील ड्रम्स उतरवण्यास सुरुवात करतो. अनलोडिंग सेटअपचे काळजीपूर्वक निरीक्षण करा. एथर कोणता मोठा सुरक्षिततेचा धोका आमच्या अनिवार्य रासायनिक हाताळणी नियमांचे उल्लंघन करतो?"
         }
       },
       "interaction": {
@@ -165,9 +175,9 @@
         "questionId": "c1-q25b",
         "safetyCritical": true,
         "question": {
-          "en": "Spot the Safety Violation: An operator is unloading 200L flammable thinner drums at Chemical Annex C-04. Which condition violates Ather safety protocols?",
-          "hi": "सुरक्षा उल्लंघन पहचानें: एक ऑपरेटर रासायनिक एनेक्स C-04 पर 200L ज्वलनशील थिनर ड्रम उतार रहा है। कौन सी स्थिति एथर सुरक्षा प्रोटोकॉल का उल्लंघन करती है?",
-          "mr": "सुरक्षिततेचे उल्लंघन ओळखा: एक ऑपरेटर केमिकल अ‍ॅनेक्स C-04 वर 200L ज्वलनशील थिनर ड्रम्स उतरवत आहे. कोणती परिस्थिती एथर सुरक्षा नियमांचे उल्लंघन करते?"
+          "en": "Spot the Safety Violation: An operator is unloading 200L flammable thinner drums at Chemical Storage Annex. Which condition violates Ather safety protocols?",
+          "hi": "सुरक्षा उल्लंघन पहचानें: एक ऑपरेटर रासायनिक केमिकल एनेक्स पर 200L ज्वलनशील थिनर ड्रम उतार रहा है। कौन सी स्थिति एथर सुरक्षा प्रोटोकॉल का उल्लंघन करती है?",
+          "mr": "सुरक्षिततेचे उल्लंघन ओळखा: एक ऑपरेटर केमिकल स्टोरेज अ‍ॅनेक्स वर 200L ज्वलनशील थिनर ड्रम्स उतरवत आहे. कोणती परिस्थिती एथर सुरक्षा नियमांचे उल्लंघन करते?"
         },
         "instruction": {
           "en": "Audit the dock setup below and tap the critical safety violation.",
@@ -184,9 +194,9 @@
               "mr": "ड्रम्स थेट सिमेंटच्या जमिनीवर उतरवले आहेत, कोणतीही सेकंडरी स्पिल पॅलेट नाही आणि अर्थिंग क्लॅम्प लावलेला नाही"
             },
             "description": {
-              "en": "Violates SOP Clause 4.2: High risk of static spark ignition and environmental soil seepage",
-              "hi": "SOP क्लॉज 4.2 का उल्लंघन: स्थिर चिंगारी प्रज्वलन और पर्यावरणीय मिट्टी में रिसाव का उच्च जोखिम",
-              "mr": "SOP कलम 4.2 चे उल्लंघन: स्टॅटिक ठिणगीने आग लागण्याचा आणि जमिनीत केमिकल मुरण्याचा मोठा धोका"
+              "en": "Violates High risk of static spark ignition and environmental soil seepage",
+              "hi": "का उल्लंघन: स्थिर चिंगारी प्रज्वलन और पर्यावरणीय मिट्टी में रिसाव का उच्च जोखिम",
+              "mr": "चे उल्लंघन: स्टॅटिक ठिणगीने आग लागण्याचा आणि जमिनीत केमिकल मुरण्याचा मोठा धोका"
             }
           },
           {
@@ -207,9 +217,9 @@
             "id": "opt_valid_gate_pass",
             "isViolation": false,
             "label": {
-              "en": "Delivery driver carries an authorized Gate Pass indicating Annex C-04 chemical unloading zone",
-              "hi": "डिलीवरी ड्राइवर के पास एनेक्स C-04 रासायनिक अनलोडिंग ज़ोन दर्शाने वाला अधिकृत गेट पास है",
-              "mr": "डिलिव्हरी ड्रायव्हरकडे अ‍ॅनेक्स C-04 केमिकल अनलोडिंग झोन दर्शवणारा अधिकृत गेट पास आहे"
+              "en": "Delivery driver carries an authorized Gate Pass indicating the Chemical Annex chemical unloading zone",
+              "hi": "डिलीवरी ड्राइवर के पास केमिकल एनेक्स रासायनिक अनलोडिंग ज़ोन दर्शाने वाला अधिकृत गेट पास है",
+              "mr": "डिलिव्हरी ड्रायव्हरकडे केमिकल अ‍ॅनेक्स केमिकल अनलोडिंग झोन दर्शवणारा अधिकृत गेट पास आहे"
             },
             "description": {
               "en": "Compliant: Validated routing verified during security gate entry",
@@ -226,16 +236,16 @@
               "mr": "ऑपरेटर केमिकल वाहतुकीसाठी प्रमाणित फ्लेम-रिटार्डंट उपकरणांचा वापर करतो"
             },
             "description": {
-              "en": "Compliant: Certified MHE used for hazardous material handling",
+              "en": "Compliant: Certified forklift used for hazardous material handling",
               "hi": "अनुरूप: खतरनाक सामग्री प्रबंधन के लिए प्रमाणित MHE का उपयोग",
               "mr": "योग्य: घातक रसायनांसाठी प्रमाणित MHE चा वापर"
             }
           }
         ],
         "prompt": {
-          "en": "Spot the Safety Violation: An operator is unloading 200L flammable thinner drums at Chemical Annex C-04. Which condition violates Ather safety protocols?",
-          "hi": "सुरक्षा उल्लंघन पहचानें: एक ऑपरेटर रासायनिक एनेक्स C-04 पर 200L ज्वलनशील थिनर ड्रम उतार रहा है। कौन सी स्थिति एथर सुरक्षा प्रोटोकॉल का उल्लंघन करती है?",
-          "mr": "सुरक्षिततेचे उल्लंघन ओळखा: एक ऑपरेटर केमिकल अ‍ॅनेक्स C-04 वर 200L ज्वलनशील थिनर ड्रम्स उतरवत आहे. कोणती परिस्थिती एथर सुरक्षा नियमांचे उल्लंघन करते?"
+          "en": "Spot the Safety Violation: An operator is unloading 200L flammable thinner drums at Chemical Storage Annex. Which condition violates Ather safety protocols?",
+          "hi": "सुरक्षा उल्लंघन पहचानें: एक ऑपरेटर रासायनिक केमिकल एनेक्स पर 200L ज्वलनशील थिनर ड्रम उतार रहा है। कौन सी स्थिति एथर सुरक्षा प्रोटोकॉल का उल्लंघन करती है?",
+          "mr": "सुरक्षिततेचे उल्लंघन ओळखा: एक ऑपरेटर केमिकल स्टोरेज अ‍ॅनेक्स वर 200L ज्वलनशील थिनर ड्रम्स उतरवत आहे. कोणती परिस्थिती एथर सुरक्षा नियमांचे उल्लंघन करते?"
         },
         "id": "c1-q25b",
         "audioSrc": "/audio/voiceover/s05_sc02_prompt.mp3"
@@ -268,9 +278,9 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Inside Chemical Annex C-04, 4 different hazardous drums need to be slotted into storage. Chemical safety rules strictly prohibit storing incompatible classes in the same containment bay: mixing flammable solvents with oxidizers causes spontaneous explosion! In addition, Ather mandates all chemicals must be stowed within a strict 2-hour SLA. Sort each incoming drum into its compliant containment bay before time expires!",
-            "hi": "रासायनिक एनेक्स C-04 के अंदर, 4 अलग-अलग खतरनाक ड्रमों को भंडारण में रखने की आवश्यकता है। रासायनिक सुरक्षा नियम एक ही नियंत्रण बे में असंगत वर्गों को संग्रहीत करने से सख्ती से रोकते हैं: ऑक्सीडाइज़र के साथ ज्वलनशील सॉल्वैंट्स को मिलाने से स्वतःस्फूर्त विस्फोट होता है! इसके अलावा, एथर आदेश देता है कि सभी रसायनों को सख्त 2 घंटे के SLA के भीतर रखा जाना चाहिए। समय समाप्त होने से पहले प्रत्येक आने वाले ड्रम को उसके अनुरूप नियंत्रण बे में क्रमबद्ध करें!",
-            "mr": "केमिकल अ‍ॅनेक्स C-04 च्या आत, 4 वेगवेगळ्या धोकादायक ड्रम्सचे स्टोरेज करायचे आहे. रासायनिक सुरक्षा नियमांनुसार विसंगत वर्गांची रसायने एकाच कंटेनमेंट बे मध्ये ठेवण्यास सक्त मनाई आहे: ज्वलनशील सॉल्व्हेंट्स आणि ऑक्सिडायझर्स एकत्र आल्यास भीषण स्फोट होऊ शकतो! तसेच, एथर सर्व रसायने 2 तासांच्या कडक SLA मुदतीत सुरक्षित रॅकवर ठेवली पाहिजेत. मुदत संपण्यापूर्वी प्रत्येक ड्रम योग्य बे मध्ये वर्गीकृत करा!"
+            "en": "Inside the Chemical Storage Annex, 4 different hazardous drums need to be slotted into storage. Chemical safety rules strictly prohibit storing incompatible classes in the same containment bay: mixing flammable solvents with oxidizers causes spontaneous explosion! In addition, Ather mandates all chemicals must be stowed within a strict 2-hour SLA. Sort each incoming drum into its compliant containment bay before time expires!",
+            "hi": "रासायनिक केमिकल एनेक्स के अंदर, 4 अलग-अलग खतरनाक ड्रमों को भंडारण में रखने की आवश्यकता है। रासायनिक सुरक्षा नियम एक ही नियंत्रण बे में असंगत वर्गों को संग्रहीत करने से सख्ती से रोकते हैं: ऑक्सीडाइज़र के साथ ज्वलनशील सॉल्वैंट्स को मिलाने से स्वतःस्फूर्त विस्फोट होता है! इसके अलावा, एथर आदेश देता है कि सभी रसायनों को सख्त 2 घंटे के SLA के भीतर रखा जाना चाहिए। समय समाप्त होने से पहले प्रत्येक आने वाले ड्रम को उसके अनुरूप नियंत्रण बे में क्रमबद्ध करें!",
+            "mr": "केमिकल स्टोरेज अ‍ॅनेक्स च्या आत, 4 वेगवेगळ्या धोकादायक ड्रम्सचे स्टोरेज करायचे आहे. रासायनिक सुरक्षा नियमांनुसार विसंगत वर्गांची रसायने एकाच कंटेनमेंट बे मध्ये ठेवण्यास सक्त मनाई आहे: ज्वलनशील सॉल्व्हेंट्स आणि ऑक्सिडायझर्स एकत्र आल्यास भीषण स्फोट होऊ शकतो! तसेच, एथर सर्व रसायने 2 तासांच्या कडक SLA मुदतीत सुरक्षित रॅकवर ठेवली पाहिजेत. मुदत संपण्यापूर्वी प्रत्येक ड्रम योग्य बे मध्ये वर्गीकृत करा!"
           },
           "audioSrc": "/audio/voiceover/s05_sc03_intro.mp3"
         },
@@ -291,6 +301,11 @@
             "mr": "धोकादायक विसंगत साठवणूक! ज्वलनशील सॉल्व्हेंट्सजवळ ऑक्सिडायझर्स ठेवल्यास रासायनिक प्रक्रियेमुळे प्रचंड उष्णता निर्माण होऊन स्फोट होऊ शकतो. विसंगत वर्ग नेहमी स्वतंत्र संपमध्ये वेगळे ठेवले पाहिजेत!"
           },
           "audioSrc": "/audio/voiceover/s05_sc03_wrong.mp3"
+        },
+        "dialog": {
+          "en": "Inside the Chemical Storage Annex, 4 different hazardous drums need to be slotted into storage. Chemical safety rules strictly prohibit storing incompatible classes in the same containment bay: mixing flammable solvents with oxidizers causes spontaneous explosion! In addition, Ather mandates all chemicals must be stowed within a strict 2-hour SLA. Sort each incoming drum into its compliant containment bay before time expires!",
+          "hi": "रासायनिक केमिकल एनेक्स के अंदर, 4 अलग-अलग खतरनाक ड्रमों को भंडारण में रखने की आवश्यकता है। रासायनिक सुरक्षा नियम एक ही नियंत्रण बे में असंगत वर्गों को संग्रहीत करने से सख्ती से रोकते हैं: ऑक्सीडाइज़र के साथ ज्वलनशील सॉल्वैंट्स को मिलाने से स्वतःस्फूर्त विस्फोट होता है! इसके अलावा, एथर आदेश देता है कि सभी रसायनों को सख्त 2 घंटे के SLA के भीतर रखा जाना चाहिए। समय समाप्त होने से पहले प्रत्येक आने वाले ड्रम को उसके अनुरूप नियंत्रण बे में क्रमबद्ध करें!",
+          "mr": "केमिकल स्टोरेज अ‍ॅनेक्स च्या आत, 4 वेगवेगळ्या धोकादायक ड्रम्सचे स्टोरेज करायचे आहे. रासायनिक सुरक्षा नियमांनुसार विसंगत वर्गांची रसायने एकाच कंटेनमेंट बे मध्ये ठेवण्यास सक्त मनाई आहे: ज्वलनशील सॉल्व्हेंट्स आणि ऑक्सिडायझर्स एकत्र आल्यास भीषण स्फोट होऊ शकतो! तसेच, एथर सर्व रसायने 2 तासांच्या कडक SLA मुदतीत सुरक्षित रॅकवर ठेवली पाहिजेत. मुदत संपण्यापूर्वी प्रत्येक ड्रम योग्य बे मध्ये वर्गीकृत करा!"
         }
       },
       "interaction": {
@@ -415,16 +430,16 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "At Chemical Annex C-04, the put-away operator has successfully unloaded, inspected, and segregated 20 drums of industrial thinner into Bay 1. Who is responsible under Ather for generating the official Goods Receipt Note in SAP and posting the inventory stock into the ERP system?",
-            "hi": "रासायनिक एनेक्स C-04 पर, पुट-अवे ऑपरेटर ने बे 1 में औद्योगिक थिनर के 20 ड्रमों को सफलतापूर्वक अनलोड, निरीक्षण और अलग कर दिया है। SAP में आधिकारिक माल रसीद नोट बनाने और ERP सिस्टम में इन्वेंट्री स्टॉक पोस्ट करने के लिए एथर कौन जिम्मेदार है?",
-            "mr": "केमिकल अ‍ॅनेक्स C-04 वर, पुट-अवे ऑपरेटरने औद्योगिक थिनरचे 20 ड्रम्स बे 1 मध्ये यशस्वीरित्या अनलोड, तपासणी आणि वर्गीकरण केले आहे. एथर SAP मध्ये अधिकृत गुड्स रिसीट नोट तयार करण्यासाठी आणि ERP सिस्टीममध्ये इन्व्हेंटरी स्टॉक पोस्ट करण्यासाठी कोण जबाबदार आहे?"
+            "en": "At Chemical Storage Annex, the put-away operator has successfully unloaded, inspected, and segregated 20 drums of industrial thinner into Bay 1. Who is responsible under Ather for generating the official Goods Receipt Note in SAP and posting the inventory stock into the ERP system?",
+            "hi": "रासायनिक केमिकल एनेक्स पर, पुट-अवे ऑपरेटर ने बे 1 में औद्योगिक थिनर के 20 ड्रमों को सफलतापूर्वक अनलोड, निरीक्षण और अलग कर दिया है। SAP में आधिकारिक माल रसीद नोट बनाने और ERP सिस्टम में इन्वेंट्री स्टॉक पोस्ट करने के लिए एथर कौन जिम्मेदार है?",
+            "mr": "केमिकल स्टोरेज अ‍ॅनेक्स वर, पुट-अवे ऑपरेटरने औद्योगिक थिनरचे 20 ड्रम्स बे 1 मध्ये यशस्वीरित्या अनलोड, तपासणी आणि वर्गीकरण केले आहे. एथर SAP मध्ये अधिकृत गुड्स रिसीट नोट तयार करण्यासाठी आणि ERP सिस्टीममध्ये इन्व्हेंटरी स्टॉक पोस्ट करण्यासाठी कोण जबाबदार आहे?"
           },
           "audioSrc": "/audio/voiceover/s05_sc04_intro.mp3"
         },
         "onCorrect": {
           "pose": "trophy",
           "text": {
-            "en": "EXACT ROLE HANDOVER! The put-away operator conducts the physical unloading and verification check. Once verified, the Data Entry Operator generates the official Goods Receipt Note, affixes labels, and posts inventory into SAP EWM when stowage is finished!",
+            "en": "EXACT ROLE HANDOVER! The put-away operator conducts the physical unloading and verification check. Once verified, the Data Entry Operator generates the official Goods Receipt Note, affixes labels, and posts inventory into SAP warehouse management system when stowage is finished!",
             "hi": "सटीक भूमिका हस्तांतरण! पुट-अवे ऑपरेटर भौतिक अनलोडिंग और सत्यापन जांच करता है। एक बार सत्यापित होने के बाद, डेटा एंट्री ऑपरेटर आधिकारिक माल रसीद नोट बनाता है, लेबल चिपकाता है, और स्टॉवेज समाप्त होने पर SAP EWM में इन्वेंट्री पोस्ट करता है!",
             "mr": "अचूक जबाबदारी वाटप! पुट-अवे ऑपरेटर प्रत्यक्ष अनलोडिंग आणि तपासणी करतो. तपासणी पूर्ण झाल्यावर, डेटा एन्ट्री ऑपरेटर SAP मध्ये अधिकृत Goods Receipt Note तयार करतो, लेबल्स चिटकवतो आणि पुट-अवे पूर्ण झाल्यावर इन्व्हेंटरी पोस्ट करतो!"
           },
@@ -438,6 +453,11 @@
             "mr": "कामातील गैरसमज! पुट-अवे ऑपरेटर प्रत्यक्ष मालाची हालचाल, अर्थिंग आणि साठवणूक करतो, परंतु तो Goods Receipt Note बनवत नाही. अधिकृत Goods Receipt Note तयार करणे आणि SAP मध्ये स्टॉक पोस्ट करणे ही डेटा एन्ट्री ऑपरेटरची जबाबदारी आहे."
           },
           "audioSrc": "/audio/voiceover/s05_sc04_wrong.mp3"
+        },
+        "dialog": {
+          "en": "At Chemical Storage Annex, the put-away operator has successfully unloaded, inspected, and segregated 20 drums of industrial thinner into Bay 1. Who is responsible under Ather for generating the official Goods Receipt Note in SAP and posting the inventory stock into the ERP system?",
+          "hi": "रासायनिक केमिकल एनेक्स पर, पुट-अवे ऑपरेटर ने बे 1 में औद्योगिक थिनर के 20 ड्रमों को सफलतापूर्वक अनलोड, निरीक्षण और अलग कर दिया है। SAP में आधिकारिक माल रसीद नोट बनाने और ERP सिस्टम में इन्वेंट्री स्टॉक पोस्ट करने के लिए एथर कौन जिम्मेदार है?",
+          "mr": "केमिकल स्टोरेज अ‍ॅनेक्स वर, पुट-अवे ऑपरेटरने औद्योगिक थिनरचे 20 ड्रम्स बे 1 मध्ये यशस्वीरित्या अनलोड, तपासणी आणि वर्गीकरण केले आहे. एथर SAP मध्ये अधिकृत गुड्स रिसीट नोट तयार करण्यासाठी आणि ERP सिस्टीममध्ये इन्व्हेंटरी स्टॉक पोस्ट करण्यासाठी कोण जबाबदार आहे?"
         }
       },
       "interaction": {
@@ -445,9 +465,9 @@
         "questionId": "c1-q25-deo",
         "safetyCritical": false,
         "question": {
-          "en": "After a chemical delivery truck is unloaded and physically verified at Annex C-04, who is responsible for creating the Goods Receipt Note in SAP?",
-          "hi": "एनेक्स C-04 पर रासायनिक डिलीवरी ट्रक को अनलोड करने और भौतिक रूप से सत्यापित करने के बाद, SAP में गुड्स रिसीट नोट बनाने के लिए कौन जिम्मेदार है?",
-          "mr": "अ‍ॅनेक्स C-04 वर केमिकल डिलिव्हरी ट्रक अनलोड करून प्रत्यक्ष तपासणी केल्यानंतर, SAP मध्ये गुड्स रिसीट नोट तयार करण्यासाठी कोण जबाबदार आहे?"
+          "en": "After a chemical delivery truck is unloaded and physically verified at the Chemical Storage Annex, who is responsible for creating the Goods Receipt Note in SAP?",
+          "hi": "केमिकल एनेक्स पर रासायनिक डिलीवरी ट्रक को अनलोड करने और भौतिक रूप से सत्यापित करने के बाद, SAP में गुड्स रिसीट नोट बनाने के लिए कौन जिम्मेदार है?",
+          "mr": "केमिकल अ‍ॅनेक्स वर केमिकल डिलिव्हरी ट्रक अनलोड करून प्रत्यक्ष तपासणी केल्यानंतर, SAP मध्ये गुड्स रिसीट नोट तयार करण्यासाठी कोण जबाबदार आहे?"
         },
         "options": [
           {
@@ -488,9 +508,9 @@
           }
         ],
         "prompt": {
-          "en": "After a chemical delivery truck is unloaded and physically verified at Annex C-04, who is responsible for creating the Goods Receipt Note in SAP?",
-          "hi": "एनेक्स C-04 पर रासायनिक डिलीवरी ट्रक को अनलोड करने और भौतिक रूप से सत्यापित करने के बाद, SAP में गुड्स रिसीट नोट बनाने के लिए कौन जिम्मेदार है?",
-          "mr": "अ‍ॅनेक्स C-04 वर केमिकल डिलिव्हरी ट्रक अनलोड करून प्रत्यक्ष तपासणी केल्यानंतर, SAP मध्ये गुड्स रिसीट नोट तयार करण्यासाठी कोण जबाबदार आहे?"
+          "en": "After a chemical delivery truck is unloaded and physically verified at the Chemical Storage Annex, who is responsible for creating the Goods Receipt Note in SAP?",
+          "hi": "केमिकल एनेक्स पर रासायनिक डिलीवरी ट्रक को अनलोड करने और भौतिक रूप से सत्यापित करने के बाद, SAP में गुड्स रिसीट नोट बनाने के लिए कौन जिम्मेदार है?",
+          "mr": "केमिकल अ‍ॅनेक्स वर केमिकल डिलिव्हरी ट्रक अनलोड करून प्रत्यक्ष तपासणी केल्यानंतर, SAP मध्ये गुड्स रिसीट नोट तयार करण्यासाठी कोण जबाबदार आहे?"
         },
         "id": "c1-q25-deo",
         "audioSrc": "/audio/voiceover/s05_sc04_prompt.mp3"
@@ -523,9 +543,9 @@
         "intro": {
           "pose": "warning",
           "text": {
-            "en": "Urgent safety audit at Chemical Annex C-04! A drum of industrial thinner has been safely placed on the spill pallet. Before opening the bung cap to sample the viscosity, the operator reaches for the steel wrench without attaching the copper static earthing clamp to the plant grounding busbar. The operator insists, 'It's just a 10-second inspection.' Should this action be allowed or halted immediately?",
-            "hi": "रासायनिक एनेक्स C-04 पर तत्काल सुरक्षा ऑडिट! औद्योगिक थिनर का एक ड्रम स्पिल पैलेट पर सुरक्षित रूप से रखा गया है। चिपचिपाहट का नमूना लेने के लिए बंग कैप खोलने से पहले, ऑपरेटर कॉपर स्टैटिक अर्थिंग क्लैंप को प्लांट ग्राउंडिंग बसबार से जोड़े बिना स्टील रिंच उठाता है। ऑपरेटर का कहना है, 'यह सिर्फ 10 सेकंड का निरीक्षण है।' क्या इस कार्रवाई की अनुमति दी जानी चाहिए या तुरंत रोक दी जानी चाहिए?",
-            "mr": "केमिकल अ‍ॅनेक्स C-04 वर तातडीचे सुरक्षा ऑडिट! औद्योगिक थिनरचा एक ड्रम स्पिल पॅलेटवर सुरक्षित ठेवला आहे. व्हिस्कोसिटी सॅम्पल तपासण्यासाठी ड्रमचे झाकण उघडण्यापूर्वी, ऑपरेटर कॉपर स्टॅटिक अर्थिंग क्लॅम्प प्लांटच्या अर्थिंग पट्टीला न जोडता स्टील पाना हाताळतो. ऑपरेटर म्हणतो, 'फक्त 10 सेकंदांची तपासणी आहे.' या कृतीस परवानगी द्यावी की ताबडतोब थांबवावे?"
+            "en": "Urgent safety audit at Chemical Storage Annex! A drum of industrial thinner has been safely placed on the spill pallet. Before opening the bung cap to sample the viscosity, the operator reaches for the steel wrench without attaching the copper static earthing clamp to the plant grounding busbar. The operator insists, 'It's just a 10-second inspection.' Should this action be allowed or halted immediately?",
+            "hi": "रासायनिक केमिकल एनेक्स पर तत्काल सुरक्षा ऑडिट! औद्योगिक थिनर का एक ड्रम स्पिल पैलेट पर सुरक्षित रूप से रखा गया है। चिपचिपाहट का नमूना लेने के लिए बंग कैप खोलने से पहले, ऑपरेटर कॉपर स्टैटिक अर्थिंग क्लैंप को प्लांट ग्राउंडिंग बसबार से जोड़े बिना स्टील रिंच उठाता है। ऑपरेटर का कहना है, 'यह सिर्फ 10 सेकंड का निरीक्षण है।' क्या इस कार्रवाई की अनुमति दी जानी चाहिए या तुरंत रोक दी जानी चाहिए?",
+            "mr": "केमिकल स्टोरेज अ‍ॅनेक्स वर तातडीचे सुरक्षा ऑडिट! औद्योगिक थिनरचा एक ड्रम स्पिल पॅलेटवर सुरक्षित ठेवला आहे. व्हिस्कोसिटी सॅम्पल तपासण्यासाठी ड्रमचे झाकण उघडण्यापूर्वी, ऑपरेटर कॉपर स्टॅटिक अर्थिंग क्लॅम्प प्लांटच्या अर्थिंग पट्टीला न जोडता स्टील पाना हाताळतो. ऑपरेटर म्हणतो, 'फक्त 10 सेकंदांची तपासणी आहे.' या कृतीस परवानगी द्यावी की ताबडतोब थांबवावे?"
           },
           "audioSrc": "/audio/voiceover/s05_sc05_intro.mp3"
         },
@@ -546,6 +566,11 @@
             "mr": "गंभीर आगीचे उल्लंघन! ड्रमच्या झाकणाभोवती अदृश्य ज्वलनशील वाष्प असते. अर्थिंगशिवाय धातूवर धातू आदळल्यास पडणाऱ्या ठिणगीमुळे क्षणार्धात आग लागून संपूर्ण फॅक्टरी रिकामी करावी लागू शकते! अर्थिंगशिवाय केमिकल ड्रम कधीही उघडू नका!"
           },
           "audioSrc": "/audio/voiceover/s05_sc05_wrong.mp3"
+        },
+        "dialog": {
+          "en": "Urgent safety audit at Chemical Storage Annex! A drum of industrial thinner has been safely placed on the spill pallet. Before opening the bung cap to sample the viscosity, the operator reaches for the steel wrench without attaching the copper static earthing clamp to the plant grounding busbar. The operator insists, 'It's just a 10-second inspection.' Should this action be allowed or halted immediately?",
+          "hi": "रासायनिक केमिकल एनेक्स पर तत्काल सुरक्षा ऑडिट! औद्योगिक थिनर का एक ड्रम स्पिल पैलेट पर सुरक्षित रूप से रखा गया है। चिपचिपाहट का नमूना लेने के लिए बंग कैप खोलने से पहले, ऑपरेटर कॉपर स्टैटिक अर्थिंग क्लैंप को प्लांट ग्राउंडिंग बसबार से जोड़े बिना स्टील रिंच उठाता है। ऑपरेटर का कहना है, 'यह सिर्फ 10 सेकंड का निरीक्षण है।' क्या इस कार्रवाई की अनुमति दी जानी चाहिए या तुरंत रोक दी जानी चाहिए?",
+          "mr": "केमिकल स्टोरेज अ‍ॅनेक्स वर तातडीचे सुरक्षा ऑडिट! औद्योगिक थिनरचा एक ड्रम स्पिल पॅलेटवर सुरक्षित ठेवला आहे. व्हिस्कोसिटी सॅम्पल तपासण्यासाठी ड्रमचे झाकण उघडण्यापूर्वी, ऑपरेटर कॉपर स्टॅटिक अर्थिंग क्लॅम्प प्लांटच्या अर्थिंग पट्टीला न जोडता स्टील पाना हाताळतो. ऑपरेटर म्हणतो, 'फक्त 10 सेकंदांची तपासणी आहे.' या कृतीस परवानगी द्यावी की ताबडतोब थांबवावे?"
         }
       },
       "interaction": {
@@ -574,9 +599,9 @@
           "mr": "GO — जलद सॅम्पलिंगला परवानगी द्या"
         },
         "stopDescription": {
-          "en": "HALT: Static spark from steel tool can ignite solvent vapor cloud; attach grounding clamp first (Clause 4.5)",
-          "hi": "रोकें: स्टील के औजार से निकलने वाली स्थिर चिंगारी विलायक वाष्प को प्रज्वलित कर सकती है; पहले ग्राउंडिंग क्लैंप लगाएं (क्लॉज 4.5)",
-          "mr": "थांबवा: स्टीलच्या हत्यारामुळे पडणारी ठिणगी वाफेला पेटवू शकते; आधी अर्थिंग क्लॅम्प जोडा (कलम 4.5)"
+          "en": "HALT: Static spark from steel tool can ignite solvent vapor cloud; attach grounding clamp first",
+          "hi": "रोकें: स्टील के औजार से निकलने वाली स्थिर चिंगारी विलायक वाष्प को प्रज्वलित कर सकती है; पहले ग्राउंडिंग क्लैंप लगाएं",
+          "mr": "थांबवा: स्टीलच्या हत्यारामुळे पडणारी ठिणगी वाफेला पेटवू शकते; आधी अर्थिंग क्लॅम्प जोडा"
         },
         "goDescription": {
           "en": "ALLOW: It is only a rapid 10-second inspection check",

@@ -51,6 +51,11 @@
             "mr": "इंजिन बंद करून वेटिंग एरियात थांबा. थेट आत जाऊ नका."
           },
           "audioSrc": "/audio/voiceover/s01_sc01_wrong.mp3"
+        },
+        "dialog": {
+          "en": "A delivery truck has reached the main gate. Where should the driver wait before entering?",
+          "hi": "डिलीवरी ट्रक मुख्य गेट पर पहुंचा है। अंदर जाने से पहले चालक कहां रुके?",
+          "mr": "डिलिव्हरी ट्रक मुख्य गेटवर आला आहे. आत जाण्यापूर्वी चालकाने कुठे थांबावे?"
         }
       },
       "interaction": {
@@ -151,6 +156,11 @@
             "mr": "परचेस ऑर्डर, ॲडव्हान्स्ड शिपिंग नोटीस आणि इनव्हॉइस डेटा एन्ट्री ऑपरेटर कडे द्या. चालकाचा परवाना आणि वाहनाची कागदपत्रे सुरक्षा रक्षकाकडे द्या."
           },
           "audioSrc": "/audio/voiceover/s01_sc02_wrong.mp3"
+        },
+        "dialog": {
+          "en": "The driver has five documents. Match each one to the right desk.",
+          "hi": "चालक के पास पांच दस्तावेज़ हैं। हर दस्तावेज़ सही डेस्क पर दें।",
+          "mr": "चालकाकडे पाच कागदपत्रे आहेत. प्रत्येक कागदपत्र योग्य डेस्कवर द्या."
         }
       },
       "interaction": {
@@ -298,6 +308,11 @@
             "mr": "तफावत असताना पुढे जाऊ नका. ॲडव्हान्स्ड शिपिंग नोटीस चुकीचे असल्यास गेट एंट्री थांबवा आणि ते दुरुस्त करून घ्या."
           },
           "audioSrc": "/audio/voiceover/s01_sc03_wrong.mp3"
+        },
+        "dialog": {
+          "en": "The Data Entry Operator enters the invoice in the system. The system checks whether the truck delivery matches the Advanced Shipping Notice.",
+          "hi": "डेटा एंट्री ऑपरेटर सिस्टम में इनवॉइस डालता है। सिस्टम जांचता है कि ट्रक का माल एडवांस्ड शिपिंग नोटिस से मिलता है या नहीं।",
+          "mr": "डेटा एन्ट्री ऑपरेटर सिस्टममध्ये इनव्हॉइस टाकतो. ट्रकमधील माल ॲडव्हान्स्ड शिपिंग नोटीस शी जुळतो का ते सिस्टम तपासते."
         }
       },
       "interaction": {
@@ -375,9 +390,9 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "The Data Entry Operator runs YPR_GATEENTRY! The printer outputs the windshield barcode pass while the driver watches the status TV. Can you place the driver's gate journey in exact chronological order?",
-            "hi": "डेटा एंट्री ऑपरेटर YPR_GATEENTRY चलाता है! प्रिंटर विंडशील्ड बारकोड पास प्रिंट करता है जबकि चालक स्टेटस टीवी देखता है। क्या आप चालक के गेट यात्रा चरणों को सही कालानुक्रमिक क्रम में लगा सकते हैं?",
-            "mr": "डेटा एन्ट्री ऑपरेटर YPR_GATEENTRY चालवतो! प्रिंटर विंडशील्ड बारकोड पास प्रिंट करतो तर चालक स्टेटस टीव्ही पाहतो. तुम्ही चालकाच्या गेट प्रवासाच्या पायऱ्या योग्य कालक्रमानुसार लावू शकता का?"
+            "en": "The Data Entry Operator runs the gate entry pass! The printer outputs the windshield barcode pass while the driver watches the status TV. Can you place the driver's gate journey in exact chronological order?",
+            "hi": "डेटा एंट्री ऑपरेटर गेट एंट्री पास चलाता है! प्रिंटर विंडशील्ड बारकोड पास प्रिंट करता है जबकि चालक स्टेटस टीवी देखता है। क्या आप चालक के गेट यात्रा चरणों को सही कालानुक्रमिक क्रम में लगा सकते हैं?",
+            "mr": "डेटा एन्ट्री ऑपरेटर गेट एंट्री पास चालवतो! प्रिंटर विंडशील्ड बारकोड पास प्रिंट करतो तर चालक स्टेटस टीव्ही पाहतो. तुम्ही चालकाच्या गेट प्रवासाच्या पायऱ्या योग्य कालक्रमानुसार लावू शकता का?"
           },
           "audioSrc": "/audio/voiceover/s01_sc04_intro.mp3"
         },
@@ -398,6 +413,11 @@
             "mr": "थांबा! प्रिंट केलेला बारकोड पास घेतल्याशिवाय चालक डॉककडे जाऊ शकत नाही. चला पायऱ्या अचूक क्रमाने लावूया."
           },
           "audioSrc": "/audio/voiceover/s01_sc04_wrong.mp3"
+        },
+        "dialog": {
+          "en": "The Data Entry Operator runs the gate entry pass! The printer outputs the windshield barcode pass while the driver watches the status TV. Can you place the driver's gate journey in exact chronological order?",
+          "hi": "डेटा एंट्री ऑपरेटर गेट एंट्री पास चलाता है! प्रिंटर विंडशील्ड बारकोड पास प्रिंट करता है जबकि चालक स्टेटस टीवी देखता है। क्या आप चालक के गेट यात्रा चरणों को सही कालानुक्रमिक क्रम में लगा सकते हैं?",
+          "mr": "डेटा एन्ट्री ऑपरेटर गेट एंट्री पास चालवतो! प्रिंटर विंडशील्ड बारकोड पास प्रिंट करतो तर चालक स्टेटस टीव्ही पाहतो. तुम्ही चालकाच्या गेट प्रवासाच्या पायऱ्या योग्य कालक्रमानुसार लावू शकता का?"
         }
       },
       "interaction": {
@@ -446,9 +466,9 @@
             "id": "step_barcode",
             "icon": "🏷️",
             "label": {
-              "en": "Collect printed windshield barcode pass (YPR_GATEENTRY)",
-              "hi": "प्रिंटेड विंडशील्ड बारकोड पास प्राप्त करें (YPR_GATEENTRY)",
-              "mr": "प्रिंट केलेला विंडशील्ड बारकोड पास मिळवा (YPR_GATEENTRY)"
+              "en": "Collect printed windshield barcode pass (Gate Entry Pass)",
+              "hi": "प्रिंटेड विंडशील्ड बारकोड पास प्राप्त करें (गेट एंट्री पास)",
+              "mr": "प्रिंट केलेला विंडशील्ड बारकोड पास मिळवा (गेट एंट्री पास)"
             }
           },
           {
@@ -480,9 +500,9 @@
         "xp": 100,
         "sopClause": "SOP XXXX_PRO_001 Clause 4.1.1–4.1.4 & 4.2.2",
         "why": {
-          "en": "Driver halts in waiting yard, security verifies credentials, Data Entry Operator validates shipping data, prints barcode pass via YPR_GATEENTRY, and only then is the vehicle authorized to proceed to the dock.",
-          "hi": "चालक वेटिंग यार्ड में रुकता है, सुरक्षा कर्मी क्रेडेंशियल्स की जांच करते हैं, डेटा एंट्री ऑपरेटर डेटा सत्यापित करता है, YPR_GATEENTRY से बारकोड पास प्रिंट करता है, और तभी वाहन को डॉक पर जाने की अनुमति मिलती है।",
-          "mr": "चालक वेटिंग यार्डमध्ये थांबतो, सुरक्षा रक्षक कागदपत्रे तपासतात, डेटा एन्ट्री ऑपरेटर माहिती पडताळतो, YPR_GATEENTRY द्वारे बारकोड पास प्रिंट करतो आणि त्यानंतरच वाहनाला डॉकवर जाण्याची परवानगी मिळते."
+          "en": "Driver halts in waiting yard, security verifies credentials, Data Entry Operator validates shipping data, prints barcode pass via the gate entry pass, and only then is the vehicle authorized to proceed to the dock.",
+          "hi": "चालक वेटिंग यार्ड में रुकता है, सुरक्षा कर्मी क्रेडेंशियल्स की जांच करते हैं, डेटा एंट्री ऑपरेटर डेटा सत्यापित करता है, गेट एंट्री पास से बारकोड पास प्रिंट करता है, और तभी वाहन को डॉक पर जाने की अनुमति मिलती है।",
+          "mr": "चालक वेटिंग यार्डमध्ये थांबतो, सुरक्षा रक्षक कागदपत्रे तपासतात, डेटा एन्ट्री ऑपरेटर माहिती पडताळतो, गेट एंट्री पास द्वारे बारकोड पास प्रिंट करतो आणि त्यानंतरच वाहनाला डॉकवर जाण्याची परवानगी मिळते."
         }
       }
     },
@@ -504,9 +524,9 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "The Data Entry Operator executes YMM_DOCK_ALLOCATE! Based on our shipment of vehicle mechanical parts, which warehouse dock on the AURIC plant layout must be allocated?",
-            "hi": "डेटा एंट्री ऑपरेटर YMM_DOCK_ALLOCATE चलाता है! हमारे वाहन मैकेनिकल पार्ट्स के शिपमेंट के आधार पर, AURIC प्लांट लेआउट पर कौन सा वेयरहाउस डॉक आवंटित किया जाना चाहिए?",
-            "mr": "डेटा एन्ट्री ऑपरेटर YMM_DOCK_ALLOCATE चालवतो! आपल्या वाहनाच्या मेकॅनिकल पार्ट्सच्या डिलिव्हरीनुसार, AURIC प्लांट लेआउटवर कोणता वेअरहाऊस डॉक वाटप केला पाहिजे?"
+            "en": "The Data Entry Operator assigns the warehouse dock! Based on our shipment of vehicle mechanical parts, which warehouse dock on the AURIC plant layout must be allocated?",
+            "hi": "डेटा एंट्री ऑपरेटर वेयरहाउस डॉक आवंटित करता है! हमारे वाहन मैकेनिकल पार्ट्स के शिपमेंट के आधार पर, AURIC प्लांट लेआउट पर कौन सा वेयरहाउस डॉक आवंटित किया जाना चाहिए?",
+            "mr": "डेटा एन्ट्री ऑपरेटर वेअरहाऊस डॉक वाटप करतो! आपल्या वाहनाच्या मेकॅनिकल पार्ट्सच्या डिलिव्हरीAURIC प्लांट लेआउटवर कोणता वेअरहाऊस डॉक वाटप केला पाहिजे?"
           },
           "audioSrc": "/audio/voiceover/s01_sc05_intro.mp3"
         },
@@ -527,6 +547,11 @@
             "mr": "लक्ष द्या! डॉक 01 फक्त बॅटरी सेलसाठी नियंत्रित वॉल्ट आहे, आणि डॉक 06 रसायनांसाठी आहे. वाहनाचे पार्ट्स डॉक 04 (बे B) वर गेले पाहिजेत."
           },
           "audioSrc": "/audio/voiceover/s01_sc05_wrong.mp3"
+        },
+        "dialog": {
+          "en": "The Data Entry Operator assigns the warehouse dock! Based on our shipment of vehicle mechanical parts, which warehouse dock on the AURIC plant layout must be allocated?",
+          "hi": "डेटा एंट्री ऑपरेटर वेयरहाउस डॉक आवंटित करता है! हमारे वाहन मैकेनिकल पार्ट्स के शिपमेंट के आधार पर, AURIC प्लांट लेआउट पर कौन सा वेयरहाउस डॉक आवंटित किया जाना चाहिए?",
+          "mr": "डेटा एन्ट्री ऑपरेटर वेअरहाऊस डॉक वाटप करतो! आपल्या वाहनाच्या मेकॅनिकल पार्ट्सच्या डिलिव्हरीAURIC प्लांट लेआउटवर कोणता वेअरहाऊस डॉक वाटप केला पाहिजे?"
         }
       },
       "interaction": {
@@ -534,9 +559,9 @@
         "questionId": "c1-q05",
         "safetyCritical": false,
         "question": {
-          "en": "The Data Entry Operator executes YMM_DOCK_ALLOCATE for vehicle assembly parts. Tap the correct allocated bay & dock on the AURIC plant layout:",
-          "hi": "डेटा एंट्री ऑपरेटर वाहन असेंबली पार्ट्स के लिए YMM_DOCK_ALLOCATE चलाता है। AURIC प्लांट लेआउट पर सही आवंटित बे और डॉक पर टैप करें:",
-          "mr": "डेटा एन्ट्री ऑपरेटर वाहन असेंब्ली सुट्या भागांसाठी YMM_DOCK_ALLOCATE चालवतो. AURIC प्लांट लेआउटवर योग्य वाटप केलेले बे आणि डॉक टॅप करा:"
+          "en": "The Data Entry Operator assigns the warehouse dock for vehicle assembly parts. Tap the correct allocated bay & dock on the AURIC plant layout:",
+          "hi": "डेटा एंट्री ऑपरेटर वाहन असेंबली पार्ट्स के लिए वेयरहाउस डॉक आवंटित करता है। AURIC प्लांट लेआउट पर सही आवंटित बे और डॉक पर टैप करें:",
+          "mr": "डेटा एन्ट्री ऑपरेटर वाहन असेंब्ली सुट्या भागांसाठी वेअरहाऊस डॉक वाटप करतो. AURIC प्लांट लेआउटवर योग्य वाटप केलेले बे आणि डॉक टॅप करा:"
         },
         "instruction": {
           "en": "Select the authorized dock from the plant layout below:",
@@ -588,9 +613,9 @@
           }
         ],
         "prompt": {
-          "en": "The Data Entry Operator executes YMM_DOCK_ALLOCATE for vehicle assembly parts. Tap the correct allocated bay & dock on the AURIC plant layout:",
-          "hi": "डेटा एंट्री ऑपरेटर वाहन असेंबली पार्ट्स के लिए YMM_DOCK_ALLOCATE चलाता है। AURIC प्लांट लेआउट पर सही आवंटित बे और डॉक पर टैप करें:",
-          "mr": "डेटा एन्ट्री ऑपरेटर वाहन असेंब्ली सुट्या भागांसाठी YMM_DOCK_ALLOCATE चालवतो. AURIC प्लांट लेआउटवर योग्य वाटप केलेले बे आणि डॉक टॅप करा:"
+          "en": "The Data Entry Operator assigns the warehouse dock for vehicle assembly parts. Tap the correct allocated bay & dock on the AURIC plant layout:",
+          "hi": "डेटा एंट्री ऑपरेटर वाहन असेंबली पार्ट्स के लिए वेयरहाउस डॉक आवंटित करता है। AURIC प्लांट लेआउट पर सही आवंटित बे और डॉक पर टैप करें:",
+          "mr": "डेटा एन्ट्री ऑपरेटर वाहन असेंब्ली सुट्या भागांसाठी वेअरहाऊस डॉक वाटप करतो. AURIC प्लांट लेआउटवर योग्य वाटप केलेले बे आणि डॉक टॅप करा:"
         },
         "id": "c1-q05",
         "audioSrc": "/audio/voiceover/s01_sc05_prompt.mp3"
@@ -599,9 +624,9 @@
         "xp": 100,
         "sopClause": "SOP XXXX_PRO_001 Clause 4.2.3",
         "why": {
-          "en": "YMM_DOCK_ALLOCATE assigns warehouse docks based on commodity classification. Vehicle mechanical components are directed to Inbound Bay B (Dock 04), while battery cells must go to Dock 01 and chemicals to isolated annexes.",
-          "hi": "YMM_DOCK_ALLOCATE सामग्री के प्रकार के आधार पर वेयरहाउस डॉक आवंटित करता है। वाहन मैकेनिकल पार्ट्स को इनबाउंड बे B (डॉक 04) पर भेजा जाता है, जबकि बैटरी सेल डॉक 01 और रसायन अलग एनेक्स में जाने चाहिए।",
-          "mr": "YMM_DOCK_ALLOCATE साहित्याच्या प्रकारानुसार वेअरहाऊस डॉक वाटप करते. वाहनाचे मेकॅनिकल पार्ट्स इनबाउंड बे B (डॉक 04) कडे पाठवले जातात, तर बॅटरी सेल डॉक 01 कडे आणि रसायने वेगळ्या अ‍ॅनेक्सकडे गेली पाहिजेत."
+          "en": "dock assignment assigns warehouse docks based on commodity classification. Vehicle mechanical components are directed to Inbound Bay B (Dock 04), while battery cells must go to Dock 01 and chemicals to isolated annexes.",
+          "hi": "वेयरहाउस डॉक आवंटन सामग्री के प्रकार के आधार पर वेयरहाउस डॉक आवंटित करता है। वाहन मैकेनिकल पार्ट्स को इनबाउंड बे B (डॉक 04) पर भेजा जाता है, जबकि बैटरी सेल डॉक 01 और रसायन अलग एनेक्स में जाने चाहिए।",
+          "mr": "वेअरहाऊस डॉक वाटप साहित्याच्या प्रकारानुसार वेअरहाऊस डॉक वाटप करते. वाहनाचे मेकॅनिकल पार्ट्स इनबाउंड बे B (डॉक 04) कडे पाठवले जातात, तर बॅटरी सेल डॉक 01 कडे आणि रसायने वेगळ्या अ‍ॅनेक्सकडे गेली पाहिजेत."
         }
       }
     },
@@ -649,6 +674,11 @@
             "mr": "अतिधोक्याचा इशारा! जर 3-टन वजनाची फोर्कलिफ्ट चॉक्स नसलेल्या ट्रकमध्ये गेली, तर ट्रक पुढे सरकेल आणि फोर्कलिफ्ट डॉकच्या दरीत कोसळू शकते!"
           },
           "audioSrc": "/audio/voiceover/s01_sc06_wrong.mp3"
+        },
+        "dialog": {
+          "en": "The truck is docked at Bay B, Dock 04! Before keys and invoices are handed over and unloading begins, inspect the vehicle for a critical safety violation.",
+          "hi": "ट्रक बे B, डॉक 04 पर खड़ा हो गया है! चाबियां और इनवॉइस सौंपने तथा अनलोडिंग शुरू करने से पहले, वाहन में एक महत्वपूर्ण सुरक्षा उल्लंघन का निरीक्षण करें।",
+          "mr": "ट्रक बे B, डॉक 04 वर लागला आहे! चाव्या आणि इन्व्हॉइस देण्यापूर्वी तसेच अनलोडिंग सुरू करण्यापूर्वी, वाहनातील एका गंभीर सुरक्षा उल्लंघनाची तपासणी करा."
         }
       },
       "interaction": {
@@ -656,8 +686,8 @@
         "questionId": "c1-q06",
         "safetyCritical": true,
         "question": {
-          "en": "CRITICAL SAFETY AUDIT: Spot the immediate safety violation before keys are accepted and unloading starts:",
-          "hi": "महत्वपूर्ण सुरक्षा ऑडिट: चाबियां स्वीकारने और अनलोडिंग शुरू करने से पहले तुरंत सुरक्षा उल्लंघन को पहचानें:",
+          "en": "Spot the immediate safety violation before keys are accepted and unloading starts:",
+          "hi": "चाबियां स्वीकारने और अनलोडिंग शुरू करने से पहले तुरंत सुरक्षा उल्लंघन को पहचानें:",
           "mr": "गंभीर सुरक्षा ऑडिट: चाव्या स्वीकारण्यापूर्वी आणि अनलोडिंग सुरू करण्यापूर्वी तत्काळ होणारे सुरक्षा उल्लंघन ओळखा:"
         },
         "instruction": {
@@ -710,8 +740,8 @@
           }
         ],
         "prompt": {
-          "en": "CRITICAL SAFETY AUDIT: Spot the immediate safety violation before keys are accepted and unloading starts:",
-          "hi": "महत्वपूर्ण सुरक्षा ऑडिट: चाबियां स्वीकारने और अनलोडिंग शुरू करने से पहले तुरंत सुरक्षा उल्लंघन को पहचानें:",
+          "en": "Spot the immediate safety violation before keys are accepted and unloading starts:",
+          "hi": "चाबियां स्वीकारने और अनलोडिंग शुरू करने से पहले तुरंत सुरक्षा उल्लंघन को पहचानें:",
           "mr": "गंभीर सुरक्षा ऑडिट: चाव्या स्वीकारण्यापूर्वी आणि अनलोडिंग सुरू करण्यापूर्वी तत्काळ होणारे सुरक्षा उल्लंघन ओळखा:"
         },
         "id": "c1-q06",
@@ -754,9 +784,9 @@
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Brilliant vigilance! Returnable bins/Foldable Large Containers require an authorized manual Delivery Challan and SAP YMM_GATE_EXIT clearance before the exit gate barrier opens!",
-            "hi": "शानदार सतर्कता! एग्जिट गेट बैरियर खोलने से पहले रिटर्नेबल डिब्बे/फोल्डेबल लार्ज कंटेनर के लिए अधिकृत मैनुअल डिलीवरी चालान और SAP YMM_GATE_EXIT क्लीयरेंस अनिवार्य है!",
-            "mr": "उत्कृष्ट सतर्कता! एक्झिट गेट बॅरियर उघडण्यापूर्वी रिटर्नेबल डबे/फोल्डेबल लार्ज कंटेनर साठी अधिकृत मॅन्युअल डिलिव्हरी चलन आणि SAP YMM_GATE_EXIT क्लिअरन्स अनिवार्य आहे!"
+            "en": "Brilliant vigilance! Returnable bins/Foldable Large Containers require an authorized manual Delivery Challan and system exit clearance before the exit gate barrier opens!",
+            "hi": "शानदार सतर्कता! एग्जिट गेट बैरियर खोलने से पहले रिटर्नेबल डिब्बे/फोल्डेबल लार्ज कंटेनर के लिए अधिकृत मैनुअल डिलीवरी चालान और सिस्टम गेट-एग्जिट क्लीयरेंस अनिवार्य है!",
+            "mr": "उत्कृष्ट सतर्कता! एक्झिट गेट बॅरियर उघडण्यापूर्वी रिटर्नेबल डबे/फोल्डेबल लार्ज कंटेनर साठी अधिकृत मॅन्युअल डिलिव्हरी चलन आणि सिस्टीम गेट-एक्झिट क्लिअरन्स अनिवार्य आहे!"
           },
           "audioSrc": "/audio/voiceover/s01_sc07_correct.mp3"
         },
@@ -768,6 +798,11 @@
             "mr": "थांबा! मॅन्युअल डिलिव्हरी चलन शिवाय बॅरियर कधीही उघडू नका. रिकामे फोल्डेबल लार्ज कंटेनर डबे ही अथर कंपनीची मौल्यवान मालमत्ता आहे. डिलिव्हरी चलन शिवाय हजारो रुपयांचे पॅकेजिंग नोंदीविना बाहेर जाईल!"
           },
           "audioSrc": "/audio/voiceover/s01_sc07_wrong.mp3"
+        },
+        "dialog": {
+          "en": "Unloading is done! The truck has loaded 20 empty blue Foldable Large Container bins to return to the vendor. At the exit gate, the driver demands: 'Open the boom barrier, these are just Ather's empty bins!' What must you do?",
+          "hi": "अनलोडिंग पूरी हो गई! ट्रक ने वेंडर को वापस करने के लिए 20 खाली नीले फोल्डेबल लार्ज कंटेनर डिब्बे लोड किए हैं। एग्जिट गेट पर चालक कहता है: 'बूम बैरियर खोलिए, ये सिर्फ एथर के खाली डिब्बे हैं!' आपको क्या करना चाहिए?",
+          "mr": "अनलोडिंग पूर्ण झाले! ट्रकने व्हेंडरला परत करण्यासाठी 20 रिकामे निळे फोल्डेबल लार्ज कंटेनर डबे लोड केले आहेत. एक्झिट गेटवर चालक म्हणतो: 'बूम बॅरियर उघडा, हे फक्त अथरचे रिकामे डबे आहेत!' तुम्ही काय केले पाहिजे?"
         }
       },
       "interaction": {
@@ -780,7 +815,7 @@
           "mr": "चालक मॅन्युअल डिलिव्हरी चलन शिवाय 20 रिकाम्या फोल्डेबल लार्ज कंटेनर डब्यांसह बाहेर पडू इच्छितो:"
         },
         "situation": {
-          "en": "Truck MH-20-DE-4419 has completed mechanical unloading at Dock 04. The driver loaded 20 folded FLC containers and presents only the inward gate slip, claiming: 'No DC is needed for Ather's own empty bins.'",
+          "en": "Truck MH-20-DE-4419 has completed mechanical unloading at Dock 04. The driver loaded 20 folded Foldable Large Container containers and presents only the inward gate slip, claiming: 'No DC is needed for Ather's own empty bins.'",
           "hi": "ट्रक MH-20-DE-4419 ने डॉक 04 पर मैकेनिकल अनलोडिंग पूरी कर ली है। चालक ने 20 मुड़े हुए FLC कंटेनर लोड किए हैं और केवल आवक गेट पर्ची दिखाते हुए दावा करता है: 'एथर के अपने खाली डिब्बों के लिए किसी DC की आवश्यकता नहीं है।'",
           "mr": "ट्रक MH-20-DE-4419 ने डॉक 04 वर मेकॅनिकल अनलोडिंग पूर्ण केले आहे. चालकाने 20 दुमडलेले FLC कंटेनर लोड केले आहेत आणि फक्त इनवर्ड गेट स्लिप दाखवून सांगतो: 'अथरच्या स्वतःच्या रिकाम्या डब्यांसाठी DC ची गरज नाही.'"
         },
@@ -817,9 +852,9 @@
         "xp": 100,
         "sopClause": "SOP XXXX_PRO_001 Clause 4.1.6.2 & 4.2.4",
         "why": {
-          "en": "Whenever returnable packaging (Foldable Large Containers, plastic bins, or trolleys) is taken out, an authorized manual Delivery Challan must be verified and Data Entry Operator must perform SAP YMM_GATE_EXIT before Security unlocks the departure gate.",
-          "hi": "जब भी रिटर्नेबल पैकेजिंग (फोल्डेबल लार्ज कंटेनर, प्लास्टिक डिब्बे या ट्रॉली) बाहर निकाली जाती है, तो एक अधिकृत मैनुअल डिलीवरी चालान सत्यापित होना चाहिए और सुरक्षा द्वारा प्रस्थान गेट खोलने से पहले डेटा एंट्री ऑपरेटर को SAP YMM_GATE_EXIT निष्पादित करना चाहिए।",
-          "mr": "जेव्हा जेव्हा रिटर्नेबल पॅकेजिंग (फोल्डेबल लार्ज कंटेनर, प्लास्टिक डबे किंवा ट्रॉली) बाहेर काढले जाते, तेव्हा अधिकृत मॅन्युअल डिलिव्हरी चलन तपासले पाहिजे आणि सुरक्षा रक्षकाने प्रस्थान गेट उघडण्यापूर्वी डेटा एन्ट्री ऑपरेटर ने SAP YMM_GATE_EXIT करणे आवश्यक आहे."
+          "en": "Whenever returnable packaging (Foldable Large Containers, plastic bins, or trolleys) is taken out, an authorized manual Delivery Challan must be verified and Data Entry Operator must perform SAP system exit clearance before Security unlocks the departure gate.",
+          "hi": "जब भी रिटर्नेबल पैकेजिंग (फोल्डेबल लार्ज कंटेनर, प्लास्टिक डिब्बे या ट्रॉली) बाहर निकाली जाती है, तो एक अधिकृत मैनुअल डिलीवरी चालान सत्यापित होना चाहिए और सुरक्षा द्वारा प्रस्थान गेट खोलने से पहले डेटा एंट्री ऑपरेटर को SAP गेट-एग्जिट क्लीयरेंस निष्पादित करना चाहिए।",
+          "mr": "जेव्हा जेव्हा रिटर्नेबल पॅकेजिंग (फोल्डेबल लार्ज कंटेनर, प्लास्टिक डबे किंवा ट्रॉली) बाहेर काढले जाते, तेव्हा अधिकृत मॅन्युअल डिलिव्हरी चलन तपासले पाहिजे आणि सुरक्षा रक्षकाने प्रस्थान गेट उघडण्यापूर्वी डेटा एन्ट्री ऑपरेटर ने SAP गेट-एक्झिट क्लिअरन्स करणे आवश्यक आहे."
         }
       }
     },
@@ -842,9 +877,9 @@
         "intro": {
           "pose": "thinking",
           "text": {
-            "en": "Attention Data Entry Operator! The driver presents an invoice for 50 battery harnesses, but the digital Advanced Shipping Notice in SAP lists 40 pieces under Purchase Order 4500018920. Can gate entry proceed?",
-            "hi": "ध्यान दें डेटा एंट्री ऑपरेटर! चालक 50 बैटरी हार्नेस के लिए एक चालान प्रस्तुत करता है, लेकिन SAP में डिजिटल एडवांस्ड शिपिंग नोटिस परचेज ऑर्डर 4500018920 के तहत 40 टुकड़े सूचीबद्ध करती है। क्या गेट एंट्री आगे बढ़ सकती है?",
-            "mr": "डेटा एन्ट्री ऑपरेटर लक्ष द्या! चालक 50 बॅटरी हार्नेसचे इनव्हॉईस सादर करतो, परंतु SAP मधील डिजिटल ॲडव्हान्स्ड शिपिंग नोटीस परचेस ऑर्डर 4500018920 अंतर्गत 40 नग दाखवते. गेट एंट्री करता येईल का?"
+            "en": "Attention Data Entry Operator! The driver presents an invoice for 50 battery harnesses, but the digital Advanced Shipping Notice in SAP lists 40 pieces for this Purchase Order. Can gate entry proceed?",
+            "hi": "ध्यान दें डेटा एंट्री ऑपरेटर! चालक 50 बैटरी हार्नेस के लिए एक चालान प्रस्तुत करता है, लेकिन SAP में डिजिटल एडवांस्ड शिपिंग नोटिस इस परचेज ऑर्डर पर केवल 40 टुकड़े दिखाता है। क्या गेट एंट्री आगे बढ़ सकती है?",
+            "mr": "डेटा एन्ट्री ऑपरेटर लक्ष द्या! चालक 50 बॅटरी हार्नेसचे इनव्हॉईस सादर करतो, परंतु SAP मधील डिजिटल ॲडव्हान्स्ड शिपिंग नोटीस या परचेस ऑर्डरवर फक्त 40 नग दाखवते. गेट एंट्री करता येईल का?"
           },
           "audioSrc": "/audio/voiceover/s01_sc08_intro.mp3"
         },
@@ -860,11 +895,16 @@
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Violation! Generating a gate pass with an incorrect Advanced Shipping Notice creates major inventory mismatches in SAP ERP that block IQC receiving and vendor payment clearance.",
+            "en": "Violation! Generating a gate pass with an incorrect Advanced Shipping Notice creates major inventory mismatches in SAP ERP that block quality inspection receiving and vendor payment clearance.",
             "hi": "उल्लंघन! गलत एडवांस्ड शिपिंग नोटिस के साथ गेट पास बनाने से SAP ERP में बड़ी इन्वेंट्री विसंगतियां पैदा होती हैं जो IQC प्राप्ति और विक्रेता भुगतान निकासी को रोकती हैं।",
             "mr": "नियमभंग! चुकीच्या ॲडव्हान्स्ड शिपिंग नोटीस सह गेट पास दिल्यास SAP ERP मध्ये मोठी तफावत होते, ज्यामुळे IQC तपासणी आणि व्हेंडर पेमेंट अडकते."
           },
           "audioSrc": "/audio/voiceover/s01_sc08_wrong.mp3"
+        },
+        "dialog": {
+          "en": "Attention Data Entry Operator! The driver presents an invoice for 50 battery harnesses, but the digital Advanced Shipping Notice in SAP lists 40 pieces for this Purchase Order. Can gate entry proceed?",
+          "hi": "ध्यान दें डेटा एंट्री ऑपरेटर! चालक 50 बैटरी हार्नेस के लिए एक चालान प्रस्तुत करता है, लेकिन SAP में डिजिटल एडवांस्ड शिपिंग नोटिस इस परचेज ऑर्डर पर केवल 40 टुकड़े दिखाता है। क्या गेट एंट्री आगे बढ़ सकती है?",
+          "mr": "डेटा एन्ट्री ऑपरेटर लक्ष द्या! चालक 50 बॅटरी हार्नेसचे इनव्हॉईस सादर करतो, परंतु SAP मधील डिजिटल ॲडव्हान्स्ड शिपिंग नोटीस या परचेस ऑर्डरवर फक्त 40 नग दाखवते. गेट एंट्री करता येईल का?"
         }
       },
       "interaction": {
@@ -893,7 +933,7 @@
           "mr": "पुढे जा आणि अंदाजाने नोंद करा"
         },
         "stopDescription": {
-          "en": "Halt gate entry immediately. Notify Gate Incharge to coordinate with supplier for corrected ASN within 1-Hour SLA.",
+          "en": "Halt gate entry immediately. Notify Gate Incharge to coordinate with supplier for corrected ASN within one hour window.",
           "hi": "तुरंत गेट एंट्री रोकें। 1-घंटे के SLA के भीतर सही ASN के लिए आपूर्तिकर्ता से समन्वय करने हेतु गेट प्रभारी को सूचित करें।",
           "mr": "गेट एंट्री त्वरित थांबवा. 1-तासाच्या मुदतीत दुरुस्त ASN मिळवण्यासाठी गेट प्रमुखाला कळवा."
         },
@@ -961,6 +1001,11 @@
             "mr": "चुकीचे! डॉकच्या चालण्याच्या जागेत माल टाकू नका किंवा ट्रकला परत पाठवू नका. जागा मोकळी होईपर्यंत ट्रक पार्किंगमध्ये थांबवला पाहिजे."
           },
           "audioSrc": "/audio/voiceover/s01_sc09_wrong.mp3"
+        },
+        "dialog": {
+          "en": "A scheduled chassis frame truck reports at Gate 01. However, the SAP inventory screen indicates that High-Rise Rack storage for frames is already at 100% maximum capacity! What is the mandatory Data Entry Operator action?",
+          "hi": "गेट 01 पर एक निर्धारित चेसिस फ्रेम ट्रक की रिपोर्ट है। हालांकि, SAP इन्वेंट्री स्क्रीन इंगित करती है कि फ्रेम के लिए हाई-राइज रैक स्टोरेज पहले से ही 100% अधिकतम क्षमता पर है! अनिवार्य डेटा एंट्री ऑपरेटर कार्रवाई क्या है?",
+          "mr": "गेट 01 वर चेसिस फ्रेमचा ट्रक आला आहे. परंतु SAP स्क्रीनवर दिसते की हाय-राईज रॅकमधील जागा 100% पूर्ण भरलेली आहे! डेटा एन्ट्री ऑपरेटर ने कोणती अधिकृत कृती केली पाहिजे?"
         }
       },
       "interaction": {

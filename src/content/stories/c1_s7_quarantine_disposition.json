@@ -19,14 +19,14 @@
         "name": "AURA",
         "pose": "explaining",
         "dialog": {
-          "en": "Critical quality alert at IQC Test Bench 02! While inspecting a 10-piece sample from an incoming batch of 1,000 battery harness connectors, the inspector discovers 2 burnt, defective terminals with critical high resistance. Under SOP 07_C1_S4 and IQC Clause 4.1, which parts must immediately be sent to the NG Quarantine area?",
-          "hi": "IQC टेस्ट बेंच 02 पर गंभीर गुणवत्ता चेतावनी! 1,000 बैटरी हार्नेस कनेक्टर्स के आने वाले बैच से 10-नग के नमूने का निरीक्षण करते समय, निरीक्षक को 2 जले हुए, अत्यधिक प्रतिरोध वाले दोषपूर्ण टर्मिनल मिलते हैं। SOP 07_C1_S4 और IQC क्लॉज 4.1 के तहत, किन पुर्जों को तुरंत NG क्वारंटाइन क्षेत्र में भेजा जाना चाहिए?",
-          "mr": "IQC टेस्ट बेंच 02 वर गंभीर गुणवत्ता इशारा! 1,000 बॅटरी हार्नेस कनेक्टर्सच्या आलेल्या बॅचमधून 10 नगांच्या नमुन्याची तपासणी करताना, निरीक्षकाला 2 जळालेले व धोकादायक दोषपूर्ण टर्मिनल्स सापडतात. SOP 07_C1_S4 व IQC कलम 4.1 नुसार कोणते साहित्य तात्काळ NG क्वारंटाइन भागात पाठवले पाहिजे?"
+          "en": "Critical quality alert at quality inspection Test Bench 02! While inspecting a 10-piece sample from an incoming batch of 1,000 battery harness connectors, the inspector discovers 2 burnt, defective terminals with critical high resistance.",
+          "hi": "IQC टेस्ट बेंच 02 पर गंभीर गुणवत्ता चेतावनी! 1,000 बैटरी हार्नेस कनेक्टर्स के आने वाले बैच से 10-नग के नमूने का निरीक्षण करते समय, निरीक्षक को 2 जले हुए, अत्यधिक प्रतिरोध वाले दोषपूर्ण टर्मिनल मिलते हैं। IQC किन पुर्जों को तुरंत NG क्वारंटाइन क्षेत्र में भेजा जाना चाहिए?",
+          "mr": "IQC टेस्ट बेंच 02 वर गंभीर गुणवत्ता इशारा! 1,000 बॅटरी हार्नेस कनेक्टर्सच्या आलेल्या बॅचमधून 10 नगांच्या नमुन्याची तपासणी करताना, निरीक्षकाला 2 जळालेले व धोकादायक दोषपूर्ण टर्मिनल्स सापडतात. IQC कोणते साहित्य तात्काळ NG क्वारंटाइन भागात पाठवले पाहिजे?"
         },
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Critical quality alert at I-Q-C Test Bench 02! While inspecting a 10-piece sample from an incoming batch of 1,000 battery harness connectors, the inspector discovers 2 burnt, defective terminals with critical high resistance.",
+            "en": "Critical quality alert at quality inspection Test Bench 02! While inspecting a 10-piece sample from an incoming batch of 1,000 battery harness connectors, the inspector discovers 2 burnt, defective terminals with critical high resistance.",
             "hi": "IQC टेस्ट बेंच 02 पर गंभीर गुणवत्ता चेतावनी! 1,000 बैटरी हार्नेस कनेक्टर्स के आने वाले बैच से 10-नग के नमूने का निरीक्षण करते समय, निरीक्षक को 2 जले हुए, अत्यधिक प्रतिरोध वाले दोषपूर्ण टर्मिनल मिलते हैं। IQC किन पुर्जों को तुरंत NG क्वारंटाइन क्षेत्र में भेजा जाना चाहिए?",
             "mr": "IQC टेस्ट बेंच 02 वर गंभीर गुणवत्ता इशारा! 1,000 बॅटरी हार्नेस कनेक्टर्सच्या आलेल्या बॅचमधून 10 नगांच्या नमुन्याची तपासणी करताना, निरीक्षकाला 2 जळालेले व धोकादायक दोषपूर्ण टर्मिनल्स सापडतात. IQC कोणते साहित्य तात्काळ NG क्वारंटाइन भागात पाठवले पाहिजे?"
           },
@@ -44,7 +44,7 @@
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety.",
+            "en": "Warning! protocol violation. Always follow standard operating procedure to maintain quality and safety.",
             "hi": "सावधान! SOP प्रोटोकॉल का उल्लंघन। प्लांट सुरक्षा और गुणवत्ता सुनिश्चित करने के लिए निर्धारित प्रक्रिया का पालन करें।",
             "mr": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
           },
@@ -66,7 +66,7 @@
         "type": "mcq",
         "id": "c1-q31",
         "prompt": {
-          "en": "When IQC finds 2 defective burnt connectors in a 10-piece sample from a 1,000-piece lot, what materials must be moved to the NG Quarantine area?",
+          "en": "When quality inspection finds 2 defective burnt connectors in a 10-piece sample from a 1,000-piece lot, what materials must be moved to the NG Quarantine area?",
           "hi": "जब IQC को 1,000-टुकड़ों के लॉट से 10-टुकड़ों के नमूने में 2 दोषपूर्ण जले हुए कनेक्टर मिलते हैं, तो कौन सी सामग्री NG क्वारंटाइन क्षेत्र में ले जानी चाहिए?",
           "mr": "जेव्हा IQC ला 1,000 नगांच्या लॉटमधून घेतलेल्या 10 नमुन्यांमध्ये 2 जळालेले सदोष कनेक्टर्स सापडतात, तेव्हा कोणते साहित्य NG क्वारंटाइन विभागात हलवले पाहिजे?"
         },
@@ -109,7 +109,7 @@
           }
         ],
         "question": {
-          "en": "When IQC finds 2 defective burnt connectors in a 10-piece sample from a 1,000-piece lot, what materials must be moved to the NG Quarantine area?",
+          "en": "When quality inspection finds 2 defective burnt connectors in a 10-piece sample from a 1,000-piece lot, what materials must be moved to the NG Quarantine area?",
           "hi": "जब IQC को 1,000-टुकड़ों के लॉट से 10-टुकड़ों के नमूने में 2 दोषपूर्ण जले हुए कनेक्टर मिलते हैं, तो कौन सी सामग्री NG क्वारंटाइन क्षेत्र में ले जानी चाहिए?",
           "mr": "जेव्हा IQC ला 1,000 नगांच्या लॉटमधून घेतलेल्या 10 नमुन्यांमध्ये 2 जळालेले सदोष कनेक्टर्स सापडतात, तेव्हा कोणते साहित्य NG क्वारंटाइन विभागात हलवले पाहिजे?"
         },
@@ -137,16 +137,16 @@
         "name": "AURA",
         "pose": "explaining",
         "dialog": {
-          "en": "The NG Logistics manpower team arrives at the IQC staging desk to collect a rejected pallet of high-voltage wiring harnesses. You inspect the pallet: it has a physical Red Tag affixed, but the QC sticker is missing, and the digital JIRA ticket has no Bug ID and lists root cause as 'Unknown'. Under SOP for NG-RTV Clause 4.2 and Question Bank Q34/Q35, what MUST the NG team do?",
-          "hi": "NG लॉजिस्टिक्स मैनपावर टीम उच्च-वोल्टेज वायरिंग हार्नेस के एक खारिज पैलेट को इकट्ठा करने के लिए IQC स्टेजिंग डेस्क पर पहुंचती है। आप पैलेट का निरीक्षण करते हैं: इस पर एक भौतिक रेड टैग चिपका हुआ है, लेकिन QC स्टिकर गायब है, और डिजिटल JIRA टिकट में कोई बग आईडी नहीं है और मूल कारण 'अज्ञात' सूचीबद्ध है। SOP NG-RTV क्लॉज 4.2 और प्रश्न बैंक Q34/Q35 के तहत, NG टीम को क्या करना चाहिए?",
-          "mr": "हाय-व्होल्टेज वायरिंग हार्नेसचा बाद झालेला पॅलेट गोळा करण्यासाठी NG लॉजिस्टिक्स टीम IQC डेस्कवर पोहोचते. तुम्ही पॅलेट तपासता: त्यावर लाल रंगाचा Red Tag लावलेला आहे, पण QC स्टिकर गायब आहे आणि JIRA तिकीटामध्ये Bug ID नसून कारण 'Unknown' दाखवत आहे. SOP NG-RTV कलम 4.2 व प्रश्न संच Q34/Q35 नुसार NG टीमने काय केले पाहिजे?"
+          "en": "The NG Logistics manpower team arrives at the quality inspection staging desk to collect a rejected pallet of high-voltage wiring harnesses. You inspect the pallet: it has a physical Red Tag affixed, but the QC sticker is missing, and the digital JIRA ticket has no Bug ID and lists root cause as 'Unknown'. For Rejected Return to Vendor what MUST the NG team do?",
+          "hi": "NG लॉजिस्टिक्स मैनपावर टीम उच्च-वोल्टेज वायरिंग हार्नेस के एक खारिज पैलेट को इकट्ठा करने के लिए IQC स्टेजिंग डेस्क पर पहुंचती है। आप पैलेट का निरीक्षण करते हैं: इस पर एक भौतिक रेड टैग चिपका हुआ है, लेकिन QC स्टिकर गायब है, और डिजिटल JIRA टिकट में कोई बग आईडी नहीं है और मूल कारण 'अज्ञात' सूचीबद्ध है। SOP NG-रिटर्न टू वेंडर NG टीम को क्या करना चाहिए?",
+          "mr": "हाय-व्होल्टेज वायरिंग हार्नेसचा बाद झालेला पॅलेट गोळा करण्यासाठी NG लॉजिस्टिक्स टीम IQC डेस्कवर पोहोचते. तुम्ही पॅलेट तपासता: त्यावर लाल रंगाचा Red Tag लावलेला आहे, पण QC स्टिकर गायब आहे आणि JIRA तिकीटामध्ये Bug ID नसून कारण 'Unknown' दाखवत आहे. SOP NG-रिटर्न टू व्हेंडर वनुसार NG टीमने काय केले पाहिजे?"
         },
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "The NG Logistics manpower team arrives at the IQC staging desk to collect a rejected pallet of high-voltage wiring harnesses. You inspect the pallet: it has a physical Red Tag affixed, but the QC sticker is missing, and the digital JIRA ticket has no Bug ID and lists root cause as 'Unknown'. For Rejected Return to Vendor /Q35, what MUST the NG team do?",
-            "hi": "NG लॉजिस्टिक्स मैनपावर टीम उच्च-वोल्टेज वायरिंग हार्नेस के एक खारिज पैलेट को इकट्ठा करने के लिए IQC स्टेजिंग डेस्क पर पहुंचती है। आप पैलेट का निरीक्षण करते हैं: इस पर एक भौतिक रेड टैग चिपका हुआ है, लेकिन QC स्टिकर गायब है, और डिजिटल JIRA टिकट में कोई बग आईडी नहीं है और मूल कारण 'अज्ञात' सूचीबद्ध है। SOP NG-रिटर्न टू वेंडर /Q35 के तहत, NG टीम को क्या करना चाहिए?",
-            "mr": "हाय-व्होल्टेज वायरिंग हार्नेसचा बाद झालेला पॅलेट गोळा करण्यासाठी NG लॉजिस्टिक्स टीम IQC डेस्कवर पोहोचते. तुम्ही पॅलेट तपासता: त्यावर लाल रंगाचा Red Tag लावलेला आहे, पण QC स्टिकर गायब आहे आणि JIRA तिकीटामध्ये Bug ID नसून कारण 'Unknown' दाखवत आहे. SOP NG-रिटर्न टू व्हेंडर व/Q35 नुसार NG टीमने काय केले पाहिजे?"
+            "en": "The NG Logistics manpower team arrives at the quality inspection staging desk to collect a rejected pallet of high-voltage wiring harnesses. You inspect the pallet: it has a physical Red Tag affixed, but the QC sticker is missing, and the digital JIRA ticket has no Bug ID and lists root cause as 'Unknown'. For Rejected Return to Vendor what MUST the NG team do?",
+            "hi": "NG लॉजिस्टिक्स मैनपावर टीम उच्च-वोल्टेज वायरिंग हार्नेस के एक खारिज पैलेट को इकट्ठा करने के लिए IQC स्टेजिंग डेस्क पर पहुंचती है। आप पैलेट का निरीक्षण करते हैं: इस पर एक भौतिक रेड टैग चिपका हुआ है, लेकिन QC स्टिकर गायब है, और डिजिटल JIRA टिकट में कोई बग आईडी नहीं है और मूल कारण 'अज्ञात' सूचीबद्ध है। SOP NG-रिटर्न टू वेंडर NG टीम को क्या करना चाहिए?",
+            "mr": "हाय-व्होल्टेज वायरिंग हार्नेसचा बाद झालेला पॅलेट गोळा करण्यासाठी NG लॉजिस्टिक्स टीम IQC डेस्कवर पोहोचते. तुम्ही पॅलेट तपासता: त्यावर लाल रंगाचा Red Tag लावलेला आहे, पण QC स्टिकर गायब आहे आणि JIRA तिकीटामध्ये Bug ID नसून कारण 'Unknown' दाखवत आहे. SOP NG-रिटर्न टू व्हेंडर वनुसार NG टीमने काय केले पाहिजे?"
           },
           "audioSrc": "/audio/voiceover/s07_sc02_intro.mp3"
         },
@@ -224,9 +224,9 @@
         },
         "goOption": {
           "label": {
-            "en": "GO: Collect the pallet immediately into NG caged storage SC01 BL to keep the IQC staging dock clear",
-            "hi": "GO: IQC स्टेजिंग डॉक को साफ रखने के लिए तुरंत NG पिंजरे वाले भंडारण SC01 BL में पैलेट एकत्र करें",
-            "mr": "GO: IQC स्टेजिंग डॉक मोकळा ठेवण्यासाठी ताबडतोब NG केज्ड स्टोरेज SC01 BL मध्ये पॅलेट घेऊन जा"
+            "en": "GO: Collect the pallet immediately into NG caged storage to keep the IQC staging dock clear",
+            "hi": "GO: IQC स्टेजिंग डॉक को साफ रखने के लिए तुरंत NG पिंजरे वाले भंडारण में पैलेट एकत्र करें",
+            "mr": "GO: IQC स्टेजिंग डॉक मोकळा ठेवण्यासाठी ताबडतोब NG केज्ड स्टोरेज मध्ये पॅलेट घेऊन जा"
           }
         },
         "stopOption": {
@@ -242,7 +242,7 @@
         "xp": 120,
         "sopClause": "SOP for NG - RTV Clause 4.2 & Question Bank Q34 & Q35",
         "why": {
-          "en": "SOP for NG - Return to Vendor every rejected component must carry TWO physical identifiers before logistics collection: a Red Tag AND a QC sticker. Simultaneously, the digital JIRA ticket must have status 'QC Done: Fail' accompanied by a registered Bug ID and verified supplier defect root cause. If the Bug ID is missing or cause is marked 'Unknown', the NG team must strictly refuse collection and wait up to 2 days for SQA (Supplier Quality Assurance) or MQA to investigate and update the ticket. Collecting untracked parts creates untraceable ghost inventory in quarantine cage SC01 BL and renders vendor warranty debit notes legally void!",
+          "en": "SOP for NG - Return to Vendor every rejected component must carry TWO physical identifiers before logistics collection: a Red Tag AND a QC sticker. Simultaneously, the digital JIRA ticket must have status 'QC Done: Fail' accompanied by a registered Bug ID and verified supplier defect root cause. If the Bug ID is missing or cause is marked 'Unknown', the NG team must strictly refuse collection and wait up to 2 days for SQA (Supplier Quality Assurance) or MQA to investigate and update the ticket. Collecting untracked parts creates untraceable ghost inventory in the Quarantine Cage and renders vendor warranty debit notes legally void!",
           "hi": "SOP for NG - रिटर्न टू वेंडर आदेश देता है कि लॉजिस्टिक्स संग्रह से पहले प्रत्येक खारिज घटक में दो भौतिक पहचानकर्ता होने चाहिए: एक रेड टैग और एक QC स्टिकर। साथ ही, डिजिटल JIRA टिकट में पंजीकृत बग आईडी और सत्यापित आपूर्तिकर्ता दोष मूल कारण के साथ 'QC Done: Fail' स्थिति होनी चाहिए। यदि बग आईडी गायब है या कारण 'अज्ञात' है, तो NG टीम को संग्रह से सख्ती से इनकार करना चाहिए और SQA/MQA के लिए 2 दिनों तक प्रतीक्षा करनी चाहिए।",
           "mr": "SOP for NG - रिटर्न टू व्हेंडर लॉजिस्टिक्स टीमने माल उचलण्यापूर्वी प्रत्येक नाकारलेल्या भागावर दोन गोष्टी असणे बंधनकारक आहे: Red Tag आणि QC स्टिकर. त्याचबरोबर JIRA तिकीटावर वैध Bug ID, सप्लायरचे नाव आणि कारणासह 'QC Done: Fail' स्टेटस असणे आवश्यक आहे. Bug ID नसल्यास किंवा कारण 'Unknown' असल्यास माल उचलण्यास सक्त मनाई आहे आणि SQA/MQA कडून दुरुस्ती होईपर्यंत 2 दिवस वाट पाहिली जाते."
         }
@@ -251,24 +251,24 @@
     {
       "id": "c1_s7_sc03_quarantine_transfer",
       "name": {
-        "en": "Quarantine Cage Storage SC01 BL & Root Cause Segregation",
-        "hi": "क्वारंटाइन केज स्टोरेज SC01 BL और मूल कारण पृथक्करण",
-        "mr": "क्वारंटाइन केज स्टोरेज SC01 BL आणि मूळ कारणानुसार वर्गीकरण"
+        "en": "Quarantine Cage Storage & Root Cause Segregation",
+        "hi": "क्वारंटाइन केज स्टोरेज और मूल कारण पृथक्करण",
+        "mr": "क्वारंटाइन केज स्टोरेज आणि मूळ कारणानुसार वर्गीकरण"
       },
       "mascot": {
         "name": "AURA",
         "pose": "explaining",
         "dialog": {
-          "en": "We have entered the high-security caged Quarantine Store (Storage Location: SC01 BL)! As rejected materials are stowed here, SAP EWM moves inventory to Blocked Stock and the digital JIRA ticket transitions to 'Quality Failed'. Under SOP NG-RTV Clause 4.3 and Question Bank Q36 & Q37, how must rejected materials be segregated inside the cage?",
-          "hi": "हम उच्च-सुरक्षा पिंजरे वाले क्वारंटाइन स्टोर (भंडारण स्थान: SC01 BL) में प्रवेश कर चुके हैं! जैसे ही खारिज सामग्री को यहां संग्रहीत किया जाता है, SAP EWM इन्वेंट्री को ब्लॉक स्टॉक में ले जाता है और डिजिटल JIRA टिकट 'Quality Failed' में बदल जाता है। SOP NG-RTV क्लॉज 4.3 और प्रश्न बैंक Q36 और Q37 के तहत, पिंजरे के अंदर अस्वीकृत सामग्रियों को कैसे अलग किया जाना चाहिए?",
-          "mr": "आपण अति-सुरक्षित केज्ड क्वारंटाइन स्टोअरमध्ये (लोकेशन: SC01 BL) प्रवेश केला आहे! नाकारलेले साहित्य येथे ठेवताच SAP मधील स्टॉक Blocked Stock मध्ये जातो आणि JIRA तिकीट 'Quality Failed' स्टेटसमध्ये बदलते. SOP NG-RTV कलम 4.3 आणि प्रश्न संच Q36 व Q37 नुसार केजच्या आत साहित्याची वर्गवारी कशी केली पाहिजे?"
+          "en": "We have entered the high-security caged Quarantine Store! As rejected materials are stowed here, SAP moves inventory to Blocked Stock and the digital JIRA ticket transitions to 'Quality Failed'. How must rejected materials be segregated inside the cage?",
+          "hi": "हम उच्च-सुरक्षा पिंजरे वाले क्वारंटाइन स्टोर! में प्रवेश कर चुके हैं! जैसे ही खारिज सामग्री को यहां संग्रहीत किया जाता है, SAP EWM इन्वेंट्री को ब्लॉक स्टॉक में ले जाता है और डिजिटल JIRA टिकट 'Quality Failed' में बदल जाता है। पिंजरे के अंदर अस्वीकृत सामग्रियों को कैसे अलग किया जाना चाहिए?",
+          "mr": "आपण अति-सुरक्षित केज्ड क्वारंटाइन स्टोअरमध्ये! प्रवेश केला आहे! नाकारलेले साहित्य येथे ठेवताच SAP मधील स्टॉक Blocked Stock मध्ये जातो आणि JIRA तिकीट 'Quality Failed' स्टेटसमध्ये बदलते. केजच्या आत साहित्याची वर्गवारी कशी केली पाहिजे?"
         },
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "We have entered the high-security caged Quarantine Store (Storage Location: SC01 BL)! As rejected materials are stowed here, S-A-P E-W-M moves inventory to Blocked Stock and the digital JIRA ticket transitions to 'Quality Failed'. Under.",
-            "hi": "हम उच्च-सुरक्षा पिंजरे वाले क्वारंटाइन स्टोर (भंडारण स्थान: SC01 BL) में प्रवेश कर चुके हैं! जैसे ही खारिज सामग्री को यहां संग्रहीत किया जाता है, SAP EWM इन्वेंट्री को ब्लॉक स्टॉक में ले जाता है और डिजिटल JIRA टिकट 'Quality Failed' में बदल जाता है। SOP NG-रिटर्न टू वेंडर पिंजरे के अंदर अस्वीकृत सामग्रियों को कैसे अलग किया जाना चाहिए?",
-            "mr": "आपण अति-सुरक्षित केज्ड क्वारंटाइन स्टोअरमध्ये (लोकेशन: SC01 BL) प्रवेश केला आहे! नाकारलेले साहित्य येथे ठेवताच SAP मधील स्टॉक Blocked Stock मध्ये जातो आणि JIRA तिकीट 'Quality Failed' स्टेटसमध्ये बदलते. SOP NG-रिटर्न टू व्हेंडर व Q37 नुसार केजच्या आत साहित्याची वर्गवारी कशी केली पाहिजे?"
+            "en": "We have entered the high-security caged Quarantine Store! As rejected materials are stowed here, SAP moves inventory to Blocked Stock and the digital JIRA ticket transitions to 'Quality Failed'. How must rejected materials be segregated inside the cage?",
+            "hi": "हम उच्च-सुरक्षा पिंजरे वाले क्वारंटाइन स्टोर! में प्रवेश कर चुके हैं! जैसे ही खारिज सामग्री को यहां संग्रहीत किया जाता है, SAP EWM इन्वेंट्री को ब्लॉक स्टॉक में ले जाता है और डिजिटल JIRA टिकट 'Quality Failed' में बदल जाता है। पिंजरे के अंदर अस्वीकृत सामग्रियों को कैसे अलग किया जाना चाहिए?",
+            "mr": "आपण अति-सुरक्षित केज्ड क्वारंटाइन स्टोअरमध्ये! प्रवेश केला आहे! नाकारलेले साहित्य येथे ठेवताच SAP मधील स्टॉक Blocked Stock मध्ये जातो आणि JIRA तिकीट 'Quality Failed' स्टेटसमध्ये बदलते. केजच्या आत साहित्याची वर्गवारी कशी केली पाहिजे?"
           },
           "audioSrc": "/audio/voiceover/s07_sc03_intro.mp3"
         },
@@ -284,7 +284,7 @@
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety.",
+            "en": "Warning! protocol violation. Always follow standard operating procedure to maintain quality and safety.",
             "hi": "सावधान! SOP प्रोटोकॉल का उल्लंघन। प्लांट सुरक्षा और गुणवत्ता सुनिश्चित करने के लिए निर्धारित प्रक्रिया का पालन करें।",
             "mr": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
           },
@@ -295,9 +295,9 @@
         "type": "animation",
         "fallbackAnimation": "quarantine_cage_segregation",
         "caption": {
-          "en": "Caged Store SC01 BL: Segregating rejected stock by root cause across Vendor, Transit, and In-House bays",
-          "hi": "केज्ड स्टोर SC01 BL: वेंडर, ट्रांजिट और इन-हाउस बे में मूल कारण द्वारा खारिज स्टॉक को अलग करना",
-          "mr": "केज्ड स्टोअर SC01 BL: व्हेंडर, ट्रान्झिट आणि इन-हाऊस बे मध्ये कारणांनुसार नाकारलेल्या साहित्याचे वर्गीकरण"
+          "en": "Caged Store: Segregating rejected stock by root cause across Vendor, Transit, and In-House bays",
+          "hi": "केज्ड स्टोर: वेंडर, ट्रांजिट और इन-हाउस बे में मूल कारण द्वारा खारिज स्टॉक को अलग करना",
+          "mr": "केज्ड स्टोअर: व्हेंडर, ट्रान्झिट आणि इन-हाऊस बे मध्ये कारणांनुसार नाकारलेल्या साहित्याचे वर्गीकरण"
         },
         "imageSrc": "/Assets/Scenes/c1_s7_sc03_quarantine_transfer.webp"
       },
@@ -305,9 +305,9 @@
         "type": "drag_drop",
         "id": "c1-q37",
         "prompt": {
-          "en": "Drag each rejected lot to its correct dedicated containment bay inside Quarantine Cage SC01 BL based on its defect root cause:",
-          "hi": "प्रत्येक खारिज लॉट को उसके दोष के मूल कारण के आधार पर क्वारंटाइन केज SC01 BL के अंदर उसके सही समर्पित बे में खींचें:",
-          "mr": "दोष निर्मितीच्या कारणावर आधारित प्रत्येक नाकारलेला लॉट क्वारंटाइन केज SC01 BL मधील योग्य बे मध्ये ड्रॅग करा:"
+          "en": "Drag each rejected lot to its correct dedicated containment bay inside the Quarantine Cage based on its defect root cause:",
+          "hi": "प्रत्येक खारिज लॉट को उसके दोष के मूल कारण के आधार पर क्वारंटाइन केज के अंदर उसके सही समर्पित बे में खींचें:",
+          "mr": "दोष निर्मितीच्या कारणावर आधारित प्रत्येक नाकारलेला लॉट क्वारंटाइन केज मधील योग्य बे मध्ये ड्रॅग करा:"
         },
         "zones": [
           {
@@ -365,9 +365,9 @@
           }
         ],
         "question": {
-          "en": "Drag each rejected lot to its correct dedicated containment bay inside Quarantine Cage SC01 BL based on its defect root cause:",
-          "hi": "प्रत्येक खारिज लॉट को उसके दोष के मूल कारण के आधार पर क्वारंटाइन केज SC01 BL के अंदर उसके सही समर्पित बे में खींचें:",
-          "mr": "दोष निर्मितीच्या कारणावर आधारित प्रत्येक नाकारलेला लॉट क्वारंटाइन केज SC01 BL मधील योग्य बे मध्ये ड्रॅग करा:"
+          "en": "Drag each rejected lot to its correct dedicated containment bay inside the Quarantine Cage based on its defect root cause:",
+          "hi": "प्रत्येक खारिज लॉट को उसके दोष के मूल कारण के आधार पर क्वारंटाइन केज के अंदर उसके सही समर्पित बे में खींचें:",
+          "mr": "दोष निर्मितीच्या कारणावर आधारित प्रत्येक नाकारलेला लॉट क्वारंटाइन केज मधील योग्य बे मध्ये ड्रॅग करा:"
         },
         "questionId": "c1-q37",
         "audioSrc": "/audio/voiceover/s07_sc03_prompt.mp3"
@@ -393,16 +393,16 @@
         "name": "AURA",
         "pose": "explaining",
         "dialog": {
-          "en": "The Material Review Board (MRB) — comprising SQA, Manufacturing Quality, Production, and Warehouse — convenes inside caged store SC01 BL to decide the fate of 4 quarantined lots. Verbal approvals are strictly illegal at Ather AURIC Plant M002! Route each quarantined component case study to its authorized disposition path (Auto-RTV, Rework, Use As-Is Deviation, or Scrap).",
-          "hi": "मटेरियल रिव्यू बोर्ड (MRB) — जिसमें SQA, मैन्युफैक्चरिंग क्वालिटी, प्रोडक्शन और वेयरहाउस शामिल हैं — 4 क्वारंटाइन लॉट के भाग्य का फैसला करने के लिए केज्ड स्टोर SC01 BL के अंदर बैठक करता है। एथर औरिक प्लांट M002 में मौखिक अनुमोदन सख्त अवैध हैं! प्रत्येक क्वारंटाइन घटक केस स्टडी को उसके अधिकृत निस्तारण पथ (Auto-RTV, Rework, Use As-Is Deviation, या Scrap) पर भेजें।",
-          "mr": "मटेरियल रिव्ह्यू बोर्ड (MRB) — ज्यामध्ये SQA, उत्पादन गुणवत्ता, प्रोडक्शन आणि वेअरहाऊस प्रमुख असतात — 4 क्वारंटाइन लॉट्सच्या विल्हेवाटीचा निर्णय घेण्यासाठी SC01 BL मध्ये एकत्र येतो. एथर औरिक प्लांट M002 मध्ये तोंडी संमतीला सक्त मनाई आहे! प्रत्येक केस स्टडीला तिच्या अधिकृत विल्हेवाट मार्गावर (Auto-RTV, Rework, Use As-Is Deviation, किंवा Scrap) पाठवा."
+          "en": "The Material Review Board (MRB) — comprising SQA, Manufacturing Quality, Production, and Warehouse — convenes inside caged store Quarantine Storage to decide the fate of 4 quarantined lots. Verbal approvals are strictly illegal at Ather AURIC Plant M002! Route each quarantined component case study to its authorized disposition path (Auto-Return to Vendor, Rework, Use As-Is Deviation, or Scrap).",
+          "hi": "मटेरियल रिव्यू बोर्ड (MRB) — जिसमें SQA, मैन्युफैक्चरिंग क्वालिटी, प्रोडक्शन और वेयरहाउस शामिल हैं — 4 क्वारंटाइन लॉट के भाग्य का फैसला करने के लिए केज्ड स्टोर क्वारंटाइन स्टोरेज के अंदर बैठक करता है। एथर औरिक प्लांट M002 में मौखिक अनुमोदन सख्त अवैध हैं! प्रत्येक क्वारंटाइन घटक केस स्टडी को उसके अधिकृत निस्तारण पथ (Auto-रिटर्न टू वेंडर, Rework, Use As-Is Deviation, या Scrap) पर भेजें।",
+          "mr": "मटेरियल रिव्ह्यू बोर्ड (MRB) — ज्यामध्ये SQA, उत्पादन गुणवत्ता, प्रोडक्शन आणि वेअरहाऊस प्रमुख असतात — 4 क्वारंटाइन लॉट्सच्या विल्हेवाटीचा निर्णय घेण्यासाठी क्वारंटाइन स्टोरेज मध्ये एकत्र येतो. एथर औरिक प्लांट M002 मध्ये तोंडी संमतीला सक्त मनाई आहे! प्रत्येक केस स्टडीला तिच्या अधिकृत विल्हेवाट मार्गावर (Auto-रिटर्न टू व्हेंडर, Rework, Use As-Is Deviation, किंवा Scrap) पाठवा."
         },
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "The Material Review Board (MRB) — comprising SQA, Manufacturing Quality, Production, and Warehouse — convenes inside caged store SC01 BL to decide the fate of 4 quarantined lots. Verbal approvals are strictly illegal at Ather AURIC Plant M002! Route each quarantined component case study to its authorized disposition path (Auto-Return to Vendor, Rework, Use As-Is Deviation, or Scrap).",
-            "hi": "मटेरियल रिव्यू बोर्ड (MRB) — जिसमें SQA, मैन्युफैक्चरिंग क्वालिटी, प्रोडक्शन और वेयरहाउस शामिल हैं — 4 क्वारंटाइन लॉट के भाग्य का फैसला करने के लिए केज्ड स्टोर SC01 BL के अंदर बैठक करता है। एथर औरिक प्लांट M002 में मौखिक अनुमोदन सख्त अवैध हैं! प्रत्येक क्वारंटाइन घटक केस स्टडी को उसके अधिकृत निस्तारण पथ (Auto-रिटर्न टू वेंडर, Rework, Use As-Is Deviation, या Scrap) पर भेजें।",
-            "mr": "मटेरियल रिव्ह्यू बोर्ड (MRB) — ज्यामध्ये SQA, उत्पादन गुणवत्ता, प्रोडक्शन आणि वेअरहाऊस प्रमुख असतात — 4 क्वारंटाइन लॉट्सच्या विल्हेवाटीचा निर्णय घेण्यासाठी SC01 BL मध्ये एकत्र येतो. एथर औरिक प्लांट M002 मध्ये तोंडी संमतीला सक्त मनाई आहे! प्रत्येक केस स्टडीला तिच्या अधिकृत विल्हेवाट मार्गावर (Auto-रिटर्न टू व्हेंडर, Rework, Use As-Is Deviation, किंवा Scrap) पाठवा."
+            "en": "The Material Review Board (MRB) — comprising SQA, Manufacturing Quality, Production, and Warehouse — convenes inside caged store Quarantine Storage to decide the fate of 4 quarantined lots. Verbal approvals are strictly illegal at Ather AURIC Plant M002! Route each quarantined component case study to its authorized disposition path (Auto-Return to Vendor, Rework, Use As-Is Deviation, or Scrap).",
+            "hi": "मटेरियल रिव्यू बोर्ड (MRB) — जिसमें SQA, मैन्युफैक्चरिंग क्वालिटी, प्रोडक्शन और वेयरहाउस शामिल हैं — 4 क्वारंटाइन लॉट के भाग्य का फैसला करने के लिए केज्ड स्टोर क्वारंटाइन स्टोरेज के अंदर बैठक करता है। एथर औरिक प्लांट M002 में मौखिक अनुमोदन सख्त अवैध हैं! प्रत्येक क्वारंटाइन घटक केस स्टडी को उसके अधिकृत निस्तारण पथ (Auto-रिटर्न टू वेंडर, Rework, Use As-Is Deviation, या Scrap) पर भेजें।",
+            "mr": "मटेरियल रिव्ह्यू बोर्ड (MRB) — ज्यामध्ये SQA, उत्पादन गुणवत्ता, प्रोडक्शन आणि वेअरहाऊस प्रमुख असतात — 4 क्वारंटाइन लॉट्सच्या विल्हेवाटीचा निर्णय घेण्यासाठी क्वारंटाइन स्टोरेज मध्ये एकत्र येतो. एथर औरिक प्लांट M002 मध्ये तोंडी संमतीला सक्त मनाई आहे! प्रत्येक केस स्टडीला तिच्या अधिकृत विल्हेवाट मार्गावर (Auto-रिटर्न टू व्हेंडर, Rework, Use As-Is Deviation, किंवा Scrap) पाठवा."
           },
           "audioSrc": "/audio/voiceover/s07_sc04_intro.mp3"
         },
@@ -418,7 +418,7 @@
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety.",
+            "en": "Warning! protocol violation. Always follow standard operating procedure to maintain quality and safety.",
             "hi": "सावधान! SOP प्रोटोकॉल का उल्लंघन। प्लांट सुरक्षा और गुणवत्ता सुनिश्चित करने के लिए निर्धारित प्रक्रिया का पालन करें।",
             "mr": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
           },
@@ -527,9 +527,9 @@
         "xp": 135,
         "sopClause": "SOP for NG - RTV Clause 4.4 & SOP for NG - Scrap Clause 4.1",
         "why": {
-          "en": "SOP for NG - Return to Vendor defines the strict 4-way filter. Supplier manufacturing discrepancies qualify for Auto-Return to Vendor with immediate debit notes. Fixable discrepancies undergo documented internal rework and must undergo 100% re-inspection by IQC before stock entry. Cosmetic deviations require formal Engineering Deviation approval signed by the Chief Technical Officer and Head of Quality. Dangerous, hazardous, or unrepairable materials require joint Production & Finance approval to move into Scrapyard SC01 BL for verified industrial shredding.",
-          "hi": "SOP for NG - रिटर्न टू वेंडर सख्त 4-तरफा फिल्टर को परिभाषित करता है। आपूर्तिकर्ता विनिर्माण विसंगतियां तत्काल डेबिट नोटों के साथ ऑटो-रिटर्न टू वेंडर के लिए योग्य हैं। मरम्मत योग्य विसंगतियों का प्रलेखित आंतरिक रीवर्क होता है और स्टॉक प्रविष्टि से पहले IQC द्वारा 100% पुनः निरीक्षण किया जाना चाहिए। कॉस्मेटिक विचलन के लिए सीटीओ और गुणवत्ता प्रमुख द्वारा हस्ताक्षरित औपचारिक इंजीनियरिंग विचलन अनुमोदन की आवश्यकता होती है। खतरनाक या अपूरणीय सामग्री को औद्योगिक श्रेडिंग के लिए स्क्रैप SC01 BL में ले जाने के लिए संयुक्त उत्पादन और वित्त अनुमोदन की आवश्यकता होती है।",
-          "mr": "SOP for NG - रिटर्न टू व्हेंडर 4 मार्गांची कडक छाननी होते: सप्लायरच्या दोषांसाठी तात्काळ डेबिट नोटसह Auto-रिटर्न टू व्हेंडर होते. दुरुस्त करण्यायोग्य भागांचे अधिकृत रिवर्क होऊन IQC कडून 100% फेरतपासणी होते. कॉस्मेटिक दोषांसाठी चीफ इंजिनिअर व क्वालिटी प्रमुखांचे स्वाक्षरी केलेले Deviation Note लागते. आणि धोकादायक किंवा दुरुस्त न होणाऱ्या भागांसाठी फायनान्स व प्रोडक्शन मंजुरी घेऊन SC01 BL स्क्रॅप यार्डमध्ये श्रेडिंग केले जाते."
+          "en": "SOP for NG - Return to Vendor defines the strict 4-way filter. Supplier manufacturing discrepancies qualify for Auto-Return to Vendor with immediate debit notes. Fixable discrepancies undergo documented internal rework and must undergo 100% re-inspection by IQC before stock entry. Cosmetic deviations require formal Engineering Deviation approval signed by the Chief Technical Officer and Head of Quality. Dangerous, hazardous, or unrepairable materials require joint Production & Finance approval to move into Scrapyard Quarantine Storage for verified industrial shredding.",
+          "hi": "SOP for NG - रिटर्न टू वेंडर सख्त 4-तरफा फिल्टर को परिभाषित करता है। आपूर्तिकर्ता विनिर्माण विसंगतियां तत्काल डेबिट नोटों के साथ ऑटो-रिटर्न टू वेंडर के लिए योग्य हैं। मरम्मत योग्य विसंगतियों का प्रलेखित आंतरिक रीवर्क होता है और स्टॉक प्रविष्टि से पहले IQC द्वारा 100% पुनः निरीक्षण किया जाना चाहिए। कॉस्मेटिक विचलन के लिए सीटीओ और गुणवत्ता प्रमुख द्वारा हस्ताक्षरित औपचारिक इंजीनियरिंग विचलन अनुमोदन की आवश्यकता होती है। खतरनाक या अपूरणीय सामग्री को औद्योगिक श्रेडिंग के लिए स्क्रैप क्वारंटाइन स्टोरेज में ले जाने के लिए संयुक्त उत्पादन और वित्त अनुमोदन की आवश्यकता होती है।",
+          "mr": "SOP for NG - रिटर्न टू व्हेंडर 4 मार्गांची कडक छाननी होते: सप्लायरच्या दोषांसाठी तात्काळ डेबिट नोटसह Auto-रिटर्न टू व्हेंडर होते. दुरुस्त करण्यायोग्य भागांचे अधिकृत रिवर्क होऊन IQC कडून 100% फेरतपासणी होते. कॉस्मेटिक दोषांसाठी चीफ इंजिनिअर व क्वालिटी प्रमुखांचे स्वाक्षरी केलेले Deviation Note लागते. आणि धोकादायक किंवा दुरुस्त न होणाऱ्या भागांसाठी फायनान्स व प्रोडक्शन मंजुरी घेऊन क्वारंटाइन स्टोरेज स्क्रॅप यार्डमध्ये श्रेडिंग केले जाते."
         }
       }
     },
@@ -545,7 +545,7 @@
         "pose": "explaining",
         "dialog": {
           "en": "Final station of Category 1! We are at the Ather Scrapyard Building and Outbound Weighbridge. Defective structural components approved for scrap by Finance and Production must be physically shredded to ensure zero unauthorized street resale, followed by strict weighbridge verification before truck gate exit. Put the 4 steps of the complete scrap disposal lifecycle in the exact SOP sequence!",
-          "hi": "श्रेणी 1 का अंतिम स्टेशन! हम एथर स्क्रैपयार्ड बिल्डिंग और आउटबाउंड वेईब्रिज पर हैं। वित्त और उत्पादन द्वारा स्क्रैप के लिए अनुमोदित दोषपूर्ण संरचनात्मक घटकों को शारीरिक रूप से काटा जाना चाहिए ताकि शून्य अनधिकृत सड़क पुनर्विक्रय सुनिश्चित हो सके, जिसके बाद ट्रक गेट से बाहर निकलने से पहले सख्त वेईब्रिज सत्यापन हो। पूर्ण स्क्रैप निपटान जीवनचक्र के 4 चरणों को सटीक SOP क्रम में रखें!",
+          "hi": "श्रेणी 1 का अंतिम स्टेशन! हम एथर स्क्रैपयार्ड बिल्डिंग और आउटबाउंड वेईब्रिज पर हैं। वित्त और उत्पादन द्वारा स्क्रैप के लिए अनुमोदित दोषपूर्ण संरचनात्मक घटकों को शारीरिक रूप से काटा जाना चाहिए ताकि शून्य अनधिकृत सड़क पुनर्विक्रय सुनिश्चित हो सके, जिसके बाद ट्रक गेट से बाहर निकलने से पहले सख्त वेईब्रिज सत्यापन हो। पूर्ण स्क्रैप निपटान जीवनचक्र के 4 चरणों को सटीक क्रम में रखें!",
           "mr": "कॅटेगरी 1 चा अंतिम टप्पा! आपण एथर स्क्रॅप यार्ड आणि आऊटबाउंड वेईब्रिजवर पोहोचलो आहोत. फायनान्स व प्रोडक्शनने स्क्रॅप मंजूर केलेल्या नाकारलेल्या साहित्याचे औद्योगिक श्रेडरमध्ये तुकडे केले पाहिजेत जेणेकरून ते पुन्हा बाजारात जाऊ नये, आणि त्यानंतर वेईब्रिजवर वजन करून ट्रक सोडला जातो. अधिकृत SOP नुसार स्क्रॅप विल्हेवाटीच्या 4 टप्प्यांचा अचूक क्रम लावा!"
         },
         "intro": {
@@ -561,15 +561,15 @@
           "pose": "success",
           "text": {
             "en": "Spot on! Your operational decision complies with Ather Auric standards.",
-            "hi": "बिल्कुल सही! SOP for NG - Scrap स्क्रैप की गई संपत्तियों के लिए कस्टडी की एक अटूट श्रृंखला का आदेश देता है: पहला, वित्त और उत्पादन साइन-ऑफ अनधिकृत राइट-ऑफ को रोकता है; दूसरा, यांत्रिक श्रेडिंग गारंटी देती है कि खारिज किए गए बैटरी कनेक्टर, चेसिस फ्रेम और ब्रांडेड बॉडी पैनल कभी भी ग्रे रिप्लेसमेंट बाजारों में फिर से प्रवेश नहीं कर सकते हैं; तीसरा, JIRA फोटो प्रूफ कानूनी रूप से आंतरिक ऑडिट ट्रेल्स को पूरा करता है; (4) वेईब्रिज दोहरा माप (खाली बनाम भरा) वित्त द्वारा अंतिम आउटबाउंड डिलीवरी चालान पर हस्ताक्षर करने से पहले शून्य चोरी सुनिश्चित करने के लिए सटीक टन भार की पुष्टि करता है। यह एथर SOP मानकों के 100% अनुरूप है।",
-            "mr": "अगदी बरोबर! SOP for NG - Scrap स्क्रॅप मालमत्तेसाठी कडक नियमावली सांगते: पहिले, फायनान्स व प्रोडक्शन मंजुरी अनधिकृत स्क्रॅप रोखते; दुसरे, यांत्रिक श्रेडिंगमुळे नाकारलेले चेसिस किंवा बॅटरीचे सुटे भाग पुन्हा बाजारात विकले जाण्याचा किंवा अपघात होण्याचा धोका संपतो; तिसरे, JIRA वरील फोटो पुरावे अंतर्गत ऑडिटसाठी बंधनकारक आहेत; (4) वेईब्रिजवर रिकाम्या व भरलेल्या ट्रकचे अचूक वजन करून चोरी रोखली जाते आणि फायनान्सचे डिलिव्हरी चलन घेऊनच गेटमधून ट्रक बाहेर पडतो. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+            "hi": "बिल्कुल सही! SOP for NG - Scrap स्क्रैप की गई संपत्तियों के लिए कस्टडी की एक अटूट श्रृंखला का आदेश देता है: पहला, वित्त और उत्पादन साइन-ऑफ अनधिकृत राइट-ऑफ को रोकता है; दूसरा, यांत्रिक श्रेडिंग गारंटी देती है कि खारिज किए गए बैटरी कनेक्टर, चेसिस फ्रेम और ब्रांडेड बॉडी पैनल कभी भी ग्रे रिप्लेसमेंट बाजारों में फिर से प्रवेश नहीं कर सकते हैं; तीसरा, JIRA फोटो प्रूफ कानूनी रूप से आंतरिक ऑडिट ट्रेल्स को पूरा करता है; वेईब्रिज दोहरा माप (खाली बनाम भरा) वित्त द्वारा अंतिम आउटबाउंड डिलीवरी चालान पर हस्ताक्षर करने से पहले शून्य चोरी सुनिश्चित करने के लिए सटीक टन भार की पुष्टि करता है। यह एथर SOP मानकों के 100% अनुरूप है।",
+            "mr": "अगदी बरोबर! SOP for NG - Scrap स्क्रॅप मालमत्तेसाठी कडक नियमावली सांगते: पहिले, फायनान्स व प्रोडक्शन मंजुरी अनधिकृत स्क्रॅप रोखते; दुसरे, यांत्रिक श्रेडिंगमुळे नाकारलेले चेसिस किंवा बॅटरीचे सुटे भाग पुन्हा बाजारात विकले जाण्याचा किंवा अपघात होण्याचा धोका संपतो; तिसरे, JIRA वरील फोटो पुरावे अंतर्गत ऑडिटसाठी बंधनकारक आहेत; वेईब्रिजवर रिकाम्या व भरलेल्या ट्रकचे अचूक वजन करून चोरी रोखली जाते आणि फायनान्सचे डिलिव्हरी चलन घेऊनच गेटमधून ट्रक बाहेर पडतो. हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
           },
           "audioSrc": "/audio/voiceover/s07_sc05_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety.",
+            "en": "Warning! protocol violation. Always follow standard operating procedure to maintain quality and safety.",
             "hi": "सावधान! SOP प्रोटोकॉल का उल्लंघन। प्लांट सुरक्षा और गुणवत्ता सुनिश्चित करने के लिए निर्धारित प्रक्रिया का पालन करें।",
             "mr": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
           },
@@ -599,9 +599,9 @@
             "id": "step_scrap_approval",
             "correctOrder": 1,
             "label": {
-              "en": "1. Secure signed Finance and Production Scrap Approval Note, transition JIRA to 'To be Scrapped', and move stock to SC01 BL in SAP",
-              "hi": "1. हस्ताक्षरित वित्त और उत्पादन स्क्रैप अनुमोदन नोट सुरक्षित करें, JIRA को 'To be Scrapped' में बदलें, और SAP में स्टॉक को SC01 BL में ले जाएं",
-              "mr": "1. फायनान्स व प्रोडक्शनची अधिकृत स्क्रॅप मंजुरी मिळवा, JIRA स्टेटस 'To be Scrapped' करा आणि SAP मधील स्टॉक SC01 BL मध्ये हलवा"
+              "en": "1. Secure signed Finance and Production Scrap Approval Note, transition JIRA to 'To be Scrapped', and move stock to Quarantine Store in SAP",
+              "hi": "1. हस्ताक्षरित वित्त और उत्पादन स्क्रैप अनुमोदन नोट सुरक्षित करें, JIRA को 'To be Scrapped' में बदलें, और SAP में स्टॉक को क्वारंटाइन स्टोर में ले जाएं",
+              "mr": "1. फायनान्स व प्रोडक्शनची अधिकृत स्क्रॅप मंजुरी मिळवा, JIRA स्टेटस 'To be Scrapped' करा आणि SAP मधील स्टॉक क्वारंटाइन स्टोअर मध्ये हलवा"
             }
           },
           {
@@ -643,9 +643,9 @@
             "id": "step_scrap_approval",
             "correctOrder": 1,
             "label": {
-              "en": "1. Secure signed Finance and Production Scrap Approval Note, transition JIRA to 'To be Scrapped', and move stock to SC01 BL in SAP",
-              "hi": "1. हस्ताक्षरित वित्त और उत्पादन स्क्रैप अनुमोदन नोट सुरक्षित करें, JIRA को 'To be Scrapped' में बदलें, और SAP में स्टॉक को SC01 BL में ले जाएं",
-              "mr": "1. फायनान्स व प्रोडक्शनची अधिकृत स्क्रॅप मंजुरी मिळवा, JIRA स्टेटस 'To be Scrapped' करा आणि SAP मधील स्टॉक SC01 BL मध्ये हलवा"
+              "en": "1. Secure signed Finance and Production Scrap Approval Note, transition JIRA to 'To be Scrapped', and move stock to Quarantine Store in SAP",
+              "hi": "1. हस्ताक्षरित वित्त और उत्पादन स्क्रैप अनुमोदन नोट सुरक्षित करें, JIRA को 'To be Scrapped' में बदलें, और SAP में स्टॉक को क्वारंटाइन स्टोर में ले जाएं",
+              "mr": "1. फायनान्स व प्रोडक्शनची अधिकृत स्क्रॅप मंजुरी मिळवा, JIRA स्टेटस 'To be Scrapped' करा आणि SAP मधील स्टॉक क्वारंटाइन स्टोअर मध्ये हलवा"
             }
           },
           {
@@ -711,9 +711,9 @@
         "name": "AURA",
         "pose": "explaining",
         "dialog": {
-          "en": "Visual floor controls at Dock 02! An incoming lot of motor mount brackets has been delayed at the inspection station because specialized CMM measuring equipment is undergoing morning calibration. The pallet must sit in the staging area for 3 hours. Under Ather SOP and Question Bank Q33, which visual cone must you place on this waiting pallet?",
-          "hi": "डॉक 02 पर विजुअल फ्लोर नियंत्रण! मोटर माउंट ब्रैकेट के आने वाले लॉट में निरीक्षण स्टेशन पर देरी हो गई है क्योंकि विशेष सीएमएम माप उपकरण सुबह के अंशांकन से गुजर रहा है। पैलेट को 3 घंटे के लिए स्टेजिंग क्षेत्र में बैठना चाहिए। एथर एसओपी और प्रश्न बैंक Q33 के तहत, आपको इस प्रतीक्षा कर रहे पैलेट पर कौन सा दृश्य शंकु (कोन) रखना चाहिए?",
-          "mr": "डॉक 02 वरील व्हिज्युअल फ्लोअर नियंत्रण! मोटर माउंट ब्रॅकेट्सचा इनवर्ड लॉट तपासणी स्टेशनवर थांबला आहे कारण CMM मोजणी उपकरणाचे सकाळचे कॅलिब्रेशन सुरू आहे. पॅलेटला स्टेजिंग भागात 3 तास थांबावे लागेल. एथर SOP आणि प्रश्न संच Q33 नुसार, या थांबलेल्या पॅलेटवर तुम्ही कोणता ओळख शंकू (कोन) ठेवला पाहिजे?"
+          "en": "Visual floor controls at Dock 02! An incoming lot of motor mount brackets has been delayed at the inspection station because specialized CMM measuring equipment is undergoing morning calibration. The pallet must sit in the staging area for 3 hours. Under standard procedure which visual cone must you place on this waiting pallet?",
+          "hi": "डॉक 02 पर विजुअल फ्लोर नियंत्रण! मोटर माउंट ब्रैकेट के आने वाले लॉट में निरीक्षण स्टेशन पर देरी हो गई है क्योंकि विशेष सीएमएम माप उपकरण सुबह के अंशांकन से गुजर रहा है। पैलेट को 3 घंटे के लिए स्टेजिंग क्षेत्र में बैठना चाहिए। एथर एसओपी आपको इस प्रतीक्षा कर रहे पैलेट पर कौन सा दृश्य शंकु (कोन) रखना चाहिए?",
+          "mr": "डॉक 02 वरील व्हिज्युअल फ्लोअर नियंत्रण! मोटर माउंट ब्रॅकेट्सचा इनवर्ड लॉट तपासणी स्टेशनवर थांबला आहे कारण CMM मोजणी उपकरणाचे सकाळचे कॅलिब्रेशन सुरू आहे. पॅलेटला स्टेजिंग भागात 3 तास थांबावे लागेल. एथर SOP या थांबलेल्या पॅलेटवर तुम्ही कोणता ओळख शंकू (कोन) ठेवला पाहिजे?"
         },
         "intro": {
           "pose": "explaining",
@@ -727,7 +727,7 @@
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "PERFECT IDENTIFICATION! When an incoming lot is delayed in inspection, place the 'IQC Hold' cone (Yellow/Amber). 'Hold' means awaiting quality disposition — it does NOT mean defective. The Red 'NG' cone is strictly reserved for lots formally rejected with confirmed defects!",
+            "en": "PERFECT IDENTIFICATION! When an incoming lot is delayed in inspection, place the 'quality inspection Hold' cone (Yellow/Amber). 'Hold' means awaiting quality disposition — it does NOT mean defective. The Red 'NG' cone is strictly reserved for lots formally rejected with confirmed defects!",
             "hi": "सटीक पहचान! जब किसी आवक लॉट के निरीक्षण में देरी होती है, तो 'IQC Hold' कोन (पीला/एम्बर) रखें। 'Hold' का अर्थ गुणवत्ता निर्णय की प्रतीक्षा करना है — इसका अर्थ दोषपूर्ण होना नहीं है। लाल 'NG' कोन केवल पुष्टि किए गए दोषों के साथ औपचारिक रूप से अस्वीकृत लॉट के लिए सख्ती से आरक्षित है!",
             "mr": "अचूक ओळख! तपासणीत उशीर झाल्यास 'IQC Hold' शंकू (पिवळा) ठेवावा. 'Hold' म्हणजे निर्णयाची प्रतीक्षा — माल खराब असा त्याचा अर्थ होत नाही. लाल 'NG' शंकू केवळ प्रत्यक्ष दोष सिद्ध झालेल्या आणि नाकारलेल्या मालासाठीच राखीव आहे!"
           },
@@ -736,7 +736,7 @@
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "INCORRECT CONE PLACEMENT! Placing an 'NG' cone on a lot that simply has delayed testing causes false vendor panic, wrongful debit note creation, and unnecessary scrap escalation. Use 'IQC Hold' when waiting for test results!",
+            "en": "INCORRECT CONE PLACEMENT! Placing an 'NG' cone on a lot that simply has delayed testing causes false vendor panic, wrongful debit note creation, and unnecessary scrap escalation. Use 'quality inspection Hold' when waiting for test results!",
             "hi": "गलत शंकु प्लेसमेंट! जिस लॉट का परीक्षण विलंबित है, उस पर 'NG' कोन लगाने से विक्रेता में झूठा डर पैदा होता है, गलत डेबिट नोट बनता है और अनावश्यक रूप से तनाव बढ़ता है। परीक्षण परिणामों की प्रतीक्षा करते समय 'IQC Hold' का उपयोग करें!",
             "mr": "चुकीचा शंकू वापरला! केवळ तपासणीला उशीर झालेल्या मालावर 'NG' शंकू ठेवल्यास विनाकारण सप्लायरवर डेबिट नोट निघेल आणि गोंधळ उडेल. चाचणीच्या निकालाची वाट पाहत असताना 'IQC Hold' शंकूच वापरावा!"
           },
@@ -759,7 +759,7 @@
         "questionId": "c1-q33",
         "id": "c1-q33",
         "prompt": {
-          "en": "IQC inspection is delayed and an inward lot is waiting in staging. Which cone do you place on the pallet?",
+          "en": "quality inspection inspection is delayed and an inward lot is waiting in staging. Which cone do you place on the pallet?",
           "hi": "IQC निरीक्षण में देरी हो रही है और एक आवक लॉट स्टेजिंग में प्रतीक्षा कर रहा है। आप पैलेट पर कौन सा शंकु (कोन) रखते हैं?",
           "mr": "IQC तपासणीला उशीर होत असून इनवर्ड लॉट स्टेजिंगमध्ये थांबलेला आहे. तुम्ही पॅलेटवर कोणता शंकू (कोन) ठेवता?"
         },
@@ -768,7 +768,7 @@
             "id": "opt_iqc_hold",
             "correct": true,
             "label": {
-              "en": "“IQC Hold” Cone (Yellow/Amber: Indicates pending quality decision, not confirmed defective)",
+              "en": "“quality inspection Hold” Cone (Yellow/Amber: Indicates pending quality decision, not confirmed defective)",
               "hi": "“IQC Hold” कोन (पीला/एम्बर: गुणवत्ता निर्णय लंबित होने का संकेत देता है, दोषपूर्ण की पुष्टि नहीं)",
               "mr": "“IQC Hold” शंकू (पिवळा: गुणवत्ता निर्णय प्रलंबित दर्शवतो, माल खराब असल्याचे नाही)"
             }
@@ -802,7 +802,7 @@
           }
         ],
         "question": {
-          "en": "IQC inspection is delayed and an inward lot is waiting in staging. Which cone do you place on the pallet?",
+          "en": "quality inspection inspection is delayed and an inward lot is waiting in staging. Which cone do you place on the pallet?",
           "hi": "IQC निरीक्षण में देरी हो रही है और एक आवक लॉट स्टेजिंग में प्रतीक्षा कर रहा है। आप पैलेट पर कौन सा शंकु (कोन) रखते हैं?",
           "mr": "IQC तपासणीला उशीर होत असून इनवर्ड लॉट स्टेजिंगमध्ये थांबलेला आहे. तुम्ही पॅलेटवर कोणता शंकू (कोन) ठेवता?"
         },
@@ -835,16 +835,16 @@
         "name": "AURA",
         "pose": "trophy",
         "dialog": {
-          "en": "Final milestone of Category 1! You have escorted the rejected pallet into Quarantine Caged Store SC01 BL, verified physical Red Tags, and stored it in the correct root-cause bay. Under SOP for NG-RTV Clause 4.3 and Question Bank Q36, what is the mandatory next digital status transition in JIRA as parts are put away in the NG area?",
-          "hi": "श्रेणी 1 का अंतिम मील का पत्थर! आपने अस्वीकृत पैलेट को क्वारंटाइन केज्ड स्टोर SC01 BL में पहुंचाया है, भौतिक रेड टैग सत्यापित किए हैं, और इसे सही मूल-कारण बे में संग्रहीत किया है। SOP NG-RTV क्लॉज 4.3 और प्रश्न बैंक Q36 के तहत, भागों को NG क्षेत्र में रखे जाने पर JIRA में अनिवार्य अगला डिजिटल स्थिति संक्रमण क्या है?",
-          "mr": "कॅटेगरी 1 चा अंतिम टप्पा! तुम्ही नाकारलेला पॅलेट क्वारंटाइन केज्ड स्टोअर SC01 BL मध्ये सुरक्षित ठेवला आहे, Red Tags तपासले आहेत आणि कारणांनुसार योग्य बे मध्ये लावला आहे. SOP NG-RTV कलम 4.3 आणि प्रश्न बँक Q36 नुसार साहित्य NG भागात ठेवल्यावर JIRA मध्ये पुढील अनिवार्य डिजिटल स्टेटस काय बदलते?"
+          "en": "Final milestone of Category 1! You have escorted the rejected pallet into the caged Quarantine Store, verified physical Red Tags, and stored it in the correct root-cause bay. For Rejected Return to Vendor what is the mandatory next digital status transition in JIRA as parts are put away in the NG area?",
+          "hi": "श्रेणी 1 का अंतिम मील का पत्थर! आपने अस्वीकृत पैलेट को क्वारंटाइन केज में पहुंचाया है, भौतिक रेड टैग सत्यापित किए हैं, और इसे सही मूल-कारण बे में संग्रहीत किया है। SOP NG-रिटर्न टू वेंडर भागों को NG क्षेत्र में रखे जाने पर JIRA में अनिवार्य अगला डिजिटल स्थिति संक्रमण क्या है?",
+          "mr": "कॅटेगरी 1 चा अंतिम टप्पा! तुम्ही नाकारलेला पॅलेट क्वारंटाइन केज मध्ये सुरक्षित ठेवला आहे, Red Tags तपासले आहेत आणि कारणांनुसार योग्य बे मध्ये लावला आहे. SOP NG-रिटर्न टू व्हेंडर साहित्य NG भागात ठेवल्यावर JIRA मध्ये पुढील अनिवार्य डिजिटल स्टेटस काय बदलते?"
         },
         "intro": {
           "pose": "trophy",
           "text": {
-            "en": "Final milestone of Category 1! You have escorted the rejected pallet into Quarantine Caged Store SC01 BL, verified physical Red Tags, and stored it in the correct root-cause bay. For Rejected Return to Vendor what is the mandatory next digital status transition in JIRA as parts are put away in the NG area?",
-            "hi": "श्रेणी 1 का अंतिम मील का पत्थर! आपने अस्वीकृत पैलेट को क्वारंटाइन केज्ड स्टोर SC01 BL में पहुंचाया है, भौतिक रेड टैग सत्यापित किए हैं, और इसे सही मूल-कारण बे में संग्रहीत किया है। SOP NG-रिटर्न टू वेंडर भागों को NG क्षेत्र में रखे जाने पर JIRA में अनिवार्य अगला डिजिटल स्थिति संक्रमण क्या है?",
-            "mr": "कॅटेगरी 1 चा अंतिम टप्पा! तुम्ही नाकारलेला पॅलेट क्वारंटाइन केज्ड स्टोअर SC01 BL मध्ये सुरक्षित ठेवला आहे, Red Tags तपासले आहेत आणि कारणांनुसार योग्य बे मध्ये लावला आहे. SOP NG-रिटर्न टू व्हेंडर साहित्य NG भागात ठेवल्यावर JIRA मध्ये पुढील अनिवार्य डिजिटल स्टेटस काय बदलते?"
+            "en": "Final milestone of Category 1! You have escorted the rejected pallet into the caged Quarantine Store, verified physical Red Tags, and stored it in the correct root-cause bay. For Rejected Return to Vendor what is the mandatory next digital status transition in JIRA as parts are put away in the NG area?",
+            "hi": "श्रेणी 1 का अंतिम मील का पत्थर! आपने अस्वीकृत पैलेट को क्वारंटाइन केज में पहुंचाया है, भौतिक रेड टैग सत्यापित किए हैं, और इसे सही मूल-कारण बे में संग्रहीत किया है। SOP NG-रिटर्न टू वेंडर भागों को NG क्षेत्र में रखे जाने पर JIRA में अनिवार्य अगला डिजिटल स्थिति संक्रमण क्या है?",
+            "mr": "कॅटेगरी 1 चा अंतिम टप्पा! तुम्ही नाकारलेला पॅलेट क्वारंटाइन केज मध्ये सुरक्षित ठेवला आहे, Red Tags तपासले आहेत आणि कारणांनुसार योग्य बे मध्ये लावला आहे. SOP NG-रिटर्न टू व्हेंडर साहित्य NG भागात ठेवल्यावर JIRA मध्ये पुढील अनिवार्य डिजिटल स्टेटस काय बदलते?"
           },
           "audioSrc": "/audio/voiceover/s07_sc07_intro.mp3"
         },
@@ -871,9 +871,9 @@
         "type": "animation",
         "fallbackAnimation": "jira_status_graduation",
         "caption": {
-          "en": "JIRA Ticket Lifecycle: Transitioning from 'QC Done: Fail' to 'Quality Failed' in Caged Quarantine Store SC01 BL",
-          "hi": "JIRA टिकट जीवनचक्र: केज्ड क्वारंटाइन स्टोर SC01 BL में 'QC Done: Fail' से 'Quality Failed' में संक्रमण",
-          "mr": "JIRA तिकीट जीवनचक्र: केज्ड क्वारंटाइन स्टोअर SC01 BL मध्ये 'QC Done: Fail' ते 'Quality Failed' स्टेटस बदल"
+          "en": "JIRA Ticket Lifecycle: Transitioning from 'QC Done: Fail' to 'Quality Failed' in Caged Quarantine Store",
+          "hi": "JIRA टिकट जीवनचक्र: केज्ड क्वारंटाइन स्टोर में 'QC Done: Fail' से 'Quality Failed' में संक्रमण",
+          "mr": "JIRA तिकीट जीवनचक्र: केज्ड क्वारंटाइन स्टोअरमध्ये 'QC Done: Fail' ते 'Quality Failed' स्टेटस बदल"
         },
         "imageSrc": "/Assets/Scenes/c1_s7_sc07_jira_workflow_transitions.webp"
       },
@@ -882,9 +882,9 @@
         "questionId": "c1-q36",
         "id": "c1-q36",
         "prompt": {
-          "en": "After NG parts are put away in the NG caged storage area (SC01 BL), the JIRA status transitions from “QC Done: Fail” to:",
-          "hi": "NG पुर्जों को NG केज्ड स्टोरेज एरिया (SC01 BL) में रखने के बाद, JIRA स्थिति “QC Done: Fail” से किसमें बदल जाती है:",
-          "mr": "NG साहित्य NG केज्ड स्टोरेज भागात (SC01 BL) ठेवल्यानंतर JIRA स्टेटस “QC Done: Fail” वरून कशात बदलते:"
+          "en": "After rejected parts are put away in the Quarantine Storage cage, which status does the JIRA ticket transition to from 'QC Done: Fail'?",
+          "hi": "अस्वीकृत पुर्जों को क्वारंटाइन स्टोरेज केज में रखने के बाद, JIRA स्थिति 'QC Done: Fail' से किसमें बदल जाती है?",
+          "mr": "नाकारलेले साहित्य क्वारंटाइन स्टोरेज केजमध्ये ठेवल्यानंतर JIRA स्टेटस 'QC Done: Fail' वरून कशात बदलते?"
         },
         "options": [
           {
@@ -925,9 +925,9 @@
           }
         ],
         "question": {
-          "en": "After NG parts are put away in the NG caged storage area (SC01 BL), the JIRA status transitions from “QC Done: Fail” to:",
-          "hi": "NG पुर्जों को NG केज्ड स्टोरेज एरिया (SC01 BL) में रखने के बाद, JIRA स्थिति “QC Done: Fail” से किसमें बदल जाती है:",
-          "mr": "NG साहित्य NG केज्ड स्टोरेज भागात (SC01 BL) ठेवल्यानंतर JIRA स्टेटस “QC Done: Fail” वरून कशात बदलते:"
+          "en": "After NG parts are put away in the NG caged storage area (Quarantine Storage), the JIRA status transitions from “QC Done: Fail” to:",
+          "hi": "NG पुर्जों को NG केज्ड स्टोरेज एरिया (क्वारंटाइन स्टोरेज) में रखने के बाद, JIRA स्थिति “QC Done: Fail” से किसमें बदल जाती है:",
+          "mr": "NG साहित्य NG केज्ड स्टोरेज भागात (क्वारंटाइन स्टोरेज) ठेवल्यानंतर JIRA स्टेटस “QC Done: Fail” वरून कशात बदलते:"
         },
         "audioSrc": "/audio/voiceover/s07_sc07_prompt.mp3"
       },
@@ -935,9 +935,9 @@
         "xp": 130,
         "sopClause": "SOP for NG - RTV Clause 4.3 & Question Bank Q36",
         "why": {
-          "en": "SOP for NG - Return to Vendor Digital JIRA status transitions maintain exact synchronization with physical plant movements. When the NG logistics team picks up rejected material from the dock, the ticket reads 'QC Done: Fail'. As soon as the material is physically scanned and stowed into caged storage SC01 BL, the JIRA status transitions to 'Quality Failed'. Dispositions like 'Scrapped' or 'Returned to Vendor' occur strictly downstream after formal MRB and Finance commercial authorizations.",
-          "hi": "SOP for NG - रिटर्न टू वेंडर डिजिटल JIRA स्थिति संक्रमण भौतिक संयंत्र गतिविधियों के साथ सटीक सिंक्रनाइज़ेशन बनाए रखते हैं। जब NG लॉजिस्टिक्स टीम डॉक से खारिज की गई सामग्री उठाती है, तो टिकट 'QC Done: Fail' पढ़ता है। जैसे ही सामग्री को भौतिक रूप से स्कैन किया जाता है और पिंजरे के भंडारण SC01 BL में संग्रहीत किया जाता है, JIRA स्थिति 'Quality Failed' में बदल जाती है। 'Scrapped' या 'Returned to Vendor' जैसे निस्तारण औपचारिक MRB और वित्त वाणिज्यिक प्राधिकरणों के बाद सख्ती से डाउनस्ट्रीम होते हैं।",
-          "mr": "SOP for NG - रिटर्न टू व्हेंडर डिजिटल JIRA स्टेटस हा प्रत्यक्ष कारखान्यातील साहित्याच्या हालचालींशी अचूक जोडलेला असतो. जेव्हा NG टीम डॉकवरून नाकारलेला माल उचलते, तेव्हा तिकीटावर 'QC Done: Fail' असते. माल केज्ड स्टोअर SC01 BL मध्ये स्कॅन करून ठेवताच JIRA स्टेटस 'Quality Failed' होतो. 'Scrapped' किंवा 'Returned to Vendor' हे स्टेटस नंतर अधिकृत MRB व फायनान्स मंजुरीनंतरच दिले जातात."
+          "en": "SOP for NG - Return to Vendor Digital JIRA status transitions maintain exact synchronization with physical plant movements. When the NG logistics team picks up rejected material from the dock, the ticket reads 'QC Done: Fail'. As soon as the material is physically scanned and stowed into caged storage Quarantine Storage, the JIRA status transitions to 'Quality Failed'. Dispositions like 'Scrapped' or 'Returned to Vendor' occur strictly downstream after formal MRB and Finance commercial authorizations.",
+          "hi": "SOP for NG - रिटर्न टू वेंडर डिजिटल JIRA स्थिति संक्रमण भौतिक संयंत्र गतिविधियों के साथ सटीक सिंक्रनाइज़ेशन बनाए रखते हैं। जब NG लॉजिस्टिक्स टीम डॉक से खारिज की गई सामग्री उठाती है, तो टिकट 'QC Done: Fail' पढ़ता है। जैसे ही सामग्री को भौतिक रूप से स्कैन किया जाता है और पिंजरे के क्वारंटाइन स्टोरेज में संग्रहीत किया जाता है, JIRA स्थिति 'Quality Failed' में बदल जाती है। 'Scrapped' या 'Returned to Vendor' जैसे निस्तारण औपचारिक MRB और वित्त वाणिज्यिक प्राधिकरणों के बाद सख्ती से डाउनस्ट्रीम होते हैं।",
+          "mr": "SOP for NG - रिटर्न टू व्हेंडर डिजिटल JIRA स्टेटस हा प्रत्यक्ष कारखान्यातील साहित्याच्या हालचालींशी अचूक जोडलेला असतो. जेव्हा NG टीम डॉकवरून नाकारलेला माल उचलते, तेव्हा तिकीटावर 'QC Done: Fail' असते. माल केज्ड स्टोअर क्वारंटाइन स्टोरेज मध्ये स्कॅन करून ठेवताच JIRA स्टेटस 'Quality Failed' होतो. 'Scrapped' किंवा 'Returned to Vendor' हे स्टेटस नंतर अधिकृत MRB व फायनान्स मंजुरीनंतरच दिले जातात."
         }
       }
     }

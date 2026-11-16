@@ -52,6 +52,11 @@
             "mr": "गंभीर सुरक्षा उल्लंघन! सामान्य वेअरहाऊस मदतनीसांना लिथियम-आयन सेल शिपमेंट हलवण्यास सक्त मनाई आहे. नाजूक बॅटरी सेल्सच्या चुकीच्या हाताळणीमुळे अंतर्गत शॉर्ट सर्किट, आगीचा धोका आणि वॉरंटी रद्द होऊ शकते."
           },
           "audioSrc": "/audio/voiceover/s04_sc01_wrong.mp3"
+        },
+        "dialog": {
+          "en": "Welcome to Stage 4: Specialized Battery Cell Put-Away! High-value lithium-ion battery cell crates have arrived at Dock 01. These sensitive cells power the Ather 450X and are hazardous if mishandled. A general warehouse helper grabs a manual pallet truck to move the pallet to clear the dock floor. Should they proceed?",
+          "hi": "स्टेज 4: विशेष बैटरी सेल पुट-अवे में आपका स्वागत है! डॉक 01 पर उच्च-मूल्य वाले लिथियम-आयन बैटरी सेल क्रेट पहुंचे हैं। ये संवेदनशील सेल एथर 450X को शक्ति प्रदान करते हैं और यदि गलत तरीके से संभाले जाएं तो खतरनाक होते हैं। एक सामान्य वेयरहाउस हेल्पर डॉक फर्श को खाली करने के लिए मैनुअल पैलेट ट्रक से पैलेट को ले जाने की कोशिश करता है। क्या उन्हें आगे बढ़ना चाहिए?",
+          "mr": "स्टेज 4: विशेष बॅटरी सेल पुट-अवेमध्ये आपले स्वागत आहे! डॉक 01 वर उच्च-मूल्याचे लिथियम-आयन बॅटरी सेल क्रेट्स आले आहेत. हे संवेदनशील सेल्स एथर 450X ला उर्जा देतात आणि चुकीच्या पद्धतीने हाताळल्यास धोकादायक असतात. डॉकची जागा मोकळी करण्यासाठी एक सामान्य वेअरहाऊस हेल्पर मॅन्युअल पॅलेट ट्रकने पॅलेट हलवण्याचा प्रयत्न करतो. त्याने पुढे जावे का?"
         }
       },
       "interaction": {
@@ -64,7 +69,7 @@
           "mr": "एक सामान्य वेअरहाऊस हेल्पर डॉकची जागा मोकळी करण्यासाठी मॅन्युअल हँड पॅलेट ट्रक चा वापर करून अनलोड केलेले लिथियम-आयन बॅटरी सेल पॅलेट हलवण्याचा प्रयत्न करतो. या हालचालीस परवानगी द्यावी की थांबवावी?"
         },
         "situation": {
-          "en": "SITUATION AUDIT: Pallet containing high-voltage Class 9 lithium-ion cells at Inbound Dock 01. Operator credentials: General Warehouse Labor (No certified MHE badge). Equipment: Manual Hand Pallet Truck.",
+          "en": "SITUATION AUDIT: Pallet containing high-voltage Class 9 lithium-ion cells at Inbound Dock 01. Operator credentials: General Warehouse Labor (No certified forklift badge). Equipment: Manual Hand Pallet Truck.",
           "hi": "स्थिति ऑडिट: इनबाउंड डॉक 01 पर उच्च-वोल्टेज क्लास 9 लिथियम-आयन सेल वाला पैलेट। ऑपरेटर क्रेडेंशियल्स: सामान्य वेयरहाउस हेल्पर (कोई प्रमाणित MHE बैज नहीं)। उपकरण: मैनुअल हैंड पैलेट ट्रक।",
           "mr": "परिस्थिती ऑडिट: इनबाउंड डॉक 01 वर हाय-व्होल्टेज क्लास 9 लिथियम-आयन सेल्स असलेले पॅलेट. ऑपरेटर पात्रता: सामान्य वेअरहाऊस कामगार (प्रमाणित MHE बॅज नाही). उपकरण: मॅन्युअल हँड पॅलेट ट्रक."
         },
@@ -80,9 +85,9 @@
           "mr": "GO — परवानगी द्या"
         },
         "stopDescription": {
-          "en": "HALT: Only trained & certified MHE operators may handle battery cell lots (Clause 4.1)",
-          "hi": "रोकें: केवल प्रशिक्षित और प्रमाणित MHE ऑपरेटर ही बैटरी सेल लॉट संभाल सकते हैं (क्लॉज 4.1)",
-          "mr": "थांबवा: केवळ प्रशिक्षित आणि प्रमाणित MHE ऑपरेटरच बॅटरी सेल लॉट हाताळू शकतात (कलम 4.1)"
+          "en": "HALT: Only trained & certified forklift operators may handle battery cell lots",
+          "hi": "रोकें: केवल प्रशिक्षित और प्रमाणित MHE ऑपरेटर ही बैटरी सेल लॉट संभाल सकते हैं",
+          "mr": "थांबवा: केवळ प्रशिक्षित आणि प्रमाणित MHE ऑपरेटरच बॅटरी सेल लॉट हाताळू शकतात"
         },
         "goDescription": {
           "en": "ALLOW: Speed up dock clearing by letting the manual helper move the pallet",
@@ -148,6 +153,11 @@
             "mr": "पर्यावरणीय नियमांचे उल्लंघन! 25°C पेक्षा जास्त तापमान सेलचे नुकसान वेगाने करते, तर 60% पेक्षा कमी किंवा 65% पेक्षा जास्त आर्द्रता संवेदनशील बॅटरी टर्मिनल्सभोवती घनीभवन आणि स्टॅटिक डिस्चार्जचा धोका निर्माण करते."
           },
           "audioSrc": "/audio/voiceover/s04_sc02_wrong.mp3"
+        },
+        "dialog": {
+          "en": "The certified Material Handling Equipment operator has transported the lithium-ion cell pallet through the airlock into the sealed Battery Standard Room. Before stowing the pallet into the cell vault, the environmental telemetry monitors must be verified. What are the strict temperature and relative humidity thresholds mandated by standard procedure?",
+          "hi": "प्रमाणित मटेरियल हैंडलिंग इक्विपमेंट ऑपरेटर ने एयरलॉक के माध्यम से लिथियम-आयन सेल पैलेट को सीलबंद बैटरी स्टैंडर्ड रूम में पहुंचाया है। पैलेट को सेल वॉल्ट में रखने से पहले, पर्यावरण टेलीमेट्री मॉनिटरों का सत्यापन किया जाना चाहिए। एथर SOP द्वारा अनिवार्य सख्त तापमान और सापेक्ष आर्द्रता सीमाएं क्या हैं?",
+          "mr": "प्रमाणित मटेरियल हँडलिंग इक्विपमेंट ऑपरेटरने एअरलाँकद्वारे लिथियम-आयन सेल पॅलेट सीलबंद बॅटरी स्टँडर्ड रूममध्ये नेले आहे. पॅलेट सेल वॉल्टमध्ये ठेवण्यापूर्वी, पर्यावरणीय टेलिमेट्री मॉनिटर्स तपासले पाहिजेत. एथर SOP द्वारे अनिवार्य केलेल्या तापमान आणि सापेक्ष आर्द्रतेच्या अचूक मर्यादा कोणत्या आहेत?"
         }
       },
       "interaction": {
@@ -256,6 +266,11 @@
             "mr": "SLA उल्लंघन धोका! बॅटरी सेल्स 2 तासांपेक्षा जास्त वेळ खुल्या डॉकवर ठेवणे एथर गुणवत्ता नियमांचे उल्लंघन आहे. डॉकवरील उष्णता आणि आर्द्रतेमुळे सेल्सचे डिस्चार्ज वाढते आणि आगीचा धोका उद्भवतो. SLA मुदत काटेकोरपणे 2 तास आहे!"
           },
           "audioSrc": "/audio/voiceover/s04_sc03_wrong.mp3"
+        },
+        "dialog": {
+          "en": "Pay close attention to the warehouse clock! Lithium-ion battery cell pallets cannot sit idling on the open receiving dock. Uncontrolled ambient temperature and humidity accelerate electrochemical degradation. Under Ather what is the mandatory maximum SLA window within which the entire battery cell put-away must be completed?",
+          "hi": "वेयरहाउस की घड़ी पर पूरा ध्यान दें! लिथियम-आयन बैटरी सेल पैलेट खुले रिसीविंग डॉक पर निष्क्रिय नहीं रह सकते। अनियंत्रित परिवेशी तापमान और आर्द्रता विद्युत-रासायनिक क्षरण को तेज करते हैं। एथर वह अनिवार्य अधिकतम SLA समय सीमा क्या है जिसके भीतर पूरा बैटरी सेल पुट-अवे पूरा होना चाहिए?",
+          "mr": "वेअरहाऊसच्या घड्याळाकडे बारकाईने लक्ष द्या! लिथियम-आयन बॅटरी सेलचे पॅलेट्स खुल्या रिसीव्हिंग डॉकवर पडून राहू शकत नाहीत. अनियंत्रित तापमान आणि आर्द्रतेमुळे पेशींचे रासायनिक नुकसान वेगाने होते. एथर संपूर्ण बॅटरी सेल पुट-अवे पूर्ण करण्यासाठी अनिवार्य कमाल SLA कालमर्यादा किती आहे?"
         }
       },
       "interaction": {
@@ -364,6 +379,11 @@
             "mr": "धोकादायक संदूषण धोका! सक्रिय पर्यावरणीय उल्लंघन कधीही दुर्लक्षित करू नका किंवा आर्द्रता अलार्म बायपास करण्याचा प्रयत्न करू नका. 75% RH मुळे लिथियम-आयन टर्मिनल्सवर ओलावा साचतो, ज्यामुळे अंतर्गत शॉर्ट सर्किट आणि आगीचा धोका उद्भवतो. ताबडतोब थांबवा, वेगळे करा आणि कळवा!"
           },
           "audioSrc": "/audio/voiceover/s04_sc04_wrong.mp3"
+        },
+        "dialog": {
+          "en": "ALARM TRIPPED! As you prepare to complete cell vault put-away, the wall telemetry strobe begins flashing amber: Relative Humidity has spiked to 75.2% and temperature is rising to 27.4°C. Moisture is dangerous for exposed battery electrodes! What is your immediate mandatory escalation action under Ather?",
+          "hi": "अलार्म बज गया! जब आप सेल वॉल्ट पुट-अवे पूरा करने की तैयारी कर रहे हैं, तो दीवार की टेलीमेट्री एम्बर में चमकने लगती है: सापेक्ष आर्द्रता बढ़कर 75.2% हो गई है और तापमान 27.4°C तक बढ़ रहा है। नमी खुली बैटरी इलेक्ट्रोड के लिए खतरनाक है! एथर आपकी तत्काल अनिवार्य कार्रवाई क्या है?",
+          "mr": "अलार्म वाजला! तुम्ही सेल वॉल्ट पुट-अवे पूर्ण करण्याची तयारी करत असताना, वॉल टेलिमेट्री फ्लॅश होऊ लागली: सापेक्ष आर्द्रता 75.2% पर्यंत वाढली आहे आणि तापमान 27.4°C वर पोहोचले आहे. बॅटरी इलेक्ट्रोड्ससाठी जास्त ओलावा अतिशय धोकादायक आहे! एथर तुमची तातडीची अनिवार्य कृती काय आहे?"
         }
       },
       "interaction": {
@@ -472,6 +492,11 @@
             "mr": "गंभीर सुरक्षा धोका! 3 क्रेट्स एकावर एक ठेवल्यास नाजूक सेल्स दबले जातात, ज्यामुळे इलेक्ट्रोलाइट गळती आणि अंतर्गत शॉर्ट-सर्किटमुळे आग लागण्याचा धोका असतो. लाल शॉक इंडिकेटर दर्शवतो की वाहतुकीदरम्यान मोठा धक्का बसला आहे, त्यामुळे ते सक्रिय असेंब्ली स्टॉकमध्ये जाऊ शकत नाही!"
           },
           "audioSrc": "/audio/voiceover/s04_sc05_wrong.mp3"
+        },
+        "dialog": {
+          "en": "Final Stage 4 Battery Cell Challenge! Inside the battery standard room, floor space is tight. An operator notices two lithium-ion cell crates already stacked on a pallet position and attempts to hoist a third crate on top (3-high stacking) while also ignoring a triggered red ShockWatch indicator on the box corner. Should this be allowed or stopped immediately?",
+          "hi": "अंतिम स्टेज 4 बैटरी सेल चुनौती! बैटरी स्टैंडर्ड रूम के अंदर, फर्श पर जगह कम है। एक ऑपरेटर एक पैलेट स्थिति पर पहले से ही रखे दो लिथियम-आयन सेल क्रेट देखता है और बॉक्स के कोने पर ट्रिगर किए गए लाल ShockWatch संकेतक को अनदेखा करते हुए शीर्ष पर तीसरा क्रेट (3-उच्च स्टैकिंग) फहराने का प्रयास करता है। क्या इसकी अनुमति दी जानी चाहिए या तुरंत रोका जाना चाहिए?",
+          "mr": "अंतिम टप्पा 4 बॅटरी सेल आव्हान! बॅटरी स्टँडर्ड रूममध्ये जागा कमी आहे. एका ऑपरेटरला पॅलेटवर आधीच ठेवलेले दोन लिथियम-आयन सेल क्रेट्स दिसतात आणि तो बॉक्सच्या कोपऱ्यावरील लाल ShockWatch इंडिकेटरकडे दुर्लक्ष करून त्यावर तिसरा क्रेट (3-हाय स्टॅकिंग) ठेवण्याचा प्रयत्न करतो. यास परवानगी द्यावी की ताबडतोब थांबवावे?"
         }
       },
       "interaction": {
@@ -500,9 +525,9 @@
           "mr": "GO — 3-हाय स्टॅकिंगला परवानगी द्या"
         },
         "stopDescription": {
-          "en": "HALT: Max stacking is 2 crates high and red shock indicator requires mandatory Quality quarantine (Clause 4.4)",
-          "hi": "रोकें: अधिकतम स्टैकिंग 2 क्रेट ऊंची है और लाल शॉक संकेतक के लिए अनिवार्य गुणवत्ता क्वारंटाइन की आवश्यकता है (क्लॉज 4.4)",
-          "mr": "थांबवा: कमाल मर्यादा 2 क्रेट्स आहे आणि लाल शॉक इंडिकेटरसाठी अनिवार्य क्वालिटी क्वारंटाइन आवश्यक आहे (कलम 4.4)"
+          "en": "HALT: Max stacking is 2 crates high and red shock indicator requires mandatory Quality quarantine",
+          "hi": "रोकें: अधिकतम स्टैकिंग 2 क्रेट ऊंची है और लाल शॉक संकेतक के लिए अनिवार्य गुणवत्ता क्वारंटाइन की आवश्यकता है",
+          "mr": "थांबवा: कमाल मर्यादा 2 क्रेट्स आहे आणि लाल शॉक इंडिकेटरसाठी अनिवार्य क्वालिटी क्वारंटाइन आवश्यक आहे"
         },
         "goDescription": {
           "en": "ALLOW: Save cleanroom floor space by stacking 3 crates high",

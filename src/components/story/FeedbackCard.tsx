@@ -9,6 +9,7 @@ interface Props {
   onContinue: () => void;
   onRetry?: () => void;
   selectedOptionId?: string | null;
+  isFirstTimeRight?: boolean;
 }
 
 export const FeedbackCard: React.FC<Props> = ({
@@ -17,7 +18,8 @@ export const FeedbackCard: React.FC<Props> = ({
   isCorrect,
   onContinue,
   onRetry,
-  selectedOptionId: _selectedOptionId
+  selectedOptionId: _selectedOptionId,
+  isFirstTimeRight = true
 }) => {
   const mascotData = scene.mascot as any;
   const interaction = scene.interaction as any;
@@ -99,8 +101,18 @@ export const FeedbackCard: React.FC<Props> = ({
 
         <div>
           {isCorrect ? (
-            <span className="px-3 py-1 rounded-full bg-emerald-200/90 text-emerald-800 text-xs font-mono font-bold">
-              +1 Point
+            <span className={`px-3 py-1 rounded-full text-xs font-mono font-bold ${
+              isFirstTimeRight !== false
+                ? 'bg-emerald-200/90 text-emerald-800'
+                : 'bg-blue-100 text-blue-800'
+            }`}>
+              {isFirstTimeRight !== false
+                ? '+1 Point'
+                : lang === 'hi'
+                ? '0 अंक (पुनः प्रयास में सही)'
+                : lang === 'mr'
+                ? '0 गुण (पुन्हा प्रयत्नात योग्य)'
+                : '0 Points (Retry Pass)'}
             </span>
           ) : (
             <span className="px-3 py-1 rounded-full bg-slate-200 text-slate-700 text-xs font-mono font-bold">

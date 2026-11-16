@@ -2,7 +2,7 @@
   "stageId": "c2_s11",
   "stageNumber": 11,
   "stageTitle": {
-    "en": "Production Inspection & Quality PIR",
+    "en": "Production Inspection & Quality Part Issuance Request",
     "hi": "उत्पादन निरीक्षण और गुणवत्ता पीआईआर",
     "mr": "उत्पादन तपासणी आणि गुणवत्ता PIR"
   },
@@ -19,16 +19,16 @@
         "name": "AURA",
         "pose": "explaining",
         "dialog": {
-          "en": "Welcome to Stage 11: Production Inspection & Quality Part Issuance Report (PIR)! At Ather AURIC, non-standard material requests (for engineering testing, validation, and warranty repairs) must be raised via a formal JIRA PIR ticket. These items are non-returnable and charged directly to a cost center. An R&D engineer arrives at the warehouse dock requesting 2 urgent battery packs with a JIRA ticket where the Budget ID field is blank, promising: 'Issue them now, I'll update the budget code in JIRA tomorrow.' Under SOP 05_C2_S3, can you issue the battery packs? STOP OR GO?",
-          "hi": "स्टेज 11 में आपका स्वागत है: उत्पादन निरीक्षण और गुणवत्ता पार्ट इश्यूअन्स रिपोर्ट (PIR)! एथर औरिक में, गैर-मानक सामग्री अनुरोध (इंजीनियरिंग परीक्षण, सत्यापन और वारंटी मरम्मत के लिए) एक औपचारिक JIRA PIR टिकट के माध्यम से उठाए जाने चाहिए। ये वस्तुएं गैर-वापसी योग्य हैं और सीधे लागत केंद्र से ली जाती हैं। एक आरएंडडी इंजीनियर गोदाम के डॉक पर 2 तत्काल बैटरी पैक का अनुरोध करते हुए एक JIRA टिकट के साथ आता है जहां बजट आईडी फ़ील्ड खाली है, यह वादा करते हुए: 'उन्हें अभी जारी करें, मैं कल JIRA में बजट कोड अपडेट कर दूंगा।' SOP 05_C2_S3 के तहत, क्या आप बैटरी पैक जारी कर सकते हैं? रुकें या जाएं?",
-          "mr": "स्टेज 11 मध्ये आपले स्वागत आहे: उत्पादन तपासणी आणि गुणवत्ता पार्ट इश्यूअन्स रिपोर्ट (PIR)! एथर औरिकमध्ये, विशेष कामांसाठी (उदा. R&D टेस्टिंग, व्हेलिडेशन, वॉरंटी बदल) लागणारे साहित्य JIRA PIR तिकिटाद्वारे मागवले जाते. हे साहित्य परत न येणारे (non-returnable) असते आणि त्याचा खर्च संबंधित विभागाच्या बजेट आयडीवर पडतो. एक R&D इंजिनिअर 2 बॅटरी पॅक मागण्यासाठी येतो, ज्याच्या JIRA तिकिटात बजेट आयडीची जागा रिकामी आहे; तो म्हणतो: 'आत्ता बॅटरी द्या, मी उद्या JIRA मध्ये बजेट आयडी टाकेन.' SOP 05_C2_S3 नुसार, तुम्ही बॅटरी पॅक देऊ शकता का? थांबा किंवा पुढे जा?"
+          "en": "Welcome to Stage 11: Production Inspection & Quality Part Issuance Report (Part Issuance Request)! At Ather Auric, non-standard material requests (for engineering testing, validation, and warranty repairs) must be raised via a formal JIRA Part Issuance Request ticket. These items are non-returnable and charged directly to a cost center.",
+          "hi": "स्टेज 11 में आपका स्वागत है: उत्पादन निरीक्षण और गुणवत्ता पार्ट इश्यूअन्स रिपोर्ट (PIR)! एथर औरिक में, गैर-मानक सामग्री अनुरोध (इंजीनियरिंग परीक्षण, सत्यापन और वारंटी मरम्मत के लिए) एक औपचारिक JIRA PIR टिकट के माध्यम से उठाए जाने चाहिए। ये वस्तुएं गैर-वापसी योग्य हैं और सीधे लागत केंद्र से ली जाती हैं। एक आरएंडडी इंजीनियर गोदाम के डॉक पर 2 तत्काल बैटरी पैक का अनुरोध करते हुए एक JIRA टिकट के साथ आता है जहां बजट आईडी फ़ील्ड खाली है, यह वादा करते हुए: 'उन्हें अभी जारी करें, मैं कल JIRA में बजट कोड अपडेट कर दूंगा।' क्या आप बिना स्वीकृत बजट आईडी के बैटरी पैक जारी कर सकते हैं? रुकें या जाएं?",
+          "mr": "स्टेज 11 मध्ये आपले स्वागत आहे: उत्पादन तपासणी आणि गुणवत्ता पार्ट इश्यूअन्स रिपोर्ट (PIR)! एथर औरिकमध्ये, विशेष कामांसाठी (उदा. R&D टेस्टिंग, व्हेलिडेशन, वॉरंटी बदल) लागणारे साहित्य JIRA PIR तिकिटाद्वारे मागवले जाते. हे साहित्य परत न येणारे (non-returnable) असते आणि त्याचा खर्च संबंधित विभागाच्या बजेट आयडीवर पडतो. एक R&D इंजिनिअर 2 बॅटरी पॅक मागण्यासाठी येतो, ज्याच्या JIRA तिकिटात बजेट आयडीची जागा रिकामी आहे; तो म्हणतो: 'आत्ता बॅटरी द्या, मी उद्या JIRA मध्ये बजेट आयडी टाकेन.' अधिकृत बजेट आयडीशिवाय तुम्ही बॅटरी पॅक देऊ शकता का? थांबा किंवा पुढे जा?"
         },
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Welcome to Stage 11: Production Inspection & Quality Part Issuance Report (P-I-R)! At Ather Auric, non-standard material requests (for engineering testing, validation, and warranty repairs) must be raised via a formal JIRA P-I-R ticket. These.",
-            "hi": "स्टेज 11 में आपका स्वागत है: उत्पादन निरीक्षण और गुणवत्ता पार्ट इश्यूअन्स रिपोर्ट (PIR)! एथर औरिक में, गैर-मानक सामग्री अनुरोध (इंजीनियरिंग परीक्षण, सत्यापन और वारंटी मरम्मत के लिए) एक औपचारिक JIRA PIR टिकट के माध्यम से उठाए जाने चाहिए। ये वस्तुएं गैर-वापसी योग्य हैं और सीधे लागत केंद्र से ली जाती हैं। एक आरएंडडी इंजीनियर गोदाम के डॉक पर 2 तत्काल बैटरी पैक का अनुरोध करते हुए एक JIRA टिकट के साथ आता है जहां बजट आईडी फ़ील्ड खाली है, यह वादा करते हुए: 'उन्हें अभी जारी करें, मैं कल JIRA में बजट कोड अपडेट कर दूंगा।' के तहत, क्या आप बैटरी पैक जारी कर सकते हैं? रुकें या जाएं?",
-            "mr": "स्टेज 11 मध्ये आपले स्वागत आहे: उत्पादन तपासणी आणि गुणवत्ता पार्ट इश्यूअन्स रिपोर्ट (PIR)! एथर औरिकमध्ये, विशेष कामांसाठी (उदा. R&D टेस्टिंग, व्हेलिडेशन, वॉरंटी बदल) लागणारे साहित्य JIRA PIR तिकिटाद्वारे मागवले जाते. हे साहित्य परत न येणारे (non-returnable) असते आणि त्याचा खर्च संबंधित विभागाच्या बजेट आयडीवर पडतो. एक R&D इंजिनिअर 2 बॅटरी पॅक मागण्यासाठी येतो, ज्याच्या JIRA तिकिटात बजेट आयडीची जागा रिकामी आहे; तो म्हणतो: 'आत्ता बॅटरी द्या, मी उद्या JIRA मध्ये बजेट आयडी टाकेन.' नुसार, तुम्ही बॅटरी पॅक देऊ शकता का? थांबा किंवा पुढे जा?"
+            "en": "Welcome to Stage 11: Production Inspection & Quality Part Issuance Report (Part Issuance Request)! At Ather Auric, non-standard material requests (for engineering testing, validation, and warranty repairs) must be raised via a formal JIRA Part Issuance Request ticket. These items are non-returnable and charged directly to a cost center.",
+            "hi": "स्टेज 11 में आपका स्वागत है: उत्पादन निरीक्षण और गुणवत्ता पार्ट इश्यूअन्स रिपोर्ट (PIR)! एथर औरिक में, गैर-मानक सामग्री अनुरोध (इंजीनियरिंग परीक्षण, सत्यापन और वारंटी मरम्मत के लिए) एक औपचारिक JIRA PIR टिकट के माध्यम से उठाए जाने चाहिए। ये वस्तुएं गैर-वापसी योग्य हैं और सीधे लागत केंद्र से ली जाती हैं। एक आरएंडडी इंजीनियर गोदाम के डॉक पर 2 तत्काल बैटरी पैक का अनुरोध करते हुए एक JIRA टिकट के साथ आता है जहां बजट आईडी फ़ील्ड खाली है, यह वादा करते हुए: 'उन्हें अभी जारी करें, मैं कल JIRA में बजट कोड अपडेट कर दूंगा।' क्या आप बिना स्वीकृत बजट आईडी के बैटरी पैक जारी कर सकते हैं? रुकें या जाएं?",
+            "mr": "स्टेज 11 मध्ये आपले स्वागत आहे: उत्पादन तपासणी आणि गुणवत्ता पार्ट इश्यूअन्स रिपोर्ट (PIR)! एथर औरिकमध्ये, विशेष कामांसाठी (उदा. R&D टेस्टिंग, व्हेलिडेशन, वॉरंटी बदल) लागणारे साहित्य JIRA PIR तिकिटाद्वारे मागवले जाते. हे साहित्य परत न येणारे (non-returnable) असते आणि त्याचा खर्च संबंधित विभागाच्या बजेट आयडीवर पडतो. एक R&D इंजिनिअर 2 बॅटरी पॅक मागण्यासाठी येतो, ज्याच्या JIRA तिकिटात बजेट आयडीची जागा रिकामी आहे; तो म्हणतो: 'आत्ता बॅटरी द्या, मी उद्या JIRA मध्ये बजेट आयडी टाकेन.' अधिकृत बजेट आयडीशिवाय तुम्ही बॅटरी पॅक देऊ शकता का? थांबा किंवा पुढे जा?"
           },
           "audioSrc": "/audio/voiceover/s11_sc01_intro.mp3"
         },
@@ -44,7 +44,7 @@
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety.",
+            "en": "Warning! protocol violation. Always follow standard operating procedure to maintain quality and safety.",
             "hi": "सावधान! SOP प्रोटोकॉल का उल्लंघन। प्लांट सुरक्षा और गुणवत्ता सुनिश्चित करने के लिए निर्धारित प्रक्रिया का पालन करें।",
             "mr": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
           },
@@ -67,12 +67,12 @@
         "questionId": "c2-q13-budget-id-gate",
         "safetyCritical": true,
         "question": {
-          "en": "Can warehouse personnel pick or issue materials when the JIRA PIR ticket is missing a Budget ID?",
+          "en": "Can warehouse personnel pick or issue materials when the JIRA Part Issuance Request ticket is missing a Budget ID?",
           "hi": "क्या वेयरहाउस कर्मी सामान चुन या जारी कर सकते हैं जब JIRA PIR टिकट में बजट आईडी गायब हो?",
           "mr": "JIRA PIR तिकिटात बजेट आयडी नसताना गोदामातील कर्मचारी माल देऊ शकतात का?"
         },
         "situation": {
-          "en": "An R&D validation engineer urgently needs 2 battery packs (worth ₹1,65,000) for cold-chamber testing and presents JIRA ticket PIR-AURIC-1042 without a Budget ID, promising verbal email confirmation tomorrow.",
+          "en": "An R&D validation engineer urgently needs 2 battery packs (worth ₹1,65,000) for cold-chamber testing and presents JIRA ticket Part Issuance Request-AURIC-1042 without a Budget ID, promising verbal email confirmation tomorrow.",
           "hi": "एक आरएंडडी सत्यापन इंजीनियर को कोल्ड-चेंबर परीक्षण के लिए 2 बैटरी पैक (मूल्य ₹1,65,000) की तत्काल आवश्यकता है और बजट आईडी के बिना JIRA टिकट PIR-AURIC-1042 प्रस्तुत करता है, कल मौखिक ईमेल पुष्टि का वादा करता है।",
           "mr": "एका R&D इंजिनिअरला टेस्टिंगसाठी 2 बॅटरी पॅक (किंमत ₹1,65,000) तात्काळ हवे आहेत आणि तो बजेट आयडी नसलेले JIRA तिकीट PIR-AURIC-1042 दाखवून 'उद्या ईमेलवर बजेट आयडी देतो' असे सांगतो."
         },
@@ -88,9 +88,9 @@
           "mr": "पुढे जा - तोंडी आश्वासनावर माल द्या"
         },
         "stopDescription": {
-          "en": "Halt immediately. SOP 05_C2_S3 Failure Mode 5.2 strictly establishes: 'No Budget ID = No Picking.' PIR materials are non-returnable expenses charged directly to the requester's cost center. Picking without a Budget ID causes unallocated financial leakage and phantom inventory write-offs.",
-          "hi": "तुरंत रुकें। SOP 05_C2_S3 विफलता मोड 5.2 कड़ाई से स्थापित करता है: 'कोई बजट आईडी नहीं = कोई पिकिंग नहीं।' पीआईआर सामग्री गैर-वापसी योग्य खर्च है जो सीधे अनुरोधकर्ता के लागत केंद्र से लिया जाता है। बिना बजट आईडी के पिकिंग वित्तीय रिसाव का कारण बनती है।",
-          "mr": "त्वरित थांबा. SOP 05_C2_S3 अपयश मोड 5.2 कडकपणे सांगतो: 'बजेट आयडी नाही तर माल उचलणे नाही.' PIR चे साहित्य परत न येणारे असून त्याचा थेट खर्च संबंधित विभागावर टाकला जातो. बजेट आयडीशिवाय माल दिल्यास कंपनीचे मोठे आर्थिक नुकसान होते."
+          "en": "Halt immediately. strictly establishes: 'No Budget ID = No Picking.' Part Issuance Request materials are non-returnable expenses charged directly to the requester's cost center. Picking without a Budget ID causes unallocated financial leakage and phantom inventory write-offs.",
+          "hi": "तुरंत रुकें। कड़ाई से स्थापित करता है: 'कोई बजट आईडी नहीं = कोई पिकिंग नहीं।' पीआईआर सामग्री गैर-वापसी योग्य खर्च है जो सीधे अनुरोधकर्ता के लागत केंद्र से लिया जाता है। बिना बजट आईडी के पिकिंग वित्तीय रिसाव का कारण बनती है।",
+          "mr": "त्वरित थांबा. कडकपणे सांगतो: 'बजेट आयडी नाही तर माल उचलणे नाही.' PIR चे साहित्य परत न येणारे असून त्याचा थेट खर्च संबंधित विभागावर टाकला जातो. बजेट आयडीशिवाय माल दिल्यास कंपनीचे मोठे आर्थिक नुकसान होते."
         },
         "goDescription": {
           "en": "Issue the battery packs immediately because R&D projects have higher priority than accounting paperwork.",
@@ -98,7 +98,7 @@
           "mr": "बॅटरी पॅक आत्ताच द्या कारण R&D चे काम कागदपत्रांपेक्षा जास्त महत्त्वाचे आहे."
         },
         "prompt": {
-          "en": "Can warehouse personnel pick or issue materials when the JIRA PIR ticket is missing a Budget ID?",
+          "en": "Can warehouse personnel pick or issue materials when the JIRA Part Issuance Request ticket is missing a Budget ID?",
           "hi": "क्या वेयरहाउस कर्मी सामान चुन या जारी कर सकते हैं जब JIRA PIR टिकट में बजट आईडी गायब हो?",
           "mr": "JIRA PIR तिकिटात बजेट आयडी नसताना गोदामातील कर्मचारी माल देऊ शकतात का?"
         },
@@ -126,16 +126,16 @@
         "name": "AURA",
         "pose": "explaining",
         "dialog": {
-          "en": "Now that the Budget ID is verified on ticket PIR-AURIC-1042, the requester asks you to pick the materials immediately. However, the ticket requests 30 Brake Calipers worth ₹45,000. Under SOP 05_C2_S3 Clause 4.2 & Failure Mode 5.1, what two mandatory sign-offs are required before warehouse manpower is authorized to pick?",
-          "hi": "अब जब टिकट PIR-AURIC-1042 पर बजट आईडी सत्यापित हो गई है, तो अनुरोधकर्ता आपसे तुरंत सामग्री चुनने के लिए कहता है। हालांकि, टिकट में ₹45,000 मूल्य के 30 ब्रेक कैलीपर्स का अनुरोध किया गया है। SOP 05_C2_S3 क्लॉज 4.2 और विफलता मोड 5.1 के तहत, वेयरहाउस जनशक्ति को पिकिंग के लिए अधिकृत किए जाने से पहले कौन से दो अनिवार्य हस्ताक्षर आवश्यक हैं?",
-          "mr": "आता PIR-AURIC-1042 वर बजेट आयडी तपासला गेला आहे, पण विनंतीदार म्हणतो की ताबडतोब माल उचलून द्या. या तिकिटात ₹45,000 किमतीचे 30 ब्रेक कॅलिपर्स मागवले आहेत. SOP 05_C2_S3 कलम 4.2 आणि अपयश मोड 5.1 नुसार, गोदामातून माल उचलण्यापूर्वी कोणत्या दोन अधिकाऱ्यांची मंजुरी असणे अनिवार्य आहे?"
+          "en": "Now that the Budget ID is verified on ticket Part Issuance Request-AURIC-1042, the requester asks you to pick the materials immediately. However, the ticket requests 30 Brake Calipers worth ₹45,000. What two mandatory sign-offs are required before warehouse manpower is authorized to pick?",
+          "hi": "अब जब टिकट PIR-AURIC-1042 पर बजट आईडी सत्यापित हो गई है, तो अनुरोधकर्ता आपसे तुरंत सामग्री चुनने के लिए कहता है। हालांकि, टिकट में ₹45,000 मूल्य के 30 ब्रेक कैलीपर्स का अनुरोध किया गया है। वेयरहाउस जनशक्ति को पिकिंग के लिए अधिकृत किए जाने से पहले कौन से दो अनिवार्य हस्ताक्षर आवश्यक हैं?",
+          "mr": "आता PIR-AURIC-1042 वर बजेट आयडी तपासला गेला आहे, पण विनंतीदार म्हणतो की ताबडतोब माल उचलून द्या. या तिकिटात ₹45,000 किमतीचे 30 ब्रेक कॅलिपर्स मागवले आहेत. आणि गोदामातून माल उचलण्यापूर्वी कोणत्या दोन अधिकाऱ्यांची मंजुरी असणे अनिवार्य आहे?"
         },
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Now that the Budget ID is verified on ticket PIR-AURIC-1042, the requester asks you to pick the materials immediately. However, the ticket requests 30 Brake Calipers worth ₹45,000. What two mandatory sign-offs are required before warehouse manpower is authorized to pick?",
+            "en": "Now that the Budget ID is verified on ticket Part Issuance Request-AURIC-1042, the requester asks you to pick the materials immediately. However, the ticket requests 30 Brake Calipers worth ₹45,000. What two mandatory sign-offs are required before warehouse manpower is authorized to pick?",
             "hi": "अब जब टिकट PIR-AURIC-1042 पर बजट आईडी सत्यापित हो गई है, तो अनुरोधकर्ता आपसे तुरंत सामग्री चुनने के लिए कहता है। हालांकि, टिकट में ₹45,000 मूल्य के 30 ब्रेक कैलीपर्स का अनुरोध किया गया है। वेयरहाउस जनशक्ति को पिकिंग के लिए अधिकृत किए जाने से पहले कौन से दो अनिवार्य हस्ताक्षर आवश्यक हैं?",
-            "mr": "आता PIR-AURIC-1042 वर बजेट आयडी तपासला गेला आहे, पण विनंतीदार म्हणतो की ताबडतोब माल उचलून द्या. या तिकिटात ₹45,000 किमतीचे 30 ब्रेक कॅलिपर्स मागवले आहेत. आणि नुसार, गोदामातून माल उचलण्यापूर्वी कोणत्या दोन अधिकाऱ्यांची मंजुरी असणे अनिवार्य आहे?"
+            "mr": "आता PIR-AURIC-1042 वर बजेट आयडी तपासला गेला आहे, पण विनंतीदार म्हणतो की ताबडतोब माल उचलून द्या. या तिकिटात ₹45,000 किमतीचे 30 ब्रेक कॅलिपर्स मागवले आहेत. आणि गोदामातून माल उचलण्यापूर्वी कोणत्या दोन अधिकाऱ्यांची मंजुरी असणे अनिवार्य आहे?"
           },
           "audioSrc": "/audio/voiceover/s11_sc02_intro.mp3"
         },
@@ -151,7 +151,7 @@
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety.",
+            "en": "Warning! protocol violation. Always follow standard operating procedure to maintain quality and safety.",
             "hi": "सावधान! SOP प्रोटोकॉल का उल्लंघन। प्लांट सुरक्षा और गुणवत्ता सुनिश्चित करने के लिए निर्धारित प्रक्रिया का पालन करें।",
             "mr": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
           },
@@ -174,12 +174,12 @@
         "questionId": "c2-q14-pir-approval-thresholds",
         "safetyCritical": true,
         "question": {
-          "en": "APPROVAL ROUTING: Match each emergency PIR request ticket to its mandatory authorization authority",
-          "hi": "अनुमोदन रूटिंग: प्रत्येक आपातकालीन PIR अनुरोध टिकट को इसके अनिवार्य प्राधिकरण से मिलाएं।",
+          "en": "Match each emergency Part Issuance Request request ticket to its mandatory authorization authority",
+          "hi": "प्रत्येक आपातकालीन PIR अनुरोध टिकट को इसके अनिवार्य प्राधिकरण से मिलाएं।",
           "mr": "मंजुरी वाटप: प्रत्येक तातडीच्या PIR तिकिटाला त्याच्या योग्य मंजुरी अधिकाऱ्याशी जोडा."
         },
         "instruction": {
-          "en": "Tap a PIR ticket card below, then tap the required approval authority bucket to assign it.",
+          "en": "Tap a Part Issuance Request ticket card below, then tap the required approval authority bucket to assign it.",
           "hi": "नीचे दिए गए PIR टिकट कार्ड पर टैप करें, फिर उसे असाइन करने के लिए आवश्यक अनुमोदन प्राधिकरण बकेट पर टैप करें।",
           "mr": "खालील PIR तिकिटावर टॅप करा आणि नंतर ते योग्य मंजुरी विभागाच्या रकान्यात टाकण्यासाठी रकान्यावर टॅप करा."
         },
@@ -217,7 +217,7 @@
             "id": "ticket_battery_pack",
             "icon": "Battery",
             "label": {
-              "en": "PIR-A: 2x Battery Packs (Value: ₹1,10,000, Qty: 2)",
+              "en": "Part Issuance Request-A: 2x Battery Packs (Value: ₹1,10,000, Qty: 2)",
               "hi": "PIR-A: 2x बैटरी पैक (मूल्य: ₹1,10,000, मात्रा: 2)",
               "mr": "PIR-A: 2x बॅटरी पॅक (किंमत: ₹1,10,000, नग: 2)"
             },
@@ -227,7 +227,7 @@
             "id": "ticket_brake_levers",
             "icon": "Wrench",
             "label": {
-              "en": "PIR-B: 50x Brake Levers (Value: ₹18,000, Qty: 50)",
+              "en": "Part Issuance Request-B: 50x Brake Levers (Value: ₹18,000, Qty: 50)",
               "hi": "PIR-B: 50x ब्रेक लीवर (मूल्य: ₹18,000, मात्रा: 50)",
               "mr": "PIR-B: 50x ब्रेक लिव्हर्स (किंमत: ₹18,000, नग: 50)"
             },
@@ -237,7 +237,7 @@
             "id": "ticket_small_sensors",
             "icon": "Cpu",
             "label": {
-              "en": "PIR-C: 4x Sensor Harnesses (Value: ₹3,200, Qty: 4)",
+              "en": "Part Issuance Request-C: 4x Sensor Harnesses (Value: ₹3,200, Qty: 4)",
               "hi": "PIR-C: 4x सेंसर हार्नेस (मूल्य: ₹3,200, मात्रा: 4)",
               "mr": "PIR-C: 4x सेन्सर हार्नेस (किंमत: ₹3,200, नग: 4)"
             },
@@ -245,8 +245,8 @@
           }
         ],
         "prompt": {
-          "en": "APPROVAL ROUTING: Match each emergency PIR request ticket to its mandatory authorization authority",
-          "hi": "अनुमोदन रूटिंग: प्रत्येक आपातकालीन PIR अनुरोध टिकट को इसके अनिवार्य प्राधिकरण से मिलाएं।",
+          "en": "Match each emergency Part Issuance Request request ticket to its mandatory authorization authority",
+          "hi": "प्रत्येक आपातकालीन PIR अनुरोध टिकट को इसके अनिवार्य प्राधिकरण से मिलाएं।",
           "mr": "मंजुरी वाटप: प्रत्येक तातडीच्या PIR तिकिटाला त्याच्या योग्य मंजुरी अधिकाऱ्याशी जोडा."
         },
         "id": "c2-q14-pir-approval-thresholds",
@@ -273,16 +273,16 @@
         "name": "AURA",
         "pose": "explaining",
         "dialog": {
-          "en": "A fully authorized PIR ticket for 5 replacement instrument clusters arrives in the warehouse dispatch queue at 4:15 PM on Friday afternoon. Under SOP 05_C2_S3 Clause 4.2 & Failure Mode 5.1, what is the mandatory dispatch schedule and warehouse handling rule?",
-          "hi": "5 प्रतिस्थापन उपकरण क्लस्टर के लिए एक पूरी तरह से अधिकृत पीआईआर टिकट शुक्रवार दोपहर 4:15 बजे वेयरहाउस प्रेषण कतार में आता है। SOP 05_C2_S3 क्लॉज 4.2 और विफलता मोड 5.1 के तहत, अनिवार्य प्रेषण कार्यक्रम और वेयरहाउस हैंडलिंग नियम क्या है?",
-          "mr": "5 नवीन इन्स्ट्रुमेंट क्लस्टर्ससाठी सर्व मंजुऱ्या मिळालेले एक PIR तिकीट शुक्रवारी दुपारी 4:15 वाजता गोदामाच्या डिस्पॅच स्क्रीनवर येते. SOP 05_C2_S3 कलम 4.2 आणि अपयश मोड 5.1 नुसार, डिस्पॅचचे वेळापत्रक आणि गोदामाचा अनिवार्य नियम काय सांगतो?"
+          "en": "A fully authorized Part Issuance Request ticket for 5 replacement instrument clusters arrives in the warehouse dispatch queue at 4:15 PM on Friday afternoon. What is the mandatory dispatch schedule and warehouse handling rule?",
+          "hi": "5 प्रतिस्थापन उपकरण क्लस्टर के लिए एक पूरी तरह से अधिकृत पीआईआर टिकट शुक्रवार दोपहर 4:15 बजे वेयरहाउस प्रेषण कतार में आता है। अनिवार्य प्रेषण कार्यक्रम और वेयरहाउस हैंडलिंग नियम क्या है?",
+          "mr": "5 नवीन इन्स्ट्रुमेंट क्लस्टर्ससाठी सर्व मंजुऱ्या मिळालेले एक PIR तिकीट शुक्रवारी दुपारी 4:15 वाजता गोदामाच्या डिस्पॅच स्क्रीनवर येते. आणि डिस्पॅचचे वेळापत्रक आणि गोदामाचा अनिवार्य नियम काय सांगतो?"
         },
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "A fully authorized PIR ticket for 5 replacement instrument clusters arrives in the warehouse dispatch queue at 4:15 PM on Friday afternoon. What is the mandatory dispatch schedule and warehouse handling rule?",
+            "en": "A fully authorized Part Issuance Request ticket for 5 replacement instrument clusters arrives in the warehouse dispatch queue at 4:15 PM on Friday afternoon. What is the mandatory dispatch schedule and warehouse handling rule?",
             "hi": "5 प्रतिस्थापन उपकरण क्लस्टर के लिए एक पूरी तरह से अधिकृत पीआईआर टिकट शुक्रवार दोपहर 4:15 बजे वेयरहाउस प्रेषण कतार में आता है। अनिवार्य प्रेषण कार्यक्रम और वेयरहाउस हैंडलिंग नियम क्या है?",
-            "mr": "5 नवीन इन्स्ट्रुमेंट क्लस्टर्ससाठी सर्व मंजुऱ्या मिळालेले एक PIR तिकीट शुक्रवारी दुपारी 4:15 वाजता गोदामाच्या डिस्पॅच स्क्रीनवर येते. आणि नुसार, डिस्पॅचचे वेळापत्रक आणि गोदामाचा अनिवार्य नियम काय सांगतो?"
+            "mr": "5 नवीन इन्स्ट्रुमेंट क्लस्टर्ससाठी सर्व मंजुऱ्या मिळालेले एक PIR तिकीट शुक्रवारी दुपारी 4:15 वाजता गोदामाच्या डिस्पॅच स्क्रीनवर येते. आणि डिस्पॅचचे वेळापत्रक आणि गोदामाचा अनिवार्य नियम काय सांगतो?"
           },
           "audioSrc": "/audio/voiceover/s11_sc03_intro.mp3"
         },
@@ -298,7 +298,7 @@
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety.",
+            "en": "Warning! protocol violation. Always follow standard operating procedure to maintain quality and safety.",
             "hi": "सावधान! SOP प्रोटोकॉल का उल्लंघन। प्लांट सुरक्षा और गुणवत्ता सुनिश्चित करने के लिए निर्धारित प्रक्रिया का पालन करें।",
             "mr": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
           },
@@ -319,16 +319,16 @@
         "type": "mcq",
         "id": "c2-q15-cutoff-clock",
         "prompt": {
-          "en": "How does the 4:00 PM daily cutoff determine PIR outbound dispatch timelines?",
+          "en": "How does the 4:00 PM daily cutoff determine Part Issuance Request outbound dispatch timelines?",
           "hi": "दैनिक 4:00 बजे का कटऑफ पीआईआर आउटबाउंड प्रेषण समयसीमा कैसे निर्धारित करता है?",
-          "mr": "आणि नुसार, दुपारी 4:00 वाजताचा कटऑफ नियम PIR डिस्पॅचची वेळ कशी ठरवतो?"
+          "mr": "आणि दुपारी 4:00 वाजताचा कटऑफ नियम PIR डिस्पॅचची वेळ कशी ठरवतो?"
         },
         "options": [
           {
             "id": "opt_next_working_day",
             "correct": true,
             "label": {
-              "en": "PIR tickets approved prior to 4:00 PM are dispatched same-day; tickets approved after the 4:00 PM daily cutoff are automatically queued for picking and dispatch on the next working day",
+              "en": "Part Issuance Request tickets approved prior to 4:00 PM are dispatched same-day; tickets approved after the 4:00 PM daily cutoff are automatically queued for picking and dispatch on the next working day",
               "hi": "शाम 4:00 बजे से पहले स्वीकृत पीआईआर टिकट उसी दिन प्रेषित किए जाते हैं; दैनिक 4:00 बजे कटऑफ के बाद स्वीकृत टिकट स्वचालित रूप से अगले कार्य दिवस पर पिकिंग और प्रेषण के लिए कतारबद्ध होते हैं",
               "mr": "दुपारी 4:00 पूर्वी मंजूर झालेली PIR तिकिटे त्याच दिवशी पाठवली जातात; दुपारी 4:00 नंतर मंजूर झालेली तिकिटे आपोआप पुढच्या कामाच्या दिवशी सकाळी पिकिंग आणि डिस्पॅचसाठी लावली जातात"
             }
@@ -362,9 +362,9 @@
           }
         ],
         "question": {
-          "en": "How does the 4:00 PM daily cutoff determine PIR outbound dispatch timelines?",
+          "en": "How does the 4:00 PM daily cutoff determine Part Issuance Request outbound dispatch timelines?",
           "hi": "दैनिक 4:00 बजे का कटऑफ पीआईआर आउटबाउंड प्रेषण समयसीमा कैसे निर्धारित करता है?",
-          "mr": "आणि नुसार, दुपारी 4:00 वाजताचा कटऑफ नियम PIR डिस्पॅचची वेळ कशी ठरवतो?"
+          "mr": "आणि दुपारी 4:00 वाजताचा कटऑफ नियम PIR डिस्पॅचची वेळ कशी ठरवतो?"
         },
         "questionId": "c2-q15-cutoff-clock",
         "audioSrc": "/audio/voiceover/s11_sc03_prompt.mp3"
@@ -390,16 +390,16 @@
         "name": "AURA",
         "pose": "proud",
         "dialog": {
-          "en": "The 30 brake calipers have been picked, foam-packed, and staged for dispatch to an Inter-Branch Plant (IBC). Outbound Delivery VL10B and Post Goods Issue VL02N are posted in SAP. The transport carrier truck is waiting at the exit gatehouse. Under SOP 05_C2_S3 Clause 4.3 & Failure Mode 5.4, what full documentation kit must Security physically verify before lifting the boom barrier?",
-          "hi": "30 ब्रेक कैलीपर्स को चुना गया है, फोम-पैक किया गया है और एक इंटर-ब्रांच प्लांट (IBC) में प्रेषण के लिए तैयार किया गया है। आउटबाउंड डिलीवरी VL10B और पोस्ट गुड्स इश्यू VL02N को SAP में पोस्ट किया गया है। ट्रांसपोर्ट कैरियर ट्रक एग्जिट गेटहाउस पर इंतजार कर रहा है। SOP 05_C2_S3 क्लॉज 4.3 और विफलता मोड 5.4 के तहत, बूम बैरियर उठाने से पहले सुरक्षा को भौतिक रूप से किस पूर्ण दस्तावेज़ीकरण किट को सत्यापित करना होगा?",
-          "mr": "30 ब्रेक कॅलिपर्स सुरक्षित फोममध्ये पॅक करून दुसऱ्या शाखेला (IBC) पाठवण्यासाठी तयार आहेत. SAP मध्ये आउटबाउंड डिलिव्हरी VL10B आणि पोस्ट गुड्स इश्यू VL02N ची नोंद झाली आहे. ट्रान्सपोर्टचा ट्रक बाहेर पडण्याच्या गेटवर उभा आहे. SOP 05_C2_S3 कलम 4.3 आणि अपयश मोड 5.4 नुसार, गेटचा बूम बॅरियर उघडण्यापूर्वी सिक्युरिटीने कोणत्या तीन अनिवार्य कागदपत्रांची तपासणी केली पाहिजे?"
+          "en": "The 30 brake calipers have been picked, foam-packed, and staged for dispatch to an Inter-Branch Plant (IBC). Outbound Delivery VL10B and Post Goods Issue VL02N are posted in SAP. The transport carrier truck is waiting.",
+          "hi": "30 ब्रेक कैलीपर्स को चुना गया है, फोम-पैक किया गया है और एक इंटर-ब्रांच प्लांट (IBC) में प्रेषण के लिए तैयार किया गया है। आउटबाउंड डिलीवरी VL10B और पोस्ट गुड्स इश्यू VL02N को SAP में पोस्ट किया गया है। ट्रांसपोर्ट कैरियर ट्रक एग्जिट गेटहाउस पर इंतजार कर रहा है। बूम बैरियर उठाने से पहले सुरक्षा को भौतिक रूप से किस पूर्ण दस्तावेज़ीकरण किट को सत्यापित करना होगा?",
+          "mr": "30 ब्रेक कॅलिपर्स सुरक्षित फोममध्ये पॅक करून दुसऱ्या शाखेला (IBC) पाठवण्यासाठी तयार आहेत. SAP मध्ये आउटबाउंड डिलिव्हरी VL10B आणि पोस्ट गुड्स इश्यू VL02N ची नोंद झाली आहे. ट्रान्सपोर्टचा ट्रक बाहेर पडण्याच्या गेटवर उभा आहे. आणि गेटचा बूम बॅरियर उघडण्यापूर्वी सिक्युरिटीने कोणत्या तीन अनिवार्य कागदपत्रांची तपासणी केली पाहिजे?"
         },
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "The 30 brake calipers have been picked, foam-packed, and staged for dispatch to an Inter-Branch Plant (IBC). Outbound Delivery VL10B and Post Goods Issue VL02N are posted in S-A-P. The transport carrier truck is waiting.",
+            "en": "The 30 brake calipers have been picked, foam-packed, and staged for dispatch to an Inter-Branch Plant (IBC). Outbound Delivery VL10B and Post Goods Issue VL02N are posted in SAP. The transport carrier truck is waiting.",
             "hi": "30 ब्रेक कैलीपर्स को चुना गया है, फोम-पैक किया गया है और एक इंटर-ब्रांच प्लांट (IBC) में प्रेषण के लिए तैयार किया गया है। आउटबाउंड डिलीवरी VL10B और पोस्ट गुड्स इश्यू VL02N को SAP में पोस्ट किया गया है। ट्रांसपोर्ट कैरियर ट्रक एग्जिट गेटहाउस पर इंतजार कर रहा है। बूम बैरियर उठाने से पहले सुरक्षा को भौतिक रूप से किस पूर्ण दस्तावेज़ीकरण किट को सत्यापित करना होगा?",
-            "mr": "30 ब्रेक कॅलिपर्स सुरक्षित फोममध्ये पॅक करून दुसऱ्या शाखेला (IBC) पाठवण्यासाठी तयार आहेत. SAP मध्ये आउटबाउंड डिलिव्हरी VL10B आणि पोस्ट गुड्स इश्यू VL02N ची नोंद झाली आहे. ट्रान्सपोर्टचा ट्रक बाहेर पडण्याच्या गेटवर उभा आहे. आणि नुसार, गेटचा बूम बॅरियर उघडण्यापूर्वी सिक्युरिटीने कोणत्या तीन अनिवार्य कागदपत्रांची तपासणी केली पाहिजे?"
+            "mr": "30 ब्रेक कॅलिपर्स सुरक्षित फोममध्ये पॅक करून दुसऱ्या शाखेला (IBC) पाठवण्यासाठी तयार आहेत. SAP मध्ये आउटबाउंड डिलिव्हरी VL10B आणि पोस्ट गुड्स इश्यू VL02N ची नोंद झाली आहे. ट्रान्सपोर्टचा ट्रक बाहेर पडण्याच्या गेटवर उभा आहे. आणि गेटचा बूम बॅरियर उघडण्यापूर्वी सिक्युरिटीने कोणत्या तीन अनिवार्य कागदपत्रांची तपासणी केली पाहिजे?"
           },
           "audioSrc": "/audio/voiceover/s11_sc04_intro.mp3"
         },
@@ -415,7 +415,7 @@
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Warning! S-O-P protocol violation. Always follow standard operating procedure to maintain quality and safety.",
+            "en": "Warning! protocol violation. Always follow standard operating procedure to maintain quality and safety.",
             "hi": "सावधान! SOP प्रोटोकॉल का उल्लंघन। प्लांट सुरक्षा और गुणवत्ता सुनिश्चित करने के लिए निर्धारित प्रक्रिया का पालन करें।",
             "mr": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
           },
@@ -439,7 +439,7 @@
         "prompt": {
           "en": "What documentation kit is legally required to authorize outbound material gate exit?",
           "hi": "आउटबाउंड सामग्री गेट निकास को अधिकृत करने के लिए कानूनी रूप से किस दस्तावेज़ीकरण किट की आवश्यकता है?",
-          "mr": "आणि नुसार, कंपनीच्या गेटवरून माल बाहेर सोडण्यासाठी कायद्यानुसार कोणती कागदपत्रे असणे बंधनकारक आहे?"
+          "mr": "आणि कंपनीच्या गेटवरून माल बाहेर सोडण्यासाठी कायद्यानुसार कोणती कागदपत्रे असणे बंधनकारक आहे?"
         },
         "options": [
           {
@@ -482,7 +482,7 @@
         "question": {
           "en": "What documentation kit is legally required to authorize outbound material gate exit?",
           "hi": "आउटबाउंड सामग्री गेट निकास को अधिकृत करने के लिए कानूनी रूप से किस दस्तावेज़ीकरण किट की आवश्यकता है?",
-          "mr": "आणि नुसार, कंपनीच्या गेटवरून माल बाहेर सोडण्यासाठी कायद्यानुसार कोणती कागदपत्रे असणे बंधनकारक आहे?"
+          "mr": "आणि कंपनीच्या गेटवरून माल बाहेर सोडण्यासाठी कायद्यानुसार कोणती कागदपत्रे असणे बंधनकारक आहे?"
         },
         "questionId": "c2-q16-sto-compliance",
         "audioSrc": "/audio/voiceover/s11_sc04_prompt.mp3"
@@ -515,7 +515,7 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Dispatch routing masterclass! PIR requests travel to 3 completely different destinations: First, Same Location inside AURIC plant, Second, Inter-Branch Transfer (IBC) to another Ather factory, or Third, Outside Supplier/Vendor. Match each destination to its legally mandated operational action!",
+            "en": "Dispatch routing masterclass! Part Issuance Request requests travel to 3 completely different destinations: First, Same Location inside AURIC plant, Second, Inter-Branch Transfer (IBC) to another Ather factory, or Third, Outside Supplier/Vendor. Match each destination to its legally mandated operational action!",
             "hi": "प्रेषण रूटिंग मास्टरक्लास!पीआईआर अनुरोध 3 पूरी तरह से अलग गंतव्यों की यात्रा करते हैं: पहला, औरिक संयंत्र के अंदर समान स्थान, दूसरा, दूसरे एथर कारखाने में इंटर-ब्रांच ट्रांसफर (IBC), या तीसरा, बाहरी आपूर्तिकर्ता/विक्रेता। प्रत्येक गंतव्य को उसकी कानूनी रूप से अनिवार्य परिचालन कार्रवाई से मिलाएं!",
             "mr": "डिस्पॅच मार्ग नियोजन मास्टरक्लास!PIR विनंत्या 3 वेगवेगळ्या ठिकाणी जातात: पहिले, औरिक प्लांटमधील समान जागा, दुसरे, दुसऱ्या फॅक्टरीत इंटर-ब्रांच ट्रान्सफर (IBC), किंवा तिसरे, बाहेरील सप्लायर/व्हेंडर. प्रत्येक ठिकाणाला त्याच्या कायदेशीर अनिवार्य कृतीशी जोडा!"
           },
@@ -538,6 +538,11 @@
             "mr": "मार्गात चूक! दुसऱ्या शाखेत माल पाठवताना SAP STO परचेस ऑर्डर लागतो, तर बाहेरील सप्लायरकडे पाठवताना डिलिव्हरी चलन लागते.पुन्हा तपासा!"
           },
           "audioSrc": "/audio/voiceover/s11_sc05_wrong.mp3"
+        },
+        "dialog": {
+          "en": "Dispatch routing masterclass! Part Issuance Request requests travel to 3 completely different destinations: First, Same Location inside AURIC plant, Second, Inter-Branch Transfer (IBC) to another Ather factory, or Third, Outside Supplier/Vendor. Match each destination to its legally mandated operational action!",
+          "hi": "प्रेषण रूटिंग मास्टरक्लास!पीआईआर अनुरोध 3 पूरी तरह से अलग गंतव्यों की यात्रा करते हैं: पहला, औरिक संयंत्र के अंदर समान स्थान, दूसरा, दूसरे एथर कारखाने में इंटर-ब्रांच ट्रांसफर (IBC), या तीसरा, बाहरी आपूर्तिकर्ता/विक्रेता। प्रत्येक गंतव्य को उसकी कानूनी रूप से अनिवार्य परिचालन कार्रवाई से मिलाएं!",
+          "mr": "डिस्पॅच मार्ग नियोजन मास्टरक्लास!PIR विनंत्या 3 वेगवेगळ्या ठिकाणी जातात: पहिले, औरिक प्लांटमधील समान जागा, दुसरे, दुसऱ्या फॅक्टरीत इंटर-ब्रांच ट्रान्सफर (IBC), किंवा तिसरे, बाहेरील सप्लायर/व्हेंडर. प्रत्येक ठिकाणाला त्याच्या कायदेशीर अनिवार्य कृतीशी जोडा!"
         }
       },
       "interaction": {
@@ -545,7 +550,7 @@
         "questionId": "c2-q08",
         "safetyCritical": true,
         "question": {
-          "en": "Match each PIR destination to its mandatory operational action",
+          "en": "Match each Part Issuance Request destination to its mandatory operational action",
           "hi": "प्रत्येक पीआईआर गंतव्य को उसकी अनिवार्य परिचालन कार्रवाई से मिलाएं:",
           "mr": "प्रत्येक PIR गंतव्याला त्याच्या योग्य कृतीशी जोडा:"
         },
@@ -588,32 +593,32 @@
             "id": "item_act_same_loc",
             "targetZoneId": "zone_same_loc",
             "label": {
-              "en": "Pick, pack, and consume directly against the Budget ID in SAP (Q8)",
-              "hi": "SAP में सीधे बजट आईडी के विरुद्ध उठाएं, पैक करें और उपभोग करें (Q8)",
-              "mr": "SAP मध्ये थेट बजेट आयडीवर नोंद करून माल देणे (Q8)"
+              "en": "Pick, pack, and consume directly against the Budget ID in SAP",
+              "hi": "SAP में सीधे बजट आईडी के विरुद्ध उठाएं, पैक करें और उपभोग करें",
+              "mr": "SAP मध्ये थेट बजेट आयडीवर नोंद करून माल देणे"
             }
           },
           {
             "id": "item_act_ibc",
             "targetZoneId": "zone_ibc",
             "label": {
-              "en": "Raise Stock Transport Order (STO PO) in SAP along with picking (Q8)",
-              "hi": "पिकिंग के साथ SAP में स्टॉक ट्रांसपोर्ट ऑर्डर (STO PO) बनाएं (Q8)",
-              "mr": "माल उचलण्यासोबत SAP मध्ये STO PO तयार करणे (Q8)"
+              "en": "Raise Stock Transport Order (STO PO) in SAP along with picking",
+              "hi": "पिकिंग के साथ SAP में स्टॉक ट्रांसपोर्ट ऑर्डर (STO PO) बनाएं",
+              "mr": "माल उचलण्यासोबत SAP मध्ये STO PO तयार करणे"
             }
           },
           {
             "id": "item_act_vendor",
             "targetZoneId": "zone_vendor",
             "label": {
-              "en": "Consume against Budget ID, make manual Delivery Challan (DC), dispatch (Q8)",
-              "hi": "बजट आईडी के विरुद्ध उपभोग करें, मैनुअल डिलीवरी चालान (DC) बनाएं, भेजें (Q8)",
-              "mr": "बजेट आयडीवर नोंद, मॅन्युअल DC बनवणे आणि डिस्पॅच करणे (Q8)"
+              "en": "Consume against Budget ID, make manual Delivery Challan, dispatch",
+              "hi": "बजट आईडी के विरुद्ध उपभोग करें, मैनुअल डिलीवरी चालान बनाएं, भेजें",
+              "mr": "बजेट आयडीवर नोंद, मॅन्युअल DC बनवणे आणि डिस्पॅच करणे"
             }
           }
         ],
         "prompt": {
-          "en": "Match each PIR destination to its mandatory operational action",
+          "en": "Match each Part Issuance Request destination to its mandatory operational action",
           "hi": "प्रत्येक पीआईआर गंतव्य को उसकी अनिवार्य परिचालन कार्रवाई से मिलाएं:",
           "mr": "प्रत्येक PIR गंतव्याला त्याच्या योग्य कृतीशी जोडा:"
         },
@@ -671,6 +676,11 @@
             "mr": "कर नियमांचे गंभीर उल्लंघन! दुसऱ्या राज्यात माल पाठवताना ZSTO वापरल्यास सीमेवर गाडी पकडली जाईल. आंतरराज्यीय वाहतुकीसाठी ZGST चाच वापर केला पाहिजे!"
           },
           "audioSrc": "/audio/voiceover/s11_sc06_wrong.mp3"
+        },
+        "dialog": {
+          "en": "Data Entry Operator & Logistics Specialist Challenge! In SAP Billing transaction VF01, creating the wrong document type for an outbound STO truck can trigger immediate GST seizure fines exceeding ₹5,00,000! Match billing document types ZSTO and ZGST to their mandatory tax applications!",
+          "hi": "डेटा एंट्री ऑपरेटर और लॉजिस्टिक्स विशेषज्ञ चुनौती! SAP बिलिंग लेनदेन VF01 में, आउटबाउंड STO ट्रक के लिए गलत दस्तावेज़ प्रकार बनाने से ₹5,00,000 से अधिक का तत्काल GST जब्ती जुर्माना लग सकता है!बिलिंग दस्तावेज़ प्रकार ZSTO और ZGST को उनके अनिवार्य कर अनुप्रयोगों से मिलाएं!",
+          "mr": "डेटा एन्ट्री ऑपरेटर आणि लॉजिस्टिक्स आव्हान! SAP बिलिंग ट्रान्झॅक्शन VF01 मध्ये चुकीचा दस्तऐवज प्रकार निवडल्यास GST कायद्यानुसार गाडी जप्त होऊन ₹5,00,000 चा दंड होऊ शकतो!ZSTO आणि ZGST या दोन बिलिंग प्रकारांचा अचूक वापर ओळखा!"
         }
       },
       "interaction": {
@@ -687,9 +697,9 @@
             "id": "opt_zsto_zgst_correct",
             "correct": true,
             "label": {
-              "en": "ZSTO: Tax-free stock transfer inside the same state; ZGST: Taxable transfer to another state requiring an e-Invoice (Q31)",
-              "hi": "ZSTO: उसी राज्य के अंदर कर-मुक्त स्टॉक ट्रांसफर; ZGST: दूसरे राज्य में कर योग्य ट्रांसफर जिसके लिए ई-चालान की आवश्यकता होती है (Q31)",
-              "mr": "ZSTO: एकाच राज्यातील करमुक्त स्टॉक ट्रान्स्फर; ZGST: दुसऱ्या राज्यात पाठवताना लागणारे करपात्र ई-इनव्हॉइस (Q31)"
+              "en": "ZSTO: Tax-free stock transfer inside the same state; ZGST: Taxable transfer to another state requiring an e-Invoice",
+              "hi": "ZSTO: उसी राज्य के अंदर कर-मुक्त स्टॉक ट्रांसफर; ZGST: दूसरे राज्य में कर योग्य ट्रांसफर जिसके लिए ई-चालान की आवश्यकता होती है",
+              "mr": "ZSTO: एकाच राज्यातील करमुक्त स्टॉक ट्रान्स्फर; ZGST: दुसऱ्या राज्यात पाठवताना लागणारे करपात्र ई-इनव्हॉइस"
             }
           },
           {
@@ -756,7 +766,7 @@
         "intro": {
           "pose": "trophy",
           "text": {
-            "en": "Final milestone of Module 11! The PIR shipment has been loaded into the transport carrier truck, inspected by Security, and departed through the plant gates. What final mandatory action closes the PIR lifecycle?",
+            "en": "Final milestone of Module 11! The Part Issuance Request shipment has been loaded into the transport carrier truck, inspected by Security, and departed through the plant gates. What final mandatory action closes the Part Issuance Request lifecycle?",
             "hi": "मॉड्यूल 11 का अंतिम मील का पत्थर! पीआईआर शिपमेंट को ट्रांसपोर्ट कैरियर ट्रक में लोड किया गया है, सुरक्षा द्वारा निरीक्षण किया गया है, और प्लांट के गेट से रवाना किया गया है।पीआईआर जीवनचक्र को कौन सी अंतिम अनिवार्य कार्रवाई बंद करती है?",
             "mr": "मॉड्यूल 11 चा अंतिम टप्पा! PIR चे साहित्य ट्रकमध्ये लोड झाले, सिक्युरिटीने तपासले आणि गाडी कंपनीच्या गेटबाहेर पडली.संपूर्ण PIR प्रक्रिया अधिकृतपणे बंद करण्यासाठी शेवटची कोणती कृती केली पाहिजे?"
           },
@@ -765,7 +775,7 @@
         "onCorrect": {
           "pose": "trophy",
           "text": {
-            "en": "EXEMPLARY AUDIT CLOSURE! Update transit details in JIRA, attach the signed receipt (Proof of Handover / Lorry Receipt), and set ticket status to 'Closed'! Leaving tickets open creates phantom stock discrepancies and financial reconciliation backlogs. Module 11: Production Inspection & Quality PIR is 100% complete!",
+            "en": "EXEMPLARY AUDIT CLOSURE! Update transit details in JIRA, attach the signed receipt (Proof of Handover / Lorry Receipt), and set ticket status to 'Closed'! Leaving tickets open creates phantom stock discrepancies and financial reconciliation backlogs. Module 11: Production Inspection & Quality Part Issuance Request is 100% complete!",
             "hi": "अनुकरणीय ऑडिट समापन!JIRA में पारगमन विवरण अपडेट करें, हस्ताक्षरित रसीद (हैंडओवर का प्रमाण / लॉरी रसीद) संलग्न करें, और टिकट की स्थिति को 'Closed' पर सेट करें! टिकट खुले छोड़ने से इन्वेंट्री विसंगतियां पैदा होती हैं। मॉड्यूल 11 अब 100% पूरा हुआ!",
             "mr": "आदर्श ऑडिट पूर्तता!JIRA मध्ये वाहतुकीचा तपशील अपडेट करणे, स्वाक्षरी केलेली पोचपावती (Proof of Handover / LR) जोडणे आणि तिकीट स्टेटस 'Closed' करणे! तिकीट उघडे राहिल्यास सिस्टीममध्ये स्टॉक तफावत राहते. मॉड्यूल 11 आता 100% पूर्ण झाले आहे!"
           },
@@ -779,6 +789,11 @@
             "mr": "ऑडिट धोका! माल गेल्यानंतर JIRA तिकीट उघडे ठेवू नका किंवा नष्ट करू नका! स्वाक्षरी केलेली पोचपावती जोडून तिकीट 'Closed' करणे सक्तीचे आहे!"
           },
           "audioSrc": "/audio/voiceover/s11_sc07_wrong.mp3"
+        },
+        "dialog": {
+          "en": "Final milestone of Module 11! The Part Issuance Request shipment has been loaded into the transport carrier truck, inspected by Security, and departed through the plant gates. What final mandatory action closes the Part Issuance Request lifecycle?",
+          "hi": "मॉड्यूल 11 का अंतिम मील का पत्थर! पीआईआर शिपमेंट को ट्रांसपोर्ट कैरियर ट्रक में लोड किया गया है, सुरक्षा द्वारा निरीक्षण किया गया है, और प्लांट के गेट से रवाना किया गया है।पीआईआर जीवनचक्र को कौन सी अंतिम अनिवार्य कार्रवाई बंद करती है?",
+          "mr": "मॉड्यूल 11 चा अंतिम टप्पा! PIR चे साहित्य ट्रकमध्ये लोड झाले, सिक्युरिटीने तपासले आणि गाडी कंपनीच्या गेटबाहेर पडली.संपूर्ण PIR प्रक्रिया अधिकृतपणे बंद करण्यासाठी शेवटची कोणती कृती केली पाहिजे?"
         }
       },
       "interaction": {
@@ -786,7 +801,7 @@
         "questionId": "c2-q32",
         "safetyCritical": true,
         "question": {
-          "en": "The PIR parts have been dispatched. What officially closes the PIR process?",
+          "en": "The Part Issuance Request parts have been dispatched. What officially closes the Part Issuance Request process?",
           "hi": "पीआईआर भागों को भेज दिया गया है। पीआईआर प्रक्रिया को आधिकारिक तौर पर क्या बंद करता है?",
           "mr": "PIR चे साहित्य रवाना झाले आहे. PIR प्रक्रिया अधिकृतपणे कशामुळे बंद होते?"
         },
@@ -795,9 +810,9 @@
             "id": "opt_attach_poh_close",
             "correct": true,
             "label": {
-              "en": "Update transit details in JIRA, attach the signed receipt (Proof of Handover), and set status to “Closed” (Q32)",
-              "hi": "JIRA में पारगमन विवरण अपडेट करें, हस्ताक्षरित रसीद (हैंडओवर का प्रमाण) संलग्न करें, और स्थिति को “Closed” पर सेट करें (Q32)",
-              "mr": "JIRA मध्ये वाहतुकीची नोंद करणे, स्वाक्षरी केलेली पोचपावती (Proof of Handover) जोडणे आणि स्टेटस “Closed” करणे (Q32)"
+              "en": "Update transit details in JIRA, attach the signed receipt (Proof of Handover), and set status to “Closed”",
+              "hi": "JIRA में पारगमन विवरण अपडेट करें, हस्ताक्षरित रसीद (हैंडओवर का प्रमाण) संलग्न करें, और स्थिति को “Closed” पर सेट करें",
+              "mr": "JIRA मध्ये वाहतुकीची नोंद करणे, स्वाक्षरी केलेली पोचपावती (Proof of Handover) जोडणे आणि स्टेटस “Closed” करणे"
             }
           },
           {
@@ -829,7 +844,7 @@
           }
         ],
         "prompt": {
-          "en": "The PIR parts have been dispatched. What officially closes the PIR process?",
+          "en": "The Part Issuance Request parts have been dispatched. What officially closes the Part Issuance Request process?",
           "hi": "पीआईआर भागों को भेज दिया गया है। पीआईआर प्रक्रिया को आधिकारिक तौर पर क्या बंद करता है?",
           "mr": "PIR चे साहित्य रवाना झाले आहे. PIR प्रक्रिया अधिकृतपणे कशामुळे बंद होते?"
         },

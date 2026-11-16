@@ -4,7 +4,7 @@
   "stageNumber": 2,
   "sopDoc": "SOP for IQC Issuance for AURIC (Doc No: 02_C1_S2)",
   "stageTitle": {
-    "en": "Stage 2: Receiving & IQC Clearance",
+    "en": "Stage 2: Receiving & quality inspection Clearance",
     "hi": "चरण 2: रिसीविंग और IQC क्लीयरेंस",
     "mr": "टप्पा 2: रिसीव्हिंग आणि IQC क्लिअरन्स"
   },
@@ -27,7 +27,7 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Welcome to Stage 2: Receiving & IQC Clearance! The forklift has offloaded a pallet of brake calipers at Dock 04 Inbound Staging. Look closely at the freshly pasted Goods Receipt Note sticker on the pallet. What does that large '?' symbol tell us?",
+            "en": "Welcome to Stage 2: Receiving & quality inspection Clearance! The forklift has offloaded a pallet of brake calipers at Dock 04 Inbound Staging. Look closely at the freshly pasted Goods Receipt Note sticker on the pallet. What does that large '?' symbol tell us?",
             "hi": "स्टेज 2: रिसीविंग और IQC क्लीयरेंस में आपका स्वागत है! फोर्कलिफ्ट ने डॉक 04 इनबाउंड स्टेजिंग में ब्रेक कैलिपर्स का एक पैलेट उतार दिया है। पैलेट पर नए लगे Goods Receipt Note स्टिकर को ध्यान से देखें। वह बड़ा '?' प्रतीक हमें क्या बताता है?",
             "mr": "स्टेज 2: रिसीव्हिंग आणि IQC क्लिअरन्समध्ये आपले स्वागत आहे! फोर्कलिफ्टने डॉक 04 इनबाउंड स्टेजिंगमध्ये ब्रेक कॅलिपर्सचे एक पॅलेट उतरवले आहे. पॅलेटवर नवीन लावलेल्या Goods Receipt Note स्टिकरकडे काळजीपूर्वक पहा. ते मोठे '?' चिन्ह आपल्याला काय सांगते?"
           },
@@ -36,7 +36,7 @@
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Spot on! A '?' on the Goods Receipt Note sticker designates Non-Direct-on-Line material. It requires mandatory 10% sampling and testing by IQC before it can be put away into storage!",
+            "en": "Spot on! A '?' on the Goods Receipt Note sticker designates Non-Direct-on-Line material. It requires mandatory 10% sampling and testing by quality inspection before it can be put away into storage!",
             "hi": "बिल्कुल सही! IQC इश्यूएंस Goods Receipt Note स्टिकर पर '?' नॉन-डायरेक्ट-ऑन-लाइन सामग्री को दर्शाता है। स्टोरेज रैक में रखने से पहले IQC द्वारा अनिवार्य 10% सैंपलिंग और परीक्षण आवश्यक है!",
             "mr": "अगदी बरोबर! IQC इश्यूअन्स Goods Receipt Note स्टिकरवरील '?' नॉन-डायरेक्ट-ऑन-लाइन साहित्य दर्शवते. स्टोरेज रॅकमध्ये ठेवण्यापूर्वी IQC द्वारे अनिवार्य 10% सॅम्पलिंग आणि चाचणी आवश्यक आहे!"
           },
@@ -45,11 +45,16 @@
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Hold on! A '?' symbol does not mean scrap or direct-to-line. It means Non-Direct-on-Line—the material must undergo mandatory IQC sampling. Premature put-away of uninspected stock will be blocked by SAP EWM!",
+            "en": "Hold on! A '?' symbol does not mean scrap or direct-to-line. It means Non-Direct-on-Line—the material must undergo mandatory quality inspection sampling. Premature put-away of uninspected stock will be blocked by SAP warehouse management system!",
             "hi": "रुकिए! '?' प्रतीक का मतलब स्क्रैप या डायरेक्ट-टू-लाइन नहीं है। इसका मतलब नॉन-डायरेक्ट-ऑन-लाइन है—सामग्री की अनिवार्य IQC सैंपलिंग होनी चाहिए। बिना जांचे स्टॉक का समयपूर्व पुट-अवे SAP EWM द्वारा ब्लॉक कर दिया जाएगा!",
             "mr": "थांबा! '?' चिन्हाचा अर्थ स्क्रॅप किंवा डायरेक्ट-टू-लाइन असा होत नाही. याचा अर्थ नॉन-डायरेक्ट-ऑन-लाइन आहे—साहित्याची अनिवार्य IQC सॅम्पलिंग झाली पाहिजे. तपासणी न केलेल्या स्टॉकचे वेळेपूर्वी पुट-अवे SAP EWM द्वारे ब्लॉक केले जाईल!"
           },
           "audioSrc": "/audio/voiceover/s02_sc01_wrong.mp3"
+        },
+        "dialog": {
+          "en": "Welcome to Stage 2: Receiving & quality inspection Clearance! The forklift has offloaded a pallet of brake calipers at Dock 04 Inbound Staging. Look closely at the freshly pasted Goods Receipt Note sticker on the pallet. What does that large '?' symbol tell us?",
+          "hi": "स्टेज 2: रिसीविंग और IQC क्लीयरेंस में आपका स्वागत है! फोर्कलिफ्ट ने डॉक 04 इनबाउंड स्टेजिंग में ब्रेक कैलिपर्स का एक पैलेट उतार दिया है। पैलेट पर नए लगे Goods Receipt Note स्टिकर को ध्यान से देखें। वह बड़ा '?' प्रतीक हमें क्या बताता है?",
+          "mr": "स्टेज 2: रिसीव्हिंग आणि IQC क्लिअरन्समध्ये आपले स्वागत आहे! फोर्कलिफ्टने डॉक 04 इनबाउंड स्टेजिंगमध्ये ब्रेक कॅलिपर्सचे एक पॅलेट उतरवले आहे. पॅलेटवर नवीन लावलेल्या Goods Receipt Note स्टिकरकडे काळजीपूर्वक पहा. ते मोठे '?' चिन्ह आपल्याला काय सांगते?"
         }
       },
       "interaction": {
@@ -66,7 +71,7 @@
             "id": "opt_non_dol",
             "correct": true,
             "label": {
-              "en": "Non-Direct-on-Line material: Mandatory 10% sampling and testing by IQC required before put-away.",
+              "en": "Non-Direct-on-Line material: Mandatory 10% sampling and testing by quality inspection required before put-away.",
               "hi": "नॉन-डायरेक्ट-ऑन-लाइन सामग्री: पुट-अवे से पहले IQC द्वारा अनिवार्य 10% सैंपलिंग और परीक्षण आवश्यक है।",
               "mr": "नॉन-डायरेक्ट-ऑन-लाइन साहित्य: पुट-अवे करण्यापूर्वी IQC द्वारे अनिवार्य 10% सॅम्पलिंग आणि चाचणी आवश्यक आहे."
             }
@@ -128,7 +133,7 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Now that we know the shipment is Non-Direct-on-Line, we must apply the 10% statistical sampling rule! The Purchase Order contains 10 Foldable Large Container crates (100 total brake calipers). Exactly how many Foldable Large Container crates must be separated and transferred to the IQC testing area?",
+            "en": "Now that we know the shipment is Non-Direct-on-Line, we must apply the 10% statistical sampling rule! The Purchase Order contains 10 Foldable Large Container crates (100 total brake calipers). Exactly how many Foldable Large Container crates must be separated and transferred to the quality inspection testing area?",
             "hi": "अब जब हम जानते हैं कि खेप नॉन-डायरेक्ट-ऑन-लाइन है, तो हमें 10% सांख्यिकीय सैंपलिंग नियम लागू करना होगा! परचेज ऑर्डर में 10 फोल्डेबल लार्ज कंटेनर क्रेट (कुल 100 ब्रेक कैलिपर्स) हैं। IQC परीक्षण क्षेत्र में ठीक कितने फोल्डेबल लार्ज कंटेनर क्रेट अलग करके स्थानांतरित किए जाने चाहिए?",
             "mr": "आता आपल्याला माहित आहे की डिलिव्हरी नॉन-डायरेक्ट-ऑन-लाइन आहे, म्हणून आपण 10% सांख्यिकीय सॅम्पलिंग नियम लागू केला पाहिजे! खरेदी ऑर्डरमध्ये 10 फोल्डेबल लार्ज कंटेनर क्रेट्स (एकूण 100 ब्रेक कॅलिपर्स) आहेत. IQC चाचणी भागात नेमके किती फोल्डेबल लार्ज कंटेनर क्रेट्स वेगळे करून पाठवले पाहिजेत?"
           },
@@ -137,7 +142,7 @@
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Spot on! Exactly 10% of the lot volume (1 out of 10 Foldable Large Containers) is transferred to IQC staging. The remaining 9 Foldable Large Containers must stay safely in unloading staging until IQC clears the sample!",
+            "en": "Spot on! Exactly 10% of the lot volume (1 out of 10 Foldable Large Containers) is transferred to quality inspection staging. The remaining 9 Foldable Large Containers must stay safely in unloading staging until quality inspection clears the sample!",
             "hi": "बिल्कुल सही! IQC इश्यूएंस लॉट वॉल्यूम का ठीक 10% (10 में से 1 फोल्डेबल लार्ज कंटेनर) IQC स्टेजिंग में स्थानांतरित किया जाता है। शेष 9 फोल्डेबल लार्ज कंटेनर को IQC द्वारा सैंपल पास करने तक अनलोडिंग स्टेजिंग में सुरक्षित रहना चाहिए!",
             "mr": "अगदी बरोबर! IQC इश्यूअन्स लॉटच्या आकाराच्या बरोबर 10% (10 पैकी 1 फोल्डेबल लार्ज कंटेनर) IQC स्टेजिंगमध्ये हस्तांतरित केले जाते. IQC नमुना मंजूर करेपर्यंत उर्वरित 9 फोल्डेबल लार्ज कंटेनर अनलोडिंग स्टेजिंगमध्ये सुरक्षित राहिले पाहिजेत!"
           },
@@ -151,6 +156,11 @@
             "mr": "हिशेबात चूक! एकूण इनवर्ड आकाराच्या बरोबर 10% नमुना घेतला पाहिजे. 10-फोल्डेबल लार्ज कंटेनर लॉटसाठी, 1 पेक्षा जास्त पाठवल्यास चाचणी लॅब भरून जाईल, आणि कमी पाठवल्यास मानकांचे उल्लंघन होईल."
           },
           "audioSrc": "/audio/voiceover/s02_sc02_wrong.mp3"
+        },
+        "dialog": {
+          "en": "Now that we know the shipment is Non-Direct-on-Line, we must apply the 10% statistical sampling rule! The Purchase Order contains 10 Foldable Large Container crates (100 total brake calipers). Exactly how many Foldable Large Container crates must be separated and transferred to the quality inspection testing area?",
+          "hi": "अब जब हम जानते हैं कि खेप नॉन-डायरेक्ट-ऑन-लाइन है, तो हमें 10% सांख्यिकीय सैंपलिंग नियम लागू करना होगा! परचेज ऑर्डर में 10 फोल्डेबल लार्ज कंटेनर क्रेट (कुल 100 ब्रेक कैलिपर्स) हैं। IQC परीक्षण क्षेत्र में ठीक कितने फोल्डेबल लार्ज कंटेनर क्रेट अलग करके स्थानांतरित किए जाने चाहिए?",
+          "mr": "आता आपल्याला माहित आहे की डिलिव्हरी नॉन-डायरेक्ट-ऑन-लाइन आहे, म्हणून आपण 10% सांख्यिकीय सॅम्पलिंग नियम लागू केला पाहिजे! खरेदी ऑर्डरमध्ये 10 फोल्डेबल लार्ज कंटेनर क्रेट्स (एकूण 100 ब्रेक कॅलिपर्स) आहेत. IQC चाचणी भागात नेमके किती फोल्डेबल लार्ज कंटेनर क्रेट्स वेगळे करून पाठवले पाहिजेत?"
         }
       },
       "interaction": {
@@ -158,12 +168,12 @@
         "questionId": "c1-q12",
         "safetyCritical": false,
         "question": {
-          "en": "A Non-Direct-on-Line lot of 10 Foldable Large Containers has arrived. Under the SOP 10% statistical sampling rule, how many Foldable Large Container crates must go to IQC?",
-          "hi": "10 फोल्डेबल लार्ज कंटेनर का एक नॉन-डायरेक्ट-ऑन-लाइन लॉट आ गया है। SOP 10% सांख्यिकीय सैंपलिंग नियम के तहत, कितने फोल्डेबल लार्ज कंटेनर क्रेट IQC में जाने चाहिए?",
-          "mr": "10 फोल्डेबल लार्ज कंटेनर चा एक नॉन-डायरेक्ट-ऑन-लाइन लॉट आला आहे. SOP 10% सांख्यिकीय सॅम्पलिंग नियमानुसार, किती फोल्डेबल लार्ज कंटेनर क्रेट्स IQC कडे गेले पाहिजेत?"
+          "en": "A Non-Direct-on-Line lot of 10 Foldable Large Containers has arrived. following the standard 10% statistical sampling rule, how many Foldable Large Container crates must go to quality inspection?",
+          "hi": "10 फोल्डेबल लार्ज कंटेनर का एक नॉन-डायरेक्ट-ऑन-लाइन लॉट आ गया है। मानक 10% सांख्यिकीय सैंपलिंग नियम कितने फोल्डेबल लार्ज कंटेनर क्रेट IQC में जाने चाहिए?",
+          "mr": "10 फोल्डेबल लार्ज कंटेनर चा एक नॉन-डायरेक्ट-ऑन-लाइन लॉट आला आहे. मानक 10% सांख्यिकीय सॅम्पलिंग नियमाकिती फोल्डेबल लार्ज कंटेनर क्रेट्स IQC कडे गेले पाहिजेत?"
         },
         "instruction": {
-          "en": "Use the − and + buttons to adjust the exact number of FLC sample crates, then confirm:",
+          "en": "Use the − and + buttons to adjust the exact number of Foldable Large Container sample crates, then confirm:",
           "hi": "FLC सैंपल क्रेट्स की सटीक संख्या समायोजित करने के लिए − और + बटन का उपयोग करें, फिर पुष्टि करें:",
           "mr": "FLC सॅम्पल क्रेट्सची अचूक संख्या समायोजित करण्यासाठी − आणि + बटणे वापरा, नंतर पुष्टी करा:"
         },
@@ -179,9 +189,9 @@
           "mr": "FLC क्रेट (10% नमुना)"
         },
         "prompt": {
-          "en": "A Non-Direct-on-Line lot of 10 Foldable Large Containers has arrived. Under the SOP 10% statistical sampling rule, how many Foldable Large Container crates must go to IQC?",
-          "hi": "10 फोल्डेबल लार्ज कंटेनर का एक नॉन-डायरेक्ट-ऑन-लाइन लॉट आ गया है। SOP 10% सांख्यिकीय सैंपलिंग नियम के तहत, कितने फोल्डेबल लार्ज कंटेनर क्रेट IQC में जाने चाहिए?",
-          "mr": "10 फोल्डेबल लार्ज कंटेनर चा एक नॉन-डायरेक्ट-ऑन-लाइन लॉट आला आहे. SOP 10% सांख्यिकीय सॅम्पलिंग नियमानुसार, किती फोल्डेबल लार्ज कंटेनर क्रेट्स IQC कडे गेले पाहिजेत?"
+          "en": "A Non-Direct-on-Line lot of 10 Foldable Large Containers has arrived. following the standard 10% statistical sampling rule, how many Foldable Large Container crates must go to quality inspection?",
+          "hi": "10 फोल्डेबल लार्ज कंटेनर का एक नॉन-डायरेक्ट-ऑन-लाइन लॉट आ गया है। मानक 10% सांख्यिकीय सैंपलिंग नियम कितने फोल्डेबल लार्ज कंटेनर क्रेट IQC में जाने चाहिए?",
+          "mr": "10 फोल्डेबल लार्ज कंटेनर चा एक नॉन-डायरेक्ट-ऑन-लाइन लॉट आला आहे. मानक 10% सांख्यिकीय सॅम्पलिंग नियमाकिती फोल्डेबल लार्ज कंटेनर क्रेट्स IQC कडे गेले पाहिजेत?"
         },
         "id": "c1-q12",
         "audioSrc": "/audio/voiceover/s02_sc02_prompt.mp3"
@@ -215,7 +225,7 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "The 1 sample crate has gone to the testing lab, but 9 crates of brake calipers are waiting in Inbound Staging! While IQC inspects the sample for up to 2 hours, what mandatory visual identifier must be placed around this staged lot?",
+            "en": "The 1 sample crate has gone to the testing lab, but 9 crates of brake calipers are waiting in Inbound Staging! While quality inspection inspects the sample for up to 2 hours, what mandatory visual identifier must be placed around this staged lot?",
             "hi": "1 सैंपल क्रेट परीक्षण लैब में चला गया है, लेकिन ब्रेक कैलिपर्स के 9 क्रेट इनबाउंड स्टेजिंग में प्रतीक्षा कर रहे हैं! जब तक IQC 2 घंटे तक सैंपल का निरीक्षण करता है, तब तक इस स्टेज्ड लॉट के चारों ओर कौन सा अनिवार्य दृश्य पहचानकर्ता रखा जाना चाहिए?",
             "mr": "1 सॅम्पल क्रेट चाचणी लॅबमध्ये गेला आहे, परंतु ब्रेक कॅलिपर्सचे 9 क्रेट्स इनबाउंड स्टेजिंगमध्ये वाट पाहत आहेत! IQC 2 तासांपर्यंत नमुन्याची तपासणी करत असताना, या स्टेज केलेल्या लॉटभोवती कोणते अनिवार्य दृश्य चिन्ह ठेवले पाहिजे?"
           },
@@ -224,7 +234,7 @@
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Spot on! Bright yellow 'UNDER IQC' cones must be placed at the staging perimeter. This visual quarantine stops forklift drivers from mistakenly picking or putting away uninspected stock!",
+            "en": "Spot on! Bright yellow 'UNDER quality inspection' cones must be placed at the staging perimeter. This visual quarantine stops forklift drivers from mistakenly picking or putting away uninspected stock!",
             "hi": "बिल्कुल सही! IQC इश्यूएंस स्टेजिंग परिधि पर चमकीले पीले 'UNDER IQC' कोन रखे जाने चाहिए। यह विजुअल क्वारंटाइन फोर्कलिफ्ट चालकों को बिना जांचे स्टॉक को गलती से उठाने या पुट-अवे करने से रोकता है!",
             "mr": "अगदी बरोबर! IQC इश्यूअन्स स्टेजिंगच्या परिमितीवर चमकदार पिवळे 'UNDER IQC' कोन्स ठेवले पाहिजेत. हे दृश्य क्वारंटाइन फोर्कलिफ्ट चालकांना तपासणी न केलेला साठा चुकीने उचलण्यापासून किंवा पुट-अवे करण्यापासून रोखते!"
           },
@@ -233,11 +243,16 @@
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Quality risk! Never leave uninspected staging unmarked. Yellow 'UNDER IQC' cones are mandatory. Red tags are only for confirmed scrap, and green seals require a passed inspection report.",
+            "en": "Quality risk! Never leave uninspected staging unmarked. Yellow 'UNDER quality inspection' cones are mandatory. Red tags are only for confirmed scrap, and green seals require a passed inspection report.",
             "hi": "गुणवत्ता का जोखिम! बिना जांचे स्टेजिंग को कभी भी बिना निशान के न छोड़ें। पीले 'UNDER IQC' कोन अनिवार्य हैं। लाल टैग केवल पुष्टि किए गए स्क्रैप के लिए हैं, और हरे रंग की सील के लिए पास निरीक्षण रिपोर्ट की आवश्यकता होती है।",
             "mr": "गुणवत्ता धोका! तपासणी न केलेले स्टेजिंग कधीही चिन्हांकित केल्याशिवाय सोडू नका. पिवळे 'UNDER IQC' कोन्स अनिवार्य आहेत. लाल टॅग फक्त नाकारलेल्या स्क्रॅपसाठी असतात आणि हिरव्या सीलसाठी उत्तीर्ण तपासणी अहवाल आवश्यक असतो."
           },
           "audioSrc": "/audio/voiceover/s02_sc03_wrong.mp3"
+        },
+        "dialog": {
+          "en": "The 1 sample crate has gone to the testing lab, but 9 crates of brake calipers are waiting in Inbound Staging! While quality inspection inspects the sample for up to 2 hours, what mandatory visual identifier must be placed around this staged lot?",
+          "hi": "1 सैंपल क्रेट परीक्षण लैब में चला गया है, लेकिन ब्रेक कैलिपर्स के 9 क्रेट इनबाउंड स्टेजिंग में प्रतीक्षा कर रहे हैं! जब तक IQC 2 घंटे तक सैंपल का निरीक्षण करता है, तब तक इस स्टेज्ड लॉट के चारों ओर कौन सा अनिवार्य दृश्य पहचानकर्ता रखा जाना चाहिए?",
+          "mr": "1 सॅम्पल क्रेट चाचणी लॅबमध्ये गेला आहे, परंतु ब्रेक कॅलिपर्सचे 9 क्रेट्स इनबाउंड स्टेजिंगमध्ये वाट पाहत आहेत! IQC 2 तासांपर्यंत नमुन्याची तपासणी करत असताना, या स्टेज केलेल्या लॉटभोवती कोणते अनिवार्य दृश्य चिन्ह ठेवले पाहिजे?"
         }
       },
       "interaction": {
@@ -245,7 +260,7 @@
         "questionId": "c1-q17-cones",
         "safetyCritical": true,
         "question": {
-          "en": "The 9 remaining Foldable Large Container crates are waiting in staging during the 2-hour IQC testing window. What mandatory visual containment must be placed around them?",
+          "en": "The 9 remaining Foldable Large Container crates are waiting in staging during the 2-hour quality inspection testing window. What mandatory visual containment must be placed around them?",
           "hi": "2 घंटे की IQC परीक्षण विंडो के दौरान 9 शेष फोल्डेबल लार्ज कंटेनर क्रेट स्टेजिंग में प्रतीक्षा कर रहे हैं। उनके चारों ओर कौन सा अनिवार्य दृश्य नियंत्रण रखा जाना चाहिए?",
           "mr": "2 तासांच्या IQC चाचणी कालावधीत उर्वरित 9 फोल्डेबल लार्ज कंटेनर क्रेट्स स्टेजिंगमध्ये वाट पाहत आहेत. त्यांच्याभोवती कोणते अनिवार्य दृश्य नियंत्रण ठेवले पाहिजे?"
         },
@@ -254,7 +269,7 @@
             "id": "opt_yellow_cones",
             "correct": true,
             "label": {
-              "en": "Yellow 'UNDER IQC' Quarantine Cones: Positioned at pallet corners to signal testing in progress.",
+              "en": "Yellow 'UNDER quality inspection' Quarantine Cones: Positioned at pallet corners to signal testing in progress.",
               "hi": "पीले 'UNDER IQC' क्वारंटाइन कोन: परीक्षण प्रगति पर होने का संकेत देने के लिए पैलेट के कोनों पर स्थित।",
               "mr": "पिवळे 'UNDER IQC' क्वारंटाइन कोन्स: चाचणी सुरू असल्याचे दर्शवण्यासाठी पॅलेटच्या कोपऱ्यांवर ठेवले जातात."
             }
@@ -279,7 +294,7 @@
           }
         ],
         "prompt": {
-          "en": "The 9 remaining Foldable Large Container crates are waiting in staging during the 2-hour IQC testing window. What mandatory visual containment must be placed around them?",
+          "en": "The 9 remaining Foldable Large Container crates are waiting in staging during the 2-hour quality inspection testing window. What mandatory visual containment must be placed around them?",
           "hi": "2 घंटे की IQC परीक्षण विंडो के दौरान 9 शेष फोल्डेबल लार्ज कंटेनर क्रेट स्टेजिंग में प्रतीक्षा कर रहे हैं। उनके चारों ओर कौन सा अनिवार्य दृश्य नियंत्रण रखा जाना चाहिए?",
           "mr": "2 तासांच्या IQC चाचणी कालावधीत उर्वरित 9 फोल्डेबल लार्ज कंटेनर क्रेट्स स्टेजिंगमध्ये वाट पाहत आहेत. त्यांच्याभोवती कोणते अनिवार्य दृश्य नियंत्रण ठेवले पाहिजे?"
         },
@@ -314,7 +329,7 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "The Goods Receipt Note sticker is pasted and the 10% sample is loaded onto the pallet truck! The factory clock is ticking. What is the maximum permissible SLA time window for inbound manpower to physically hand over this sample to the IQC testing room?",
+            "en": "The Goods Receipt Note sticker is pasted and the 10% sample is loaded onto the pallet truck! The factory clock is ticking. What is the maximum permissible SLA time window for inbound manpower to physically hand over this sample to the quality inspection testing room?",
             "hi": "Goods Receipt Note स्टिकर लग चुका है और 10% सैंपल पैलेट ट्रक पर लोड है! फैक्ट्री की घड़ी टिक-टिक कर रही है। इनबाउंड मैनपावर के लिए इस सैंपल को IQC परीक्षण कक्ष में भौतिक रूप से सौंपने की अधिकतम अनुमेय SLA समय सीमा क्या है?",
             "mr": "Goods Receipt Note स्टिकर लावला आहे आणि 10% नमुना पॅलेट ट्रकवर लोड केला आहे! कारखान्याचे घड्याळ सुरू झाले आहे. इनबाउंड कर्मचाऱ्यांसाठी हा नमुना प्रत्यक्ष IQC चाचणी कक्षात सोपवण्यासाठी कमाल अनुज्ञेय SLA कालावधी काय आहे?"
           },
@@ -323,7 +338,7 @@
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Precision timing! Inbound manpower must hand over the Non-Direct-on-Line sample to IQC within exactly 30 minutes of Goods Receipt Note pasting. Meeting this SLA ensures the 2-hour testing window finishes before production needs the parts!",
+            "en": "Precision timing! Inbound manpower must hand over the Non-Direct-on-Line sample to quality inspection within exactly 30 minutes of Goods Receipt Note pasting. Meeting this SLA ensures the 2-hour testing window finishes before production needs the parts!",
             "hi": "सटीक समय प्रबंधन! IQC इश्यूएंस इनबाउंड मैनपावर को Goods Receipt Note पेस्टिंग के ठीक 30 मिनट के भीतर IQC को नॉन-डायरेक्ट-ऑन-लाइन सैंपल सौंपना होगा। इस SLA को पूरा करने से यह सुनिश्चित होता है कि उत्पादन को पार्ट्स की आवश्यकता होने से पहले 2 घंटे की परीक्षण विंडो समाप्त हो जाए!",
             "mr": "अचूक वेळ व्यवस्थापन! IQC इश्यूअन्स इनबाउंड कर्मचाऱ्यांनी Goods Receipt Note लावल्यापासून बरोबर 30 मिनिटांच्या आत नॉन-डायरेक्ट-ऑन-लाइन नमुना IQC कडे सोपवला पाहिजे. या SLA चे पालन केल्याने उत्पादनाला सुट्या भागांची गरज भासण्यापूर्वी 2 तासांची चाचणी पूर्ण होते!"
           },
@@ -332,11 +347,16 @@
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "SLA breach warning! Delaying sample handover beyond 30 minutes leaves the Warehouse Order open in SAP EWM. This blocks subsequent picking orders and delays vehicle assembly line feeding!",
+            "en": "SLA breach warning! Delaying sample handover beyond 30 minutes leaves the Warehouse Order open in SAP warehouse management system. This blocks subsequent picking orders and delays vehicle assembly line feeding!",
             "hi": "SLA उल्लंघन चेतावनी! सैंपल हैंडओवर में 30 मिनट से अधिक की देरी से SAP EWM में वेयरहाउस ऑर्डर खुला रह जाता है। यह बाद के पिकिंग ऑर्डरों को ब्लॉक करता है और वाहन असेंबली लाइन फीडिंग में देरी करता है!",
             "mr": "SLA उल्लंघन चेतावणी! नमुना हस्तांतरणात 30 मिनिटांपेक्षा जास्त उशीर झाल्यास SAP EWM मधील वेअरहाऊस ऑर्डर उघडी राहते. यामुळे पुढील पिकिंग ऑर्डर्स ब्लॉक होतात आणि व्हेईकल असेंब्ली लाइनला पार्ट्स मिळण्यास विलंब होतो!"
           },
           "audioSrc": "/audio/voiceover/s02_sc04_wrong.mp3"
+        },
+        "dialog": {
+          "en": "The Goods Receipt Note sticker is pasted and the 10% sample is loaded onto the pallet truck! The factory clock is ticking. What is the maximum permissible SLA time window for inbound manpower to physically hand over this sample to the quality inspection testing room?",
+          "hi": "Goods Receipt Note स्टिकर लग चुका है और 10% सैंपल पैलेट ट्रक पर लोड है! फैक्ट्री की घड़ी टिक-टिक कर रही है। इनबाउंड मैनपावर के लिए इस सैंपल को IQC परीक्षण कक्ष में भौतिक रूप से सौंपने की अधिकतम अनुमेय SLA समय सीमा क्या है?",
+          "mr": "Goods Receipt Note स्टिकर लावला आहे आणि 10% नमुना पॅलेट ट्रकवर लोड केला आहे! कारखान्याचे घड्याळ सुरू झाले आहे. इनबाउंड कर्मचाऱ्यांसाठी हा नमुना प्रत्यक्ष IQC चाचणी कक्षात सोपवण्यासाठी कमाल अनुज्ञेय SLA कालावधी काय आहे?"
         }
       },
       "interaction": {
@@ -344,7 +364,7 @@
         "questionId": "c1-q13",
         "safetyCritical": false,
         "question": {
-          "en": "Following Goods Receipt Note label application, what is the strict SLA cutoff time for inbound manpower to hand over Non-Direct-on-Line samples to the IQC testing room?",
+          "en": "Following Goods Receipt Note label application, what is the strict SLA cutoff time for inbound manpower to hand over Non-Direct-on-Line samples to the quality inspection testing room?",
           "hi": "Goods Receipt Note लेबल लगाने के बाद, इनबाउंड मैनपावर द्वारा नॉन-डायरेक्ट-ऑन-लाइन सैंपल को IQC परीक्षण कक्ष में सौंपने की सख्त SLA समय सीमा क्या है?",
           "mr": "Goods Receipt Note लेबल लावल्यानंतर, इनबाउंड कर्मचाऱ्यांनी नॉन-डायरेक्ट-ऑन-लाइन नमुने IQC चाचणी कक्षात सोपवण्यासाठी काटेकोर SLA कटऑफ वेळ कोणती आहे?"
         },
@@ -362,7 +382,7 @@
             "id": "opt_2_hours",
             "correct": false,
             "label": {
-              "en": "Within 2 hours after Goods Receipt Note pasting (Confusion with IQC inspection window)",
+              "en": "Within 2 hours after Goods Receipt Note pasting (Confusion with quality inspection inspection window)",
               "hi": "Goods Receipt Note पेस्टिंग के 2 घंटे के भीतर (IQC निरीक्षण विंडो के साथ भ्रम)",
               "mr": "Goods Receipt Note लावल्यानंतर 2 तासांच्या आत (IQC तपासणी कालावधीबाबत संभ्रम)"
             }
@@ -378,7 +398,7 @@
           }
         ],
         "prompt": {
-          "en": "Following Goods Receipt Note label application, what is the strict SLA cutoff time for inbound manpower to hand over Non-Direct-on-Line samples to the IQC testing room?",
+          "en": "Following Goods Receipt Note label application, what is the strict SLA cutoff time for inbound manpower to hand over Non-Direct-on-Line samples to the quality inspection testing room?",
           "hi": "Goods Receipt Note लेबल लगाने के बाद, इनबाउंड मैनपावर द्वारा नॉन-डायरेक्ट-ऑन-लाइन सैंपल को IQC परीक्षण कक्ष में सौंपने की सख्त SLA समय सीमा क्या है?",
           "mr": "Goods Receipt Note लेबल लावल्यानंतर, इनबाउंड कर्मचाऱ्यांनी नॉन-डायरेक्ट-ऑन-लाइन नमुने IQC चाचणी कक्षात सोपवण्यासाठी काटेकोर SLA कटऑफ वेळ कोणती आहे?"
         },
@@ -414,7 +434,7 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "The IQC inspector has finished testing the sample! The incoming lot will receive one of 3 distinct outcomes: Pass, Hold, or NG (Rejected). Warehouse operators must execute the exact physical SOP disposition protocol for each result. Match each action item to its correct outcome bucket!",
+            "en": "The quality inspection inspector has finished testing the sample! The incoming lot will receive one of 3 distinct outcomes: Pass, Hold, or NG (Rejected). Warehouse operators must execute the exact physical SOP disposition protocol for each result. Match each action item to its correct outcome bucket!",
             "hi": "IQC इंस्पेक्टर ने सैंपल का परीक्षण पूरा कर लिया है! आवक लॉट को 3 अलग-अलग परिणामों में से एक प्राप्त होगा: पास (Pass), होल्ड (Hold), या एनजी/अस्वीकृत (NG)। वेयरहाउस ऑपरेटरों को प्रत्येक परिणाम के लिए सटीक भौतिक SOP प्रोटोकॉल लागू करना होगा। प्रत्येक कार्रवाई आइटम को उसके सही परिणाम बकेट से मिलाएं!",
             "mr": "IQC निरीक्षकाने नमुन्याची चाचणी पूर्ण केली आहे! इनवर्ड लॉटला 3 पैकी एक निकाल मिळेल: पास (Pass), होल्ड (Hold), किंवा एनजी/नाकारलेले (NG). वेअरहाऊस कर्मचाऱ्यांनी प्रत्येक निकालासाठी अचूक प्रत्यक्ष SOP प्रोटोकॉलचे पालन केले पाहिजे. प्रत्येक कृती आयटमला त्याच्या योग्य निकाल बकेटशी जोडा!"
           },
@@ -423,9 +443,9 @@
         "onCorrect": {
           "pose": "trophy",
           "text": {
-            "en": "Flawless quality compliance! For PASS, seal the green 'QC Pass' on the Goods Receipt Note sticker to release put-away. For HOLD, place the yellow 'IQC Hold' cone. For NG, attach the red NG tag, log a Jira bug ticket with Part # and Lot ID, and transfer the entire lot volume to quarantine area SC01 BL by designated NG manpower! Module 2 Receiving & IQC Clearance is now 100% complete!",
-            "hi": "त्रुटिहीन गुणवत्ता अनुपालन! PASS के लिए, पुट-अवे जारी करने के लिए Goods Receipt Note स्टिकर पर हरी 'QC Pass' सील लगाएं। HOLD के लिए, पीला 'IQC Hold' कोन लगाएं। NG के लिए, लाल NG टैग लगाएं, पार्ट # और लॉट ID के साथ जीरा टिकट दर्ज करें, और निर्दिष्ट NG कर्मियों द्वारा पूरे लॉट वॉल्यूम को क्वारंटाइन क्षेत्र SC01 BL में स्थानांतरित करें! मॉड्यूल 2 अब 100% पूरा हुआ!",
-            "mr": "उत्कृष्ट गुणवत्ता अनुपालन! PASS साठी, पुट-अवे सुरू करण्यासाठी Goods Receipt Note स्टिकरवर हिरवा 'QC Pass' शिक्का मारा. HOLD साठी, पिवळा 'IQC Hold' कोन लावा. NG साठी, लाल NG टॅग लावा, पार्ट # आणि लॉट ID सह जिरा तिकीट नोंदवा, आणि नियुक्त NG कर्मचाऱ्यांद्वारे संपूर्ण लॉट क्वारंटाइन जागा SC01 BL मध्ये हलवा! मॉड्यूल 2 आता 100% पूर्ण झाले आहे!"
+            "en": "Flawless quality compliance! For PASS, seal the green 'QC Pass' on the Goods Receipt Note sticker to release put-away. For HOLD, place the yellow 'quality inspection Hold' cone. For NG, attach the red NG tag, log a Jira bug ticket with Part # and Lot ID, and transfer the entire lot volume to quarantine area Quarantine Storage by designated NG manpower! Module 2 Receiving & quality inspection Clearance is now 100% complete!",
+            "hi": "त्रुटिहीन गुणवत्ता अनुपालन! PASS के लिए, पुट-अवे जारी करने के लिए Goods Receipt Note स्टिकर पर हरी 'QC Pass' सील लगाएं। HOLD के लिए, पीला 'IQC Hold' कोन लगाएं। NG के लिए, लाल NG टैग लगाएं, पार्ट # और लॉट ID के साथ जीरा टिकट दर्ज करें, और निर्दिष्ट NG कर्मियों द्वारा पूरे लॉट वॉल्यूम को क्वारंटाइन क्षेत्र क्वारंटाइन स्टोरेज में स्थानांतरित करें! मॉड्यूल 2 अब 100% पूरा हुआ!",
+            "mr": "उत्कृष्ट गुणवत्ता अनुपालन! PASS साठी, पुट-अवे सुरू करण्यासाठी Goods Receipt Note स्टिकरवर हिरवा 'QC Pass' शिक्का मारा. HOLD साठी, पिवळा 'IQC Hold' कोन लावा. NG साठी, लाल NG टॅग लावा, पार्ट # आणि लॉट ID सह जिरा तिकीट नोंदवा, आणि नियुक्त NG कर्मचाऱ्यांद्वारे संपूर्ण लॉट क्वारंटाइन जागा क्वारंटाइन स्टोरेज मध्ये हलवा! मॉड्यूल 2 आता 100% पूर्ण झाले आहे!"
           },
           "audioSrc": "/audio/voiceover/s02_sc05_correct.mp3"
         },
@@ -437,6 +457,11 @@
             "mr": "डिस्पोझिशन प्रोटोकॉल चूक! शिक्का नसलेले भाग कधीही हाय-राइज रॅकमध्ये हलवू नका. जेव्हा लॉट अयशस्वी होतो, तेव्हा केवळ नमुन्याचे तुकडे नव्हे तर संपूर्ण लॉट सक्रिय जिरा तिकिटासह क्वारंटाइन केला पाहिजे!"
           },
           "audioSrc": "/audio/voiceover/s02_sc05_wrong.mp3"
+        },
+        "dialog": {
+          "en": "The quality inspection inspector has finished testing the sample! The incoming lot will receive one of 3 distinct outcomes: Pass, Hold, or NG (Rejected). Warehouse operators must execute the exact physical SOP disposition protocol for each result. Match each action item to its correct outcome bucket!",
+          "hi": "IQC इंस्पेक्टर ने सैंपल का परीक्षण पूरा कर लिया है! आवक लॉट को 3 अलग-अलग परिणामों में से एक प्राप्त होगा: पास (Pass), होल्ड (Hold), या एनजी/अस्वीकृत (NG)। वेयरहाउस ऑपरेटरों को प्रत्येक परिणाम के लिए सटीक भौतिक SOP प्रोटोकॉल लागू करना होगा। प्रत्येक कार्रवाई आइटम को उसके सही परिणाम बकेट से मिलाएं!",
+          "mr": "IQC निरीक्षकाने नमुन्याची चाचणी पूर्ण केली आहे! इनवर्ड लॉटला 3 पैकी एक निकाल मिळेल: पास (Pass), होल्ड (Hold), किंवा एनजी/नाकारलेले (NG). वेअरहाऊस कर्मचाऱ्यांनी प्रत्येक निकालासाठी अचूक प्रत्यक्ष SOP प्रोटोकॉलचे पालन केले पाहिजे. प्रत्येक कृती आयटमला त्याच्या योग्य निकाल बकेटशी जोडा!"
         }
       },
       "interaction": {
@@ -444,7 +469,7 @@
         "questionId": "c1-q15",
         "safetyCritical": true,
         "question": {
-          "en": "Match the Incoming Quality Control (IQC) outcome to the mandatory physical warehouse action:",
+          "en": "Match the Incoming Quality Control (quality inspection) outcome to the mandatory physical warehouse action:",
           "hi": "आवक गुणवत्ता नियंत्रण (IQC) परिणाम को अनिवार्य भौतिक वेयरहाउस कार्रवाई से सुमेलित करें:",
           "mr": "इनकमिंग गुणवत्ता नियंत्रण (IQC) निकालाला अनिवार्य प्रत्यक्ष वेअरहाऊस कृतीशी जोडा:"
         },
@@ -487,7 +512,7 @@
             "id": "item_pass_stamp",
             "icon": "✅",
             "label": {
-              "en": "Seal 'QC Pass' on GRN sticker and release for Put-Away",
+              "en": "Seal 'QC Pass' on Goods Receipt Note sticker and release for Put-Away",
               "hi": "GRN स्टिकर पर 'QC Pass' सील लगाएं और पुट-अवे के लिए जारी करें",
               "mr": "GRN स्टिकरवर 'QC Pass' शिक्का मारा आणि पुट-अवेसाठी पाठवा"
             },
@@ -497,7 +522,7 @@
             "id": "item_hold_cone",
             "icon": "⚠️",
             "label": {
-              "en": "Place yellow 'IQC Hold' cone & freeze lot in staging",
+              "en": "Place yellow 'quality inspection Hold' cone & freeze lot in staging",
               "hi": "पीला 'IQC Hold' कोन लगाएं और स्टेजिंग में लॉट को फ्रीज करें",
               "mr": "पिवळा 'IQC Hold' कोन लावा आणि स्टेजिंगमध्ये लॉट गोठवा"
             },
@@ -517,15 +542,15 @@
             "id": "item_ng_transfer",
             "icon": "🚛",
             "label": {
-              "en": "Move entire lot volume to NG Area (SC01 BL) via NG manpower",
-              "hi": "NG मैनपावर द्वारा पूरे लॉट वॉल्यूम को NG एरिया (SC01 BL) में भेजें",
-              "mr": "NG कर्मचाऱ्यांमार्फत संपूर्ण लॉट NG भागात (SC01 BL) हलवा"
+              "en": "Move entire lot volume to NG Area (Quarantine Store) via NG manpower",
+              "hi": "NG मैनपावर द्वारा पूरे लॉट वॉल्यूम को NG एरिया (क्वारंटाइन स्टोर) में भेजें",
+              "mr": "NG कर्मचाऱ्यांमार्फत संपूर्ण लॉट NG भागात (क्वारंटाइन स्टोअर) हलवा"
             },
             "targetZoneId": "zone_ng"
           }
         ],
         "prompt": {
-          "en": "Match the Incoming Quality Control (IQC) outcome to the mandatory physical warehouse action:",
+          "en": "Match the Incoming Quality Control (quality inspection) outcome to the mandatory physical warehouse action:",
           "hi": "आवक गुणवत्ता नियंत्रण (IQC) परिणाम को अनिवार्य भौतिक वेयरहाउस कार्रवाई से सुमेलित करें:",
           "mr": "इनकमिंग गुणवत्ता नियंत्रण (IQC) निकालाला अनिवार्य प्रत्यक्ष वेअरहाऊस कृतीशी जोडा:"
         },
@@ -536,9 +561,9 @@
         "xp": 120,
         "sopClause": "SOP for IQC Issuance for AURIC Clause 4.5 & Question Bank Q15",
         "why": {
-          "en": "Quality disposition requires absolute physical and digital integrity. 'Pass' unlocks the SAP EWM put-away order via the physical QC Pass seal. 'Hold' visually protects the buffer from accidental handling using yellow cones. 'NG' requires a red physical tag, a Jira defect ticket with part number and lot ID, and full transfer of the entire lot volume to quarantine location SC01 BL by designated NG manpower.",
-          "hi": "गुणवत्ता निपटान के लिए पूर्ण भौतिक और डिजिटल अखंडता की आवश्यकता होती है। 'Pass' भौतिक QC पास सील के माध्यम से SAP EWM पुट-अवे ऑर्डर को अनलॉक करता है। 'Hold' पीले शंकु का उपयोग करके बफर को आकस्मिक छेड़छाड़ से बचाता है। 'NG' के लिए एक लाल भौतिक टैग, पार्ट नंबर और लॉट आईडी के साथ जीरा टिकट, और निर्दिष्ट NG कर्मियों द्वारा पूरे लॉट वॉल्यूम को क्वारंटाइन स्थान SC01 BL में स्थानांतरित करना अनिवार्य है।",
-          "mr": "गुणवत्ता डिस्पोझिशनसाठी प्रत्यक्ष आणि डिजिटल अचूकता आवश्यक आहे. 'Pass' प्रत्यक्ष QC पास शिक्क्याद्वारे SAP EWM पुट-अवे ऑर्डर अनलॉक करते. 'Hold' पिवळ्या कोन्सचा वापर करून बफरचे चुकीच्या हाताळणीपासून रक्षण करते. 'NG' साठी लाल प्रत्यक्ष टॅग, पार्ट नंबर आणि लॉट आयडीसह जिरा तिकीट, आणि नियुक्त NG कर्मचाऱ्यांद्वारे संपूर्ण लॉट क्वारंटाइन जागा SC01 BL मध्ये हलवणे आवश्यक आहे."
+          "en": "Quality disposition requires absolute physical and digital integrity. 'Pass' unlocks the SAP EWM put-away order via the physical QC Pass seal. 'Hold' visually protects the buffer from accidental handling using yellow cones. 'NG' requires a red physical tag, a Jira defect ticket with part number and lot ID, and full transfer of the entire lot volume to quarantine location Quarantine Storage by designated NG manpower.",
+          "hi": "गुणवत्ता निपटान के लिए पूर्ण भौतिक और डिजिटल अखंडता की आवश्यकता होती है। 'Pass' भौतिक QC पास सील के माध्यम से SAP EWM पुट-अवे ऑर्डर को अनलॉक करता है। 'Hold' पीले शंकु का उपयोग करके बफर को आकस्मिक छेड़छाड़ से बचाता है। 'NG' के लिए एक लाल भौतिक टैग, पार्ट नंबर और लॉट आईडी के साथ जीरा टिकट, और निर्दिष्ट NG कर्मियों द्वारा पूरे लॉट वॉल्यूम को क्वारंटाइन स्थान क्वारंटाइन स्टोरेज में स्थानांतरित करना अनिवार्य है।",
+          "mr": "गुणवत्ता डिस्पोझिशनसाठी प्रत्यक्ष आणि डिजिटल अचूकता आवश्यक आहे. 'Pass' प्रत्यक्ष QC पास शिक्क्याद्वारे SAP EWM पुट-अवे ऑर्डर अनलॉक करते. 'Hold' पिवळ्या कोन्सचा वापर करून बफरचे चुकीच्या हाताळणीपासून रक्षण करते. 'NG' साठी लाल प्रत्यक्ष टॅग, पार्ट नंबर आणि लॉट आयडीसह जिरा तिकीट, आणि नियुक्त NG कर्मचाऱ्यांद्वारे संपूर्ण लॉट क्वारंटाइन जागा क्वारंटाइन स्टोरेज मध्ये हलवणे आवश्यक आहे."
         }
       }
     },
@@ -560,7 +585,7 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Welcome to the IQC quality gate! Every pallet offloaded at Dock 04 undergoes strict verification. What does IQC stand for, and what is its primary operational role in Ather AURIC Plant M002?",
+            "en": "Welcome to the quality inspection quality gate! Every pallet offloaded at Dock 04 undergoes strict verification. What does quality inspection stand for, and what is its primary operational role in Ather AURIC Plant M002?",
             "hi": "IQC गुणवत्ता गेट में आपका स्वागत है! डॉक 04 पर उतारे गए प्रत्येक पैलेट का कड़ा सत्यापन होता है। IQC का पूर्ण रूप क्या है, और एथर औरिक प्लांट M002 में इसकी प्राथमिक परिचालन भूमिका क्या है?",
             "mr": "IQC गुणवत्ता गेटमध्ये आपले स्वागत आहे! डॉक 04 वर उतरवलेल्या प्रत्येक साहित्याची कडक तपासणी होते. IQC चा अर्थ काय आहे आणि एथर औरिक कारखान्यात त्याची मुख्य जबाबदारी काय आहे?"
           },
@@ -569,7 +594,7 @@
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Correct! IQC stands for Incoming Quality Control. Their team tests incoming supplier components against technical blueprints before parts enter production storage.",
+            "en": "Correct! quality inspection stands for Incoming Quality Control. Their team tests incoming supplier components against technical blueprints before parts enter production storage.",
             "hi": "सही! IQC का अर्थ इनकमिंग क्वालिटी कंट्रोल है। उनकी टीम तकनीकी ब्लूप्रिंट के खिलाफ आने वाले आपूर्तिकर्ता घटकों का परीक्षण करती है इससे पहले कि पुर्जे उत्पादन भंडारण में प्रवेश करें।",
             "mr": "बरोबर! IQC म्हणजे Incoming Quality Control (इनकमिंग क्वालिटी कंट्रोल). माल गोदामात साठवण्यापूर्वी तो तांत्रिक मानकांनुसार योग्य आहे की नाही हे तपासण्याचे काम IQC करते."
           },
@@ -578,11 +603,16 @@
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Incorrect. IQC stands for Incoming Quality Control, ensuring zero defect parts reach vehicle assembly lines.",
+            "en": "Incorrect. quality inspection stands for Incoming Quality Control, ensuring zero defect parts reach vehicle assembly lines.",
             "hi": "गलत। IQC का अर्थ इनकमिंग क्वालिटी कंट्रोल है, जो सुनिश्चित करता है कि शून्य दोष वाले हिस्से वाहन असेंबली लाइनों तक पहुंचें।",
             "mr": "चुकीचे. IQC म्हणजे Incoming Quality Control, जेणेकरून एकही सदोष पार्ट वाहनांच्या मुख्य लाईनवर जाऊ नये."
           },
           "audioSrc": "/audio/voiceover/s02_sc06_wrong.mp3"
+        },
+        "dialog": {
+          "en": "Welcome to the quality inspection quality gate! Every pallet offloaded at Dock 04 undergoes strict verification. What does quality inspection stand for, and what is its primary operational role in Ather AURIC Plant M002?",
+          "hi": "IQC गुणवत्ता गेट में आपका स्वागत है! डॉक 04 पर उतारे गए प्रत्येक पैलेट का कड़ा सत्यापन होता है। IQC का पूर्ण रूप क्या है, और एथर औरिक प्लांट M002 में इसकी प्राथमिक परिचालन भूमिका क्या है?",
+          "mr": "IQC गुणवत्ता गेटमध्ये आपले स्वागत आहे! डॉक 04 वर उतरवलेल्या प्रत्येक साहित्याची कडक तपासणी होते. IQC चा अर्थ काय आहे आणि एथर औरिक कारखान्यात त्याची मुख्य जबाबदारी काय आहे?"
         }
       },
       "interaction": {
@@ -590,7 +620,7 @@
         "questionId": "c1-q11-iqc-definition",
         "safetyCritical": true,
         "question": {
-          "en": "What does IQC stand for, and what is its primary purpose at Ather AURIC?",
+          "en": "What does quality inspection stand for, and what is its primary purpose at Ather AURIC?",
           "hi": "IQC का पूर्ण रूप क्या है, और एथर औरिक में इसका प्राथमिक उद्देश्य क्या है?",
           "mr": "IQC चा पूर्ण अर्थ काय आहे आणि एथर औरिकमध्ये त्याचा मुख्य उद्देश काय आहे?"
         },
@@ -633,7 +663,7 @@
           }
         ],
         "prompt": {
-          "en": "What does IQC stand for, and what is its primary purpose at Ather AURIC?",
+          "en": "What does quality inspection stand for, and what is its primary purpose at Ather AURIC?",
           "hi": "IQC का पूर्ण रूप क्या है, और एथर औरिक में इसका प्राथमिक उद्देश्य क्या है?",
           "mr": "IQC चा पूर्ण अर्थ काय आहे आणि एथर औरिकमध्ये त्याचा मुख्य उद्देश काय आहे?"
         },
@@ -668,9 +698,9 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Under Ather Quality Policy, during the first 6 months of a new factory launch (AURIC Plant ramp-up), which inward supplier materials must be routed to IQC before put-away?",
-            "hi": "एथर गुणवत्ता नीति के तहत, एक नई फैक्ट्री लॉन्च (औरिक प्लांट रैंप-अप) के पहले 6 महीनों के दौरान, पुट-अवे से पहले किन आवक आपूर्तिकर्ता सामग्रियों को IQC में भेजा जाना चाहिए?",
-            "mr": "एथरच्या गुणवत्ता धोरणानुसार, नवीन फॅक्टरी सुरू झाल्यानंतरच्या पहिल्या 6 महिन्यांत (AURIC रॅम्प-अप), साठवणुकीपूर्वी कोणता माल IQC तपासणीसाठी पाठवणे बंधनकारक आहे?"
+            "en": "Under Ather Quality Policy, during the first 6 months of a new factory launch (AURIC Plant ramp-up), which inward supplier materials must be routed to quality inspection before put-away?",
+            "hi": "एथर गुणवत्ता नीति एक नई फैक्ट्री लॉन्च (औरिक प्लांट रैंप-अप) के पहले 6 महीनों के दौरान, पुट-अवे से पहले किन आवक आपूर्तिकर्ता सामग्रियों को IQC में भेजा जाना चाहिए?",
+            "mr": "एथरच्या गुणवत्ता धोरणानवीन फॅक्टरी सुरू झाल्यानंतरच्या पहिल्या 6 महिन्यांत (AURIC रॅम्प-अप), साठवणुकीपूर्वी कोणता माल IQC तपासणीसाठी पाठवणे बंधनकारक आहे?"
           },
           "audioSrc": "/audio/voiceover/s02_sc07_intro.mp3"
         },
@@ -686,11 +716,16 @@
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Careful! For the first 6 months of plant launch, ALL incoming supplier parts must undergo IQC inspection to establish baseline quality.",
+            "en": "Careful! For the first 6 months of plant launch, ALL incoming supplier parts must undergo quality inspection inspection to establish baseline quality.",
             "hi": "सावधान! प्लांट लॉन्च के पहले 6 महीनों के लिए, बेसलाइन गुणवत्ता स्थापित करने के लिए सभी आने वाले आपूर्तिकर्ता भागों को IQC निरीक्षण से गुजरना होगा।",
             "mr": "सावध रहा! फॅक्टरी सुरू झाल्यावर पहिल्या 6 महिन्यांत येणारा 100% माल तपासणीसाठी IQC कडे गेलाच पाहिजे."
           },
           "audioSrc": "/audio/voiceover/s02_sc07_wrong.mp3"
+        },
+        "dialog": {
+          "en": "Under Ather Quality Policy, during the first 6 months of a new factory launch (AURIC Plant ramp-up), which inward supplier materials must be routed to quality inspection before put-away?",
+          "hi": "एथर गुणवत्ता नीति एक नई फैक्ट्री लॉन्च (औरिक प्लांट रैंप-अप) के पहले 6 महीनों के दौरान, पुट-अवे से पहले किन आवक आपूर्तिकर्ता सामग्रियों को IQC में भेजा जाना चाहिए?",
+          "mr": "एथरच्या गुणवत्ता धोरणानवीन फॅक्टरी सुरू झाल्यानंतरच्या पहिल्या 6 महिन्यांत (AURIC रॅम्प-अप), साठवणुकीपूर्वी कोणता माल IQC तपासणीसाठी पाठवणे बंधनकारक आहे?"
         }
       },
       "interaction": {
@@ -698,7 +733,7 @@
         "questionId": "c1-q14-rampup-rule",
         "safetyCritical": true,
         "question": {
-          "en": "In a new factory, during the first 6 months, which inward parts must go to IQC?",
+          "en": "In a new factory, during the first 6 months, which inward parts must go to quality inspection?",
           "hi": "एक नई फैक्ट्री में, पहले 6 महीनों के दौरान, किन आवक पुर्जों को IQC में जाना चाहिए?",
           "mr": "नवीन फॅक्टरीमध्ये, पहिल्या 6 महिन्यांत कोणता आवक माल IQC कडे गेला पाहिजे?"
         },
@@ -707,7 +742,7 @@
             "id": "opt_all_inward_parts",
             "correct": true,
             "label": {
-              "en": "100% of all inward parts are treated as Non-Direct-on-Line and must undergo IQC sample inspection",
+              "en": "100% of all inward parts are treated as Non-Direct-on-Line and must undergo quality inspection sample inspection",
               "hi": "100% सभी आवक भागों को नॉन-डायरेक्ट-ऑन-लाइन माना जाता है और उन्हें IQC नमूना निरीक्षण से गुजरना होगा",
               "mr": "येणारा 100% सर्व माल नॉन-डायरेक्ट-ऑन-लाइन मानला जातो आणि त्याची नमुना तपासणी करणे सक्तीचे असते"
             }
@@ -741,7 +776,7 @@
           }
         ],
         "prompt": {
-          "en": "In a new factory, during the first 6 months, which inward parts must go to IQC?",
+          "en": "In a new factory, during the first 6 months, which inward parts must go to quality inspection?",
           "hi": "एक नई फैक्ट्री में, पहले 6 महीनों के दौरान, किन आवक पुर्जों को IQC में जाना चाहिए?",
           "mr": "नवीन फॅक्टरीमध्ये, पहिल्या 6 महिन्यांत कोणता आवक माल IQC कडे गेला पाहिजे?"
         },
@@ -777,16 +812,16 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Mastering the chronological rhythm of receiving is essential! Arrange the 4 mandatory operational stages of Non-Direct-on-Line material receiving 4.1 through 4.5.",
-            "hi": "प्राप्ति की कालानुक्रमिक लय में महारत हासिल करना आवश्यक है! से 4.5 के तहत नॉन-डायरेक्ट-ऑन-लाइन सामग्री प्राप्ति के 4 अनिवार्य परिचालन चरणों को व्यवस्थित करें।",
-            "mr": "माल स्वीकारण्याच्या अचूक क्रमाचे ज्ञान असणे अत्यंत आवश्यक आहे! ते 4.5 नुसार नॉन-डायरेक्ट-ऑन-लाइन साहित्याच्या प्राप्तीचा योग्य क्रम लावा."
+            "en": "Mastering the chronological rhythm of receiving is essential! Arrange the 4 mandatory operational stages of Non-Direct-on-Line material receiving in the correct order.",
+            "hi": "प्राप्ति की कालानुक्रमिक लय में महारत हासिल करना आवश्यक है! नॉन-डायरेक्ट-ऑन-लाइन सामग्री प्राप्ति के 4 अनिवार्य परिचालन चरणों को व्यवस्थित करें।",
+            "mr": "माल स्वीकारण्याच्या अचूक क्रमाचे ज्ञान असणे अत्यंत आवश्यक आहे! नॉन-डायरेक्ट-ऑन-लाइन साहित्याच्या प्राप्तीचा योग्य क्रम लावा."
           },
           "audioSrc": "/audio/voiceover/s02_sc08_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Outstanding! Unload & paste Goods Receipt Note label then Collect 10% sample & place Under IQC cones then Physical handover to lab within 30-min SLA then Issue Pass, Hold, or NG disposition.",
+            "en": "Outstanding! Unload & paste Goods Receipt Note label then Collect 10% sample & place Under quality inspection cones then Physical handover to lab within 30-min SLA then Issue Pass, Hold, or NG disposition.",
             "hi": "उत्कृष्ट! अनलोड करें और Goods Receipt Note लेबल चिपकाएं फिर 10% नमूना एकत्र करें और अंडर IQC शंकु लगाएं फिर 30-मिनट के SLA के भीतर लैब को भौतिक हैंडओवर फिर पास, होल्ड या NG स्वभाव जारी करें।",
             "mr": "उत्कृष्ट! अनलोड करून Goods Receipt Note लेबल लावणे मग 10% सॅम्पल बाजूला काढून त्यावर Under IQC कोन ठेवणे मग 30 मिनिटांत लॅबकडे प्रत्यक्ष सुपूर्द करणे मग Pass, Hold किंवा NG चा अधिकृत निर्णय देणे."
           },
@@ -800,6 +835,11 @@
             "mr": "चुकीचा क्रम! सॅम्पल काढण्यापूर्वी Goods Receipt Note लेबल लावले पाहिजे आणि लॅबमध्ये देण्यापूर्वी 10% नमुन्यावर पिवळे कोन ठेवले पाहिजेत."
           },
           "audioSrc": "/audio/voiceover/s02_sc08_wrong.mp3"
+        },
+        "dialog": {
+          "en": "Mastering the chronological rhythm of receiving is essential! Arrange the 4 mandatory operational stages of Non-Direct-on-Line material receiving in the correct order.",
+          "hi": "प्राप्ति की कालानुक्रमिक लय में महारत हासिल करना आवश्यक है! नॉन-डायरेक्ट-ऑन-लाइन सामग्री प्राप्ति के 4 अनिवार्य परिचालन चरणों को व्यवस्थित करें।",
+          "mr": "माल स्वीकारण्याच्या अचूक क्रमाचे ज्ञान असणे अत्यंत आवश्यक आहे! नॉन-डायरेक्ट-ऑन-लाइन साहित्याच्या प्राप्तीचा योग्य क्रम लावा."
         }
       },
       "interaction": {
@@ -807,7 +847,7 @@
         "questionId": "c1-q17-receiving-sequence",
         "safetyCritical": true,
         "question": {
-          "en": "Put the Non-Direct-on-Line Receiving and IQC steps in correct chronological order:",
+          "en": "Put the Non-Direct-on-Line Receiving and quality inspection steps in correct chronological order:",
           "hi": "नॉन-डायरेक्ट-ऑन-लाइन प्राप्ति और IQC चरणों को सही कालानुक्रमिक क्रम में रखें:",
           "mr": "नॉन-डायरेक्ट-ऑन-लाइन माल प्राप्ती आणि IQC च्या पायऱ्या योग्य कालक्रमाने लावा:"
         },
@@ -821,7 +861,7 @@
             "id": "step_unload_grn",
             "icon": "📦",
             "label": {
-              "en": "Unload pallet from truck at Dock 04 and paste physical GRN barcode label",
+              "en": "Unload pallet from truck at Dock 04 and paste physical Goods Receipt Note barcode label",
               "hi": "डॉक 04 पर ट्रक से पैलेट अनलोड करें और भौतिक GRN बारकोड लेबल चिपकाएं",
               "mr": "डॉक 04 वर ट्रक रिकाम करून बॉक्सवर प्रत्यक्ष GRN बारकोड लेबल लावणे"
             }
@@ -830,7 +870,7 @@
             "id": "step_sample_cone",
             "icon": "⚠️",
             "label": {
-              "en": "Segregate 10% sample crate and place yellow 'Under IQC' visual cones on remaining staged lot",
+              "en": "Segregate 10% sample crate and place yellow 'Under quality inspection' visual cones on remaining staged lot",
               "hi": "10% नमूना क्रेट को अलग करें और शेष स्टेज किए गए लॉट पर पीले 'Under IQC' दृश्य शंकु रखें",
               "mr": "10% सॅम्पल बॉक्स वेगळा करणे आणि स्टेजिंगमधील उर्वरित बॉक्सवर 'Under IQC' चे पिवळे कोन ठेवणे"
             }
@@ -839,7 +879,7 @@
             "id": "step_sla_handover",
             "icon": "⏱️",
             "label": {
-              "en": "Hand over sample crate to IQC test lab within 30-minute SLA and sign the physical logbook",
+              "en": "Hand over sample crate to quality inspection test lab within 30-minute SLA and sign the physical logbook",
               "hi": "30-मिनट के SLA के भीतर नमूना क्रेट IQC परीक्षण लैब को सौंपें और भौतिक लॉगबुक पर हस्ताक्षर करें",
               "mr": "30 मिनिटांच्या आत नमुना IQC लॅबमध्ये नेऊन देणे आणि प्रत्यक्ष रजिस्टरमध्ये सही करणे"
             }
@@ -848,7 +888,7 @@
             "id": "step_disposition_seal",
             "icon": "✅",
             "label": {
-              "en": "IQC completes inspection within 2 hours and issues final Pass (Green Seal), Hold, or NG tag",
+              "en": "quality inspection completes inspection within 2 hours and issues final Pass (Green Seal), Hold, or NG tag",
               "hi": "IQC 2 घंटे के भीतर निरीक्षण पूरा करता है और अंतिम पास (ग्रीन सील), होल्ड या NG टैग जारी करता है",
               "mr": "IQC ने 2 तासांत तपासणी पूर्ण करून Pass (हिरवा शिक्का), Hold किंवा NG चा अंतिम निर्णय देणे"
             }
@@ -861,7 +901,7 @@
           "step_disposition_seal"
         ],
         "prompt": {
-          "en": "Put the Non-Direct-on-Line Receiving and IQC steps in correct chronological order:",
+          "en": "Put the Non-Direct-on-Line Receiving and quality inspection steps in correct chronological order:",
           "hi": "नॉन-डायरेक्ट-ऑन-लाइन प्राप्ति और IQC चरणों को सही कालानुक्रमिक क्रम में रखें:",
           "mr": "नॉन-डायरेक्ट-ऑन-लाइन माल प्राप्ती आणि IQC च्या पायऱ्या योग्य कालक्रमाने लावा:"
         },
@@ -914,11 +954,16 @@
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Violation! Delayed IQC handover deadlocks the SAP EWM queue. Inbound Zone Leader must immediately prioritize sample delivery to clear the system block.",
+            "en": "Violation! Delayed quality inspection handover deadlocks the SAP warehouse management system queue. Inbound Zone Leader must immediately prioritize sample delivery to clear the system block.",
             "hi": "उल्लंघन! विलंबित IQC हैंडओवर SAP EWM कतार को अवरुद्ध करता है। इनबाउंड ज़ोन लीडर को सिस्टम ब्लॉक को खाली करने के लिए तुरंत नमूना वितरण को प्राथमिकता देनी चाहिए।",
             "mr": "नियमभंग! उशिरा सॅम्पल दिल्याने SAP EWM सिस्टीम जाम होते. इनबाउंड झोन लीडरने तात्काळ सॅम्पल लॅबमध्ये पाठवून सिस्टीम मोकळी केली पाहिजे."
           },
           "audioSrc": "/audio/voiceover/s02_sc09_wrong.mp3"
+        },
+        "dialog": {
+          "en": "Non-Direct-on-Line sample crates have been sitting in receiving staging for 75 minutes because the team was busy offloading another truck! What is the critical systemic risk of exceeding the 30-minute handover SLA?",
+          "hi": "नॉन-डायरेक्ट-ऑन-लाइन नमूना क्रेट 75 मिनट से प्राप्त स्टेजिंग में बैठे हैं क्योंकि टीम दूसरे ट्रक को अनलोड करने में व्यस्त थी! 30-मिनट के हैंडओवर SLA को पार करने का महत्वपूर्ण प्रणालीगत जोखिम क्या है?",
+          "mr": "दुसऱ्या ट्रकच्या अनलोडिंगमध्ये टीम व्यस्त राहिल्यामुळे नॉन-डायरेक्ट-ऑन-लाइन चे सॅम्पल तब्बल 75 मिनिटे स्टेजिंगमध्येच पडून राहिले! SOP नुसार 30 मिनिटांची मुदत ओलांडल्यास कोणता गंभीर फटका बसतो?"
         }
       },
       "interaction": {
@@ -926,7 +971,7 @@
         "questionId": "c1-q18-sla-overrun",
         "safetyCritical": true,
         "question": {
-          "en": "Non-Direct-on-Line samples are not issued to IQC within the 30-minute SLA. What is the operational risk?",
+          "en": "Non-Direct-on-Line samples are not issued to quality inspection within the 30-minute SLA. What is the operational risk?",
           "hi": "नॉन-डायरेक्ट-ऑन-लाइन नमूने 30-मिनट के SLA के भीतर IQC को जारी नहीं किए जाते हैं। परिचालन जोखिम क्या है?",
           "mr": "नॉन-डायरेक्ट-ऑन-लाइन चे सॅम्पल 30 मिनिटांच्या आत IQC कडे न दिल्यास कोणता धोका निर्माण होतो?"
         },
@@ -953,7 +998,7 @@
             "id": "opt_iqc_speeds_up",
             "correct": false,
             "label": {
-              "en": "The IQC laboratory tests components twice as fast to make up for lost time",
+              "en": "The quality inspection laboratory tests components twice as fast to make up for lost time",
               "hi": "IQC प्रयोगशाला खोए हुए समय की भरपाई के लिए घटकों का दोगुना तेजी से परीक्षण करती है",
               "mr": "वेळ भरून काढण्यासाठी IQC लॅब दुप्पट वेगाने घाईघाईत तपासणी करते"
             }
@@ -969,7 +1014,7 @@
           }
         ],
         "prompt": {
-          "en": "Non-Direct-on-Line samples are not issued to IQC within the 30-minute SLA. What is the operational risk?",
+          "en": "Non-Direct-on-Line samples are not issued to quality inspection within the 30-minute SLA. What is the operational risk?",
           "hi": "नॉन-डायरेक्ट-ऑन-लाइन नमूने 30-मिनट के SLA के भीतर IQC को जारी नहीं किए जाते हैं। परिचालन जोखिम क्या है?",
           "mr": "नॉन-डायरेक्ट-ऑन-लाइन चे सॅम्पल 30 मिनिटांच्या आत IQC कडे न दिल्यास कोणता धोका निर्माण होतो?"
         },

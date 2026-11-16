@@ -155,9 +155,9 @@ export async function syncEmployeeSession(
         : 'Order Picking & Packaging',
     currentStageIndex: session.currentStageIndex ?? 0,
     completedStages: session.completedStages ?? [],
-    pointsScored: session.pointsScored ?? 0,
+    pointsScored: session.pointsScored ?? session.totalScoreXP ?? 0,
     totalPossiblePoints: session.totalPossiblePoints ?? (session.category === 'receiving_putaway' ? 52 : 39),
-    totalScoreXP: session.totalScoreXP ?? 0,
+    totalScoreXP: session.totalScoreXP ?? session.pointsScored ?? 0,
     accuracyPct: session.accuracyPct ?? 100,
     totalDecisionsCount: session.totalDecisionsCount ?? 0,
     correctDecisionsCount: session.correctDecisionsCount ?? 0,
@@ -182,6 +182,8 @@ export async function syncEmployeeSession(
       {
         ...session,
         id: docId,
+        pointsScored: updatedItem.pointsScored,
+        totalScoreXP: updatedItem.totalScoreXP,
         categoryTitle: updatedItem.categoryTitle,
         lastActiveAt: serverTimestamp(),
         startedAt: session.startedAt || serverTimestamp()

@@ -262,23 +262,26 @@ export function App() {
   const handleViewScorecardFromStory = (summary: any) => {
     const isPicking = appMode === 'picking';
     const totalPossiblePoints = isPicking ? 39 : 52;
+    const correct = summary.correctSteps ?? summary.xpGained ?? summary.score ?? summary.correctCount ?? 0;
+    const total = summary.totalSteps ?? summary.totalQuestions ?? totalPossiblePoints;
+    const accuracy = summary.accuracyPct ?? summary.accuracy ?? Math.round((correct / Math.max(1, total)) * 100);
     const completeSummary: RunSummary = {
-      packId: isPicking ? 'ather_picking_packaging' : 'ather_receiving_putaway',
-      packTitle: {
+      packId: summary.packId || (isPicking ? 'ather_picking_packaging' : 'ather_receiving_putaway'),
+      packTitle: summary.packTitle || {
         en: isPicking ? 'Order Picking & Packaging Assessment' : 'Warehouse Receiving & Put-Away Assessment',
         hi: isPicking ? 'ऑर्डर पिकिंग और पैकेजिंग मूल्यांकन' : 'वेयरहाउस प्राप्ति और पुट-अवे मूल्यांकन',
         mr: isPicking ? 'ऑर्डर पिकिंग आणि पॅकेजिंग मूल्यमापन' : 'वेअरहाऊस प्राप्ती आणि पुट-अवे मूल्यमापन'
       },
       mode: 'guided',
-      stars: summary.accuracy >= 90 ? 3 : summary.accuracy >= 75 ? 2 : 1,
-      xpGained: summary.score || summary.correctCount || 0,
-      accuracyPct: summary.accuracy || 100,
-      totalSteps: summary.totalQuestions || totalPossiblePoints,
-      correctSteps: summary.correctCount || summary.score || 0,
-      safetyPassed: summary.perfectRun ?? true,
+      stars: summary.stars ?? (accuracy >= 90 ? 3 : accuracy >= 75 ? 2 : 1),
+      xpGained: correct,
+      accuracyPct: accuracy,
+      totalSteps: total,
+      correctSteps: correct,
+      safetyPassed: summary.safetyPassed ?? (summary.perfectRun ?? true),
       lost: false,
-      badgesEarned: ['safe', 'perf', 'cert'],
-      timestamp: summary.completedAt || new Date().toISOString()
+      badgesEarned: summary.badgesEarned || ['safe', 'perf', 'cert'],
+      timestamp: summary.timestamp || summary.completedAt || new Date().toISOString()
     };
     setRunSummary(completeSummary);
     setScreen('results');

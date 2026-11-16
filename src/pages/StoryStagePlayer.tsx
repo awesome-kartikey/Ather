@@ -20,63 +20,7 @@ import { category1Stages } from '../content/category1';
 import { category2Stages } from '../content/category2';
 import { StoryHud } from '../components/story/StoryHud';
 import { MascotAura } from '../components/story/MascotAura';
-import { TruckGateAnimation } from '../components/story/TruckGateAnimation';
-import { GatehouseCabinAnimation } from '../components/story/GatehouseCabinAnimation';
-import { SapTerminalAnimation } from '../components/story/SapTerminalAnimation';
-import { ThermalPrinterAnimation } from '../components/story/ThermalPrinterAnimation';
-import { DockBlueprintAnimation } from '../components/story/DockBlueprintAnimation';
-import { DockSafetyAnimation } from '../components/story/DockSafetyAnimation';
-import { ExitGatehouseAnimation } from '../components/story/ExitGatehouseAnimation';
-import { GrnStickerAnimation } from '../components/story/GrnStickerAnimation';
-import { IqcSamplingAnimation } from '../components/story/IqcSamplingAnimation';
-import { IqcConesAnimation } from '../components/story/IqcConesAnimation';
-import { IqcHandoverSlaAnimation } from '../components/story/IqcHandoverSlaAnimation';
-import { IqcDispositionAnimation } from '../components/story/IqcDispositionAnimation';
-import { HuScanAnimation } from '../components/story/HuScanAnimation';
-import { RouteSegregationAnimation } from '../components/story/RouteSegregationAnimation';
-import { BinMarriageAnimation } from '../components/story/BinMarriageAnimation';
-import { OmittedScanHazardAnimation } from '../components/story/OmittedScanHazardAnimation';
-import { BatteryDockArrivalAnimation } from '../components/story/BatteryDockArrivalAnimation';
-import { CleanroomVaultAnimation } from '../components/story/CleanroomVaultAnimation';
-import { BatterySlaCountdownAnimation } from '../components/story/BatterySlaCountdownAnimation';
-import { EnvironmentalAlarmAnimation } from '../components/story/EnvironmentalAlarmAnimation';
-import { ChemicalBypassAnimation } from '../components/story/ChemicalBypassAnimation';
-import { ChemicalUnloadingAnimation } from '../components/story/ChemicalUnloadingAnimation';
-import { ChemicalSegregationAnimation } from '../components/story/ChemicalSegregationAnimation';
-import { ChemicalDeoPostingAnimation } from '../components/story/ChemicalDeoPostingAnimation';
-import { SupermarketMh1DeskAnimation } from '../components/story/SupermarketMh1DeskAnimation';
-import { SupermarketCountAuditAnimation } from '../components/story/SupermarketCountAuditAnimation';
-import { GravityFlowRackAnimation } from '../components/story/GravityFlowRackAnimation';
-import { SupermarketKanbanAnimation } from '../components/story/SupermarketKanbanAnimation';
-import { IqcLotQuarantineAnimation } from '../components/story/IqcLotQuarantineAnimation';
-import { RedTagJiraAnimation } from '../components/story/RedTagJiraAnimation';
-import { QuarantineSegregationAnimation } from '../components/story/QuarantineSegregationAnimation';
-import { DispositionFilterAnimation } from '../components/story/DispositionFilterAnimation';
-import { ScrapShredderAnimation } from '../components/story/ScrapShredderAnimation';
-import { MesWhTaskAnimation } from '../components/story/c2/MesWhTaskAnimation';
-import { SourceLocationQrAnimation } from '../components/story/c2/SourceLocationQrAnimation';
-import { TrolleyMarriageAnimation } from '../components/story/c2/TrolleyMarriageAnimation';
-import { WorkstationDeliveryAnimation } from '../components/story/c2/WorkstationDeliveryAnimation';
-import { AcedTrolleyIssuanceAnimation } from '../components/story/c2/AcedTrolleyIssuanceAnimation';
-import { TwoBinEkanbanAnimation } from '../components/story/c2/TwoBinEkanbanAnimation';
-import { TrolleyCapacityAnimation } from '../components/story/c2/TrolleyCapacityAnimation';
-import { MheWrongPartReturnAnimation } from '../components/story/c2/MheWrongPartReturnAnimation';
-import { MezzanineSequencingAnimation } from '../components/story/c2/MezzanineSequencingAnimation';
-import { BrakeMotorDecantingAnimation } from '../components/story/c2/BrakeMotorDecantingAnimation';
-import { WrongLaneRejectionAnimation } from '../components/story/c2/WrongLaneRejectionAnimation';
-import { LineSideEwmCloseAnimation } from '../components/story/c2/LineSideEwmCloseAnimation';
-import { IndirectNoReservationAnimation } from '../components/story/c2/IndirectNoReservationAnimation';
-import { SapYmb21TransferAnimation } from '../components/story/c2/SapYmb21TransferAnimation';
-import { MrsCostCenterAuditAnimation } from '../components/story/c2/MrsCostCenterAuditAnimation';
-import { IndirectHandoverProtocolAnimation } from '../components/story/c2/IndirectHandoverProtocolAnimation';
-import { JiraBudgetIdAnimation } from '../components/story/c2/JiraBudgetIdAnimation';
-import { PirDualApprovalAnimation } from '../components/story/c2/PirDualApprovalAnimation';
-import { PirCutoffClockAnimation } from '../components/story/c2/PirCutoffClockAnimation';
-import { SapStoGateExitAnimation } from '../components/story/c2/SapStoGateExitAnimation';
-import { RtvCauserGateAnimation } from '../components/story/c2/RtvCauserGateAnimation';
-import { RtvDeviationAnimation } from '../components/story/c2/RtvDeviationAnimation';
-import { EmptyBinStackingAnimation } from '../components/story/c2/EmptyBinStackingAnimation';
-import { ReverseTruckLoadingAnimation } from '../components/story/c2/ReverseTruckLoadingAnimation';
+import { StoryVideoFrame } from '../components/story/StoryVideoFrame';
 import { QuestionCard } from '../components/story/QuestionCard';
 import { DragDropCard } from '../components/story/DragDropCard';
 import { SequenceCard } from '../components/story/SequenceCard';
@@ -87,7 +31,7 @@ import { CountStepperCard } from '../components/story/CountStepperCard';
 import { FeedbackCard } from '../components/story/FeedbackCard';
 import { MilestoneGateway } from '../components/story/MilestoneGateway';
 import { FacilityPhotoFrame } from '../components/story/FacilityPhotoFrame';
-import { Camera, Video, Minimize2, Maximize2 } from 'lucide-react';
+import { Video, Minimize2, Maximize2 } from 'lucide-react';
 import { logSceneTelemetry, syncEmployeeSession, type TrainingCategory } from '../services/firebase';
 
 const allStages: StoryStage[] = [
@@ -177,10 +121,11 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
   });
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [isLastCorrect, setIsLastCorrect] = useState<boolean>(false);
-  const [canvasViewMode, setCanvasViewMode] = useState<'photo' | 'blueprint'>('photo');
+  const [isLastFirstTimeRight, setIsLastFirstTimeRight] = useState<boolean>(true);
   const [isQuestionExpanded, setIsQuestionExpanded] = useState<boolean>(false);
   const [showVideoModal, setShowVideoModal] = useState<boolean>(false);
   const [replayKey, setReplayKey] = useState<number>(0);
+  const [retryKey, setRetryKey] = useState<number>(0);
 
   // Real-time per-scene duration and assessment telemetry refs
   const sceneStartTimeRef = useRef<number>(Date.now());
@@ -192,10 +137,59 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
   const answerEvaluatedRef = useRef<(correct: boolean) => void>(() => {});
   const resetSceneRef = useRef<() => void>(() => {});
 
-  // 1-Point scoring system and safety breach tracking - always starts fresh at 0 for each session
-  const [pointsScored, setPointsScored] = useState<number>(0);
-  const pointsScoredRef = useRef<number>(0);
-  const safetyBreachesRef = useRef<number>(0);
+  const sessionCacheKey = isPicking ? 'ather_session_picking' : 'ather_session_receiving';
+
+  // 1-Point scoring system and safety breach tracking with session restoration
+  const [pointsScored, setPointsScored] = useState<number>(() => {
+    try {
+      const cached = localStorage.getItem(sessionCacheKey);
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        return typeof parsed.pointsScored === 'number' ? parsed.pointsScored : 0;
+      }
+    } catch {}
+    return 0;
+  });
+  const pointsScoredRef = useRef<number>(pointsScored);
+  const initialSafetyBreaches = useMemo(() => {
+    try {
+      const cached = localStorage.getItem(sessionCacheKey);
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        return typeof parsed.safetyBreaches === 'number' ? parsed.safetyBreaches : 0;
+      }
+    } catch {}
+    return 0;
+  }, [sessionCacheKey]);
+  const safetyBreachesRef = useRef<number>(initialSafetyBreaches);
+
+  const initialCompletedStages = useMemo(() => {
+    try {
+      const cached = localStorage.getItem(sessionCacheKey);
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        return Array.isArray(parsed.completedStages) ? parsed.completedStages : [];
+      }
+    } catch {}
+    return [];
+  }, [sessionCacheKey]);
+  const completedStagesRef = useRef<number[]>(initialCompletedStages);
+
+  const persistSessionCache = () => {
+    try {
+      localStorage.setItem(
+        sessionCacheKey,
+        JSON.stringify({
+          pointsScored: pointsScoredRef.current,
+          safetyBreaches: safetyBreachesRef.current,
+          totalDecisions: totalDecisionsRef.current,
+          correctDecisions: correctDecisionsRef.current,
+          totalTimeSeconds: totalTimeSecondsRef.current,
+          completedStages: completedStagesRef.current
+        })
+      );
+    } catch {}
+  };
 
   const stageData = activeStages[currentStageIndex] || activeStages[0];
   const scene = stageData.scenes[currentSceneIndex] || stageData.scenes[0];
@@ -216,13 +210,7 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
     sceneAttemptsRef.current = 0;
   }, [currentStageIndex, currentSceneIndex]);
 
-  // Reset canvas view mode on scene change:
-  // Default to 'blueprint' (the interactive coded simulation animation),
-  // ensuring learners immediately see the interactive terminals, screens, blueprints,
-  // and process animations. Users can toggle to 'PHOTO' anytime if a real photograph is attached.
   useEffect(() => {
-    const isExplicitPhoto = scene.media?.preferredViewMode === 'photo' || (Boolean(scene.media?.imageSrc) && !scene.media?.videoSrc);
-    setCanvasViewMode(isExplicitPhoto ? 'photo' : 'blueprint');
     const isMultiZone = scene.interaction.type === 'drag_drop' || scene.interaction.type === 'sequence';
     setIsQuestionExpanded(isMultiZone);
     setShowVideoModal(false);
@@ -407,6 +395,7 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
     totalTimeSecondsRef.current += timeSpentSeconds;
 
     const isFirstTimeRight = correct && isFirstAttempt;
+    setIsLastFirstTimeRight(isFirstTimeRight);
     if (isFirstTimeRight) {
       pointsScoredRef.current += 1;
       setPointsScored(pointsScoredRef.current);
@@ -414,6 +403,7 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
     if (!correct) {
       safetyBreachesRef.current += 1;
     }
+    persistSessionCache();
 
     const category: TrainingCategory = stageData.stageNumber <= 7 ? 'receiving_putaway' : 'picking_packaging';
     const stageTitleText = stageData.stageTitle?.en || (stageData.stageTitle as any)?.[lang] || `Module ${stageData.stageNumber}`;
@@ -447,7 +437,8 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
       photoUrl: userProfile?.photoUrl,
       category,
       currentStageIndex,
-      completedStages: [],
+      completedStages: [...completedStagesRef.current],
+      pointsScored: pointsScoredRef.current,
       totalScoreXP: pointsScoredRef.current,
       totalPossiblePoints,
       safetyBreachesCount: safetyBreachesRef.current,
@@ -477,6 +468,10 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
       setIsLastCorrect(false);
     } else {
       setPhase('gateway');
+      if (!completedStagesRef.current.includes(currentStageIndex)) {
+        completedStagesRef.current.push(currentStageIndex);
+      }
+      persistSessionCache();
       const category: TrainingCategory = stageData.stageNumber <= 7 ? 'receiving_putaway' : 'picking_packaging';
       const currentAcc = Math.round((pointsScoredRef.current / Math.max(1, totalPossiblePoints)) * 100);
       const isFinalStage = currentStageIndex >= activeStages.length - 1;
@@ -486,7 +481,8 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
         photoUrl: userProfile?.photoUrl,
         category,
         currentStageIndex,
-        completedStages: [currentStageIndex],
+        completedStages: [...completedStagesRef.current],
+        pointsScored: pointsScoredRef.current,
         totalScoreXP: pointsScoredRef.current,
         totalPossiblePoints,
         safetyBreachesCount: safetyBreachesRef.current,
@@ -530,6 +526,7 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
     setPhase('intro');
     setSelectedOptionId(null);
     setIsLastCorrect(false);
+    setRetryKey((prev) => prev + 1);
   };
 
   useEffect(() => {
@@ -680,391 +677,41 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
 
 
   const renderSimulationCanvas = (isPaused: boolean, onPauseReached: () => void) => {
-    if (scene.media.imageSrc && !scene.media.videoSrc && canvasViewMode === 'photo') {
+    if (scene.media.videoSrc) {
+      return (
+        <StoryVideoFrame
+          key={scene.media.videoSrc}
+          videoSrc={scene.media.videoSrc}
+          posterSrc={scene.media.posterSrc}
+          title={scene.title?.[lang] || scene.title?.en}
+          isPaused={isPaused}
+          onPauseReached={onPauseReached}
+          pauseAtSecond={scene.media.pauseAtSecond}
+        />
+      );
+    }
+
+    if (scene.media.imageSrc) {
       return (
         <FacilityPhotoFrame
+          key={scene.media.imageSrc}
           imageSrc={scene.media.imageSrc}
           propSrc={scene.media.propSrc}
           title={scene.title?.[lang] || scene.title?.en}
           sopClause={scene.rules?.sopClause}
           isPaused={isPaused}
-          onToggleToBlueprint={() => setCanvasViewMode('blueprint')}
         />
       );
     }
 
     return (
-      <div className="relative w-full h-full flex flex-col justify-center min-h-0">
-        {scene.media.imageSrc && !scene.media.videoSrc && (
-          <button
-            type="button"
-            onClick={() => setCanvasViewMode('photo')}
-            className="absolute top-2.5 right-2.5 z-30 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-slate-900/80 hover:bg-slate-900 text-slate-200 border border-slate-700 shadow-sm transition-all cursor-pointer backdrop-blur-xs"
-            title="Switch to Real Factory Photograph"
-          >
-            <Camera className="w-3.5 h-3.5 text-blue-400" />
-            <span className="hidden sm:inline">PHOTO</span>
-          </button>
-        )}
-
-        {scene.media.fallbackAnimation === 'truck_arrival_gate' ? (
-                    <TruckGateAnimation
-                      videoSrc={scene.media.videoSrc}
-                      posterSrc={scene.media.posterSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'gatehouse_cabin_desk' ? (
-                    <GatehouseCabinAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'sap_terminal_screen' ? (
-                    <SapTerminalAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'thermal_printer_tv' ? (
-                    <ThermalPrinterAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'dock_safety_chocks' ? (
-                    <DockSafetyAnimation
-                      videoSrc={scene.media.videoSrc}
-                      posterSrc={scene.media.posterSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'dock_blueprint_map' ? (
-                    <DockBlueprintAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'exit_gatehouse_barrier' ? (
-                    <ExitGatehouseAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'grn_sticker_staging' ? (
-                    <GrnStickerAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'iqc_sampling_transfer' || scene.media.fallbackAnimation === 'iqc_sample_inspection' ? (
-                    <IqcSamplingAnimation
-                      videoSrc={scene.media.videoSrc}
-                      posterSrc={scene.media.posterSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'iqc_cones_staging' || scene.media.fallbackAnimation === 'iqc_staging_cones' ? (
-                    <IqcConesAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'iqc_handover_sla_clock' || scene.media.fallbackAnimation === 'iqc_handover_sla' ? (
-                    <IqcHandoverSlaAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'iqc_disposition_workbench' ? (
-                    <IqcDispositionAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'hu_scan_initiation' ? (
-                    <HuScanAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'route_segregation_junction' ? (
-                    <RouteSegregationAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'bin_marriage_lift' || scene.media.fallbackAnimation === 'putaway_sequence_lifecycle' ? (
-                    <BinMarriageAnimation
-                      videoSrc={scene.media.videoSrc}
-                      posterSrc={scene.media.posterSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'omitted_scan_hazard' || scene.media.fallbackAnimation === 'bin_slotting_violation' ? (
-                    <OmittedScanHazardAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'battery_dock_auth' ? (
-                    <BatteryDockArrivalAnimation
-                      videoSrc={scene.media.videoSrc}
-                      posterSrc={scene.media.posterSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'cleanroom_vault_env' || scene.media.fallbackAnimation === 'battery_stacking_seal' ? (
-                    <CleanroomVaultAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'battery_sla_countdown' ? (
-                    <BatterySlaCountdownAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'environmental_breach_alarm' ? (
-                    <EnvironmentalAlarmAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'chemical_bypass_routing' ? (
-                    <ChemicalBypassAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'chemical_unloading_spill' || scene.media.fallbackAnimation === 'static_bonding_clamp' ? (
-                    <ChemicalUnloadingAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'chemical_segregation_matrix' ? (
-                    <ChemicalSegregationAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'chemical_deo_posting' ? (
-                    <ChemicalDeoPostingAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'supermarket_mh1_seal' ? (
-                    <SupermarketMh1DeskAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'supermarket_count_audit' || scene.media.fallbackAnimation === 'line_pressure_discrepancy' ? (
-                    <SupermarketCountAuditAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'gravity_flow_fifo' ? (
-                    <GravityFlowRackAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'supermarket_bin_kanban' || scene.media.fallbackAnimation === 'supermarket_classification_bins' ? (
-                    <SupermarketKanbanAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'iqc_lot_quarantine' || scene.media.fallbackAnimation === 'visual_cone_iqc_hold' ? (
-                    <IqcLotQuarantineAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'red_tag_jira_logging' || scene.media.fallbackAnimation === 'jira_status_graduation' ? (
-                    <RedTagJiraAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'quarantine_cage_segregation' ? (
-                    <QuarantineSegregationAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'disposition_filter_mrb' ? (
-                    <DispositionFilterAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'scrap_shredder_weighbridge' ? (
-                    <ScrapShredderAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_mes_wh_task' || scene.media.fallbackAnimation === 'overpicking_prohibition_gate' ? (
-                    <MesWhTaskAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_source_qr_reveal' || scene.media.fallbackAnimation === 'feeder_anti_duplication' || scene.media.fallbackAnimation === 'handheld_blind_quantity_unlock' ? (
-                    <SourceLocationQrAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_trolley_marriage' ? (
-                    <TrolleyMarriageAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_workstation_delivery' || scene.media.fallbackAnimation === 'five_step_picking_lifecycle' ? (
-                    <WorkstationDeliveryAnimation
-                      videoSrc={scene.media.videoSrc}
-                      posterSrc={scene.media.posterSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_aced_trolley_issuance' || scene.media.fallbackAnimation === 'decanting_definition_hu' ? (
-                    <AcedTrolleyIssuanceAnimation
-                      videoSrc={scene.media.videoSrc}
-                      posterSrc={scene.media.posterSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_twobin_ekanban' || scene.media.fallbackAnimation === 'flc_trolley_batch_calculation' ? (
-                    <TwoBinEkanbanAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_trolley_capacity' || scene.media.fallbackAnimation === 'variant_wave_task_splitting' || scene.media.fallbackAnimation === 'whole_trolley_movement_gate' ? (
-                    <TrolleyCapacityAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_wrong_part_return' || scene.media.fallbackAnimation === 'empty_trolley_reverse_loop' ? (
-                    <MheWrongPartReturnAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_mezzanine_sequencing' ? (
-                    <MezzanineSequencingAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_brake_motor_decanting' || scene.media.fallbackAnimation === 'supermarket_rack_replenishment_zl' ? (
-                    <BrakeMotorDecantingAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_wrong_lane_rejection' || scene.media.fallbackAnimation === 'wrong_supermarket_lane_violation' ? (
-                    <WrongLaneRejectionAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_lineside_ewm_close' ? (
-                    <LineSideEwmCloseAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_indirect_no_reservation' || scene.media.fallbackAnimation === 'ppe_jira_ticket_mandate' ? (
-                    <IndirectNoReservationAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_sap_ymb21_transfer' || scene.media.fallbackAnimation === 'reorder_point_pr_generation' ? (
-                    <SapYmb21TransferAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_mrs_cost_center_audit' ? (
-                    <MrsCostCenterAuditAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_indirect_handover_protocol' ? (
-                    <IndirectHandoverProtocolAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_jira_budget_id' ? (
-                    <JiraBudgetIdAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_pir_dual_approval' || scene.media.fallbackAnimation === 'pir_destination_routing_matrix' ? (
-                    <PirDualApprovalAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_pir_cutoff_clock' || scene.media.fallbackAnimation === 'pir_ticket_closure_handover' ? (
-                    <PirCutoffClockAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_sap_sto_compliance' || scene.media.fallbackAnimation === 'sap_billing_types_matrix' ? (
-                    <SapStoGateExitAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_rtv_causer_gate' || scene.media.fallbackAnimation === 'reworked_parts_tightened_inspection' || scene.media.fallbackAnimation === 'recalled_material_reinspection' ? (
-                    <RtvCauserGateAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_rtv_deviation' || scene.media.fallbackAnimation === 'supplier_sla_courier_debit' || scene.media.fallbackAnimation === 'use_as_is_sequence_lifecycle' ? (
-                    <RtvDeviationAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_empty_bin_stacking' || scene.media.fallbackAnimation === 'line_side_gangway_choke' || scene.media.fallbackAnimation === 'empty_bin_truck_dashboard' ? (
-                    <EmptyBinStackingAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : scene.media.fallbackAnimation === 'c2_reverse_truck_loading' || scene.media.fallbackAnimation === 'scrap_approval_signoff_gate' || scene.media.fallbackAnimation === 'grandmaster_celebration_fireworks' ? (
-                    <ReverseTruckLoadingAnimation
-                      videoSrc={scene.media.videoSrc}
-                      posterSrc={scene.media.posterSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  ) : (
-                    <DockBlueprintAnimation
-                      videoSrc={scene.media.videoSrc}
-                      isPaused={isPaused}
-                      onPauseReached={onPauseReached}
-                    />
-                  )}
-      </div>
+      <FacilityPhotoFrame
+        key="fallback-facility"
+        imageSrc="/Assets/environments/bg_plant_map_hotspot.webp"
+        title={scene.title?.[lang] || scene.title?.en || "Ather AURIC Plant M002"}
+        sopClause={scene.rules?.sopClause}
+        isPaused={isPaused}
+      />
     );
   };
 
@@ -1209,6 +856,7 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
                   <div className="flex-1 min-h-0 overflow-y-auto scrollbar-thin pr-0.5">
                     {scene.interaction.type === 'mcq' ? (
                       <QuestionCard
+                        key={`mcq-${scene.id}-${retryKey}`}
                         interaction={scene.interaction as McqInteraction}
                         lang={lang}
                         selectedOptionId={selectedOptionId}
@@ -1224,6 +872,7 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
                       />
                     ) : scene.interaction.type === 'drag_drop' ? (
                       <DragDropCard
+                        key={`drag_drop-${scene.id}-${retryKey}`}
                         interaction={scene.interaction as DragDropInteraction}
                         lang={lang}
                         onComplete={handleDragDropComplete}
@@ -1238,6 +887,7 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
                       />
                     ) : scene.interaction.type === 'sequence' ? (
                       <SequenceCard
+                        key={`sequence-${scene.id}-${retryKey}`}
                         interaction={scene.interaction as SequenceInteraction}
                         lang={lang}
                         onComplete={handleSequenceComplete}
@@ -1252,28 +902,43 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
                       />
                     ) : scene.interaction.type === 'spot_error' ? (
                       <SpotErrorCard
+                        key={`spot_error-${scene.id}-${retryKey}`}
                         interaction={scene.interaction as SpotErrorInteraction}
                         lang={lang}
                         onComplete={handleSpotErrorComplete}
                       />
                     ) : scene.interaction.type === 'stop_go' ? (
                       <StopGoCard
+                        key={`stop_go-${scene.id}-${retryKey}`}
                         interaction={scene.interaction as StopGoInteraction}
                         lang={lang}
                         onComplete={handleStopGoComplete}
                       />
                     ) : scene.interaction.type === 'count_stepper' ? (
                       <CountStepperCard
+                        key={`count_stepper-${scene.id}-${retryKey}`}
                         interaction={scene.interaction as CountStepperInteraction}
                         lang={lang}
                         onComplete={handleCountStepperComplete}
                       />
-                    ) : (
+                    ) : scene.interaction.type === 'hotspot' ? (
                       <HotspotCard
+                        key={`hotspot-${scene.id}-${retryKey}`}
                         interaction={scene.interaction as HotspotInteraction}
                         lang={lang}
                         onComplete={handleHotspotComplete}
                       />
+                    ) : (
+                      <div className="p-6 bg-white rounded-2xl border border-slate-200 text-center space-y-3">
+                        <p className="text-sm font-bold text-slate-700">Operational Decision Gate</p>
+                        <button
+                          type="button"
+                          onClick={() => handleAnswerEvaluated(true)}
+                          className="px-6 py-2.5 rounded-xl bg-blue-600 text-white font-bold text-sm cursor-pointer"
+                        >
+                          Confirm & Continue
+                        </button>
+                      </div>
                     )}
                   </div>
 
@@ -1281,9 +946,11 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
                   {phase === 'feedback' && scene.interaction.type !== 'mcq' && scene.interaction.type !== 'drag_drop' && scene.interaction.type !== 'sequence' && (
                     <div className="pt-2 shrink-0">
                       <FeedbackCard
+                        key={`feedback-${scene.id}-${retryKey}`}
                         scene={scene}
                         lang={lang}
                         isCorrect={isLastCorrect}
+                        isFirstTimeRight={isLastFirstTimeRight}
                         selectedOptionId={selectedOptionId}
                         onContinue={handleContinueStory}
                         onRetry={handleResetCurrentScene}
@@ -1315,19 +982,6 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
                   <div key={replayKey} className="absolute inset-0 w-full h-full">
                     {renderSimulationCanvas(false, () => {})}
                   </div>
-
-                  {/* Overlaid Aura Bot & Comment in original ratio */}
-                  <div className="relative z-20 w-full p-3 sm:p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-                    <MascotAura
-                      pose={currentPose}
-                      dialogue={currentDialogue}
-                      lang={lang}
-                      audioSrc={currentAudio}
-                      variant="floating_overlay"
-                      actionText="Back to Decision →"
-                      onActionClick={() => setShowVideoModal(false)}
-                    />
-                  </div>
                 </div>
               </div>
             )}
@@ -1346,7 +1000,15 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
             onViewScorecard={onViewScorecard ? () => onViewScorecard(getRunSummary()) : undefined}
             onViewCertificate={() => setShowCertificate(true)}
             onRestartFull={() => {
-              handleSelectScene(0);
+              try {
+                localStorage.removeItem(sessionCacheKey);
+              } catch {}
+              pointsScoredRef.current = 0;
+              safetyBreachesRef.current = 0;
+              completedStagesRef.current = [];
+              setPointsScored(0);
+              setXp(0);
+              handleSelectStage(0);
             }}
             appMode={appMode}
           />
