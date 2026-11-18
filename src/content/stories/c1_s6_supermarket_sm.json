@@ -14,8 +14,8 @@
       "stepNumber": 1,
       "title": {
         "en": "QC Pass Green Seal Verification at Staging Desk",
-        "hi": "स्टेजिंग डेस्क पर QC पास ग्रीन सील सत्यापन",
-        "mr": "स्टेजिंग डेस्कवर QC पास ग्रीन शिक्का पडताळणी"
+        "hi": "स्टेजिंग डेस्क पर QC पास ग्रीन सील जांच (चेकिंग)",
+        "mr": "स्टेजिंग डेस्कवर QC पास ग्रीन शिक्का तपासणी (चेकिंग)"
       },
       "media": {
         "fallbackAnimation": "supermarket_mh1_seal",
@@ -29,33 +29,33 @@
           "pose": "warning",
           "text": {
             "en": "Welcome to Stage 6: Supermarket C-Class Parts Put-Away! Small fasteners and grommets have arrived at the Material Handling staging desk from inbound receiving. The lot is marked Non-Direct-on-Line, but looking closely at the Goods Receipt Note sticker, the green 'QC Pass' circular stamp is completely missing! The line is waiting for these screws. Should the operator proceed to put these into the supermarket racks?",
-            "hi": "स्टेज 6: सुपरमार्केट सी-क्लास पार्ट्स पुट-अवे में आपका स्वागत है! इनबाउंड रिसीविंग से मटेरियल हैंडलिंग स्टेजिंग डेस्क पर छोटे फास्टनर और ग्रोमेट पहुंचे हैं। लॉट को नॉन-डायरेक्ट-ऑन-लाइन के रूप में चिह्नित किया गया है, लेकिन Goods Receipt Note स्टिकर को ध्यान से देखने पर, हरा 'QC Pass' गोलाकार स्टैम्प पूरी तरह से गायब है! असेंबली लाइन इन स्क्रू का इंतज़ार कर रही है। क्या ऑपरेटर को इन्हें सुपरमार्केट रैक में रखना चाहिए?",
-            "mr": "स्टेज 6: सुपरमार्केट सी-क्लास पार्ट्स पुट-अवेमध्ये आपले स्वागत आहे! इनबाउंड रिसीव्हिंगमधून मटेरियल हँडलिंग स्टेजिंग डेस्कवर लहान फास्टनर्स आणि ग्रॉमेट्स आले आहेत. हा लॉट नॉन-डायरेक्ट-ऑन-लाइन आहे, परंतु Goods Receipt Note स्टिकर बारकाईने पाहिल्यास हिरवा 'QC Pass' शिक्का पूर्णपणे गायब आहे! असेंब्ली लाईन या स्क्रूची वाट पाहत आहे. ऑपरेटरने हे सुपरमार्केट रॅकमध्ये ठेवण्यास पुढे जावे का?"
+            "hi": "स्टेज 6: सुपरमार्केट सी-क्लास पार्ट्स पुट-अवे में आपका स्वागत है! इनबाउंड रिसीविंग से छोटे स्क्रू और फास्टनर आए हैं। यह नॉन-डायरेक्ट-ऑन-लाइन माल है, लेकिन स्टिकर पर 'QC Pass' की हरी मुहर गायब है! असेंबली लाइन इन स्क्रू का इंतज़ार कर रही है। क्या ऑपरेटर को इन्हें सुपरमार्केट रैक में रख देना चाहिए?",
+            "mr": "स्टेज 6: सुपरमार्केट सी-क्लास पार्ट्स पुट-अवेमध्ये आपले स्वागत आहे! इनबाउंड रिसीव्हिंगमधून लहान स्क्रू आणि फास्टनर्स आले आहेत. हा नॉन-डायरेक्ट-ऑन-लाइन माल आहे, पण स्टिकरवर 'QC Pass' चा हिरवा शिक्का नाही! असेंब्ली लाईन या स्क्रूची वाट पाहत आहे. ऑपरेटरने हे सुपरमार्केट रॅकमध्ये ठेवावे का?"
           },
           "audioSrc": "/audio/voiceover/s06_sc01_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "STOP IS THE CORRECT DECISION! SOP for Supermarket Put-Away For Non-Direct-on-Line parts, the physical 'QC Pass' seal or sticker is mandatory on the Goods Receipt Note label. Without this seal, the parts have NOT been released by Quality Control and could be defective. Moving uncertified parts to the supermarket risks line assembly defects and immediate vehicle recalls!",
-            "hi": "STOP बिल्कुल सही निर्णय है! सुपरमार्केट पुट-अवे नॉन-डायरेक्ट-ऑन-लाइन पार्ट्स के लिए, Goods Receipt Note लेबल पर भौतिक 'QC Pass' सील या स्टिकर अनिवार्य है। इस सील के बिना, पार्ट्स को क्वालिटी कंट्रोल द्वारा जारी नहीं किया गया है और वे दोषपूर्ण हो सकते हैं। अप्रमाणित पार्ट्स को सुपरमार्केट में ले जाने से लाइन असेंबली में खराबी और तत्काल वाहन रिकॉल का जोखिम होता है!",
-            "mr": "STOP अगदी योग्य निर्णय! सुपरमार्केट पुट-अवे नॉन-डायरेक्ट-ऑन-लाइन पार्ट्ससाठी, Goods Receipt Note लेबलवर 'QC Pass' चा हिरवा शिक्का किंवा स्टिकर असणे अनिवार्य आहे. या शिक्क्याशिवाय पार्ट्स क्वालिटी कंट्रोलकडून मंजूर झालेले नसतात आणि ते सदोष असू शकतात. अप्रमाणित पार्ट्स सुपरमार्केटमध्ये ठेवल्यास असेंब्ली लाईनवर मोठा बिघाड होऊ शकतो!"
+            "en": "STOP IS THE CORRECT DECISION! For Non-Direct-on-Line parts, the physical 'QC Pass' seal or sticker is mandatory on the Goods Receipt Note label. Without this seal, the parts have NOT been released by Quality Control and could be defective. Moving uncertified parts to the supermarket risks line assembly defects and immediate vehicle recalls!",
+            "hi": "रोकना बिल्कुल सही फैसला है! नॉन-डायरेक्ट-ऑन-लाइन पार्ट्स के लिए Goods Receipt Note लेबल पर 'QC Pass' की हरी मुहर होना बहुत ज़रूरी है। बिना इसके पार्ट्स क्वालिटी टीम से पास नहीं हुए हैं और खराब हो सकते हैं। बिना जांचे पार्ट्स सुपरमार्केट में ले जाने से गाड़ी में खराबी आ सकती है!",
+            "mr": "थांबवणे अगदी योग्य निर्णय! नॉन-डायरेक्ट-ऑन-लाइन पार्ट्ससाठी Goods Receipt Note लेबलवर 'QC Pass' चा हिरवा शिक्का असणे अत्यंत गरजेचे आहे. या शिक्क्याशिवाय पार्ट्स क्वालिटी टीमकडून पास झालेले नसतात. न तपासलेले पार्ट्स सुपरमार्केटमध्ये ठेवल्यास गाडीमध्ये बिघाड होऊ शकतो!"
           },
           "audioSrc": "/audio/voiceover/s06_sc01_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "CRITICAL QUALITY BREACH! No associate may move a Non-Direct-on-Line lot to supermarket bins without a verified green 'QC Pass' seal. Rushing unverified parts to the line causes catastrophic vehicle assembly failures!",
-            "hi": "गंभीर गुणवत्ता उल्लंघन! कोई भी सहयोगी सत्यापित हरे 'QC Pass' सील के बिना नॉन-डायरेक्ट-ऑन-लाइन लॉट को सुपरमार्केट डिब्बे में नहीं ले जा सकता है। असेंबली लाइन पर असत्यापित पार्ट्स भेजने से विनाशकारी विफलताएं होती हैं!",
-            "mr": "गंभीर गुणवत्ता उल्लंघन! कोणत्याही कर्मचाऱ्याने 'QC Pass' शिक्क्याशिवाय नॉन-डायरेक्ट-ऑन-लाइन लॉट सुपरमार्केट बिन्समध्ये हलवू नये. अप्रमाणित पार्ट्स लाईनवर पाठवल्यास वाहनांमध्ये गंभीर दोष निर्माण होतात!"
+            "en": "CRITICAL QUALITY BREACH! No associate may move a Non-Direct-on-Line lot to supermarket bins without a verified green 'QC Pass' stamp. Skipping inspection risks assembling loose fasteners into vehicles, causing catastrophic field breakdowns!",
+            "hi": "बड़ी क्वालिटी चूक! बिना 'QC Pass' मुहर के किसी भी नॉन-डायरेक्ट-ऑन-लाइन माल को सुपरमार्केट में नहीं ले जाया जा सकता। बिना जांचे स्क्रू लगाने से चलती गाड़ी में बड़ा खतरा हो सकता है!",
+            "mr": "मोठी क्वालिटी चूक! 'QC Pass' शिक्क्याशिवाय नॉन-डायरेक्ट-ऑन-लाइन माल सुपरमार्केटमध्ये नेण्यास सक्त मनाई आहे. न तपासलेले स्क्रू लावल्यास रस्त्यावर गाडी खराब होण्याचा मोठा धोका असतो!"
           },
           "audioSrc": "/audio/voiceover/s06_sc01_wrong.mp3"
         },
         "dialog": {
           "en": "Welcome to Stage 6: Supermarket C-Class Parts Put-Away! Small fasteners and grommets have arrived at the Material Handling staging desk from inbound receiving. The lot is marked Non-Direct-on-Line, but looking closely at the Goods Receipt Note sticker, the green 'QC Pass' circular stamp is completely missing! The line is waiting for these screws. Should the operator proceed to put these into the supermarket racks?",
-          "hi": "स्टेज 6: सुपरमार्केट सी-क्लास पार्ट्स पुट-अवे में आपका स्वागत है! इनबाउंड रिसीविंग से मटेरियल हैंडलिंग स्टेजिंग डेस्क पर छोटे फास्टनर और ग्रोमेट पहुंचे हैं। लॉट को नॉन-डायरेक्ट-ऑन-लाइन के रूप में चिह्नित किया गया है, लेकिन Goods Receipt Note स्टिकर को ध्यान से देखने पर, हरा 'QC Pass' गोलाकार स्टैम्प पूरी तरह से गायब है! असेंबली लाइन इन स्क्रू का इंतज़ार कर रही है। क्या ऑपरेटर को इन्हें सुपरमार्केट रैक में रखना चाहिए?",
-          "mr": "स्टेज 6: सुपरमार्केट सी-क्लास पार्ट्स पुट-अवेमध्ये आपले स्वागत आहे! इनबाउंड रिसीव्हिंगमधून मटेरियल हँडलिंग स्टेजिंग डेस्कवर लहान फास्टनर्स आणि ग्रॉमेट्स आले आहेत. हा लॉट नॉन-डायरेक्ट-ऑन-लाइन आहे, परंतु Goods Receipt Note स्टिकर बारकाईने पाहिल्यास हिरवा 'QC Pass' शिक्का पूर्णपणे गायब आहे! असेंब्ली लाईन या स्क्रूची वाट पाहत आहे. ऑपरेटरने हे सुपरमार्केट रॅकमध्ये ठेवण्यास पुढे जावे का?"
+          "hi": "स्टेज 6: सुपरमार्केट सी-क्लास पार्ट्स पुट-अवे में आपका स्वागत है! इनबाउंड रिसीविंग से छोटे स्क्रू और फास्टनर आए हैं। यह नॉन-डायरेक्ट-ऑन-लाइन माल है, लेकिन स्टिकर पर 'QC Pass' की हरी मुहर गायब है! असेंबली लाइन इन स्क्रू का इंतज़ार कर रही है। क्या ऑपरेटर को इन्हें सुपरमार्केट रैक में रख देना चाहिए?",
+          "mr": "स्टेज 6: सुपरमार्केट सी-क्लास पार्ट्स पुट-अवेमध्ये आपले स्वागत आहे! इनबाउंड रिसीव्हिंगमधून लहान स्क्रू आणि फास्टनर्स आले आहेत. हा नॉन-डायरेक्ट-ऑन-लाइन माल आहे, पण स्टिकरवर 'QC Pass' चा हिरवा शिक्का नाही! असेंब्ली लाईन या स्क्रूची वाट पाहत आहे. ऑपरेटरने हे सुपरमार्केट रॅकमध्ये ठेवावे का?"
         }
       },
       "interaction": {
@@ -69,8 +69,8 @@
         },
         "situation": {
           "en": "SITUATION AUDIT: Material Handling Desk 1 (staging desk). Inward lot of M6 Hex Bolts. Goods Receipt Note sticker status: Non-Direct-on-Line with '?' flag. Inspection seal: Missing green 'QC Pass' stamp. Line Feeder requesting urgent replenishment.",
-          "hi": "स्थिति ऑडिट: मटेरियल हैंडलिंग डेस्क 1 (स्टेजिंग डेस्क)। M6 हेक्स बोल्ट का आवक लॉट। GRN स्टिकर स्थिति: '?' ध्वज के साथ नॉन-डायरेक्ट-ऑन-लाइन। निरीक्षण सील: हरा 'QC Pass' स्टैम्प गायब है। लाइन फीडर तत्काल पुनःपूर्ति का अनुरोध कर रहा है।",
-          "mr": "परिस्थिती ऑडिट: मटेरियल हँडलिंग डेस्क 1 (स्टेजिंग डेस्क). M6 हेक्स बोल्ट्सचा इनवर्ड लॉट. GRN स्टिकर स्थिती: '?' चिन्हासह नॉन-डायरेक्ट-ऑन-लाइन. तपासणी शिक्का: हिरवा 'QC Pass' शिक्का गायब. लाईन फिडरकडून तातडीने साहित्याची मागणी."
+          "hi": "स्थिति ऑडिट: मटेरियल हैंडलिंग डेस्क 1 (स्टेजिंग डेस्क)। M6 हेक्स बोल्ट का आया हुआ लॉट। GRN स्टिकर स्थिति: '?' ध्वज के साथ नॉन-डायरेक्ट-ऑन-लाइन। निरीक्षण सील: हरा 'QC Pass' स्टैम्प गायब है। लाइन फीडर तत्काल पुनःपूर्ति का अनुरोध कर रहा है।",
+          "mr": "परिस्थिती ऑडिट: मटेरियल हँडलिंग डेस्क 1 (स्टेजिंग डेस्क). M6 हेक्स बोल्ट्सचा इनवर्ड लॉट. GRN स्टिकर स्थिती: '?' निशानासह नॉन-डायरेक्ट-ऑन-लाइन. तपासणी शिक्का: हिरवा 'QC Pass' शिक्का गायब. लाईन फिडरकडून तातडीने साहित्याची मागणी."
         },
         "correctAction": "stop",
         "stopLabel": {
@@ -85,7 +85,7 @@
         },
         "stopDescription": {
           "en": "HALT: For Non-Direct-on-Line parts, verify 'QC Pass' seal is present on Goods Receipt Note label; if not available, do not proceed",
-          "hi": "रोकें: नॉन-डायरेक्ट-ऑन-लाइन पार्ट्स के लिए, सत्यापित करें कि GRN लेबल पर 'QC Pass' सील मौजूद है; यदि उपलब्ध नहीं है, तो आगे न बढ़ें",
+          "hi": "रोकें: नॉन-डायरेक्ट-ऑन-लाइन पार्ट्स के लिए, चेक करें कि GRN लेबल पर 'QC Pass' सील मौजूद है; यदि उपलब्ध नहीं है, तो आगे न बढ़ें",
           "mr": "थांबवा: नॉन-डायरेक्ट-ऑन-लाइन पार्ट्ससाठी GRN लेबलवर 'QC Pass' शिक्का असणे बंधनकारक आहे; नसल्यास पुढे जाऊ नका"
         },
         "goDescription": {
@@ -106,7 +106,7 @@
         "sopClause": "SOP for Supermarket Put-Away (SM) Clause 4.1 & Question Bank Q26",
         "why": {
           "en": "SOP-PUTAWAY-SM explicitly mandates: 'For Non-Direct-on-Line parts: verify QC Pass seal/sticker is present on Goods Receipt Note label; if not available, do not proceed with putaway.' For Direct-on-Line parts, a Direct-on-Line sticker is attached. Non-Direct-on-Line lots without a QC Pass seal are still legally under quality quarantine. Moving them into active production flow risks incorporating out-of-spec or uninspected fasteners into critical scooter subsystems.",
-          "hi": "SOP-PUTAWAY-SM स्पष्ट रूप से आदेश देता है: 'नॉन-डायरेक्ट-ऑन-लाइन पार्ट्स के लिए: सत्यापित करें कि Goods Receipt Note लेबल पर QC पास सील/स्टिकर मौजूद है; यदि उपलब्ध नहीं है, तो पुट-अवे के साथ आगे न बढ़ें।' डायरेक्ट-ऑन-लाइन पार्ट्स के लिए, एक डायरेक्ट-ऑन-लाइन स्टिकर जुड़ा होता है। QC पास सील के बिना नॉन-डायरेक्ट-ऑन-लाइन लॉट कानूनी रूप से गुणवत्ता संगरोध के तहत हैं। उन्हें सक्रिय उत्पादन प्रवाह में ले जाने से महत्वपूर्ण स्कूटर उपप्रणालियों में विनिर्देश से बाहर या अनिरीक्षित फास्टनरों को शामिल करने का जोखिम होता है।",
+          "hi": "SOP-PUTAWAY-SM स्पष्ट रूप से आदेश देता है: 'नॉन-डायरेक्ट-ऑन-लाइन पार्ट्स के लिए: चेक करें कि Goods Receipt Note लेबल पर QC पास सील/स्टिकर मौजूद है; यदि उपलब्ध नहीं है, तो पुट-अवे के साथ आगे न बढ़ें।' डायरेक्ट-ऑन-लाइन पार्ट्स के लिए, एक डायरेक्ट-ऑन-लाइन स्टिकर जुड़ा होता है। QC पास सील के बिना नॉन-डायरेक्ट-ऑन-लाइन लॉट कानूनी रूप से गुणवत्ता संगरोध के तहत हैं। उन्हें सक्रिय उत्पादन प्रवाह में ले जाने से महत्वपूर्ण स्कूटर उपप्रणालियों में तय लिमिट से बाहर या अनिरीक्षित फास्टनरों को शामिल करने का जोखिम होता है।",
           "mr": "SOP-PUTAWAY-SM स्पष्टपणे सांगते: 'नॉन-डायरेक्ट-ऑन-लाइन भागांसाठी: Goods Receipt Note लेबलवर QC Pass शिक्का/स्टिकर असल्याची खात्री करा; उपलब्ध नसल्यास, पुट-अवे करू नका.' डायरेक्ट-ऑन-लाइन भागांसाठी डायरेक्ट-ऑन-लाइन स्टिकर असतो. QC Pass शिक्क्याशिवाय नॉन-डायरेक्ट-ऑन-लाइन लॉट्स अजूनही क्वालिटी क्वारंटाईनमध्ये असतात. ते सुपरमार्केटमध्ये ठेवल्यास वाहनांच्या सुरक्षिततेवर गंभीर परिणाम होऊ शकतो."
         }
       }
@@ -116,7 +116,7 @@
       "stepNumber": 2,
       "title": {
         "en": "Physical Sampling Count vs SAP LX02 Discrepancy Escalation",
-        "hi": "भौतिक नमूना गणना बनाम SAP LX02 विसंगति वृद्धि",
+        "hi": "असल नमूना गणना बनाम SAP LX02 गड़बड़ी वृद्धि",
         "mr": "प्रत्यक्ष नमुना मोजणी विरूद्ध SAP LX02 तफावत वाढ"
       },
       "media": {
@@ -129,9 +129,9 @@
         "intro": {
           "pose": "warning",
           "text": {
-            "en": "at the receiving desk, you print the SAP inventory dump from the system, which shows expected stock of 100 M6 hex bolts. You perform a sample count on the digital counting scale and find only 92 pieces—an 8-piece shortage! A line feeder says: 'Just put the 92 bolts into the bin so the line doesn't stop, and adjust the number later.' What is the mandatory SOP action under Ather?",
-            "hi": "रिसीविंग डेस्क पर, आप SAP इन्वेंट्री डंप सिस्टम से प्रिंट करते हैं, जो 100 M6 हेक्स बोल्ट का अपेक्षित स्टॉक दिखाता है। आप डिजिटल काउंटिंग स्केल पर नमूना गणना करते हैं और केवल 92 टुकड़े पाते हैं—8 टुकड़ों की कमी! एक लाइन फीडर कहता है: 'बस 92 बोल्ट बिन में रख दो ताकि लाइन न रुके, और बाद में संख्या को समायोजित कर लेना।' एथर अनिवार्य SOP कार्रवाई क्या है?",
-            "mr": "रिसिव्हिंग डेस्कवर, तुम्ही SAP इन्व्हेंटरी डंप सिस्टीममधून प्रिंट करता, ज्यामध्ये 100 M6 हेक्स बोल्ट्स अपेक्षित स्टॉक दिसतो. तुम्ही डिजिटल वेईंग स्केलवर नमुना मोजणी करता तेव्हा फक्त 92 तुकडे आढळतात—8 तुकड्यांची तफावत! लाईन फिडर म्हणतो: 'लाईन थांबू नये म्हणून हे 92 बोल्ट्स रॅकमध्ये ठेवा, नंतर आकडेवारी जुळवू.' एथर अनिवार्य SOP कृती काय आहे?"
+            "en": "At the receiving desk, you print the SAP inventory dump from the system, which shows expected stock of 100 M6 hex bolts. You perform a sample count on the digital counting scale and find only 92 pieces—an 8-piece shortage! A line feeder says: 'Just put the 92 bolts into the bin so the line doesn't stop, and adjust the number later.' What is the mandatory action under Ather?",
+            "hi": "रिसीविंग डेस्क पर सिस्टम से 100 M6 हेक्स बोल्ट का रिकॉर्ड निकलता है। लेकिन जब आप डिजिटल कांटे पर गिनते हैं, तो सिर्फ 92 पीस निकलते हैं—यानी 8 बोल्ट कम हैं! लाइन फीडर कहता है: 'लाइन चालू रखने के लिए ये 92 बोल्ट रैक में रख दो, हिसाब बाद में ठीक कर लेंगे।' एथर के नियमों के अनुसार क्या करना चाहिए?",
+            "mr": "रिसिव्हिंग डेस्कवर सिस्टीममधून 100 M6 हेक्स बोल्ट्सची नोंद दिसते. पण डिजिटल काट्यावर मोजल्यावर फक्त 92 तुकडे आढळतात—म्हणजे 8 बोल्ट्स कमी आहेत! लाईन फिडर म्हणतो: 'लाईन चालू ठेवण्यासाठी हे 92 बोल्ट्स रॅकमध्ये ठेवा, नंतर जुळवून घेऊ.' नियमांनुसार काय केले पाहिजे?"
           },
           "audioSrc": "/audio/voiceover/s06_sc02_intro.mp3"
         },
@@ -139,24 +139,24 @@
           "pose": "success",
           "text": {
             "en": "STANDARD PROCEDURE ENFORCED! If any discrepancy exists between the physical count and the SAP dump, the operator must IMMEDIATELY halt put-away for that material and escalate to the Supermarket Zone Leader. Never alter slips or stock short lots, as this creates ghost inventory that starves future production!",
-            "hi": "मानक प्रक्रिया लागू की गई! यदि भौतिक गणना और SAP डंप के बीच कोई विसंगति मौजूद है, तो ऑपरेटर को उस सामग्री के लिए तुरंत पुट-अवे रोकना होगा और सुपरमार्केट ज़ोन लीडर को सूचित करना होगा। कभी भी पर्चियों में बदलाव न करें या कम लॉट स्टॉक न करें, क्योंकि इससे घोस्ट इन्वेंट्री बनती है जो भविष्य के उत्पादन को रोक देती है!",
-            "mr": "मानक कार्यपद्धतीचे अचूक पालन! प्रत्यक्ष मोजणी आणि SAP डंपमध्ये तफावत आढळल्यास, ऑपरेटरने ताबडतोब त्या साहित्याचे पुट-अवे थांबवले पाहिजे आणि सुपरमार्केट झोन लीडरला कळवले पाहिजे. आकडेवारीत परस्पर बदल करू नका किंवा कमी माल रॅकमध्ये भरू नका, यामुळे सिस्टीममध्ये घोस्ट इन्व्हेंटरी निर्माण होते!"
+            "hi": "बिल्कुल सही! अगर गिनती में और सिस्टम के रिकॉर्ड में कोई फर्क दिखे, तो ऑपरेटर को तुरंत पुट-अवे रोकना चाहिए और सुपरमार्केट ज़ोन लीडर को बताना चाहिए। कभी भी कम माल को पूरा न दिखाएं, क्योंकि इससे आगे चलकर लाइन पर अचानक पार्ट्स खत्म हो जाएंगे!",
+            "mr": "अगदी बरोबर! प्रत्यक्ष मोजणीत आणि सिस्टीमच्या नोंदीत तफावत आढळल्यास ऑपरेटरने लगेच पुट-अवे थांबवून सुपरमार्केट झोन लीडरला कळवले पाहिजे. परस्पर खोटे आकडे लिहू नका, कारण यामुळे पुढे लाईनवर अचानक तुटवडा निर्माण होतो!"
           },
           "audioSrc": "/audio/voiceover/s06_sc02_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "CRITICAL INVENTORY INTEGRITY FAILURE! Altering paperwork or stocking a short lot without Zone Leader escalation directly corrupts ERP stock accuracy. Downstream shifts will assume 100 bolts exist, resulting in sudden line starvation when only 92 are present!",
-            "hi": "गंभीर इन्वेंट्री अखंडता विफलता! ज़ोन लीडर को बताए बिना कागजी कार्रवाई में बदलाव करना या कम लॉट का भंडारण करना सीधे ERP स्टॉक सटीकता को दूषित करता है। डाउनस्ट्रीम शिफ्ट्स मान लेंगी कि 100 बोल्ट मौजूद हैं, जिसके परिणामस्वरूप केवल 92 होने पर अचानक लाइन बंद हो जाएगी!",
-            "mr": "इन्व्हेंटरी अचूकतेचा मोठा बिघाड! झोन लीडरला न कळवता परस्पर कागदपत्रात बदल करणे किंवा कमी माल रॅकमध्ये ठेवणे थेट ERP स्टॉक खराब करते. पुढच्या शिफ्टला 100 बोल्ट्स आहेत असे वाटेल, पण प्रत्यक्षात 92 असल्याने अचानक उत्पादन ठप्प होईल!"
+            "en": "CRITICAL INVENTORY ERROR! Changing numbers or stocking short parts without telling your Zone Leader ruins SAP stock accuracy. The next shift will expect 100 bolts, and assembly will suddenly stop when only 92 are there!",
+            "hi": "रिकॉर्ड में हेराफेरी की बड़ी गलती! ज़ोन लीडर को बताए बिना कम माल को रैक में रखने से सिस्टम में गलत स्टॉक दिखने लगता है। अगली शिफ्ट में वर्कर को माल नहीं मिलेगा और लाइन बंद हो जाएगी!",
+            "mr": "मोठी चूक! झोन लीडरला न सांगता परस्पर कमी माल रॅकमध्ये भरल्यास सिस्टीममध्ये खोटा स्टॉक दिसेल. पुढच्या शिफ्टला अचानक माल संपेल आणि काम बंद पडेल!"
           },
           "audioSrc": "/audio/voiceover/s06_sc02_wrong.mp3"
         },
         "dialog": {
-          "en": "at the receiving desk, you print the SAP inventory dump from the system, which shows expected stock of 100 M6 hex bolts. You perform a sample count on the digital counting scale and find only 92 pieces—an 8-piece shortage! A line feeder says: 'Just put the 92 bolts into the bin so the line doesn't stop, and adjust the number later.' What is the mandatory SOP action under Ather?",
-          "hi": "रिसीविंग डेस्क पर, आप SAP इन्वेंट्री डंप सिस्टम से प्रिंट करते हैं, जो 100 M6 हेक्स बोल्ट का अपेक्षित स्टॉक दिखाता है। आप डिजिटल काउंटिंग स्केल पर नमूना गणना करते हैं और केवल 92 टुकड़े पाते हैं—8 टुकड़ों की कमी! एक लाइन फीडर कहता है: 'बस 92 बोल्ट बिन में रख दो ताकि लाइन न रुके, और बाद में संख्या को समायोजित कर लेना।' एथर अनिवार्य SOP कार्रवाई क्या है?",
-          "mr": "रिसिव्हिंग डेस्कवर, तुम्ही SAP इन्व्हेंटरी डंप सिस्टीममधून प्रिंट करता, ज्यामध्ये 100 M6 हेक्स बोल्ट्स अपेक्षित स्टॉक दिसतो. तुम्ही डिजिटल वेईंग स्केलवर नमुना मोजणी करता तेव्हा फक्त 92 तुकडे आढळतात—8 तुकड्यांची तफावत! लाईन फिडर म्हणतो: 'लाईन थांबू नये म्हणून हे 92 बोल्ट्स रॅकमध्ये ठेवा, नंतर आकडेवारी जुळवू.' एथर अनिवार्य SOP कृती काय आहे?"
+          "en": "At the receiving desk, you print the SAP inventory dump from the system, which shows expected stock of 100 M6 hex bolts. You perform a sample count on the digital counting scale and find only 92 pieces—an 8-piece shortage! A line feeder says: 'Just put the 92 bolts into the bin so the line doesn't stop, and adjust the number later.' What is the mandatory action under Ather?",
+          "hi": "रिसीविंग डेस्क पर सिस्टम से 100 M6 हेक्स बोल्ट का रिकॉर्ड निकलता है। लेकिन जब आप डिजिटल कांटे पर गिनते हैं, तो सिर्फ 92 पीस निकलते हैं—यानी 8 बोल्ट कम हैं! लाइन फीडर कहता है: 'लाइन चालू रखने के लिए ये 92 बोल्ट रैक में रख दो, हिसाब बाद में ठीक कर लेंगे।' एथर के नियमों के अनुसार क्या करना चाहिए?",
+          "mr": "रिसिव्हिंग डेस्कवर सिस्टीममधून 100 M6 हेक्स बोल्ट्सची नोंद दिसते. पण डिजिटल काट्यावर मोजल्यावर फक्त 92 तुकडे आढळतात—म्हणजे 8 बोल्ट्स कमी आहेत! लाईन फिडर म्हणतो: 'लाईन चालू ठेवण्यासाठी हे 92 बोल्ट्स रॅकमध्ये ठेवा, नंतर जुळवून घेऊ.' नियमांनुसार काय केले पाहिजे?"
         }
       },
       "interaction": {
@@ -165,8 +165,8 @@
         "safetyCritical": true,
         "question": {
           "en": "The SAP stock report indicates 100 pieces for an inward C-class lot, but physical sampling at Material Handling reveals only 92 pieces. What must the operator do?",
-          "hi": "SAP स्टॉक रिपोर्ट आवक सी-क्लास लॉट के लिए 100 टुकड़े दर्शाता है, लेकिन रिसीविंग डेस्क पर भौतिक नमूना केवल 92 टुकड़े दिखाता है। ऑपरेटर को क्या करना चाहिए?",
-          "mr": "SAP स्टॉक अहवाल इनवर्ड सी-क्लास लॉटसाठी 100 तुकडे दर्शवतो, परंतु रिसिव्हिंग डेस्कवर प्रत्यक्ष मोजणीत फक्त 92 तुकडे आढळतात. ऑपरेटरने काय केले पाहिजे?"
+          "hi": "SAP स्टॉक रिपोर्ट आया हुआ सी-क्लास लॉट के लिए 100 टुकड़े दर्शाता है, लेकिन रिसीविंग डेस्क पर असल नमूना केवल 92 टुकड़े दिखाता है। ऑपरेटर को क्या करना चाहिए?",
+          "mr": "SAP स्टॉक अहवाल इनवर्ड सी-क्लास लॉटसाठी 100 तुकडे दाखवतो, परंतु रिसिव्हिंग डेस्कवर प्रत्यक्ष मोजणीत फक्त 92 तुकडे आढळतात. ऑपरेटरने काय केले पाहिजे?"
         },
         "options": [
           {
@@ -174,7 +174,7 @@
             "correct": true,
             "label": {
               "en": "Halt put-away immediately for that material and escalate the discrepancy to the Supermarket Zone Leader",
-              "hi": "उस सामग्री के लिए पुट-अवे तुरंत रोकें और विसंगति को सुपरमार्केट ज़ोन लीडर को अग्रेषित करें",
+              "hi": "उस सामग्री के लिए पुट-अवे तुरंत रोकें और गड़बड़ी को सुपरमार्केट ज़ोन लीडर को अग्रेषित करें",
               "mr": "त्या साहित्याचे पुट-अवे ताबडतोब थांबवा आणि तफावत सुपरमार्केट झोन लीडरकडे नोंदवा"
             }
           },
@@ -201,15 +201,15 @@
             "correct": false,
             "label": {
               "en": "Discard the 92 bolts into the scrap bin and demand a fresh 100-piece box from the supplier",
-              "hi": "92 बोल्ट को स्क्रैप बिन में फेंक दें और आपूर्तिकर्ता से एक नया 100-टुकड़ा बॉक्स मांगें",
+              "hi": "92 बोल्ट को स्क्रैप बिन में फेंक दें और सप्लायर से एक नया 100-टुकड़ा बॉक्स मांगें",
               "mr": "उरलेले 92 बोल्ट्स स्क्रॅपमध्ये टाकून द्या आणि सप्लायरकडून नवीन 100 चा बॉक्स मागा"
             }
           }
         ],
         "prompt": {
           "en": "The SAP stock report indicates 100 pieces for an inward C-class lot, but physical sampling at Material Handling reveals only 92 pieces. What must the operator do?",
-          "hi": "SAP स्टॉक रिपोर्ट आवक सी-क्लास लॉट के लिए 100 टुकड़े दर्शाता है, लेकिन रिसीविंग डेस्क पर भौतिक नमूना केवल 92 टुकड़े दिखाता है। ऑपरेटर को क्या करना चाहिए?",
-          "mr": "SAP स्टॉक अहवाल इनवर्ड सी-क्लास लॉटसाठी 100 तुकडे दर्शवतो, परंतु रिसिव्हिंग डेस्कवर प्रत्यक्ष मोजणीत फक्त 92 तुकडे आढळतात. ऑपरेटरने काय केले पाहिजे?"
+          "hi": "SAP स्टॉक रिपोर्ट आया हुआ सी-क्लास लॉट के लिए 100 टुकड़े दर्शाता है, लेकिन रिसीविंग डेस्क पर असल नमूना केवल 92 टुकड़े दिखाता है। ऑपरेटर को क्या करना चाहिए?",
+          "mr": "SAP स्टॉक अहवाल इनवर्ड सी-क्लास लॉटसाठी 100 तुकडे दाखवतो, परंतु रिसिव्हिंग डेस्कवर प्रत्यक्ष मोजणीत फक्त 92 तुकडे आढळतात. ऑपरेटरने काय केले पाहिजे?"
         },
         "id": "c1-q27",
         "audioSrc": "/audio/voiceover/s06_sc02_prompt.mp3"
@@ -219,8 +219,8 @@
         "sopClause": "SOP for Supermarket Put-Away (SM) Clause 4.2 & Question Bank Q27",
         "why": {
           "en": "SOP-PUTAWAY-SM states: 'Perform physical count of parts at supermarket staging area in sampling manner as per defined lot. Compare SAP Dump quantity against physical quantity. If discrepancy: immediately escalate to Zone Leader and halt process for that material.' Discrepancies point to vendor short-supply or transit theft. Stowing unverified quantities inflates ERP records with ghost inventory and causes sudden workstation stock-outs. The Zone Leader investigates and executes formal vendor debit notes before stock clearance.",
-          "hi": "SOP-PUTAWAY-SM कहता है: 'परिभाषित लॉट के अनुसार नमूनाकरण तरीके से सुपरमार्केट स्टेजिंग क्षेत्र में भागों की भौतिक गणना करें। भौतिक मात्रा के विरुद्ध SAP डंप मात्रा की तुलना करें। यदि विसंगति है: तुरंत ज़ोन लीडर को सूचित करें और उस सामग्री के लिए प्रक्रिया रोकें।' विसंगतियां विक्रेता की कम आपूर्ति या पारगमन चोरी की ओर इशारा करती हैं। असत्यापित मात्राओं को संग्रहीत करने से घोस्ट इन्वेंट्री के साथ ERP रिकॉर्ड फूल जाते हैं और अचानक वर्कस्टेशन स्टॉक की कमी हो जाती है। ज़ोन लीडर जांच करता है और स्टॉक क्लीयरेंस से पहले औपचारिक विक्रेता डेबिट नोट निष्पादित करता है।",
-          "mr": "SOP-PUTAWAY-SM सांगते: 'सुपरमार्केट स्टेजिंग एरियामध्ये नमुना पद्धतीने भागांची प्रत्यक्ष मोजणी करा. प्रत्यक्ष संख्येची तुलना SAP डंप संख्येसोबत करा. तफावत आढळल्यास: ताबडतोब झोन लीडरला कळवा आणि त्या साहित्याची प्रक्रिया थांबवा.' तफावत ही पुरवठादाराकडून कमी माल आल्याचे दर्शवते. परस्पर माल भरल्यास ERP मध्ये खोटी इन्व्हेंटरी दिसेल आणि लाईनवर अचानक तुटवडा जाणवेल. झोन लीडर चौकशी करून पुरवठादारावर अधिकृत डेबिट नोट जारी करतो."
+          "hi": "SOP-PUTAWAY-SM कहता है: 'परिभाषित लॉट के अनुसार नमूनाकरण तरीके से सुपरमार्केट स्टेजिंग क्षेत्र में भागों की असल गणना करें। असल मात्रा के विरुद्ध SAP डंप मात्रा की तुलना करें। यदि गड़बड़ी है: तुरंत ज़ोन लीडर को सूचित करें और उस सामग्री के लिए प्रक्रिया रोकें।' गड़बड़ियां विक्रेता की कम आपूर्ति या ट्रांजिट चोरी की ओर इशारा करती हैं। अचेक किया हुआ मात्राओं को संग्रहीत करने से सिस्टम में गलत स्टॉक के साथ ERP रिकॉर्ड फूल जाते हैं और अचानक वर्कस्टेशन स्टॉक की कमी हो जाती है। ज़ोन लीडर जांच करता है और स्टॉक क्लीयरेंस से पहले औपचारिक विक्रेता डेबिट नोट निष्पादित करता है।",
+          "mr": "SOP-PUTAWAY-SM सांगते: 'सुपरमार्केट स्टेजिंग एरियामध्ये नमुना पद्धतीने भागांची प्रत्यक्ष मोजणी करा. प्रत्यक्ष संख्येची तुलना SAP डंप संख्येसोबत करा. तफावत आढळल्यास: ताबडतोब झोन लीडरला कळवा आणि त्या साहित्याची प्रक्रिया थांबवा.' तफावत ही पुरवठादाराकडून कमी माल आल्याचे दाखवते. परस्पर माल भरल्यास ERP मध्ये खोटी इन्व्हेंटरी दिसेल आणि लाईनवर अचानक तुटवडा जाणवेल. झोन लीडर चौकशी करून पुरवठादारावर अधिकृत डेबिट नोट जारी करतो."
         }
       }
     },
@@ -235,34 +235,34 @@
         "name": "AURA",
         "pose": "explaining",
         "dialog": {
-          "en": "Count audits are cleared! Now we proceed to the supermarket gravity flow racks. These 3.5-degree inclined roller tracks operate on strict First-In First-Out (First-In, First-Out). You must ALWAYS load from the REAR loading lane so boxes glide forward to the front picking face. Loading from the front traps older parts behind, causing reverse LIFO and part degradation. Arrange the 4 put-away steps in the exact SOP sequence!",
-          "hi": "गिनती का ऑडिट पूरा हो गया है! अब हम सुपरमार्केट ग्रैविटी फ्लो रैक पर चलते हैं। ये 3.5-डिग्री झुके हुए रोलर ट्रैक सख्त FIFO (पहले आना, पहले जाना) पर काम करते हैं। आपको हमेशा पीछे (REAR) लोडिंग लेन से लोड करना चाहिए ताकि बॉक्स आगे पिकिंग फेस पर स्लाइड हों। आगे से लोड करने से पुराना स्टॉक पीछे फंस जाता है। पुट-अवे के 4 चरणों को सही क्रम में व्यवस्थित करें!",
-          "mr": "मोजणी ऑडिट पूर्ण झाले आहे! आता आपण सुपरमार्केट ग्रॅव्हिटी फ्लो रॅकवर जाऊया. हे 3.5 अंश झुकलेले रोलर ट्रॅक कडक FIFO नियमावर चालतात. तुम्ही नेहमी मागील (REAR) लोडिंग लेनमधूनच माल भरला पाहिजे जेणेकरून बॉक्सेस समोरील पिकिंग फेसवर पुढे सरकतील. पुढून भरल्यास जुना माल मागे अडकून खराब होतो. पुट-अवेचे 4 टप्पे अचूक क्रमाने लावा!"
+          "en": "Count audits are cleared! Now we proceed to the supermarket gravity flow racks. These roller tracks operate on strict First-In First-Out. You must ALWAYS load from the REAR loading lane so boxes glide forward to the front picking face. Loading from the front traps older parts behind. Arrange the 4 put-away steps in the correct order!",
+          "hi": "गिनती की जांच पूरी हो गई! अब हम सुपरमार्केट फ्लो रैक पर चलते हैं। ये रोलर ट्रैक सख्त FIFO (पहले आया माल पहले निकालना) नियम पर चलते हैं। आपको हमेशा पीछे (REAR) से माल लोड करना चाहिए ताकि डिब्बे आगे पिकिंग साइड पर फिसलकर आएं। आगे से माल भरने पर पुराना माल पीछे फंसकर खराब हो जाएगा। पुट-अवे के चारों कदमों को सही क्रम में लगाएं!",
+          "mr": "मोजणी पूर्ण झाली! आता आपण सुपरमार्केट फ्लो रॅकवर जाऊया. हे रोलर ट्रॅक्स कडक FIFO नियमावर चालतात. तुम्ही नेहमी मागूनच (REAR) माल भरला पाहिजे, जेणेकरून डबे पुढे पिकिंगच्या बाजूला सरकतील. पुढून माल भरल्यास जुना माल मागे अडकून राहील. पुट-अवेच्या सर्व 4 पायऱ्या योग्य क्रमाने लावा!"
         },
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Count audits are cleared! Now we proceed to the supermarket gravity flow racks. These 3.5-degree inclined roller tracks operate on strict First-In First-Out (First-In, First-Out). You must ALWAYS load from the REAR loading lane so boxes glide forward to the front picking face. Loading from the front traps older parts behind, causing reverse LIFO and part degradation. Arrange the 4 put-away steps in the exact SOP sequence!",
-            "hi": "गिनती का ऑडिट पूरा हो गया है! अब हम सुपरमार्केट ग्रैविटी फ्लो रैक पर चलते हैं। ये 3.5-डिग्री झुके हुए रोलर ट्रैक सख्त FIFO (पहले आना, पहले जाना) पर काम करते हैं। आपको हमेशा पीछे (REAR) लोडिंग लेन से लोड करना चाहिए ताकि बॉक्स आगे पिकिंग फेस पर स्लाइड हों। आगे से लोड करने से पुराना स्टॉक पीछे फंस जाता है। पुट-अवे के 4 चरणों को सही क्रम में व्यवस्थित करें!",
-            "mr": "मोजणी ऑडिट पूर्ण झाले आहे! आता आपण सुपरमार्केट ग्रॅव्हिटी फ्लो रॅकवर जाऊया. हे 3.5 अंश झुकलेले रोलर ट्रॅक कडक FIFO नियमावर चालतात. तुम्ही नेहमी मागील (REAR) लोडिंग लेनमधूनच माल भरला पाहिजे जेणेकरून बॉक्सेस समोरील पिकिंग फेसवर पुढे सरकतील. पुढून भरल्यास जुना माल मागे अडकून खराब होतो. पुट-अवेचे 4 टप्पे अचूक क्रमाने लावा!"
+            "en": "Count audits are cleared! Now we proceed to the supermarket gravity flow racks. These roller tracks operate on strict First-In First-Out. You must ALWAYS load from the REAR loading lane so boxes glide forward to the front picking face. Loading from the front traps older parts behind. Arrange the 4 put-away steps in the correct order!",
+            "hi": "गिनती की जांच पूरी हो गई! अब हम सुपरमार्केट फ्लो रैक पर चलते हैं। ये रोलर ट्रैक सख्त FIFO (पहले आया माल पहले निकालना) नियम पर चलते हैं। आपको हमेशा पीछे (REAR) से माल लोड करना चाहिए ताकि डिब्बे आगे पिकिंग साइड पर फिसलकर आएं। आगे से माल भरने पर पुराना माल पीछे फंसकर खराब हो जाएगा। पुट-अवे के चारों कदमों को सही क्रम में लगाएं!",
+            "mr": "मोजणी पूर्ण झाली! आता आपण सुपरमार्केट फ्लो रॅकवर जाऊया. हे रोलर ट्रॅक्स कडक FIFO नियमावर चालतात. तुम्ही नेहमी मागूनच (REAR) माल भरला पाहिजे, जेणेकरून डबे पुढे पिकिंगच्या बाजूला सरकतील. पुढून माल भरल्यास जुना माल मागे अडकून राहील. पुट-अवेच्या सर्व 4 पायऱ्या योग्य क्रमाने लावा!"
           },
           "audioSrc": "/audio/voiceover/s06_sc03_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Spot on! Your operational decision complies with Ather Auric standards.",
-            "hi": "बिल्कुल सही! SOP-PUTAWAY-SM। यह एथर SOP मानकों के 100% अनुरूप है।",
-            "mr": "अगदी बरोबर! SOP-PUTAWAY-SM हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+            "en": "Spot on! Loading from the rear maintains First-In First-Out flow and ensures assembly workers always pick the oldest verified stock first.",
+            "hi": "बिल्कुल सही! पीछे से माल लोड करने से पहले आया माल पहले निकलता है (FIFO) और असेंबली वर्कर को हमेशा सही क्रम में माल मिलता है।",
+            "mr": "अगदी बरोबर! मागून माल भरल्यामुळे आधी आलेला माल आधी बाहेर येतो (FIFO) आणि लाईनवरील कामगाराला नेहमी योग्य क्रमाने माल मिळतो."
           },
           "audioSrc": "/audio/voiceover/s06_sc03_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Warning! protocol violation. Always follow standard operating procedure to maintain quality and safety.",
-            "hi": "सावधान! SOP प्रोटोकॉल का उल्लंघन। प्लांट सुरक्षा और गुणवत्ता सुनिश्चित करने के लिए निर्धारित प्रक्रिया का पालन करें।",
-            "mr": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+            "en": "Incorrect! Never load boxes from the front picking face. Loading from the front violates First-In First-Out and traps aging inventory.",
+            "hi": "गलत तरीका! सामने से कभी बॉक्स न भरें। आगे से भरने पर पुराना माल पीछे दब जाएगा और खराब हो सकता है।",
+            "mr": "चुकीची पद्धत! पुढून कधीही बॉक्सेस भरू नका. पुढून भरल्यास जुना माल मागे अडकून पडेल आणि खराब होईल."
           },
           "audioSrc": "/audio/voiceover/s06_sc03_wrong.mp3"
         }
@@ -272,8 +272,8 @@
         "fallbackAnimation": "gravity_flow_fifo",
         "caption": {
           "en": "Dual-Access Gravity Flow Rack (3.5° Incline): Rear Loading Lane ensures First-In, First-Out (FIFO) at Front Picking Face",
-          "hi": "दोहरे-पहुंच ग्रैविटी फ्लो रैक (3.5° झुकाव): रियर लोडिंग लेन फ्रंट पिकिंग फेस पर पहले आना, पहले जाना (FIFO) सुनिश्चित करता है",
-          "mr": "ड्युअल-अ‍ॅक्सेस ग्रॅव्हिटी फ्लो रॅक (3.5° उतार): मागील लोडिंग लेन समोरील पिकिंग फेसवर FIFO स्टॉक रोटेशन सुनिश्चित करते"
+          "hi": "दोहरे-पहुंच ग्रैविटी फ्लो रैक (3.5° झुकाव): रियर लोडिंग लेन फ्रंट पिकिंग फेस पर पहले आना, पहले जाना (FIFO) पक्का करता है",
+          "mr": "ड्युअल-अ‍ॅक्सेस ग्रॅव्हिटी फ्लो रॅक (3.5° उतार): मागील लोडिंग लेन समोरील पिकिंग फेसवर FIFO स्टॉक रोटेशन खात्री देते"
         },
         "imageSrc": "/Assets/Scenes/c1_s6_sc03_gravity_flow_fifo.webp"
       },
@@ -281,8 +281,8 @@
         "type": "sequence",
         "id": "c1-q28-fifo",
         "prompt": {
-          "en": "Arrange the 4 steps of Supermarket Gravity Flow Rack Put-Away in the strictly mandated SOP sequence to guarantee First-In First-Out stock rotation:",
-          "hi": "FIFO स्टॉक रोटेशन सुनिश्चित करने के लिए सुपरमार्केट ग्रैविटी फ्लो रैक पुट-अवे के 4 चरणों को सख्त सही क्रम में व्यवस्थित करें:",
+          "en": "Arrange the 4 steps of Gravity Flow Rack put-away in the correct sequence to ensure FIFO stock rotation:",
+          "hi": "FIFO स्टॉक रोटेशन यह पक्का करने के लिए सुपरमार्केट ग्रैविटी फ्लो रैक पुट-अवे के 4 चरणों को सख्त सही क्रम में व्यवस्थित करें:",
           "mr": "FIFO स्टॉक रोटेशनची खात्री करण्यासाठी सुपरमार्केट ग्रॅव्हिटी फ्लो रॅक पुट-अवेच्या 4 टप्प्यांची अचूक क्रमाने मांडणी करा:"
         },
         "items": [
@@ -300,7 +300,7 @@
             "correctOrder": 2,
             "label": {
               "en": "2. Insert verified fastener boxes exclusively into the REAR entry lane of the roller track",
-              "hi": "2. रोलर ट्रैक के केवल पीछे (REAR) के प्रवेश द्वार से सत्यापित फास्टनर बॉक्स लोड करें",
+              "hi": "2. रोलर ट्रैक के केवल पीछे (REAR) के प्रवेश द्वार से चेक किया हुआ फास्टनर बॉक्स लोड करें",
               "mr": "2. रोलर ट्रॅकच्या केवळ मागील (REAR) प्रवेश लेनमधून तपासलेले फास्टनर बॉक्सेस आत ठेवा"
             }
           },
@@ -324,8 +324,8 @@
           }
         ],
         "question": {
-          "en": "Arrange the 4 steps of Supermarket Gravity Flow Rack Put-Away in the strictly mandated SOP sequence to guarantee First-In First-Out stock rotation:",
-          "hi": "FIFO स्टॉक रोटेशन सुनिश्चित करने के लिए सुपरमार्केट ग्रैविटी फ्लो रैक पुट-अवे के 4 चरणों को सख्त सही क्रम में व्यवस्थित करें:",
+          "en": "Arrange the 4 steps of Supermarket Gravity Flow Rack Put-Away in the strictly mandated correct sequence to guarantee First-In First-Out stock rotation:",
+          "hi": "FIFO स्टॉक रोटेशन यह पक्का करने के लिए सुपरमार्केट ग्रैविटी फ्लो रैक पुट-अवे के 4 चरणों को सख्त सही क्रम में व्यवस्थित करें:",
           "mr": "FIFO स्टॉक रोटेशनची खात्री करण्यासाठी सुपरमार्केट ग्रॅव्हिटी फ्लो रॅक पुट-अवेच्या 4 टप्प्यांची अचूक क्रमाने मांडणी करा:"
         },
         "questionId": "c1-q28-fifo",
@@ -344,7 +344,7 @@
             "correctOrder": 2,
             "label": {
               "en": "2. Insert verified fastener boxes exclusively into the REAR entry lane of the roller track",
-              "hi": "2. रोलर ट्रैक के केवल पीछे (REAR) के प्रवेश द्वार से सत्यापित फास्टनर बॉक्स लोड करें",
+              "hi": "2. रोलर ट्रैक के केवल पीछे (REAR) के प्रवेश द्वार से चेक किया हुआ फास्टनर बॉक्स लोड करें",
               "mr": "2. रोलर ट्रॅकच्या केवळ मागील (REAR) प्रवेश लेनमधून तपासलेले फास्टनर बॉक्सेस आत ठेवा"
             }
           },
@@ -380,7 +380,7 @@
         "sopClause": "SOP for Supermarket Put-Away (SM) Clause 4.3 & Question Bank Q28",
         "why": {
           "en": "SOP-PUTAWAY-SM mandates dual-access gravity flow roller racks (3.5-degree incline). New inventory is strictly loaded into the REAR access lane. Gravity automatically moves newly loaded crates forward until they rest behind existing stock. Assembly line kitters pick exclusively from the FRONT face. This physical layout mechanically enforces 100% First-In First-Out without operator guesswork, preventing fastener surface oxidation, anti-rust oil drying, and obsolete engineering revisions reaching vehicle sub-assemblies.",
-          "hi": "SOP-PUTAWAY-SM 3.5-डिग्री ढलान वाले दोहरे-पहुंच ग्रैविटी फ्लो रोलर रैक का आदेश देता है। नई इन्वेंट्री को सख्ती से REAR एक्सेस लेन में लोड किया जाता है। गुरुत्वाकर्षण नए बक्से को आगे ले जाता है जब तक कि वह मौजूदा स्टॉक के पीछे न टिक जाए। असेंबली लाइन किटर्स केवल FRONT फेस से सामान लेते हैं। यह भौतिक लेआउट 100% FIFO को यांत्रिक रूप से लागू करता है, जिससे फास्टनर सतह का क्षरण और पुराने पुर्जों के उपयोग को रोका जा सके।",
+          "hi": "SOP-PUTAWAY-SM 3.5-डिग्री ढलान वाले दोहरे-पहुंच ग्रैविटी फ्लो रोलर रैक का आदेश देता है। नई इन्वेंट्री को सख्ती से REAR एक्सेस लेन में लोड किया जाता है। गुरुत्वाकर्षण नए बक्से को आगे ले जाता है जब तक कि वह मौजूदा स्टॉक के पीछे न टिक जाए। असेंबली लाइन किटर्स केवल FRONT फेस से सामान लेते हैं। यह असल लेआउट 100% FIFO को यांत्रिक रूप से लागू करता है, जिससे फास्टनर सतह का क्षरण और पुराने पुर्जों के उपयोग को रोका जा सके।",
           "mr": "SOP-PUTAWAY-SM 3.5 अंशाचा उतार असलेले ड्युअल-अ‍ॅक्सेस ग्रॅव्हिटी फ्लो रॅक वापरले जातात. नवीन स्टॉक कडकपणे मागील (REAR) लेनमधूनच लोड केला जातो. गुरुत्वाकर्षणामुळे नवीन क्रेट पुढे सरकून जुन्या स्टॉकच्या मागे स्थिरावते. असेंब्ली लाईन किटर्स केवळ समोरील (FRONT) बाजूने माल उचलतात. ही भौतिक रचना मानवी चुकीशिवाय 100% FIFO ची हमी देते, ज्यामुळे जुने नट-बोल्ट खराब किंवा गंजणे टळते."
         }
       }
@@ -396,34 +396,34 @@
         "name": "AURA",
         "pose": "explaining",
         "dialog": {
-          "en": "Look at the front face of the supermarket rack! After assembly line kitters drew materials, the physical stock has reached the red MIN threshold (2 boxes remaining). What two.",
-          "hi": "सुपरमार्केट रैक के सामने वाले हिस्से को देखें! असेंबली लाइन किटर्स द्वारा सामग्री लेने के बाद, भौतिक स्टॉक लाल MIN सीमा (2 बॉक्स शेष) तक पहुंच गया है। असेंबली लाइन को पुर्जों की कमी से बचाने के लिए आपको तुरंत कौन सी दो अनिवार्य कार्रवाइयां करनी चाहिए?",
-          "mr": "सुपरमार्केट रॅक च्या समोरील बाजूकडे लक्ष द्या! लाईन किटर्सनी माल नेल्यानंतर प्रत्यक्ष साठा लाल रंगाच्या MIN मर्यादेवर (फक्त 2 बॉक्सेस शिल्लक) आला आहे. व 4.5 नुसार लाईन बंद पडू नये म्हणून तुम्ही ताबडतोब कोणत्या दोन अनिवार्य गोष्टी केल्या पाहिजेत?"
+          "en": "Look at the front of the supermarket rack! After line kitters picked parts, stock hit the red MIN level (only 2 boxes left). What two actions must you take immediately to prevent the assembly line from running out?",
+          "hi": "सुपरमार्केट रैक के सामने देखें! असेंबली लाइन पर माल जाने के बाद रैक में स्टॉक लाल MIN निशान (सिर्फ 2 बॉक्स) तक पहुंच गया है। लाइन पर पार्ट्स खत्म होने से बचाने के लिए आपको तुरंत क्या दो कदम उठाने चाहिए?",
+          "mr": "सुपरमार्केट रॅकच्या पुढच्या बाजूला पहा! लाईनवर माल गेल्यामुळे रॅकमधील साठा लाल रंगाच्या MIN मर्यादेवर (फक्त 2 बॉक्सेस) आला आहे. लाईन बंद पडू नये म्हणून तुम्ही लगेच कोणते दोन उपाय केले पाहिजेत?"
         },
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Look at the front face of the supermarket rack! After assembly line kitters drew materials, the physical stock has reached the red MIN threshold (2 boxes remaining). What two.",
-            "hi": "सुपरमार्केट रैक के सामने वाले हिस्से को देखें! असेंबली लाइन किटर्स द्वारा सामग्री लेने के बाद, भौतिक स्टॉक लाल MIN सीमा (2 बॉक्स शेष) तक पहुंच गया है। असेंबली लाइन को पुर्जों की कमी से बचाने के लिए आपको तुरंत कौन सी दो अनिवार्य कार्रवाइयां करनी चाहिए?",
-            "mr": "सुपरमार्केट रॅक च्या समोरील बाजूकडे लक्ष द्या! लाईन किटर्सनी माल नेल्यानंतर प्रत्यक्ष साठा लाल रंगाच्या MIN मर्यादेवर (फक्त 2 बॉक्सेस शिल्लक) आला आहे. व 4.5 नुसार लाईन बंद पडू नये म्हणून तुम्ही ताबडतोब कोणत्या दोन अनिवार्य गोष्टी केल्या पाहिजेत?"
+            "en": "Look at the front of the supermarket rack! After line kitters picked parts, stock hit the red MIN level (only 2 boxes left). What two actions must you take immediately to prevent the assembly line from running out?",
+            "hi": "सुपरमार्केट रैक के सामने देखें! असेंबली लाइन पर माल जाने के बाद रैक में स्टॉक लाल MIN निशान (सिर्फ 2 बॉक्स) तक पहुंच गया है। लाइन पर पार्ट्स खत्म होने से बचाने के लिए आपको तुरंत क्या दो कदम उठाने चाहिए?",
+            "mr": "सुपरमार्केट रॅकच्या पुढच्या बाजूला पहा! लाईनवर माल गेल्यामुळे रॅकमधील साठा लाल रंगाच्या MIN मर्यादेवर (फक्त 2 बॉक्सेस) आला आहे. लाईन बंद पडू नये म्हणून तुम्ही लगेच कोणते दोन उपाय केले पाहिजेत?"
           },
           "audioSrc": "/audio/voiceover/s06_sc04_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Spot on! Your operational decision complies with Ather Auric standards.",
-            "hi": "बिल्कुल सही! SOP-PUTAWAY-SM। यह एथर SOP मानकों के 100% अनुरूप है।",
-            "mr": "अगदी बरोबर! SOP-PUTAWAY-SM हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+            "en": "Spot on! Scan the Kanban replenishment barcode to trigger a restock task in the system, and notify the Supermarket Zone Leader immediately.",
+            "hi": "बिल्कुल सही! तुरंत कानबान बारकोड स्कैन करके सिस्टम में रीस्टॉक टास्क बनाएं और सुपरमार्केट ज़ोन लीडर को सूचना दें ताकि नया माल फौरन आ सके।",
+            "mr": "अगदी बरोबर! लगेच कानबान बारकोड स्कॅन करून सिस्टीममध्ये रीस्टॉक टास्क तयार करा आणि झोन लीडरला सांगा जेणेकरून नवीन माल त्वरित येईल."
           },
           "audioSrc": "/audio/voiceover/s06_sc04_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Warning! protocol violation. Always follow standard operating procedure to maintain quality and safety.",
-            "hi": "सावधान! SOP प्रोटोकॉल का उल्लंघन। प्लांट सुरक्षा और गुणवत्ता सुनिश्चित करने के लिए निर्धारित प्रक्रिया का पालन करें।",
-            "mr": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+            "en": "Warning! Do not wait until the bin is completely empty. When stock reaches the red MIN line, trigger replenishment immediately.",
+            "hi": "सावधान! बिन पूरी तरह खाली होने का इंतज़ार न करें। जैसे ही स्टॉक लाल MIN लाइन पर पहुंचे, तुरंत रीस्टॉक की मांग करें।",
+            "mr": "सावधान! बिन पूर्ण रिकामा होण्याची वाट पाहू नका. साठा लाल MIN रेषेवर येताच ताबडतोब नवीन मालाची मागणी नोंदवा."
           },
           "audioSrc": "/audio/voiceover/s06_sc04_wrong.mp3"
         }
@@ -433,7 +433,7 @@
         "fallbackAnimation": "supermarket_bin_kanban",
         "caption": {
           "en": "Supermarket Front Face: Physical Bin Card ledger and e-Kanban RF barcode replenishment trigger",
-          "hi": "सुपरमार्केट फ्रंट फेस: भौतिक बिन कार्ड लेज़र और ई-कानबान आरएफ बारकोड पुनःपूर्ति ट्रिगर",
+          "hi": "सुपरमार्केट फ्रंट फेस: असल बिन कार्ड लेज़र और ई-कानबान आरएफ बारकोड पुनःपूर्ति ट्रिगर",
           "mr": "सुपरमार्केट फ्रंट फेस: प्रत्यक्ष बिन कार्ड नोंदवही आणि ई-कानबान आरएफ बारकोड रिप्लेनिशमेंट ट्रिगर"
         },
         "imageSrc": "/Assets/Scenes/c1_s6_sc04_bin_replenishment.webp"
@@ -452,7 +452,7 @@
             "correct": true,
             "label": {
               "en": "Update the physical Bin Card (Date, In/Out, Balance: 2) AND scan the e-Kanban barcode to auto-generate a SAP replenishment Transfer Order from High-Rise Bulk Storage (MH2)",
-              "hi": "भौतिक बिन कार्ड को अपडेट करें (दिनांक, इन/आउट, शेष: 2) और हाई-राइज बल्क स्टोरेज (MH2) से SAP रीप्लेनिशमेंट ट्रांसफर ऑर्डर ऑटो-जेनरेट करने के लिए ई-कानबान बारकोड को स्कैन करें",
+              "hi": "असल बिन कार्ड को अपडेट करें (दिनांक, इन/आउट, शेष: 2) और हाई-राइज बल्क स्टोरेज (MH2) से SAP रीप्लेनिशमेंट ट्रांसफर ऑर्डर ऑटो-जेनरेट करने के लिए ई-कानबान बारकोड को स्कैन करें",
               "mr": "प्रत्यक्ष बिन कार्डवर नोंद करा (तारीख, इन/आऊट, शिल्लक: 2) आणि हाय-राईज बल्क स्टोरेजमधून (MH2) SAP रिप्लेनिशमेंट ट्रान्सफर ऑर्डर आपोआप निर्माण करण्यासाठी ई-कानबान बारकोड स्कॅन करा"
             }
           },
@@ -461,7 +461,7 @@
             "correct": false,
             "label": {
               "en": "Wait until the bin reaches completely 0 boxes so you don't call forklift operators unnecessarily",
-              "hi": "बिन पूरी तरह से 0 बॉक्स होने तक प्रतीक्षा करें ताकि आप अनावश्यक रूप से फोर्कलिफ्ट ऑपरेटरों को न बुलाएं",
+              "hi": "बिन पूरी तरह से 0 बॉक्स होने तक इंतज़ार करें ताकि आप अनावश्यक रूप से फोर्कलिफ्ट ऑपरेटरों को न बुलाएं",
               "mr": "बिन पूर्णपणे 0 बॉक्सेस रिकामी होईपर्यंत थांबा, जेणेकरून फोर्कलिफ्ट चालकांना निष्कारण त्रास होणार नाही"
             }
           },
@@ -479,7 +479,7 @@
             "correct": false,
             "label": {
               "en": "Quietly borrow 3 boxes from an adjacent scooter model's bin without documenting the transfer in SAP",
-              "hi": "SAP में स्थानांतरण का दस्तावेजीकरण किए बिना चुपचाप एक आसन्न स्कूटर मॉडल के बिन से 3 बॉक्स उधार लें",
+              "hi": "SAP में स्थानांतरण का कागज़ी रिकॉर्ड किए बिना चुपचाप एक आसन्न स्कूटर मॉडल के बिन से 3 बॉक्स उधार लें",
               "mr": "SAP मध्ये कोणतीही नोंद न करता शेजारच्या दुसऱ्या स्कूटर मॉडेलच्या बिनमधून 3 बॉक्सेस परस्पर उचलून आणा"
             }
           }
@@ -497,8 +497,8 @@
         "sopClause": "SOP for Supermarket Put-Away (SM) Clause 4.4 & 4.5 and Shift Handover Governance",
         "why": {
           "en": "SOP-PUTAWAY-SM mandates maintaining physical Bin Cards at each bin location to log every transaction (Date, In/Out Qty, Balance, Operator signature). When physical inventory touches the MIN mark (safety buffer), scanning the e-Kanban barcode instantly generates a SAP Transfer Order (LT06) pulling bulk stock from High-Rise Racks (MH2) to Material Handling before line starvation occurs. Borrowing across part numbers or waiting until 0 causes sudden line stops, model mix-ups, and severe assembly defects.",
-          "hi": "SOP-PUTAWAY-SM प्रत्येक बिन स्थान पर प्रत्येक लेनदेन (दिनांक, इन/आउट मात्रा, शेष राशि, ऑपरेटर हस्ताक्षर) को लॉग करने के लिए भौतिक बिन कार्ड बनाए रखने का आदेश देता है। जब भौतिक इन्वेंट्री MIN मार्क (सुरक्षा बफर) को छूती है, तो ई-कानबान बारकोड को स्कैन करने से तुरंत एक SAP ट्रांसफर ऑर्डर (LT06) उत्पन्न होता है जो लाइन भुखमरी होने से पहले हाई-राइज रैक (MH2) से मटेरियल हैंडलिंग तक थोक स्टॉक खींचता है।",
-          "mr": "SOP-PUTAWAY-SM व 4.5 नुसार प्रत्येक बिनवर प्रत्यक्ष बिन कार्ड ठेवणे अनिवार्य आहे (तारीख, आवक/जावक, शिल्लक आणि स्वाक्षरी). जेव्हा साठा MIN मर्यादेवर येतो, तेव्हा ई-कानबान बारकोड स्कॅन करताच SAP मध्ये ट्रान्सफर ऑर्डर (LT06) तयार होते आणि हाय-राईज रॅकमधून (MH2) ताबडतोब माल मागवला जातो. शून्य होईपर्यंत थांबल्यास किंवा परस्पर माल उसने घेतल्यास असेंब्ली लाईन तात्काळ ठप्प होते."
+          "hi": "SOP-PUTAWAY-SM प्रत्येक बिन स्थान पर प्रत्येक लेनदेन (दिनांक, इन/आउट मात्रा, शेष राशि, ऑपरेटर हस्ताक्षर) को लॉग करने के लिए असल बिन कार्ड बनाए रखने का आदेश देता है। जब असल इन्वेंट्री MIN मार्क (सुरक्षा बफर) को छूती है, तो ई-कानबान बारकोड को स्कैन करने से तुरंत एक SAP ट्रांसफर ऑर्डर (LT06) उत्पन्न होता है जो लाइन भुखमरी होने से पहले हाई-राइज रैक (MH2) से मटेरियल हैंडलिंग तक थोक स्टॉक खींचता है।",
+          "mr": "SOP-PUTAWAY-SM व 4.5 नुसार प्रत्येक बिनवर प्रत्यक्ष बिन कार्ड ठेवणे अत्यंत गरजेचे आहे (तारीख, आत आलेला माल/जावक, शिल्लक आणि स्वाक्षरी). जेव्हा साठा MIN मर्यादेवर येतो, तेव्हा ई-कानबान बारकोड स्कॅन करताच SAP मध्ये ट्रान्सफर ऑर्डर (LT06) तयार होते आणि हाय-राईज रॅकमधून (MH2) ताबडतोब माल मागवला जातो. शून्य होईपर्यंत थांबल्यास किंवा परस्पर माल उसने घेतल्यास असेंब्ली लाईन तात्काळ ठप्प होते."
         }
       }
     },
@@ -507,7 +507,7 @@
       "stepNumber": 5,
       "title": {
         "en": "Line Pressure vs Discrepancy Integrity Stop/Go",
-        "hi": "लाइन का दबाव बनाम विसंगति अखंडता Stop/Go",
+        "hi": "लाइन का दबाव बनाम गड़बड़ी सुरक्षा और सही रिकॉर्ड Stop/Go",
         "mr": "लाईनचा दबाव विरूद्ध तफावत अचूकता Stop/Go"
       },
       "media": {
@@ -520,34 +520,34 @@
         "intro": {
           "pose": "warning",
           "text": {
-            "en": "High tension at the supermarket receiving desk! You counted 92 bolts on the scale instead of 100. An aggressive line feeder arrives shouting that the main frame line is 2 minutes from stoppage! They demand: 'Sign off the full 100 pieces right now, hand me the bin, and let us fix the missing 8 pieces later in the week.' Do you allow this dispatch or stop immediately?",
-            "hi": "सुपरमार्केट रिसीविंग डेस्क पर भारी तनाव! आपने स्केल पर 100 के बजाय 92 बोल्ट गिने। एक लाइन फीडर चिल्लाते हुए आता है कि मुख्य फ्रेम लाइन बंद होने में सिर्फ 2 मिनट बाकी हैं! वे मांग करते हैं: 'अभी पूरे 100 टुकड़ों पर हस्ताक्षर करें, मुझे बिन सौंपें, और बाकी 8 टुकड़ों को बाद में ठीक कर लेंगे।' क्या आप इस डिस्पैच की अनुमति देते हैं या तुरंत रोकते हैं?",
-            "mr": "सुपरमार्केट रिसिव्हिंग डेस्कवर प्रचंड तणाव! तुम्ही वेईंग स्केलवर 100 ऐवजी 92 बोल्ट्स मोजले आहेत. एक लाईन फिडर धावत येतो आणि ओरडतो की मेन फ्रेम लाईन बंद पडायला फक्त 2 मिनिटे उरली आहेत! तो म्हणतो: 'आत्ताच्या आत्ता 100 ची पूर्ण सही करा, बिन माझ्या हवाली करा आणि उरलेले 8 तुकडे नंतर आठवडाभरात जुळवून घेऊ.' तुम्ही या डिस्पॅचला परवानगी द्याल की ताबडतोब थांबवाल?"
+            "en": "EXTREME PRESSURE AT THE SUPERMARKET RECEIVING DESK! You counted 92 bolts instead of 100 on the counting scale. A line feeder rushes in, yelling that the Main Frame assembly line will shut down in 2 minutes! They demand: 'Sign off on all 100 pieces right now, hand me the bin, and we will reconcile the missing 8 parts later.' Do you permit this dispatch or execute a hard stop?",
+            "hi": "सुपरमार्केट डेस्क पर भारी तनाव! कांटे पर 100 के बजाय 92 बोल्ट निकले हैं। एक लाइन फीडर चिल्लाते हुए आता है कि लाइन 2 मिनट में बंद होने वाली है! वह कहता है: 'अभी 100 पीस पर दस्तखत कर दो, मुझे डिब्बा दे दो और बाकी 8 पीस बाद में देख लेंगे।' क्या आप माल जाने देंगे या तुरंत रोकेंगे?",
+            "mr": "सुपरमार्केट डेस्कवर प्रचंड तणाव! काट्यावर 100 ऐवजी 92 बोल्ट्स निघाले आहेत. एक लाईन फिडर ओरडत येतो की लाईन 2 मिनिटांत बंद पडणार आहे! तो म्हणतो: 'आत्ताच्या आत्ता 100 ची सही करा, मला डबा द्या आणि उरलेले 8 नंतर पाहू.' तुम्ही माल पाठवणार की ताबडतोब थांबवणार?"
           },
           "audioSrc": "/audio/voiceover/s06_sc05_intro.mp3"
         },
         "onCorrect": {
           "pose": "trophy",
           "text": {
-            "en": "STOP IS ABSOLUTELY ESSENTIAL! Never sign a false count or release unverified quantities under line pressure! Discrepancy means an active halt for that material and instant escalation to the Supermarket Zone Leader. Falsifying records creates ghost inventory and leaves Ather legally exposed to supplier invoice fraud!",
-            "hi": "STOP बिल्कुल आवश्यक है! लाइन के दबाव में कभी भी गलत गिनती पर हस्ताक्षर न करें या असत्यापित मात्रा जारी न करें! विसंगति का मतलब है उस सामग्री के लिए तत्काल रोक और सुपरमार्केट ज़ोन लीडर को तत्काल सूचना। रिकॉर्ड में हेराफेरी से घोस्ट इन्वेंट्री बनती है और एथर को आपूर्तिकर्ता चालान धोखाधड़ी का खतरा होता है!",
-            "mr": "STOP अत्यंत आवश्यक आहे! लाईनच्या दबावाखाली कधीही खोट्या मोजणीवर स्वाक्षरी करू नका किंवा अप्रमाणित माल सोडू नका! तफावत आढळल्यास तात्काळ तो माल थांबवणे आणि झोन लीडरला कळवणे बंधनकारक आहे. खोटी नोंद केल्यास घोस्ट इन्व्हेंटरी तयार होते आणि कंपनीचे मोठे आर्थिक नुकसान होते!"
+            "en": "STOP IS STRICTLY REQUIRED! Never sign false counts or release unverified quantities under line pressure! Any count mismatch means stop and alert your Supermarket Zone Leader. Fake counts create missing stock and cause serious billing disputes!",
+            "hi": "रोकना बहुत ज़रूरी है! लाइन के दबाव में आकर कभी भी गलत गिनती पर दस्तखत न करें और न ही बिना जांचे माल दें! गिनती में फर्क होने पर तुरंत काम रोकें और ज़ोन लीडर को बताएं। झूठी एंट्री करने से कंपनी को नुकसान होता है और आगे चलकर लाइन बंद हो जाती है!",
+            "mr": "थांबवणे खूप गरजेचे आहे! लाईनच्या दबावाखाली कधीही खोट्या मोजणीवर सही करू नका आणि माल परस्पर सोडू नका! तफावत आढळल्यास लगेच काम थांबवून झोन लीडरला सांगा. खोटी नोंद केल्यास कंपनीचे मोठे नुकसान होते आणि पुढच्या शिफ्टमध्ये लाईन बंद पडते!"
           },
           "audioSrc": "/audio/voiceover/s06_sc05_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "UNFORGIVABLE INVENTORY VIOLATION! Yielding to line pressure and falsifying 100 pieces when only 92 arrived destroys ERP audit trails. Next shift will run out of bolts midway, causing catastrophic unannounced line shutdown!",
-            "hi": "अक्षम्य इन्वेंट्री उल्लंघन! लाइन के दबाव में आना और केवल 92 आने पर 100 टुकड़ों की झूठी पुष्टि करना ERP ऑडिट ट्रेल्स को नष्ट कर देता है। अगली शिफ्ट में बीच में ही बोल्ट खत्म हो जाएंगे, जिससे अचानक लाइन बंद हो जाएगी!",
-            "mr": "अक्षम्य इन्व्हेंटरी उल्लंघन! लाईनच्या दबावाखाली येऊन 92 ऐवजी 100 ची खोटी नोंद केल्यास ERP ऑडिट ट्रेल नष्ट होतो. पुढच्या शिफ्टला अचानक माल संपल्याने लाईन अचानक बंद पडेल!"
+            "en": "SERIOUS INVENTORY ERROR! Giving in to line pressure and entering 100 pieces when only 92 arrived ruins SAP inventory records. The next shift will run out of bolts and shut down the assembly line!",
+            "hi": "अक्षम्य गलती! लाइन के दबाव में आकर 92 के बदले 100 की झूठी पुष्टि करने से सिस्टम का सारा रिकॉर्ड बिगड़ जाएगा। अगली शिफ्ट में बीच में ही बोल्ट खत्म हो जाएंगे और काम ठप हो जाएगा!",
+            "mr": "अक्षम्य चूक! दबावाखाली येऊन 92 ऐवजी 100 ची खोटी नोंद केल्यास सिस्टीमचा ताळमेळ बिघडेल. पुढच्या शिफ्टला काम करताना अचानक बोल्ट्स संपतील आणि फॅक्टरी बंद पडेल!"
           },
           "audioSrc": "/audio/voiceover/s06_sc05_wrong.mp3"
         },
         "dialog": {
-          "en": "High tension at the supermarket receiving desk! You counted 92 bolts on the scale instead of 100. An aggressive line feeder arrives shouting that the main frame line is 2 minutes from stoppage! They demand: 'Sign off the full 100 pieces right now, hand me the bin, and let us fix the missing 8 pieces later in the week.' Do you allow this dispatch or stop immediately?",
-          "hi": "सुपरमार्केट रिसीविंग डेस्क पर भारी तनाव! आपने स्केल पर 100 के बजाय 92 बोल्ट गिने। एक लाइन फीडर चिल्लाते हुए आता है कि मुख्य फ्रेम लाइन बंद होने में सिर्फ 2 मिनट बाकी हैं! वे मांग करते हैं: 'अभी पूरे 100 टुकड़ों पर हस्ताक्षर करें, मुझे बिन सौंपें, और बाकी 8 टुकड़ों को बाद में ठीक कर लेंगे।' क्या आप इस डिस्पैच की अनुमति देते हैं या तुरंत रोकते हैं?",
-          "mr": "सुपरमार्केट रिसिव्हिंग डेस्कवर प्रचंड तणाव! तुम्ही वेईंग स्केलवर 100 ऐवजी 92 बोल्ट्स मोजले आहेत. एक लाईन फिडर धावत येतो आणि ओरडतो की मेन फ्रेम लाईन बंद पडायला फक्त 2 मिनिटे उरली आहेत! तो म्हणतो: 'आत्ताच्या आत्ता 100 ची पूर्ण सही करा, बिन माझ्या हवाली करा आणि उरलेले 8 तुकडे नंतर आठवडाभरात जुळवून घेऊ.' तुम्ही या डिस्पॅचला परवानगी द्याल की ताबडतोब थांबवाल?"
+          "en": "EXTREME PRESSURE AT THE SUPERMARKET RECEIVING DESK! You counted 92 bolts instead of 100 on the counting scale. A line feeder rushes in, yelling that the Main Frame assembly line will shut down in 2 minutes! They demand: 'Sign off on all 100 pieces right now, hand me the bin, and we will reconcile the missing 8 parts later.' Do you permit this dispatch or execute a hard stop?",
+          "hi": "सुपरमार्केट डेस्क पर भारी तनाव! कांटे पर 100 के बजाय 92 बोल्ट निकले हैं। एक लाइन फीडर चिल्लाते हुए आता है कि लाइन 2 मिनट में बंद होने वाली है! वह कहता है: 'अभी 100 पीस पर दस्तखत कर दो, मुझे डिब्बा दे दो और बाकी 8 पीस बाद में देख लेंगे।' क्या आप माल जाने देंगे या तुरंत रोकेंगे?",
+          "mr": "सुपरमार्केट डेस्कवर प्रचंड तणाव! काट्यावर 100 ऐवजी 92 बोल्ट्स निघाले आहेत. एक लाईन फिडर ओरडत येतो की लाईन 2 मिनिटांत बंद पडणार आहे! तो म्हणतो: 'आत्ताच्या आत्ता 100 ची सही करा, मला डबा द्या आणि उरलेले 8 नंतर पाहू.' तुम्ही माल पाठवणार की ताबडतोब थांबवणार?"
         }
       },
       "interaction": {
@@ -556,13 +556,13 @@
         "safetyCritical": true,
         "question": {
           "en": "Physical count is 92 pcs (SAP expected: 100 pcs). Under urgent line-stoppage pressure, the line feeder demands you sign off 100 pcs immediately. Allow or Halt?",
-          "hi": "भौतिक गणना 92 नग है (SAP अपेक्षित: 100 नग)। तत्काल लाइन-स्टॉप दबाव लाइन फीडर मांग करता है कि आप तुरंत 100 नग पर हस्ताक्षर करें। अनुमति दें या रोकें?",
+          "hi": "असल गणना 92 नग है (SAP अपेक्षित: 100 नग)। तत्काल लाइन-स्टॉप दबाव लाइन फीडर मांग करता है कि आप तुरंत 100 नग पर हस्ताक्षर करें। अनुमति दें या रोकें?",
           "mr": "प्रत्यक्ष मोजणी 92 नग आहे (SAP अपेक्षित: 100 नग). लाईन बंद पडण्याच्या दबावाखाली लाईन फिडर 100 नगांवर सही करण्याची मागणी करतो. परवानगी द्यावी की थांबवावी?"
         },
         "situation": {
           "en": "AUDIT: 8-piece fastener discrepancy at staging desk. Assembly line feeder applying extreme verbal pressure to falsify physical verification slip.",
-          "hi": "ऑडिट: स्टेजिंग डेस्क पर 8-टुकड़ा फास्टनर विसंगति। भौतिक सत्यापन पर्ची को गलत साबित करने के लिए असेंबली लाइन फीडर द्वारा अत्यधिक मौखिक दबाव।",
-          "mr": "ऑडिट: स्टेजिंग डेस्कवर 8 नगांची तफावत. प्रत्यक्ष पडताळणी स्लिपवर खोटी नोंद करण्यासाठी लाईन फिडरकडून प्रचंड दबाव."
+          "hi": "ऑडिट: स्टेजिंग डेस्क पर 8-टुकड़ा फास्टनर गड़बड़ी। असल जांच (चेकिंग) पर्ची को गलत साबित करने के लिए असेंबली लाइन फीडर द्वारा अत्यधिक मौखिक दबाव।",
+          "mr": "ऑडिट: स्टेजिंग डेस्कवर 8 नगांची तफावत. प्रत्यक्ष तपासणी (चेकिंग) स्लिपवर खोटी नोंद करण्यासाठी लाईन फिडरकडून प्रचंड दबाव."
         },
         "correctAction": "stop",
         "stopLabel": {
@@ -587,7 +587,7 @@
         },
         "prompt": {
           "en": "Physical count is 92 pcs (SAP expected: 100 pcs). Under urgent line-stoppage pressure, the line feeder demands you sign off 100 pcs immediately. Allow or Halt?",
-          "hi": "भौतिक गणना 92 नग है (SAP अपेक्षित: 100 नग)। तत्काल लाइन-स्टॉप दबाव लाइन फीडर मांग करता है कि आप तुरंत 100 नग पर हस्ताक्षर करें। अनुमति दें या रोकें?",
+          "hi": "असल गणना 92 नग है (SAP अपेक्षित: 100 नग)। तत्काल लाइन-स्टॉप दबाव लाइन फीडर मांग करता है कि आप तुरंत 100 नग पर हस्ताक्षर करें। अनुमति दें या रोकें?",
           "mr": "प्रत्यक्ष मोजणी 92 नग आहे (SAP अपेक्षित: 100 नग). लाईन बंद पडण्याच्या दबावाखाली लाईन फिडर 100 नगांवर सही करण्याची मागणी करतो. परवानगी द्यावी की थांबवावी?"
         },
         "id": "c1-q27b",
@@ -598,7 +598,7 @@
         "sopClause": "SOP for Supermarket Put-Away (SM) Clause 4.2 & Discrepancy Integrity Standard",
         "why": {
           "en": "Mandates strict zero-tolerance for inventory falsification. When physical counts do not match SAP quantities, the operator must immediately halt put-away for that material and notify the Zone Leader. Yielding to line pressure distorts plant inventory accuracy, hides vendor shortages, and precipitates unrecoverable line outages downstream.",
-          "hi": "इन्वेंट्री मिथ्याकरण के लिए सख्त शून्य-सहिष्णुता का आदेश देता है। जब भौतिक गणना SAP मात्रा से मेल नहीं खाती है, तो ऑपरेटर को उस सामग्री के लिए तुरंत पुट-अवे रोकना होगा और ज़ोन लीडर को सूचित करना होगा। लाइन के दबाव में आने से प्लांट इन्वेंट्री सटीकता विकृत होती है, विक्रेता की कमी छिप जाती है, और डाउनस्ट्रीम में अप्रत्याशित लाइन आउटेज होता है।",
+          "hi": "इन्वेंट्री मिथ्याकरण के लिए सख्त शून्य-सहिष्णुता का आदेश देता है। जब असल गणना SAP मात्रा से मेल नहीं खाती है, तो ऑपरेटर को उस सामग्री के लिए तुरंत पुट-अवे रोकना होगा और ज़ोन लीडर को सूचित करना होगा। लाइन के दबाव में आने से प्लांट इन्वेंट्री सटीकता विकृत होती है, विक्रेता की कमी छिप जाती है, और डाउनस्ट्रीम में अप्रत्याशित लाइन आउटेज होता है।",
           "mr": "इन्व्हेंटरी नोंदींमध्ये फेरफार न करण्याचा कडक नियम लागू करते. जेव्हा प्रत्यक्ष मोजणी SAP शी जुळत नाही, तेव्हा ऑपरेटरने तात्काळ तो माल थांबवून झोन लीडरला कळवलेच पाहिजे. दबावाखाली येऊन खोटी नोंद केल्यास इन्व्हेंटरी अचूकता बिघडते, पुरवठादाराची चोरी लपते आणि पुढील शिफ्टमध्ये मोठे संकट ओढवते."
         }
       }
@@ -622,8 +622,8 @@
           "pose": "explaining",
           "text": {
             "en": "Final Supermarket certification question! Which parts are authorized to be stored in Supermarket flow racks at Ather AURIC plant?",
-            "hi": "अंतिम सुपरमार्केट प्रमाणन प्रश्न!एथर AURIC संयंत्र में सुपरमार्केट फ्लो रैक में कौन से पुर्जे संग्रहीत करने के लिए अधिकृत हैं?",
-            "mr": "अंतिम सुपरमार्केट प्रमाणपत्र प्रश्न!एथर AURIC प्लांटमध्ये सुपरमार्केट फ्लो रॅकमध्ये कोणते सुटे भाग साठवण्यासाठी अधिकृत आहेत?"
+            "hi": "सुपरमार्केट के फ्लो रैक में कौन से पार्ट्स रखने के लिए तय किए गए हैं?",
+            "mr": "सुपरमार्केटच्या फ्लो रॅकमध्ये कोणते पार्ट्स ठेवण्यासाठी ठरवून दिले आहेत?"
           },
           "audioSrc": "/audio/voiceover/s06_sc06_intro.mp3"
         },
@@ -631,8 +631,8 @@
           "pose": "trophy",
           "text": {
             "en": "PERFECT CLASSIFICATION MASTERY! Supermarket racks are designated EXCLUSIVELY for small C-class items (screws, bolts, clips, washers, O-rings) that are verified at the receiving desk first. Heavy A-class parts belong to High-Rise Racks and Trolley Staging! Stage 6: Supermarket C-Class Parts Put-Away is 100% complete!",
-            "hi": "सटीक वर्गीकरण महारत! सुपरमार्केट रैक विशेष रूप से छोटे C-क्लास आइटम (स्क्रू, बोल्ट, क्लिप, वाशर, ओ-रिंग) के लिए नामित हैं जिन्हें पहले रिसीविंग डेस्क पर सत्यापित किया जाता है। भारी A-क्लास भाग हाई-राइज रैक और ट्रॉली स्टेजिंग से संबंधित हैं! स्टेज 6 अब 100% पूरा हुआ!",
-            "mr": "उत्कृष्ट वर्गीकरण प्रभुत्व! सुपरमार्केट रॅक हे केवळ लहान C-क्लास आयटम्ससाठी (स्क्रू, बोल्ट्स, क्लिप्स, वॉशर्स, ओ-रिंग्स) राखीव आहेत जे आधी रिसिव्हिंग डेस्कवर तपासले जातात. जड A-क्लास भाग हाय-राईज रॅक्स आणि ट्रॉली स्टेजिंगमध्ये असतात! स्टेज 6 आता 100% पूर्ण झाले आहे!"
+            "hi": "सटीक वर्गीकरण! सुपरमार्केट रैक सिर्फ छोटे C-क्लास पार्ट्स (स्क्रू, बोल्ट, क्लिप, वॉशर, ओ-रिंग) के लिए हैं जिन्हें पहले रिसीविंग डेस्क पर गिना और जांचा गया हो। भारी A-क्लास पार्ट्स हाई-राइज रैक और ट्रॉली में जाते हैं! स्टेज 6 अब 100% पूरा हुआ!",
+            "mr": "अचूक वर्गीकरण! सुपरमार्केट रॅक हे फक्त लहान C-क्लास पार्ट्ससाठीच (स्क्रू, बोल्ट, क्लिप, वॉशर, ओ-रिंग) आहेत ज्यांची आधी रिसिव्हिंग डेस्कवर मोजणी झाली आहे. जड A-क्लास भाग हाय-राईज रॅकमध्ये जातात! स्टेज 6 आता 100% पूर्ण झाले आहे!"
           },
           "audioSrc": "/audio/voiceover/s06_sc06_correct.mp3"
         },
@@ -640,15 +640,15 @@
           "pose": "warning",
           "text": {
             "en": "INCORRECT CLASSIFICATION! Supermarket gravity racks cannot hold heavy A-class frames or flammable chemicals. Supermarket racks are strictly dedicated to small C-class hardware parts checked at the receiving desk!",
-            "hi": "गलत वर्गीकरण! सुपरमार्केट ग्रैविटी रैक भारी A-क्लास फ्रेम या ज्वलनशील रसायनों को नहीं रख सकते हैं। सुपरमार्केट रैक सख्ती से रिसीविंग डेस्क पर जांचे गए छोटे C-क्लास हार्डवेयर भागों के लिए समर्पित हैं!",
-            "mr": "चुकीचे वर्गीकरण! सुपरमार्केट ग्रॅव्हिटी रॅक जड A-क्लास फ्रेम्स किंवा ज्वलनशील रसायने साठवू शकत नाहीत. सुपरमार्केट रॅक केवळ रिसिव्हिंग डेस्कवर तपासलेल्या लहान C-क्लास भागांसाठीच राखीव आहेत!"
+            "hi": "गलत जवाब! सुपरमार्केट रैक भारी चेसिस फ्रेम या केमिकल के लिए नहीं हैं। यह रैक सिर्फ छोटे हार्डवेयर पार्ट्स (C-क्लास) के लिए ही बने हैं!",
+            "mr": "चुकीचे उत्तर! सुपरमार्केट रॅक जड फ्रेम्स किंवा केमिकल्ससाठी नाहीत. हे रॅक्स फक्त लहान हार्डवेअर पार्ट्ससाठीच (C-क्लास) बनवले आहेत!"
           },
           "audioSrc": "/audio/voiceover/s06_sc06_wrong.mp3"
         },
         "dialog": {
           "en": "Final Supermarket certification question! Which parts are authorized to be stored in Supermarket flow racks at Ather AURIC plant?",
-          "hi": "अंतिम सुपरमार्केट प्रमाणन प्रश्न!एथर AURIC संयंत्र में सुपरमार्केट फ्लो रैक में कौन से पुर्जे संग्रहीत करने के लिए अधिकृत हैं?",
-          "mr": "अंतिम सुपरमार्केट प्रमाणपत्र प्रश्न!एथर AURIC प्लांटमध्ये सुपरमार्केट फ्लो रॅकमध्ये कोणते सुटे भाग साठवण्यासाठी अधिकृत आहेत?"
+          "hi": "सुपरमार्केट के फ्लो रैक में कौन से पार्ट्स रखने के लिए तय किए गए हैं?",
+          "mr": "सुपरमार्केटच्या फ्लो रॅकमध्ये कोणते पार्ट्स ठेवण्यासाठी ठरवून दिले आहेत?"
         }
       },
       "interaction": {
@@ -711,7 +711,7 @@
         "sopClause": "SOP for Supermarket Put-Away (SM) Clause 1.1 & Question Bank Q28",
         "why": {
           "en": "SOP-PUTAWAY-SM Supermarkets are high-density, high-turnover picking buffers engineered specifically for small C-class components (bolts, nuts, washers, electrical grommets, clips). These parts are verified for quantity at the supermarket staging area before stowing into gravity roller flow racks. A-class structural components are staged in High-Rise Racks or dedicated floor trolley lanes, and chemicals are strictly segregated in the detached chemical annex.",
-          "hi": "SOP-PUTAWAY-SM सुपरमार्केट उच्च-घनत्व, उच्च-टर्नओवर पिकिंग बफर हैं जो विशेष रूप से छोटे C-क्लास घटकों (बोल्ट, नट, वाशर, विद्युत ग्रोमेट, क्लिप) के लिए इंजीनियर किए गए हैं। ग्रैविटी रोलर फ्लो रैक में रखने से पहले सुपरमार्केट स्टेजिंग क्षेत्र में इन भागों की मात्रा का सत्यापन किया जाता है। A-क्लास संरचनात्मक घटकों को हाई-राइज रैक या समर्पित फर्श ट्रॉली लेन में रखा जाता है, और रसायनों को अलग रासायनिक एनेक्स में सख्ती से अलग किया जाता है।",
+          "hi": "SOP-PUTAWAY-SM सुपरमार्केट उच्च-घनत्व, उच्च-टर्नओवर पिकिंग बफर हैं जो विशेष रूप से छोटे C-क्लास पार्ट्सों (बोल्ट, नट, वाशर, विद्युत ग्रोमेट, क्लिप) के लिए इंजीनियर किए गए हैं। ग्रैविटी रोलर फ्लो रैक में रखने से पहले सुपरमार्केट स्टेजिंग क्षेत्र में इन भागों की मात्रा का जांच (चेकिंग) किया जाता है। A-क्लास संरचनात्मक पार्ट्सों को हाई-राइज रैक या समर्पित फर्श ट्रॉली लेन में रखा जाता है, और रसायनों को अलग रासायनिक एनेक्स में सख्ती से अलग किया जाता है।",
           "mr": "SOP-PUTAWAY-SM सुपरमार्केट्स हे लहान C-क्लास भागांसाठी (बोल्ट्स, नट्स, वॉशर्स, क्लिप्स) तयार केलेले हाय-टर्नओव्हर पिकिंग बफर आहेत. हे भाग रोलर रॅकमध्ये ठेवण्यापूर्वी सुपरमार्केट स्टेजिंग एरियामध्ये मोजले जातात. A-क्लास मोठे भाग हाय-राईज रॅक्समध्ये किंवा ट्रॉली लेनमध्ये ठेवले जातात आणि रसायने स्वतंत्र केमिकल इमारतीत साठवली जातात."
         }
       }

@@ -29,8 +29,8 @@
           "pose": "explaining",
           "text": {
             "en": "A delivery truck has reached the main gate. Where should the driver wait before entering?",
-            "hi": "डिलीवरी ट्रक मुख्य गेट पर पहुंचा है। अंदर जाने से पहले चालक कहां रुके?",
-            "mr": "डिलिव्हरी ट्रक मुख्य गेटवर आला आहे. आत जाण्यापूर्वी चालकाने कुठे थांबावे?"
+            "hi": "डिलीवरी ट्रक मुख्य गेट पर पहुंचा है। अंदर जाने से पहले ड्राइवर को कहां रुकना चाहिए?",
+            "mr": "डिलिव्हरी ट्रक मेन गेटवर आला आहे. आत जाण्यापूर्वी ड्रायव्हरने कुठे थांबले पाहिजे?"
           },
           "audioSrc": "/audio/voiceover/s01_sc01_intro.mp3"
         },
@@ -38,8 +38,8 @@
           "pose": "success",
           "text": {
             "en": "Park in the waiting area, switch off the engine, and walk to Security.",
-            "hi": "वेटिंग एरिया में वाहन पार्क करें, इंजन बंद करें और पैदल सुरक्षा डेस्क पर जाएं।",
-            "mr": "वेटिंग एरियात वाहन पार्क करा, इंजिन बंद करा आणि पायी सुरक्षा डेस्कवर जा."
+            "hi": "वेटिंग एरिया में गाड़ी पार्क करें, इंजन बंद करें और पैदल सिक्योरिटी डेस्क पर जाएं।",
+            "mr": "वेटिंग एरियात गाडी पार्क करा, इंजिन बंद करा आणि पायी सिक्युरिटी डेस्कवर जा."
           },
           "audioSrc": "/audio/voiceover/s01_sc01_correct.mp3"
         },
@@ -47,15 +47,15 @@
           "pose": "warning",
           "text": {
             "en": "Wait in the waiting area with the engine off. Do not drive straight inside.",
-            "hi": "इंजन बंद करके वेटिंग एरिया में रुकें। सीधे अंदर न जाएं।",
-            "mr": "इंजिन बंद करून वेटिंग एरियात थांबा. थेट आत जाऊ नका."
+            "hi": "इंजन बंद करके वेटिंग एरिया में रुकें। सीधे अंदर गाड़ी न ले जाएं।",
+            "mr": "इंजिन बंद करून वेटिंग एरियात थांबा. थेट आत गाडी नेऊ नका."
           },
           "audioSrc": "/audio/voiceover/s01_sc01_wrong.mp3"
         },
         "dialog": {
           "en": "A delivery truck has reached the main gate. Where should the driver wait before entering?",
-          "hi": "डिलीवरी ट्रक मुख्य गेट पर पहुंचा है। अंदर जाने से पहले चालक कहां रुके?",
-          "mr": "डिलिव्हरी ट्रक मुख्य गेटवर आला आहे. आत जाण्यापूर्वी चालकाने कुठे थांबावे?"
+          "hi": "डिलीवरी ट्रक मुख्य गेट पर पहुंचा है। अंदर जाने से पहले ड्राइवर को कहां रुकना चाहिए?",
+          "mr": "डिलिव्हरी ट्रक मेन गेटवर आला आहे. आत जाण्यापूर्वी ड्रायव्हरने कुठे थांबले पाहिजे?"
         }
       },
       "interaction": {
@@ -64,8 +64,8 @@
         "safetyCritical": false,
         "question": {
           "en": "Where should the driver park first?",
-          "hi": "चालक पहले वाहन कहां पार्क करे?",
-          "mr": "चालकाने आधी वाहन कुठे पार्क करावे?"
+          "hi": "ड्राइवर पहले गाड़ी कहां पार्क करे?",
+          "mr": "ड्राइवराने आधी वाहन कुठे पार्क करावे?"
         },
         "options": [
           {
@@ -91,15 +91,15 @@
             "correct": false,
             "label": {
               "en": "Halt at the exit gate to speed up document check",
-              "hi": "दस्तावेज़ जांच तेज करने के लिए निकास द्वार पर रुकें",
+              "hi": "कागज़ात जांच तेज करने के लिए निकास द्वार पर रुकें",
               "mr": "कागदपत्र तपासणी जलद करण्यासाठी बाहेर पडण्याच्या गेटवर थांबावे"
             }
           }
         ],
         "prompt": {
           "en": "Where should the driver park first?",
-          "hi": "चालक पहले वाहन कहां पार्क करे?",
-          "mr": "चालकाने आधी वाहन कुठे पार्क करावे?"
+          "hi": "ड्राइवर पहले गाड़ी कहां पार्क करे?",
+          "mr": "ड्राइवराने आधी वाहन कुठे पार्क करावे?"
         },
         "id": "c1-q01",
         "audioSrc": "/audio/voiceover/s01_sc01_prompt.mp3"
@@ -119,8 +119,8 @@
       "stepNumber": 2,
       "title": {
         "en": "Document Verification & Desk Sorting",
-        "hi": "दस्तावेज़ सत्यापन और डेस्क छँटाई",
-        "mr": "कागदपत्र पडताळणी आणि डेस्क वर्गीकरण"
+        "hi": "कागज़ात जांच (चेकिंग) और डेस्क छँटाई",
+        "mr": "कागदपत्रे तपासणे आणि डेस्क वाटप"
       },
       "media": {
         "fallbackAnimation": "gatehouse_cabin_desk",
@@ -134,8 +134,8 @@
           "pose": "explaining",
           "text": {
             "en": "The driver has five documents. Match each one to the right desk.",
-            "hi": "चालक के पास पांच दस्तावेज़ हैं। हर दस्तावेज़ सही डेस्क पर दें।",
-            "mr": "चालकाकडे पाच कागदपत्रे आहेत. प्रत्येक कागदपत्र योग्य डेस्कवर द्या."
+            "hi": "ड्राइवर के पास पांच कागज़ात हैं। हर कागज़ सही डेस्क पर दें।",
+            "mr": "ड्रायव्हरकडे पाच कागदपत्रे आहेत. प्रत्येक कागदपत्र योग्य डेस्कवर द्या."
           },
           "audioSrc": "/audio/voiceover/s01_sc02_intro.mp3"
         },
@@ -143,8 +143,8 @@
           "pose": "success",
           "text": {
             "en": "Security checks driver and vehicle documents. The Data Entry Operator checks shipping papers and prepares the gate pass.",
-            "hi": "सुरक्षा कर्मी चालक और वाहन के दस्तावेज़ जांचते हैं। डेटा एंट्री ऑपरेटर शिपिंग कागज़ जांचकर गेट पास बनाता है।",
-            "mr": "सुरक्षा रक्षक चालक आणि वाहनाची कागदपत्रे तपासतात. डेटा एन्ट्री ऑपरेटर शिपिंगची कागदपत्रे तपासून गेट पास तयार करतो."
+            "hi": "सिक्योरिटी गार्ड ड्राइवर और गाड़ी के कागज़ात जांचते हैं। डेटा एंट्री ऑपरेटर इनवॉइस और शिपिंग के कागज़ जांचकर गेट पास बनाता है।",
+            "mr": "सिक्युरिटी गार्ड ड्रायव्हर आणि गाडीची कागदपत्रे तपासतात. डेटा एन्ट्री ऑपरेटर शिपिंगची कागदपत्रे तपासून गेट पास तयार करतो."
           },
           "audioSrc": "/audio/voiceover/s01_sc02_correct.mp3"
         },
@@ -152,15 +152,15 @@
           "pose": "warning",
           "text": {
             "en": "Send Purchase Order, Advanced Shipping Notice, and invoice to the Data Entry Operator. Send the driver's license and vehicle papers to Security.",
-            "hi": "परचेज ऑर्डर, एडवांस्ड शिपिंग नोटिस और इनवॉइस डेटा एंट्री ऑपरेटर को दें। ड्राइविंग लाइसेंस और वाहन के कागज़ सुरक्षा कर्मी को दें।",
-            "mr": "परचेस ऑर्डर, ॲडव्हान्स्ड शिपिंग नोटीस आणि इनव्हॉइस डेटा एन्ट्री ऑपरेटर कडे द्या. चालकाचा परवाना आणि वाहनाची कागदपत्रे सुरक्षा रक्षकाकडे द्या."
+            "hi": "परचेज ऑर्डर, एडवांस्ड शिपिंग नोटिस और इनवॉइस डेटा एंट्री ऑपरेटर को दें। ड्राइविंग लाइसेंस और गाड़ी के कागज़ सिक्योरिटी गार्ड को दें।",
+            "mr": "परचेस ऑर्डर, ॲडव्हान्स्ड शिपिंग नोटीस आणि इनव्हॉइस डेटा एन्ट्री ऑपरेटरकडे द्या. ड्रायव्हिंग लायसन्स आणि गाडीची कागदपत्रे सिक्युरिटी गार्डकडे द्या."
           },
           "audioSrc": "/audio/voiceover/s01_sc02_wrong.mp3"
         },
         "dialog": {
           "en": "The driver has five documents. Match each one to the right desk.",
-          "hi": "चालक के पास पांच दस्तावेज़ हैं। हर दस्तावेज़ सही डेस्क पर दें।",
-          "mr": "चालकाकडे पाच कागदपत्रे आहेत. प्रत्येक कागदपत्र योग्य डेस्कवर द्या."
+          "hi": "ड्राइवर के पास पांच कागज़ात हैं। हर कागज़ सही डेस्क पर दें।",
+          "mr": "ड्रायव्हरकडे पाच कागदपत्रे आहेत. प्रत्येक कागदपत्र योग्य डेस्कवर द्या."
         }
       },
       "interaction": {
@@ -169,12 +169,12 @@
         "safetyCritical": false,
         "question": {
           "en": "Match each document to the right desk.",
-          "hi": "हर दस्तावेज़ सही डेस्क पर दें।",
+          "hi": "हर कागज़ात सही डेस्क पर दें।",
           "mr": "प्रत्येक कागदपत्र योग्य डेस्कवर द्या."
         },
         "instruction": {
           "en": "Tap a document, then tap its desk.",
-          "hi": "दस्तावेज़ पर टैप करें, फिर उसकी डेस्क पर टैप करें।",
+          "hi": "कागज़ात पर टैप करें, फिर उसकी डेस्क पर टैप करें।",
           "mr": "कागदपत्रावर टॅप करा, नंतर योग्य डेस्कवर टॅप करा."
         },
         "zones": [
@@ -251,7 +251,7 @@
         ],
         "prompt": {
           "en": "Sort each incoming document to the correct reception desk:",
-          "hi": "प्रत्येक आने वाले दस्तावेज़ को सही रिसेप्शन डेस्क पर छाँटें:",
+          "hi": "प्रत्येक आने वाले कागज़ात को सही रिसेप्शन डेस्क पर छाँटें:",
           "mr": "प्रत्येक येणाऱ्या कागदपत्राचे योग्य रिसेप्शन डेस्कवर वर्गीकरण करा:"
         },
         "id": "c1-q02",
@@ -287,7 +287,7 @@
           "text": {
             "en": "The Data Entry Operator enters the invoice in the system. The system checks whether the truck delivery matches the Advanced Shipping Notice.",
             "hi": "डेटा एंट्री ऑपरेटर सिस्टम में इनवॉइस डालता है। सिस्टम जांचता है कि ट्रक का माल एडवांस्ड शिपिंग नोटिस से मिलता है या नहीं।",
-            "mr": "डेटा एन्ट्री ऑपरेटर सिस्टममध्ये इनव्हॉइस टाकतो. ट्रकमधील माल ॲडव्हान्स्ड शिपिंग नोटीस शी जुळतो का ते सिस्टम तपासते."
+            "mr": "डेटा एन्ट्री ऑपरेटर सिस्टीममध्ये इनव्हॉइस टाकतो. ट्रकमधील माल ॲडव्हान्स्ड शिपिंग नोटीसशी जुळतो का ते सिस्टीम तपासते."
           },
           "audioSrc": "/audio/voiceover/s01_sc03_intro.mp3"
         },
@@ -295,24 +295,24 @@
           "pose": "success",
           "text": {
             "en": "The system fills the shipment details from the Advanced Shipping Notice. If it does not match, stop the gate entry until it is corrected.",
-            "hi": "सिस्टम एडवांस्ड शिपिंग नोटिस से शिपमेंट की जानकारी भरता है। जानकारी न मिले तो सुधार होने तक गेट एंट्री रोकें।",
-            "mr": "सिस्टम ॲडव्हान्स्ड शिपिंग नोटीस मधून शिपमेंटची माहिती भरते. माहिती जुळली नाही तर दुरुस्ती होईपर्यंत गेट एंट्री थांबवा."
+            "hi": "सिस्टम एडवांस्ड शिपिंग नोटिस से माल की पूरी डिटेल मिलाता है। अगर जानकारी न मिले, तो गलती सुधरने तक गेट एंट्री रोकें।",
+            "mr": "सिस्टीम ॲडव्हान्स्ड शिपिंग नोटीसमधून मालाची सर्व माहिती तपासते. माहिती जुळली नाही, तर दुरुस्ती होईपर्यंत गेट एन्ट्री थांबवा."
           },
           "audioSrc": "/audio/voiceover/s01_sc03_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Do not bypass a mismatch. If the Advanced Shipping Notice is wrong, stop the gate entry and get it corrected.",
-            "hi": "गलत जानकारी को छोड़कर आगे न बढ़ें। एडवांस्ड शिपिंग नोटिस गलत हो तो गेट एंट्री रोकें और उसे ठीक कराएं।",
-            "mr": "तफावत असताना पुढे जाऊ नका. ॲडव्हान्स्ड शिपिंग नोटीस चुकीचे असल्यास गेट एंट्री थांबवा आणि ते दुरुस्त करून घ्या."
+            "en": "Do not proceed with mismatched data. Stop the gate entry until the Advanced Shipping Notice is corrected.",
+            "hi": "गलत जानकारी मिलने पर आगे न बढ़ें। एडवांस्ड शिपिंग नोटिस ठीक होने तक गेट एंट्री रोक कर रखें।",
+            "mr": "माहिती जुळत नसेल तर पुढे जाऊ नका. ॲडव्हान्स्ड शिपिंग नोटीस दुरुस्त होईपर्यंत गेट एन्ट्री थांबवून ठेवा."
           },
           "audioSrc": "/audio/voiceover/s01_sc03_wrong.mp3"
         },
         "dialog": {
           "en": "The Data Entry Operator enters the invoice in the system. The system checks whether the truck delivery matches the Advanced Shipping Notice.",
           "hi": "डेटा एंट्री ऑपरेटर सिस्टम में इनवॉइस डालता है। सिस्टम जांचता है कि ट्रक का माल एडवांस्ड शिपिंग नोटिस से मिलता है या नहीं।",
-          "mr": "डेटा एन्ट्री ऑपरेटर सिस्टममध्ये इनव्हॉइस टाकतो. ट्रकमधील माल ॲडव्हान्स्ड शिपिंग नोटीस शी जुळतो का ते सिस्टम तपासते."
+          "mr": "डेटा एन्ट्री ऑपरेटर सिस्टीममध्ये इनव्हॉइस टाकतो. ट्रकमधील माल ॲडव्हान्स्ड शिपिंग नोटीसशी जुळतो का ते सिस्टीम तपासते."
         }
       },
       "interaction": {
@@ -348,7 +348,7 @@
             "correct": false,
             "label": {
               "en": "Directly posts Goods Receipt before the truck is unloaded",
-              "hi": "ट्रक अनलोड होने से पहले ही सीधे माल प्राप्ति दर्ज कर देता है",
+              "hi": "ट्रक अनलोड होने से पहले ही सीधे माल रिसीविंग दर्ज कर देता है",
               "mr": "ट्रक अनलोड होण्यापूर्वीच थेट माल पावती नोंदवून घेतो"
             }
           }
@@ -390,34 +390,34 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "The Data Entry Operator runs the gate entry pass! The printer outputs the windshield barcode pass while the driver watches the status TV. Can you place the driver's gate journey in exact chronological order?",
-            "hi": "डेटा एंट्री ऑपरेटर गेट एंट्री पास चलाता है! प्रिंटर विंडशील्ड बारकोड पास प्रिंट करता है जबकि चालक स्टेटस टीवी देखता है। क्या आप चालक के गेट यात्रा चरणों को सही कालानुक्रमिक क्रम में लगा सकते हैं?",
-            "mr": "डेटा एन्ट्री ऑपरेटर गेट एंट्री पास चालवतो! प्रिंटर विंडशील्ड बारकोड पास प्रिंट करतो तर चालक स्टेटस टीव्ही पाहतो. तुम्ही चालकाच्या गेट प्रवासाच्या पायऱ्या योग्य कालक्रमानुसार लावू शकता का?"
+            "en": "The Data Entry Operator issues the gate entry pass! The printer prints the barcode pass while the driver checks the status display. Put the gate entry steps in the correct order.",
+            "hi": "डेटा एंट्री ऑपरेटर गेट एंट्री पास बनाता है! प्रिंटर से बारकोड पास निकलता है और ड्राइवर को मिलता है। क्या आप गेट एंट्री के सही कदमों को क्रम में लगा सकते हैं?",
+            "mr": "डेटा एन्ट्री ऑपरेटर गेट एन्ट्री पास तयार करतो! प्रिंटरमधून बारकोड पास निघतो आणि ड्रायव्हरला दिला जातो. तुम्ही गेट एन्ट्रीच्या पायऱ्या योग्य क्रमाने लावू शकता का?"
           },
           "audioSrc": "/audio/voiceover/s01_sc04_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Flawless sequence! Following the exact order from parking to credentials check, ERP validation, barcode pass issuance, and finally dock entry prevents gate congestion and ensures 100% material traceability.",
-            "hi": "उत्कृष्ट क्रम! सटीक क्रम का पालन करने से पार्किंग, क्रेडेंशियल्स जांच, ERP सत्यापन, बारकोड पास और फिर डॉक पर जाना गेट पर जाम नहीं लगता और 100% ट्रैसबिलिटी सुनिश्चित होती है।",
-            "mr": "उत्कृष्ट क्रम! अचूक क्रमाचे पालन केल्याने पार्किंग, कागदपत्र पडताळणी, ERP पडताळणी, बारकोड पास आणि मग डॉककडे जाणे गेटवर गर्दी होत नाही आणि साहित्याची 100% खात्रीशीर नोंद राहते."
+            "en": "Spot on! The correct flow is: park truck, security check, system check, get barcode pass, then move to dock. This prevents gate congestion and ensures 100% record tracking.",
+            "hi": "बिल्कुल सही! सही क्रम है: पहले ट्रक पार्क करना, सिक्योरिटी चेक, सिस्टम में जांच, बारकोड पास लेना और फिर डॉक की तरफ बढ़ना। इससे गेट पर भीड़ नहीं होती और हर माल का पक्का रिकॉर्ड रहता है।",
+            "mr": "अगदी बरोबर! योग्य क्रम आहे: आधी ट्रक पार्क करणे, सिक्युरिटी चेक, सिस्टीम तपासणी, बारकोड पास घेणे आणि मग डॉककडे जाणे. यामुळे गेटवर गर्दी होत नाही आणि प्रत्येक मालाची पक्की नोंद राहते."
           },
           "audioSrc": "/audio/voiceover/s01_sc04_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Hold on! The driver cannot move to the dock before collecting the printed barcode pass. Let's arrange the steps in the correct order.",
-            "hi": "रुकिए! प्रिंटेड बारकोड पास प्राप्त करने से पहले चालक डॉक पर नहीं जा सकता। आइए चरणों को सटीक क्रम में व्यवस्थित करें।",
-            "mr": "थांबा! प्रिंट केलेला बारकोड पास घेतल्याशिवाय चालक डॉककडे जाऊ शकत नाही. चला पायऱ्या अचूक क्रमाने लावूया."
+            "en": "Stop! The driver cannot move to the dock before getting the printed barcode pass. Let us arrange the steps in the correct order.",
+            "hi": "रुकिए! प्रिंटेड बारकोड पास लिए बिना ड्राइवर डॉक की तरफ नहीं जा सकता। आइए सभी कदमों को सही क्रम में लगाएं।",
+            "mr": "थांबा! बारकोड पास घेतल्याशिवाय ड्रायव्हर डॉककडे जाऊ शकत नाही. चला सर्व पायऱ्या योग्य क्रमाने लावूया."
           },
           "audioSrc": "/audio/voiceover/s01_sc04_wrong.mp3"
         },
         "dialog": {
-          "en": "The Data Entry Operator runs the gate entry pass! The printer outputs the windshield barcode pass while the driver watches the status TV. Can you place the driver's gate journey in exact chronological order?",
-          "hi": "डेटा एंट्री ऑपरेटर गेट एंट्री पास चलाता है! प्रिंटर विंडशील्ड बारकोड पास प्रिंट करता है जबकि चालक स्टेटस टीवी देखता है। क्या आप चालक के गेट यात्रा चरणों को सही कालानुक्रमिक क्रम में लगा सकते हैं?",
-          "mr": "डेटा एन्ट्री ऑपरेटर गेट एंट्री पास चालवतो! प्रिंटर विंडशील्ड बारकोड पास प्रिंट करतो तर चालक स्टेटस टीव्ही पाहतो. तुम्ही चालकाच्या गेट प्रवासाच्या पायऱ्या योग्य कालक्रमानुसार लावू शकता का?"
+          "en": "The Data Entry Operator issues the gate entry pass! The printer prints the barcode pass while the driver checks the status display. Put the gate entry steps in the correct order.",
+          "hi": "डेटा एंट्री ऑपरेटर गेट एंट्री पास बनाता है! प्रिंटर से बारकोड पास निकलता है और ड्राइवर को मिलता है। क्या आप गेट एंट्री के सही कदमों को क्रम में लगा सकते हैं?",
+          "mr": "डेटा एन्ट्री ऑपरेटर गेट एन्ट्री पास तयार करतो! प्रिंटरमधून बारकोड पास निघतो आणि ड्रायव्हरला दिला जातो. तुम्ही गेट एन्ट्रीच्या पायऱ्या योग्य क्रमाने लावू शकता का?"
         }
       },
       "interaction": {
@@ -426,8 +426,8 @@
         "safetyCritical": false,
         "question": {
           "en": "Arrange the driver's gate entry journey in the correct chronological order:",
-          "hi": "चालक की गेट एंट्री यात्रा को सही कालानुक्रमिक क्रम में व्यवस्थित करें:",
-          "mr": "चालकाच्या गेट एंट्री प्रवासाची योग्य कालक्रमानुसार मांडणी करा:"
+          "hi": "गेट एंट्री के सही कदमों को एक के बाद एक सही क्रम में लगाएं:",
+          "mr": "ड्राइवराच्या गेट एंट्री प्रवासाची एकानंतर एक योग्य क्रमाने लावा:"
         },
         "instruction": {
           "en": "Use the up and down arrows to place the steps from first to last.",
@@ -458,8 +458,8 @@
             "icon": "💻",
             "label": {
               "en": "Submit PO, ASN & invoice to DEO for SAP validation",
-              "hi": "SAP सत्यापन के लिए DEO को PO, ASN और इनवॉइस जमा करें",
-              "mr": "SAP पडताळणीसाठी DEO कडे PO, ASN आणि इन्व्हॉइस जमा करा"
+              "hi": "SAP जांच (चेकिंग) के लिए DEO को PO, ASN और इनवॉइस जमा करें",
+              "mr": "SAP तपासणी (चेकिंग)साठी DEO कडे PO, ASN आणि इन्व्हॉइस जमा करा"
             }
           },
           {
@@ -490,8 +490,8 @@
         ],
         "prompt": {
           "en": "Arrange the driver's gate entry journey in the correct chronological order:",
-          "hi": "चालक की गेट एंट्री यात्रा को सही कालानुक्रमिक क्रम में व्यवस्थित करें:",
-          "mr": "चालकाच्या गेट एंट्री प्रवासाची योग्य कालक्रमानुसार मांडणी करा:"
+          "hi": "गेट एंट्री के सही कदमों को एक के बाद एक सही क्रम में लगाएं:",
+          "mr": "ड्राइवराच्या गेट एंट्री प्रवासाची एकानंतर एक योग्य क्रमाने लावा:"
         },
         "id": "c1-q04",
         "audioSrc": "/audio/voiceover/s01_sc04_prompt.mp3"
@@ -501,7 +501,7 @@
         "sopClause": "SOP XXXX_PRO_001 Clause 4.1.1–4.1.4 & 4.2.2",
         "why": {
           "en": "Driver halts in waiting yard, security verifies credentials, Data Entry Operator validates shipping data, prints barcode pass via the gate entry pass, and only then is the vehicle authorized to proceed to the dock.",
-          "hi": "चालक वेटिंग यार्ड में रुकता है, सुरक्षा कर्मी क्रेडेंशियल्स की जांच करते हैं, डेटा एंट्री ऑपरेटर डेटा सत्यापित करता है, गेट एंट्री पास से बारकोड पास प्रिंट करता है, और तभी वाहन को डॉक पर जाने की अनुमति मिलती है।",
+          "hi": "चालक वेटिंग यार्ड में रुकता है, सुरक्षा कर्मी ड्राइवर और गाड़ी के कागज़ात की जांच करते हैं, डेटा एंट्री ऑपरेटर डेटा चेक किया हुआ करता है, गेट एंट्री पास से बारकोड पास प्रिंट करता है, और तभी वाहन को डॉक पर जाने की अनुमति मिलती है।",
           "mr": "चालक वेटिंग यार्डमध्ये थांबतो, सुरक्षा रक्षक कागदपत्रे तपासतात, डेटा एन्ट्री ऑपरेटर माहिती पडताळतो, गेट एंट्री पास द्वारे बारकोड पास प्रिंट करतो आणि त्यानंतरच वाहनाला डॉकवर जाण्याची परवानगी मिळते."
         }
       }
@@ -525,8 +525,8 @@
           "pose": "explaining",
           "text": {
             "en": "The Data Entry Operator assigns the warehouse dock! Based on our shipment of vehicle mechanical parts, which warehouse dock on the AURIC plant layout must be allocated?",
-            "hi": "डेटा एंट्री ऑपरेटर वेयरहाउस डॉक आवंटित करता है! हमारे वाहन मैकेनिकल पार्ट्स के शिपमेंट के आधार पर, AURIC प्लांट लेआउट पर कौन सा वेयरहाउस डॉक आवंटित किया जाना चाहिए?",
-            "mr": "डेटा एन्ट्री ऑपरेटर वेअरहाऊस डॉक वाटप करतो! आपल्या वाहनाच्या मेकॅनिकल पार्ट्सच्या डिलिव्हरीAURIC प्लांट लेआउटवर कोणता वेअरहाऊस डॉक वाटप केला पाहिजे?"
+            "hi": "डेटा एंट्री ऑपरेटर वेयरहाउस डॉक चुनता है! गाड़ी के मैकेनिकल पार्ट्स वाले ट्रक के लिए प्लांट में कौन सा डॉक देना चाहिए?",
+            "mr": "डेटा एन्ट्री ऑपरेटर वेअरहाऊस डॉक ठरवतो! गाडीच्या मेकॅनिकल पार्ट्सच्या डिलिव्हरीसाठी प्लांटमध्ये कोणता डॉक दिला पाहिजे?"
           },
           "audioSrc": "/audio/voiceover/s01_sc05_intro.mp3"
         },
@@ -534,8 +534,8 @@
           "pose": "success",
           "text": {
             "en": "Spot on! Dock 04 in Inbound Bay B is designated for vehicle assembly components. Dock 01 is reserved for battery cells and Dock 06 for hazardous chemicals.",
-            "hi": "बिल्कुल सही! इनबाउंड बे B में डॉक 04 वाहन असेंबली घटकों के लिए निर्धारित है। डॉक 01 बैटरी सेल और डॉक 06 खतरनाक रसायनों के लिए आरक्षित है।",
-            "mr": "अगदी बरोबर! इनबाउंड बे B मधील डॉक 04 वाहन असेंब्ली सुट्या भागांसाठी नियुक्त केला आहे. डॉक 01 बॅटरी सेलसाठी आणि डॉक 06 घातक रसायनांसाठी राखीव आहे."
+            "hi": "बिल्कुल सही! इनबाउंड बे B का डॉक 04 गाड़ी के असेंबली पार्ट्स के लिए तय है। डॉक 01 बैटरी सेल और डॉक 06 केमिकल के लिए रिज़र्व है।",
+            "mr": "अगदी बरोबर! इनबाउंड बे B मधील डॉक 04 गाडीच्या असेंब्ली पार्ट्ससाठी आहे. डॉक 01 बॅटरी सेलसाठी आणि डॉक 06 केमिकल्ससाठी राखीव आहे."
           },
           "audioSrc": "/audio/voiceover/s01_sc05_correct.mp3"
         },
@@ -543,15 +543,15 @@
           "pose": "warning",
           "text": {
             "en": "Careful! Dock 01 is an environmentally controlled vault for battery cells only, and Dock 06 is for chemicals. Vehicle parts belong at Dock 04.",
-            "hi": "सावधान! डॉक 01 केवल बैटरी सेल के लिए नियंत्रित वॉल्ट है, और डॉक 06 रसायनों के लिए है। वाहन के पार्ट्स डॉक 04 (बे B) में जाने चाहिए।",
-            "mr": "लक्ष द्या! डॉक 01 फक्त बॅटरी सेलसाठी नियंत्रित वॉल्ट आहे, आणि डॉक 06 रसायनांसाठी आहे. वाहनाचे पार्ट्स डॉक 04 (बे B) वर गेले पाहिजेत."
+            "hi": "सावधान! डॉक 01 सिर्फ बैटरी सेल के लिए है, और डॉक 06 केमिकल के लिए है। गाड़ी के पार्ट्स डॉक 04 पर जाने चाहिए।",
+            "mr": "सावधान! डॉक 01 फक्त बॅटरी सेलसाठी आहे, आणि डॉक 06 केमिकल्ससाठी आहे. गाडीचे पार्ट्स डॉक 04 कडे गेले पाहिजेत."
           },
           "audioSrc": "/audio/voiceover/s01_sc05_wrong.mp3"
         },
         "dialog": {
           "en": "The Data Entry Operator assigns the warehouse dock! Based on our shipment of vehicle mechanical parts, which warehouse dock on the AURIC plant layout must be allocated?",
-          "hi": "डेटा एंट्री ऑपरेटर वेयरहाउस डॉक आवंटित करता है! हमारे वाहन मैकेनिकल पार्ट्स के शिपमेंट के आधार पर, AURIC प्लांट लेआउट पर कौन सा वेयरहाउस डॉक आवंटित किया जाना चाहिए?",
-          "mr": "डेटा एन्ट्री ऑपरेटर वेअरहाऊस डॉक वाटप करतो! आपल्या वाहनाच्या मेकॅनिकल पार्ट्सच्या डिलिव्हरीAURIC प्लांट लेआउटवर कोणता वेअरहाऊस डॉक वाटप केला पाहिजे?"
+          "hi": "डेटा एंट्री ऑपरेटर वेयरहाउस डॉक चुनता है! गाड़ी के मैकेनिकल पार्ट्स वाले ट्रक के लिए प्लांट में कौन सा डॉक देना चाहिए?",
+          "mr": "डेटा एन्ट्री ऑपरेटर वेअरहाऊस डॉक ठरवतो! गाडीच्या मेकॅनिकल पार्ट्सच्या डिलिव्हरीसाठी प्लांटमध्ये कोणता डॉक दिला पाहिजे?"
         }
       },
       "interaction": {
@@ -652,17 +652,17 @@
           "pose": "explaining",
           "text": {
             "en": "The truck is docked at Bay B, Dock 04! Before keys and invoices are handed over and unloading begins, inspect the vehicle for a critical safety violation.",
-            "hi": "ट्रक बे B, डॉक 04 पर खड़ा हो गया है! चाबियां और इनवॉइस सौंपने तथा अनलोडिंग शुरू करने से पहले, वाहन में एक महत्वपूर्ण सुरक्षा उल्लंघन का निरीक्षण करें।",
-            "mr": "ट्रक बे B, डॉक 04 वर लागला आहे! चाव्या आणि इन्व्हॉइस देण्यापूर्वी तसेच अनलोडिंग सुरू करण्यापूर्वी, वाहनातील एका गंभीर सुरक्षा उल्लंघनाची तपासणी करा."
+            "hi": "ट्रक बे B, डॉक 04 पर लग चुका है! चाबी और इनवॉइस लेने तथा अनलोडिंग शुरू करने से पहले, गाड़ी के पास सुरक्षा की कौन सी बड़ी चूक हुई है, जांचें।",
+            "mr": "ट्रक बे B, डॉक 04 वर लागला आहे! चाव्या आणि इन्व्हॉइस घेण्यापूर्वी तसेच अनलोडिंग सुरू करण्यापूर्वी, गाडीजवळ सुरक्षेचा कोणता मोठा नियम चुकला आहे, ते तपासा."
           },
           "audioSrc": "/audio/voiceover/s01_sc06_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Lifesaving catch! Heavy rubber wheel chocks be placed under rear tires to prevent trailer roll-away when forklifts enter.",
-            "hi": "जीवनरक्षक निरीक्षण! पिछले पहियों के नीचे भारी रबर व्हील चॉक्स लगाना अनिवार्य है ताकि फोर्कलिफ्ट प्रवेश करते समय ट्रेलर आगे न लुढ़के।",
-            "mr": "जीव वाचवणारी तत्परता! मागील चाकांखाली जड रबर व्हील चॉक्स बसवणे बंधनकारक आहे, जेणेकरून फोर्कलिफ्ट आत शिरताना ट्रेलर पुढे घसरणार नाही."
+            "en": "Lifesaving catch! Heavy rubber wheel chocks must be placed under rear tires to prevent trailer roll-away when forklifts enter.",
+            "hi": "शाबाश! जान बचा ली! पिछले पहियों के नीचे भारी रबर व्हील चॉक्स लगाना बहुत ज़रूरी है ताकि फोर्कलिफ्ट अंदर जाते समय ट्रेलर आगे न खिसके।",
+            "mr": "शाब्बास! मोठा अपघात टाळला! मागील चाकांखाली जड रबर व्हील चॉक्स लावणे खूप गरजेचे आहे, जेणेकरून फोर्कलिफ्ट आत जाताना ट्रेलर पुढे घसरणार नाही."
           },
           "audioSrc": "/audio/voiceover/s01_sc06_correct.mp3"
         },
@@ -670,15 +670,15 @@
           "pose": "warning",
           "text": {
             "en": "High danger alert! If a 3-ton forklift drives inside an unchocked trailer, trailer creep will cause the forklift to plunge into the dock gap!",
-            "hi": "उच्च खतरे की चेतावनी! यदि 3-टन फोर्कलिफ्ट बिना चॉक्स वाले ट्रेलर में जाती है, तो ट्रेलर आगे खिसक जाएगा और फोर्कलिफ्ट डॉक गैप में गिर सकती है!",
-            "mr": "अतिधोक्याचा इशारा! जर 3-टन वजनाची फोर्कलिफ्ट चॉक्स नसलेल्या ट्रकमध्ये गेली, तर ट्रक पुढे सरकेल आणि फोर्कलिफ्ट डॉकच्या दरीत कोसळू शकते!"
+            "hi": "बड़ा खतरा! अगर बिना चॉक्स लगे ट्रेलर में 3-टन की फोर्कलिफ्ट घुसेगी, तो ट्रेलर आगे खिसक जाएगा और फोर्कलिफ्ट डॉक के बीच गिर जाएगी!",
+            "mr": "मोठा धोका! चाकांखाली चॉक्स न लावता जर 3-टनची फोर्कलिफ्ट ट्रकमध्ये गेली, तर ट्रेलर पुढे सरकेल आणि फोर्कलिफ्ट डॉकच्या गॅपमध्ये कोसळेल!"
           },
           "audioSrc": "/audio/voiceover/s01_sc06_wrong.mp3"
         },
         "dialog": {
           "en": "The truck is docked at Bay B, Dock 04! Before keys and invoices are handed over and unloading begins, inspect the vehicle for a critical safety violation.",
-          "hi": "ट्रक बे B, डॉक 04 पर खड़ा हो गया है! चाबियां और इनवॉइस सौंपने तथा अनलोडिंग शुरू करने से पहले, वाहन में एक महत्वपूर्ण सुरक्षा उल्लंघन का निरीक्षण करें।",
-          "mr": "ट्रक बे B, डॉक 04 वर लागला आहे! चाव्या आणि इन्व्हॉइस देण्यापूर्वी तसेच अनलोडिंग सुरू करण्यापूर्वी, वाहनातील एका गंभीर सुरक्षा उल्लंघनाची तपासणी करा."
+          "hi": "ट्रक बे B, डॉक 04 पर लग चुका है! चाबी और इनवॉइस लेने तथा अनलोडिंग शुरू करने से पहले, गाड़ी के पास सुरक्षा की कौन सी बड़ी चूक हुई है, जांचें।",
+          "mr": "ट्रक बे B, डॉक 04 वर लागला आहे! चाव्या आणि इन्व्हॉइस घेण्यापूर्वी तसेच अनलोडिंग सुरू करण्यापूर्वी, गाडीजवळ सुरक्षेचा कोणता मोठा नियम चुकला आहे, ते तपासा."
         }
       },
       "interaction": {
@@ -687,8 +687,8 @@
         "safetyCritical": true,
         "question": {
           "en": "Spot the immediate safety violation before keys are accepted and unloading starts:",
-          "hi": "चाबियां स्वीकारने और अनलोडिंग शुरू करने से पहले तुरंत सुरक्षा उल्लंघन को पहचानें:",
-          "mr": "गंभीर सुरक्षा ऑडिट: चाव्या स्वीकारण्यापूर्वी आणि अनलोडिंग सुरू करण्यापूर्वी तत्काळ होणारे सुरक्षा उल्लंघन ओळखा:"
+          "hi": "चाबियां स्वीकारने और अनलोडिंग शुरू करने से पहले तुरंत सुरक्षा की इस बड़ी गलती को पहचानें:",
+          "mr": "चाव्या स्वीकारण्यापूर्वी आणि अनलोडिंग सुरू करण्यापूर्वी सुरक्षेची कोणती मोठी चूक झाली आहे, ते ओळखा:"
         },
         "instruction": {
           "en": "Audit the three inspection points around Dock 04 and tag the active violation:",
@@ -741,8 +741,8 @@
         ],
         "prompt": {
           "en": "Spot the immediate safety violation before keys are accepted and unloading starts:",
-          "hi": "चाबियां स्वीकारने और अनलोडिंग शुरू करने से पहले तुरंत सुरक्षा उल्लंघन को पहचानें:",
-          "mr": "गंभीर सुरक्षा ऑडिट: चाव्या स्वीकारण्यापूर्वी आणि अनलोडिंग सुरू करण्यापूर्वी तत्काळ होणारे सुरक्षा उल्लंघन ओळखा:"
+          "hi": "चाबियां स्वीकारने और अनलोडिंग शुरू करने से पहले तुरंत सुरक्षा की इस बड़ी गलती को पहचानें:",
+          "mr": "चाव्या स्वीकारण्यापूर्वी आणि अनलोडिंग सुरू करण्यापूर्वी सुरक्षेची कोणती मोठी चूक झाली आहे, ते ओळखा:"
         },
         "id": "c1-q06",
         "audioSrc": "/audio/voiceover/s01_sc06_prompt.mp3"
@@ -776,33 +776,33 @@
           "pose": "explaining",
           "text": {
             "en": "Unloading is done! The truck has loaded 20 empty blue Foldable Large Container bins to return to the vendor. At the exit gate, the driver demands: 'Open the boom barrier, these are just Ather's empty bins!' What must you do?",
-            "hi": "अनलोडिंग पूरी हो गई! ट्रक ने वेंडर को वापस करने के लिए 20 खाली नीले फोल्डेबल लार्ज कंटेनर डिब्बे लोड किए हैं। एग्जिट गेट पर चालक कहता है: 'बूम बैरियर खोलिए, ये सिर्फ एथर के खाली डिब्बे हैं!' आपको क्या करना चाहिए?",
-            "mr": "अनलोडिंग पूर्ण झाले! ट्रकने व्हेंडरला परत करण्यासाठी 20 रिकामे निळे फोल्डेबल लार्ज कंटेनर डबे लोड केले आहेत. एक्झिट गेटवर चालक म्हणतो: 'बूम बॅरियर उघडा, हे फक्त अथरचे रिकामे डबे आहेत!' तुम्ही काय केले पाहिजे?"
+            "hi": "अनलोडिंग पूरी हो गई! ट्रक में वेंडर को वापस भेजने के लिए 20 खाली नीले डिब्बे लोड किए गए हैं। एग्जिट गेट पर ड्राइवर कहता है: 'बैरियर खोलो, ये तो सिर्फ खाली डिब्बे हैं!' आपको क्या करना चाहिए?",
+            "mr": "अनलोडिंग पूर्ण झाले! ट्रकने व्हेंडरला परत देण्यासाठी 20 रिकामे निळे डबे भरले आहेत. एक्झिट गेटवर ड्रायव्हर म्हणतो: 'बॅरियर उघडा, हे फक्त रिकामे डबे आहेत!' तुम्ही काय केले पाहिजे?"
           },
           "audioSrc": "/audio/voiceover/s01_sc07_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Brilliant vigilance! Returnable bins/Foldable Large Containers require an authorized manual Delivery Challan and system exit clearance before the exit gate barrier opens!",
-            "hi": "शानदार सतर्कता! एग्जिट गेट बैरियर खोलने से पहले रिटर्नेबल डिब्बे/फोल्डेबल लार्ज कंटेनर के लिए अधिकृत मैनुअल डिलीवरी चालान और सिस्टम गेट-एग्जिट क्लीयरेंस अनिवार्य है!",
-            "mr": "उत्कृष्ट सतर्कता! एक्झिट गेट बॅरियर उघडण्यापूर्वी रिटर्नेबल डबे/फोल्डेबल लार्ज कंटेनर साठी अधिकृत मॅन्युअल डिलिव्हरी चलन आणि सिस्टीम गेट-एक्झिट क्लिअरन्स अनिवार्य आहे!"
+            "en": "Brilliant vigilance! Returnable bins require an authorized manual Delivery Challan and system exit clearance before the exit gate barrier opens!",
+            "hi": "शानदार सतर्कता! खाली डिब्बे बाहर भेजने से पहले अधिकृत डिलीवरी चालान और सिस्टम एग्जिट क्लीयरेंस होना बहुत ज़रूरी है, तभी गेट बैरियर खोला जाएगा!",
+            "mr": "उत्कृष्ट सतर्कता! रिकामे डबे बाहेर नेण्यापूर्वी अधिकृत डिलिव्हरी चलन आणि सिस्टीम एक्झिट क्लिअरन्स असणे खूप गरजेचे आहे, तरच गेटचा बॅरियर उघडला जाईल!"
           },
           "audioSrc": "/audio/voiceover/s01_sc07_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Stop! Never raise the barrier without a manual Delivery Challan. Empty Foldable Large Container bins are valuable Ather company assets. Without a Delivery Challan, thousands of rupees of packaging exit untracked!",
-            "hi": "रुकिए! मैनुअल डिलीवरी चालान के बिना कभी बैरियर न उठाएं। खाली फोल्डेबल लार्ज कंटेनर डिब्बे एथर कंपनी की मूल्यवान संपत्ति हैं। बिना डिलीवरी चालान के, हजारों रुपये की पैकेजिंग बिना रिकॉर्ड के बाहर चली जाएगी!",
-            "mr": "थांबा! मॅन्युअल डिलिव्हरी चलन शिवाय बॅरियर कधीही उघडू नका. रिकामे फोल्डेबल लार्ज कंटेनर डबे ही अथर कंपनीची मौल्यवान मालमत्ता आहे. डिलिव्हरी चलन शिवाय हजारो रुपयांचे पॅकेजिंग नोंदीविना बाहेर जाईल!"
+            "en": "Stop! Never raise the barrier without a manual Delivery Challan. Empty bins are valuable Ather company assets. Without a Delivery Challan, thousands of rupees of packaging exit untracked!",
+            "hi": "रुकिए! डिलीवरी चालान के बिना कभी बैरियर न उठाएं। ये खाली डिब्बे कंपनी की कीमती संपत्ति हैं। बिना चालान के हजारों रुपये का सामान बिना रिकॉर्ड बाहर चला जाएगा!",
+            "mr": "थांबा! डिलिव्हरी चलनाशिवाय बॅरियर कधीही उघडू नका. हे रिकामे डबे कंपनीची मौल्यवान मालमत्ता आहेत. चलनाशिवाय हजारो रुपयांचे सामान रेकॉर्डशिवाय बाहेर निघून जाईल!"
           },
           "audioSrc": "/audio/voiceover/s01_sc07_wrong.mp3"
         },
         "dialog": {
           "en": "Unloading is done! The truck has loaded 20 empty blue Foldable Large Container bins to return to the vendor. At the exit gate, the driver demands: 'Open the boom barrier, these are just Ather's empty bins!' What must you do?",
-          "hi": "अनलोडिंग पूरी हो गई! ट्रक ने वेंडर को वापस करने के लिए 20 खाली नीले फोल्डेबल लार्ज कंटेनर डिब्बे लोड किए हैं। एग्जिट गेट पर चालक कहता है: 'बूम बैरियर खोलिए, ये सिर्फ एथर के खाली डिब्बे हैं!' आपको क्या करना चाहिए?",
-          "mr": "अनलोडिंग पूर्ण झाले! ट्रकने व्हेंडरला परत करण्यासाठी 20 रिकामे निळे फोल्डेबल लार्ज कंटेनर डबे लोड केले आहेत. एक्झिट गेटवर चालक म्हणतो: 'बूम बॅरियर उघडा, हे फक्त अथरचे रिकामे डबे आहेत!' तुम्ही काय केले पाहिजे?"
+          "hi": "अनलोडिंग पूरी हो गई! ट्रक में वेंडर को वापस भेजने के लिए 20 खाली नीले डिब्बे लोड किए गए हैं। एग्जिट गेट पर ड्राइवर कहता है: 'बैरियर खोलो, ये तो सिर्फ खाली डिब्बे हैं!' आपको क्या करना चाहिए?",
+          "mr": "अनलोडिंग पूर्ण झाले! ट्रकने व्हेंडरला परत देण्यासाठी 20 रिकामे निळे डबे भरले आहेत. एक्झिट गेटवर ड्रायव्हर म्हणतो: 'बॅरियर उघडा, हे फक्त रिकामे डबे आहेत!' तुम्ही काय केले पाहिजे?"
         }
       },
       "interaction": {
@@ -811,12 +811,12 @@
         "safetyCritical": true,
         "question": {
           "en": "The driver wants to leave with 20 empty Foldable Large Container bins without a manual Delivery Challan:",
-          "hi": "चालक बिना मैनुअल डिलीवरी चालान के 20 खाली फोल्डेबल लार्ज कंटेनर डिब्बों के साथ निकलना चाहता है:",
-          "mr": "चालक मॅन्युअल डिलिव्हरी चलन शिवाय 20 रिकाम्या फोल्डेबल लार्ज कंटेनर डब्यांसह बाहेर पडू इच्छितो:"
+          "hi": "ड्राइवर बिना मैनुअल डिलीवरी चालान के 20 खाली फोल्डेबल लार्ज कंटेनर डिब्बों के साथ निकलना चाहता है:",
+          "mr": "ड्राइवर मॅन्युअल डिलिव्हरी चलन शिवाय 20 रिकाम्या फोल्डेबल लार्ज कंटेनर डब्यांसह बाहेर पडू इच्छितो:"
         },
         "situation": {
           "en": "Truck MH-20-DE-4419 has completed mechanical unloading at Dock 04. The driver loaded 20 folded Foldable Large Container containers and presents only the inward gate slip, claiming: 'No DC is needed for Ather's own empty bins.'",
-          "hi": "ट्रक MH-20-DE-4419 ने डॉक 04 पर मैकेनिकल अनलोडिंग पूरी कर ली है। चालक ने 20 मुड़े हुए FLC कंटेनर लोड किए हैं और केवल आवक गेट पर्ची दिखाते हुए दावा करता है: 'एथर के अपने खाली डिब्बों के लिए किसी DC की आवश्यकता नहीं है।'",
+          "hi": "ट्रक MH-20-DE-4419 ने डॉक 04 पर मैकेनिकल अनलोडिंग पूरी कर ली है। चालक ने 20 मुड़े हुए FLC कंटेनर लोड किए हैं और केवल आया हुआ गेट पर्ची दिखाते हुए दावा करता है: 'एथर के अपने खाली डिब्बों के लिए किसी DC की आवश्यकता नहीं है।'",
           "mr": "ट्रक MH-20-DE-4419 ने डॉक 04 वर मेकॅनिकल अनलोडिंग पूर्ण केले आहे. चालकाने 20 दुमडलेले FLC कंटेनर लोड केले आहेत आणि फक्त इनवर्ड गेट स्लिप दाखवून सांगतो: 'अथरच्या स्वतःच्या रिकाम्या डब्यांसाठी DC ची गरज नाही.'"
         },
         "correctAction": "stop",
@@ -832,8 +832,8 @@
         },
         "stopDescription": {
           "en": "Mandate physical DC creation & SAP YMM_GATE_EXIT sign-off before raising boom barrier.",
-          "hi": "बूम बैरियर उठाने से पहले भौतिक DC निर्माण और SAP YMM_GATE_EXIT हस्ताक्षर अनिवार्य करें।",
-          "mr": "बूम बॅरियर उघडण्यापूर्वी प्रत्यक्ष DC तयार करणे आणि SAP YMM_GATE_EXIT मंजुरी अनिवार्य करा."
+          "hi": "बूम बैरियर उठाने से पहले असल DC निर्माण और SAP YMM_GATE_EXIT हस्ताक्षर ज़रूरी करें।",
+          "mr": "बूम बॅरियर उघडण्यापूर्वी प्रत्यक्ष DC तयार करणे आणि SAP YMM_GATE_EXIT मंजुरी गरजेचे करा."
         },
         "goDescription": {
           "en": "Raise barrier because parts were unloaded and empty bins belong to the regular return cycle.",
@@ -842,8 +842,8 @@
         },
         "prompt": {
           "en": "The driver wants to leave with 20 empty Foldable Large Container bins without a manual Delivery Challan:",
-          "hi": "चालक बिना मैनुअल डिलीवरी चालान के 20 खाली फोल्डेबल लार्ज कंटेनर डिब्बों के साथ निकलना चाहता है:",
-          "mr": "चालक मॅन्युअल डिलिव्हरी चलन शिवाय 20 रिकाम्या फोल्डेबल लार्ज कंटेनर डब्यांसह बाहेर पडू इच्छितो:"
+          "hi": "ड्राइवर बिना मैनुअल डिलीवरी चालान के 20 खाली फोल्डेबल लार्ज कंटेनर डिब्बों के साथ निकलना चाहता है:",
+          "mr": "ड्राइवर मॅन्युअल डिलिव्हरी चलन शिवाय 20 रिकाम्या फोल्डेबल लार्ज कंटेनर डब्यांसह बाहेर पडू इच्छितो:"
         },
         "id": "c1-q07",
         "audioSrc": "/audio/voiceover/s01_sc07_prompt.mp3"
@@ -853,7 +853,7 @@
         "sopClause": "SOP XXXX_PRO_001 Clause 4.1.6.2 & 4.2.4",
         "why": {
           "en": "Whenever returnable packaging (Foldable Large Containers, plastic bins, or trolleys) is taken out, an authorized manual Delivery Challan must be verified and Data Entry Operator must perform SAP system exit clearance before Security unlocks the departure gate.",
-          "hi": "जब भी रिटर्नेबल पैकेजिंग (फोल्डेबल लार्ज कंटेनर, प्लास्टिक डिब्बे या ट्रॉली) बाहर निकाली जाती है, तो एक अधिकृत मैनुअल डिलीवरी चालान सत्यापित होना चाहिए और सुरक्षा द्वारा प्रस्थान गेट खोलने से पहले डेटा एंट्री ऑपरेटर को SAP गेट-एग्जिट क्लीयरेंस निष्पादित करना चाहिए।",
+          "hi": "जब भी रिटर्नेबल पैकेजिंग (फोल्डेबल लार्ज कंटेनर, प्लास्टिक डिब्बे या ट्रॉली) बाहर निकाली जाती है, तो एक अधिकृत मैनुअल डिलीवरी चालान चेक किया हुआ होना चाहिए और सुरक्षा द्वारा प्रस्थान गेट खोलने से पहले डेटा एंट्री ऑपरेटर को SAP गेट-एग्जिट क्लीयरेंस निष्पादित करना चाहिए।",
           "mr": "जेव्हा जेव्हा रिटर्नेबल पॅकेजिंग (फोल्डेबल लार्ज कंटेनर, प्लास्टिक डबे किंवा ट्रॉली) बाहेर काढले जाते, तेव्हा अधिकृत मॅन्युअल डिलिव्हरी चलन तपासले पाहिजे आणि सुरक्षा रक्षकाने प्रस्थान गेट उघडण्यापूर्वी डेटा एन्ट्री ऑपरेटर ने SAP गेट-एक्झिट क्लिअरन्स करणे आवश्यक आहे."
         }
       }
@@ -877,18 +877,18 @@
         "intro": {
           "pose": "thinking",
           "text": {
-            "en": "Attention Data Entry Operator! The driver presents an invoice for 50 battery harnesses, but the digital Advanced Shipping Notice in SAP lists 40 pieces for this Purchase Order. Can gate entry proceed?",
-            "hi": "ध्यान दें डेटा एंट्री ऑपरेटर! चालक 50 बैटरी हार्नेस के लिए एक चालान प्रस्तुत करता है, लेकिन SAP में डिजिटल एडवांस्ड शिपिंग नोटिस इस परचेज ऑर्डर पर केवल 40 टुकड़े दिखाता है। क्या गेट एंट्री आगे बढ़ सकती है?",
-            "mr": "डेटा एन्ट्री ऑपरेटर लक्ष द्या! चालक 50 बॅटरी हार्नेसचे इनव्हॉईस सादर करतो, परंतु SAP मधील डिजिटल ॲडव्हान्स्ड शिपिंग नोटीस या परचेस ऑर्डरवर फक्त 40 नग दाखवते. गेट एंट्री करता येईल का?"
+            "en": "Attention Data Entry Operator! The driver presents an invoice for 50 battery harnesses, but the digital Advanced Shipping Notice in SAP ERP shows only 40 units for this Purchase Order line! Can you issue a gate entry pass?",
+            "hi": "ध्यान दें ऑपरेटर! ड्राइवर 50 बैटरी हार्नेस का इनवॉइस देता है, लेकिन सिस्टम में एडवांस्ड शिपिंग नोटिस पर सिर्फ 40 पीस दिख रहे हैं! क्या आप गेट पास जारी कर सकते हैं?",
+            "mr": "ऑपरेटर लक्ष द्या! ड्रायव्हर 50 बॅटरी हार्नेसचे इनव्हॉइस देतो, पण सिस्टीममधील ॲडव्हान्स्ड शिपिंग नोटीसवर फक्त 40 नग दिसत आहेत! तुम्ही गेट पास देणार का?"
           },
           "audioSrc": "/audio/voiceover/s01_sc08_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Correct decision! Never generate a gate pass for a mismatched Advanced Shipping Notice. The Data Entry Operator halts the transaction and alerts the Inbound Gate Incharge within 1 hour to resolve the vendor Advanced Shipping Notice discrepancy.",
-            "hi": "सही निर्णय! बेमेल एडवांस्ड शिपिंग नोटिस के लिए कभी भी गेट पास न बनाएं। डेटा एंट्री ऑपरेटर लेनदेन रोकता है और विक्रेता एडवांस्ड शिपिंग नोटिस विसंगति को हल करने के लिए इनबाउंड गेट प्रभारी 1 घंटे के भीतर को सचेत करता है।",
-            "mr": "योग्य निर्णय! चुकीच्या ॲडव्हान्स्ड शिपिंग नोटीस साठी कधीही गेट पास तयार करू नका. डेटा एन्ट्री ऑपरेटर व्यवहार थांबवतो आणि व्हेंडर ॲडव्हान्स्ड शिपिंग नोटीस तफावत सोडवण्यासाठी इनबाउंड गेट प्रमुखाला (1-तासाची मुदत) सूचना देतो."
+            "en": "Right call! Never create a gate pass for a mismatched shipment. The Data Entry Operator halts the transaction and alerts the Inbound Gate Incharge within 1 hour to resolve the vendor Advanced Shipping Notice discrepancy.",
+            "hi": "सही फैसला! माल का हिसाब न मिलने पर कभी भी गेट पास न बनाएं। ऑपरेटर काम रोकता है और वेंडर की इस गड़बड़ी को ठीक करने के लिए 1 घंटे के अंदर इनबाउंड गेट इंचार्ज को खबर करता है।",
+            "mr": "योग्य निर्णय! मालाचा आकडा जुळत नसल्यास कधीही गेट पास बनवू नका. ऑपरेटर काम थांबवतो आणि व्हेंडरची ही चूक दुरुस्त करण्यासाठी 1 तासाच्या आत इनबाउंड गेट प्रमुखाला सूचना देतो."
           },
           "audioSrc": "/audio/voiceover/s01_sc08_correct.mp3"
         },
@@ -896,15 +896,15 @@
           "pose": "warning",
           "text": {
             "en": "Violation! Generating a gate pass with an incorrect Advanced Shipping Notice creates major inventory mismatches in SAP ERP that block quality inspection receiving and vendor payment clearance.",
-            "hi": "उल्लंघन! गलत एडवांस्ड शिपिंग नोटिस के साथ गेट पास बनाने से SAP ERP में बड़ी इन्वेंट्री विसंगतियां पैदा होती हैं जो IQC प्राप्ति और विक्रेता भुगतान निकासी को रोकती हैं।",
-            "mr": "नियमभंग! चुकीच्या ॲडव्हान्स्ड शिपिंग नोटीस सह गेट पास दिल्यास SAP ERP मध्ये मोठी तफावत होते, ज्यामुळे IQC तपासणी आणि व्हेंडर पेमेंट अडकते."
+            "hi": "गलत फैसला! गलत एडवांस्ड शिपिंग नोटिस पर गेट पास बनाने से सिस्टम में स्टॉक का हिसाब बिगड़ जाता है, जिससे क्वालिटी चेकिंग रुक जाती है और वेंडर का पेमेंट अटक जाता है।",
+            "mr": "चुकीचा निर्णय! चुकीच्या ॲडव्हान्स्ड शिपिंग नोटीसवर गेट पास दिल्यास सिस्टीममध्ये स्टॉकचा ताळमेळ बिघडतो, ज्यामुळे क्वालिटी तपासणी थांबते आणि व्हेंडरचे पेमेंट अडकते."
           },
           "audioSrc": "/audio/voiceover/s01_sc08_wrong.mp3"
         },
         "dialog": {
-          "en": "Attention Data Entry Operator! The driver presents an invoice for 50 battery harnesses, but the digital Advanced Shipping Notice in SAP lists 40 pieces for this Purchase Order. Can gate entry proceed?",
-          "hi": "ध्यान दें डेटा एंट्री ऑपरेटर! चालक 50 बैटरी हार्नेस के लिए एक चालान प्रस्तुत करता है, लेकिन SAP में डिजिटल एडवांस्ड शिपिंग नोटिस इस परचेज ऑर्डर पर केवल 40 टुकड़े दिखाता है। क्या गेट एंट्री आगे बढ़ सकती है?",
-          "mr": "डेटा एन्ट्री ऑपरेटर लक्ष द्या! चालक 50 बॅटरी हार्नेसचे इनव्हॉईस सादर करतो, परंतु SAP मधील डिजिटल ॲडव्हान्स्ड शिपिंग नोटीस या परचेस ऑर्डरवर फक्त 40 नग दाखवते. गेट एंट्री करता येईल का?"
+          "en": "Attention Data Entry Operator! The driver presents an invoice for 50 battery harnesses, but the digital Advanced Shipping Notice in SAP ERP shows only 40 units for this Purchase Order line! Can you issue a gate entry pass?",
+          "hi": "ध्यान दें ऑपरेटर! ड्राइवर 50 बैटरी हार्नेस का इनवॉइस देता है, लेकिन सिस्टम में एडवांस्ड शिपिंग नोटिस पर सिर्फ 40 पीस दिख रहे हैं! क्या आप गेट पास जारी कर सकते हैं?",
+          "mr": "ऑपरेटर लक्ष द्या! ड्रायव्हर 50 बॅटरी हार्नेसचे इनव्हॉइस देतो, पण सिस्टीममधील ॲडव्हान्स्ड शिपिंग नोटीसवर फक्त 40 नग दिसत आहेत! तुम्ही गेट पास देणार का?"
         }
       },
       "interaction": {
@@ -913,7 +913,7 @@
         "safetyCritical": true,
         "question": {
           "en": "The physical invoice quantity differs from the digital Advanced Shipping Notice in SAP:",
-          "hi": "भौतिक चालान मात्रा SAP में डिजिटल एडवांस्ड शिपिंग नोटिस से भिन्न है:",
+          "hi": "असल चालान मात्रा SAP में डिजिटल एडवांस्ड शिपिंग नोटिस से भिन्न है:",
           "mr": "प्रत्यक्ष इनव्हॉईसमधील संख्या SAP मधील डिजिटल ॲडव्हान्स्ड शिपिंग नोटीस शी जुळत नाही:"
         },
         "situation": {
@@ -934,17 +934,17 @@
         },
         "stopDescription": {
           "en": "Halt gate entry immediately. Notify Gate Incharge to coordinate with supplier for corrected ASN within one hour window.",
-          "hi": "तुरंत गेट एंट्री रोकें। 1-घंटे के SLA के भीतर सही ASN के लिए आपूर्तिकर्ता से समन्वय करने हेतु गेट प्रभारी को सूचित करें।",
+          "hi": "तुरंत गेट एंट्री रोकें। 1-घंटे के SLA के भीतर सही ASN के लिए सप्लायर से समन्वय करने हेतु गेट प्रभारी को सूचित करें।",
           "mr": "गेट एंट्री त्वरित थांबवा. 1-तासाच्या मुदतीत दुरुस्त ASN मिळवण्यासाठी गेट प्रमुखाला कळवा."
         },
         "goDescription": {
           "en": "Allow truck inside to avoid dock delays and try reconciling discrepancies during unloading.",
-          "hi": "डॉक की देरी से बचने के लिए ट्रक को अंदर आने दें और अनलोडिंग के दौरान विसंगतियों को दूर करने का प्रयास करें।",
+          "hi": "डॉक की देरी से बचने के लिए ट्रक को अंदर आने दें और अनलोडिंग के दौरान गड़बड़ीयों को दूर करने का प्रयास करें।",
           "mr": "उशीर टाळण्यासाठी ट्रकला आत येऊ द्या आणि अनलोडिंग करताना फरक दुरुस्त करा."
         },
         "prompt": {
           "en": "The physical invoice quantity differs from the digital Advanced Shipping Notice in SAP:",
-          "hi": "भौतिक चालान मात्रा SAP में डिजिटल एडवांस्ड शिपिंग नोटिस से भिन्न है:",
+          "hi": "असल चालान मात्रा SAP में डिजिटल एडवांस्ड शिपिंग नोटिस से भिन्न है:",
           "mr": "प्रत्यक्ष इनव्हॉईसमधील संख्या SAP मधील डिजिटल ॲडव्हान्स्ड शिपिंग नोटीस शी जुळत नाही:"
         },
         "id": "c1-q06-asn-discrepancy",
@@ -955,7 +955,7 @@
         "sopClause": "SOP XXXX_PRO_001 Clause 4.2.1 & Question Bank Q6",
         "why": {
           "en": "Digital Advanced Shipping Notice numbers and line items must match the physical invoice 100%. If an Advanced Shipping Notice is incorrect, gate entry cannot proceed. The Gate Incharge has a 1-hour resolution window to obtain a revised Advanced Shipping Notice from the supplier.",
-          "hi": "आदेश देता है कि डिजिटल एडवांस्ड शिपिंग नोटिस नंबर और लाइन आइटम भौतिक चालान से 100% मेल खाने चाहिए। यदि एडवांस्ड शिपिंग नोटिस गलत है, तो गेट एंट्री आगे नहीं बढ़ सकती।",
+          "hi": "आदेश देता है कि डिजिटल एडवांस्ड शिपिंग नोटिस नंबर और लाइन आइटम असल चालान से 100% मेल खाने चाहिए। यदि एडवांस्ड शिपिंग नोटिस गलत है, तो गेट एंट्री आगे नहीं बढ़ सकती।",
           "mr": "डिजिटल ॲडव्हान्स्ड शिपिंग नोटीस आणि प्रत्यक्ष बिल 100% जुळलेच पाहिजे. ॲडव्हान्स्ड शिपिंग नोटीस चुकीचा असल्यास गेट एंट्री करता येत नाही. सप्लायरकडून दुरुस्त ॲडव्हान्स्ड शिपिंग नोटीस आणण्यासाठी 1 तासाची मुदत असते."
         }
       }
@@ -979,8 +979,8 @@
           "pose": "explaining",
           "text": {
             "en": "A scheduled chassis frame truck reports at Gate 01. However, the SAP inventory screen indicates that High-Rise Rack storage for frames is already at 100% maximum capacity! What is the mandatory Data Entry Operator action?",
-            "hi": "गेट 01 पर एक निर्धारित चेसिस फ्रेम ट्रक की रिपोर्ट है। हालांकि, SAP इन्वेंट्री स्क्रीन इंगित करती है कि फ्रेम के लिए हाई-राइज रैक स्टोरेज पहले से ही 100% अधिकतम क्षमता पर है! अनिवार्य डेटा एंट्री ऑपरेटर कार्रवाई क्या है?",
-            "mr": "गेट 01 वर चेसिस फ्रेमचा ट्रक आला आहे. परंतु SAP स्क्रीनवर दिसते की हाय-राईज रॅकमधील जागा 100% पूर्ण भरलेली आहे! डेटा एन्ट्री ऑपरेटर ने कोणती अधिकृत कृती केली पाहिजे?"
+            "hi": "गेट 01 पर चेसिस फ्रेम लेकर एक तय ट्रक आया है। लेकिन सिस्टम स्क्रीन पर दिख रहा है कि चेसिस फ्रेम का हाई-राइज रैक पहले से ही 100% पूरा भरा हुआ है! ऑपरेटर को क्या करना चाहिए?",
+            "mr": "गेट 01 वर चेसिस फ्रेम घेऊन एक ट्रक आला आहे. पण सिस्टीम स्क्रीनवर दिसते की हाय-राईज रॅकमधील जागा आधीच 100% पूर्ण भरलेली आहे! ऑपरेटरने काय केले पाहिजे?"
           },
           "audioSrc": "/audio/voiceover/s01_sc09_intro.mp3"
         },
@@ -988,8 +988,8 @@
           "pose": "success",
           "text": {
             "en": "Spot-on! The truck remains in the designated waiting parking area until line assembly consumes existing stock and clears warehouse pallet positions. Dumping material on dock gangways is strictly forbidden.",
-            "hi": "बिल्कुल सही! ट्रक निर्दिष्ट प्रतीक्षा पार्किंग क्षेत्र में तब तक रहता है जब तक कि असेंबली लाइन मौजूदा स्टॉक की खपत नहीं करती और रैक स्पेस खाली नहीं करती। डॉक पर सामग्री फेंकना सख्त मना है।",
-            "mr": "अगदी बरोबर! असेंब्ली लाईनवर जुना माल वापरून रॅक मोकळे होईपर्यंत ट्रक वेटिंग यार्डमध्ये थांबवला जातो. डॉकवर रस्त्यात माल टाकण्यास सक्त मनाई आहे."
+            "hi": "बिल्कुल सही! ट्रक को पार्किंग एरिया में तब तक रोका जाता है जब तक असेंबली लाइन पुराना स्टॉक इस्तेमाल करके रैक में जगह खाली न कर दे। डॉक के रास्तों पर माल उतारकर छोड़ना सख्त मना है।",
+            "mr": "अगदी बरोबर! असेंब्ली लाईनवर जुना माल वापरून रॅक मोकळे होईपर्यंत ट्रक पार्किंगमध्ये थांबवून ठेवला जातो. डॉकच्या रस्त्यात माल टाकून ठेवण्यास सक्त मनाई आहे."
           },
           "audioSrc": "/audio/voiceover/s01_sc09_correct.mp3"
         },
@@ -997,15 +997,15 @@
           "pose": "warning",
           "text": {
             "en": "Incorrect! Never dump material in active dock corridors or send the supplier away. Truck must wait in parking bay until pallet locations clear.",
-            "hi": "गलत! सक्रिय डॉक गलियारों में सामग्री कभी न फेंके या आपूर्तिकर्ता को वापस न भेजें। पैलेट स्थान खाली होने तक ट्रक को पार्किंग बे में प्रतीक्षा करनी चाहिए।",
-            "mr": "चुकीचे! डॉकच्या चालण्याच्या जागेत माल टाकू नका किंवा ट्रकला परत पाठवू नका. जागा मोकळी होईपर्यंत ट्रक पार्किंगमध्ये थांबवला पाहिजे."
+            "hi": "गलत! चालू डॉक के रास्तों में कभी माल न उतारें और न ही सप्लायर को वापस भगाएं। रैक में जगह खाली होने तक ट्रक पार्किंग में इंतज़ार करेगा।",
+            "mr": "चुकीचे! चालू डॉकच्या जागेत माल टाकू नका आणि सप्लायरला परतही पाठवू नका. रॅकमध्ये जागा मोकळी होईपर्यंत ट्रक पार्किंगमध्ये थांबवला पाहिजे."
           },
           "audioSrc": "/audio/voiceover/s01_sc09_wrong.mp3"
         },
         "dialog": {
           "en": "A scheduled chassis frame truck reports at Gate 01. However, the SAP inventory screen indicates that High-Rise Rack storage for frames is already at 100% maximum capacity! What is the mandatory Data Entry Operator action?",
-          "hi": "गेट 01 पर एक निर्धारित चेसिस फ्रेम ट्रक की रिपोर्ट है। हालांकि, SAP इन्वेंट्री स्क्रीन इंगित करती है कि फ्रेम के लिए हाई-राइज रैक स्टोरेज पहले से ही 100% अधिकतम क्षमता पर है! अनिवार्य डेटा एंट्री ऑपरेटर कार्रवाई क्या है?",
-          "mr": "गेट 01 वर चेसिस फ्रेमचा ट्रक आला आहे. परंतु SAP स्क्रीनवर दिसते की हाय-राईज रॅकमधील जागा 100% पूर्ण भरलेली आहे! डेटा एन्ट्री ऑपरेटर ने कोणती अधिकृत कृती केली पाहिजे?"
+          "hi": "गेट 01 पर चेसिस फ्रेम लेकर एक तय ट्रक आया है। लेकिन सिस्टम स्क्रीन पर दिख रहा है कि चेसिस फ्रेम का हाई-राइज रैक पहले से ही 100% पूरा भरा हुआ है! ऑपरेटर को क्या करना चाहिए?",
+          "mr": "गेट 01 वर चेसिस फ्रेम घेऊन एक ट्रक आला आहे. पण सिस्टीम स्क्रीनवर दिसते की हाय-राईज रॅकमधील जागा आधीच 100% पूर्ण भरलेली आहे! ऑपरेटरने काय केले पाहिजे?"
         }
       },
       "interaction": {
@@ -1014,7 +1014,7 @@
         "safetyCritical": true,
         "question": {
           "en": "The maximum stock capacity for this material is full in the warehouse. What must the Data Entry Operator do?",
-          "hi": "गोदाम में इस सामग्री के लिए अधिकतम स्टॉक क्षमता भरी हुई है। डेटा एंट्री ऑपरेटर को क्या करना चाहिए?",
+          "hi": "गोदाम में इस माल के लिए अधिकतम स्टॉक क्षमता भरी हुई है। डेटा एंट्री ऑपरेटर को क्या करना चाहिए?",
           "mr": "गोदामामध्ये या साहित्याची कमाल क्षमता पूर्ण भरलेली आहे. डेटा एन्ट्री ऑपरेटर ने काय केले पाहिजे?"
         },
         "options": [
@@ -1023,7 +1023,7 @@
             "correct": true,
             "label": {
               "en": "Keep truck in waiting bay until assembly consumes stock and frees pallet positions, then process gate entry",
-              "hi": "ट्रक को प्रतीक्षा बे में तब तक रखें जब तक कि असेंबली स्टॉक की खपत न करे और पैलेट की जगह खाली न हो जाए, फिर गेट एंट्री प्रोसेस करें",
+              "hi": "ट्रक को इंतज़ार बे में तब तक रखें जब तक कि असेंबली स्टॉक की खपत न करे और पैलेट की जगह खाली न हो जाए, फिर गेट एंट्री प्रोसेस करें",
               "mr": "असेंब्ली लाईनने माल वापरून जागा मोकळी करेपर्यंत ट्रकला वेटिंग एरियात थांबवणे आणि नंतरच गेट एंट्री करणे"
             }
           },
@@ -1041,7 +1041,7 @@
             "correct": false,
             "label": {
               "en": "Permanently reject and send the delivery truck back to the supplier without consulting Inbound Manager",
-              "hi": "इनबाउंड मैनेजर से परामर्श किए बिना डिलीवरी ट्रक को स्थायी रूप से अस्वीकार करें और आपूर्तिकर्ता को वापस भेजें",
+              "hi": "इनबाउंड मैनेजर से परामर्श किए बिना डिलीवरी ट्रक को स्थायी रूप से अस्वीकार करें और सप्लायर को वापस भेजें",
               "mr": "मॅनेजरला न विचारताच ट्रकला परत पाठवून डिलिव्हरी कायमस्वरूपी नाकारणे"
             }
           },
@@ -1057,7 +1057,7 @@
         ],
         "prompt": {
           "en": "The maximum stock capacity for this material is full in the warehouse. What must the Data Entry Operator do?",
-          "hi": "गोदाम में इस सामग्री के लिए अधिकतम स्टॉक क्षमता भरी हुई है। डेटा एंट्री ऑपरेटर को क्या करना चाहिए?",
+          "hi": "गोदाम में इस माल के लिए अधिकतम स्टॉक क्षमता भरी हुई है। डेटा एंट्री ऑपरेटर को क्या करना चाहिए?",
           "mr": "गोदामामध्ये या साहित्याची कमाल क्षमता पूर्ण भरलेली आहे. डेटा एन्ट्री ऑपरेटर ने काय केले पाहिजे?"
         },
         "id": "c1-q07-max-stock-full",
@@ -1068,7 +1068,7 @@
         "sopClause": "SOP XXXX_PRO_001 Clause 4.2.1 & Question Bank Q7",
         "why": {
           "en": "Dictates: If warehouse capacity is full, the truck remains safely staged in the waiting parking area. Once internal assembly consumption frees designated pallet positions, the Data Entry Operator executes the gate entry and allocates an unloading dock.",
-          "hi": "निर्देश देता है: यदि गोदाम की क्षमता भरी हुई है, तो ट्रक प्रतीक्षा पार्किंग क्षेत्र में सुरक्षित रूप से रहता है। एक बार आंतरिक खपत से पैलेट स्थान खाली हो जाने पर, डेटा एंट्री ऑपरेटर गेट एंट्री निष्पादित करता है।",
+          "hi": "निर्देश देता है: यदि गोदाम की क्षमता भरी हुई है, तो ट्रक इंतज़ार पार्किंग क्षेत्र में सुरक्षित रूप से रहता है। एक बार आंतरिक खपत से पैलेट स्थान खाली हो जाने पर, डेटा एंट्री ऑपरेटर गेट एंट्री निष्पादित करता है।",
           "mr": "सांगते: गोदामात जागा नसल्यास ट्रक वेटिंग पार्किंगमध्येच थांबवला जातो. असेंब्लीने माल वापरून जागा मोकळी केल्यावरच डेटा एन्ट्री ऑपरेटर गेट एंट्री करून डॉक नंबर देतो."
         }
       }

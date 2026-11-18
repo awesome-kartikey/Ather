@@ -14,7 +14,7 @@ import type {
 } from '../engine/story/types';
 import type { RunSummary, UserProfile } from '../engine/types';
 import { CertificateView } from './CertificateView';
-import { playFeedbackTone, stopVoice } from '../engine/sound';
+import { playFeedbackTone, playModuleFanfare, stopVoice } from '../engine/sound';
 import confetti from 'canvas-confetti';
 import { category1Stages } from '../content/category1';
 import { category2Stages } from '../content/category2';
@@ -493,6 +493,7 @@ export const StoryStagePlayer: React.FC<StoryStagePlayerProps> = ({
         status: isFinalStage ? (currentAcc >= 85 && safetyBreachesRef.current === 0 ? 'floor_ready' : 'retrain_needed') : 'in_progress'
       });
       try {
+        playModuleFanfare();
         confetti({
           particleCount: 80,
           spread: 75,

@@ -71,33 +71,83 @@ function calculateNormalizedGain(buffer: AudioBuffer): number {
   return 1.0;
 }
 
-export function playFeedbackTone(ok: boolean, soundEnabled = true, vibrationEnabled = true) {
+/**
+ * Plays an uplifting game success chime (arpeggio triad: C5 -> E5 -> G5 -> C6).
+ */
+export function playSuccessChime(soundEnabled = true): void {
+  if (!soundEnabled) return;
+  try {
+    const pipeline = getAudioPipeline();
+    if (!pipeline) return;
+    const { ctx, compressor } = pipeline;
+    const now = ctx.currentTime;
+
+    const notes = [
+      { freq: 523.25, time: 0.0, dur: 0.2 },
+      { freq: 659.25, time: 0.07, dur: 0.2 },
+      { freq: 783.99, time: 0.14, dur: 0.22 },
+      { freq: 1046.50, time: 0.21, dur: 0.35 }
+    ];
+
+    notes.forEach(({ freq, time, dur }) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, now + time);
+
+      gain.gain.setValueAtTime(0.08, now + time);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + time + dur);
+
+      osc.connect(gain);
+      gain.connect(compressor);
+
+      osc.start(now + time);
+      osc.stop(now + time + dur + 0.02);
+    });
+  } catch {
+    // AudioContext unavailable
+  }
+}
+
+/**
+ * Plays a friendly game error buzz/thud (gentle low 140Hz -> 90Hz slide with lowpass filter).
+ */
+export function playErrorBuzz(soundEnabled = true, vibrationEnabled = true): void {
   if (soundEnabled) {
     try {
       const pipeline = getAudioPipeline();
       if (pipeline) {
         const { ctx, compressor } = pipeline;
+        const now = ctx.currentTime;
+
         const osc = ctx.createOscillator();
+        const filter = ctx.createBiquadFilter();
         const gain = ctx.createGain();
 
-        osc.type = ok ? 'sine' : 'sawtooth';
-        osc.frequency.setValueAtTime(ok ? 880 : 180, ctx.currentTime);
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(140, now);
+        osc.frequency.exponentialRampToValueAtTime(90, now + 0.28);
 
-        gain.gain.setValueAtTime(0.08, ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + (ok ? 0.15 : 0.3));
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(450, now);
 
-        osc.connect(gain);
+        gain.gain.setValueAtTime(0.12, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.28);
+
+        osc.connect(filter);
+        filter.connect(gain);
         gain.connect(compressor);
 
-        osc.start();
-        osc.stop(ctx.currentTime + (ok ? 0.16 : 0.31));
+        osc.start(now);
+        osc.stop(now + 0.3);
       }
     } catch {
       // AudioContext unavailable
     }
   }
 
-  if (!ok && vibrationEnabled) {
+  if (vibrationEnabled) {
     try {
       if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
         navigator.vibrate(120);
@@ -105,6 +155,85 @@ export function playFeedbackTone(ok: boolean, soundEnabled = true, vibrationEnab
     } catch {
       // Vibration unavailable
     }
+  }
+}
+
+/**
+ * Plays a triumphant celebratory fanfare arpeggio upon stage/module completion or certification.
+ */
+export function playModuleFanfare(soundEnabled = true): void {
+  if (!soundEnabled) return;
+  try {
+    const pipeline = getAudioPipeline();
+    if (!pipeline) return;
+    const { ctx, compressor } = pipeline;
+    const now = ctx.currentTime;
+
+    const chords = [
+      { freq: 392.00, time: 0.0, dur: 0.25 }, // G4
+      { freq: 523.25, time: 0.12, dur: 0.25 }, // C5
+      { freq: 659.25, time: 0.24, dur: 0.25 }, // E5
+      { freq: 783.99, time: 0.36, dur: 0.30 }, // G5
+      { freq: 1046.50, time: 0.50, dur: 0.70 }, // High C6
+      { freq: 1318.51, time: 0.52, dur: 0.65 }  // High E6 harmony
+    ];
+
+    chords.forEach(({ freq, time, dur }) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, now + time);
+
+      gain.gain.setValueAtTime(0.1, now + time);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + time + dur);
+
+      osc.connect(gain);
+      gain.connect(compressor);
+
+      osc.start(now + time);
+      osc.stop(now + time + dur + 0.02);
+    });
+  } catch {
+    // AudioContext unavailable
+  }
+}
+
+/**
+ * Plays a snappy points / XP tally tick.
+ */
+export function playPointsTick(soundEnabled = true): void {
+  if (!soundEnabled) return;
+  try {
+    const pipeline = getAudioPipeline();
+    if (!pipeline) return;
+    const { ctx, compressor } = pipeline;
+    const now = ctx.currentTime;
+
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(1320, now);
+
+    gain.gain.setValueAtTime(0.06, now);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.04);
+
+    osc.connect(gain);
+    gain.connect(compressor);
+
+    osc.start(now);
+    osc.stop(now + 0.05);
+  } catch {
+    // AudioContext unavailable
+  }
+}
+
+export function playFeedbackTone(ok: boolean, soundEnabled = true, vibrationEnabled = true) {
+  if (ok) {
+    playSuccessChime(soundEnabled);
+  } else {
+    playErrorBuzz(soundEnabled, vibrationEnabled);
   }
 }
 

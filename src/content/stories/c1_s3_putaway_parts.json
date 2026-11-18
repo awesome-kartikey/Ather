@@ -29,8 +29,8 @@
           "pose": "explaining",
           "text": {
             "en": "Welcome to Stage 3: Vehicle & Battery Parts Put-Away! The incoming brake caliper lot has passed inspection and carries the green 'QC Pass' seal. An Material Handling Equipment reach-truck operator arrives with a rugged handheld terminal. Before moving any pallet toward the racks, what mandatory digital scan must be performed to initiate the SAP warehouse management system Warehouse Task?",
-            "hi": "स्टेज 3: वाहन और बैटरी पार्ट्स पुट-अवे में आपका स्वागत है! आवक ब्रेक कैलीपर लॉट निरीक्षण में पास हो गया है और उस पर हरी 'QC Pass' सील लगी है। एक मटेरियल हैंडलिंग इक्विपमेंट रीच-ट्रक ऑपरेटर रग्ड हैंडहेल्ड टर्मिनल लेकर आता है। पैलेट को रैक की ओर ले जाने से पहले, SAP EWM वेयरहाउस टास्क शुरू करने के लिए कौन सा अनिवार्य डिजिटल स्कैन किया जाना चाहिए?",
-            "mr": "स्टेज 3: व्हेईकल आणि बॅटरी पार्ट्स पुट-अवेमध्ये आपले स्वागत आहे! इनवर्ड ब्रेक कॅलिपर लॉट तपासणीत मंजूर झाला असून त्यावर हिरवा 'QC Pass' शिक्का आहे. एक मटेरियल हँडलिंग इक्विपमेंट रीच-ट्रक ऑपरेटर हँडहेल्ड टर्मिनल घेऊन येतो. पॅलेट रॅककडे नेण्यापूर्वी, SAP EWM वेअरहाऊस टास्क सुरू करण्यासाठी कोणते अनिवार्य डिजिटल स्कॅनिंग केले पाहिजे?"
+            "hi": "स्टेज 3: पार्ट्स पुट-अवे में आपका स्वागत है! ब्रेक कैलीपर लॉट जांच में पास हो चुका है और उस पर हरी 'QC Pass' सील लगी है। रीच-ट्रक ऑपरेटर बारकोड स्कैनर लेकर आता है। पैलेट को रैक की ओर ले जाने से पहले, सिस्टम में पुट-अवे टास्क शुरू करने के लिए कौन सा बारकोड स्कैन करना होगा?",
+            "mr": "स्टेज 3: व्हेईकल आणि बॅटरी पार्ट्स पुट-अवेमध्ये आपले स्वागत आहे! ब्रेक कॅलिपर लॉट तपासणीत पास झाला असून त्यावर हिरवा 'QC Pass' शिक्का आहे. रीच-ट्रक ऑपरेटर बारकोड स्कॅनर घेऊन येतो. पॅलेट रॅककडे नेण्यापूर्वी, सिस्टीममध्ये पुट-अवे टास्क सुरू करण्यासाठी कोणता बारकोड स्कॅन केला पाहिजे?"
           },
           "audioSrc": "/audio/voiceover/s03_sc01_intro.mp3"
         },
@@ -38,8 +38,8 @@
           "pose": "success",
           "text": {
             "en": "Standard procedure verified! The operator must scan the pallet-level Handling Unit barcode on the Goods Receipt Note sticker first. Scanning the Handling Unit instructs SAP warehouse management system to generate the Warehouse Task, displaying the target High-Rise Rack bin and part specifications!",
-            "hi": "मानक प्रक्रिया सत्यापित! ऑपरेटर को पहले Goods Receipt Note स्टिकर पर पैलेट-स्तरीय हैंडलिंग यूनिट बारकोड स्कैन करना होगा। हैंडलिंग यूनिट को स्कैन करने से SAP EWM को वेयरहाउस टास्क बनाने का निर्देश मिलता है, जो लक्षित हाई-राइज रैक बिन और पार्ट विनिर्देश प्रदर्शित करता है!",
-            "mr": "मानक कार्यपद्धती पडताळली! ऑपरेटरने प्रथम Goods Receipt Note स्टिकरवरील पॅलेट-स्तरीय हँडलिंग युनिट बारकोड स्कॅन केला पाहिजे. हँडलिंग युनिट स्कॅन केल्याने SAP EWM ला वेअरहाऊस टास्क तयार करण्याचे निर्देश मिळतात, ज्यामध्ये टार्गेट हाय-राइज रॅक बिन आणि पार्ट तपशील दिसतात!"
+            "hi": "बिल्कुल सही! ऑपरेटर को सबसे पहले Goods Receipt Note स्टिकर पर मौजूद हैंडलिंग यूनिट बारकोड स्कैन करना होगा। इसे स्कैन करते ही सिस्टम में वेयरहाउस टास्क बन जाता है और स्क्रीन पर तय रैक बिन दिख जाता है!",
+            "mr": "अगदी बरोबर! ऑपरेटरने आधी Goods Receipt Note स्टिकरवरील हँडलिंग युनिट बारकोड स्कॅन केला पाहिजे. हा स्कॅन करताच सिस्टीममध्ये वेअरहाऊस टास्क तयार होतो आणि स्क्रीनवर नेमका रॅक बिन दिसतो!"
           },
           "audioSrc": "/audio/voiceover/s03_sc01_correct.mp3"
         },
@@ -47,15 +47,15 @@
           "pose": "warning",
           "text": {
             "en": "Incorrect scan sequence! You cannot begin put-away without scanning the Handling Unit label first. Moving material before the Handling Unit scan leaves SAP warehouse management system blind to pallet movement, causing open task backlogs and ERP stock mismatch.",
-            "hi": "गलत स्कैन क्रम! आप पहले हैंडलिंग यूनिट लेबल को स्कैन किए बिना पुट-अवे शुरू नहीं कर सकते। हैंडलिंग यूनिट स्कैन से पहले सामग्री ले जाने से SAP EWM पैलेट की आवाजाही को ट्रैक नहीं कर पाता, जिससे ओपन टास्क बैकलॉग और ERP स्टॉक मिसमैच होता है।",
-            "mr": "चुकीचा स्कॅन क्रम! हँडलिंग युनिट लेबल स्कॅन केल्याशिवाय तुम्ही पुट-अवे सुरू करू शकत नाही. हँडलिंग युनिट स्कॅन करण्यापूर्वी साहित्य हलवल्यास SAP EWM मध्ये ट्रॅकिंग होत नाही, ज्यामुळे ओपन टास्कचा अनुशेष आणि ERP स्टॉक तफावत निर्माण होते."
+            "hi": "गलत स्कैन क्रम! हैंडलिंग यूनिट बारकोड स्कैन किए बिना पुट-अवे शुरू नहीं कर सकते। बिना स्कैन किए माल ले जाने से सिस्टम में रिकॉर्ड नहीं बनेगा और स्टॉक का हिसाब गड़बड़ा जाएगा।",
+            "mr": "चुकीचा स्कॅन क्रम! हँडलिंग युनिट बारकोड स्कॅन केल्याशिवाय पुट-अवे सुरू करू शकत नाही. स्कॅन न करता माल हलवल्यास सिस्टीममध्ये नोंद होणार नाही आणि स्टॉकचा ताळमेळ बिघडेल."
           },
           "audioSrc": "/audio/voiceover/s03_sc01_wrong.mp3"
         },
         "dialog": {
           "en": "Welcome to Stage 3: Vehicle & Battery Parts Put-Away! The incoming brake caliper lot has passed inspection and carries the green 'QC Pass' seal. An Material Handling Equipment reach-truck operator arrives with a rugged handheld terminal. Before moving any pallet toward the racks, what mandatory digital scan must be performed to initiate the SAP warehouse management system Warehouse Task?",
-          "hi": "स्टेज 3: वाहन और बैटरी पार्ट्स पुट-अवे में आपका स्वागत है! आवक ब्रेक कैलीपर लॉट निरीक्षण में पास हो गया है और उस पर हरी 'QC Pass' सील लगी है। एक मटेरियल हैंडलिंग इक्विपमेंट रीच-ट्रक ऑपरेटर रग्ड हैंडहेल्ड टर्मिनल लेकर आता है। पैलेट को रैक की ओर ले जाने से पहले, SAP EWM वेयरहाउस टास्क शुरू करने के लिए कौन सा अनिवार्य डिजिटल स्कैन किया जाना चाहिए?",
-          "mr": "स्टेज 3: व्हेईकल आणि बॅटरी पार्ट्स पुट-अवेमध्ये आपले स्वागत आहे! इनवर्ड ब्रेक कॅलिपर लॉट तपासणीत मंजूर झाला असून त्यावर हिरवा 'QC Pass' शिक्का आहे. एक मटेरियल हँडलिंग इक्विपमेंट रीच-ट्रक ऑपरेटर हँडहेल्ड टर्मिनल घेऊन येतो. पॅलेट रॅककडे नेण्यापूर्वी, SAP EWM वेअरहाऊस टास्क सुरू करण्यासाठी कोणते अनिवार्य डिजिटल स्कॅनिंग केले पाहिजे?"
+          "hi": "स्टेज 3: पार्ट्स पुट-अवे में आपका स्वागत है! ब्रेक कैलीपर लॉट जांच में पास हो चुका है और उस पर हरी 'QC Pass' सील लगी है। रीच-ट्रक ऑपरेटर बारकोड स्कैनर लेकर आता है। पैलेट को रैक की ओर ले जाने से पहले, सिस्टम में पुट-अवे टास्क शुरू करने के लिए कौन सा बारकोड स्कैन करना होगा?",
+          "mr": "स्टेज 3: व्हेईकल आणि बॅटरी पार्ट्स पुट-अवेमध्ये आपले स्वागत आहे! ब्रेक कॅलिपर लॉट तपासणीत पास झाला असून त्यावर हिरवा 'QC Pass' शिक्का आहे. रीच-ट्रक ऑपरेटर बारकोड स्कॅनर घेऊन येतो. पॅलेट रॅककडे नेण्यापूर्वी, सिस्टीममध्ये पुट-अवे टास्क सुरू करण्यासाठी कोणता बारकोड स्कॅन केला पाहिजे?"
         }
       },
       "interaction": {
@@ -64,8 +64,8 @@
         "safetyCritical": true,
         "question": {
           "en": "In Goods Receipt Note staging, what must the Material Handling Equipment operator scan first with the rugged handheld terminal to generate the Put-Away Warehouse Task?",
-          "hi": "Goods Receipt Note स्टेजिंग में, पुट-अवे वेयरहाउस टास्क बनाने के लिए मटेरियल हैंडलिंग इक्विपमेंट ऑपरेटर को रग्ड हैंडहेल्ड टर्मिनल से सबसे पहले क्या स्कैन करना चाहिए?",
-          "mr": "Goods Receipt Note स्टेजिंगमध्ये, पुट-अवे वेअरहाऊस टास्क तयार करण्यासाठी मटेरियल हँडलिंग इक्विपमेंट ऑपरेटरने हँडहेल्ड टर्मिनलद्वारे सर्वात आधी काय स्कॅन केले पाहिजे?"
+          "hi": "Goods Receipt Note स्टेजिंग में, पुट-अवे वेयरहाउस टास्क बनाने के लिए फोर्कलिफ्ट ऑपरेटर को बारकोड स्कैनर मशीन से सबसे पहले क्या स्कैन करना चाहिए?",
+          "mr": "Goods Receipt Note स्टेजिंगमध्ये, पुट-अवे वेअरहाऊस टास्क तयार करण्यासाठी फोर्कलिफ्ट ऑपरेटरने स्कॅनर मशीनद्वारे सर्वात आधी काय स्कॅन केले पाहिजे?"
         },
         "options": [
           {
@@ -107,8 +107,8 @@
         ],
         "prompt": {
           "en": "In Goods Receipt Note staging, what must the Material Handling Equipment operator scan first with the rugged handheld terminal to generate the Put-Away Warehouse Task?",
-          "hi": "Goods Receipt Note स्टेजिंग में, पुट-अवे वेयरहाउस टास्क बनाने के लिए मटेरियल हैंडलिंग इक्विपमेंट ऑपरेटर को रग्ड हैंडहेल्ड टर्मिनल से सबसे पहले क्या स्कैन करना चाहिए?",
-          "mr": "Goods Receipt Note स्टेजिंगमध्ये, पुट-अवे वेअरहाऊस टास्क तयार करण्यासाठी मटेरियल हँडलिंग इक्विपमेंट ऑपरेटरने हँडहेल्ड टर्मिनलद्वारे सर्वात आधी काय स्कॅन केले पाहिजे?"
+          "hi": "Goods Receipt Note स्टेजिंग में, पुट-अवे वेयरहाउस टास्क बनाने के लिए फोर्कलिफ्ट ऑपरेटर को बारकोड स्कैनर मशीन से सबसे पहले क्या स्कैन करना चाहिए?",
+          "mr": "Goods Receipt Note स्टेजिंगमध्ये, पुट-अवे वेअरहाऊस टास्क तयार करण्यासाठी फोर्कलिफ्ट ऑपरेटरने स्कॅनर मशीनद्वारे सर्वात आधी काय स्कॅन केले पाहिजे?"
         },
         "id": "c1-q21",
         "audioSrc": "/audio/voiceover/s03_sc01_prompt.mp3"
@@ -118,7 +118,7 @@
         "sopClause": "SOP for Plant Operations Putaway for Vehicle and Battery Parts Clause 4.1",
         "why": {
           "en": "The putaway cycle strictly begins by scanning the pallet-level Handling Unit label located on the Goods Receipt Note sticker. Scanning the Handling Unit barcode creates the active Warehouse (WH) Task in SAP EWM, automatically calculating the designated storage bin and putaway type. Moving pallets without an active WH task causes critical inventory discrepancies and untracked warehouse labor.",
-          "hi": "पुट-अवे चक्र सख्ती से Goods Receipt Note स्टिकर पर स्थित पैलेट-स्तरीय हैंडलिंग यूनिट लेबल को स्कैन करके शुरू होता है। हैंडलिंग यूनिट बारकोड को स्कैन करने से SAP EWM में सक्रिय वेयरहाउस (WH) टास्क बन जाता है, जो स्वचालित रूप से निर्दिष्ट स्टोरेज बिन और पुट-अवे प्रकार की गणना करता है। बिना सक्रिय WH कार्य के पैलेट ले जाने से गंभीर इन्वेंट्री विसंगतियां पैदा होती हैं।",
+          "hi": "पुट-अवे चक्र सख्ती से Goods Receipt Note स्टिकर पर स्थित पैलेट-स्तरीय हैंडलिंग यूनिट लेबल को स्कैन करके शुरू होता है। हैंडलिंग यूनिट बारकोड को स्कैन करने से SAP EWM में सक्रिय वेयरहाउस (WH) टास्क बन जाता है, जो स्वचालित रूप से निर्दिष्ट स्टोरेज बिन और पुट-अवे प्रकार की गणना करता है। बिना सक्रिय WH कार्य के पैलेट ले जाने से गंभीर स्टॉक का हिसाब गड़बड़ा जाता है।",
           "mr": "पुट-अवे सायकलची सुरुवात काटेकोरपणे Goods Receipt Note स्टिकरवरील पॅलेट-स्तरीय हँडलिंग युनिट लेबल स्कॅन करून होते. हँडलिंग युनिट बारकोड स्कॅन केल्याने SAP EWM मध्ये सक्रिय वेअरहाऊस (WH) टास्क तयार होते, जे आपोआप स्टोरेज बिन आणि पुट-अवे प्रकार ठरवते. सक्रिय WH टास्कशिवाय पॅलेट हलवल्यास इन्व्हेंटरीमध्ये तफावत निर्माण होते."
         }
       }
@@ -128,7 +128,7 @@
       "stepNumber": 2,
       "title": {
         "en": "Route Segregation: HRR vs Trolley Staging",
-        "hi": "मार्ग पृथक्करण: HRR बनाम ट्रॉली स्टेजिंग",
+        "hi": "रास्ता अलग करना: HRR बनाम ट्रॉली स्टेजिंग",
         "mr": "मार्ग विभाजन: HRR विरुद्ध ट्रॉली स्टेजिंग"
       },
       "media": {
@@ -141,18 +141,18 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "The Handling Unit has been scanned and the warehouse task is active! The forklift reaches a major internal warehouse junction with two diverging paths. Inbound materials arrive in two different packaging forms: standard blue Foldable Large Container crates and specialized wheeled body trolleys. How must these two material streams be segregated?",
-            "hi": "हैंडलिंग यूनिट को स्कैन कर लिया गया है और वेयरहाउस टास्क सक्रिय है! फोर्कलिफ्ट दो अलग-अलग रास्तों वाले एक प्रमुख आंतरिक वेयरहाउस जंक्शन पर पहुंचती है। आवक सामग्री दो अलग-अलग पैकेजिंग रूपों में आती है: मानक नीले फोल्डेबल लार्ज कंटेनर क्रेट और विशेष पहिएदार बॉडी ट्रॉलियां। इन दोनों सामग्री धाराओं को कैसे अलग किया जाना चाहिए?",
-            "mr": "हँडलिंग युनिट स्कॅन केले गेले आहे आणि वेअरहाऊस टास्क सक्रिय आहे! फोर्कलिफ्ट दोन वेगवेगळ्या मार्गांसह एका मुख्य अंतर्गत वेअरहाऊस जंक्शनवर पोहोचते. इनवर्ड साहित्य दोन वेगवेगळ्या पॅकेजिंग प्रकारांमध्ये येते: मानक निळे फोल्डेबल लार्ज कंटेनर क्रेट्स आणि विशेष चाके असलेल्या बॉडी ट्रॉलीज. या दोन साहित्याचे विभाजन कसे केले पाहिजे?"
+            "en": "The Handling Unit has been scanned and the warehouse task is active! The forklift reaches a major internal junction with two paths. Inbound parts arrive in two packaging forms: standard blue FLC crates and wheeled body trolleys. How must these two material streams be separated?",
+            "hi": "हैंडलिंग यूनिट स्कैन हो चुका है और वेयरहाउस टास्क चालू है! फोर्कलिफ्ट वेयरहाउस के एक चौराहे पर पहुंचती है जहां दो रास्ते हैं। आया हुआ माल दो अलग पैकिंग में है: मानक नीले क्रेट और पहिए वाली बॉडी ट्रॉलियां। इन दोनों को अलग-अलग कहां ले जाना चाहिए?",
+            "mr": "हँडलिंग युनिट स्कॅन झाले आहे आणि वेअरहाऊस टास्क सुरू आहे! फोर्कलिफ्ट वेअरहाऊसच्या अशा चौकात पोहोचते जिथून दोन वेगवेगळे रस्ते फुटतात. आलेला माल दोन वेगवेगळ्या पॅकिंगमध्ये आहे: निळे क्रेट्स आणि चाकांची बॉडी ट्रॉली. या दोन्हींना कुठे पाठवले पाहिजे?"
           },
           "audioSrc": "/audio/voiceover/s03_sc02_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Spot on! Standard Foldable Large Container crates and bins are routed to High-Rise Racks for vertical stowing via reach-trucks, while large body frames and battery modules on heavy trolleys are moved directly to the designated Trolley Staging Area for direct line feeding!",
-            "hi": "बिल्कुल सही! मानक फोल्डेबल लार्ज कंटेनर क्रेट और डिब्बे रीच-ट्रक द्वारा वर्टिकल स्टॉविंग के लिए हाई-राइज रैक में भेजे जाते हैं, जबकि भारी ट्रॉलियों पर बड़े बॉडी फ्रेम और बैटरी मॉड्यूल सीधे नामित ट्रॉली स्टेजिंग क्षेत्र में ले जाए जाते हैं!",
-            "mr": "अगदी बरोबर! मानक फोल्डेबल लार्ज कंटेनर क्रेट्स आणि डबे रीच-ट्रकद्वारे वर ठेवण्यासाठी हाय-राइज रॅक्स कडे पाठवले जातात, तर मोठ्या बॉडी फ्रेम्स आणि हेवी ट्रॉलीवरील बॅटरी मॉड्यूल्स थेट नियुक्त ट्रॉली स्टेजिंग भागात नेले जातात!"
+            "en": "Spot on! Standard FLC crates go to High-Rise Racks using reach-trucks. Wheeled body trolleys go directly to ground-level Trolley Staging lanes.",
+            "hi": "बिल्कुल सही! नीले क्रेट्स को रीच-ट्रक से हाई-राइज रैक में ऊपर रखा जाता है, जबकि बड़ी बॉडी फ्रेम और भारी बैटरी ट्रॉलियों को सीधे लाइन फीडिंग एरिया में भेजा जाता है!",
+            "mr": "अगदी बरोबर! निळे क्रेट्स रीच-ट्रकच्या सहाय्याने हाय-राइज रॅकमध्ये वर ठेवले जातात, तर मोठ्या बॉडी फ्रेम्स आणि हेवी ट्रॉलीज थेट लाईन फीडिंग भागात नेल्या जातात!"
           },
           "audioSrc": "/audio/voiceover/s03_sc02_correct.mp3"
         },
@@ -160,15 +160,15 @@
           "pose": "warning",
           "text": {
             "en": "Route routing error! Wheeled trolleys cannot be placed on High-Rise Racks due to beam clearance and weight distribution hazards, and Foldable Large Container pallets cannot block the floor-level trolley feeding lanes!",
-            "hi": "मार्ग रूटिंग त्रुटि! बीम क्लीयरेंस और वजन वितरण खतरों के कारण पहिएदार ट्रॉलियों को हाई-राइज रैक पर नहीं रखा जा सकता है, और फोल्डेबल लार्ज कंटेनर पैलेट फर्श-स्तरीय ट्रॉली फीडिंग लेन को ब्लॉक नहीं कर सकते हैं!",
-            "mr": "मार्ग नियोजन चूक! बीम क्लिअरन्स आणि वजन वितरणाच्या धोक्यांमुळे चाके असलेल्या ट्रॉली हाय-राइज रॅकमध्ये ठेवता येत नाहीत, आणि फोल्डेबल लार्ज कंटेनर पॅलेट्स तळमजल्यावरील ट्रॉली फीडिंग लेन अडवू शकत नाहीत!"
+            "hi": "रास्ते का गलत चुनाव! पहियों वाली ट्रॉली को हाई-राइज रैक पर नहीं रख सकते, और न ही नीले क्रेट्स से ट्रॉली का रास्ता रोक सकते हैं!",
+            "mr": "चुकीचा मार्ग! चाकांच्या ट्रॉली हाय-राइज रॅकमध्ये ठेवता येत नाहीत, आणि क्रेट्स ठेवून ट्रॉलीचा रस्ता अडवता येत नाही!"
           },
           "audioSrc": "/audio/voiceover/s03_sc02_wrong.mp3"
         },
         "dialog": {
-          "en": "The Handling Unit has been scanned and the warehouse task is active! The forklift reaches a major internal warehouse junction with two diverging paths. Inbound materials arrive in two different packaging forms: standard blue Foldable Large Container crates and specialized wheeled body trolleys. How must these two material streams be segregated?",
-          "hi": "हैंडलिंग यूनिट को स्कैन कर लिया गया है और वेयरहाउस टास्क सक्रिय है! फोर्कलिफ्ट दो अलग-अलग रास्तों वाले एक प्रमुख आंतरिक वेयरहाउस जंक्शन पर पहुंचती है। आवक सामग्री दो अलग-अलग पैकेजिंग रूपों में आती है: मानक नीले फोल्डेबल लार्ज कंटेनर क्रेट और विशेष पहिएदार बॉडी ट्रॉलियां। इन दोनों सामग्री धाराओं को कैसे अलग किया जाना चाहिए?",
-          "mr": "हँडलिंग युनिट स्कॅन केले गेले आहे आणि वेअरहाऊस टास्क सक्रिय आहे! फोर्कलिफ्ट दोन वेगवेगळ्या मार्गांसह एका मुख्य अंतर्गत वेअरहाऊस जंक्शनवर पोहोचते. इनवर्ड साहित्य दोन वेगवेगळ्या पॅकेजिंग प्रकारांमध्ये येते: मानक निळे फोल्डेबल लार्ज कंटेनर क्रेट्स आणि विशेष चाके असलेल्या बॉडी ट्रॉलीज. या दोन साहित्याचे विभाजन कसे केले पाहिजे?"
+          "en": "The Handling Unit has been scanned and the warehouse task is active! The forklift reaches a major internal junction with two paths. Inbound parts arrive in two packaging forms: standard blue FLC crates and wheeled body trolleys. How must these two material streams be separated?",
+          "hi": "हैंडलिंग यूनिट स्कैन हो चुका है और वेयरहाउस टास्क चालू है! फोर्कलिफ्ट वेयरहाउस के एक चौराहे पर पहुंचती है जहां दो रास्ते हैं। आया हुआ माल दो अलग पैकिंग में है: मानक नीले क्रेट और पहिए वाली बॉडी ट्रॉलियां। इन दोनों को अलग-अलग कहां ले जाना चाहिए?",
+          "mr": "हँडलिंग युनिट स्कॅन झाले आहे आणि वेअरहाऊस टास्क सुरू आहे! फोर्कलिफ्ट वेअरहाऊसच्या अशा चौकात पोहोचते जिथून दोन वेगवेगळे रस्ते फुटतात. आलेला माल दोन वेगवेगळ्या पॅकिंगमध्ये आहे: निळे क्रेट्स आणि चाकांची बॉडी ट्रॉली. या दोन्हींना कुठे पाठवले पाहिजे?"
         }
       },
       "interaction": {
@@ -177,7 +177,7 @@
         "safetyCritical": true,
         "question": {
           "en": "Where must each incoming container type be routed at the warehouse junction?",
-          "hi": "वेयरहाउस जंक्शन पर प्रत्येक आवक कंटेनर प्रकार को कहाँ भेजा जाना चाहिए?",
+          "hi": "वेयरहाउस जंक्शन पर प्रत्येक आया हुआ कंटेनर प्रकार को कहाँ भेजा जाना चाहिए?",
           "mr": "वेअरहाऊस जंक्शनवर प्रत्येक इनवर्ड कंटेनर प्रकार कुठे पाठवला पाहिजे?"
         },
         "instruction": {
@@ -248,8 +248,8 @@
           }
         ],
         "prompt": {
-          "en": "Where must each incoming container type be routed at the warehouse junction?",
-          "hi": "वेयरहाउस जंक्शन पर प्रत्येक आवक कंटेनर प्रकार को कहाँ भेजा जाना चाहिए?",
+          "en": "How should FLC crates and body trolleys be separated at the junction?",
+          "hi": "वेयरहाउस जंक्शन पर प्रत्येक आया हुआ कंटेनर प्रकार को कहाँ भेजा जाना चाहिए?",
           "mr": "वेअरहाऊस जंक्शनवर प्रत्येक इनवर्ड कंटेनर प्रकार कुठे पाठवला पाहिजे?"
         },
         "id": "c1-q24",
@@ -260,7 +260,7 @@
         "sopClause": "SOP for Plant Operations Putaway for Vehicle and Battery Parts Clause 4.2 & Question Bank Q24",
         "why": {
           "en": "Warehouse route segregation prevents traffic jams and severe structural rack damage. High-Rise Racks are engineered strictly for palletized Foldable Large Container bins stowed by certified reach-trucks. Oversized components arriving on custom wheeled trolleys (such as scooter mainframes and battery packs) are strictly routed to the designated floor Trolley Staging Area for direct tugger delivery to assembly lines.",
-          "hi": "वेयरहाउस रूट सेग्रीगेशन ट्रैफिक जाम और गंभीर संरचनात्मक रैक क्षति को रोकता है। हाई-राइज रैक सख्ती से प्रमाणित रीच-ट्रक द्वारा रखे गए पैलेटाइज़्ड फोल्डेबल लार्ज कंटेनर डिब्बे के लिए इंजीनियर किए गए हैं। कस्टम पहिएदार ट्रॉलियों (जैसे स्कूटर मेनफ्रेम और बैटरी पैक) पर आने वाले बड़े घटकों को असेंबली लाइनों पर सीधे टगर डिलीवरी के लिए नामित फर्श ट्रॉली स्टेजिंग क्षेत्र में ले जाया जाता है।",
+          "hi": "वेयरहाउस रूट सेग्रीगेशन ट्रैफिक जाम और गंभीर संरचनात्मक रैक क्षति को रोकता है। हाई-राइज रैक सख्ती से प्रमाणित रीच-ट्रक द्वारा रखे गए पैलेटाइज़्ड फोल्डेबल लार्ज कंटेनर डिब्बे के लिए इंजीनियर किए गए हैं। कस्टम पहिएदार ट्रॉलियों (जैसे स्कूटर मेनफ्रेम और बैटरी पैक) पर आने वाले बड़े पार्ट्सों को असेंबली लाइनों पर सीधे टगर डिलीवरी के लिए नामित फर्श ट्रॉली स्टेजिंग क्षेत्र में ले जाया जाता है।",
           "mr": "वेअरहाऊस मार्ग विभाजन ट्रॅफिक आणि रॅकचे नुकसान टाळते. हाय-राइज रॅक्स हे रीच-ट्रकद्वारे ठेवलेल्या पॅलेटाइज्ड फोल्डेबल लार्ज कंटेनर डब्यांसाठी तयार केले आहेत. कस्टम चाकांच्या ट्रॉलीवरील मोठे भाग (जसे की चेसिस मेनफ्रेम आणि बॅटरी पॅक) थेट असेंब्ली लाइनवर नेण्यासाठी नियुक्त ट्रॉली स्टेजिंग भागात पाठवले जातात."
         }
       }
@@ -285,34 +285,34 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "The reach-truck has safely transported the Foldable Large Container pallet down Aisle B of the High-Rise Racks. The hydraulic forks elevate the pallet onto shelf level 4 at bin location Rack Bin B-04. The pallet is physically resting on the steel beam. What final mandatory action must the operator execute right now before driving away?",
-            "hi": "रीच-ट्रक ने हाई-राइज रैक के आइल बी में फोल्डेबल लार्ज कंटेनर पैलेट को सुरक्षित रूप से पहुंचा दिया है। हाइड्रोलिक कांटे पैलेट को बिन स्थान रैक बीम B-04 पर शेल्फ स्तर 4 पर उठाते हैं। पैलेट भौतिक रूप से स्टील बीम पर रखा हुआ है। ऑपरेटर को वहां से जाने से पहले अभी कौन सी अंतिम अनिवार्य कार्रवाई करनी होगी?",
-            "mr": "रीच-ट्रकने फोल्डेबल लार्ज कंटेनर पॅलेट हाय-राइज रॅक्सच्या आइल बी मध्ये सुरक्षितपणे नेले आहे. हायड्रॉलिक फोर्क्स पॅलेटला बिन स्थानक रॅक बीम B-04 वर शेल्फ लेव्हल 4 वर उचलतात. पॅलेट प्रत्यक्षपणे स्टील बीमवर ठेवलेले आहे. ऑपरेटरने तिथून निघण्यापूर्वी आता कोणती शेवटची अनिवार्य कृती केली पाहिजे?"
+            "en": "The reach-truck places the Foldable Large Container crate at High-Rise Rack Aisle B, Level 2, Bin 12! To finalize the digital bin marriage in SAP warehouse management system, what final scan must the operator execute?",
+            "hi": "रीच-ट्रक ने क्रेट को हाई-राइज रैक के आइल B, लेवल 2, बिन 12 में रख दिया है! सिस्टम में इस रैक की सही जगह दर्ज (बिन मैरिज) करने के लिए ऑपरेटर को आखिरी में क्या स्कैन करना होगा?",
+            "mr": "रीच-ट्रक ऑपरेटरने क्रेट हाय-राइज रॅकच्या आइल B, लेव्हल 2, बिन 12 मध्ये ठेवला आहे! सिस्टीममध्ये हा रॅक अचूक जोडण्यासाठी (बिन मॅरेज) शेवटी काय स्कॅन केले पाहिजे?"
           },
           "audioSrc": "/audio/voiceover/s03_sc03_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Masterful execution! The operator must scan the location QR code on rack beam Rack Bin B-04. This marries the pallet Handling Unit to the specific storage bin in SAP warehouse management system, updates system G-stock, and closes the active Warehouse Task!",
-            "hi": "उत्कृष्ट निष्पादन! ऑपरेटर को रैक बीम रैक बीम B-04 पर लगे लोकेशन QR कोड को स्कैन करना होगा। यह SAP EWM में पैलेट हैंडलिंग यूनिट को विशिष्ट स्टोरेज बिन से जोड़ता (मैरी करता) है, सिस्टम G-स्टॉक को अपडेट करता है और सक्रिय वेयरहाउस टास्क को बंद करता है!",
-            "mr": "उत्कृष्ट अंमलबजावणी! ऑपरेटरने रॅक बीम रॅक बीम B-04 वरील लोकेशन QR कोड स्कॅन केला पाहिजे. यामुळे SAP EWM मध्ये पॅलेट हँडलिंग युनिट चे विशिष्ट स्टोरेज बिनशी लग्न (मॅरेज) होते, सिस्टीम G-स्टॉक अपडेट होतो आणि सक्रिय वेअरहाऊस टास्क बंद होतो!"
+            "en": "Flawless execution! Scanning the physical QR code on the rack beam creates the digital bin marriage in SAP warehouse management system, confirms the Warehouse Task, and marks the inventory as available stock!",
+            "hi": "शानदार! रैक बीम पर लगे लोकेशन क्यूआर कोड को स्कैन करते ही सिस्टम में 'बिन मैरिज' पूरी हो जाती है, टास्क क्लोज होता है और स्टॉक तुरंत दिखने लगता है।",
+            "mr": "उत्कृष्ट! रॅक बीमवरील लोकेशन QR कोड स्कॅन करताच सिस्टीममध्ये 'बिन मॅरेज' पूर्ण होते, टास्क बंद होतो आणि साठा सिस्टीममध्ये दिसू लागतो."
           },
           "audioSrc": "/audio/voiceover/s03_sc03_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Critical omission! Leaving the rack without scanning the location QR code leaves the Warehouse Task open in SAP warehouse management system. The inventory remains invisible to picking teams and negatively impacts your operator efficiency KPI!",
-            "hi": "गंभीर चूक! लोकेशन QR कोड को स्कैन किए बिना रैक छोड़ने से SAP EWM में वेयरहाउस टास्क खुला रह जाता है। इन्वेंट्री पिकिंग टीमों के लिए अदृश्य रहती है और आपके ऑपरेटर दक्षता KPI पर नकारात्मक प्रभाव डालती है!",
-            "mr": "गंभीर चूक! लोकेशन QR कोड स्कॅन न करता रॅक सोडल्यास SAP EWM मध्ये वेअरहाऊस टास्क उघडा राहतो. इन्व्हेंटरी पिकिंग टीमसाठी अदृश्य राहते आणि तुमच्या ऑपरेटर कार्यक्षमता KPI वर वाईट परिणाम होतो!"
+            "en": "Incomplete task! Moving the pallet into the rack is not enough. Without scanning the beam QR code, SAP warehouse management system cannot verify the bin marriage, leaving the task hanging and the stock unavailable!",
+            "hi": "गलत कदम! रैक बीम का क्यूआर कोड स्कैन किए बिना सिस्टम में टास्क बंद नहीं होगा और माल गायब दिखेगा!",
+            "mr": "चुकीचे पाऊल! रॅक बीमचा QR कोड स्कॅन केल्याशिवाय सिस्टीममध्ये टास्क बंद होणार नाही आणि माल सिस्टीममध्ये दिसणार नाही!"
           },
           "audioSrc": "/audio/voiceover/s03_sc03_wrong.mp3"
         },
         "dialog": {
-          "en": "The reach-truck has safely transported the Foldable Large Container pallet down Aisle B of the High-Rise Racks. The hydraulic forks elevate the pallet onto shelf level 4 at bin location Rack Bin B-04. The pallet is physically resting on the steel beam. What final mandatory action must the operator execute right now before driving away?",
-          "hi": "रीच-ट्रक ने हाई-राइज रैक के आइल बी में फोल्डेबल लार्ज कंटेनर पैलेट को सुरक्षित रूप से पहुंचा दिया है। हाइड्रोलिक कांटे पैलेट को बिन स्थान रैक बीम B-04 पर शेल्फ स्तर 4 पर उठाते हैं। पैलेट भौतिक रूप से स्टील बीम पर रखा हुआ है। ऑपरेटर को वहां से जाने से पहले अभी कौन सी अंतिम अनिवार्य कार्रवाई करनी होगी?",
-          "mr": "रीच-ट्रकने फोल्डेबल लार्ज कंटेनर पॅलेट हाय-राइज रॅक्सच्या आइल बी मध्ये सुरक्षितपणे नेले आहे. हायड्रॉलिक फोर्क्स पॅलेटला बिन स्थानक रॅक बीम B-04 वर शेल्फ लेव्हल 4 वर उचलतात. पॅलेट प्रत्यक्षपणे स्टील बीमवर ठेवलेले आहे. ऑपरेटरने तिथून निघण्यापूर्वी आता कोणती शेवटची अनिवार्य कृती केली पाहिजे?"
+          "en": "The reach-truck places the Foldable Large Container crate at High-Rise Rack Aisle B, Level 2, Bin 12! To finalize the digital bin marriage in SAP warehouse management system, what final scan must the operator execute?",
+          "hi": "रीच-ट्रक ने क्रेट को हाई-राइज रैक के आइल B, लेवल 2, बिन 12 में रख दिया है! सिस्टम में इस रैक की सही जगह दर्ज (बिन मैरिज) करने के लिए ऑपरेटर को आखिरी में क्या स्कैन करना होगा?",
+          "mr": "रीच-ट्रक ऑपरेटरने क्रेट हाय-राइज रॅकच्या आइल B, लेव्हल 2, बिन 12 मध्ये ठेवला आहे! सिस्टीममध्ये हा रॅक अचूक जोडण्यासाठी (बिन मॅरेज) शेवटी काय स्कॅन केले पाहिजे?"
         }
       },
       "interaction": {
@@ -321,8 +321,8 @@
         "safetyCritical": true,
         "question": {
           "en": "The Foldable Large Container pallet is resting on shelf Rack Beam B-04. What mandatory action must the operator execute to formally conclude the put-away?",
-          "hi": "फोल्डेबल लार्ज कंटेनर पैलेट शेल्फ रैक बीम B-04 पर रखा हुआ है। पुट-अवे को औपचारिक रूप से समाप्त करने के लिए ऑपरेटर को कौन सी अनिवार्य कार्रवाई करनी होगी?",
-          "mr": "फोल्डेबल लार्ज कंटेनर पॅलेट शेल्फ रॅक बीम B-04 वर ठेवलेले आहे. पुट-अवे अधिकृतपणे पूर्ण करण्यासाठी ऑपरेटरने कोणती अनिवार्य कृती केली पाहिजे?"
+          "hi": "फोल्डेबल लार्ज कंटेनर पैलेट शेल्फ रैक बीम B-04 पर रखा हुआ है। पुट-अवे को औपचारिक रूप से समाप्त करने के लिए ऑपरेटर को कौन सी ज़रूरी कदम करनी होगी?",
+          "mr": "फोल्डेबल लार्ज कंटेनर पॅलेट शेल्फ रॅक बीम B-04 वर ठेवलेले आहे. पुट-अवे अधिकृतपणे पूर्ण करण्यासाठी ऑपरेटरने कोणती गरजेचे कृती केली पाहिजे?"
         },
         "options": [
           {
@@ -364,8 +364,8 @@
         ],
         "prompt": {
           "en": "The Foldable Large Container pallet is resting on shelf Rack Beam B-04. What mandatory action must the operator execute to formally conclude the put-away?",
-          "hi": "फोल्डेबल लार्ज कंटेनर पैलेट शेल्फ रैक बीम B-04 पर रखा हुआ है। पुट-अवे को औपचारिक रूप से समाप्त करने के लिए ऑपरेटर को कौन सी अनिवार्य कार्रवाई करनी होगी?",
-          "mr": "फोल्डेबल लार्ज कंटेनर पॅलेट शेल्फ रॅक बीम B-04 वर ठेवलेले आहे. पुट-अवे अधिकृतपणे पूर्ण करण्यासाठी ऑपरेटरने कोणती अनिवार्य कृती केली पाहिजे?"
+          "hi": "फोल्डेबल लार्ज कंटेनर पैलेट शेल्फ रैक बीम B-04 पर रखा हुआ है। पुट-अवे को औपचारिक रूप से समाप्त करने के लिए ऑपरेटर को कौन सी ज़रूरी कदम करनी होगी?",
+          "mr": "फोल्डेबल लार्ज कंटेनर पॅलेट शेल्फ रॅक बीम B-04 वर ठेवलेले आहे. पुट-अवे अधिकृतपणे पूर्ण करण्यासाठी ऑपरेटरने कोणती गरजेचे कृती केली पाहिजे?"
         },
         "id": "c1-q21b",
         "audioSrc": "/audio/voiceover/s03_sc03_prompt.mp3"
@@ -375,8 +375,8 @@
         "sopClause": "SOP for Plant Operations Putaway for Vehicle and Battery Parts Clause 4.3 & Failure Mode 2",
         "why": {
           "en": "Physical placement without a destination location scan creates ghost inventory. Scanning the rack QR code performs the 'bin marriage' in SAP EWM, officially transitioning the material into available G-stock. Skipping this scan leaves the Warehouse Task open against the operator ID and blocks downstream picking orders.",
-          "hi": "गंतव्य स्थान स्कैन के बिना भौतिक नियुक्ति से घोस्ट इन्वेंट्री बनती है। रैक QR कोड को स्कैन करने से SAP EWM में 'बिन मैरिज' पूरी होती है, जिससे सामग्री आधिकारिक तौर पर उपलब्ध G-स्टॉक में बदल जाती है। इस स्कैन को छोड़ने से वेयरहाउस टास्क ऑपरेटर आईडी पर खुला रहता है और बाद के पिकिंग ऑर्डर ब्लॉक हो जाते हैं।",
-          "mr": "गंतव्य स्थान स्कॅन न करता प्रत्यक्ष प्लेसमेंट केल्यास घोस्ट इन्व्हेंटरी तयार होते. रॅक QR कोड स्कॅन केल्याने SAP EWM मध्ये 'बिन मॅरेज' पूर्ण होते आणि साहित्य उपलब्ध G-स्टॉकमध्ये बदलते. हे स्कॅन वगळल्यास ऑपरेटर आयडीवर वेअरहाऊस टास्क उघडा राहतो आणि पुढील पिकिंग ऑर्डर्स ब्लॉक होतात."
+          "hi": "गंतव्य स्थान स्कैन के बिना असल नियुक्ति से सिस्टम और फिजिकल स्टॉक में फर्क आ जाता है (घोस्ट स्टॉक)। रैक QR कोड को स्कैन करने से SAP EWM में 'बिन मैरिज' पूरी होती है, जिससे सामग्री आधिकारिक तौर पर उपलब्ध G-स्टॉक में बदल जाती है। इस स्कैन को छोड़ने से वेयरहाउस टास्क ऑपरेटर आईडी पर खुला रहता है और बाद के पिकिंग ऑर्डर ब्लॉक हो जाते हैं।",
+          "mr": "गंतव्य स्थान स्कॅन न करता प्रत्यक्ष प्लेसमेंट केल्यास सिस्टीम आणि प्रत्यक्ष स्टॉकमध्ये तफावत निर्माण होते (घोस्ट स्टॉक). रॅक QR कोड स्कॅन केल्याने SAP EWM मध्ये 'बिन मॅरेज' पूर्ण होते आणि साहित्य उपलब्ध G-स्टॉकमध्ये बदलते. हे स्कॅन वगळल्यास ऑपरेटर आयडीवर वेअरहाऊस टास्क उघडा राहतो आणि पुढील पिकिंग ऑर्डर्स ब्लॉक होतात."
         }
       }
     },
@@ -399,34 +399,34 @@
         "intro": {
           "pose": "warning",
           "text": {
-            "en": "Alert! A trainee operator lifted a pallet of 100 brake calipers onto Rack Beam B-04, lowered the forks, and immediately drove away toward the breakroom without scanning the rack QR code. What is the immediate operational and systemic impact of omitting this scan?",
-            "hi": "चेतावनी! एक प्रशिक्षु ऑपरेटर ने 100 ब्रेक कैलिपर्स का एक पैलेट रैक बीम B-04 पर रखा, कांटे नीचे किए, और रैक QR कोड को स्कैन किए बिना तुरंत ब्रेक रूम की ओर चला गया। इस स्कैन को छोड़ने का तत्काल परिचालन और प्रणालीगत प्रभाव क्या होगा?",
-            "mr": "सावधान! एका प्रशिक्षणार्थी ऑपरेटरने 100 ब्रेक कॅलिपर्सचे पॅलेट रॅक बीम B-04 वर ठेवले, फोर्क्स खाली केले आणि रॅक QR कोड स्कॅन न करता लगेच निघून गेला. हे स्कॅन वगळल्याचा तात्काळ ऑपरेशनल आणि सिस्टीमवर काय परिणाम होईल?"
+            "en": "Warning! A trainee operator lifted 100 brake calipers, placed them into High-Rise Rack bin HRR-B-04-12, but drove away without scanning the rack location QR code! What serious warehouse defect does this cause?",
+            "hi": "चेतावनी! एक नए ऑपरेटर ने 100 ब्रेक कैलिपर्स उठाए और रैक बिन में रख दिए, लेकिन रैक लोकेशन का क्यूआर कोड स्कैन किए बिना ही गाड़ी लेकर चला गया! इससे वेयरहाउस में क्या बड़ी गड़बड़ी होगी?",
+            "mr": "सावधान! एका नवीन ऑपरेटरने 100 ब्रेक कॅलिपर्स रॅक बिनमध्ये ठेवले, पण रॅकवरील लोकेशन QR कोड स्कॅन न करताच निघून गेला! यामुळे वेअरहाऊसमध्ये कोणता मोठा गोंधळ उडेल?"
           },
           "audioSrc": "/audio/voiceover/s03_sc04_intro.mp3"
         },
         "onCorrect": {
           "pose": "trophy",
           "text": {
-            "en": "Critical SOP insight! Because the destination scan was skipped, SAP warehouse management system leaves the Warehouse Task in an 'OPEN' state. The stock is never posted to active G-stock, making it invisible to downstream assembly line pickers, and the overdue task reflects directly as a negative breach on the operator's efficiency KPI! The Zone Leader must intervene to manually trace and close the task.",
-            "hi": "महत्वपूर्ण SOP अंतर्दृष्टि! चूंकि गंतव्य स्कैन छूट गया था, SAP EWM वेयरहाउस टास्क को 'OPEN' स्थिति में छोड़ देता है। स्टॉक कभी भी सक्रिय G-स्टॉक में पोस्ट नहीं होता है, जिससे यह डाउनस्ट्रीम असेंबली लाइन पिकर्स के लिए अदृश्य हो जाता है, और समय सीमा पार कर चुका कार्य सीधे ऑपरेटर के दक्षता KPI पर नकारात्मक उल्लंघन के रूप में दिखाई देता है! ज़ोन लीडर को कार्य को मैन्युअल रूप से ट्रेस करने और बंद करने के लिए हस्तक्षेप करना पड़ता है।",
-            "mr": "महत्त्वपूर्ण SOP माहिती! गंतव्य स्कॅन वगळल्यामुळे, SAP EWM वेअरहाऊस टास्क 'OPEN' स्थितीत ठेवते. साठा सक्रिय G-स्टॉकमध्ये नोंदवला जात नाही, ज्यामुळे असेंब्ली लाइन पिकर्ससाठी तो अदृश्य राहतो आणि रखडलेला टास्क थेट ऑपरेटरच्या कार्यक्षमता KPI वर नकारात्मक परिणाम करतो! झोन लीडरला मॅन्युअली शोध घेऊन टास्क बंद करावा लागतो."
+            "en": "Critical insight! Because the destination scan was skipped, SAP warehouse management system leaves the Warehouse Task open. The stock shows as missing in the system, risking line-stoppage even though parts are physically in the rack!",
+            "hi": "ज़रूरी बात! चूंकि लोकेशन स्कैन छूट गया था, सिस्टम में टास्क 'ओपन' ही रह जाता है। माल रैक में रखा होने पर भी सिस्टम में नहीं दिखता और असेंबली लाइन को लगता है कि स्टॉक खत्म हो गया!",
+            "mr": "महत्त्वाची गोष्ट! लोकेशन स्कॅन न केल्यामुळे सिस्टीममध्ये टास्क 'ओपन'च राहतो. प्रत्यक्षात माल रॅकवर असूनही सिस्टीममध्ये दिसत नाही आणि असेंब्ली लाईनला वाटते की माल संपला आहे!"
           },
           "audioSrc": "/audio/voiceover/s03_sc04_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Misconception! ERP systems cannot detect physical placement without a confirmation barcode scan. Skipping the scan does NOT automatically complete; instead, it creates ghost inventory, keeps the Warehouse Task open, and breaches your individual KPI performance.",
-            "hi": "गलतफहमी! ERP सिस्टम पुष्टिकरण बारकोड स्कैन के बिना भौतिक नियुक्ति का पता नहीं लगा सकते हैं। स्कैन छोड़ने से कार्य स्वचालित रूप से पूरा नहीं होता; इसके बजाय, यह घोस्ट इन्वेंट्री बनाता है, वेयरहाउस टास्क को खुला रखता है, और आपके व्यक्तिगत KPI प्रदर्शन का उल्लंघन करता है।",
-            "mr": "गैरसमज! पुष्टीकरण बारकोड स्कॅनशिवाय ERP सिस्टीम प्रत्यक्ष प्लेसमेंट ओळखू शकत नाही. स्कॅन वगळल्याने टास्क आपोआप पूर्ण होत नाही; उलट यामुळे घोस्ट इन्व्हेंटरी तयार होते, वेअरहाऊस टास्क उघडा राहतो आणि तुमच्या वैयक्तिक KPI चे नुकसान होते."
+            "en": "Major oversight! Leaving a task open creates a ghost stockout. The operator must return and complete the destination scan immediately.",
+            "hi": "गलत तरीका! लोकेशन स्कैन छोड़ देने से सिस्टम और फिजिकल स्टॉक का हिसाब बिगड़ जाता है। ऑपरेटर को तुरंत जाकर रैक बारकोड स्कैन करना होगा।",
+            "mr": "चुकीची पद्धत! लोकेशन स्कॅन न केल्यास सिस्टीममधील साठा आणि प्रत्यक्ष साठ्यात तफावत होते. ऑपरेटरने त्वरित जाऊन रॅक बारकोड स्कॅन केला पाहिजे."
           },
           "audioSrc": "/audio/voiceover/s03_sc04_wrong.mp3"
         },
         "dialog": {
-          "en": "Alert! A trainee operator lifted a pallet of 100 brake calipers onto Rack Beam B-04, lowered the forks, and immediately drove away toward the breakroom without scanning the rack QR code. What is the immediate operational and systemic impact of omitting this scan?",
-          "hi": "चेतावनी! एक प्रशिक्षु ऑपरेटर ने 100 ब्रेक कैलिपर्स का एक पैलेट रैक बीम B-04 पर रखा, कांटे नीचे किए, और रैक QR कोड को स्कैन किए बिना तुरंत ब्रेक रूम की ओर चला गया। इस स्कैन को छोड़ने का तत्काल परिचालन और प्रणालीगत प्रभाव क्या होगा?",
-          "mr": "सावधान! एका प्रशिक्षणार्थी ऑपरेटरने 100 ब्रेक कॅलिपर्सचे पॅलेट रॅक बीम B-04 वर ठेवले, फोर्क्स खाली केले आणि रॅक QR कोड स्कॅन न करता लगेच निघून गेला. हे स्कॅन वगळल्याचा तात्काळ ऑपरेशनल आणि सिस्टीमवर काय परिणाम होईल?"
+          "en": "Warning! A trainee operator lifted 100 brake calipers, placed them into High-Rise Rack bin HRR-B-04-12, but drove away without scanning the rack location QR code! What serious warehouse defect does this cause?",
+          "hi": "चेतावनी! एक नए ऑपरेटर ने 100 ब्रेक कैलिपर्स उठाए और रैक बिन में रख दिए, लेकिन रैक लोकेशन का क्यूआर कोड स्कैन किए बिना ही गाड़ी लेकर चला गया! इससे वेयरहाउस में क्या बड़ी गड़बड़ी होगी?",
+          "mr": "सावधान! एका नवीन ऑपरेटरने 100 ब्रेक कॅलिपर्स रॅक बिनमध्ये ठेवले, पण रॅकवरील लोकेशन QR कोड स्कॅन न करताच निघून गेला! यामुळे वेअरहाऊसमध्ये कोणता मोठा गोंधळ उडेल?"
         }
       },
       "interaction": {
@@ -435,8 +435,8 @@
         "safetyCritical": true,
         "question": {
           "en": "An Material Handling Equipment operator placed an Foldable Large Container pallet into the rack but forgot to scan the destination location QR code before driving away. What happens?",
-          "hi": "एक मटेरियल हैंडलिंग इक्विपमेंट ऑपरेटर ने रैक में एक फोल्डेबल लार्ज कंटेनर पैलेट रखा लेकिन जाने से पहले गंतव्य स्थान QR कोड को स्कैन करना भूल गया। क्या होगा?",
-          "mr": "एका मटेरियल हँडलिंग इक्विपमेंट ऑपरेटरने रॅकमध्ये फोल्डेबल लार्ज कंटेनर पॅलेट ठेवले परंतु निघून जाण्यापूर्वी गंतव्य स्थान QR कोड स्कॅन करण्याचे विसरला. काय होईल?"
+          "hi": "एक फोर्कलिफ्ट ऑपरेटर ने रैक में एक फोल्डेबल लार्ज कंटेनर पैलेट रखा लेकिन जाने से पहले गंतव्य स्थान QR कोड को स्कैन करना भूल गया। क्या होगा?",
+          "mr": "एका फोर्कलिफ्ट ऑपरेटरने रॅकमध्ये फोल्डेबल लार्ज कंटेनर पॅलेट ठेवले परंतु निघून जाण्यापूर्वी गंतव्य स्थान QR कोड स्कॅन करण्याचे विसरला. काय होईल?"
         },
         "options": [
           {
@@ -462,7 +462,7 @@
             "correct": false,
             "label": {
               "en": "The entire Purchase Order is deleted from SAP ERP and the supplier is charged a fine",
-              "hi": "पूरा परचेज ऑर्डर SAP ERP से हटा दिया जाता है और आपूर्तिकर्ता पर जुर्माना लगाया जाता है",
+              "hi": "पूरा परचेज ऑर्डर SAP ERP से हटा दिया जाता है और सप्लायर पर जुर्माना लगाया जाता है",
               "mr": "संपूर्ण खरेदी ऑर्डर SAP ERP मधून हटवली जाते आणि पुरवठादारावर दंड आकारला जातो"
             }
           },
@@ -471,15 +471,15 @@
             "correct": false,
             "label": {
               "en": "Nothing happens — physical placement is all that matters on the factory floor",
-              "hi": "कुछ नहीं होता — फ़ैक्टरी फ़्लोर पर केवल भौतिक प्लेसमेंट ही मायने रखता है",
+              "hi": "कुछ नहीं होता — फ़ैक्टरी फ़्लोर पर केवल असल प्लेसमेंट ही मायने रखता है",
               "mr": "काहीही होत नाही — कारखान्यात केवळ प्रत्यक्ष प्लेसमेंट महत्त्वाची असते"
             }
           }
         ],
         "prompt": {
           "en": "An Material Handling Equipment operator placed an Foldable Large Container pallet into the rack but forgot to scan the destination location QR code before driving away. What happens?",
-          "hi": "एक मटेरियल हैंडलिंग इक्विपमेंट ऑपरेटर ने रैक में एक फोल्डेबल लार्ज कंटेनर पैलेट रखा लेकिन जाने से पहले गंतव्य स्थान QR कोड को स्कैन करना भूल गया। क्या होगा?",
-          "mr": "एका मटेरियल हँडलिंग इक्विपमेंट ऑपरेटरने रॅकमध्ये फोल्डेबल लार्ज कंटेनर पॅलेट ठेवले परंतु निघून जाण्यापूर्वी गंतव्य स्थान QR कोड स्कॅन करण्याचे विसरला. काय होईल?"
+          "hi": "एक फोर्कलिफ्ट ऑपरेटर ने रैक में एक फोल्डेबल लार्ज कंटेनर पैलेट रखा लेकिन जाने से पहले गंतव्य स्थान QR कोड को स्कैन करना भूल गया। क्या होगा?",
+          "mr": "एका फोर्कलिफ्ट ऑपरेटरने रॅकमध्ये फोल्डेबल लार्ज कंटेनर पॅलेट ठेवले परंतु निघून जाण्यापूर्वी गंतव्य स्थान QR कोड स्कॅन करण्याचे विसरला. काय होईल?"
         },
         "id": "c1-q22",
         "audioSrc": "/audio/voiceover/s03_sc04_prompt.mp3"
@@ -489,8 +489,8 @@
         "sopClause": "SOP for Plant Operations Putaway for Vehicle and Battery Parts Clause 5.1 & Failure Mode 2 & Question Bank Q22",
         "why": {
           "en": "Material Handling Equipment operators must never rely on memory or skip the destination location scan. Without the bin scan, the Warehouse Task remains open in SAP EWM, inventory is not available in G-stock, downstream picking tasks fail due to perceived zero-stock, and the overdue task flags on the operator's daily KPI scoreboard. The Putaway Zone Leader must expend labor to audit open tasks, backtrack physical racks, and manually close the task.",
-          "hi": "मटेरियल हैंडलिंग इक्विपमेंट ऑपरेटरों को कभी भी स्मृति पर निर्भर नहीं रहना चाहिए या गंतव्य स्थान स्कैन छोड़ना नहीं चाहिए। बिन स्कैन के बिना, वेयरहाउस टास्क SAP EWM में खुला रहता है, इन्वेंट्री G-स्टॉक में उपलब्ध नहीं होती है, पिकिंग कार्य शून्य-स्टॉक के कारण विफल हो जाते हैं, और ओवरड्यू कार्य ऑपरेटर के दैनिक KPI स्कोरबोर्ड पर फ्लैग होता है। पुट-अवे ज़ोन लीडर को खुले कार्यों का ऑडिट करने, रैक की जांच करने और कार्य को मैन्युअल रूप से बंद करने के लिए अतिरिक्त श्रम खर्च करना पड़ता है।",
-          "mr": "मटेरियल हँडलिंग इक्विपमेंट ऑपरेटरने कधीही स्मरणशक्तीवर अवलंबून राहू नये किंवा गंतव्य स्थान स्कॅन वगळू नये. बिन स्कॅनशिवाय, वेअरहाऊस टास्क SAP EWM मध्ये उघडा राहतो, इन्व्हेंटरी G-स्टॉकमध्ये उपलब्ध नसते, पिकिंग टास्क शून्य-स्टॉक समजून अयशस्वी होतात आणि रखडलेला टास्क ऑपरेटरच्या दैनंदिन KPI वर फ्लॅग होतो. पुट-अवे झोन लीडरला प्रत्यक्ष तपासणी करून टास्क मॅन्युअली बंद करावा लागतो."
+          "hi": "फोर्कलिफ्ट ऑपरेटरों को कभी भी अंदाज़े या याददाश्त पर भरोसा नहीं रहना चाहिए या गंतव्य स्थान स्कैन छोड़ना नहीं चाहिए। बिन स्कैन के बिना, वेयरहाउस टास्क SAP EWM में खुला रहता है, इन्वेंट्री G-स्टॉक में उपलब्ध नहीं होती है, पिकिंग कार्य शून्य-स्टॉक के कारण विफल हो जाते हैं, और ओवरड्यू कार्य ऑपरेटर के दैनिक KPI स्कोरबोर्ड पर फ्लैग होता है। पुट-अवे ज़ोन लीडर को खुले कार्यों का ऑडिट करने, रैक की जांच करने और कार्य को मैन्युअल रूप से बंद करने के लिए अतिरिक्त श्रम खर्च करना पड़ता है।",
+          "mr": "फोर्कलिफ्ट ऑपरेटरने कधीही स्मरणशक्तीवर अवलंबून राहू नये किंवा गंतव्य स्थान स्कॅन वगळू नये. बिन स्कॅनशिवाय, वेअरहाऊस टास्क SAP EWM मध्ये उघडा राहतो, इन्व्हेंटरी G-स्टॉकमध्ये उपलब्ध नसते, पिकिंग टास्क शून्य-स्टॉक समजून अयशस्वी होतात आणि रखडलेला टास्क ऑपरेटरच्या दैनंदिन KPI वर फ्लॅग होतो. पुट-अवे झोन लीडरला प्रत्यक्ष तपासणी करून टास्क मॅन्युअली बंद करावा लागतो."
         }
       }
     },
@@ -512,9 +512,9 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Critical situation on Aisle 04! Your handheld terminal screen clearly displays assigned destination bin assigned Bin A-02. However, that bin is high on level 2. The operator notices an empty lower rack lower Bin B-03 nearby and decides to put the pallet into Bin B instead to save time. Should this action be allowed or stopped?",
-            "hi": "आइल 04 पर गंभीर स्थिति! आपकी हैंडहेल्ड टर्मिनल स्क्रीन स्पष्ट रूप से निर्दिष्ट गंतव्य बिन असाइन किया गया बिन A-02 प्रदर्शित करती है। हालाँकि, वह बिन स्तर 2 पर ऊपर है। ऑपरेटर को पास में एक खाली निचला रैक निचला बिन B-03 दिखाई देता है और वह समय बचाने के लिए पैलेट को बिन B में रखने का निर्णय लेता है। क्या इस कार्रवाई की अनुमति दी जानी चाहिए या रोका जाना चाहिए?",
-            "mr": "आइल 04 वरील गंभीर परिस्थिती! तुमच्या हँडहेल्ड टर्मिनल स्क्रीनवर नियुक्त केलेले गंतव्य बिन नियुक्त केलेले बिन A-02 स्पष्टपणे दिसत आहे. तथापि, ते बिन लेव्हल 2 वर उंचावर आहे. ऑपरेटरला जवळच एक रिकामे खालचे रॅक खालचे बिन B-03 दिसते आणि वेळ वाचवण्यासाठी तो पॅलेट बिन B मध्ये ठेवण्याचा निर्णय घेतो. या कृतीस परवानगी द्यावी की थांबवावी?"
+            "en": "Aisle 04 alert! Your scanner screen directs you to high bin A-02 on Level 2. But the lower bin B-03 right next to you is empty, and the operator considers placing the pallet in Bin B to save time. Should this be permitted?",
+            "hi": "आइल 04 पर ध्यान दें! आपकी स्कैनर स्क्रीन तय बिन A-02 दिखा रही है, जो लेवल 2 पर ऊपर है। ऑपरेटर को पास में नीचे का बिन B-03 खाली दिखता है और वह समय बचाने के लिए माल बिन B में रखने की सोचता है। क्या ऐसा करने देना चाहिए?",
+            "mr": "आइल 04 वर लक्ष द्या! तुमच्या स्कॅनर स्क्रीनवर ठरवून दिलेला बिन A-02 दिसत आहे, जो लेव्हल 2 वर उंचावर आहे. ऑपरेटरला जवळच खालचा बिन B-03 रिकामा दिसतो आणि वेळ वाचवण्यासाठी तो माल तिथे ठेवू पाहतो. याला परवानगी द्यावी का?"
           },
           "audioSrc": "/audio/voiceover/s03_sc05_intro.mp3"
         },
@@ -522,8 +522,8 @@
           "pose": "success",
           "text": {
             "en": "STOP IS THE ONLY CORRECT ACTION! The system strictly dictates storage bins based on First-In First-Out, part weight, and pick frequency algorithms. Putting stock in an unassigned bin creates severe inventory discrepancies. The system will NOT close the Warehouse Task unless the assigned bin is scanned. You must either move it to Bin A or request the Zone Leader to re-slot in SAP warehouse management system!",
-            "hi": "STOP ही एकमात्र सही कार्रवाई है! सिस्टम FIFO, पार्ट वजन और पिक फ़्रीक्वेंसी एल्गोरिदम के आधार पर स्टोरेज बिन तय करता है। बिना असाइन किए गए बिन में स्टॉक रखने से गंभीर इन्वेंट्री विसंगतियां पैदा होती हैं। जब तक असाइन किया गया बिन स्कैन नहीं किया जाता, सिस्टम वेयरहाउस टास्क को बंद नहीं करेगा। आपको या तो इसे बिन A में ले जाना होगा या ज़ोन लीडर से SAP EWM में री-स्लॉट करने का अनुरोध करना होगा!",
-            "mr": "STOP हीच एकमेव योग्य कृती आहे! सिस्टीम FIFO, भागाचे वजन आणि पिक फ्रिक्वेन्सीनुसार स्टोरेज बिन निश्चित करते. अनधिकृत बिनमध्ये माल ठेवल्यास मोठी इन्व्हेंटरी तफावत निर्माण होते. जोपर्यंत नियुक्त केलेले बिन स्कॅन केले जात नाही तोपर्यंत सिस्टीम वेअरहाऊस टास्क बंद करत नाही. तुम्ही ते बिन A मध्ये नेले पाहिजे किंवा झोन लीडरला SAP EWM मध्ये री-स्लॉट करण्यास सांगितले पाहिजे!"
+            "hi": "रोकना ही एकमात्र सही कदम है! सिस्टम पहले आए माल को पहले निकालने (FIFO) और वजन के हिसाब से बिन तय करता है। मनमर्जी से किसी और बिन में रखने पर सिस्टम टास्क क्लोज नहीं करेगा। या तो तय बिन A में रखें या ज़ोन लीडर से सिस्टम में स्लॉट बदलवाएं!",
+            "mr": "थांबवणे हीच एकमेव योग्य कृती आहे! सिस्टीम FIFO आणि वजनानुसार बिन ठरवते. परस्पर दुसऱ्या बिनमध्ये माल ठेवल्यास सिस्टीम टास्क बंद करत नाही. एकतर ठरलेल्या बिन A मध्ये माल ठेवा किंवा झोन लीडरकडून सिस्टीममध्ये बिन बदलून घ्या!"
           },
           "audioSrc": "/audio/voiceover/s03_sc05_correct.mp3"
         },
@@ -531,15 +531,15 @@
           "pose": "warning",
           "text": {
             "en": "CRITICAL STORAGE MISMATCH! Placing pallets in unassigned bins causes 'ghost stockouts' during assembly line picking. The system will flag an open task against your ID and picking operators will find an empty bin!",
-            "hi": "गंभीर भंडारण बेमेल! अनअसाइन किए गए डिब्बे में पैलेट रखने से असेंबली लाइन पिकिंग के दौरान 'घोस्ट स्टॉकआउट' होता है। सिस्टम आपकी आईडी के खिलाफ एक ओपन टास्क को चिह्नित करेगा और पिकिंग ऑपरेटरों को खाली बिन मिलेगा!",
-            "mr": "गंभीर साठवणूक विसंगती! नियुक्त न केलेल्या बिनमध्ये पॅलेट ठेवल्यास असेंब्ली लाइन पिकिंग दरम्यान 'घोस्ट स्टॉकआऊट' होतो. सिस्टीम तुमच्या आयडीवर ओपन टास्क नोंदवेल आणि पिकिंग ऑपरेटरना बिन रिकामे सापडेल!"
+            "hi": "बड़ी गलती! गलत बिन में माल रखने से पिकिंग के समय वर्कर को बिन खाली मिलेगा और लाइन रुक जाएगी! सिस्टम में आपकी आईडी पर पेंडिंग टास्क भी दिखेगा।",
+            "mr": "मोठी चूक! चुकीच्या बिनमध्ये माल ठेवल्यास पिकिंग करताना कामगाराला बिन रिकामे सापडेल आणि काम थांबेल! सिस्टीममध्ये तुमच्या नावावर पेंडिंग टास्क राहील."
           },
           "audioSrc": "/audio/voiceover/s03_sc05_wrong.mp3"
         },
         "dialog": {
-          "en": "Critical situation on Aisle 04! Your handheld terminal screen clearly displays assigned destination bin assigned Bin A-02. However, that bin is high on level 2. The operator notices an empty lower rack lower Bin B-03 nearby and decides to put the pallet into Bin B instead to save time. Should this action be allowed or stopped?",
-          "hi": "आइल 04 पर गंभीर स्थिति! आपकी हैंडहेल्ड टर्मिनल स्क्रीन स्पष्ट रूप से निर्दिष्ट गंतव्य बिन असाइन किया गया बिन A-02 प्रदर्शित करती है। हालाँकि, वह बिन स्तर 2 पर ऊपर है। ऑपरेटर को पास में एक खाली निचला रैक निचला बिन B-03 दिखाई देता है और वह समय बचाने के लिए पैलेट को बिन B में रखने का निर्णय लेता है। क्या इस कार्रवाई की अनुमति दी जानी चाहिए या रोका जाना चाहिए?",
-          "mr": "आइल 04 वरील गंभीर परिस्थिती! तुमच्या हँडहेल्ड टर्मिनल स्क्रीनवर नियुक्त केलेले गंतव्य बिन नियुक्त केलेले बिन A-02 स्पष्टपणे दिसत आहे. तथापि, ते बिन लेव्हल 2 वर उंचावर आहे. ऑपरेटरला जवळच एक रिकामे खालचे रॅक खालचे बिन B-03 दिसते आणि वेळ वाचवण्यासाठी तो पॅलेट बिन B मध्ये ठेवण्याचा निर्णय घेतो. या कृतीस परवानगी द्यावी की थांबवावी?"
+          "en": "Aisle 04 alert! Your scanner screen directs you to high bin A-02 on Level 2. But the lower bin B-03 right next to you is empty, and the operator considers placing the pallet in Bin B to save time. Should this be permitted?",
+          "hi": "आइल 04 पर ध्यान दें! आपकी स्कैनर स्क्रीन तय बिन A-02 दिखा रही है, जो लेवल 2 पर ऊपर है। ऑपरेटर को पास में नीचे का बिन B-03 खाली दिखता है और वह समय बचाने के लिए माल बिन B में रखने की सोचता है। क्या ऐसा करने देना चाहिए?",
+          "mr": "आइल 04 वर लक्ष द्या! तुमच्या स्कॅनर स्क्रीनवर ठरवून दिलेला बिन A-02 दिसत आहे, जो लेव्हल 2 वर उंचावर आहे. ऑपरेटरला जवळच खालचा बिन B-03 रिकामा दिसतो आणि वेळ वाचवण्यासाठी तो माल तिथे ठेवू पाहतो. याला परवानगी द्यावी का?"
         }
       },
       "interaction": {
@@ -549,11 +549,11 @@
         "question": {
           "en": "The SAP handheld displays assigned Bin A, but the operator places the pallet into Bin B to save time. What must be done?",
           "hi": "SAP हैंडहेल्ड असाइन किया गया बिन A प्रदर्शित करता है, लेकिन ऑपरेटर समय बचाने के लिए पैलेट को बिन B में रखता है। क्या किया जाना चाहिए?",
-          "mr": "SAP हँडहेल्ड नियुक्त केलेले बिन A दर्शवते, परंतु ऑपरेटर वेळ वाचवण्यासाठी पॅलेट बिन B मध्ये ठेवतो. काय केले पाहिजे?"
+          "mr": "SAP हँडहेल्ड नियुक्त केलेले बिन A दाखवते, परंतु ऑपरेटर वेळ वाचवण्यासाठी पॅलेट बिन B मध्ये ठेवतो. काय केले पाहिजे?"
         },
         "situation": {
           "en": "SITUATION: Assigned upper rack bin, but physically placed into a different lower rack bin without system approval.",
-          "hi": "स्थिति: असाइन किया गया बिन रैक बिन। सिस्टम की मंजूरी के बिना भौतिक रूप से बिन रैक बिन में रखा गया।",
+          "hi": "स्थिति: असाइन किया गया बिन रैक बिन। सिस्टम की मंजूरी के बिना असल में (हाथों से) बिन रैक बिन में रखा गया।",
           "mr": "परिस्थिती: नियुक्त केलेले वरचे रॅक बिन, पण मान्यतेशिवाय खालच्या रॅक बिन मध्ये प्रत्यक्ष ठेवले."
         },
         "correctAction": "stop",
@@ -580,7 +580,7 @@
         "prompt": {
           "en": "The SAP handheld displays assigned Bin A, but the operator places the pallet into Bin B to save time. What must be done?",
           "hi": "SAP हैंडहेल्ड असाइन किया गया बिन A प्रदर्शित करता है, लेकिन ऑपरेटर समय बचाने के लिए पैलेट को बिन B में रखता है। क्या किया जाना चाहिए?",
-          "mr": "SAP हँडहेल्ड नियुक्त केलेले बिन A दर्शवते, परंतु ऑपरेटर वेळ वाचवण्यासाठी पॅलेट बिन B मध्ये ठेवतो. काय केले पाहिजे?"
+          "mr": "SAP हँडहेल्ड नियुक्त केलेले बिन A दाखवते, परंतु ऑपरेटर वेळ वाचवण्यासाठी पॅलेट बिन B मध्ये ठेवतो. काय केले पाहिजे?"
         },
         "id": "c1-q23",
         "audioSrc": "/audio/voiceover/s03_sc05_prompt.mp3"
@@ -614,8 +614,8 @@
           "pose": "explaining",
           "text": {
             "en": "Final Put-Away certification milestone! You have mastered the rules of handling units, high-rise racks, bin marriage, and error recovery. Now prove your operational mastery by arranging the complete put-away lifecycle in its exact chronological order!",
-            "hi": "अंतिम पुट-अवे प्रमाणन मील का पत्थर! आपने हैंडलिंग यूनिट, हाई-राइज रैक, बिन मैरिज और त्रुटि सुधार के नियमों में महारत हासिल कर ली है। अबसटीक कालानुक्रमिक क्रम में संपूर्ण पुट-अवे जीवन चक्र को व्यवस्थित करके अपनी परिचालन महारत साबित करें!",
-            "mr": "अंतिम पुट-अवे प्रमाणपत्र टप्पा! तुम्ही हँडलिंग युनिट्स, हाय-राइज रॅक्स, बिन मॅरेज आणि एरर रिकव्हरीचे नियम आत्मसात केले आहेत. आताअचूक कालक्रमानुसार संपूर्ण पुट-अवे जीवन चक्र लावून तुमचे कार्यकौशल्य सिद्ध करा!"
+            "hi": "पुट-अवे का आखिरी पड़ाव! आपने हैंडलिंग यूनिट, हाई-राइज रैक और बिन मैरिज के सभी नियम सीख लिए हैं। अब पूरे पुट-अवे प्रोसेस को शुरू से अंत तक सही क्रम में लगाएं!",
+            "mr": "पुट-अवेचा शेवटचा टप्पा! तुम्ही हँडलिंग युनिट, हाय-राइज रॅक आणि बिन मॅरेजचे सर्व नियम शिकला आहात. आता संपूर्ण पुट-अवे प्रोसेस योग्य क्रमाने लावा!"
           },
           "audioSrc": "/audio/voiceover/s03_sc06_intro.mp3"
         },
@@ -623,8 +623,8 @@
           "pose": "trophy",
           "text": {
             "en": "OUTSTANDING ACCURACY! You have successfully mastered the official sequence: First, Paste Goods Receipt Note label, Second, Scan Handling Unit label, Third, Carry pallet to the location, Fourth, Scan location QR code, Task closes and SAP stock updates! Stage 3: Vehicle & Battery Parts Put-Away is 100% complete!",
-            "hi": "उत्कृष्ट सटीकता! आपने आधिकारिक अनुक्रम में सफलतापूर्वक महारत हासिल कर ली है: पहला, Goods Receipt Note लेबल चिपकाएं, दूसरा, हैंडलिंग यूनिट लेबल स्कैन करें, तीसरा, पैलेट को स्थान पर ले जाएं, स्थान QR कोड स्कैन करें, कार्य बंद होता है और SAP स्टॉक अपडेट होता है! स्टेज 3 अब 100% पूरा हुआ!",
-            "mr": "उत्कृष्ट अचूकता! तुम्ही अधिकृत क्रम यशस्वीरित्या पूर्ण केला आहे: पहिले, Goods Receipt Note लेबल चिटकवणे, दुसरे, हँडलिंग युनिट लेबल स्कॅन करणे, तिसरे, पॅलेट जागेवर नेणे, लोकेशन QR कोड स्कॅन करणे, टास्क बंद होतो आणि SAP स्टॉक अपडेट होतो! स्टेज 3 आता 100% पूर्ण झाले आहे!"
+            "hi": "शानदार सटीकता! आपने सही क्रम सीख लिया: पहला, Goods Receipt Note लेबल लगाएं, दूसरा, हैंडलिंग यूनिट स्कैन करें, तीसरा, माल को तय जगह ले जाएं, चौथा, लोकेशन क्यूआर कोड स्कैन करें, और सिस्टम में टास्क क्लोज हो जाएगा! स्टेज 3 अब 100% पूरा हुआ!",
+            "mr": "उत्कृष्ट अचूकता! तुम्ही योग्य क्रम शिकला आहात: आधी Goods Receipt Note लेबल लावा, मग हँडलिंग युनिट स्कॅन करा, माल जागेवर न्या, लोकेशन QR कोड स्कॅन करा आणि सिस्टीम टास्क बंद करा! स्टेज 3 आता 100% पूर्ण झाले आहे!"
           },
           "audioSrc": "/audio/voiceover/s03_sc06_correct.mp3"
         },
@@ -632,15 +632,15 @@
           "pose": "warning",
           "text": {
             "en": "Incorrect sequence! Remember The Goods Receipt Note label must be pasted first, followed by scanning the Handling Unit to initiate the task, transporting to the bin, scanning the rack QR, and finally system closure!",
-            "hi": "गलत क्रम! याद रखें: Goods Receipt Note लेबल पहले चिपकाया जाना चाहिए, उसके बाद टास्क शुरू करने के लिए हैंडलिंग यूनिट स्कैन करना, बिन तक ले जाना, रैक QR स्कैन करना और अंत में सिस्टम टास्क बंद होना चाहिए!",
-            "mr": "चुकीचा क्रम! लक्षात ठेवा: आधी Goods Receipt Note लेबल चिटकवले पाहिजे, नंतर टास्क सुरू करण्यासाठी हँडलिंग युनिट स्कॅन करणे, बिनकडे नेणे, रॅक QR स्कॅन करणे आणि शेवटी सिस्टम टास्क बंद होणे!"
+            "hi": "गलत क्रम! याद रखें: पहले Goods Receipt Note लेबल लगाना है, फिर हैंडलिंग यूनिट स्कैन करके टास्क शुरू करना है, बिन तक जाना है, रैक क्यूआर स्कैन करना है और अंत में सिस्टम टास्क बंद करना है!",
+            "mr": "चुकीचा क्रम! लक्षात ठेवा: आधी Goods Receipt Note लेबल लावायचे आहे, मग हँडलिंग युनिट स्कॅन करून टास्क सुरू करायचा आहे, बिनकडे जायचे आहे, रॅक QR स्कॅन करायचा आहे आणि टास्क पूर्ण करायचा आहे!"
           },
           "audioSrc": "/audio/voiceover/s03_sc06_wrong.mp3"
         },
         "dialog": {
           "en": "Final Put-Away certification milestone! You have mastered the rules of handling units, high-rise racks, bin marriage, and error recovery. Now prove your operational mastery by arranging the complete put-away lifecycle in its exact chronological order!",
-          "hi": "अंतिम पुट-अवे प्रमाणन मील का पत्थर! आपने हैंडलिंग यूनिट, हाई-राइज रैक, बिन मैरिज और त्रुटि सुधार के नियमों में महारत हासिल कर ली है। अबसटीक कालानुक्रमिक क्रम में संपूर्ण पुट-अवे जीवन चक्र को व्यवस्थित करके अपनी परिचालन महारत साबित करें!",
-          "mr": "अंतिम पुट-अवे प्रमाणपत्र टप्पा! तुम्ही हँडलिंग युनिट्स, हाय-राइज रॅक्स, बिन मॅरेज आणि एरर रिकव्हरीचे नियम आत्मसात केले आहेत. आताअचूक कालक्रमानुसार संपूर्ण पुट-अवे जीवन चक्र लावून तुमचे कार्यकौशल्य सिद्ध करा!"
+          "hi": "पुट-अवे का आखिरी पड़ाव! आपने हैंडलिंग यूनिट, हाई-राइज रैक और बिन मैरिज के सभी नियम सीख लिए हैं। अब पूरे पुट-अवे प्रोसेस को शुरू से अंत तक सही क्रम में लगाएं!",
+          "mr": "पुट-अवेचा शेवटचा टप्पा! तुम्ही हँडलिंग युनिट, हाय-राइज रॅक आणि बिन मॅरेजचे सर्व नियम शिकला आहात. आता संपूर्ण पुट-अवे प्रोसेस योग्य क्रमाने लावा!"
         }
       },
       "interaction": {
@@ -649,8 +649,8 @@
         "safetyCritical": true,
         "question": {
           "en": "Arrange the 5 mandatory put-away steps in the exact operational sequence",
-          "hi": "द्वारा अनिवार्य सटीक परिचालन क्रम में 5 अनिवार्य पुट-अवे चरणों को व्यवस्थित करें:",
-          "mr": "द्वारे अनिवार्य केलेल्या अचूक कार्यक्रमानुसार 5 पुट-अवे पायऱ्या लावा:"
+          "hi": "द्वारा ज़रूरी सटीक परिचालन क्रम में 5 ज़रूरी पुट-अवे चरणों को व्यवस्थित करें:",
+          "mr": "द्वारे गरजेचे केलेल्या अचूक कार्यक्रमानुसार 5 पुट-अवे पायऱ्या लावा:"
         },
         "instruction": {
           "en": "Drag or tap the step numbers to arrange them from first to last (1 to 5):",
@@ -662,7 +662,7 @@
             "id": "step_grn_label",
             "label": {
               "en": "Paste Goods Receipt Note label on incoming pallet",
-              "hi": "आवक पैलेट पर GRN लेबल चिपकाएं",
+              "hi": "आया हुआ पैलेट पर GRN लेबल चिपकाएं",
               "mr": "इनवर्ड पॅलेटवर GRN लेबल चिटकवणे"
             }
           },
@@ -701,8 +701,8 @@
         ],
         "prompt": {
           "en": "Arrange the 5 mandatory put-away steps in the exact operational sequence",
-          "hi": "द्वारा अनिवार्य सटीक परिचालन क्रम में 5 अनिवार्य पुट-अवे चरणों को व्यवस्थित करें:",
-          "mr": "द्वारे अनिवार्य केलेल्या अचूक कार्यक्रमानुसार 5 पुट-अवे पायऱ्या लावा:"
+          "hi": "द्वारा ज़रूरी सटीक परिचालन क्रम में 5 ज़रूरी पुट-अवे चरणों को व्यवस्थित करें:",
+          "mr": "द्वारे गरजेचे केलेल्या अचूक कार्यक्रमानुसार 5 पुट-अवे पायऱ्या लावा:"
         },
         "id": "c1-q21",
         "correctOrder": [

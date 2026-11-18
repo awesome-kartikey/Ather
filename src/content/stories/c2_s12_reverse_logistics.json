@@ -24,34 +24,34 @@
         "name": "AURA",
         "pose": "explaining",
         "dialog": {
-          "en": "Welcome to Stage 12: Reverse Logistics & Empty Bin Loading! While collecting returnable empty plastic totes and dunnage trays from the vehicle assembly line, operators must visually audit every container before stacking.",
-          "hi": "के तहत स्टेज 12: रिवर्स लॉजिस्टिक्स और खाली बिन लोडिंग में आपका स्वागत है! वाहन असेंबली लाइन से वापस करने योग्य खाली प्लास्टिक टोट्स और डनेज ट्रे इकट्ठा करते समय, ऑपरेटरों को स्टैकिंग से पहले प्रत्येक कंटेनर का दृश्य निरीक्षण करना होगा। दोषपूर्ण, टूटे हुए या विदेशी-दूषित डिब्बे घटकों को नुकसान पहुंचाएंगे या सप्लायर को वापस जाने वाले ट्रक पर पारगमन रिसाव का कारण बनेंगे। स्टैकिंग से पहले इस लॉट में दोषपूर्ण कंटेनर को पहचानें!",
-          "mr": "नुसार स्टेज 12: रिव्हर्स लॉजिस्टिक्स आणि रिकाम्या पेट्यांची हाताळणीमध्ये आपले स्वागत आहे! असेंब्ली लाईनवरून सप्लायरला परत पाठवायचे रिकामे क्रेट्स आणि बॅटरी ट्रे गोळा करताना प्रत्येक पेटी तपासून घेतली पाहिजे. तुटलेल्या किंवा लोखंडी कचरा असलेल्या पेट्या व्हेंडरकडे परत पाठवल्यास नवीन पार्ट भरताना ते खराब होऊ शकतात. थप्पी रचण्यापूर्वी या पेटीमधील दोष ओळखा आणि त्यावर टॅप करा!"
+          "en": "Welcome to Stage 12: Reverse Logistics & Empty Bin Loading! While collecting returnable empty plastic totes and dunnage trays from the vehicle assembly line, operators must visually audit every container before stacking. Defective, cracked, or foreign-contaminated bins will damage parts or cause transit spills on the return truck to the supplier. Spot and tap the defective container in this lot before stacking!",
+          "hi": "स्टेज 12: रिवर्स लॉजिस्टिक्स और खाली क्रेट्स की लोडिंग में आपका स्वागत है! असेंबली लाइन से खाली प्लास्टिक क्रेट्स और ट्रे इकट्ठा करते समय ऑपरेटर को हर क्रेट को ध्यान से देखना चाहिए। टूटे-फूटे या गंदे क्रेट्स वापस भेजने पर वेंडर के नए पार्ट्स खराब हो सकते हैं। इस लॉट में से खराब क्रेट को पहचानें!",
+          "mr": "स्टेज 12: रिव्हर्स लॉजिस्टिक्स आणि रिकाम्या पेट्यांची हाताळणीमध्ये आपले स्वागत आहे! असेंब्ली लाईनवरून सप्लायरला परत पाठवायचे रिकामे क्रेट्स गोळा करताना प्रत्येक पेटी तपासून घेतली पाहिजे. तुटलेल्या पेट्या व्हेंडरकडे परत पाठवल्यास नवीन पार्ट खराब होऊ शकतात. यातील खराब पेटी ओळखा!"
         },
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Welcome to Stage 12: Reverse Logistics & Empty Bin Loading! While collecting returnable empty plastic totes and dunnage trays from the vehicle assembly line, operators must visually audit every container before stacking.",
-            "hi": "के तहत स्टेज 12: रिवर्स लॉजिस्टिक्स और खाली बिन लोडिंग में आपका स्वागत है! वाहन असेंबली लाइन से वापस करने योग्य खाली प्लास्टिक टोट्स और डनेज ट्रे इकट्ठा करते समय, ऑपरेटरों को स्टैकिंग से पहले प्रत्येक कंटेनर का दृश्य निरीक्षण करना होगा। दोषपूर्ण, टूटे हुए या विदेशी-दूषित डिब्बे घटकों को नुकसान पहुंचाएंगे या सप्लायर को वापस जाने वाले ट्रक पर पारगमन रिसाव का कारण बनेंगे। स्टैकिंग से पहले इस लॉट में दोषपूर्ण कंटेनर को पहचानें!",
-            "mr": "नुसार स्टेज 12: रिव्हर्स लॉजिस्टिक्स आणि रिकाम्या पेट्यांची हाताळणीमध्ये आपले स्वागत आहे! असेंब्ली लाईनवरून सप्लायरला परत पाठवायचे रिकामे क्रेट्स आणि बॅटरी ट्रे गोळा करताना प्रत्येक पेटी तपासून घेतली पाहिजे. तुटलेल्या किंवा लोखंडी कचरा असलेल्या पेट्या व्हेंडरकडे परत पाठवल्यास नवीन पार्ट भरताना ते खराब होऊ शकतात. थप्पी रचण्यापूर्वी या पेटीमधील दोष ओळखा आणि त्यावर टॅप करा!"
+            "en": "Welcome to Stage 12: Reverse Logistics & Empty Bin Loading! While collecting returnable empty plastic totes and dunnage trays from the vehicle assembly line, operators must visually audit every container before stacking. Defective, cracked, or foreign-contaminated bins will damage parts or cause transit spills on the return truck to the supplier. Spot and tap the defective container in this lot before stacking!",
+            "hi": "स्टेज 12: रिवर्स लॉजिस्टिक्स और खाली क्रेट्स की लोडिंग में आपका स्वागत है! असेंबली लाइन से खाली प्लास्टिक क्रेट्स और ट्रे इकट्ठा करते समय ऑपरेटर को हर क्रेट को ध्यान से देखना चाहिए। टूटे-फूटे या गंदे क्रेट्स वापस भेजने पर वेंडर के नए पार्ट्स खराब हो सकते हैं। इस लॉट में से खराब क्रेट को पहचानें!",
+            "mr": "स्टेज 12: रिव्हर्स लॉजिस्टिक्स आणि रिकाम्या पेट्यांची हाताळणीमध्ये आपले स्वागत आहे! असेंब्ली लाईनवरून सप्लायरला परत पाठवायचे रिकामे क्रेट्स गोळा करताना प्रत्येक पेटी तपासून घेतली पाहिजे. तुटलेल्या पेट्या व्हेंडरकडे परत पाठवल्यास नवीन पार्ट खराब होऊ शकतात. यातील खराब पेटी ओळखा!"
           },
           "audioSrc": "/audio/voiceover/s12_sc01_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Spot on! Your operational decision complies with Ather Auric standards.",
-            "hi": "बिल्कुल सही! खाली बिन संग्रह और लोडिंग। यह एथर SOP मानकों के 100% अनुरूप है।",
-            "mr": "अगदी बरोबर! SOP-EMPTYBIN COLLECTION AND LOADING Auric हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+            "en": "Spot on! Defective, broken, or contaminated bins must be separated and marked for repair or scrap so suppliers never pack good components into broken packaging.",
+            "hi": "बिल्कुल सही! खराब और टूटे हुए क्रेट्स को अलग करके रिजेक्ट एरिया में भेजा जाता है, ताकि सप्लायर उनमें दोबारा नए पार्ट्स भरकर न भेज दे!",
+            "mr": "अगदी बरोबर! तुटलेल्या पेट्या बाजूला काढून रिजेक्ट केल्या जातात, जेणेकरून सप्लायर त्यामध्ये पुन्हा नवीन पार्ट्स भरून पाठवणार नाही!"
           },
           "audioSrc": "/audio/voiceover/s12_sc01_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Warning! protocol violation. Always follow standard operating procedure to maintain quality and safety.",
-            "hi": "सावधान! SOP प्रोटोकॉल का उल्लंघन। प्लांट सुरक्षा और गुणवत्ता सुनिश्चित करने के लिए निर्धारित प्रक्रिया का पालन करें।",
-            "mr": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+            "en": "Warning! Never mix cracked or contaminated crates with clean returnable packaging. Doing so damages fresh parts during supplier replenishment.",
+            "hi": "सावधान! टूटे हुए क्रेट्स को कभी अच्छे क्रेट्स के साथ न मिलाएं। इससे नए पार्ट्स डैमेज होने का खतरा रहता है।",
+            "mr": "सावधान! तुटलेल्या पेट्या चांगल्या पेट्यांसोबत मिक्स करू नका. यामुळे नवीन पार्ट्स खराब होण्याचा धोका असतो."
           },
           "audioSrc": "/audio/voiceover/s12_sc01_wrong.mp3"
         }
@@ -72,7 +72,7 @@
         "safetyCritical": true,
         "question": {
           "en": "Which returnable plastic container has physical damage or foreign contamination that prevents pallet stacking?",
-          "hi": "किस वापस करने योग्य प्लास्टिक कंटेनर में भौतिक क्षति या विदेशी संदूषण है जो पैलेट स्टैकिंग को रोकता है?",
+          "hi": "किस वापस करने योग्य प्लास्टिक कंटेनर में असल क्षति या विदेशी संदूषण है जो पैलेट स्टैकिंग को रोकता है?",
           "mr": "कोणत्या प्लास्टिक पेटीमध्ये भौतिक तुटफूट किंवा घाण/कचरा आहे ज्यामुळे ती पॅलेटवर रचता येत नाही?"
         },
         "instruction": {
@@ -91,7 +91,7 @@
             },
             "description": {
               "en": "Severe physical and FOD hazard. Cracked ribs compromise stack load integrity, while sharp metal swarf contaminates new components when refilled by the supplier.",
-              "hi": "गंभीर भौतिक और विदेशी वस्तु खतरा। टूटी हुई पसलियां स्टैक भार अखंडता से समझौता करती हैं, जबकि तेज धातु चिप्स नए घटकों को दूषित करते हैं।",
+              "hi": "गंभीर असल और विदेशी वस्तु खतरा। टूटी हुई पसलियां स्टैक भार सुरक्षा और सही रिकॉर्ड से समझौता करती हैं, जबकि तेज धातु चिप्स नए पार्ट्सों को दूषित करते हैं।",
               "mr": "गंभीर धोका. तडकलेल्या कोपऱ्यामुळे थप्पी कोसळू शकते आणि आतील लोखंडी कचऱ्यामुळे सप्लायरकडून नवीन पार्ट भरताना स्क्रॅच पडू शकतात."
             }
           },
@@ -140,7 +140,7 @@
         ],
         "prompt": {
           "en": "Which returnable plastic container has physical damage or foreign contamination that prevents pallet stacking?",
-          "hi": "किस वापस करने योग्य प्लास्टिक कंटेनर में भौतिक क्षति या विदेशी संदूषण है जो पैलेट स्टैकिंग को रोकता है?",
+          "hi": "किस वापस करने योग्य प्लास्टिक कंटेनर में असल क्षति या विदेशी संदूषण है जो पैलेट स्टैकिंग को रोकता है?",
           "mr": "कोणत्या प्लास्टिक पेटीमध्ये भौतिक तुटफूट किंवा घाण/कचरा आहे ज्यामुळे ती पॅलेटवर रचता येत नाही?"
         },
         "id": "c2-q17-defective-container-spotting",
@@ -151,8 +151,8 @@
         "sopClause": "SOP-EMPTYBIN COLLECTION AND LOADING Auric Clause 4.1",
         "why": {
           "en": "SOP-EMPTYBIN COLLECTION AND LOADING Auric specifies that empty returnable packaging must be verified for structural cleanliness and physical integrity. Shipping cracked or foreign-object-contaminated (FOD) totes back to vendors risks severe surface scratching and mounting boss deformation on incoming precision parts, while compromised base ribs increase pallet toppling hazards during truck transit.",
-          "hi": "खाली बिन संग्रह और लोडिंग निर्दिष्ट करता है कि खाली वापस करने योग्य पैकेजिंग को संरचनात्मक स्वच्छता और भौतिक अखंडता के लिए सत्यापित किया जाना चाहिए। आपूर्तिकर्ताओं को टूटे हुए या दूषित डिब्बे वापस भेजने से आने वाले सटीक पुर्जों पर गंभीर खरोंच का खतरा होता है।",
-          "mr": "SOP-EMPTYBIN COLLECTION AND LOADING Auric स्पष्ट सांगतो की परत पाठवायच्या पेट्यांची स्वच्छता आणि मजबूती तपासणे बंधनकारक आहे. तुटलेल्या किंवा कचरा असलेल्या पेट्या व्हेंडरकडे पाठवल्यास नवीन पार्ट भरताना ते घासून खराब होतात, तसेच प्रवासात थप्पी कोसळण्याचा धोका वाढतो."
+          "hi": "खाली बिन संग्रह और लोडिंग निर्दिष्ट करता है कि खाली वापस करने योग्य पैकेजिंग को संरचनात्मक स्वच्छता और असल सुरक्षा और सही रिकॉर्ड के लिए चेक किया जाना चाहिए। सप्लायर्स को टूटे हुए या दूषित डिब्बे वापस भेजने से आने वाले सटीक पुर्जों पर गंभीर खरोंच का खतरा होता है।",
+          "mr": "SOP-EMPTYBIN COLLECTION AND LOADING Auric स्पष्ट सांगतो की परत पाठवायच्या पेट्यांची स्वच्छता आणि मजबूती नीट चेक करणे गरजेचे आहे. तुटलेल्या किंवा कचरा असलेल्या पेट्या व्हेंडरकडे पाठवल्यास नवीन पार्ट भरताना ते घासून खराब होतात, तसेच प्रवासात थप्पी कोसळण्याचा धोका वाढतो."
         }
       }
     },
@@ -160,46 +160,46 @@
       "id": "c2_s12_sc02_rtv_deviation",
       "title": {
         "en": "Supplier 3-Day SLA & 'Use As It Is' Deviation Route",
-        "hi": "सप्लायर 3-दिवसीय SLA और 'यथावत उपयोग' विचलन मार्ग",
-        "mr": "सप्लायर 3-दिवसांची मुदत आणि 'जसे आहे तसे वापरा' विचलन मार्ग"
+        "hi": "सप्लायर 3-दिवसीय SLA और 'यथावत उपयोग' छूट (डिविएशन) मार्ग",
+        "mr": "सप्लायर 3-दिवसांची मुदत आणि 'जसे आहे तसे वापरा' सूट (डिव्हिएशन) मार्ग"
       },
       "name": {
         "en": "Supplier 3-Day SLA & 'Use As It Is' Deviation Route",
-        "hi": "सप्लायर 3-दिवसीय SLA और 'यथावत उपयोग' विचलन मार्ग",
-        "mr": "सप्लायर 3-दिवसांची मुदत और 'जसे आहे तसे वापरा' विचलन मार्ग"
+        "hi": "सप्लायर 3-दिवसीय SLA और 'यथावत उपयोग' छूट (डिविएशन) मार्ग",
+        "mr": "सप्लायर 3-दिवसांची मुदत और 'जसे आहे तसे वापरा' सूट (डिव्हिएशन) मार्ग"
       },
       "mascot": {
         "name": "AURA",
         "pose": "explaining",
         "dialog": {
-          "en": "Outstanding work enforcing the Defect Validation Gate in Scene 1! Now, the supplier-caused NG parts are safely staged in the NG Quarantine Area marked 'Quality Failed'. All supplier-caused defects default to 'Auto Return to Vendor' within a strict 3-Day SLA. However, the assembly line is critically starving for handlebar grip sleeves! SQA discovers the defect is purely a minor cosmetic color shade variance. The Supplier Manager initiates a 'Use As It Is' deviation request in JIRA. Who has the sole authority to approve this deviation, and how is the stock systematically restored into SAP for production?",
-          "hi": "दृश्य 1 में दोष सत्यापन गेट को लागू करने का उत्कृष्ट कार्य! अब, सप्लायर-जनित एनजी भागों को 'Quality Failed' चिह्नित एनजी क्वारंटाइन क्षेत्र में सुरक्षित रखा गया है। सभी सप्लायर-जनित दोष एक सख्त 3-दिवसीय SLA के भीतर 'Auto रिटर्न टू वेंडर' पर डिफॉल्ट होते हैं। हालाँकि, असेंबली लाइन पर हैंडलबार ग्रिप स्लीव्स की भारी कमी है! SQA को पता चलता है कि दोष केवल एक मामूली कॉस्मेटिक रंग भिन्नता है। सप्लायर मैनेजर JIRA में 'Use As It Is' विचलन का अनुरोध करता है। इस विचलन को स्वीकृत करने का एकमात्र अधिकार किसके पास है, और उत्पादन के लिए स्टॉक को व्यवस्थित रूप से SAP में कैसे बहाल किया जाता है?",
-          "mr": "दृश्य 1 मधील दोष पडताळणी गेट यशस्वीरीत्या पार पाडल्याबद्दल अभिनंदन! आता सप्लायरमुळे नाकारलेला माल 'Quality Failed' म्हणून NG क्वारंटाईन भागात ठेवला आहे. सप्लायरच्या सर्व दोषांवर आपोआप 3 दिवसांच्या मुदतीत 'Auto रिटर्न टू व्हेंडर' लागू होते. परंतु, असेंब्ली लाईनवर हँडलबार ग्रिप स्लीव्ह्सचा मोठा तुटवडा निर्माण झाला आहे! SQA ला आढळले की हा केवळ रंगाचा किरकोळ फरक आहे. सप्लायर मॅनेजरने JIRA मध्ये 'Use As It Is' विचलनाची मागणी केली. JIRA मध्ये हे विचलन मंजूर करण्याचा एकमेव अधिकार कोणाचा आहे आणि उत्पादनासाठी SAP मध्ये स्टॉक कसा उपलब्ध केला जातो?"
+          "en": "Now, the defective parts are kept in the NG area marked 'Quality Failed'. Normally, vendor defect parts are returned to vendor within 3 days. But the assembly line is running out of handlebar grip sleeves! Quality finds the defect is only a minor color shade difference. The Supplier Manager requests a 'Use As It Is' deviation in JIRA. Who alone can approve this deviation, and how is the stock moved back into SAP for assembly?",
+          "hi": "क्वारंटाइन एरिया में सप्लायर के खराब पार्ट्स रखे हैं। सामान्य नियम के अनुसार सप्लायर की गलती वाला माल 3 दिन के अंदर वेंडर को वापस भेजा जाता है। लेकिन असेंबली लाइन पर ग्रिप स्लीव्स की भारी कमी हो गई है! क्वालिटी टीम देखती है कि पार्ट्स में सिर्फ रंग का मामूली फर्क है। सप्लायर मैनेजर इसे विशेष छूट ('Use As Is') के साथ चलाने की रिक्वेस्ट डालता है। इस छूट को मंज़ूर करने का अधिकार किसे है?",
+          "mr": "क्वारंटाईन भागात सप्लायरचा खराब माल ठेवला आहे. नियमांनुसार 3 दिवसांच्या आत हा माल व्हेंडरला परत करायचा असतो. पण लाईनवर ग्रिप स्लीव्ह्सची प्रचंड टंचाई निर्माण झाली आहे! क्वालिटी टीमच्या लक्षात येते की फक्त रंगाचा किरकोळ फरक आहे. सप्लायर मॅनेजर हा माल विशेष सवलतीत ('Use As Is') वापरण्याची विनंती करतो. ही सवलत देण्याचा अधिकार कोणाला आहे?"
         },
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Outstanding work enforcing the Defect Validation Gate in Scene 1! Now, the supplier-caused NG parts are safely staged in the NG Quarantine Area marked 'Quality Failed'. All supplier-caused defects default to 'Auto Return to Vendor' within a strict 3-Day SLA. However, the assembly line is critically starving for handlebar grip sleeves! SQA discovers the defect is purely a minor cosmetic color shade variance. The Supplier Manager initiates a 'Use As It Is' deviation request in JIRA. Who has the sole authority to approve this deviation, and how is the stock systematically restored into SAP for production?",
-            "hi": "दृश्य 1 में दोष सत्यापन गेट को लागू करने का उत्कृष्ट कार्य! अब, सप्लायर-जनित एनजी भागों को 'Quality Failed' चिह्नित एनजी क्वारंटाइन क्षेत्र में सुरक्षित रखा गया है। सभी सप्लायर-जनित दोष एक सख्त 3-दिवसीय SLA के भीतर 'Auto रिटर्न टू वेंडर' पर डिफॉल्ट होते हैं। हालाँकि, असेंबली लाइन पर हैंडलबार ग्रिप स्लीव्स की भारी कमी है! SQA को पता चलता है कि दोष केवल एक मामूली कॉस्मेटिक रंग भिन्नता है। सप्लायर मैनेजर JIRA में 'Use As It Is' विचलन का अनुरोध करता है। इस विचलन को स्वीकृत करने का एकमात्र अधिकार किसके पास है, और उत्पादन के लिए स्टॉक को व्यवस्थित रूप से SAP में कैसे बहाल किया जाता है?",
-            "mr": "दृश्य 1 मधील दोष पडताळणी गेट यशस्वीरीत्या पार पाडल्याबद्दल अभिनंदन! आता सप्लायरमुळे नाकारलेला माल 'Quality Failed' म्हणून NG क्वारंटाईन भागात ठेवला आहे. सप्लायरच्या सर्व दोषांवर आपोआप 3 दिवसांच्या मुदतीत 'Auto रिटर्न टू व्हेंडर' लागू होते. परंतु, असेंब्ली लाईनवर हँडलबार ग्रिप स्लीव्ह्सचा मोठा तुटवडा निर्माण झाला आहे! SQA ला आढळले की हा केवळ रंगाचा किरकोळ फरक आहे. सप्लायर मॅनेजरने JIRA मध्ये 'Use As It Is' विचलनाची मागणी केली. JIRA मध्ये हे विचलन मंजूर करण्याचा एकमेव अधिकार कोणाचा आहे आणि उत्पादनासाठी SAP मध्ये स्टॉक कसा उपलब्ध केला जातो?"
+            "en": "Now, the defective parts are kept in the NG area marked 'Quality Failed'. Normally, vendor defect parts are returned to vendor within 3 days. But the assembly line is running out of handlebar grip sleeves! Quality finds the defect is only a minor color shade difference. The Supplier Manager requests a 'Use As It Is' deviation in JIRA. Who alone can approve this deviation, and how is the stock moved back into SAP for assembly?",
+            "hi": "क्वारंटाइन एरिया में सप्लायर के खराब पार्ट्स रखे हैं। सामान्य नियम के अनुसार सप्लायर की गलती वाला माल 3 दिन के अंदर वेंडर को वापस भेजा जाता है। लेकिन असेंबली लाइन पर ग्रिप स्लीव्स की भारी कमी हो गई है! क्वालिटी टीम देखती है कि पार्ट्स में सिर्फ रंग का मामूली फर्क है। सप्लायर मैनेजर इसे विशेष छूट ('Use As Is') के साथ चलाने की रिक्वेस्ट डालता है। इस छूट को मंज़ूर करने का अधिकार किसे है?",
+            "mr": "क्वारंटाईन भागात सप्लायरचा खराब माल ठेवला आहे. नियमांनुसार 3 दिवसांच्या आत हा माल व्हेंडरला परत करायचा असतो. पण लाईनवर ग्रिप स्लीव्ह्सची प्रचंड टंचाई निर्माण झाली आहे! क्वालिटी टीमच्या लक्षात येते की फक्त रंगाचा किरकोळ फरक आहे. सप्लायर मॅनेजर हा माल विशेष सवलतीत ('Use As Is') वापरण्याची विनंती करतो. ही सवलत देण्याचा अधिकार कोणाला आहे?"
           },
           "audioSrc": "/audio/voiceover/s12_sc02_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Spot on! Your operational decision complies with Ather Auric standards.",
-            "hi": "बिल्कुल सही! एनर्जी - आरटीवी के लिए। यह एथर SOP मानकों के 100% अनुरूप है।",
-            "mr": "अगदी बरोबर! SOP फॉर NG - रिटर्न टू व्हेंडर हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+            "en": "Spot on! Only the Head of Quality (SQA Head) holds the authority to approve a 'Use As It Is' deviation. Once digitally approved, the stock is systematically released from Blocked Stock into unrestricted stock for line assembly.",
+            "hi": "बिल्कुल सही! सिर्फ क्वालिटी हेड (SQA / हेड ऑफ क्वालिटी) के पास ही ऐसी विशेष छूट देने का अधिकार होता है। उनके डिजिटल अप्रूवल के बाद ही माल को वापस सिस्टम में प्रोडक्शन के लिए चालू किया जाता है!",
+            "mr": "अगदी बरोबर! केवळ क्वालिटी प्रमुखांनाच (हेड ऑफ क्वालिटी) अशी विशेष सवलत देण्याचा अधिकार असतो. त्यांच्या मंजुरीनंतरच हा माल पुन्हा सिस्टीममध्ये प्रोडक्शनसाठी उपलब्ध केला जातो!"
           },
           "audioSrc": "/audio/voiceover/s12_sc02_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Warning! protocol violation. Always follow standard operating procedure to maintain quality and safety.",
-            "hi": "सावधान! SOP प्रोटोकॉल का उल्लंघन। प्लांट सुरक्षा और गुणवत्ता सुनिश्चित करने के लिए निर्धारित प्रक्रिया का पालन करें।",
-            "mr": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+            "en": "Warning! Warehouse operators and production supervisors cannot accept defective parts on their own. Only the Head of Quality can authorize deviations.",
+            "hi": "गलत फैसला! कोई भी सामान्य इंजीनियर या स्टोर ऑपरेटर खुद से छूट नहीं दे सकता। इसके लिए सिर्फ क्वालिटी हेड की मंज़ूरी ज़रूरी है।",
+            "mr": "चुकीचा निर्णय! कोणताही ऑपरेटर किंवा सुपरवायझर स्वतःच्या अधिकारात सवलत देऊ शकत नाही. यासाठी क्वालिटी प्रमुखांचीच मंजुरी लागते."
           },
           "audioSrc": "/audio/voiceover/s12_sc02_wrong.mp3"
         }
@@ -209,8 +209,8 @@
         "fallbackAnimation": "c2_rtv_deviation",
         "caption": {
           "en": "Deviation Routing: Supplier rejections default to Auto RTV (3-Day SLA); 'Use As It Is' deviation requires Product Owner approval in JIRA before SAP transfer to QI then UR",
-          "hi": "विचलन रूटिंग: सप्लायर अस्वीकृतियां ऑटो RTV (3-दिन SLA) पर डिफॉल्ट होती हैं; 'Use As It Is' विचलन के लिए SAP में QI फिर UR में ट्रांसफर से पहले JIRA में प्रोडक्ट ओनर की मंजूरी आवश्यक है",
-          "mr": "विचलन मार्ग: सप्लायरचा नाकारलेला माल ऑटो RTV (3-दिवसांची मुदत) वर जातो; 'Use As It Is' विचलनासाठी SAP मध्ये QI व नंतर UR मध्ये वर्ग करण्यापूर्वी JIRA मध्ये प्रॉडक्ट ओनरची मंजुरी अनिवार्य आहे"
+          "hi": "छूट (डिविएशन) रूटिंग: सप्लायर रिजेक्टियां ऑटो RTV (3-दिन SLA) पर डिफॉल्ट होती हैं; 'Use As Is' (विशेष छूट) के लिए SAP में QI फिर UR में ट्रांसफर से पहले JIRA में प्रोडक्ट ओनर की मंजूरी आवश्यक है",
+          "mr": "सूट (डिव्हिएशन) मार्ग: सप्लायरचा नाकारलेला माल ऑटो RTV (3-दिवसांची मुदत) वर जातो; 'Use As Is' (विशेष मंजुरीसाठी) SAP मध्ये QI व नंतर UR मध्ये वर्ग करण्यापूर्वी JIRA मध्ये प्रॉडक्ट ओनरची मंजुरी अत्यंत गरजेचे आहे"
         },
         "imageSrc": "/Assets/Scenes/c2_s12_sc02_rtv_deviation.webp",
         "propSrc": "/Assets/Props/prop_ng_rejected_tag.png"
@@ -220,16 +220,16 @@
         "questionId": "c2-q18-rtv-deviation",
         "question": {
           "en": "Line assembly is starved for handlebar sleeves with a minor cosmetic tint flaw. 4.4 & 4.5, what is the mandatory approval and SAP stock conversion sequence for a 'Use As It Is' deviation?",
-          "hi": "हैंडलबार स्लीव्स के मामूली कॉस्मेटिक टिनट दोष के कारण लाइन असेंबली में पार्ट्स की कमी है। 'Use As It Is' विचलन के लिए अनिवार्य अनुमोदन और SAP स्टॉक रूपांतरण क्रम क्या है?",
-          "mr": "रंगाच्या किरकोळ फरकामुळे हँडलबार स्लीव्ह्स अभावी लाईन खोळंबली आहे. 'Use As It Is' विचलनासाठी कोणाची मंजुरी आवश्यक आहे आणि SAP स्टॉक रूपांतरणाचा अचूक क्रम काय आहे?"
+          "hi": "हैंडलबार स्लीव्स के मामूली कॉस्मेटिक टिनट दोष के कारण लाइन असेंबली में पार्ट्स की कमी है। 'Use As Is' (विशेष छूट) के लिए ज़रूरी मंजूरी (अप्रूवल) और SAP स्टॉक रूपांतरण क्रम क्या है?",
+          "mr": "रंगाच्या किरकोळ फरकामुळे हँडलबार स्लीव्ह्स अभावी लाईन खोळंबली आहे. 'Use As Is' (विशेष मंजुरीसाठी) कोणाची मंजुरी आवश्यक आहे आणि SAP स्टॉक रूपांतरणाचा अचूक क्रम काय आहे?"
         },
         "options": [
           {
             "id": "opt-rtv-correct",
             "text": {
               "en": "Product Owner approves JIRA Deviation then Status 'Deviation Accepted' then WH moves stock to QI in SAP & updates 'Available for Build' then quality inspection posts QI to UR (Unrestricted)",
-              "hi": "प्रोडक्ट ओनर JIRA विचलन को मंजूरी देता है फिर स्थिति 'Deviation Accepted' फिर वेयरहाउस SAP में स्टॉक को QI में ले जाता है और 'Available for Build' अपडेट करता है फिर IQC स्टॉक को QI से UR (अप्रतिबंधित) में पोस्ट करता है",
-              "mr": "प्रॉडक्ट ओनर JIRA मध्ये विचलन मंजूर करतो नंतर स्टेटस 'Deviation Accepted' नंतर गोदाम SAP मध्ये QI मध्ये स्टॉक हलवतो व 'Available for Build' करतो नंतर IQC टीम QI मधून UR (अनरेस्ट्रिक्टेड) मध्ये स्टॉक वर्ग करते"
+              "hi": "प्रोडक्ट ओनर JIRA छूट (डिविएशन) को मंजूरी देता है फिर स्थिति 'Deviation Accepted' फिर वेयरहाउस SAP में स्टॉक को QI में ले जाता है और 'Available for Build' अपडेट करता है फिर IQC स्टॉक को QI से UR (अप्रतिबंधित) में पोस्ट करता है",
+              "mr": "प्रॉडक्ट ओनर JIRA मध्ये सूट (डिव्हिएशन) मंजूर करतो नंतर स्टेटस 'Deviation Accepted' नंतर गोदाम SAP मध्ये QI मध्ये स्टॉक हलवतो व 'Available for Build' करतो नंतर IQC टीम QI मधून UR (अनरेस्ट्रिक्टेड) मध्ये स्टॉक वर्ग करते"
             },
             "correct": true
           },
@@ -246,7 +246,7 @@
             "id": "opt-rtv-sm-only",
             "text": {
               "en": "Supplier Manager approves the deviation ticket in JIRA directly without Product Owner review, and vendor ships replacements within 24 hours",
-              "hi": "सप्लायर मैनेजर प्रोडक्ट ओनर की समीक्षा के बिना सीधे JIRA में विचलन टिकट को मंजूरी देता है, और विक्रेता 24 घंटों के भीतर रिप्लेसमेंट भेजता है",
+              "hi": "सप्लायर मैनेजर प्रोडक्ट ओनर की समीक्षा के बिना सीधे JIRA में छूट (डिविएशन) टिकट को मंजूरी देता है, और विक्रेता 24 घंटों के भीतर रिप्लेसमेंट भेजता है",
               "mr": "सप्लायर मॅनेजर प्रॉडक्ट ओनरच्या परवानगीशिवाय परस्पर JIRA तिकीट मंजूर करतो आणि व्हेंडर 24 तासांत नवीन माल पाठवतो"
             },
             "correct": false
@@ -263,8 +263,8 @@
         ],
         "prompt": {
           "en": "Line assembly is starved for handlebar sleeves with a minor cosmetic tint flaw. 4.4 & 4.5, what is the mandatory approval and SAP stock conversion sequence for a 'Use As It Is' deviation?",
-          "hi": "हैंडलबार स्लीव्स के मामूली कॉस्मेटिक टिनट दोष के कारण लाइन असेंबली में पार्ट्स की कमी है। 'Use As It Is' विचलन के लिए अनिवार्य अनुमोदन और SAP स्टॉक रूपांतरण क्रम क्या है?",
-          "mr": "रंगाच्या किरकोळ फरकामुळे हँडलबार स्लीव्ह्स अभावी लाईन खोळंबली आहे. 'Use As It Is' विचलनासाठी कोणाची मंजुरी आवश्यक आहे आणि SAP स्टॉक रूपांतरणाचा अचूक क्रम काय आहे?"
+          "hi": "हैंडलबार स्लीव्स के मामूली कॉस्मेटिक टिनट दोष के कारण लाइन असेंबली में पार्ट्स की कमी है। 'Use As Is' (विशेष छूट) के लिए ज़रूरी मंजूरी (अप्रूवल) और SAP स्टॉक रूपांतरण क्रम क्या है?",
+          "mr": "रंगाच्या किरकोळ फरकामुळे हँडलबार स्लीव्ह्स अभावी लाईन खोळंबली आहे. 'Use As Is' (विशेष मंजुरीसाठी) कोणाची मंजुरी आवश्यक आहे आणि SAP स्टॉक रूपांतरणाचा अचूक क्रम काय आहे?"
         },
         "id": "c2-q18-rtv-deviation",
         "audioSrc": "/audio/voiceover/s12_sc02_prompt.mp3"
@@ -274,8 +274,8 @@
         "sopClause": "SOP for NG - RTV Clauses 4.2 to 4.5",
         "why": {
           "en": "SOP for NG - Return to Vendor specifies that all supplier-caused defects automatically receive the 'Return to Vendor' disposition in JIRA with a 3-Day SLA. Explicitly mandates: 'Product owner is to either approve or reject the Deviation request after going through the problem and justification mentioned in the JIRA Deviation Ticket.' upon securing 'Deviation Accepted' status, Warehouse moves material to staging and transfers stock in SAP to QI (Quality Inspection), updating JIRA to 'Deviated: Available for Build'. The IQC team then executes the final SAP movement from QI to UR (Unrestricted) for vehicle assembly. No shop supervisor or vendor has the authority to bypass this chain of custody.",
-          "hi": "एनर्जी - आरटीवी के लिए निर्दिष्ट करता है कि सभी सप्लायर-जनित दोषों को 3-दिन के SLA के साथ JIRA में स्वचालित रूप से 'रिटर्न टू वेंडर' स्वभाव प्राप्त होता है। स्पष्ट रूप से आदेश देता है: 'प्रोडक्ट ओनर को JIRA विचलन टिकट में उल्लिखित समस्या और औचित्य से गुजरने के बाद विचलन अनुरोध को स्वीकृत या अस्वीकार करना होगा।' 'Deviation Accepted' स्थिति प्राप्त होने पर, वेयरहाउस सामग्री को स्टेजिंग में ले जाता है और SAP में स्टॉक को QI (क्वालिटी इंस्पेक्शन) में स्थानांतरित करता है, JIRA को 'Deviated: Available for Build' में अपडेट करता है। IQC टीम तब वाहन असेंबली के लिए QI से UR में अंतिम SAP आंदोलन निष्पादित करती है।",
-          "mr": "SOP फॉर NG - रिटर्न टू व्हेंडर सप्लायरच्या सर्व दोषांवर 3 दिवसांच्या मुदतीसह आपोआप 'रिटर्न टू व्हेंडर' लागू होते. स्पष्ट सांगतो: 'JIRA मधील कारण व पुराव्यांची तपासणी करून केवळ प्रॉडक्ट ओनरच विचलन मंजूर किंवा नामंजूर करू शकतो.' 'Deviation Accepted' झाल्यावर गोदाम कर्मचारी प्रत्यक्ष माल हलवून SAP मध्ये QI मध्ये घेतात व JIRA स्टेटस 'Deviated: Available for Build' करतात. त्यानंतर IQC टीम SAP मध्ये QI मधून UR (अनरेस्ट्रिक्टेड) मध्ये अंतिम नोंद करते जेणेकरून पार्ट वाहनासाठी वापरता येईल. कोणत्याही सुपरवायझरला परस्पर असा निर्णय घेण्याची परवानगी नाही."
+          "hi": "एनर्जी - आरटीवी के लिए निर्दिष्ट करता है कि सभी सप्लायर-जनित दोषों को 3-दिन के SLA के साथ JIRA में स्वचालित रूप से 'रिटर्न टू वेंडर' (RTV) का फैसला होता है। स्पष्ट रूप से आदेश देता है: 'प्रोडक्ट ओनर को JIRA छूट (डिविएशन) टिकट में उल्लिखित समस्या और औचित्य से गुजरने के बाद छूट (डिविएशन) अनुरोध को स्वीकृत या अस्वीकार करना होगा।' 'Deviation Accepted' स्थिति प्राप्त होने पर, वेयरहाउस सामग्री को स्टेजिंग में ले जाता है और SAP में स्टॉक को QI (क्वालिटी इंस्पेक्शन) में स्थानांतरित करता है, JIRA को 'Deviated: Available for Build' में अपडेट करता है। IQC टीम तब वाहन असेंबली के लिए QI से UR में अंतिम SAP आंदोलन निष्पादित करती है।",
+          "mr": "SOP फॉर NG - रिटर्न टू व्हेंडर सप्लायरच्या सर्व दोषांवर 3 दिवसांच्या मुदतीसह आपोआप 'रिटर्न टू व्हेंडर' लागू होते. स्पष्ट सांगतो: 'JIRA मधील कारण व पुराव्यांची तपासणी करून केवळ प्रॉडक्ट ओनरच सूट (डिव्हिएशन) मंजूर किंवा नामंजूर करू शकतो.' 'Deviation Accepted' झाल्यावर गोदाम कर्मचारी प्रत्यक्ष माल हलवून SAP मध्ये QI मध्ये घेतात व JIRA स्टेटस 'Deviated: Available for Build' करतात. त्यानंतर IQC टीम SAP मध्ये QI मधून UR (अनरेस्ट्रिक्टेड) मध्ये अंतिम नोंद करते जेणेकरून पार्ट वाहनासाठी वापरता येईल. कोणत्याही सुपरवायझरला परस्पर असा निर्णय घेण्याची परवानगी नाही."
         }
       }
     },
@@ -295,34 +295,34 @@
         "name": "AURA",
         "pose": "explaining",
         "dialog": {
-          "en": "Now we tackle shop floor EHS safety and empty asset circulation! As battery pack assembly proceeds at high velocity, empty plastic totes and crates accumulate rapidly by the workstation. To save gangway.",
-          "hi": "अब हम के तहत शॉप फ्लोर ईएचएस सुरक्षा और खाली संपत्ति परिसंचरण से निपटते हैं! चूंकि बैटरी पैक असेंबली तेज गति से आगे बढ़ती है, वर्कस्टेशन के पास खाली प्लास्टिक के डिब्बे और टोकरे तेजी से जमा होते हैं। गैंगवे की जगह बचाने के लिए, एक उत्साही प्रशिक्षु पैलेट फुटप्रिंट बचाने का दावा करते हुए 8 खाली बक्सों को 7.5 फीट ऊंचे एक एकल टॉवर में रखना चाहता है। वह पूछता है कि क्या उसे पैलेट को ले जाने से पहले 2 और बक्से जोड़ने चाहिए। सुरक्षा प्रोटोकॉल आपका अनिवार्य परिचालन निर्णय क्या है? रुकें या जाएं?",
-          "mr": "आता आपण नुसार शॉप फ्लोअर EHS सुरक्षा आणि रिकाम्या पेट्यांचे व्यवस्थापन शिकणार आहोत! बॅटरी पॅक असेंब्ली वेगाने सुरू असताना वर्कस्टेशनजवळ रिकाम्या पेट्यांचा ढीग जमा होतो. पॅसेजमधील जागा वाचवण्याचा दावा करत एका नवीन कामगाराने तब्बल 7.5 फूट उंच 8 पेट्यांची एकच थप्पी रचली. तो विचारतो की पॅलेट हलवण्यापूर्वी त्यावर अजून 2 पेट्या ठेवू का? सुरक्षा नियमांनुसार तुमचा निर्णय काय असेल? थांबा किंवा पुढे जा?"
+          "en": "Now we address shop floor EHS safety and empty container circulation! As battery pack and vehicle assembly proceeds, empty Foldable Large Containers and plastic totes accumulate rapidly. What is the strict maximum stacking height limit for empty containers to prevent tip-over accidents?",
+          "hi": "अब खाली क्रेट्स और प्लास्टिक ट्रे को सुरक्षित तरीके से रखने का नियम सीखते हैं! असेंबली लाइन से निकलने वाले खाली नीले बक्सों और ट्रे को एक के ऊपर एक कैसे लगाना चाहिए? अधिकतम ऊंचाई की सुरक्षित सीमा क्या है?",
+          "mr": "आता रिकाम्या पेट्या सुरक्षित रचण्याचा नियम शिकूया! लाईनवरून निघणाऱ्या रिकाम्या पेट्यांची थप्पी मारताना कमाल मर्यादा काय असते?"
         },
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Now we tackle shop floor EHS safety and empty asset circulation! As battery pack assembly proceeds at high velocity, empty plastic totes and crates accumulate rapidly by the workstation. To save gangway.",
-            "hi": "अब हम के तहत शॉप फ्लोर ईएचएस सुरक्षा और खाली संपत्ति परिसंचरण से निपटते हैं! चूंकि बैटरी पैक असेंबली तेज गति से आगे बढ़ती है, वर्कस्टेशन के पास खाली प्लास्टिक के डिब्बे और टोकरे तेजी से जमा होते हैं। गैंगवे की जगह बचाने के लिए, एक उत्साही प्रशिक्षु पैलेट फुटप्रिंट बचाने का दावा करते हुए 8 खाली बक्सों को 7.5 फीट ऊंचे एक एकल टॉवर में रखना चाहता है। वह पूछता है कि क्या उसे पैलेट को ले जाने से पहले 2 और बक्से जोड़ने चाहिए। सुरक्षा प्रोटोकॉल आपका अनिवार्य परिचालन निर्णय क्या है? रुकें या जाएं?",
-            "mr": "आता आपण नुसार शॉप फ्लोअर EHS सुरक्षा आणि रिकाम्या पेट्यांचे व्यवस्थापन शिकणार आहोत! बॅटरी पॅक असेंब्ली वेगाने सुरू असताना वर्कस्टेशनजवळ रिकाम्या पेट्यांचा ढीग जमा होतो. पॅसेजमधील जागा वाचवण्याचा दावा करत एका नवीन कामगाराने तब्बल 7.5 फूट उंच 8 पेट्यांची एकच थप्पी रचली. तो विचारतो की पॅलेट हलवण्यापूर्वी त्यावर अजून 2 पेट्या ठेवू का? सुरक्षा नियमांनुसार तुमचा निर्णय काय असेल? थांबा किंवा पुढे जा?"
+            "en": "Now we address shop floor EHS safety and empty container circulation! As battery pack and vehicle assembly proceeds, empty Foldable Large Containers and plastic totes accumulate rapidly. What is the strict maximum stacking height limit for empty containers to prevent tip-over accidents?",
+            "hi": "अब खाली क्रेट्स और प्लास्टिक ट्रे को सुरक्षित तरीके से रखने का नियम सीखते हैं! असेंबली लाइन से निकलने वाले खाली नीले बक्सों और ट्रे को एक के ऊपर एक कैसे लगाना चाहिए? अधिकतम ऊंचाई की सुरक्षित सीमा क्या है?",
+            "mr": "आता रिकाम्या पेट्या सुरक्षित रचण्याचा नियम शिकूया! लाईनवरून निघणाऱ्या रिकाम्या पेट्यांची थप्पी मारताना कमाल मर्यादा काय असते?"
           },
           "audioSrc": "/audio/voiceover/s12_sc03_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Spot on! Your operational decision complies with Ather Auric standards.",
-            "hi": "बिल्कुल सही! खाली बिन संग्रह और लोडिंग। यह एथर SOP मानकों के 100% अनुरूप है।",
-            "mr": "अगदी बरोबर! SOP-EMPTYBIN COLLECTION AND LOADING Auric हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+            "en": "Spot on! Empty Foldable Large Containers have a strict maximum stacking limit of 5 containers high on level staging bays to prevent tipping hazards and protect walking associates.",
+            "hi": "बिल्कुल सही! खाली क्रेट्स को अधिकतम 5 क्रेट्स की ऊंचाई तक ही रखा जा सकता है। इससे ज़्यादा ऊंचा रखने पर ढेर गिर सकता है और वर्कर को चोट लग सकती है!",
+            "mr": "अगदी बरोबर! रिकाम्या पेट्या जास्तीत जास्त 5 पेट्यांच्या उंचीपर्यंतच रचल्या पाहिजेत. त्यापेक्षा जास्त उंच केल्यास थप्पी कोसळून अपघात होऊ शकतो!"
           },
           "audioSrc": "/audio/voiceover/s12_sc03_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Warning! protocol violation. Always follow standard operating procedure to maintain quality and safety.",
-            "hi": "सावधान! SOP प्रोटोकॉल का उल्लंघन। प्लांट सुरक्षा और गुणवत्ता सुनिश्चित करने के लिए निर्धारित प्रक्रिया का पालन करें।",
-            "mr": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+            "en": "Dangerous safety hazard! Stacking higher than 5 bins makes the stack unstable, risking serious crush injuries to shopfloor associates.",
+            "hi": "सुरक्षा में लापरवाही! 5 से ज़्यादा क्रेट ऊपर रखने से ढेर असंतुलित हो जाता है और कभी भी किसी के ऊपर गिर सकता है।",
+            "mr": "सुरक्षेचा धोका! 5 पेक्षा जास्त उंच पेट्या रचल्यास त्या घसरून कामगारांवर पडण्याचा धोका असतो."
           },
           "audioSrc": "/audio/voiceover/s12_sc03_wrong.mp3"
         }
@@ -332,8 +332,8 @@
         "fallbackAnimation": "c2_empty_bin_stacking",
         "caption": {
           "en": "Empty Bin Safety Protocol: Maximum stacking height must never exceed 5 feet (operator height) with mandatory ratchet strapping; sweeps occur every 30 minutes",
-          "hi": "खाली बिन सुरक्षा प्रोटोकॉल: अनिवार्य शाफ़्ट स्ट्रैपिंग के साथ अधिकतम स्टैकिंग ऊंचाई कभी भी 5 फीट (ऑपरेटर ऊंचाई) से अधिक नहीं होनी चाहिए; सफाई हर 30 मिनट में होती है",
-          "mr": "रिकाम्या पेट्यांचा सुरक्षा नियम: थप्पीची उंची ऑपरेटरच्या उंचीपेक्षा (5 फूट) जास्त असता कामा नये आणि पट्टा बांधणे अनिवार्य आहे; दर 30 मिनिटांनी फेऱ्या मारल्या जातात"
+          "hi": "खाली बिन सुरक्षा प्रोटोकॉल: ज़रूरी शाफ़्ट स्ट्रैपिंग के साथ अधिकतम स्टैकिंग ऊंचाई कभी भी 5 फीट (ऑपरेटर ऊंचाई) से अधिक नहीं होनी चाहिए; सफाई हर 30 मिनट में होती है",
+          "mr": "रिकाम्या पेट्यांचा सुरक्षा नियम: थप्पीची उंची ऑपरेटरच्या उंचीपेक्षा (5 फूट) जास्त असता कामा नये आणि पट्टा बांधणे अत्यंत गरजेचे आहे; दर 30 मिनिटांनी फेऱ्या मारल्या जातात"
         },
         "imageSrc": "/Assets/Scenes/c2_s12_sc03_empty_bin_stacking.webp"
       },
@@ -354,8 +354,8 @@
         "correctAction": "stop",
         "stopLabel": {
           "en": "STOP - STRICT 5-FOOT (OPERATOR HEIGHT) LIMIT & MANDATORY BELTING",
-          "hi": "रुकें - सख्त 5-फुट (ऑपरेटर ऊंचाई) सीमा और अनिवार्य बेल्टिंग",
-          "mr": "थांबा - सक्त 5-फूट कमाल मर्यादा आणि पट्टा बांधणे अनिवार्य"
+          "hi": "रुकें - सख्त 5-फुट (ऑपरेटर ऊंचाई) सीमा और ज़रूरी बेल्टिंग",
+          "mr": "थांबा - सक्त 5-फूट कमाल मर्यादा आणि पट्टा बांधणे गरजेचे"
         },
         "goLabel": {
           "en": "GO - STACK TO 8 FEET TO SAVE GANGWAY SPACE",
@@ -364,8 +364,8 @@
         },
         "stopDescription": {
           "en": "Halt immediately. Safety Protocol strictly dictates: 'Ensure that the stacking of bins does not exceed the height of the operator (5 feet) to maintain visibility and prevent tipping. Also he must put the belt around the bins to avoid tripping & falling.' Stacks over 5 feet create severe toppling risks during manual or forklift transit and blind operator sightlines across active factory aisles.",
-          "hi": "तुरंत रुकें। सुरक्षा प्रोटोकॉल सख्ती से निर्देशित करता है: 'दृश्यता बनाए रखने और गिरने से रोकने के लिए ऑपरेटर की ऊंचाई (5 फीट) से अधिक न हो यह सुनिश्चित करें। साथ ही गिरने से बचने के लिए बिन के चारों ओर बेल्ट लगाएं।' 5 फीट से अधिक के स्टैक से गंभीर खतरे पैदा होते हैं।",
-          "mr": "त्वरित थांबा. सुरक्षा नियम स्पष्ट बजावतो: 'समोरचे दिसावे आणि थप्पी कोसळू नये म्हणून रिकाम्या पेट्यांची उंची ऑपरेटरच्या उंचीपेक्षा (5 फूट) जास्त असू नये, तसेच पट्टा बांधणे अनिवार्य आहे.' 5 फुटांपेक्षा उंच थप्पी वाहतुकीदरम्यान कोसळून गंभीर अपघात होऊ शकतात."
+          "hi": "तुरंत रुकें। सुरक्षा प्रोटोकॉल सख्ती से निर्देशित करता है: 'दृश्यता बनाए रखने और गिरने से रोकने के लिए ऑपरेटर की ऊंचाई (5 फीट) से अधिक न हो यह पक्का करें। साथ ही गिरने से बचने के लिए बिन के चारों ओर बेल्ट लगाएं।' 5 फीट से अधिक के स्टैक से गंभीर खतरे पैदा होते हैं।",
+          "mr": "त्वरित थांबा. सुरक्षा नियम स्पष्ट बजावतो: 'समोरचे दिसावे आणि थप्पी कोसळू नये म्हणून रिकाम्या पेट्यांची उंची ऑपरेटरच्या उंचीपेक्षा (5 फूट) जास्त असू नये, तसेच पट्टा बांधणे अत्यंत गरजेचे आहे.' 5 फुटांपेक्षा उंच थप्पी वाहतुकीदरम्यान कोसळून गंभीर अपघात होऊ शकतात."
         },
         "goDescription": {
           "en": "Allow the 7.5-foot stack to stay, creating a severe falling crate and tipping hazard for passing forklift and workers.",
@@ -385,8 +385,8 @@
         "sopClause": "SOP-EMPTYBIN COLLECTION AND LOADING Auric Clause 4.1",
         "why": {
           "en": "SOP-EMPTYBIN COLLECTION AND LOADING Auric sets the gold standard for material handling ergonomics and safety: 'Strictly ensure that the stacking of bins does not exceed the height of the operator (5 feet) to maintain visibility and prevent tipping. Also he must put the belt around the bins to avoid tripping & falling of parts.' Over-stacking obscures the driver's forward visibility when operating a pallet truck and shifts the center of gravity dangerously upward, making cornering prone to tip-overs. Empty bin sweeps must happen every 30 minutes to manage volume without compromising the 5-foot height ceiling.",
-          "hi": "खाली बिन संग्रह और लोडिंग सामग्री से निपटने के लिए एर्गोनॉमिक्स और सुरक्षा का मानक निर्धारित करता है: 'दृश्यता बनाए रखने और टिपिंग को रोकने के लिए सुनिश्चित करें कि डिब्बे का स्टैकिंग ऑपरेटर की ऊंचाई (5 फीट) से अधिक न हो। साथ ही बेल्ट लगाना अनिवार्य है।' 5 फीट की सीमा से समझौता किए बिना मात्रा को प्रबंधित करने के लिए हर 30 मिनट में खाली बिन संग्रह होना चाहिए।",
-          "mr": "SOP-EMPTYBIN COLLECTION AND LOADING Auric कामगारांच्या सुरक्षेचा कडक नियम स्पष्ट करतो: 'थप्पी कोसळू नये आणि दृष्टीआड होऊ नये म्हणून पेट्यांची उंची ऑपरेटरच्या उंचीपेक्षा (5 फूट) जास्त नसावी, तसेच पट्टा लावणे अनिवार्य आहे.' जास्त उंचीमुळे पॅलेट ट्रक चालवताना समोरचे दिसत नाही आणि वळण घेताना माल उलटून अपघात होतो. गर्दी टाळण्यासाठी दर 30 मिनिटांनी फेऱ्या मारल्या पाहिजेत, परंतु 5 फुटांची मर्यादा कधीही ओलांडता कामा नये."
+          "hi": "खाली बिन संग्रह और लोडिंग सामग्री से निपटने के लिए एर्गोनॉमिक्स और सुरक्षा का मानक निर्धारित करता है: 'दृश्यता बनाए रखने और टिपिंग को रोकने के लिए पक्का करें कि डिब्बे का स्टैकिंग ऑपरेटर की ऊंचाई (5 फीट) से अधिक न हो। साथ ही बेल्ट लगाना बहुत ज़रूरी है।' 5 फीट की सीमा से समझौता किए बिना मात्रा को प्रबंधित करने के लिए हर 30 मिनट में खाली बिन संग्रह होना चाहिए।",
+          "mr": "SOP-EMPTYBIN COLLECTION AND LOADING Auric कामगारांच्या सुरक्षेचा कडक नियम स्पष्ट करतो: 'थप्पी कोसळू नये आणि दृष्टीआड होऊ नये म्हणून पेट्यांची उंची ऑपरेटरच्या उंचीपेक्षा (5 फूट) जास्त नसावी, तसेच पट्टा लावणे अत्यंत गरजेचे आहे.' जास्त उंचीमुळे पॅलेट ट्रक चालवताना समोरचे दिसत नाही आणि वळण घेताना माल उलटून अपघात होतो. गर्दी टाळण्यासाठी दर 30 मिनिटांनी फेऱ्या मारल्या पाहिजेत, परंतु 5 फुटांची मर्यादा कधीही ओलांडता कामा नये."
         }
       }
     },
@@ -406,34 +406,34 @@
         "name": "AURA",
         "pose": "celebrating",
         "dialog": {
-          "en": "This is it—the final gate of Stage 12 and the Grand Finale of our 12-Module Warehouse Training Journey! At the outbound reverse logistics dock, the designated transporter truck is positioned with wheel chocks set. We have 24 strapped empty bins (under 5 feet) and 12 supplier-rejected Return to Vendor crates with Red Tags and Debit Notes attached. To maintain airtight legal compliance and audit traceability before security gate-out, what is the mandatory sequence of actions?",
-          "hi": "यही है—स्टेज 12 का अंतिम गेट और हमारी 12-मॉड्यूल वेयरहाउस प्रशिक्षण यात्रा का भव्य समापन! आउटबाउंड रिवर्स लॉजिस्टिक्स डॉक पर, व्हील चॉक्स सेट के साथ निर्दिष्ट ट्रांसपोर्टर ट्रक तैनात है। हमारे पास 24 स्ट्रैप किए गए खाली डिब्बे (5 फीट से कम) और 12 सप्लायर-अस्वीकृत आरटीवी क्रेट हैं जिनमें रेड टैग और डेबिट नोट जुड़े हैं। सुरक्षा गेट-आउट से पहले एयरटाइट कानूनी अनुपालन और ऑडिट ट्रैसेबिलिटी बनाए रखने के लिए, कार्यों का अनिवार्य क्रम क्या है?",
-          "mr": "हाच तो क्षण—स्टेज 12 चे अंतिम गेट आणि संपूर्ण 12-मॉड्यूल वेअरहाऊस प्रशिक्षण प्रवासाचा महा-अंतिम टप्पा! आउटबाउंड रिव्हर्स लॉजिस्टिक्स डॉकवर व्हेंडरचा ट्रक व्हील चॉक्स लावून सज्ज आहे. आपल्याकडे 24 पट्टे बांधलेल्या रिकाम्या पेट्या (5 फुटांपेक्षा कमी उंची) आणि लाल टॅग व डेबिट नोट लावलेल्या 12 रिटर्न टू व्हेंडर नाकारलेल्या पेट्या आहेत. सुरक्षा गेटबाहेर जाण्यापूर्वी संपूर्ण कायदेशीर पूर्तता आणि ऑडिट नोंदींसाठी अनिवार्य क्रम कोणता आहे?"
+          "en": "The final gate of Stage 12! An outbound supplier truck is parked at the dock ready to return empty containers to the vendor. What mandatory documentation and physical verification must occur before the driver departs?",
+          "hi": "रिवर्स लॉजिस्टिक्स का अंतिम गेट! वेंडर को खाली डिब्बे वापस ले जाने वाला ट्रक डॉक पर खड़ा है। ट्रक में खाली डिब्बे लोड करते समय क्या नियम मानना ज़रूरी है?",
+          "mr": "रिव्हर्स लॉजिस्टिक्सचे अंतिम गेट! व्हेंडरच्या ट्रकमध्ये रिकामे डबे भरताना कोणता नियम पाळणे सक्तीचे आहे?"
         },
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "This is it—the final gate of Stage 12 and the Grand Finale of our 12-Module Warehouse Training Journey! At the outbound reverse logistics dock, the designated transporter truck is positioned with wheel chocks set. We have 24 strapped empty bins (under 5 feet) and 12 supplier-rejected Return to Vendor crates with Red Tags and Debit Notes attached. To maintain airtight legal compliance and audit traceability before security gate-out, what is the mandatory sequence of actions?",
-            "hi": "यही है—स्टेज 12 का अंतिम गेट और हमारी 12-मॉड्यूल वेयरहाउस प्रशिक्षण यात्रा का भव्य समापन! आउटबाउंड रिवर्स लॉजिस्टिक्स डॉक पर, व्हील चॉक्स सेट के साथ निर्दिष्ट ट्रांसपोर्टर ट्रक तैनात है। हमारे पास 24 स्ट्रैप किए गए खाली डिब्बे (5 फीट से कम) और 12 सप्लायर-अस्वीकृत आरटीवी क्रेट हैं जिनमें रेड टैग और डेबिट नोट जुड़े हैं। सुरक्षा गेट-आउट से पहले एयरटाइट कानूनी अनुपालन और ऑडिट ट्रैसेबिलिटी बनाए रखने के लिए, कार्यों का अनिवार्य क्रम क्या है?",
-            "mr": "हाच तो क्षण—स्टेज 12 चे अंतिम गेट आणि संपूर्ण 12-मॉड्यूल वेअरहाऊस प्रशिक्षण प्रवासाचा महा-अंतिम टप्पा! आउटबाउंड रिव्हर्स लॉजिस्टिक्स डॉकवर व्हेंडरचा ट्रक व्हील चॉक्स लावून सज्ज आहे. आपल्याकडे 24 पट्टे बांधलेल्या रिकाम्या पेट्या (5 फुटांपेक्षा कमी उंची) आणि लाल टॅग व डेबिट नोट लावलेल्या 12 रिटर्न टू व्हेंडर नाकारलेल्या पेट्या आहेत. सुरक्षा गेटबाहेर जाण्यापूर्वी संपूर्ण कायदेशीर पूर्तता आणि ऑडिट नोंदींसाठी अनिवार्य क्रम कोणता आहे?"
+            "en": "The final gate of Stage 12! An outbound supplier truck is parked at the dock ready to return empty containers to the vendor. What mandatory documentation and physical verification must occur before the driver departs?",
+            "hi": "रिवर्स लॉजिस्टिक्स का अंतिम गेट! वेंडर को खाली डिब्बे वापस ले जाने वाला ट्रक डॉक पर खड़ा है। ट्रक में खाली डिब्बे लोड करते समय क्या नियम मानना ज़रूरी है?",
+            "mr": "रिव्हर्स लॉजिस्टिक्सचे अंतिम गेट! व्हेंडरच्या ट्रकमध्ये रिकामे डबे भरताना कोणता नियम पाळणे सक्तीचे आहे?"
           },
           "audioSrc": "/audio/voiceover/s12_sc04_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "Spot on! Your operational decision complies with Ather Auric standards.",
-            "hi": "बिल्कुल सही! एनर्जी - आरटीवी के लिए। यह एथर SOP मानकों के 100% अनुरूप है।",
-            "mr": "अगदी बरोबर! SOP फॉर NG - रिटर्न टू व्हेंडर हा निर्णय एथर SOP मानकांनुसार 100% अचूक आहे."
+            "en": "Spot on! Generate an authorized Delivery Challan in SAP detailing the exact container count and types, obtain the truck driver's signature on the receipt, and issue the Exit Gate Pass.",
+            "hi": "बिल्कुल सही! ट्रक में खाली डिब्बे लोड करने के बाद डिलीवरी चालान पर ड्राइवर के दस्तखत लें और सिस्टम में गेट पास बनाकर ही गाड़ी को रवाना करें!",
+            "mr": "अगदी बरोबर! ट्रकमध्ये रिकामे डबे भरल्यानंतर डिलिव्हरी चलनावर ड्रायव्हरची सही घ्या आणि सिस्टीममध्ये गेट पास बनवूनच गाडी सोडली पाहिजे!"
           },
           "audioSrc": "/audio/voiceover/s12_sc04_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "Warning! protocol violation. Always follow standard operating procedure to maintain quality and safety.",
-            "hi": "सावधान! SOP प्रोटोकॉल का उल्लंघन। प्लांट सुरक्षा और गुणवत्ता सुनिश्चित करने के लिए निर्धारित प्रक्रिया का पालन करें।",
-            "mr": "सावधान! SOP नियमांचे उल्लंघन. प्लांटमधील सुरक्षितता आणि गुणवत्ता राखण्यासाठी ठरवून दिलेल्या पद्धतीचे पालन करा."
+            "en": "Warning! Never dispatch empty boxes without an official Delivery Challan and signed handover. Empty containers are company property and need strict audit tracking.",
+            "hi": "गलत तरीका! बिना डिलीवरी चालान और बिना ड्राइवर के दस्तखत के कभी भी खाली बक्से बाहर न भेजें।",
+            "mr": "चुकीची पद्धत! डिलिव्हरी चलनाशिवाय आणि ड्रायव्हरच्या स्वाक्षरीशिवाय रिकामे डबे कधीही गेटबाहेर पाठवू नका."
           },
           "audioSrc": "/audio/voiceover/s12_sc04_wrong.mp3"
         }
@@ -443,7 +443,7 @@
         "fallbackAnimation": "c2_reverse_truck_loading",
         "caption": {
           "en": "Reverse Dispatch Compliance: Physical load verification → SAP Delivery Challan & E-Way Bill → Signed LR Proof of Handover → JIRA status transition to 'Returned to vendor'",
-          "hi": "रिवर्स प्रेषण अनुपालन: भौतिक भार सत्यापन → SAP डिलीवरी चालान और ई-वे बिल → हस्ताक्षरित LR प्रूफ ऑफ हैंडओवर → JIRA स्थिति 'Returned to vendor' में संक्रमण",
+          "hi": "रिवर्स प्रेषण अनुपालन: असल भार जांच (चेकिंग) → SAP डिलीवरी चालान और ई-वे बिल → हस्ताक्षरित LR प्रूफ ऑफ हैंडओवर → JIRA स्थिति 'Returned to vendor' में स्टेटस बदलना",
           "mr": "रिव्हर्स डिस्पॅच पूर्तता: प्रत्यक्ष मालाची तपासणी → SAP डिलिव्हरी चलन व ई-वे बिल → ट्रान्सपोर्टरची स्वाक्षरी असलेली LR पावती → JIRA मध्ये 'Returned to vendor' नोंद"
         },
         "videoSrc": "/Assets/videos/scene_08_empty_bin_strapping.mp4",
@@ -457,12 +457,12 @@
         "safetyCritical": true,
         "question": {
           "en": "Arrange the 4 standard operating procedure steps for reverse truck loading and factory gate clearance into the correct chronological order.",
-          "hi": "प्रेषण अनुक्रम: रिवर्स ट्रक लोडिंग और फैक्ट्री गेट क्लीयरेंस के लिए 4 मानक संचालन प्रक्रिया चरणों को सही कालानुक्रमिक क्रम में व्यवस्थित करें।",
+          "hi": "सामान भेजने का सही क्रम: रिवर्स ट्रक लोडिंग और फैक्ट्री गेट क्लीयरेंस के लिए 4 मानक संचालन प्रक्रिया चरणों को एक के बाद एक सही क्रम में लगाएं।",
           "mr": "डिस्पॅच क्रम लावा: रिव्हर्स ट्रक लोडिंग आणि गेट क्लिअरन्सच्या 4 प्रमाणित पायऱ्या योग्य कालानुक्रमाने लावा."
         },
         "instruction": {
           "en": "Use the Up/Down arrows to position the physical load inspection first and final JIRA audit closure last.",
-          "hi": "भौतिक भार निरीक्षण को पहले और अंतिम JIRA ऑडिट समापन को अंत में रखने के लिए ऊपर/नीचे तीरों का उपयोग करें।",
+          "hi": "असल भार निरीक्षण को पहले और अंतिम JIRA ऑडिट समापन को अंत में रखने के लिए ऊपर/नीचे तीरों का उपयोग करें।",
           "mr": "सुरुवातीला प्रत्यक्ष मालाची तपासणी आणि शेवटी JIRA ऑडिट पूर्तता करण्यासाठी वर/खाली बाणांचा वापर करा."
         },
         "steps": [
@@ -471,7 +471,7 @@
             "icon": "PackageCheck",
             "label": {
               "en": "1. Verify Segregated Empty Bins (≤ 5 Ft) & Red-Tagged return to vendor Crates",
-              "hi": "1. अलग किए गए खाली डिब्बे (≤ 5 फीट) और लाल-टैग वाले RTV क्रेट सत्यापित करें",
+              "hi": "1. अलग किए गए खाली डिब्बे (≤ 5 फीट) और लाल-टैग वाले RTV क्रेट चेक करें",
               "mr": "1. रिकाम्या पेट्यांची थप्पी (≤ 5 फूट) आणि लाल टॅग लावलेला RTV माल तपासा"
             }
           },
@@ -480,7 +480,7 @@
             "icon": "FileText",
             "label": {
               "en": "2. Generate SAP Delivery Challan & Mandatory E-Way Bill",
-              "hi": "2. SAP डिलीवरी चालान और अनिवार्य ई-वे बिल जनरेट करें",
+              "hi": "2. SAP डिलीवरी चालान और ज़रूरी ई-वे बिल जनरेट करें",
               "mr": "2. SAP डिलिव्हरी चलन आणि बंधनकारक ई-वे बिल तयार करा"
             }
           },
@@ -511,7 +511,7 @@
         ],
         "prompt": {
           "en": "Arrange the 4 standard operating procedure steps for reverse truck loading and factory gate clearance into the correct chronological order.",
-          "hi": "प्रेषण अनुक्रम: रिवर्स ट्रक लोडिंग और फैक्ट्री गेट क्लीयरेंस के लिए 4 मानक संचालन प्रक्रिया चरणों को सही कालानुक्रमिक क्रम में व्यवस्थित करें।",
+          "hi": "सामान भेजने का सही क्रम: रिवर्स ट्रक लोडिंग और फैक्ट्री गेट क्लीयरेंस के लिए 4 मानक संचालन प्रक्रिया चरणों को एक के बाद एक सही क्रम में लगाएं।",
           "mr": "डिस्पॅच क्रम लावा: रिव्हर्स ट्रक लोडिंग आणि गेट क्लिअरन्सच्या 4 प्रमाणित पायऱ्या योग्य कालानुक्रमाने लावा."
         },
         "id": "c2-q20-reverse-dispatch-sequence",
@@ -522,7 +522,7 @@
         "sopClause": "SOP for NG - RTV Clause 4.10 & SOP-EMPTYBIN Clause 4.2",
         "why": {
           "en": "SOP for NG - Return to Vendor explicitly mandates: 'Transporters issue an LR detailing box counts and quantities as Proof of Handover (PoH). Attach PoH/PoD documents to the batch JIRA ticket for audit tracking and transition the JIRA status to Returned to vendor post physical movement.' Along with materials cannot leave Ather premises without a legally binding SAP Delivery Challan, mandatory E-Way Bill, and verified physical strapping. Completing this closed-loop sequence maintains 100% financial audit compliance and eliminates phantom stock across all Ather Energy plant facilities.",
-          "hi": "एनर्जी - आरटीवी के लिए स्पष्ट रूप से आदेश देता है: 'ट्रांसपोर्टर हैंडओवर के प्रमाण (PoH) के रूप में बॉक्स की संख्या और मात्रा का विवरण देते हुए एक LR जारी करते हैं. ऑडिट ट्रैकिंग के लिए बैच JIRA टिकट में PoH/PoD दस्तावेज़ संलग्न करें और भौतिक आंदोलन के बाद JIRA स्थिति को 'Returned to vendor' में बदलें।' के साथ, सामग्री कानूनी रूप से बाध्यकारी SAP डिलीवरी चालान, अनिवार्य ई-वे बिल और सत्यापित भौतिक स्ट्रैपिंग के बिना एथर परिसर से बाहर नहीं निकल सकती है।",
+          "hi": "एनर्जी - आरटीवी के लिए स्पष्ट रूप से आदेश देता है: 'ट्रांसपोर्टर हैंडओवर के प्रमाण (PoH) के रूप में बॉक्स की संख्या और मात्रा का विवरण देते हुए एक LR जारी करते हैं. ऑडिट ट्रैकिंग के लिए बैच JIRA टिकट में PoH/PoD कागज़ात संलग्न करें और असल आंदोलन के बाद JIRA स्थिति को 'Returned to vendor' में बदलें।' के साथ, सामग्री कानूनी रूप से बाध्यकारी SAP डिलीवरी चालान, ज़रूरी ई-वे बिल और चेक किया हुआ असल स्ट्रैपिंग के बिना एथर परिसर से बाहर नहीं निकल सकती है।",
           "mr": "SOP फॉर NG - रिटर्न टू व्हेंडर स्पष्ट सांगतो: 'ट्रान्सपोर्टरकडून बॉक्सची संख्या व प्रमाण नोंदवून LR पावतीवर प्रूफ ऑफ हँडओव्हर (PoH) म्हणून स्वाक्षरी घेतली पाहिजे. ऑडिटसाठी JIRA तिकिटात ही PoH/PoD प्रत जोडून प्रत्यक्ष माल रवाना झाल्यावर स्टेटस 'Returned to vendor' केले पाहिजे.' तसेच नुसार SAP डिलिव्हरी चलन, ई-वे बिल आणि सुरक्षित पट्टा बांधल्याशिवाय कोणताही ट्रक गेटबाहेर जाऊ शकत नाही. ही संपूर्ण साखळी पूर्ण केल्यामुळे ऑडिटमध्ये कोणताही घोळ होत नाही व कंपनीचे नुकसान टळते."
         }
       }
@@ -545,34 +545,34 @@
         "intro": {
           "pose": "warning",
           "text": {
-            "en": "Urgent shopfloor safety audit! Along the main frame assembly line, an operator has emptied 6 plastic component totes and casually stacked them directly in the pedestrian yellow walkway, stating: 'I'll leave them here until shift end so I don't waste time walking to the collection area.' should this practice be allowed or stopped immediately?",
-            "hi": "तत्काल शॉपफ्लोर सुरक्षा ऑडिट! मुख्य फ्रेम असेंबली लाइन के साथ, एक ऑपरेटर ने 6 प्लास्टिक कंपोनेंट टोट्स को खाली कर दिया है और उन्हें सीधे पैदल यात्री पीले वॉकवे में रख दिया है, यह कहते हुए: 'मैं उन्हें शिफ्ट के अंत तक यहां छोड़ दूंगा ताकि संग्रह क्षेत्र में जाने में समय बर्बाद न हो।' क्या इस प्रथा की अनुमति दी जानी चाहिए या तुरंत रोक दी जानी चाहिए?",
-            "mr": "तातडीचे शॉपफ्लोर सुरक्षा ऑडिट! असेंब्ली लाईनच्या बाजूला, एका ऑपरेटरने 6 रिकाम्या प्लास्टिक पेट्या थेट पिवळ्या आपत्कालीन रस्त्यात टाकल्या आणि म्हणाला: 'मी शिफ्ट संपेपर्यंत या इथेच ठेवतो जेणेकरून मला चालत जावे लागणार नाही.' या कृतीला परवानगी द्यावी की थांबवावी?"
+            "en": "Urgent shopfloor safety audit! Along the main frame assembly line, an operator has emptied 6 plastic component totes and stacked them directly in the forklift gangway to clear station floor space. What is your mandatory action?",
+            "hi": "शॉपफ्लोर सुरक्षा चेकिंग! असेंबली लाइन के पास ऑपरेटर ने 6 खाली प्लास्टिक क्रेट रास्ते में छोड़ दिए हैं। क्या इन्हें रास्ते में छोड़ना चाहिए?",
+            "mr": "शॉपफ्लोर सुरक्षेची तपासणी! लाईनच्या बाजूला ऑपरेटरने 6 रिकामे क्रेट्स रस्त्यातच सोडून दिले आहेत. ते तिथे तसेच सोडावेत का?"
           },
           "audioSrc": "/audio/voiceover/s12_sc05_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "STOP IS ABSOLUTELY ESSENTIAL! Leaving empty bins at line-side chokes the gangways, blocks emergency exits, and completely halts the reverse asset loop! Dedicated Empty Bin Collectors must sweep the line every 30 minutes to move containers to the segregation zone!",
-            "hi": "STOP बिल्कुल आवश्यक है! लाइन-साइड पर खाली डिब्बे छोड़ने से रास्ते अवरुद्ध हो जाते हैं, आपातकालीन निकास अवरुद्ध हो जाते हैं, और रिवर्स एसेट लूप पूरी तरह से रुक जाता है! समर्पित खाली बिन कलेक्टरों को कंटेनरों को अलग करने वाले क्षेत्र में ले जाने के लिए हर 30 मिनट में लाइन को साफ करना चाहिए!",
-            "mr": "STOP करणे अत्यंत आवश्यक आहे! लाईनच्या बाजूला रिकाम्या पेट्या सोडल्यास रस्ता अडकतो, आगीच्या वेळी बाहेर पडण्याचा मार्ग बंद होतो आणि पेट्यांचा तुटवडा भासतो! रिकाम्या पेट्या गोळा करणाऱ्या स्वतंत्र टीमने दर 30 मिनिटांनी लाईन साफ केली पाहिजे!"
+            "en": "STOP IS ABSOLUTELY ESSENTIAL! Leaving empty bins in active gangways chokes forklift corridors, blocks emergency egress routes, and creates severe tripping hazards. Bins must be staged exclusively in designated yellow-marked line-side zones!",
+            "hi": "तुरंत रोकें! रास्ते में खाली डिब्बे छोड़ने से कामगारों के आने-जाने का रास्ता बंद हो जाता है और आग लगने पर इमरजेंसी गेट ब्लॉक हो सकता है!",
+            "mr": "लगेच थांबवा! चालण्याच्या रस्त्यात रिकामे डबे सोडल्यास येण्या-जाण्याचा रस्ता अडवला जातो आणि आणीबाणीच्या वेळी धोका निर्माण होतो!"
           },
           "audioSrc": "/audio/voiceover/s12_sc05_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "HAZARDOUS EHS VIOLATION! Abandoning empty bins on factory walkways creates tripping hazards, blocks emergency escape corridors, and starves receiving docks of empty packaging!",
-            "hi": "खतरनाक ईएचएस उल्लंघन! फैक्ट्री वॉकवे पर खाली डिब्बे छोड़ने से ट्रिपिंग के खतरे पैदा होते हैं, आपातकालीन निकास गलियारे अवरुद्ध होते हैं, और खाली पैकेजिंग की कमी होती है!",
-            "mr": "गंभीर सुरक्षा नियमभंग! रस्त्यावर रिकाम्या पेट्या टाकल्याने लोक अडखळून पडतात, आपत्कालीन रस्ता बंद होतो आणि गोदामात पेट्यांचा तुटवडा होतो!"
+            "en": "HAZARDOUS EHS VIOLATION! Abandoning empty bins on factory walkways creates tripping hazards, blocks emergency evacuations, and risks forklift collisions.",
+            "hi": "सुरक्षा नियम तोड़ना! रास्ते में कभी खाली बक्से न छोड़ें। इन्हें हमेशा तय की गई जगह पर ही रखें।",
+            "mr": "नियमभंग! चालण्याच्या जागेत रिकाम्या पेट्या टाकू नका. त्या नेहमी ठरलेल्या जागीच ठेवा."
           },
           "audioSrc": "/audio/voiceover/s12_sc05_wrong.mp3"
         },
         "dialog": {
-          "en": "Urgent shopfloor safety audit! Along the main frame assembly line, an operator has emptied 6 plastic component totes and casually stacked them directly in the pedestrian yellow walkway, stating: 'I'll leave them here until shift end so I don't waste time walking to the collection area.' should this practice be allowed or stopped immediately?",
-          "hi": "तत्काल शॉपफ्लोर सुरक्षा ऑडिट! मुख्य फ्रेम असेंबली लाइन के साथ, एक ऑपरेटर ने 6 प्लास्टिक कंपोनेंट टोट्स को खाली कर दिया है और उन्हें सीधे पैदल यात्री पीले वॉकवे में रख दिया है, यह कहते हुए: 'मैं उन्हें शिफ्ट के अंत तक यहां छोड़ दूंगा ताकि संग्रह क्षेत्र में जाने में समय बर्बाद न हो।' क्या इस प्रथा की अनुमति दी जानी चाहिए या तुरंत रोक दी जानी चाहिए?",
-          "mr": "तातडीचे शॉपफ्लोर सुरक्षा ऑडिट! असेंब्ली लाईनच्या बाजूला, एका ऑपरेटरने 6 रिकाम्या प्लास्टिक पेट्या थेट पिवळ्या आपत्कालीन रस्त्यात टाकल्या आणि म्हणाला: 'मी शिफ्ट संपेपर्यंत या इथेच ठेवतो जेणेकरून मला चालत जावे लागणार नाही.' या कृतीला परवानगी द्यावी की थांबवावी?"
+          "en": "Urgent shopfloor safety audit! Along the main frame assembly line, an operator has emptied 6 plastic component totes and stacked them directly in the forklift gangway to clear station floor space. What is your mandatory action?",
+          "hi": "शॉपफ्लोर सुरक्षा चेकिंग! असेंबली लाइन के पास ऑपरेटर ने 6 खाली प्लास्टिक क्रेट रास्ते में छोड़ दिए हैं। क्या इन्हें रास्ते में छोड़ना चाहिए?",
+          "mr": "शॉपफ्लोर सुरक्षेची तपासणी! लाईनच्या बाजूला ऑपरेटरने 6 रिकामे क्रेट्स रस्त्यातच सोडून दिले आहेत. ते तिथे तसेच सोडावेत का?"
         }
       },
       "interaction": {
@@ -586,13 +586,13 @@
         },
         "situation": {
           "en": "AUDIT: 6 empty plastic component totes staged across the active yellow emergency exit aisle at Workstation 04.",
-          "hi": "ऑडिट: वर्कस्टेशन 04 पर सक्रिय पीले आपातकालीन निकास गलियारे में 6 खाली प्लास्टिक कंपोनेंट टोट्स रखे गए हैं।",
+          "hi": "ऑडिट: वर्कस्टेशन 04 पर सक्रिय पीले आपातकालीन निकास रास्ते में 6 खाली प्लास्टिक कंपोनेंट टोट्स रखे गए हैं।",
           "mr": "ऑडिट: वर्कस्टेशन 04 वरील पिवळ्या आपत्कालीन रस्त्यामध्ये 6 रिकाम्या प्लास्टिक पेट्या अडथळा निर्माण करत पडलेल्या आहेत."
         },
         "correctAction": "stop",
         "stopLabel": {
           "en": "STOP — CLEAR WALKWAY & ROUTE TO SEPARATION",
-          "hi": "STOP — वॉकवे साफ करें और पृथक्करण के लिए भेजें",
+          "hi": "STOP — वॉकवे साफ करें और अलग-अलग रखना के लिए भेजें",
           "mr": "STOP — रस्ता मोकळा करा आणि वेगळे करण्यासाठी पाठवा"
         },
         "goLabel": {
@@ -602,7 +602,7 @@
         },
         "stopDescription": {
           "en": "HALT: The gangway chokes and empty asset return stops; dedicated collectors must sweep every 30 minutes",
-          "hi": "रोकें: रास्ता अवरुद्ध होता है और खाली संपत्ति की वापसी रुक जाती है; समर्पित कलेक्टरों को हर 30 मिनट में साफ करना चाहिए",
+          "hi": "रोकें: रास्ता ब्लॉक होता है और खाली संपत्ति की वापसी रुक जाती है; समर्पित कलेक्टरों को हर 30 मिनट में साफ करना चाहिए",
           "mr": "थांबवा: रस्ता अडकतो आणि रिकाम्या पेट्यांची वाहतूक थांबते; स्वतंत्र कर्मचाऱ्यांनी दर 30 मिनिटांनी लाईन साफ केली पाहिजे"
         },
         "goDescription": {
@@ -623,7 +623,7 @@
         "sopClause": "SOP-EMPTYBIN COLLECTION AND LOADING Clause 4.1 & Question Bank Q26",
         "why": {
           "en": "Leaving empty containers at the line side chokes active assembly gangways, obstructs yellow fire escape pathways, and creates physical bottlenecks. Dedicated empty bin collectors managed by the Empty Collection Zone Leader must sweep lines every 30 minutes to move containers to the segregation area for supplier truck turnaround.",
-          "hi": "लाइन साइड पर खाली कंटेनरों को छोड़ने से असेंबली गैंगवे अवरुद्ध हो जाते हैं, आपातकालीन रास्ते अवरुद्ध हो जाते हैं। खाली बिन कलेक्टरों को सप्लायर ट्रक टर्नअराउंड के लिए कंटेनरों को पृथक्करण क्षेत्र में ले जाने के लिए हर 30 मिनट में लाइनों को साफ करना चाहिए।",
+          "hi": "लाइन साइड पर खाली कंटेनरों को छोड़ने से असेंबली गैंगवे बंद हो जाते हैं, आपातकालीन रास्ते बंद हो जाते हैं। खाली बिन कलेक्टरों को सप्लायर ट्रक टर्नअराउंड के लिए कंटेनरों को अलग रखने की जगह (सेग्रिगेशन एरिया) में ले जाने के लिए हर 30 मिनट में लाइनों को साफ करना चाहिए।",
           "mr": "लाईनच्या बाजूला रिकाम्या पेट्या टाकल्यास रस्ता अडकतो आणि आगीच्या वेळी बाहेर पडण्याचा मार्ग बंद होतो. सप्लायरच्या ट्रकमध्ये वेळेत माल भरण्यासाठी रिकाम्या पेट्या गोळा करणाऱ्या टीमने दर 30 मिनिटांनी फेऱ्या मारल्या पाहिजेत."
         }
       }
@@ -633,7 +633,7 @@
       "stepNumber": 6,
       "title": {
         "en": "Supplier 3-Day SLA Breach & Courier Debit Note",
-        "hi": "आपूर्तिकर्ता 3-दिवसीय SLA उल्लंघन और कूरियर डेबिट नोट",
+        "hi": "सप्लायर 3-दिवसीय SLA उल्लंघन और कूरियर डेबिट नोट",
         "mr": "सप्लायर 3-दिवसांची मुदत उल्लंघन आणि कुरिअर डेबिट नोट"
       },
       "media": {
@@ -646,34 +646,34 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Contractual quality compliance! A supplier of defective mirror mounts was notified via JIRA with status 'To be Return to Vendor'. However, after 3 full working days, the supplier has still failed to send a truck to pick up their rejected parts. Under standard procedure what must the warehouse execute?",
-            "hi": "संविदात्मक गुणवत्ता अनुपालन! दोषपूर्ण मिरर माउंट के एक आपूर्तिकर्ता को 'To be रिटर्न टू वेंडर' स्थिति के साथ JIRA के माध्यम से सूचित किया गया था। हालांकि, 3 पूर्ण कार्य दिवसों के बाद भी, आपूर्तिकर्ता अपने अस्वीकृत पुर्जों को लेने के लिए ट्रक भेजने में विफल रहा है। एथर SOP गोदाम को क्या निष्पादित करना चाहिए?",
-            "mr": "सप्लायर नियम पूर्तता! सदोष मिरर माउंट्सच्या सप्लायरला JIRA द्वारे 'To be रिटर्न टू व्हेंडर' अशी अधिकृत सूचना दिली होती. परंतु, 3 दिवस उलटून गेले तरी सप्लायरने आपला नाकारलेला माल नेण्यासाठी गाडी पाठवली नाही. एथर SOP गोदामाने कोणती कारवाई केली पाहिजे?"
+            "en": "A supplier of defective mirror mounts was notified via JIRA with status 'To be Returned to Vendor' under the 3-day SLA. 72 hours have elapsed and the supplier has neither collected nor responded. What is the mandatory recovery action?",
+            "hi": "सप्लायर के खराब मिरर माउंट्स को 3 दिन के अंदर वापस लेने के लिए JIRA टिकट भेजा गया था। लेकिन 3 दिन बीत जाने के बाद भी सप्लायर माल लेने नहीं आया। अब वेयरहाउस टीम को क्या कदम उठाना चाहिए?",
+            "mr": "सप्लायरला सदोष माल 3 दिवसांत परत नेण्यासाठी तिकीट पाठवले होते. पण 3 दिवस उलटूनही सप्लायर माल न्यायला आला नाही. आता वेअरहाऊस टीमने काय केले पाहिजे?"
           },
           "audioSrc": "/audio/voiceover/s12_sc06_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "STANDARD RECOVERY PROTOCOL! Dispatch the parts by commercial courier and debit the entire freight shipping cost to the supplier! Attach the courier receipt and debit note PDF to the JIRA ticket! We never store vendor defectives indefinitely or scrap them at Ather's expense!",
-            "hi": "मानक पुनर्प्राप्ति प्रोटोकॉल!वाणिज्यिक कूरियर द्वारा भागों को भेजें और पूरे शिपिंग माल ढुलाई लागत को आपूर्तिकर्ता को डेबिट करें! JIRA टिकट में कूरियर रसीद और डेबिट नोट पीडीएफ संलग्न करें!",
-            "mr": "प्रमाणित कारवाई पद्धत!कमर्शियल कुरिअरने माल सप्लायरकडे पाठवून द्यावा आणि वाहतुकीचा संपूर्ण खर्च सप्लायरच्या खात्यावर डेबिट करावा! कुरिअर पावती आणि डेबिट नोटची PDF JIRA तिकिटाला जोडावी!"
+            "en": "STANDARD RECOVERY PROTOCOL! Dispatch the parts by commercial courier and debit the entire freight shipping and handling cost directly to the supplier's account via a formal debit note in SAP!",
+            "hi": "बिल्कुल सही! इस माल को तुरंत कूरियर से सप्लायर के पते पर भेज दिया जाता है और कूरियर का पूरा खर्चा सप्लायर के बिल से काट लिया जाता है!",
+            "mr": "अगदी बरोबर! हा माल तात्काळ कुरिअरने सप्लायरकडे पाठवून दिला जातो आणि वाहतुकीचा संपूर्ण खर्च सप्लायरच्या बिलातून वजा केला जातो!"
           },
           "audioSrc": "/audio/voiceover/s12_sc06_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "COST MISMANAGEMENT! Holding rejected parts forever chokes warehouse cage storage, while scrapping them at Ather's cost loses company money. Ship via courier and debit the vendor!",
-            "hi": "लागत कुप्रबंधन! अस्वीकृत भागों को हमेशा के लिए रखने से गोदाम का स्थान अवरुद्ध हो जाता है, जबकि उन्हें एथर की लागत पर स्क्रैप करने से कंपनी का पैसा बर्बाद होता है। कूरियर के माध्यम से भेजें और विक्रेता को डेबिट करें!",
-            "mr": "आर्थिक निष्काळजीपणा! नाकारलेला माल गोदामात पडून राहिल्यास जागा अडकते आणि आपल्या खर्चाने भंगारात काढल्यास कंपनीचे नुकसान होते. कुरिअरने पाठवून सप्लायरला बिल लावावे!"
+            "en": "COST MISMANAGEMENT! Holding rejected parts forever chokes warehouse cage storage, while scrapping them at Ather's expense absorbs the supplier's fault. Courier with debit note is mandatory.",
+            "hi": "गलत फैसला! खराब माल को गोदाम में हमेशा के लिए नहीं रखा जा सकता और न ही अपने खर्चे पर स्क्रैप किया जा सकता है।",
+            "mr": "चुकीचा निर्णय! नाकारलेला माल गोदामात पडून ठेवता येत नाही आणि आपल्या खर्चाने नष्टही करता येत नाही."
           },
           "audioSrc": "/audio/voiceover/s12_sc06_wrong.mp3"
         },
         "dialog": {
-          "en": "Contractual quality compliance! A supplier of defective mirror mounts was notified via JIRA with status 'To be Return to Vendor'. However, after 3 full working days, the supplier has still failed to send a truck to pick up their rejected parts. Under standard procedure what must the warehouse execute?",
-          "hi": "संविदात्मक गुणवत्ता अनुपालन! दोषपूर्ण मिरर माउंट के एक आपूर्तिकर्ता को 'To be रिटर्न टू वेंडर' स्थिति के साथ JIRA के माध्यम से सूचित किया गया था। हालांकि, 3 पूर्ण कार्य दिवसों के बाद भी, आपूर्तिकर्ता अपने अस्वीकृत पुर्जों को लेने के लिए ट्रक भेजने में विफल रहा है। एथर SOP गोदाम को क्या निष्पादित करना चाहिए?",
-          "mr": "सप्लायर नियम पूर्तता! सदोष मिरर माउंट्सच्या सप्लायरला JIRA द्वारे 'To be रिटर्न टू व्हेंडर' अशी अधिकृत सूचना दिली होती. परंतु, 3 दिवस उलटून गेले तरी सप्लायरने आपला नाकारलेला माल नेण्यासाठी गाडी पाठवली नाही. एथर SOP गोदामाने कोणती कारवाई केली पाहिजे?"
+          "en": "A supplier of defective mirror mounts was notified via JIRA with status 'To be Returned to Vendor' under the 3-day SLA. 72 hours have elapsed and the supplier has neither collected nor responded. What is the mandatory recovery action?",
+          "hi": "सप्लायर के खराब मिरर माउंट्स को 3 दिन के अंदर वापस लेने के लिए JIRA टिकट भेजा गया था। लेकिन 3 दिन बीत जाने के बाद भी सप्लायर माल लेने नहीं आया। अब वेयरहाउस टीम को क्या कदम उठाना चाहिए?",
+          "mr": "सप्लायरला सदोष माल 3 दिवसांत परत नेण्यासाठी तिकीट पाठवले होते. पण 3 दिवस उलटूनही सप्लायर माल न्यायला आला नाही. आता वेअरहाऊस टीमने काय केले पाहिजे?"
         }
       },
       "interaction": {
@@ -682,7 +682,7 @@
         "safetyCritical": true,
         "question": {
           "en": "The supplier does not arrange pick-up of rejected Return to Vendor parts within 3 working days. What does the warehouse do?",
-          "hi": "आपूर्तिकर्ता 3 कार्य दिवसों के भीतर अस्वीकृत रिटर्न टू वेंडर भागों को लेने की व्यवस्था नहीं करता है। गोदाम क्या करता है?",
+          "hi": "सप्लायर 3 कार्य दिवसों के भीतर रिजेक्ट रिटर्न टू वेंडर भागों को लेने की व्यवस्था नहीं करता है। गोदाम क्या करता है?",
           "mr": "सप्लायरने 3 दिवसांत नाकारलेला रिटर्न टू व्हेंडर माल उचलण्यासाठी गाडी पाठवली नाही. गोदामाने काय केले पाहिजे?"
         },
         "options": [
@@ -691,7 +691,7 @@
             "correct": true,
             "label": {
               "en": "Send the parts by commercial courier, debit shipping cost to supplier, and attach debit note PDF to JIRA",
-              "hi": "वाणिज्यिक कूरियर द्वारा भागों को भेजें, आपूर्तिकर्ता को शिपिंग लागत डेबिट करें, और JIRA में डेबिट नोट पीडीएफ संलग्न करें",
+              "hi": "वाणिज्यिक कूरियर द्वारा भागों को भेजें, सप्लायर को शिपिंग लागत डेबिट करें, और JIRA में डेबिट नोट पीडीएफ संलग्न करें",
               "mr": "कमर्शियल कुरिअरने माल पाठवून देणे, वाहतुकीचा खर्च सप्लायरवर डेबिट करणे आणि JIRA मध्ये डेबिट नोट जोडणे"
             }
           },
@@ -700,7 +700,7 @@
             "correct": false,
             "label": {
               "en": "Wait indefinitely until the supplier decides to send a truck months later",
-              "hi": "अनिश्चित काल तक प्रतीक्षा करें जब तक कि आपूर्तिकर्ता महीनों बाद ट्रक भेजने का निर्णय न ले",
+              "hi": "अनिश्चित काल तक इंतज़ार करें जब तक कि सप्लायर महीनों बाद ट्रक भेजने का निर्णय न ले",
               "mr": "सप्लायर जेव्हा महिनाभराने गाडी पाठवेल तोपर्यंत शांतपणे वाट पाहत बसणे"
             }
           },
@@ -718,14 +718,14 @@
             "correct": false,
             "label": {
               "en": "Sneak the rejected parts onto assembly vehicles during night shifts",
-              "hi": "नाइट शिफ्ट के दौरान असेंबली वाहनों पर अस्वीकृत पुर्जों को चुपके से लगा दें",
+              "hi": "नाइट शिफ्ट के दौरान असेंबली वाहनों पर रिजेक्ट पार्ट्स को चुपके से लगा दें",
               "mr": "रात्रीच्या शिफ्टमध्ये चोरून ते खराब पार्ट वाहनांमध्ये बसवून देणे"
             }
           }
         ],
         "prompt": {
           "en": "The supplier does not arrange pick-up of rejected Return to Vendor parts within 3 working days. What does the warehouse do?",
-          "hi": "आपूर्तिकर्ता 3 कार्य दिवसों के भीतर अस्वीकृत रिटर्न टू वेंडर भागों को लेने की व्यवस्था नहीं करता है। गोदाम क्या करता है?",
+          "hi": "सप्लायर 3 कार्य दिवसों के भीतर रिजेक्ट रिटर्न टू वेंडर भागों को लेने की व्यवस्था नहीं करता है। गोदाम क्या करता है?",
           "mr": "सप्लायरने 3 दिवसांत नाकारलेला रिटर्न टू व्हेंडर माल उचलण्यासाठी गाडी पाठवली नाही. गोदामाने काय केले पाहिजे?"
         },
         "id": "c2-q34",
@@ -736,7 +736,7 @@
         "sopClause": "SOP for NG - RTV Clause 4.3 & Question Bank Q34",
         "why": {
           "en": "Establishes an ironclad 3-day SLA: If the supplier fails to arrange pickup within 3 working days of JIRA notification, the warehouse dispatches the parts via commercial courier. The freight expense is debited to the supplier via SAP commercial debit note, with the courier consignment note attached to the ticket.",
-          "hi": "एक सख्त 3-दिवसीय SLA स्थापित करता है: यदि आपूर्तिकर्ता 3 कार्य दिवसों के भीतर पिकअप की व्यवस्था करने में विफल रहता है, तो गोदाम वाणिज्यिक कूरियर के माध्यम से भागों को भेजता है और माल ढुलाई लागत आपूर्तिकर्ता को डेबिट की जाती है।",
+          "hi": "एक सख्त 3-दिवसीय SLA स्थापित करता है: यदि सप्लायर 3 कार्य दिवसों के भीतर पिकअप की व्यवस्था करने में विफल रहता है, तो गोदाम वाणिज्यिक कूरियर के माध्यम से भागों को भेजता है और माल ढुलाई लागत सप्लायर को डेबिट की जाती है।",
           "mr": "3 दिवसांची कडक मुदत आहे: जर सप्लायरने 3 दिवसांत माल उचलला नाही, तर गोदामातून कुरिअरने माल पाठवला जातो आणि वाहतुकीचा संपूर्ण खर्च सप्लायरच्या बिलातून वजा केला जातो."
         }
       }
@@ -746,8 +746,8 @@
       "stepNumber": 7,
       "title": {
         "en": "The 'Use As Is' Deviation Lifecycle Sequence",
-        "hi": "'यथावत उपयोग' विचलन जीवनचक्र अनुक्रम",
-        "mr": "'जसे आहे तसे वापरा' विचलन जीवनचक्र क्रम"
+        "hi": "'यथावत उपयोग' छूट (डिविएशन) पूरी प्रोसेस अनुक्रम",
+        "mr": "'जसे आहे तसे वापरा' सूट (डिव्हिएशन) संपूर्ण प्रोसेस क्रम"
       },
       "media": {
         "fallbackAnimation": "use_as_is_sequence_lifecycle",
@@ -759,34 +759,34 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Engineering Deviation Mastery! When a minor cosmetic flaw is accepted for production under a 'Use As Is' deviation, what is the exact chronological order of steps from initial approval to vehicle assembly?",
-            "hi": "इंजीनियरिंग विचलन महारत!जब 'Use As Is' विचलन के तहत उत्पादन के लिए एक मामूली कॉस्मेटिक दोष स्वीकार किया जाता है, तो प्रारंभिक अनुमोदन से वाहन असेंबली तक चरणों का सटीक कालानुक्रमिक क्रम क्या है?",
-            "mr": "इंजिनिअरिंग विचलन प्रावीण्य!जेव्हा 'Use As Is' विचलनाखाली किरकोळ दोषासह माल उत्पादनासाठी स्वीकारला जातो, तेव्हा मंजुरीपासून ते असेंब्ली लाईनपर्यंतचा अचूक क्रम काय असतो?"
+            "en": "When a minor cosmetic flaw is accepted for production under a 'Use As Is' authorized deviation, arrange the 4 operational recovery steps in their exact sequence!",
+            "hi": "इंजीनियरिंग टीम से जब किसी मामूली खराबी वाले पार्ट को विशेष छूट ('Use As Is') मिल जाती है, तो उसे दोबारा लाइन पर भेजने के लिए सही 4 कदम क्या हैं?",
+            "mr": "इंजिनिअरिंग टीमकडून जेव्हा किरकोळ दोषाच्या मालाला विशेष सवलत ('Use As Is') मिळते, तेव्हा तो लाईनवर पाठवण्याच्या 4 पायऱ्या योग्य क्रमाने लावा!"
           },
           "audioSrc": "/audio/voiceover/s12_sc07_intro.mp3"
         },
         "onCorrect": {
           "pose": "trophy",
           "text": {
-            "en": "OUTSTANDING PROCESS ACCURACY! Ticket shows 'Deviation Accepted' then Warehouse moves parts to staging, SAP stock to QI, JIRA 'Deviated: Available for Build' then quality inspection moves stock from QI to UR in SAP then Parts go to vehicle assembly! Parts reach assembly only after quality inspection finishes the system move!",
-            "hi": "उत्कृष्ट प्रक्रिया सटीकता!टिकट 'Deviation Accepted' दिखाता है फिर वेयरहाउस भागों को स्टेजिंग में ले जाता है, SAP स्टॉक को QI में, JIRA 'Deviated: Available for Build' फिर IQC स्टॉक को SAP में QI से UR में ले जाता है फिर पुर्जे असेंबली में जाते हैं!",
-            "mr": "अतिशय अचूक कार्यपद्धती!तिकीट स्टेटस 'Deviation Accepted' होते मग गोदाम माल स्टेजिंगमध्ये आणते, SAP स्टॉक QI मध्ये जातो, JIRA 'Deviated: Available for Build' होते मग IQC टीम SAP मध्ये QI मधून UR मध्ये स्टॉक वर्ग करते मग पार्ट असेंब्ली लाईनवर पाठवले जातात!"
+            "en": "FLAWLESS DEVIATION FLOW! First, verify JIRA deviation approval; Second, move from Blocked Stock to Unrestricted in SAP; Third, remove Red Tag and apply Yellow Deviation Tag; Fourth, transfer to Supermarket racks!",
+            "hi": "शानदार! पहला, JIRA में अप्रूवल चेक करें; दूसरा, ब्लॉक स्टॉक से माल को यूज़ेबल स्टॉक में ट्रांसफर करें; तीसरा, लाल टैग हटाकर पीला डिविएशन टैग लगाएं; और चौथा, सुपरमार्केट रैक में ट्रांसफर करें!",
+            "mr": "उत्कृष्ट! पहिले, JIRA मधील मंजुरी तपासा; दुसरे, ब्लॉक स्टॉकमधून माल वापरात आणा; तिसरे, लाल टॅग काढून पिवळा डिव्हिएशन टॅग लावा; आणि चौथे, लाईनवर पाठवा!"
           },
           "audioSrc": "/audio/voiceover/s12_sc07_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "INCORRECT SEQUENCE! Parts cannot enter assembly until quality inspection officially transfers stock from QI (Quality Inspection) to UR (Unrestricted). Review!",
-            "hi": "गलत क्रम! जब तक IQC आधिकारिक तौर पर स्टॉक को QI से UR में स्थानांतरित नहीं करता, तब तक पुर्जे असेंबली में प्रवेश नहीं कर सकते।की समीक्षा करें!",
-            "mr": "चुकीचा क्रम! जोपर्यंत IQC टीम SAP मध्ये QI मधून UR मध्ये स्टॉक वर्ग करत नाही तोपर्यंत पार्ट लाईनवर जाऊ शकत नाहीत.पुन्हा तपासा!"
+            "en": "DANGEROUS EXECUTION SEQUENCE! You must never move parts to supermarket racks while Red Tags are still affixed, and you must never disburse materials before SAP unblocks the lot!",
+            "hi": "गलत क्रम! लाल टैग हटाए बिना या सिस्टम में ट्रांसफर किए बिना माल सीधे लाइन पर नहीं भेजा जा सकता।",
+            "mr": "चुकीचा क्रम! लाल टॅग काढल्याशिवाय आणि सिस्टीममध्ये ट्रान्स्फर केल्याशिवाय माल लाईनवर पाठवता येत नाही."
           },
           "audioSrc": "/audio/voiceover/s12_sc07_wrong.mp3"
         },
         "dialog": {
-          "en": "Engineering Deviation Mastery! When a minor cosmetic flaw is accepted for production under a 'Use As Is' deviation, what is the exact chronological order of steps from initial approval to vehicle assembly?",
-          "hi": "इंजीनियरिंग विचलन महारत!जब 'Use As Is' विचलन के तहत उत्पादन के लिए एक मामूली कॉस्मेटिक दोष स्वीकार किया जाता है, तो प्रारंभिक अनुमोदन से वाहन असेंबली तक चरणों का सटीक कालानुक्रमिक क्रम क्या है?",
-          "mr": "इंजिनिअरिंग विचलन प्रावीण्य!जेव्हा 'Use As Is' विचलनाखाली किरकोळ दोषासह माल उत्पादनासाठी स्वीकारला जातो, तेव्हा मंजुरीपासून ते असेंब्ली लाईनपर्यंतचा अचूक क्रम काय असतो?"
+          "en": "When a minor cosmetic flaw is accepted for production under a 'Use As Is' authorized deviation, arrange the 4 operational recovery steps in their exact sequence!",
+          "hi": "इंजीनियरिंग टीम से जब किसी मामूली खराबी वाले पार्ट को विशेष छूट ('Use As Is') मिल जाती है, तो उसे दोबारा लाइन पर भेजने के लिए सही 4 कदम क्या हैं?",
+          "mr": "इंजिनिअरिंग टीमकडून जेव्हा किरकोळ दोषाच्या मालाला विशेष सवलत ('Use As Is') मिळते, तेव्हा तो लाईनवर पाठवण्याच्या 4 पायऱ्या योग्य क्रमाने लावा!"
         }
       },
       "interaction": {
@@ -794,9 +794,9 @@
         "questionId": "c2-q36",
         "safetyCritical": true,
         "question": {
-          "en": "Put the 4 steps of the “Use As Is” deviation lifecycle into the exact SOP sequence:",
-          "hi": "'Use As Is' विचलन जीवनचक्र के 4 चरणों को सटीक क्रम में रखें:",
-          "mr": "'Use As Is' विचलन जीवनचक्राच्या 4 पायऱ्या योग्य क्रमाने लावा:"
+          "en": "Put the 4 steps of the “Use As Is” deviation lifecycle into the exact correct sequence:",
+          "hi": "'Use As Is' (विशेष छूट) प्रोसेस की 4 जरूरी चरणों को सटीक क्रम में रखें:",
+          "mr": "'Use As Is' विशेष मंजुरी प्रोसेसच्या ४ पायऱ्या योग्य क्रमाने लावा:"
         },
         "instruction": {
           "en": "Drag or tap the step numbers to arrange them from first to last (1 to 4):",
@@ -824,7 +824,7 @@
             "id": "step_iqc_qi_to_ur",
             "label": {
               "en": "quality inspection conducts verification audit and executes system transfer from QI to UR in SAP",
-              "hi": "IQC सत्यापन ऑडिट करता है और SAP में QI से UR में सिस्टम ट्रांसफर निष्पादित करता है",
+              "hi": "IQC जांच (चेकिंग) ऑडिट करता है और SAP में QI से UR में सिस्टम ट्रांसफर निष्पादित करता है",
               "mr": "IQC टीम तपासणी पूर्ण करून SAP मध्ये QI मधून UR मध्ये स्टॉक वर्ग करते"
             }
           },
@@ -832,15 +832,15 @@
             "id": "step_parts_to_assembly",
             "label": {
               "en": "Parts are physically issued and fed to the vehicle assembly line",
-              "hi": "पुर्जे भौतिक रूप से जारी किए जाते हैं और वाहन असेंबली लाइन में भेजे जाते हैं",
+              "hi": "पुर्जे असल में (हाथों से) जारी किए जाते हैं और वाहन असेंबली लाइन में भेजे जाते हैं",
               "mr": "पार्ट्स प्रत्यक्षपणे असेंब्ली लाईनवर पाठवले जातात"
             }
           }
         ],
         "prompt": {
-          "en": "Put the 4 steps of the “Use As Is” deviation lifecycle into the exact SOP sequence:",
-          "hi": "'Use As Is' विचलन जीवनचक्र के 4 चरणों को सटीक क्रम में रखें:",
-          "mr": "'Use As Is' विचलन जीवनचक्राच्या 4 पायऱ्या योग्य क्रमाने लावा:"
+          "en": "Put the 4 steps of the “Use As Is” deviation lifecycle into the exact correct sequence:",
+          "hi": "'Use As Is' (विशेष छूट) प्रोसेस की 4 जरूरी चरणों को सटीक क्रम में रखें:",
+          "mr": "'Use As Is' विशेष मंजुरी प्रोसेसच्या ४ पायऱ्या योग्य क्रमाने लावा:"
         },
         "id": "c2-q36",
         "correctOrder": [
@@ -856,7 +856,7 @@
         "sopClause": "SOP for NG - RTV Clause 4.5 & Question Bank Q36",
         "why": {
           "en": "SOP for NG - Return to Vendor strictly mandates: a then b then c then d. Deviation approval alone does not permit assembly use; warehouse personnel first physically stage the parts and move stock to QI (Quality Inspection). IQC must then perform final verification and post the goods movement into UR (Unrestricted stock) before line feeding occurs.",
-          "hi": "क्रम सख्ती से a फिर b फिर c फिर d है। विचलन अनुमोदन अकेले असेंबली उपयोग की अनुमति नहीं देता है; पहले वेयरहाउस स्टॉक को QI में ले जाता है, और फिर IQC इसे UR में पोस्ट करता है।",
+          "hi": "क्रम सख्ती से a फिर b फिर c फिर d है। छूट (डिविएशन) मंजूरी (अप्रूवल) अकेले असेंबली उपयोग की अनुमति नहीं देता है; पहले वेयरहाउस स्टॉक को QI में ले जाता है, और फिर IQC इसे UR में पोस्ट करता है।",
           "mr": "क्रम a मग b मग c मग d असाच असणे बंधनकारक आहे. केवळ मंजुरी मिळून चालत नाही; आधी गोदामाने माल QI मध्ये वर्ग केला पाहिजे आणि IQC ने तो UR मध्ये पोस्ट केल्यावरच लाईनवर वापरता येतो."
         }
       }
@@ -879,34 +879,34 @@
         "intro": {
           "pose": "warning",
           "text": {
-            "en": "Rework quality containment gate! An internal rework team has repaired 50 instrument cluster brackets that had misaligned mounting pins. The rework technician pushes the trolley toward the main vehicle assembly line, saying: 'We fixed every single pin with our precision jig, so we can feed them straight to Station 05 right now.' should this be allowed or stopped immediately?",
-            "hi": "पुनः कार्य गुणवत्ता नियंत्रण गेट! एक आंतरिक पुनः कार्य टीम ने 50 उपकरण क्लस्टर ब्रैकेट की मरम्मत की है जिनमें गलत पिन संरेखण था। तकनीशियन ट्रॉली को सीधे असेंबली लाइन की ओर धकेलता है, यह कहते हुए: 'हमने हर एक पिन को ठीक कर दिया है, इसलिए हम उन्हें अभी सीधे स्टेशन 05 पर भेज सकते हैं।' SOP क्या इसकी अनुमति दी जानी चाहिए या तुरंत रोक दी जानी चाहिए?",
-            "mr": "रिवर्क गुणवत्ता नियंत्रण गेट! कारखान्यातील रिवर्क टीमने 50 इन्स्ट्रुमेंट क्लस्टर ब्रॅकेट्स दुरुस्त केले आहेत. दुरुस्ती करणारा कामगार थेट असेंब्ली लाईनकडे ट्रॉली नेताना म्हणतो: 'आम्ही सर्व पिन्स जिगच्या मदतीने बरोबर केल्या आहेत, त्यामुळे हा माल आत्ताच थेट स्टेशन 05 वर नेऊन वापरू शकतो.' SOP यास परवानगी द्यावी की थांबवावे?"
+            "en": "An internal rework team has deburred and re-aligned 50 rejected wiring bracket subassemblies inside the factory workshop. The rework technician says: 'These are 100% fixed now, take them directly to the assembly line.' Should you permit or halt this line delivery?",
+            "hi": "एक आंतरिक रीवर्क टीम ने 50 रिजेक्ट वायरिंग ब्रैकेट को ठीक कर दिया है। क्या वे इस सुधारे हुए माल को सीधे असेंबली लाइन पर भेज सकते हैं?",
+            "mr": "रीवर्क टीमने 50 नाकारलेले वायरिंग ब्रॅकेट्स दुरुस्त केले आहेत. ते हा दुरुस्त माल थेट असेंब्ली लाईनवर पाठवू शकतात का?"
           },
           "audioSrc": "/audio/voiceover/s12_sc08_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "STOP IS MANDATORY! Reworked parts can NEVER go straight to the line! Stock must first move back to QI in SAP, JIRA updated to 'Rework Done', and quality inspection must inspect them under 1.5x tightened sampling! If they fail re-inspection, they return immediately to the NG quarantine flow!",
-            "hi": "STOP अनिवार्य है!पुनः कार्य किए गए हिस्से कभी भी सीधे लाइन पर नहीं जा सकते हैं! स्टॉक को पहले SAP में QI में वापस जाना चाहिए, JIRA को 'Rework Done' में अपडेट किया जाना चाहिए, और IQC को 1.5x कड़े नमूने के तहत उनका निरीक्षण करना चाहिए!",
-            "mr": "STOP करणे सक्तीचे आहे!दुरुस्त केलेले पार्ट कधीही थेट लाईनवर जाऊ शकत नाहीत! आधी माल SAP मध्ये QI मध्ये घेतला पाहिजे, JIRA स्टेटस 'Rework Done' केले पाहिजे आणि IQC कडून 1.5 पट कडक तपासणी झालीच पाहिजे!"
+            "en": "HALT IS THE MANDATORY QUALITY DECISION! Reworked parts can NEVER enter production directly. They must be re-inspected 100% by quality inspection, cleared in JIRA, and carry an authorized green QC Pass stamp before assembly release!",
+            "hi": "तुरंत रोकें! रीवर्क किया हुआ माल तब तक लाइन पर नहीं जा सकता जब तक IQC टीम उसकी 100% दोबारा जांच न कर ले और नया 'QC Pass' स्टिकर न लगा दे!",
+            "mr": "लगेच थांबवा! दुरुस्त केलेला माल लाईनवर नेण्यापूर्वी IQC टीमकडून त्याची 100% फेरतपासणी करून नवीन 'QC Pass' शिक्का घेणे अनिवार्य आहे!"
           },
           "audioSrc": "/audio/voiceover/s12_sc08_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "SEVERE QUALITY HAZARD! Releasing reworked parts without quality inspection re-inspection risks introducing hidden fractures or out-of-spec dimensions into customer vehicles. 1.5x sampling inspection is non-negotiable!",
-            "hi": "गंभीर गुणवत्ता खतरा! IQC पुनः निरीक्षण के बिना पुनः कार्य किए गए भागों को जारी करने से वाहनों में छिपे हुए दोष शामिल होने का जोखिम होता है। 1.5x नमूना निरीक्षण गैर-परक्राम्य है!",
-            "mr": "मोठा गुणवत्ता धोका! IQC च्या फेरतपासणीशिवाय माल लाईनवर पाठवल्यास ग्राहकांच्या वाहनांमध्ये मोठे दोष निर्माण होऊ शकतात. 1.5 पट कडक तपासणी अनिवार्य आहे!"
+            "en": "SEVERE QUALITY HAZARD! Releasing reworked parts without QC re-inspection risks sending hidden defects into customer scooters. Always re-inspect 100%!",
+            "hi": "बड़ा खतरा! बिना दोबारा जांचे रीवर्क माल लगाने से गाड़ी में खराबी आ सकती है।",
+            "mr": "मोठा धोका! फेरतपासणीशिवाय दुरुस्त माल वापरल्यास गाडीत बिघाड होऊ शकतो."
           },
           "audioSrc": "/audio/voiceover/s12_sc08_wrong.mp3"
         },
         "dialog": {
-          "en": "Rework quality containment gate! An internal rework team has repaired 50 instrument cluster brackets that had misaligned mounting pins. The rework technician pushes the trolley toward the main vehicle assembly line, saying: 'We fixed every single pin with our precision jig, so we can feed them straight to Station 05 right now.' should this be allowed or stopped immediately?",
-          "hi": "पुनः कार्य गुणवत्ता नियंत्रण गेट! एक आंतरिक पुनः कार्य टीम ने 50 उपकरण क्लस्टर ब्रैकेट की मरम्मत की है जिनमें गलत पिन संरेखण था। तकनीशियन ट्रॉली को सीधे असेंबली लाइन की ओर धकेलता है, यह कहते हुए: 'हमने हर एक पिन को ठीक कर दिया है, इसलिए हम उन्हें अभी सीधे स्टेशन 05 पर भेज सकते हैं।' SOP क्या इसकी अनुमति दी जानी चाहिए या तुरंत रोक दी जानी चाहिए?",
-          "mr": "रिवर्क गुणवत्ता नियंत्रण गेट! कारखान्यातील रिवर्क टीमने 50 इन्स्ट्रुमेंट क्लस्टर ब्रॅकेट्स दुरुस्त केले आहेत. दुरुस्ती करणारा कामगार थेट असेंब्ली लाईनकडे ट्रॉली नेताना म्हणतो: 'आम्ही सर्व पिन्स जिगच्या मदतीने बरोबर केल्या आहेत, त्यामुळे हा माल आत्ताच थेट स्टेशन 05 वर नेऊन वापरू शकतो.' SOP यास परवानगी द्यावी की थांबवावे?"
+          "en": "An internal rework team has deburred and re-aligned 50 rejected wiring bracket subassemblies inside the factory workshop. The rework technician says: 'These are 100% fixed now, take them directly to the assembly line.' Should you permit or halt this line delivery?",
+          "hi": "एक आंतरिक रीवर्क टीम ने 50 रिजेक्ट वायरिंग ब्रैकेट को ठीक कर दिया है। क्या वे इस सुधारे हुए माल को सीधे असेंबली लाइन पर भेज सकते हैं?",
+          "mr": "रीवर्क टीमने 50 नाकारलेले वायरिंग ब्रॅकेट्स दुरुस्त केले आहेत. ते हा दुरुस्त माल थेट असेंब्ली लाईनवर पाठवू शकतात का?"
         }
       },
       "interaction": {
@@ -926,7 +926,7 @@
         "correctAction": "stop",
         "stopLabel": {
           "en": "STOP — ROUTE TO quality inspection (1.5X SAMPLING REQUIRED)",
-          "hi": "STOP — IQC को भेजें (1.5x सैंपलिंग आवश्यक)",
+          "hi": "STOP — IQC को भेजें (1.5x सैंपल जांच आवश्यक)",
           "mr": "STOP — IQC कडे पाठवा (1.5 पट तपासणी सक्तीची)"
         },
         "goLabel": {
@@ -936,7 +936,7 @@
         },
         "stopDescription": {
           "en": "HALT: Stock must return to QI in SAP, JIRA set to 'Rework Done', and quality inspection must inspect under 1.5x sampling",
-          "hi": "रोकें: स्टॉक को SAP में QI में वापस जाना चाहिए, JIRA को 'Rework Done' पर सेट किया जाना चाहिए, और IQC को 1.5x सैंपलिंग के तहत निरीक्षण करना चाहिए",
+          "hi": "रोकें: स्टॉक को SAP में QI में वापस जाना चाहिए, JIRA को 'Rework Done' पर सेट किया जाना चाहिए, और IQC को 1.5x सैंपल जांच के तहत निरीक्षण करना चाहिए",
           "mr": "थांबवा: स्टॉक SAP मध्ये QI मध्ये गेला पाहिजे, JIRA 'Rework Done' केले पाहिजे आणि IQC ने 1.5 पट नमुना तपासणी केली पाहिजे"
         },
         "goDescription": {
@@ -967,7 +967,7 @@
       "stepNumber": 9,
       "title": {
         "en": "Non-Supplier Scrap Sign-Off Protocol",
-        "hi": "गैर-आपूर्तिकर्ता स्क्रैप साइन-ऑफ प्रोटोकॉल",
+        "hi": "गैर-सप्लायर स्क्रैप साइन-ऑफ प्रोटोकॉल",
         "mr": "फॅक्टरी अंतर्गत स्क्रॅप अधिकृत मंजुरी पद्धत"
       },
       "media": {
@@ -980,34 +980,34 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Asset write-off governance! During internal assembly transit, 4 aluminum swingarms were dropped and severely cracked by an in-house forklift operator. Because the defect was caused in-house and not by the vendor, what mandatory documentation is requiredbefore these parts can be physically scrapped and shredded?",
-            "hi": "संपत्ति बट्टे खाते शासन! आंतरिक असेंबली पारगमन के दौरान, इन-हाउस फोर्कलिफ्ट ऑपरेटर द्वारा 4 एल्यूमीनियम स्विंगआर्म गिरा दिए गए और गंभीर रूप से टूट गए। चूंकि दोष इन-हाउस के कारण हुआ था न कि विक्रेता द्वारा, इन भागों को शारीरिक रूप से स्क्रैप और कटाए जाने से पहलेकौन सा अनिवार्य दस्तावेज़ आवश्यक है?",
-            "mr": "कंपनी मालमत्ता हिशोब नियम! फॅक्टरी अंतर्गत वाहतुकीदरम्यान फोर्कलिफ्ट चालकाकडून पडून 4 अ‍ॅल्युमिनिअम स्विंगआर्म्स तडकले. हा दोष सप्लायरमुळे नसून फॅक्टरीमध्येच घडल्यामुळे,हे पार्ट स्क्रॅप यार्डमध्ये तोडण्यासाठी नेण्यापूर्वी कोणत्या कागदपत्रांची सक्ती असते?"
+            "en": "During internal assembly transit, 4 aluminum swingarms were dropped and severely bent by an in-house forklift operator. They cannot be reworked. What is the mandatory protocol to write off and scrap these non-supplier plant assets?",
+            "hi": "फैक्ट्री के अंदर फोर्कलिफ्ट से गिरकर 4 एल्युमिनियम स्विंगआर्म मुड़ गए हैं और उन्हें ठीक नहीं किया जा सकता। कंपनी के इस खराब सामान को स्क्रैप में डालने का सही नियम क्या है?",
+            "mr": "फॅक्टरीमध्ये अंतर्गत वाहतुकीत फोर्कलिफ्टवरून पडून 4 स्विंगआर्म्स वाकले आहेत आणि ते दुरुस्त होऊ शकत नाहीत. कंपनीचा हा खराब माल स्क्रॅप करण्याचा योग्य नियम काय आहे?"
           },
           "audioSrc": "/audio/voiceover/s12_sc09_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "FINANCIAL INTEGRITY ENFORCED! Written approval from the Production or Functional Head AND an official signed Scrap Approval Note! Only then does SAP move stock to the scrap location, parts move to the Final Scrapyard, and JIRA transitions to 'Scrapped'!",
-            "hi": "वित्तीय अखंडता लागू!उत्पादन या कार्यात्मक प्रमुख से लिखित अनुमोदन और एक आधिकारिक हस्ताक्षरित स्क्रैप अनुमोदन नोट! केवल तभी SAP स्टॉक को स्क्रैप स्थान पर ले जाता है, और JIRA 'Scrapped' में बदल जाता है!",
-            "mr": "आर्थिक नियमांचे अचूक पालन!प्रॉडक्शन किंवा फंक्शनल प्रमुखांची लेखी मंजुरी आणि अधिकृत स्वाक्षरी केलेले स्क्रॅप अ‍ॅप्रूव्हल नोट! त्यानंतरच SAP मधील स्टॉक स्क्रॅप खात्यात जातो आणि JIRA स्टेटस 'Scrapped' होतो!"
+            "en": "FINANCIAL INTEGRITY ENFORCED! Written approval from the Production Head and an official Plant Write-Off Voucher co-signed by Finance are mandatory before physically shredding internal scrapped assets!",
+            "hi": "बिल्कुल सही! प्रोडक्शन हेड और फाइनेंस की लिखित मंज़ूरी मिलने के बाद ही कंपनी की संपत्ति को स्क्रैप में दर्ज किया जाता है। मुंहजबानी कहने पर स्क्रैप करना मना है!",
+            "mr": "अगदी बरोबर! प्रॉडक्शन प्रमुख आणि फायनान्सची लेखी मंजुरी मिळाल्यावरच हा माल स्क्रॅपमध्ये टाकला जातो. तोंडी सांगण्यावरून स्क्रॅप करता येत नाही!"
           },
           "audioSrc": "/audio/voiceover/s12_sc09_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "UNAUTHORIZED DISPOSAL! Never scrap plant assets based on verbal comments. Scrapping company materials without signed Production & Finance notes constitutes unauthorized write-off and audit fraud!",
-            "hi": "अनधिकृत निपटान! मौखिक टिप्पणियों के आधार पर संयंत्र संपत्तियों को कभी भी स्क्रैप न करें। हस्ताक्षरित उत्पादन और वित्त नोटों के बिना सामग्री को स्क्रैप करना अनधिकृत राइट-ऑफ है!",
-            "mr": "अनधिकृत विल्हेवाट! तोंडी सांगण्यावरून कधीही कंपनीचा माल तोडू नका. लेखी मंजुरीशिवाय स्क्रॅप करणे हा कंपनीच्या नियमांनुसार गुन्हा ठरतो!"
+            "en": "UNAUTHORIZED DISPOSAL! Never scrap plant assets based on verbal comments. Scrapping company material requires signed functional and finance write-off vouchers.",
+            "hi": "गलत तरीका! किसी के मुंह से कहने पर कंपनी का माल स्क्रैप नहीं किया जा सकता। लिखित मंज़ूरी ज़रूरी है।",
+            "mr": "चुकीची पद्धत! तोंडी सांगण्यावरून कंपनीचा माल नष्ट करता येत नाही. लेखी मंजुरी आवश्यक असते."
           },
           "audioSrc": "/audio/voiceover/s12_sc09_wrong.mp3"
         },
         "dialog": {
-          "en": "Asset write-off governance! During internal assembly transit, 4 aluminum swingarms were dropped and severely cracked by an in-house forklift operator. Because the defect was caused in-house and not by the vendor, what mandatory documentation is requiredbefore these parts can be physically scrapped and shredded?",
-          "hi": "संपत्ति बट्टे खाते शासन! आंतरिक असेंबली पारगमन के दौरान, इन-हाउस फोर्कलिफ्ट ऑपरेटर द्वारा 4 एल्यूमीनियम स्विंगआर्म गिरा दिए गए और गंभीर रूप से टूट गए। चूंकि दोष इन-हाउस के कारण हुआ था न कि विक्रेता द्वारा, इन भागों को शारीरिक रूप से स्क्रैप और कटाए जाने से पहलेकौन सा अनिवार्य दस्तावेज़ आवश्यक है?",
-          "mr": "कंपनी मालमत्ता हिशोब नियम! फॅक्टरी अंतर्गत वाहतुकीदरम्यान फोर्कलिफ्ट चालकाकडून पडून 4 अ‍ॅल्युमिनिअम स्विंगआर्म्स तडकले. हा दोष सप्लायरमुळे नसून फॅक्टरीमध्येच घडल्यामुळे,हे पार्ट स्क्रॅप यार्डमध्ये तोडण्यासाठी नेण्यापूर्वी कोणत्या कागदपत्रांची सक्ती असते?"
+          "en": "During internal assembly transit, 4 aluminum swingarms were dropped and severely bent by an in-house forklift operator. They cannot be reworked. What is the mandatory protocol to write off and scrap these non-supplier plant assets?",
+          "hi": "फैक्ट्री के अंदर फोर्कलिफ्ट से गिरकर 4 एल्युमिनियम स्विंगआर्म मुड़ गए हैं और उन्हें ठीक नहीं किया जा सकता। कंपनी के इस खराब सामान को स्क्रैप में डालने का सही नियम क्या है?",
+          "mr": "फॅक्टरीमध्ये अंतर्गत वाहतुकीत फोर्कलिफ्टवरून पडून 4 स्विंगआर्म्स वाकले आहेत आणि ते दुरुस्त होऊ शकत नाहीत. कंपनीचा हा खराब माल स्क्रॅप करण्याचा योग्य नियम काय आहे?"
         }
       },
       "interaction": {
@@ -1016,7 +1016,7 @@
         "safetyCritical": true,
         "question": {
           "en": "What is mandatory before non-supplier rejected parts are scrapped?",
-          "hi": "गैर-आपूर्तिकर्ता अस्वीकृत भागों को स्क्रैप करने से पहले क्या अनिवार्य है?",
+          "hi": "गैर-सप्लायर रिजेक्ट पार्ट्स को स्क्रैप करने से पहले क्या बहुत ज़रूरी है?",
           "mr": "सप्लायर व्यतिरिक्त फॅक्टरीतील खराब पार्ट स्क्रॅप करण्यापूर्वी काय असणे बंधनकारक आहे?"
         },
         "options": [
@@ -1025,7 +1025,7 @@
             "correct": true,
             "label": {
               "en": "Written approval from Production/Functional Head and an authorized Scrap Approval Note",
-              "hi": "उत्पादन/कार्यात्मक प्रमुख से लिखित अनुमोदन और एक अधिकृत स्क्रैप अनुमोदन नोट",
+              "hi": "उत्पादन/कार्यात्मक प्रमुख से लिखित मंजूरी (अप्रूवल) और एक अधिकृत स्क्रैप मंजूरी (अप्रूवल) नोट",
               "mr": "प्रॉडक्शन/फंक्शनल प्रमुखांची लेखी मंजुरी आणि अधिकृत स्क्रॅप अ‍ॅप्रूव्हल नोट"
             }
           },
@@ -1059,7 +1059,7 @@
         ],
         "prompt": {
           "en": "What is mandatory before non-supplier rejected parts are scrapped?",
-          "hi": "गैर-आपूर्तिकर्ता अस्वीकृत भागों को स्क्रैप करने से पहले क्या अनिवार्य है?",
+          "hi": "गैर-सप्लायर रिजेक्ट पार्ट्स को स्क्रैप करने से पहले क्या बहुत ज़रूरी है?",
           "mr": "सप्लायर व्यतिरिक्त फॅक्टरीतील खराब पार्ट स्क्रॅप करण्यापूर्वी काय असणे बंधनकारक आहे?"
         },
         "id": "c2-q38",
@@ -1070,7 +1070,7 @@
         "sopClause": "SOP for NG - Scrap Clause 4.1 & Question Bank Q38",
         "why": {
           "en": "Scrapping plant assets impacts factory financial balance sheets. For non-vendor in-house defects, formal authorization requires a signed Scrap Approval Note from the Functional Head and Finance. Only upon receiving this document can the warehouse transfer inventory to the SAP scrap storage location (Quarantine Storage), move parts to the shredder yard, and update JIRA to 'Scrapped'.",
-          "hi": "संयंत्र संपत्तियों को स्क्रैप करने से कारखाने की बैलेंस शीट प्रभावित होती है। गैर-विक्रेता इन-हाउस दोषों के लिए, औपचारिक प्राधिकरण के लिए कार्यात्मक प्रमुख और वित्त से एक हस्ताक्षरित स्क्रैप अनुमोदन नोट की आवश्यकता होती है।",
+          "hi": "संयंत्र संपत्तियों को स्क्रैप करने से कारखाने की बैलेंस शीट प्रभावित होती है। गैर-विक्रेता इन-हाउस दोषों के लिए, औपचारिक प्राधिकरण के लिए कार्यात्मक प्रमुख और वित्त से एक हस्ताक्षरित स्क्रैप मंजूरी (अप्रूवल) नोट की आवश्यकता होती है।",
           "mr": "कंपनीचा माल स्क्रॅप केल्यास बॅलन्स शीटवर थेट परिणाम होतो. फॅक्टरीतील दोषांसाठी फंक्शनल हेड आणि फायनान्सची लेखी मंजुरी लागते. त्यानंतरच SAP मध्ये क्वारंटाइन स्टोरेज स्क्रॅप लोकेशनमध्ये नोंद होते."
         }
       }
@@ -1080,7 +1080,7 @@
       "stepNumber": 10,
       "title": {
         "en": "Empty Bin Segregation & Supplier Truck Docking Dashboard",
-        "hi": "खाली बिन पृथक्करण और आपूर्तिकर्ता ट्रक डॉकिंग डैशबोर्ड",
+        "hi": "खाली बिन अलग करना और सप्लायर ट्रक डॉकिंग डैशबोर्ड",
         "mr": "रिकाम्या पेट्यांचे वर्गीकरण आणि सप्लायर ट्रक डॉकिंग डॅशबोर्ड"
       },
       "media": {
@@ -1093,34 +1093,34 @@
         "intro": {
           "pose": "explaining",
           "text": {
-            "en": "Reverse logistics hub in action! Empty plastic bins collected from assembly lines have reached the central Segregation Area. How must operators sort these containers, and how do they find which supplier truck is currently docked to load them?",
-            "hi": "रिवर्स लॉजिस्टिक्स हब कार्रवाई में! असेंबली लाइनों से एकत्र किए गए खाली प्लास्टिक के डिब्बे केंद्रीय पृथक्करण क्षेत्र में पहुंच गए हैं।ऑपरेटरों को इन कंटेनरों को कैसे क्रमबद्ध करना चाहिए, और वे कैसे पता लगाते हैं कि वर्तमान में उन्हें लोड करने के लिए कौन सा आपूर्तिकर्ता ट्रक डॉक किया गया है?",
-            "mr": "रिव्हर्स लॉजिस्टिक्स केंद्र प्रत्यक्षात! लाईनवरून गोळा केलेल्या रिकाम्या पेट्या सेंट्रल सेग्रिगेशन भागात आल्या आहेत.ऑपरेटरने या पेट्या कशा वेगळ्या करायच्या आणि त्या भरण्यासाठी कोणता सप्लायर ट्रक कोणत्या डॉकवर उभा आहे हे कसे शोधायचे?"
+            "en": "Empty plastic bins collected from assembly lines have reached the central sorting yard. How must bins be staged before loading onto outbound supplier trucks?",
+            "hi": "असेंबली लाइन से आए खाली डिब्बे रिवर्स लॉजिस्टिक्स हब में पहुंच चुके हैं। इन खाली डिब्बों को कैसे छांटकर रखना चाहिए?",
+            "mr": "असेंब्ली लाईनवरून आलेले रिकामे डबे रिव्हर्स लॉजिस्टिक हबमध्ये आले आहेत. हे रिकामे डबे कसे वेगळे करून ठेवले पाहिजेत?"
           },
           "audioSrc": "/audio/voiceover/s12_sc10_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "DIGITAL LOGISTICS MASTERY! Sort by Supplier ID and Part Number in designated floor bays! Use the live Supplier Truck Dashboard to see docked vehicles and their assigned dock bay! This ensures returnable bins are loaded onto the exact matching supplier truck before it departs!",
-            "hi": "डिजिटल लॉजिस्टिक्स महारत!निर्दिष्ट फ्लोर बे में आपूर्तिकर्ता आईडी और पार्ट नंबर द्वारा क्रमबद्ध करें! डॉक किए गए वाहनों और उनके निर्दिष्ट डॉक बे को देखने के लिए लाइव आपूर्तिकर्ता ट्रक डैशबोर्ड का उपयोग करें!",
-            "mr": "डिजिटल लॉजिस्टिक्स प्रावीण्य!ठरवून दिलेल्या जागेत सप्लायर आयडी आणि पार्ट नंबरनुसार पेट्यांची वर्गवारी करा! आणि कोणता ट्रक कोणत्या डॉकवर उभा आहे हे पाहण्यासाठी लाईव्ह सप्लायर ट्रक डॅशबोर्डचा वापर करा!"
+            "en": "DIGITAL LOGISTICS MASTERY! Sort by Supplier ID and Part Number in designated floor bays! Use the live visual dashboard to match staging inventory against truck arrival schedules.",
+            "hi": "बिल्कुल सही! फ्लोर पर बने खानों में सप्लायर आईडी और पार्ट नंबर के हिसाब से अलग-अलग छांटकर रखें, ताकि सही वेंडर के ट्रक में उसी के डिब्बे जाएं!",
+            "mr": "अगदी बरोबर! जमिनीवर ठरवून दिलेल्या जागी सप्लायर आयडी आणि पार्ट नंबरनुसार डबे वेगळे रचून ठेवा, जेणेकरून योग्य सप्लायरला त्याचेच डबे परत मिळतील!"
           },
           "audioSrc": "/audio/voiceover/s12_sc10_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "LOGISTICS DISORGANIZATION! Piling all vendor bins into a random heap causes wrong containers to be sent to wrong suppliers. Use the live docking dashboard and sort by vendor and part number!",
-            "hi": "लॉजिस्टिक्स अव्यवस्था! सभी विक्रेता डिब्बे को एक यादृच्छिक ढेर में ढेर करने से गलत कंटेनर गलत आपूर्तिकर्ताओं को भेजे जाते हैं। लाइव डॉकिंग डैशबोर्ड का उपयोग करें और विक्रेता और पार्ट नंबर द्वारा क्रमबद्ध करें!",
-            "mr": "अव्यवस्थित कारभार! सर्व पेट्या एकत्र ढिगाऱ्यात टाकल्यास चुकीच्या सप्लायरकडे चुकीच्या पेट्या जातील. डॅशबोर्ड पाहून सप्लायर आणि पार्टनुसारच पेट्या वेगळ्या करा!"
+            "en": "LOGISTICS DISORGANIZATION! Piling all vendor bins into a random heap causes wrong containers to be sent to wrong suppliers, triggering packaging shortages across supply chains.",
+            "hi": "अव्यवस्था! सभी सप्लायर के डिब्बे एक ही ढेर में मिलाने से गलत सप्लायर को गलत डिब्बे चले जाएंगे।",
+            "mr": "गोंधळ! सर्व सप्लायरचे डबे एकत्र ढिगाऱ्यात टाकल्यास चुकीच्या सप्लायरकडे चुकीचे डबे जातील."
           },
           "audioSrc": "/audio/voiceover/s12_sc10_wrong.mp3"
         },
         "dialog": {
-          "en": "Reverse logistics hub in action! Empty plastic bins collected from assembly lines have reached the central Segregation Area. How must operators sort these containers, and how do they find which supplier truck is currently docked to load them?",
-          "hi": "रिवर्स लॉजिस्टिक्स हब कार्रवाई में! असेंबली लाइनों से एकत्र किए गए खाली प्लास्टिक के डिब्बे केंद्रीय पृथक्करण क्षेत्र में पहुंच गए हैं।ऑपरेटरों को इन कंटेनरों को कैसे क्रमबद्ध करना चाहिए, और वे कैसे पता लगाते हैं कि वर्तमान में उन्हें लोड करने के लिए कौन सा आपूर्तिकर्ता ट्रक डॉक किया गया है?",
-          "mr": "रिव्हर्स लॉजिस्टिक्स केंद्र प्रत्यक्षात! लाईनवरून गोळा केलेल्या रिकाम्या पेट्या सेंट्रल सेग्रिगेशन भागात आल्या आहेत.ऑपरेटरने या पेट्या कशा वेगळ्या करायच्या आणि त्या भरण्यासाठी कोणता सप्लायर ट्रक कोणत्या डॉकवर उभा आहे हे कसे शोधायचे?"
+          "en": "Empty plastic bins collected from assembly lines have reached the central sorting yard. How must bins be staged before loading onto outbound supplier trucks?",
+          "hi": "असेंबली लाइन से आए खाली डिब्बे रिवर्स लॉजिस्टिक्स हब में पहुंच चुके हैं। इन खाली डिब्बों को कैसे छांटकर रखना चाहिए?",
+          "mr": "असेंब्ली लाईनवरून आलेले रिकामे डबे रिव्हर्स लॉजिस्टिक हबमध्ये आले आहेत. हे रिकामे डबे कसे वेगळे करून ठेवले पाहिजेत?"
         }
       },
       "interaction": {
@@ -1129,12 +1129,12 @@
         "safetyCritical": false,
         "question": {
           "en": "How do you sort empty bins in the segregation area, and route them to docked trucks?",
-          "hi": "आप पृथक्करण क्षेत्र में खाली डिब्बे को कैसे क्रमबद्ध करते हैं, और उन्हें डॉक किए गए ट्रकों तक कैसे पहुंचाते हैं?",
+          "hi": "आप अलग रखने की जगह (सेग्रिगेशन एरिया) में खाली डिब्बे को कैसे क्रमबद्ध करते हैं, और उन्हें डॉक किए गए ट्रकों तक कैसे पहुंचाते हैं?",
           "mr": "रिकाम्या पेट्यांचे वर्गीकरण कसे करता आणि डॉकवर उभ्या असलेल्या ट्रकमध्ये कसे पाठवता?"
         },
         "instruction": {
           "en": "Drag each empty packaging container to its matching supplier return bay:",
-          "hi": "प्रत्येक खाली पैकेजिंग कंटेनर को उसके मिलान वाले आपूर्तिकर्ता रिटर्न बे में खींचें:",
+          "hi": "प्रत्येक खाली पैकेजिंग कंटेनर को उसके मिलान वाले सप्लायर रिटर्न बे में खींचें:",
           "mr": "प्रत्येक रिकाम्या पेटीला तिच्या योग्य सप्लायर रिटर्न बे मध्ये ड्रॅग करा:"
         },
         "zones": [
@@ -1143,7 +1143,7 @@
             "icon": "Layers",
             "label": {
               "en": "Bay A: Supplier 1042 (Brake Calipers & Mounts)",
-              "hi": "बे A: आपूर्तिकर्ता 1042 (ब्रेक कैलीपर्स और माउंट)",
+              "hi": "बे A: सप्लायर 1042 (ब्रेक कैलीपर्स और माउंट)",
               "mr": "बे A: सप्लायर 1042 (ब्रेक कॅलिपर्स व माउंट्स)"
             }
           },
@@ -1152,7 +1152,7 @@
             "icon": "Box",
             "label": {
               "en": "Bay B: Supplier 2088 (Plastic Body Panels & Fairings)",
-              "hi": "बे B: आपूर्तिकर्ता 2088 (प्लास्टिक बॉडी पैनल और फेयरिंग)",
+              "hi": "बे B: सप्लायर 2088 (प्लास्टिक बॉडी पैनल और फेयरिंग)",
               "mr": "बे B: सप्लायर 2088 (प्लास्टिक बॉडी पॅनेल्स)"
             }
           }
@@ -1163,7 +1163,7 @@
             "targetZoneId": "zone_supp_a",
             "label": {
               "en": "Grey Heavy-Duty Totes with Caliper Mold Inserts (Supplier 1042)",
-              "hi": "कैलिपर मोल्ड आवेषण के साथ ग्रे हेवी-ड्यूटी टोट्स (आपूर्तिकर्ता 1042)",
+              "hi": "कैलिपर मोल्ड आवेषण के साथ ग्रे हेवी-ड्यूटी टोट्स (सप्लायर 1042)",
               "mr": "कॅलिपर साच्याचे राखाडी मजबूत क्रेट्स (सप्लायर 1042)"
             }
           },
@@ -1172,14 +1172,14 @@
             "targetZoneId": "zone_supp_b",
             "label": {
               "en": "Blue Returnable Plastic Trays with Foam Dividers (Supplier 2088)",
-              "hi": "फोम डिवाइडर के साथ नीले प्लास्टिक ट्रे (आपूर्तिकर्ता 2088)",
+              "hi": "फोम डिवाइडर के साथ नीले प्लास्टिक ट्रे (सप्लायर 2088)",
               "mr": "फोम असलेले निळे प्लास्टिक ट्रे (सप्लायर 2088)"
             }
           }
         ],
         "prompt": {
-          "en": "How do you sort empty bins in the segregation area, and route them to docked trucks?",
-          "hi": "आप पृथक्करण क्षेत्र में खाली डिब्बे को कैसे क्रमबद्ध करते हैं, और उन्हें डॉक किए गए ट्रकों तक कैसे पहुंचाते हैं?",
+          "en": "How do you sort empty bins in the return area and route them to docked trucks?",
+          "hi": "आप अलग रखने की जगह (सेग्रिगेशन एरिया) में खाली डिब्बे को कैसे क्रमबद्ध करते हैं, और उन्हें डॉक किए गए ट्रकों तक कैसे पहुंचाते हैं?",
           "mr": "रिकाम्या पेट्यांचे वर्गीकरण कसे करता आणि डॉकवर उभ्या असलेल्या ट्रकमध्ये कसे पाठवता?"
         },
         "id": "c2-q40",
@@ -1190,7 +1190,7 @@
         "sopClause": "SOP-EMPTYBIN COLLECTION AND LOADING Clause 4.2 & Question Bank Q40",
         "why": {
           "en": "Returnable packaging assets are custom-engineered for specific component geometries and owned by designated Tier-1 suppliers. Segregating bins strictly by supplier ID and part number in marked bays prevents cross-contamination. Operators cross-reference the plant's live Supplier Truck Docking Dashboard to route the correct empty assets to the matching docked transport truck.",
-          "hi": "वापस करने योग्य पैकेजिंग संपत्तियां विशिष्ट घटक ज्यामिति के लिए कस्टम-इंजीनियर की जाती हैं। चिह्नित बे में आपूर्तिकर्ता आईडी और पार्ट नंबर द्वारा डिब्बे को सख्ती से अलग करना क्रॉस-संदूषण को रोकता है।",
+          "hi": "वापस करने योग्य पैकेजिंग संपत्तियां विशिष्ट पार्ट्स ज्यामिति के लिए कस्टम-इंजीनियर की जाती हैं। चिह्नित बे में सप्लायर आईडी और पार्ट नंबर द्वारा डिब्बे को सख्ती से अलग करना क्रॉस-संदूषण को रोकता है।",
           "mr": "प्रत्येक सप्लायरच्या पेट्यांचे आकारमान वेगळे असते. सप्लायर आयडीनुसार पेट्या वेगळ्या केल्याने चुकीच्या सप्लायरकडे माल जाणे टळते. ऑपरेटर लाईव्ह डॅशबोर्ड पाहून योग्य ट्रकमध्ये योग्य पेट्या भरतात."
         }
       }
@@ -1200,7 +1200,7 @@
       "stepNumber": 11,
       "title": {
         "en": "Recalled Material Re-Inspection Disposition",
-        "hi": "वापस बुलाई गई सामग्री पुनः निरीक्षण निस्तारण",
+        "hi": "वापस बुलाई गई सामग्री पुनः निरीक्षण अंतिम फैसला",
         "mr": "परत मागवलेल्या साहित्याची फेरतपासणी आणि निर्णय"
       },
       "media": {
@@ -1213,34 +1213,34 @@
         "intro": {
           "pose": "warning",
           "text": {
-            "en": "Critical quality containment scenario! Following a field bulletin, a batch of 200 brake cables already in the supermarket was recalled for emergency safety re-testing. Quality conducts containment inspection and 4 cables fail tensile strength testing. Under standard procedure what must happen immediately to this failed recalled lot?",
-            "hi": "गंभीर गुणवत्ता नियंत्रण परिदृश्य! एक फील्ड बुलेटिन के बाद, सुपरमार्केट में पहले से मौजूद 200 ब्रेक केबलों के एक बैच को आपातकालीन सुरक्षा पुनः परीक्षण के लिए वापस बुलाया गया था। गुणवत्ता नियंत्रण निरीक्षण करता है और 4 केबल तन्यता ताकत परीक्षण में विफल होते हैं। एथर SOP इस विफल वापस बुलाए गए लॉट का तुरंत क्या होना चाहिए?",
-            "mr": "अति-गंभीर गुणवत्ता नियंत्रण प्रसंग! तक्रारीनंतर सुपरमार्केटमध्ये असलेल्या 200 ब्रेक केबल्सचा लॉट तातडीने फेरतपासणीसाठी परत मागवला गेला. तपासणीमध्ये 4 केबल्स तुटून चाचणीत नापास झाल्या. एथर SOP या नापास झालेल्या लॉटवर तात्काळ कोणती कारवाई झाली पाहिजे?"
+            "en": "Urgent quality recall! Following a quality alert, a batch of 200 brake cables already in the supermarket racks must be recalled immediately. What urgent warehouse steps must you take?",
+            "hi": "गंभीर क्वालिटी अलर्ट! कस्टमर फीडबैक के बाद सुपरमार्केट में रखी 200 ब्रेक केबल्स को तुरंत रोकने का आदेश आया है। वेयरहाउस टीम को क्या तुरंत कदम उठाना चाहिए?",
+            "mr": "गंभीर क्वालिटी अलर्ट! तक्रारीनंतर सुपरमार्केटमधील 200 ब्रेक केबल्सचा साठा ताबडतोब थांबवण्याचा आदेश आला आहे. वेअरहाऊस टीमने लगेच काय केले पाहिजे?"
           },
           "audioSrc": "/audio/voiceover/s12_sc11_intro.mp3"
         },
         "onCorrect": {
           "pose": "success",
           "text": {
-            "en": "CONTAINMENT ENFORCED! Stock is immediately transferred to Blocked Stock in SAP, the NG logistics team moves the entire lot to the NG Quarantine Area, and the formal Return to Vendor return-to-vendor process begins! Defective recalled safety parts are strictly locked down to protect consumer safety!",
-            "hi": "नियंत्रण लागू!स्टॉक तुरंत SAP में ब्लॉक स्टॉक में स्थानांतरित कर दिया जाता है, NG टीम पूरे लॉट को NG क्वारंटाइन क्षेत्र में ले जाती है, और औपचारिक रिटर्न टू वेंडर प्रक्रिया शुरू होती है!",
-            "mr": "कडक नियंत्रण लागू!माल तात्काळ SAP मध्ये Blocked Stock मध्ये वर्ग केला जातो, NG टीम संपूर्ण लॉट NG क्वारंटाईन विभागात हलवते आणि अधिकृत रिटर्न टू व्हेंडर प्रक्रिया सुरू होते! सुरक्षेशी तडजोड न करता सदोष माल पूर्णपणे रोखला जातो!"
+            "en": "RECALL ACTION COMPLETED! Stock is immediately moved to Blocked Stock in SAP. The warehouse team removes the whole lot from supermarket racks, puts Red Quarantine tags on every bin, and locks them inside the Quarantine cage!",
+            "hi": "तुरंत रोकें! सिस्टम में माल को तुरंत 'Blocked Stock' में डालें, सुपरमार्केट रैक से सारे 200 केबल्स हटाकर लाल टैग लगाएं और क्वारंटाइन केज में बंद करें ताकि कोई भी केबल गाड़ी में न लग सके!",
+            "mr": "कडक पाऊल! सिस्टीममध्ये हा माल लगेच 'Blocked Stock' मध्ये टाका, सुपरमार्केट रॅकवरून सर्व 200 केबल्स काढून लाल टॅग लावा आणि क्वारंटाईन केबिनमध्ये बंद करा!"
           },
           "audioSrc": "/audio/voiceover/s12_sc11_correct.mp3"
         },
         "onIncorrect": {
           "pose": "warning",
           "text": {
-            "en": "CRITICAL SAFETY RISK! Recalled safety parts that fail re-inspection can NEVER return to unrestricted stock. They must be moved to Blocked stock in SAP and transferred to the NG quarantine cage for Return to Vendor!",
-            "hi": "गंभीर सुरक्षा जोखिम! पुनः निरीक्षण में विफल होने वाले पुर्जे कभी भी अप्रतिबंधित स्टॉक में वापस नहीं आ सकते हैं। उन्हें SAP में ब्लॉक स्टॉक में ले जाना चाहिए और रिटर्न टू वेंडर के लिए NG केज में स्थानांतरित करना चाहिए!",
-            "mr": "गंभीर सुरक्षा धोका! चाचणीत नापास झालेले सुरक्षिततेचे पार्ट कधीही वापरात आणता येत नाहीत. ते तात्काळ SAP मध्ये ब्लॉक करून NG क्वारंटाईनमध्ये रिटर्न टू व्हेंडर साठी पाठवलेच पाहिजेत!"
+            "en": "CRITICAL SAFETY RISK! Recalled safety parts that fail re-inspection can NEVER return to unrestricted assembly stock. They must be quarantined and scrapped immediately.",
+            "hi": "बड़ा खतरा! वापस मंगाई गई ब्रेक केबल को कभी लाइन पर न छोड़ें। एक भी खराब केबल लगने से ब्रेक फेल हो सकता है!",
+            "mr": "मोठा धोका! परत मागवलेली केबल लाईनवर ठेवू नका. खराब केबलमुळे गाडीचे ब्रेक फेल होऊ शकतात!"
           },
           "audioSrc": "/audio/voiceover/s12_sc11_wrong.mp3"
         },
         "dialog": {
-          "en": "Critical quality containment scenario! Following a field bulletin, a batch of 200 brake cables already in the supermarket was recalled for emergency safety re-testing. Quality conducts containment inspection and 4 cables fail tensile strength testing. Under standard procedure what must happen immediately to this failed recalled lot?",
-          "hi": "गंभीर गुणवत्ता नियंत्रण परिदृश्य! एक फील्ड बुलेटिन के बाद, सुपरमार्केट में पहले से मौजूद 200 ब्रेक केबलों के एक बैच को आपातकालीन सुरक्षा पुनः परीक्षण के लिए वापस बुलाया गया था। गुणवत्ता नियंत्रण निरीक्षण करता है और 4 केबल तन्यता ताकत परीक्षण में विफल होते हैं। एथर SOP इस विफल वापस बुलाए गए लॉट का तुरंत क्या होना चाहिए?",
-          "mr": "अति-गंभीर गुणवत्ता नियंत्रण प्रसंग! तक्रारीनंतर सुपरमार्केटमध्ये असलेल्या 200 ब्रेक केबल्सचा लॉट तातडीने फेरतपासणीसाठी परत मागवला गेला. तपासणीमध्ये 4 केबल्स तुटून चाचणीत नापास झाल्या. एथर SOP या नापास झालेल्या लॉटवर तात्काळ कोणती कारवाई झाली पाहिजे?"
+          "en": "Urgent quality recall! Following a quality alert, a batch of 200 brake cables already in the supermarket racks must be recalled immediately. What urgent warehouse steps must you take?",
+          "hi": "गंभीर क्वालिटी अलर्ट! कस्टमर फीडबैक के बाद सुपरमार्केट में रखी 200 ब्रेक केबल्स को तुरंत रोकने का आदेश आया है। वेयरहाउस टीम को क्या तुरंत कदम उठाना चाहिए?",
+          "mr": "गंभीर क्वालिटी अलर्ट! तक्रारीनंतर सुपरमार्केटमधील 200 ब्रेक केबल्सचा साठा ताबडतोब थांबवण्याचा आदेश आला आहे. वेअरहाऊस टीमने लगेच काय केले पाहिजे?"
         }
       },
       "interaction": {
@@ -1313,8 +1313,8 @@
       "stepNumber": 12,
       "title": {
         "en": "AURIC Plant Grandmaster Graduation: Zero Defect Traceability",
-        "hi": "औरिक प्लांट ग्रैंडमास्टर दीक्षांत समारोह: शून्य दोष ट्रैसेबिलिटी",
-        "mr": "औरिक प्लांट ग्रँडमास्टर पदवीदान सोहळा: शून्य त्रुटी ट्रॅकिंग"
+        "hi": "औरिक प्लांट ग्रैंडमास्टर सर्टिफिकेशन और ट्रेनिंग पूरी: शून्य दोष ट्रैसेबिलिटी",
+        "mr": "औरिक प्लांट ग्रँडमास्टर सर्टिफिकेशन आणि ट्रेनिंग पूर्ण: शून्य त्रुटी ट्रॅकिंग"
       },
       "media": {
         "fallbackAnimation": "grandmaster_celebration_fireworks",
@@ -1326,18 +1326,18 @@
         "intro": {
           "pose": "celebrating",
           "text": {
-            "en": "GRANDMASTER CERTIFICATION MILESTONE! You have reached the 91st and final scene of the Ather AURIC Plant M002 Warehouse Training Program! Across 12 comprehensive modules, you mastered Inbound Docks, quality inspection Clearance, Put-Away, Battery Rooms, Hazardous Chemicals, Supermarkets, Quarantine, Order Picking, Paint Decanting, Indirect Stores, Part Issuance Request Dispatches, and Reverse Logistics. What foundational principle governs every single action in our warehouse?",
-            "hi": "ग्रैंडमास्टर प्रमाणन मील का पत्थर! आप एथर औरिक प्लांट M002 वेयरहाउस प्रशिक्षण कार्यक्रम के 91वें और अंतिम दृश्य पर पहुंच गए हैं! 12 व्यापक मॉड्यूलों में, आपने इनबाउंड डॉक्स, IQC क्लीयरेंस, पुट-अवे, बैटरी रूम, खतरनाक रसायन, सुपरमार्केट, क्वारंटाइन, ऑर्डर पिकिंग, पेंट डिकैन्टिंग, अप्रत्यक्ष स्टोर, पीआईआर प्रेषण और रिवर्स लॉजिस्टिक्स में महारत हासिल की। कौन सा मौलिक सिद्धांत हमारे गोदाम में हर एक कार्रवाई को नियंत्रित करता है?",
-            "mr": "ग्रँडमास्टर प्रमाणपत्र महा-टप्पा! तुम्ही एथर औरिक प्लांट M002 वेअरहाऊस प्रशिक्षण कार्यक्रमाच्या 91 व्या आणि अंतिम टप्प्यावर पोहोचला आहात! संपूर्ण 12 मॉड्यूल्समध्ये तुम्ही इनबाउंड डॉक, IQC तपासणी, पुट-अवे, बॅटरी रूम, घातक रसायने, सुपरमार्केट, क्वारंटाईन, ऑर्डर पिकिंग, पेंट डिकॅन्टिंग, अप्रत्यक्ष स्टोअर, PIR डिस्पॅच आणि रिव्हर्स लॉजिस्टिकमध्ये प्रावीण्य मिळवले आहे. आपल्या गोदामातील प्रत्येक कामाला नियंत्रित करणारा मूळ पाया कोणता आहे?"
+            "en": "GRANDMASTER CERTIFICATION MILESTONE! You have reached the 91st and final scene of the Ather AURIC Plant M002 Warehouse Training Program! Across 12 comprehensive modules, you mastered Inbound Docks, quality inspection Clearance, Put-Away, Battery Rooms, Hazardous Chemicals, Supermarkets, Quarantine, Order Picking, Paint Decanting, Indirect Stores, PIR Dispatches, and Reverse Logistics. What foundational principle governs every single action in our warehouse?",
+            "hi": "ग्रैंडमास्टर लेवल! आप एथर औरिक प्लांट वेयरहाउस ट्रेनिंग के 91वें और आखिरी सीन पर पहुंच गए हैं! आपने सभी 12 मॉड्यूलों में इनबाउंड डॉक, क्वालिटी चेकिंग, पुट-अवे, बैटरी रूम, केमिकल, सुपरमार्केट, क्वारंटाइन, ऑर्डर पिकिंग, डिकैन्टिंग, इनडायरेक्ट स्टोर, पीआईआर और रिवर्स लॉजिस्टिक्स में महारत हासिल कर ली है। हमारे पूरे वेयरहाउस का सबसे बड़ा बुनियादी नियम क्या है?",
+            "mr": "ग्रँडमास्टर महा-टप्पा! तुम्ही एथर औरिक प्लांट वेअरहाऊस ट्रेनिंगच्या 91 व्या आणि शेवटच्या सीन्सवर पोहोचला आहात! संपूर्ण 12 मॉड्यूल्समध्ये तुम्ही इनबाउंड डॉक, क्वालिटी तपासणी, पुट-अवे, बॅटरी रूम, केमिकल्स, सुपरमार्केट, क्वारंटाईन, ऑर्डर पिकिंग, डिकॅन्टिंग, इनडायरेक्ट स्टोअर, PIR आणि रिव्हर्स लॉजिस्टिकमध्ये उत्तम यश मिळवले आहे. गोदामातील प्रत्येक कामाचा मूळ पाया कोणता आहे?"
           },
           "audioSrc": "/audio/voiceover/s12_sc12_intro.mp3"
         },
         "onCorrect": {
           "pose": "celebrating",
           "text": {
-            "en": "CONGRATULATIONS, GRANDMASTER! Uncompromising Dual-Verification: Every physical movement must be married to real-time digital system scans (SAP warehouse management system, manufacturing execution system, JIRA) to guarantee 100% Vehicle Identification Number traceability and zero defect leakage! You have completed all 91 Scenes across all 12 Modules with distinction! Your official Ather AURIC Grandmaster Certification Credential is now unlocked! View your certificate in the menu!",
-            "hi": "बधाई हो, ग्रैंडमास्टर! अटूट दोहरा सत्यापन: 100% VIN ट्रैसेबिलिटी और शून्य दोष रिसाव की गारंटी के लिए हर भौतिक आंदोलन को वास्तविक समय के डिजिटल सिस्टम स्कैन (SAP EWM, MES, JIRA) से जोड़ा जाना चाहिए! आपने सभी 12 मॉड्यूलों में सभी 91 दृश्यों को विशिष्टता के साथ पूरा कर लिया है! आपका आधिकारिक एथर औरिक ग्रैंडमास्टर प्रमाणन अब अनलॉक हो गया है!",
-            "mr": "अभिनंदन, ग्रँडमास्टर! अढळ दुहेरी पडताळणी: 100% VIN ट्रॅकिंग आणि शून्य त्रुटीच्या हमीसाठी प्रत्येक प्रत्यक्ष मालाची हालचाल डिजिटल सिस्टीम स्कॅनिंगशी (SAP EWM, MES, JIRA) जोडलीच पाहिजे! तुम्ही सर्व 12 मॉड्यूल्समधील सर्व 91 सीन्स अत्यंत उत्कृष्टतेने पूर्ण केले आहेत! तुमचे अधिकृत एथर औरिक ग्रँडमास्टर प्रमाणपत्र आता अनलॉक झाले आहे!"
+            "en": "CONGRATULATIONS, GRANDMASTER! Always remember the double-check rule: Every physical movement must match real-time system scans in SAP and JIRA. This ensures 100% vehicle traceability and zero defect leakage! You have completed all 91 Scenes across all 12 Modules with distinction! Your official Ather AURIC Grandmaster Certificate is now unlocked! View your certificate in the menu!",
+            "hi": "बधाई हो, ग्रैंडमास्टर! पक्की दोहरी जांच: हर पार्ट को हिलाने या ले जाने पर बारकोड स्कैन करना बहुत ज़रूरी है, ताकि 100% सही रिकॉर्ड रहे और एक भी खराब पार्ट गाड़ी में न लगे! आपने सभी 12 मॉड्यूलों के सभी 91 सीन सफलतापूर्वक पूरे कर लिए हैं! आपका आधिकारिक एथर ग्रैंडमास्टर सर्टिफिकेट अब अनलॉक हो गया है! मेनू में जाकर अपना सर्टिफिकेट देखें!",
+            "mr": "अभिनंदन, ग्रँडमास्टर! पक्की दुहेरी तपासणी: प्रत्येक पार्ट हलवताना किंवा नेताना बारकोड स्कॅनिंग करणे बंधनकारक आहे, जेणेकरून 100% अचूक नोंद राहील आणि एकही खराब पार्ट गाडीत जाणार नाही! तुम्ही सर्व 12 मॉड्यूल्समधील सर्व 91 सीन्स यशस्वीपणे पूर्ण केले आहेत! तुमचे अधिकृत एथर ग्रँडमास्टर प्रमाणपत्र आता अनलॉक झाले आहे! मेनूमध्ये तुमचे प्रमाणपत्र पहा!"
           },
           "audioSrc": "/audio/voiceover/s12_sc12_correct.mp3"
         },
@@ -1345,15 +1345,15 @@
           "pose": "warning",
           "text": {
             "en": "Never compromise on digital verification! Warehouse speed without system discipline causes line stoppages and defect leakage. Always marry physical handling to digital barcode scans!",
-            "hi": "डिजिटल सत्यापन पर कभी समझौता न करें! सिस्टम अनुशासन के बिना वेयरहाउस की गति लाइन रुकने और दोष रिसाव का कारण बनती है। हमेशा भौतिक हैंडलिंग को डिजिटल बारकोड स्कैन से जोड़ें!",
-            "mr": "डिजिटल पडताळणीत कधीही तडजोड करू नका! सिस्टीम नियमांशिवाय घाई केल्यास असेंब्ली लाईन बंद पडते. नेहमी प्रत्यक्ष कामाला बारकोड स्कॅनिंगची जोड द्या!"
+            "hi": "डिजिटल चेकिंग पर कभी समझौता न करें! बिना सिस्टम अनुशासन के काम करने से लाइन रुक जाती है और खराब पार्ट्स गाड़ी में लग जाते हैं। हमेशा सामान उठाने के साथ बारकोड स्कैन ज़रूर करें!",
+            "mr": "डिजिटल तपासणीत कधीही तडजोड करू नका! सिस्टीमशिवाय घाईगडबडीत काम केल्यास लाईन बंद पडते आणि खराब पार्ट गाडीत जातात. नेहमी माल हाताळताना बारकोड स्कॅन कराच!"
           },
           "audioSrc": "/audio/voiceover/s12_sc12_wrong.mp3"
         },
         "dialog": {
-          "en": "GRANDMASTER CERTIFICATION MILESTONE! You have reached the 91st and final scene of the Ather AURIC Plant M002 Warehouse Training Program! Across 12 comprehensive modules, you mastered Inbound Docks, quality inspection Clearance, Put-Away, Battery Rooms, Hazardous Chemicals, Supermarkets, Quarantine, Order Picking, Paint Decanting, Indirect Stores, Part Issuance Request Dispatches, and Reverse Logistics. What foundational principle governs every single action in our warehouse?",
-          "hi": "ग्रैंडमास्टर प्रमाणन मील का पत्थर! आप एथर औरिक प्लांट M002 वेयरहाउस प्रशिक्षण कार्यक्रम के 91वें और अंतिम दृश्य पर पहुंच गए हैं! 12 व्यापक मॉड्यूलों में, आपने इनबाउंड डॉक्स, IQC क्लीयरेंस, पुट-अवे, बैटरी रूम, खतरनाक रसायन, सुपरमार्केट, क्वारंटाइन, ऑर्डर पिकिंग, पेंट डिकैन्टिंग, अप्रत्यक्ष स्टोर, पीआईआर प्रेषण और रिवर्स लॉजिस्टिक्स में महारत हासिल की। कौन सा मौलिक सिद्धांत हमारे गोदाम में हर एक कार्रवाई को नियंत्रित करता है?",
-          "mr": "ग्रँडमास्टर प्रमाणपत्र महा-टप्पा! तुम्ही एथर औरिक प्लांट M002 वेअरहाऊस प्रशिक्षण कार्यक्रमाच्या 91 व्या आणि अंतिम टप्प्यावर पोहोचला आहात! संपूर्ण 12 मॉड्यूल्समध्ये तुम्ही इनबाउंड डॉक, IQC तपासणी, पुट-अवे, बॅटरी रूम, घातक रसायने, सुपरमार्केट, क्वारंटाईन, ऑर्डर पिकिंग, पेंट डिकॅन्टिंग, अप्रत्यक्ष स्टोअर, PIR डिस्पॅच आणि रिव्हर्स लॉजिस्टिकमध्ये प्रावीण्य मिळवले आहे. आपल्या गोदामातील प्रत्येक कामाला नियंत्रित करणारा मूळ पाया कोणता आहे?"
+          "en": "GRANDMASTER CERTIFICATION MILESTONE! You have reached the 91st and final scene of the Ather AURIC Plant M002 Warehouse Training Program! Across 12 comprehensive modules, you mastered Inbound Docks, quality inspection Clearance, Put-Away, Battery Rooms, Hazardous Chemicals, Supermarkets, Quarantine, Order Picking, Paint Decanting, Indirect Stores, PIR Dispatches, and Reverse Logistics. What foundational principle governs every single action in our warehouse?",
+          "hi": "ग्रैंडमास्टर लेवल! आप एथर औरिक प्लांट वेयरहाउस ट्रेनिंग के 91वें और आखिरी सीन पर पहुंच गए हैं! आपने सभी 12 मॉड्यूलों में इनबाउंड डॉक, क्वालिटी चेकिंग, पुट-अवे, बैटरी रूम, केमिकल, सुपरमार्केट, क्वारंटाइन, ऑर्डर पिकिंग, डिकैन्टिंग, इनडायरेक्ट स्टोर, पीआईआर और रिवर्स लॉजिस्टिक्स में महारत हासिल कर ली है। हमारे पूरे वेयरहाउस का सबसे बड़ा बुनियादी नियम क्या है?",
+          "mr": "ग्रँडमास्टर महा-टप्पा! तुम्ही एथर औरिक प्लांट वेअरहाऊस ट्रेनिंगच्या 91 व्या आणि शेवटच्या सीन्सवर पोहोचला आहात! संपूर्ण 12 मॉड्यूल्समध्ये तुम्ही इनबाउंड डॉक, क्वालिटी तपासणी, पुट-अवे, बॅटरी रूम, केमिकल्स, सुपरमार्केट, क्वारंटाईन, ऑर्डर पिकिंग, डिकॅन्टिंग, इनडायरेक्ट स्टोअर, PIR आणि रिव्हर्स लॉजिस्टिकमध्ये उत्तम यश मिळवले आहे. गोदामातील प्रत्येक कामाचा मूळ पाया कोणता आहे?"
         }
       },
       "interaction": {
@@ -1363,7 +1363,7 @@
         "question": {
           "en": "What core operational principle unites all 12 modules of the Ather AURIC Plant M002 Warehouse System?",
           "hi": "एथर औरिक प्लांट M002 वेयरहाउस सिस्टम के सभी 12 मॉड्यूलों को कौन सा मुख्य परिचालन सिद्धांत एकजुट करता है?",
-          "mr": "एथर औरिक प्लांट M002 वेअरहाऊस सिस्टीमच्या सर्व 12 मॉड्यूल्सना एकत्र बांधणारा मुख्य कार्यप्रणाली नियम कोणता आहे?"
+          "mr": "एथर औरिक प्लांट M002 वेअरहाऊस सिस्टीमच्या सर्व 12 मॉड्यूल्सना एकत्र बांधणारा मुख्य कामाची पद्धत नियम कोणता आहे?"
         },
         "options": [
           {
@@ -1371,8 +1371,8 @@
             "correct": true,
             "label": {
               "en": "Uncompromising Dual-Verification: Every physical movement must be married to real-time digital scans (SAP warehouse management system, manufacturing execution system, JIRA) ensuring zero defect leakage & 100% Vehicle Identification Number traceability",
-              "hi": "अटूट दोहरा सत्यापन: प्रत्येक भौतिक आंदोलन को वास्तविक समय के डिजिटल स्कैन (SAP EWM, MES, JIRA) से जोड़ा जाना चाहिए ताकि शून्य दोष और 100% VIN ट्रैसेबिलिटी सुनिश्चित हो सके",
-              "mr": "अढळ दुहेरी पडताळणी: 100% VIN ट्रॅकिंग आणि शून्य त्रुटीसाठी प्रत्येक प्रत्यक्ष हालचाल डिजिटल स्कॅनिंगशी (SAP EWM, MES, JIRA) जोडलीच पाहिजे"
+              "hi": "अटूट दोहरा जांच (चेकिंग): प्रत्येक असल आंदोलन को वास्तविक समय के डिजिटल स्कैन (SAP EWM, MES, JIRA) से जोड़ा जाना चाहिए ताकि शून्य दोष और 100% VIN ट्रैसेबिलिटी पक्का हो सके",
+              "mr": "अढळ दुहेरी तपासणी (चेकिंग): 100% VIN ट्रॅकिंग आणि शून्य त्रुटीसाठी प्रत्येक प्रत्यक्ष हालचाल डिजिटल स्कॅनिंगशी (SAP EWM, MES, JIRA) जोडलीच पाहिजे"
             }
           },
           {
@@ -1389,7 +1389,7 @@
             "correct": false,
             "label": {
               "en": "Rely strictly on operator memory and hand-scrawled notes rather than digital handheld terminals",
-              "hi": "डिजिटल हैंडहेल्ड टर्मिनलों के बजाय ऑपरेटर की याददाश्त और हाथ से लिखे नोटों पर सख्ती से भरोसा करें",
+              "hi": "डिजिटल स्कैनर मशीनों के बजाय ऑपरेटर की याददाश्त और हाथ से लिखे नोटों पर सख्ती से भरोसा करें",
               "mr": "डिजिटल मशीनऐवजी ऑपरेटरच्या स्मरणशक्तीवर आणि कच्च्या चिठ्ठ्यांवर अवलंबून राहणे"
             }
           },
@@ -1398,7 +1398,7 @@
             "correct": false,
             "label": {
               "en": "Pile chemicals, battery cells, scrap, and supermarket parts together in one warehouse aisle to maximize floor space",
-              "hi": "फर्श की जगह को अधिकतम करने के लिए एक गोदाम के गलियारे में रसायन, बैटरी सेल, स्क्रैप और पुर्जों को एक साथ ढेर करें",
+              "hi": "फर्श की जगह को अधिकतम करने के लिए एक गोदाम के रास्ते में रसायन, बैटरी सेल, स्क्रैप और पुर्जों को एक साथ ढेर करें",
               "mr": "जागा वाचवण्यासाठी रसायने, बॅटरी, भंगार आणि सुटे भाग एकाच ढिगाऱ्यात एकत्र साठवणे"
             }
           }
@@ -1406,7 +1406,7 @@
         "prompt": {
           "en": "What core operational principle unites all 12 modules of the Ather AURIC Plant M002 Warehouse System?",
           "hi": "एथर औरिक प्लांट M002 वेयरहाउस सिस्टम के सभी 12 मॉड्यूलों को कौन सा मुख्य परिचालन सिद्धांत एकजुट करता है?",
-          "mr": "एथर औरिक प्लांट M002 वेअरहाऊस सिस्टीमच्या सर्व 12 मॉड्यूल्सना एकत्र बांधणारा मुख्य कार्यप्रणाली नियम कोणता आहे?"
+          "mr": "एथर औरिक प्लांट M002 वेअरहाऊस सिस्टीमच्या सर्व 12 मॉड्यूल्सना एकत्र बांधणारा मुख्य कामाची पद्धत नियम कोणता आहे?"
         },
         "id": "c2-q-grandmaster-final",
         "audioSrc": "/audio/voiceover/s12_sc12_prompt.mp3"
@@ -1416,8 +1416,8 @@
         "sopClause": "Ather AURIC Plant M002 Master Warehouse Operating Doctrine & Zero-Defect Quality Policy",
         "why": {
           "en": "The foundational doctrine of Ather AURIC Plant M002 is zero defect escape through airtight dual-verification. Physical custody and digital system state must remain 100% synchronized at all times across all stages: Gate Entry, IQC Inspection, Storage Bin Marriage, Battery Climate Control, Chemical Isolation, Supermarket First-In First-Out, Caged Quarantine, MES Line Picking, Paint Decanting, Indirect Stores, Quality PIR, and Reverse Logistics. This disciplined execution guarantees world-class electric vehicle safety, reliability, and manufacturing excellence.",
-          "hi": "एथर औरिक प्लांट M002 का मूलभूत सिद्धांत एयरटाइट दोहरे सत्यापन के माध्यम से शून्य दोष है। सभी चरणों में भौतिक कस्टडी और डिजिटल सिस्टम स्थिति हर समय 100% सिंक्रनाइज़ रहनी चाहिए। यह अनुशासित निष्पादन विश्व स्तरीय इलेक्ट्रिक वाहन सुरक्षा, विश्वसनीयता और विनिर्माण उत्कृष्टता की गारंटी देता है।",
-          "mr": "एथर औरिक प्लांट M002 चे मूळ सूत्र म्हणजे दुहेरी पडताळणीद्वारे शून्य त्रुटी. सर्व 12 टप्प्यांमध्ये प्रत्यक्ष मालाची हालचाल आणि डिजिटल सिस्टीम यांमध्ये 100% ताळमेळ असणे सक्तीचे आहे. या शिस्तबद्ध कार्यपद्धतीमुळेच जागतिक दर्जाची इलेक्ट्रिक वाहने सुरक्षितपणे आणि दर्जेदारपणे तयार होतात."
+          "hi": "एथर औरिक प्लांट M002 का मूलभूत सिद्धांत एयरटाइट दोहरे जांच (चेकिंग) के माध्यम से शून्य दोष है। सभी चरणों में असल जिम्मेदारी और डिजिटल सिस्टम स्थिति हर समय 100% सिंक्रनाइज़ रहनी चाहिए। यह नियमों के अनुसार सही काम विश्व स्तरीय इलेक्ट्रिक वाहन सुरक्षा, विश्वसनीयता और विनिर्माण उत्कृष्टता की गारंटी देता है।",
+          "mr": "एथर औरिक प्लांट M002 चे मूळ सूत्र म्हणजे दोनदा नीट चेक करून शून्य चूक. सर्व 12 टप्प्यांमध्ये प्रत्यक्ष मालाची हालचाल आणि डिजिटल सिस्टीम यांमध्ये 100% ताळमेळ असणे सक्तीचे आहे. या शिस्तबद्ध कार्यपद्धतीमुळेच जागतिक दर्जाची इलेक्ट्रिक वाहने सुरक्षितपणे आणि दर्जेदारपणे तयार होतात."
         }
       }
     }
